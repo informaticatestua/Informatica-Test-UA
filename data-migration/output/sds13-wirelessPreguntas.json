@@ -1,0 +1,1597 @@
+[
+  {
+    "id": "q-sds13-wirelessPreguntas-1",
+    "text": "¿Cuál es la principal vulnerabilidad que explota un ataque de denegación de servicio mediante agotamiento de puertos TCP?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Saturación de la RAM",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Agotamiento de puertos disponibles",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Saturación de la CPU",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Sobrecarga del ancho de banda",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.187Z"
+  },
+  {
+    "id": "q-sds13-wirelessPreguntas-2",
+    "text": "¿Qué mecanismo describió el profesor para que el sistema operativo recupere puertos cuando se quedan todos ocupados?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Liberar dinámicamente memoria swap",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Reiniciar el servicio de DNS",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Reiniciar todo el stack TCP/IP",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Aumentar automáticamente el número de sockets",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.187Z"
+  },
+  {
+    "id": "q-sds13-wirelessPreguntas-3",
+    "text": "¿Qué estrategia de mitigación a gran escala emplea una CDN contra ataques de denegación de servicio?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Distribución geográfica y cacheo de contenido",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Cifrado end-to-end de todo el tráfico",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Balanceo interno de sesiones TCP",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Uso de proxys inversos únicamente",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.187Z"
+  },
+  {
+    "id": "q-sds13-wirelessPreguntas-4",
+    "text": "Según la clase, ¿por qué la mayoría de los servicios de gran tráfico migran de nube pública a infraestructura propia?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Menor latencia global",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Mayor seguridad física",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Coste más bajo a gran escala",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Mayor facilidad de autoescalado",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.187Z"
+  },
+  {
+    "id": "q-sds13-wirelessPreguntas-5",
+    "text": "¿Qué describe el ataque de Bluejacking en Bluetooth?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Análisis pasivo de tramas RF",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Envío de mensajes no solicitados (spam)",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Interceptación de credenciales",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Inhibición de frecuencias",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.187Z"
+  },
+  {
+    "id": "q-sds13-wirelessPreguntas-6",
+    "text": "¿En qué consiste el Bluesnarfing?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Crear redes mesh maliciosas",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Desbordar la tabla de emparejamientos",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Acceder y copiar información sin autorización",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Inundar un dispositivo con solicitudes PIN",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.187Z"
+  },
+  {
+    "id": "q-sds13-wirelessPreguntas-7",
+    "text": "¿Qué algoritmo de cifrado en flujo clásico utiliza Bluetooth “clásico”?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "E0",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "AES-CCM",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "RC4",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "SHA-1",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.187Z"
+  },
+  {
+    "id": "q-sds13-wirelessPreguntas-8",
+    "text": "¿Qué método de emparejamiento Bluetooth emplea ECDH a partir de la versión 2.1?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Emparejamiento clásico por PIN",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Just Works",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Passkey Entry",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "SSP (Simple Secure Pairing)",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.187Z"
+  },
+  {
+    "id": "q-sds13-wirelessPreguntas-9",
+    "text": "¿Cuál de estos modos de interfaz Wi-Fi es necesario para capturar paquetes sin estar asociado a un AP?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "managed",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "monitor",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "mesh",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "ad-hoc",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.187Z"
+  },
+  {
+    "id": "q-sds13-wirelessPreguntas-10",
+    "text": "¿Cuál es la principal debilidad del protocolo WEP?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "IV de sólo 24 bits que se repiten",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Cifrado asimétrico débil",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Uso de AES en modo CBC",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Autenticación basada en certificados",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.187Z"
+  },
+  {
+    "id": "q-sds13-wirelessPreguntas-11",
+    "text": "¿Qué técnica permite acelerar el ataque de recuperación de la clave WEP en minutos?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Falsificación de beacon frames",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Inyección de ARP para generar tráfico",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Escaneo de SSIDs ocultos",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Fuerza bruta directa sobre la PSK",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.187Z"
+  },
+  {
+    "id": "q-sds13-wirelessPreguntas-12",
+    "text": "¿Qué mejora introduce WPA-TKIP sobre WEP?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Uso de IV de 24 bits",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Claves temporales por paquete y MIC",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Cambio a AES-CCMP",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Autenticación 802.1x obligatoria",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.187Z"
+  },
+  {
+    "id": "q-sds13-wirelessPreguntas-13",
+    "text": "¿Por qué las PSK de WPA pueden ser vulnerables?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El protocolo no incluye MIC",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "No cambian con cada paquete",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Uso de contraseñas débiles y distribución manual",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "No soportan EAP",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.187Z"
+  },
+  {
+    "id": "q-sds13-wirelessPreguntas-14",
+    "text": "¿Qué cifrado e integridad utiliza WPA2 (AES-CCMP)?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "RC4 + CRC",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "AES-CBC + HMAC-SHA1",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "TKIP + MIC",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "AES-CTR para privacidad y CBC-MAC para integridad",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.187Z"
+  },
+  {
+    "id": "q-sds13-wirelessPreguntas-15",
+    "text": "¿Cuál es la función principal de IEEE 802.1x en WPA2-Enterprise?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Seguridad por puerto: bloquea todo tráfico hasta autenticar al cliente",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Cifrado de extremo a extremo",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Gestión de claves PSK automáticas",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Monitorización de beacon frames",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.187Z"
+  },
+  {
+    "id": "q-sds13-wirelessPreguntas-16",
+    "text": "¿Qué mejora de autenticación de contraseñas introduce WPA3?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "PSK reforzada con SHA-256",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "SAE (Simultaneous Authentication of Equals)",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "EAP-MD5",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "TKIP con nonce extendido",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.187Z"
+  },
+  {
+    "id": "q-sds13-wirelessPreguntas-17",
+    "text": "¿En qué consiste el cifrado individualizado (“individualized data encryption”) de WPA3?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Cifrado igual para todos los clientes",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Cifrado simétrico con PSK",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Solo cifrado de gestión",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Claves temporales únicas por cliente (forward secrecy)",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.187Z"
+  },
+  {
+    "id": "q-sds13-wirelessPreguntas-18",
+    "text": "¿Qué protocolo IoT usa cifrado AES-128 con claves de red y aplicación separadas?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "LoRaWAN",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Zigbee",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Thread",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "NB-IoT",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.187Z"
+  },
+  {
+    "id": "q-sds13-wirelessPreguntas-19",
+    "text": "¿Qué protocolo IoT incluye ECDH en su nivel de S2 para establecimiento seguro?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "LoRaWAN",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Zigbee",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Z-Wave",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Thread",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.187Z"
+  },
+  {
+    "id": "q-sds13-wirelessPreguntas-20",
+    "text": "¿Qué técnica de descubrimiento de redes Wi-Fi consiste en recorrer el entorno con GPS para catalogar SSIDs?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Beaconing",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "War Driving",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "SSID-hopping",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Passive Scanning",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.187Z"
+  },
+  {
+    "id": "q-sds13-wirelessPreguntas-21",
+    "text": "¿En qué consiste un ataque SYN flood?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Enviar una gran cantidad de SYN sin completar el handshake TCP",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Cerrar todas las conexiones establecidas con RST",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Interceptar y modificar paquetes SYN",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Reiniciar frecuentemente el stack TCP/IP",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.187Z"
+  },
+  {
+    "id": "q-sds13-wirelessPreguntas-22",
+    "text": "¿Cómo responden los stacks modernos de TCP/IP ante un SYN flood que agota puertos?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Generan advertencias al administrador",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Aumentan dinámicamente el límite de sockets",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Reinician todo el stack TCP/IP y cierran conexiones pendientes",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Filtran los paquetes SYN entrantes",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.187Z"
+  },
+  {
+    "id": "q-sds13-wirelessPreguntas-23",
+    "text": "¿Qué recurso explota un ataque de agotamiento de disco?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Espacio de swap",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Espacio en disco al crear archivos infinitos",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Memoria RAM al hacer malloc sin free",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "CPU con bucles infinitos",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.187Z"
+  },
+  {
+    "id": "q-sds13-wirelessPreguntas-24",
+    "text": "¿Para qué sirven las cuotas de disco en un sistema operativo?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Reservar espacio para poder seguir funcionando si el disco se llena",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Limitar la velocidad de lectura/escritura",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Asegurar la privacidad de los usuarios",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Evitar fragmentación",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.187Z"
+  },
+  {
+    "id": "q-sds13-wirelessPreguntas-25",
+    "text": "¿Por qué las botnets son más efectivas que ataques de un solo origen?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Porque distribuyen el ataque en muchas máquinas con tráfico aparentemente legítimo",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Porque usan protocolos cifrados",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Porque consumen menos ancho de banda",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Porque evitan la detección de firmas",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.187Z"
+  },
+  {
+    "id": "q-sds13-wirelessPreguntas-26",
+    "text": "¿Cuál es la principal limitación del autoescalado en la nube pública?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "No puede subir más de cierta cantidad de instancias",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "El aprovisionamiento de una nueva VM puede tardar horas",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "No se factura por consumo real",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Carece de balanceo geográfico",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.187Z"
+  },
+  {
+    "id": "q-sds13-wirelessPreguntas-27",
+    "text": "¿Cómo mitiga una CDN un ataque DDoS?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Cacheando y distribuyendo contenido en múltiples puntos antes de tu servidor",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Cifrando todo el tráfico con SHA-256",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Obligando a todo el tráfico a pasar por un único proxy",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Eliminando todas las peticiones HTTP",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.188Z"
+  },
+  {
+    "id": "q-sds13-wirelessPreguntas-28",
+    "text": "¿En qué se diferencia un ataque DoS de un DDoS?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "DoS viene de una sola máquina, DDoS de muchas máquinas coordinadas",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "DoS explota CPUs, DDoS explota discos",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "DoS usa TCP, DDoS usa UDP",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "DoS es siempre local, DDoS es remoto",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.188Z"
+  },
+  {
+    "id": "q-sds13-wirelessPreguntas-29",
+    "text": "¿Qué técnica hace que sea casi imposible distinguir tráfico legítimo de malicioso en un DDoS distribuido?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Uso de múltiples máquinas generando tráfico normal",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Enmascarar los paquetes con TLS",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Variar continuamente los puertos de origen",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Cambiar constantemente el payload",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.188Z"
+  },
+  {
+    "id": "q-sds13-wirelessPreguntas-30",
+    "text": "¿Cuál es la principal ventaja de segmentar la red wireless en VLANs (WVLANs)?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Aislar el tráfico de invitados del de la red interna",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Reducir la latencia en la red wireless",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Aumentar el ancho de banda total",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Simplificar la configuración de puntos de acceso",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.188Z"
+  },
+  {
+    "id": "q-sds13-wirelessPreguntas-31",
+    "text": "¿Por qué ajustar la potencia de emisión de un punto de acceso mejora la seguridad?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Limita el alcance para que la señal no salga del área deseada",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Aumenta la velocidad máxima de conexión",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Disminuye el retraso de los paquetes",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Incrementa el número de clientes simultáneos",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.188Z"
+  },
+  {
+    "id": "q-sds13-wirelessPreguntas-32",
+    "text": "¿Cuál es el papel de los sensores de detección de AP no autorizados?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Identificar y alertar sobre puntos de acceso rogue en el perímetro",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Aumentar el ancho de banda de la red",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Filtrar los SSID ocultos",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Gestionar dinámicamente las VLANs",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.188Z"
+  },
+  {
+    "id": "q-sds13-wirelessPreguntas-33",
+    "text": "¿En qué consiste un ataque de envenenamiento ARP (ARP poisoning)?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El atacante envía respuestas ARP falsas para hacerse pasar por el gateway",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "El atacante bloquea todas las respuestas ARP legítimas",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Se interceptan tramas Bluetooth y se reenvían al servidor",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Se duplican paquetes IP para saturar la red",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.188Z"
+  },
+  {
+    "id": "q-sds13-wirelessPreguntas-34",
+    "text": "¿Qué implica un ataque de envenenamiento DNS (DNS poisoning)?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Inyectar respuestas DNS falsas para redirigir dominios legítimos",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Capturar todo el tráfico HTTP en texto claro",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Inundar el servidor DNS con consultas",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Ocultar el SSID de las redes Wi-Fi",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.188Z"
+  },
+  {
+    "id": "q-sds13-wirelessPreguntas-35",
+    "text": "¿Qué es MITRE ATT\\&CK?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Una taxonomía y base de datos de técnicas de ataque conocidas",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Un firewall de nueva generación",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Un protocolo de autenticación wireless",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Un método de cifrado para IoT",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.188Z"
+  },
+  {
+    "id": "q-sds13-wirelessPreguntas-36",
+    "text": "¿Qué sucede cuando un sistema operativo agota toda la RAM disponible y comienza a usar swap de forma intensiva?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Aumenta el ancho de banda de red",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Disminuye drásticamente el rendimiento debido al “thrashing” de disco",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Se liberan procesos inactivos automáticamente",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Se generan logs de errores de memoria",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.188Z"
+  },
+  {
+    "id": "q-sds13-wirelessPreguntas-37",
+    "text": "¿Cuál es la diferencia principal entre un ataque DoS a nivel de red y uno a nivel de aplicación?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El DoS de red no usa cifrado, el de aplicación siempre sí",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "El DoS de red explota puertos TCP, el de aplicación usa UDP",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "El DoS de red satura ancho de banda o routers; el de aplicación agota recursos del servidor (CPU, memoria)",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "El DoS de red solo afecta a Cloud, el de aplicación solo a servidores locales",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.188Z"
+  },
+  {
+    "id": "q-sds13-wirelessPreguntas-38",
+    "text": "¿Qué métrica de red se suele monitorizar para detectar un posible DDoS?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Tasa de paquetes ICMP con destino al servidor",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Consumo de CPU en la máquina cliente",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Latencia entre CU y CP",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Número de usuarios concurrentes en la base de datos",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.188Z"
+  },
+  {
+    "id": "q-sds13-wirelessPreguntas-39",
+    "text": "En un entorno de nube pública, ¿qué modelo de facturación permite comprometerse a reservar capacidad con descuento?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Spot Instances",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "On-Demand Instances",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Reserved Instances",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Dedicated Hosts",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.188Z"
+  },
+  {
+    "id": "q-sds13-wirelessPreguntas-40",
+    "text": "¿Cuál es la principal limitación del escalado vertical (“scale up”) frente al escalado horizontal (“scale out”)?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Requiere múltiples zonas de disponibilidad",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Dependes de la capacidad máxima del hardware individual",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Incrementa automáticamente la latencia",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "No funciona en arquitecturas de microservicios",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.188Z"
+  },
+  {
+    "id": "q-sds13-wirelessPreguntas-41",
+    "text": "En Bluetooth SSP, ¿qué método de “Numeric Comparison” garantiza que ambos dispositivos vean el mismo número?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Just Works",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Out-of-Band",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Passkey Entry",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Numeric Comparison",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.188Z"
+  },
+  {
+    "id": "q-sds13-wirelessPreguntas-42",
+    "text": "¿Cuál de estas vulnerabilidades afecta específicamente a Bluetooth Low Energy y permite forzar la quiniela de claves?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "KNOB (Key Negotiation of Bluetooth)",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "BlueBorne",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "BlueSnarfing",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "BLE Injection",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.188Z"
+  },
+  {
+    "id": "q-sds13-wirelessPreguntas-43",
+    "text": "¿Qué ventaja aporta el beamforming en redes Wi-Fi MIMO?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Aumentar la cantidad de SSIDs",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Enfocar la señal RF hacia el cliente para mayor cobertura y rendimiento",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Cambiar dinámicamente el canal de 2.4 GHz a 5 GHz",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Ocultar la antena para mejorar la privacidad",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.188Z"
+  },
+  {
+    "id": "q-sds13-wirelessPreguntas-44",
+    "text": "Comparando 2.4 GHz y 5 GHz en Wi-Fi, ¿qué afirmación es correcta?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "2.4 GHz siempre ofrece más throughput que 5 GHz",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "5 GHz penetra mejor paredes que 2.4 GHz",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "2.4 GHz tiene mejor cobertura (penetración), 5 GHz mayor throughput y menos interferencias",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Ambas bandas tienen la misma latencia",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.188Z"
+  },
+  {
+    "id": "q-sds13-wirelessPreguntas-45",
+    "text": "¿Cuál es la principal vulnerabilidad del protocolo WPS?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "PIN de 8 dígitos vulnerable a fuerza bruta dividida en dos mitades",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Uso de RC4 como cifrado",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Ausencia de MIC en los mensajes",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Emparejamiento sin cifrado",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.188Z"
+  },
+  {
+    "id": "q-sds13-wirelessPreguntas-46",
+    "text": "¿Qué protocolo EAP requiere certificados tanto en cliente como en servidor para autenticar en Wi-Fi Enterprise?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "EAP-PEAP",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "EAP-LEAP",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "EAP-TTLS",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "EAP-TLS",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.188Z"
+  },
+  {
+    "id": "q-sds13-wirelessPreguntas-47",
+    "text": "¿Qué puerto usa por defecto un servidor RADIUS para autentificación?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "1813 (Accounting)",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "1812 (Authentication)",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "1645 (Legacy Authentication)",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "636 (LDAPS)",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.188Z"
+  },
+  {
+    "id": "q-sds13-wirelessPreguntas-48",
+    "text": "Entre NB-IoT y LTE-M, ¿qué característica es típica de NB-IoT?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Soporta voz sobre LTE",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Ancho de banda de decenas de MHz",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Latencia más alta y consumo muy bajo",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Roaming global inmediato",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.188Z"
+  },
+  {
+    "id": "q-sds13-wirelessPreguntas-49",
+    "text": "¿Qué vulnerabilidad de Zigbee se explota en Zigbee2MQTT sin actualización de firmware?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Uso de claves AES-256 constantes",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Autenticación débil en la comisión de dispositivos",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Cifrado en flujo E0",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Dirección de red estática",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.188Z"
+  },
+  {
+    "id": "q-sds13-wirelessPreguntas-50",
+    "text": "¿Cuál herramienta open-source se usa para detectar y catalogar rogue APs en modo monitor?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Kismet",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Nmap",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Airbase-ng",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Tcpdump",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.188Z"
+  },
+  {
+    "id": "q-sds13-wirelessPreguntas-51",
+    "text": "¿Qué tipo de jammer crea interferencia sólo en una frecuencia específica?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Broadband jammer",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "De impulsos",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Narrowband jammer",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "De pulso ultraancho",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.188Z"
+  },
+  {
+    "id": "q-sds13-wirelessPreguntas-52",
+    "text": "En un ataque de retransmisión (“replay attack”) a nivel RF, ¿qué contramedida se utiliza para prevenirlo?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "SSID oculto",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Uso de nonces o números de secuencia en cada paquete",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Desactivar la caché DNS",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Filtrado de MAC",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.188Z"
+  },
+  {
+    "id": "q-sds13-wirelessPreguntas-53",
+    "text": "¿Qué técnica de envenenamiento ARP permite al atacante interceptar tráfico de la red local?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Inundar la tabla ARP con peticiones legítimas",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Deshabilitar el proxy ARP",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Ocultar la dirección MAC legítima",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Enviar respuestas ARP falsas indicando que el atacante es la puerta de enlace",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.188Z"
+  },
+  {
+    "id": "q-sds13-wirelessPreguntas-54",
+    "text": "¿Qué mecanismo de segmentación wireless usa VLANs y múltiples SSIDs para aislar invitados de la red interna?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "WVLANs (Wireless VLANs)",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Access Point Clustering",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Mesh Networking",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "WPA3 Enterprise",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.188Z"
+  },
+  {
+    "id": "q-sds13-wirelessPreguntas-55",
+    "text": "¿Cuál ataque aprovecha la retransmisión de SSID para obligar a un cliente a reconectarse a un AP malicioso?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Beacon flooding",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "SSID spoofing (Gemelo maligno)",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Deauthentication flood",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Channel hopping attack",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.188Z"
+  }
+]

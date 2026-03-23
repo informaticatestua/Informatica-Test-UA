@@ -1,0 +1,1162 @@
+[
+  {
+    "id": "q-sds07-hashPreguntas-1",
+    "text": "¿Qué característica define a una función hash criptográfica?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Permitir invertir fácilmente la transformación para recuperar el mensaje original",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Tomar una entrada de longitud variable y producir una salida de tamaño fijo",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Comprimir datos reduciendo siempre el tamaño de la salida",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Utilizar una clave secreta para cifrar y descifrar",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.173Z"
+  },
+  {
+    "id": "q-sds07-hashPreguntas-2",
+    "text": "¿Cuál es el propósito del esquema de relleno (Merkle–Damgård) en las funciones hash iterativas?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Asegurar que la salida sea siempre de longitud variable",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Incrementar la velocidad de cómputo en hardware especializado",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Añadir el tamaño del mensaje al final y completar bloques incompletos para evitar colisiones triviales",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Permitir la compresión reversible de los datos de entrada",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.173Z"
+  },
+  {
+    "id": "q-sds07-hashPreguntas-3",
+    "text": "¿Qué significa que una función hash sea “de una vía”?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Que produce un resumen de tamaño variable según la longitud de entrada",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Que puede invertirse fácilmente con la clave correcta",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Que siempre produce el mismo resumen para cualquier entrada",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Que es computacionalmente fácil calcular H(m) pero muy difícil, dado h, encontrar m tal que H(m)=h",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.173Z"
+  },
+  {
+    "id": "q-sds07-hashPreguntas-4",
+    "text": "En el contexto de funciones hash, ¿qué describe mejor una colisión débil?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Encontrar dos mensajes cualquiera que produzcan el mismo resumen",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Para un mensaje x dado, hallar otro y≠x tal que H(y)=H(x)",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Calcular H(x) rápidamente en hardware especializado",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Que cambiar un bit de entrada no altere el resumen",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.173Z"
+  },
+  {
+    "id": "q-sds07-hashPreguntas-5",
+    "text": "¿Por qué se firma el resumen (hash) de un mensaje en lugar del mensaje completo en firmas digitales?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Porque la aritmética de clave pública solo admite tamaños reducidos y es más rápido",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Porque la firma del mensaje completo no garantiza integridad",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Porque el resumen se puede descifrar",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Porque evita la necesidad de usar hashes",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.173Z"
+  },
+  {
+    "id": "q-sds07-hashPreguntas-6",
+    "text": "¿Cuál de estas NO es una aplicación típica de funciones hash en seguridad?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Verificar la integridad de archivos (checksum)",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Generar números verdaderamente aleatorios usando ruido físico",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Indexar y comparar eventos en sistemas IDS/IPS",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Cifrar mensajes de forma reversible",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.173Z"
+  },
+  {
+    "id": "q-sds07-hashPreguntas-7",
+    "text": "¿En qué consiste el ataque de extensión de longitud (length-extension)?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Forzar la función a usar más bloques de relleno de los previstos",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Encontrar colisiones débiles mediante la paradoja del cumpleaños",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Dado H(m) y len(m), calcular H(m∥pad(m)∥X) sin conocer m",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Romper la función encontrando la clave interna",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.173Z"
+  },
+  {
+    "id": "q-sds07-hashPreguntas-8",
+    "text": "Según la paradoja del cumpleaños, ¿cuántas operaciones son necesarias para hallar una colisión en un hash de m bits?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "2^m",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Aproximadamente 2^(m/2)",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "m·2^m",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "m^2",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.173Z"
+  },
+  {
+    "id": "q-sds07-hashPreguntas-9",
+    "text": "¿Cuál de las siguientes funciones hash está actualmente considerada rota por ataques prácticos de colisión y preimagen?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "SHA-256",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "RIPEMD-160",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "MD5",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "SHA-3",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.173Z"
+  },
+  {
+    "id": "q-sds07-hashPreguntas-10",
+    "text": "¿Qué diferencia fundamental existe entre SHA-2 y SHA-3?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "SHA-3 produce siempre resúmenes de 128 bits",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "SHA-2 usa un esquema esponja; SHA-3 usa Merkle–Damgård",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "SHA-2 fue diseñado por un concurso público; SHA-3 por la NSA",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "SHA-2 y SHA-3 emplean algoritmos conceptualmente distintos (Merkle–Damgård vs. esponja)",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.173Z"
+  },
+  {
+    "id": "q-sds07-hashPreguntas-11",
+    "text": "¿Qué aporta Scrypt frente a PBKDF2 en la gestión de contraseñas?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Uso intensivo de memoria para dificultar ataques con GPU/ASIC",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Un número de iteraciones configurable basado en potencias de 2",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Compatibilidad con estándares PKCS",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Resistencia a colisiones fuertes",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.173Z"
+  },
+  {
+    "id": "q-sds07-hashPreguntas-12",
+    "text": "¿Cuál es el papel de la “sal” (salt) al almacenar contraseñas con hash?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Acelerar el cálculo del hash en el servidor",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Evitar que contraseñas idénticas produzcan el mismo resumen y dificultar tablas precalculadas",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Permitir descifrar la contraseña original",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Garantizar que el hash sea de doble vía",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.173Z"
+  },
+  {
+    "id": "q-sds07-hashPreguntas-13",
+    "text": "¿En qué se basa Bcrypt para mejorar la seguridad frente a PBKDF2?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Reemplazar el hash por un cifrador en bloque reversible",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Evitar completamente el uso de memoria",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Utilizar exclusivamente sal fija",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Incorporar memoria y una fase de derivación de subclaves más costosa",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.173Z"
+  },
+  {
+    "id": "q-sds07-hashPreguntas-14",
+    "text": "¿Cuál de los siguientes algoritmos resultó ganador del Concurso de Password Hashing (PHC) 2015?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Argon2",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Scrypt",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "PBKDF2",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Blake2",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.173Z"
+  },
+  {
+    "id": "q-sds07-hashPreguntas-15",
+    "text": "¿Cómo pueden usarse hashes para mejorar la privacidad al compartir datos agregados?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Para cifrar los datos de manera reversible entre varias partes",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Para generar números aleatorios de alta calidad",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Para anonimizar atributos (p. ej., ciudad o edad) sin revelar valores originales",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Para comprimir grandes volúmenes de datos antes de exportarlos",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.173Z"
+  },
+  {
+    "id": "q-sds07-hashPreguntas-16",
+    "text": "¿Por qué es obligatorio incluir la longitud del mensaje en el relleno de Merkle–Damgård?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Para distinguir entre mensajes que terminan en cero y bloques de relleno, evitando colisiones triviales",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Para acelerar la computación del hash",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Para permitir la reversibilidad del esquema",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Para mantener el estado interno constante",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.173Z"
+  },
+  {
+    "id": "q-sds07-hashPreguntas-17",
+    "text": "¿Qué propiedad de un buen hash hace que un pequeño cambio en la entrada produzca un cambio drástico en la salida?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Función de una vía",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Eficiencia",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Efecto avalancha (avalanche effect)",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Colisión fuerte",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.173Z"
+  },
+  {
+    "id": "q-sds07-hashPreguntas-18",
+    "text": "¿Cuál de estas afirmaciones sobre CRC (cyclic redundancy check) es correcta?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Está diseñado para resistir adversarios que intenten manipular datos deliberadamente",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Sirve para detectar errores accidentales, pero no es seguro frente a ataques maliciosos",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Genera siempre un resumen de tamaño fijo de 256 bits",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Utiliza Merkle–Damgård",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.173Z"
+  },
+  {
+    "id": "q-sds07-hashPreguntas-19",
+    "text": "En firmas digitales, ¿qué ataque se reduce al firmar directamente el mensaje en lugar de su resumen?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Búsqueda exhaustiva de preimagen",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Ataque de la paradoja del cumpleaños",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Colisión débil",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Ineficiencia computacional (firma se vuelve impracticable)",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.173Z"
+  },
+  {
+    "id": "q-sds07-hashPreguntas-20",
+    "text": "¿Cómo facilita un IDS/IPS el uso de hashes en la detección de intrusos?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Comparando el estado de la RAM en tiempo real",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Desencriptando paquetes cifrados",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Indexando y buscando el hash de cada paquete contra una base de anomalías conocidas",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Generando claves de sesión",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.173Z"
+  },
+  {
+    "id": "q-sds07-hashPreguntas-21",
+    "text": "¿Qué ventaja da a un antivirus almacenar hashes de fragmentos de malware en lugar del binario completo?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Permite comparar de forma rápida y ligera los resúmenes con el código en ejecución",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Evita la necesidad de actualizaciones",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Garantiza resistencia a falsos positivos",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Hace reversible la detección",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.173Z"
+  },
+  {
+    "id": "q-sds07-hashPreguntas-22",
+    "text": "¿Por qué forman parte las funciones hash de algunos generadores de números verdaderamente aleatorios?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Para cifrar la fuente de entropía",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Para “destilar” la entropía cruda en una salida uniforme y sin sesgos",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Para aumentar la longitud de la secuencia",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Para comprimir el vector de entropía",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.173Z"
+  },
+  {
+    "id": "q-sds07-hashPreguntas-23",
+    "text": "¿Qué requisito NO es propio de una función hash criptográfica?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Salida de longitud fija",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Eficiencia de cálculo",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Dificultad de colisión",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Uso de una clave secreta",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.173Z"
+  },
+  {
+    "id": "q-sds07-hashPreguntas-24",
+    "text": "¿Cuál es la diferencia entre resistencia a preimagen y a segunda preimagen?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Preimagen: dado h, es difícil encontrar cualquier m tal que H(m)=h; segunda preimagen: dado un m₀, difícil hallar m₁≠m₀ con H(m₁)=H(m₀)",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Preimagen: encontrar colisiones generalizadas; segunda preimagen: distinguir salidas pseudorandom",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Preimagen: romper cifradores en bloque; segunda preimagen: atacar esquemas de relleno",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "No existe diferencia",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.173Z"
+  },
+  {
+    "id": "q-sds07-hashPreguntas-25",
+    "text": "El ataque de la paradoja del cumpleaños se usa para estimar:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El coste de computar un hash por hardware especializado",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "El número de intentos necesarios para encontrar una colisión en un hash de m bits (~2^(m/2))",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "La longitud óptima de sal",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "La probabilidad de preimagen",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.173Z"
+  },
+  {
+    "id": "q-sds07-hashPreguntas-26",
+    "text": "¿Qué función hash de la lista es de tipo “esponja” y no usa Merkle–Damgård?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "SHA-1",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "MD5",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "RIPEMD-160",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "SHA-3 (Keccak)",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.173Z"
+  },
+  {
+    "id": "q-sds07-hashPreguntas-27",
+    "text": "¿Cuál de estas funciones NO deberías usar hoy en entornos de seguridad críticos?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "SHA-256",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Argon2",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "MD4",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Bcrypt",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.173Z"
+  },
+  {
+    "id": "q-sds07-hashPreguntas-28",
+    "text": "¿Qué característica introduce Argon2 para defenderse de ataques por caching?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Acceso aleatorio y secuencial a memoria para evitar filtraciones por tiempo de caché",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Uso de sal fija en todos los usuarios",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Paradoja del cumpleaños interna",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Compresión interactiva",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.173Z"
+  },
+  {
+    "id": "q-sds07-hashPreguntas-29",
+    "text": "En PBKDF2, ¿qué parámetro afecta directamente al “trabajo” que realiza el derivador?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Longitud de la sal",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Número de iteraciones",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Tamaño del resumen",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Algoritmo de compresión",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.173Z"
+  },
+  {
+    "id": "q-sds07-hashPreguntas-30",
+    "text": "¿Por qué Scrypt es más caro de atacar con ASIC que PBKDF2?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Porque su salida es de longitud variable",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Porque requiere una clave secreta",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Porque consume grandes cantidades de memoria y hace accesos desordenados",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Porque usa un cifrador en bloque reversible",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.173Z"
+  },
+  {
+    "id": "q-sds07-hashPreguntas-31",
+    "text": "¿Para qué sirve el “Client-Independent Update” en algunos PBKDF?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Para que el cliente decida el número de iteraciones",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Para cambiar parámetros (iteraciones/ram) sin que el usuario vuelva a escribir su contraseña",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Para permitir precálculo distribuido",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Para derivar múltiples claves a la vez",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.173Z"
+  },
+  {
+    "id": "q-sds07-hashPreguntas-32",
+    "text": "¿Cuál es la longitud mínima recomendada de sal para hashes de contraseñas?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "64 bits",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "32 bits",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "128 bytes",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "256 bytes",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.173Z"
+  },
+  {
+    "id": "q-sds07-hashPreguntas-33",
+    "text": "¿Qué problema persiste si guardas en hash+sal contraseñas muy débiles (“123456”)?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "No hay problema: son imposibles de romper",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "El hash se vuelve reversible",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "La sal deja de tener efecto",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Un atacante aún puede probar todas las contraseñas posibles vía GPU",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.173Z"
+  },
+  {
+    "id": "q-sds07-hashPreguntas-34",
+    "text": "¿Qué versión de SHA-3 surgió del concurso por no basarse en SHA-2 ni MD4?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Sponge-256",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Keccak-512",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Keccak (SHA-3)",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Skein",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.173Z"
+  },
+  {
+    "id": "q-sds07-hashPreguntas-35",
+    "text": "¿Cuál de estos ataques aprovecha directamente la estructura interna de Merkle–Damgård?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Fuerza bruta de preimagen",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Ataque de extensión de longitud",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Paradoja del cumpleaños",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Uso de GPUs masivas",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.173Z"
+  },
+  {
+    "id": "q-sds07-hashPreguntas-36",
+    "text": "¿Qué función de la lista es una derivación de clave estándar muy popular pero hoy considerada débil?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Scrypt",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Bcrypt",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Argon2",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "PBKDF2",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.173Z"
+  },
+  {
+    "id": "q-sds07-hashPreguntas-37",
+    "text": "¿Cuándo usarías un hash en lugar de un cifrado para gestionar contraseñas?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Cuando necesites descifrar la contraseña en el servidor",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Cuando quieras usar una clave maestra para todo el sistema",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Cuando solo necesites verificar que la contraseña coincide, sin permitir su recuperación",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Cuando requieras cifrado reversible",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.173Z"
+  },
+  {
+    "id": "q-sds07-hashPreguntas-38",
+    "text": "¿Qué ventaja tiene usar “pimienta” (pepper) además de sal?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Hace que el resumen sea de variable longitud",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Introduce un valor secreto del servidor para endurecer los hashes incluso si la DB se filtra",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Permite colisiones controladas",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Acelera la derivación de la clave",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.173Z"
+  },
+  {
+    "id": "q-sds07-hashPreguntas-39",
+    "text": "¿Cuál es el propósito de la “salt” en algoritmos de prueba de trabajo de criptomonedas como Litecoin?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Democratizar la minería evitando ASICs especializados",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Incrementar la salida de la red",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Firmar bloques de forma rápida",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Evitar la paradoja del cumpleaños",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.173Z"
+  },
+  {
+    "id": "q-sds07-hashPreguntas-40",
+    "text": "¿Qué parámetro de los PBKDF basados en memoria hace que GPUs y ASICs pierdan su ventaja?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Tamaño del resumen",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Esquema de relleno",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Seguridad de preimagen",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Consumo de RAM configurables",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.173Z"
+  }
+]

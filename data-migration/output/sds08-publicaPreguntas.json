@@ -1,0 +1,1626 @@
+[
+  {
+    "id": "q-sds08-publicaPreguntas-1",
+    "text": "¿Qué concepto erróneo corresponde a la criptografía de clave pública?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Que es más segura que la criptografía simétrica",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Que depende de la longitud de clave y del coste computacional",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Que solo sirve para distribuir claves y firmar digitalmente",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Que requiere un protocolo de distribución de claves",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.174Z"
+  },
+  {
+    "id": "q-sds08-publicaPreguntas-2",
+    "text": "¿Cuáles son los dos problemas principales que ataja la criptografía de clave pública?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Cifrado de datos y generación de certificados",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Distribución de claves y firma digital",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Autenticación de usuarios y cifrado de correos",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Gestión de certificados y actualización de claves",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.174Z"
+  },
+  {
+    "id": "q-sds08-publicaPreguntas-3",
+    "text": "¿En qué año Diffie y Hellman propusieron el concepto de funciones unidireccionales que posibilitan la criptografía asimétrica?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "1965",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "1970",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "1976",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "1980",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.175Z"
+  },
+  {
+    "id": "q-sds08-publicaPreguntas-4",
+    "text": "¿Qué caracteriza a la criptografía asimétrica frente a la simétrica?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Uso de dos claves distintas, una para cifrar y otra para descifrar",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Uso de la misma clave para cifrar y descifrar",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Dependencia de un canal seguro para el intercambio de claves",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Mayor velocidad en el cifrado de grandes volúmenes de datos",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.175Z"
+  },
+  {
+    "id": "q-sds08-publicaPreguntas-5",
+    "text": "Para lograr privacidad en mensaje cifrado, ¿qué operación se realiza?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Se cifra con la clave pública del destino",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Se cifra con la clave privada del origen",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Se cifra con la clave simétrica compartida",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Se cifra con la función hash del mensaje",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.175Z"
+  },
+  {
+    "id": "q-sds08-publicaPreguntas-6",
+    "text": "Para autenticar el origen de un mensaje, ¿qué operación de clave pública se emplea?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Cifrar con la clave pública del destino",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Cifrar con la clave privada del origen",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Cifrar con la clave pública del origen",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Cifrar con la clave privada del destino",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.175Z"
+  },
+  {
+    "id": "q-sds08-publicaPreguntas-7",
+    "text": "En RSA, ¿cuál es la condición que debe cumplir el exponente público 𝑒?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "0 < 𝑒 < 𝑝",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "𝑒 debe ser múltiplo de Φ(𝑛)",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "𝑒 y Φ(𝑛) deben ser primos relativos (mcd=1)",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "𝑒 debe ser mayor que 𝑛",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.175Z"
+  },
+  {
+    "id": "q-sds08-publicaPreguntas-8",
+    "text": "¿En qué se basa la seguridad del algoritmo RSA?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "En la dificultad de calcular logaritmos discretos",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "En la generación de números aleatorios",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "En la longitud variable de los certificados",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "En la dificultad de factorizar grandes números enteros",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.175Z"
+  },
+  {
+    "id": "q-sds08-publicaPreguntas-9",
+    "text": "¿Cuál es la vulnerabilidad principal del intercambio de claves Diffie-Hellman?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Ataque de hombre en el medio por falta de autenticación",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Fuerza bruta sobre claves simétricas",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Debilidad en la función hash utilizada",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Exposición de la clave privada en el canal público",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.175Z"
+  },
+  {
+    "id": "q-sds08-publicaPreguntas-10",
+    "text": "¿Qué es lo que se firma en un esquema de firma digital eficiente?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El mensaje completo",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "El hash (resumen) del mensaje",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "La clave pública del firmante",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "La clave simétrica generada",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.175Z"
+  },
+  {
+    "id": "q-sds08-publicaPreguntas-11",
+    "text": "¿Cuál es el principal papel de la función hash en los protocolos de firma digital?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Mejorar el rendimiento al reducir el tamaño de los datos a firmar",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Mantener la integridad del mensaje",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Generar la clave privada",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Validar la autenticidad del certificado",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.175Z"
+  },
+  {
+    "id": "q-sds08-publicaPreguntas-12",
+    "text": "¿Qué diferencia fundamental hay entre un certificado y un par de claves pública/privada?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El certificado solo contiene la clave privada",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "El par de claves incluye metadatos sobre el propietario",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "El certificado es un contenedor estandarizado con metadatos y firma de una autoridad",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "El par de claves simétricas se intercambia en un certificado",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.175Z"
+  },
+  {
+    "id": "q-sds08-publicaPreguntas-13",
+    "text": "¿Por qué las curvas elípticas se utilizan en criptografía asimétrica moderna?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Porque ofrecen mayor seguridad que cualquier tamaño de RSA",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Porque reducen drásticamente el tamaño de la clave para un nivel de seguridad equivalente",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Porque son más fáciles de implementar que RSA",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Porque no requieren funciones unidireccionales",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.175Z"
+  },
+  {
+    "id": "q-sds08-publicaPreguntas-14",
+    "text": "¿Por qué no se utiliza la criptografía de clave pública para cifrar datos de propósito general?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Porque es extremadamente lenta comparada con la criptografía simétrica",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Porque no ofrece suficiente seguridad",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Porque no existe un estándar de implementación",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Porque no permite firma digital",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.175Z"
+  },
+  {
+    "id": "q-sds08-publicaPreguntas-15",
+    "text": "¿Qué esquema híbrido es la alternativa habitual para cifrar comunicaciones de forma eficiente?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Cifrado directo con clave pública de todos los datos",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Solo firma digital sin cifrado",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Hash de mensaje enviado como clave",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Uso de clave pública para enviar una clave simétrica y luego cifrar datos con AES o ChaCha20",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.175Z"
+  },
+  {
+    "id": "q-sds08-publicaPreguntas-16",
+    "text": "¿Qué concepto erróneo se asocia a la criptografía de clave pública?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Que es más segura que la criptografía simétrica",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Que depende de la longitud de clave y del coste computacional",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Que solo sirve para distribuir claves y firmar digitalmente",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Que requiere un protocolo de distribución de claves",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.175Z"
+  },
+  {
+    "id": "q-sds08-publicaPreguntas-17",
+    "text": "¿Qué idea equivocada existe sobre la distribución de claves en criptografía de clave pública?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Que necesita canales seguros previos para intercambiar claves",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Que siempre requiere autoridades certificadoras",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Que la distribución de claves es trivial",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Que solo funciona con criptografía simétrica",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.175Z"
+  },
+  {
+    "id": "q-sds08-publicaPreguntas-18",
+    "text": "¿En qué año Diffie y Hellman propusieron el uso de funciones unidireccionales para la criptografía asimétrica?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "1969",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "1970",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "1976",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "1980",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.175Z"
+  },
+  {
+    "id": "q-sds08-publicaPreguntas-19",
+    "text": "¿Qué caracteriza matemáticamente a las funciones unidireccionales usadas en criptografía asimétrica?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Son simétricas y usan la misma clave para cifrar y descifrar",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Fáciles de calcular en un sentido, muy costosas de invertir",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Requieren un canal seguro para su transmisión",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Solo funcionan con curvas elípticas",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.175Z"
+  },
+  {
+    "id": "q-sds08-publicaPreguntas-20",
+    "text": "¿Por qué se denomina “asimétrica” a la criptografía de clave pública?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Porque utiliza dos claves distintas, una para cifrar y otra para descifrar",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Porque la misma clave cifra y descifra en direcciones opuestas",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Porque no requiere clave alguna para el cifrado",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Porque usa curvas elípticas en lugar de primos grandes",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.175Z"
+  },
+  {
+    "id": "q-sds08-publicaPreguntas-21",
+    "text": "En RSA, ¿qué condición debe cumplir el exponente público 𝑒?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Ser múltiplo de Φ(𝑛)",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "0 < 𝑒 < 𝑛",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "gcd(e,Φ(n))=1",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Ser un número primo menor que 𝑝",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.175Z"
+  },
+  {
+    "id": "q-sds08-publicaPreguntas-22",
+    "text": "¿En qué problema matemático se basa la seguridad del algoritmo RSA?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Cálculo de logaritmos discretos",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Generación de números aleatorios",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Optimización de funciones unidireccionales",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Factorización de grandes enteros en sus primos",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.175Z"
+  },
+  {
+    "id": "q-sds08-publicaPreguntas-23",
+    "text": "¿Cuál de estos NO es un ataque práctico contra RSA hoy día?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Fuerza bruta probando todas las claves privadas",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Cifrar mensajes cortos y comparar (ataque de mensaje probable)",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Factorizar el módulo 𝑛",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Fuerza bruta de claves simétricas",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.175Z"
+  },
+  {
+    "id": "q-sds08-publicaPreguntas-24",
+    "text": "¿Cuál es la longitud mínima de clave recomendada para RSA actualmente?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "512 bits",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "2048 bits",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "1024 bits",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "128 bits",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.175Z"
+  },
+  {
+    "id": "q-sds08-publicaPreguntas-25",
+    "text": "¿Qué funcionalidades ofrece RSA de manera nativa?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Cifrado, intercambio de claves y firma digital",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Solo intercambio de claves",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Solo firma digital",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Solo cifrado simétrico",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.175Z"
+  },
+  {
+    "id": "q-sds08-publicaPreguntas-26",
+    "text": "¿Hasta qué año estuvo vigente la patente de RSA Labs?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "1990",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "1995",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "2000",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "2005",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.175Z"
+  },
+  {
+    "id": "q-sds08-publicaPreguntas-27",
+    "text": "¿Cuál es el objetivo principal del protocolo Diffie–Hellman?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Intercambiar de forma segura una clave simétrica",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Firmar digitalmente un mensaje",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Cifrar datos de propósito general",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Autenticar usuarios sin clave previa",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.175Z"
+  },
+  {
+    "id": "q-sds08-publicaPreguntas-28",
+    "text": "¿En qué se basa la dificultad de Diffie–Hellman?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Factorización de enteros grandes",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Cálculo de logaritmos discretos",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Pruebas de primalidad deterministas",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Cálculo de exponenciaciones modulares rápidas",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.175Z"
+  },
+  {
+    "id": "q-sds08-publicaPreguntas-29",
+    "text": "¿Qué vulnerabilidad principal afecta al intercambio de claves Diffie–Hellman?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Ataque de hombre en el medio por falta de autenticación",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Fuerza bruta de la clave privada",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Debilidad en la función hash",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Desbordamiento de búfer en la librería",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.175Z"
+  },
+  {
+    "id": "q-sds08-publicaPreguntas-30",
+    "text": "¿DSA se diseñó originalmente como variante de qué algoritmo?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "RSA",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "ElGamal",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Diffie–Hellman",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "ECC",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.175Z"
+  },
+  {
+    "id": "q-sds08-publicaPreguntas-31",
+    "text": "¿Qué ventaja aporta EdDSA frente a DSA tradicional?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Permite cifrado de datos",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Usa curvas de Edwards para mayor rendimiento",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "No requiere clave privada",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Elimina la necesidad de hashes",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.175Z"
+  },
+  {
+    "id": "q-sds08-publicaPreguntas-32",
+    "text": "¿Cuál de estos algoritmos solo sirve para firma y no para cifrado?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "RSA",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Diffie–Hellman",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "ElGamal",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "DSA",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.175Z"
+  },
+  {
+    "id": "q-sds08-publicaPreguntas-33",
+    "text": "¿Por qué se usan curvas elípticas en criptografía moderna?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Reducen drásticamente el tamaño de clave para igual seguridad",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Aumentan la complejidad de implementación",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Requieren menos operaciones de exponenciación",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Eliminan la necesidad de primos probabilísticos",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.175Z"
+  },
+  {
+    "id": "q-sds08-publicaPreguntas-34",
+    "text": "¿Qué escándalo puso en duda la seguridad de algunas curvas elípticas?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Patente de RSA en EE. UU.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Backdoors introducidos por la NSA en estándares",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Fallos de implementación en OpenSSL",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Vulnerabilidades en dispositivos móviles",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.175Z"
+  },
+  {
+    "id": "q-sds08-publicaPreguntas-35",
+    "text": "¿Cómo comparan el tamaño de clave y rendimiento RSA puro vs curvas elípticas?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "RSA es más rápido y usa claves más pequeñas",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "RSA y ECC tienen rendimiento equivalente",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "ECC ofrece igual seguridad con claves mucho menores y mayor velocidad",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "RSA crece linealmente con la longitud de clave, ECC no",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.175Z"
+  },
+  {
+    "id": "q-sds08-publicaPreguntas-36",
+    "text": "¿Qué vulnerabilidad es típica de la criptografía simétrica?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Ataque por fuerza bruta probando todas las claves posibles",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Ataque de mensaje probable",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Factorización de primos",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Repudio de la firma",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.175Z"
+  },
+  {
+    "id": "q-sds08-publicaPreguntas-37",
+    "text": "¿Qué describe un ataque de mensaje probable en criptografía pública?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Probar todas las claves privadas con fuerza bruta",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Cifrar posibles mensajes cortos con la clave pública hasta hallar el correcto",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Interceptar la clave privada durante la generación",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Reemplazar la clave pública en el repositorio",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.175Z"
+  },
+  {
+    "id": "q-sds08-publicaPreguntas-38",
+    "text": "¿Qué problema surge en la firma digital si no hay autoridad certificadora?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Debilidad en la función hash",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Exposición de la clave simétrica",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Ataque de mensaje probable",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Repudio de la firma",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.175Z"
+  },
+  {
+    "id": "q-sds08-publicaPreguntas-39",
+    "text": "¿Qué se firma realmente en un esquema de firma digital eficiente?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El mensaje completo",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "El hash (resumen) del mensaje",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "La clave pública del firmante",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "La clave privada del firmante",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.175Z"
+  },
+  {
+    "id": "q-sds08-publicaPreguntas-40",
+    "text": "¿Cuál es una propiedad clave de la firma digital?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Oculta el contenido del mensaje",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Genera claves simétricas compartidas",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Verificable por terceros para resolver disputas",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Elimina la necesidad de certificados",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.175Z"
+  },
+  {
+    "id": "q-sds08-publicaPreguntas-41",
+    "text": "¿Cómo se evita el repudio en un contexto legal?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Usando firmas de autoridades certificadoras adicionales",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Incrementando el tamaño de clave pública",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Empleando solo criptografía simétrica",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Firmando el mensaje completo en texto abierto",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.175Z"
+  },
+  {
+    "id": "q-sds08-publicaPreguntas-42",
+    "text": "¿Por qué es necesario un certificado en vez de solo un par de claves?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Porque el par de claves no cifra datos",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Para agilizar el cifrado simétrico",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Para contener metadatos y firma de una autoridad estandarizada",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Porque evita ataques de fuerza bruta",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.175Z"
+  },
+  {
+    "id": "q-sds08-publicaPreguntas-43",
+    "text": "¿Cuándo no es necesario usar un certificado?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Al firmar correos electrónicos con GPG",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Al intercambiar claves en un sistema bancario",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Al desplegar HTTPS en un servidor público",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Cuando la aplicación gestiona internamente sus propias claves sin interoperar",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.175Z"
+  },
+  {
+    "id": "q-sds08-publicaPreguntas-44",
+    "text": "¿Por qué se emplea un esquema híbrido (clave pública + AES/ChaCha)?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Porque la clave pública solo cifra con lentitud, se usa para enviar la clave simétrica",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Porque evita completamente la firma digital",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Porque elimina la necesidad de funciones hash",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Porque permite intercambiar certificados a alta velocidad",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.175Z"
+  },
+  {
+    "id": "q-sds08-publicaPreguntas-45",
+    "text": "¿Qué protocolo es un ejemplo de uso híbrido habitual?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "SSH",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "PGP",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Kerberos",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "TLS (HTTPS)",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.175Z"
+  },
+  {
+    "id": "q-sds08-publicaPreguntas-46",
+    "text": "¿Cuál es la principal ventaja del esquema híbrido sobre criptografía pública pura?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Mayor compatibilidad con clientes antiguos",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Velocidad de cifrado simétrico tras intercambio público",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Seguridad cuántica nativa",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Autenticación mutua sin certificados",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.175Z"
+  },
+  {
+    "id": "q-sds08-publicaPreguntas-47",
+    "text": "¿Qué busca la criptografía post-cuántica?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Resistir ataques de computadores cuánticos reales",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Aprovechar el paralelismo cuántico para cifrar más rápido",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Sustituir hashes por funciones unidireccionales",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Utilizar primos de verdad en RSA",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.175Z"
+  },
+  {
+    "id": "q-sds08-publicaPreguntas-48",
+    "text": "¿Por qué es relevante la post-cuántica hoy en día?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Porque ya existen computadores cuánticos que rompen RSA 2048",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Porque elimina la necesidad de claves simétricas",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Porque anticipa futuros ataques basados en Shor",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Porque mejora la velocidad de Diffie–Hellman",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.175Z"
+  },
+  {
+    "id": "q-sds08-publicaPreguntas-49",
+    "text": "¿Qué algoritmo cuántico permitiría factorizar grandes enteros rápidamente?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Grover",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Shor",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "RSA cuántico",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Dijkstra cuántico",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.175Z"
+  },
+  {
+    "id": "q-sds08-publicaPreguntas-50",
+    "text": "¿Cuál es la recomendación general ante la amenaza cuántica?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Aumentar las longitudes de clave RSA hasta 8192 bits",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Pasar completamente a criptografía simétrica",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Usar curvas elípticas más largas",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Investigar y adoptar algoritmos post-cuánticos estandarizados",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.175Z"
+  },
+  {
+    "id": "q-sds08-publicaPreguntas-51",
+    "text": "¿Qué mecanismo permite comprobar en tiempo real si un certificado ha sido revocado sin descargar la lista completa?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "CRL (Certificate Revocation List)",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "S/MIME",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "OCSP (Online Certificate Status Protocol)",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "SSHFP",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.175Z"
+  },
+  {
+    "id": "q-sds08-publicaPreguntas-52",
+    "text": "¿En qué campo de un certificado X.509 se especifica la fecha de inicio y fin de validez?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Subject",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Validity (Not Before / Not After)",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Issuer",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Key Usage",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.175Z"
+  },
+  {
+    "id": "q-sds08-publicaPreguntas-53",
+    "text": "¿Qué es la “cadena de confianza” en una infraestructura de clave pública (PKI)?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El conjunto de certificados desde el emisor raíz hasta el certificado final",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "La clave privada del usuario final",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "El algoritmo de firma utilizado",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "El protocolo de intercambio de claves",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.175Z"
+  },
+  {
+    "id": "q-sds08-publicaPreguntas-54",
+    "text": "¿Cuál es el propósito del padding OAEP en RSA?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Aumentar la longitud de la clave pública",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Generar claves simétricas seguras",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Firmar digitalmente el mensaje completo",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Introducir aleatoriedad para prevenir ataques de texto plano elegido",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.175Z"
+  },
+  {
+    "id": "q-sds08-publicaPreguntas-55",
+    "text": "¿Qué extensión de un certificado X.509 indica por quién ha sido emitido y firmado?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Subject Key Identifier",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Authority Key Identifier / Issuer",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Basic Constraints",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Subject Alternative Name",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.175Z"
+  },
+  {
+    "id": "q-sds08-publicaPreguntas-56",
+    "text": "¿Cuál es la diferencia habitual entre los formatos PEM y DER para certificados?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "PEM usa Base64 con encabezados ASCII, DER es binario puro",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "DER incluye la clave privada, PEM no",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "PEM es solo para claves simétricas",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "DER permite OCSP, PEM no permite CRL",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.175Z"
+  }
+]

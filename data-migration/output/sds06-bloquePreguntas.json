@@ -1,0 +1,2612 @@
+[
+  {
+    "id": "q-sds06-bloquePreguntas-1",
+    "text": "¿Cuál es la diferencia fundamental real entre un cifrador en bloque y un cifrador en flujo?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Se basa en bloques de tamaño fijo frente a cifrado elemento a elemento.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Un cifrador en bloque aplica una transformación fija, mientras que un cifrador en flujo utiliza una transformación que evoluciona con su estado.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Un cifrador en bloque usa XOR, mientras que un cifrador en flujo usa permutaciones.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Un cifrador en bloque no puede descifrarse, mientras que un cifrador en flujo sí.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.170Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-2",
+    "text": "¿Qué esquema de cifrado utiliza un generador pseudoaleatorio y XOR con el mensaje?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Esquema Feistel",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Esquema Vernam",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "AES",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "DES",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.170Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-3",
+    "text": "¿Cuál de estas afirmaciones describe mejor una red Feistel?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Divide el texto en claro en múltiples subconjuntos de igual tamaño y los cifra con la misma subclave.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Divide el bloque en dos mitades, aplica una función a una mitad y combina con la otra, intercambiando roles en rondas sucesivas.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Utiliza una permutación inicial y final sin rondas intermedias.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Opera elemento a elemento cambiando con un vector de estado.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.170Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-4",
+    "text": "¿Cómo se llamaba el algoritmo de cifrado inicial de IBM que precedió a DES?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Lucifer",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Rijndael",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "IDEA",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Blowfish",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.170Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-5",
+    "text": "¿Por qué la longitud de clave de DES se definió en 56 bits, pese a que Lucifer tenía 128 bits?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Porque 56 bits fueron suficientes para seguridad militar.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Para que la clave cupiera en el bus de datos de 64 bits del chip de hardware con 8 bits de paridad.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Para seguir el estándar de 56 bits de la NSA.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Fue una limitación del algoritmo de Feistel.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.170Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-6",
+    "text": "¿Cuál es el tamaño de bloque y el número de rondas en DES?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Bloque de 64 bits y 8 rondas.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Bloque de 128 bits y 16 rondas.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Bloque de 64 bits y 16 rondas.",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Bloque de 128 bits y 12 rondas.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.170Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-7",
+    "text": "¿Cuál es la longitud efectiva de la clave en DES?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "64 bits",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "56 bits",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "128 bits",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "112 bits",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-8",
+    "text": "¿Qué ataque permitió romper DES teóricamente con 2^47 textos en claro elegidos?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Criptoanálisis lineal",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Criptoanálisis diferencial",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Ataque por fuerza bruta",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Ataque por temporización",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-9",
+    "text": "El criptoanálisis lineal contra DES requiere aproximadamente cuántos textos en claro conocidos?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "2^56",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "2^47",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "2^43",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "2^14",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-10",
+    "text": "¿Cuál de estos no es un cifrador en bloque?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "AES",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "DES",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "RC4",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Blowfish",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-11",
+    "text": "¿Qué algoritmo resultó ganador del concurso AES, originalmente llamado Rijndael?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Twofish",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Serpent",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Rijndael",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "IDEA",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-12",
+    "text": "¿Qué tamaños de clave soporta AES y cuántas rondas corresponden a cada uno?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "128 bits→10 rondas, 192 bits→12 rondas, 256 bits→14 rondas",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "128 bits→12 rondas, 192 bits→10 rondas, 256 bits→14 rondas",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "128 bits→14 rondas, 192 bits→12 rondas, 256 bits→10 rondas",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "128 bits→10 rondas, 192 bits→14 rondas, 256 bits→12 rondas",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-13",
+    "text": "En AES, las operaciones se realizan en GF(2^8). ¿Qué implica esto?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Las operaciones aritméticas se hacen módulo un número primo.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Las operaciones de suma, multiplicación y división se interpretan como operaciones polinomiales sobre cuerpos de Galois con 256 elementos.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Solo la suma se realiza en un campo binario; la multiplicación es normal.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "La aritmética se realiza en números enteros de 8 bits con desbordamiento.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-14",
+    "text": "¿Cuál es el modo de operación más simple, inseguro, que cifra cada bloque independientemente?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "CBC",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "CFB",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "ECB",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "CTR",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-15",
+    "text": "En el modo CBC, ¿qué componente se usa para la entrada del primer bloque?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Un contador",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Un vector de inicialización (IV)",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "El bloque anterior de texto cifrado",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Ceros",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-16",
+    "text": "¿Qué modo de operación convierte un cifrador en bloque en un cifrador en flujo usando realimentación de la salida del cifrador?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "ECB",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "CFB",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "OFB",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "CTR",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-17",
+    "text": "¿Qué modo utiliza un contador y permite implementaciones en paralelo?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "CBC",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "CFB",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "OFB",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "CTR",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-18",
+    "text": "AES-GCM proporciona cifrado con integridad mediante…",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Uso de HMAC-SHA256.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Aritmética de Galois en GF(2^128) junto con AES-CTR.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Uso de CBC con MAC.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Realimentación de salida.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-19",
+    "text": "¿Para qué se utiliza principalmente el modo XTS?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Comunicaciones HTTPS.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Cifrado de datos en disco a nivel de sector.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Protocolos de streaming en tiempo real.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Mensajería instantánea.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-20",
+    "text": "¿Qué técnica de ataque mide diferencias de tiempo de ejecución para inferir la clave?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Criptoanálisis diferencial.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Ataque de fuerza bruta.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Ataque por temporización.",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Criptoanálisis lineal.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-21",
+    "text": "¿Cuál es la diferencia real entre cifradores en bloque y en flujo?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Divide el texto en bloques versus elemento a elemento.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Un cifrador en bloque aplica una transformación fija, mientras que un cifrador en flujo utiliza una transformación que evoluciona con su estado.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Un cifrador en bloque usa permutaciones, mientras que un cifrador en flujo usa sustituciones.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Un cifrador en bloque no puede descifrarse, mientras que un cifrador en flujo sí.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-22",
+    "text": "¿Qué esquema de cifrado utiliza un generador pseudoaleatorio y la operación XOR con el mensaje?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Esquema Feistel",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Esquema Vernam",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "RED SPN de Shannon",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "AES",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-23",
+    "text": "¿Cómo se denomina la estructura base de la mayoría de los cifradores en bloque que divide cada bloque en dos mitades y las intercambia en rondas?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Red Feistel",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Esquema Vernam",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Red SPN",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Modo CTR",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-24",
+    "text": "¿Qué algoritmo predecesor de DES fue desarrollado por IBM a finales de los años 60?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Lucifer",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Rijndael",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "IDEA",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Blowfish",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-25",
+    "text": "¿Cuál fue el motivo principal de la reducción de la longitud de clave de Lucifer de 128 bits a 56 bits en DES?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Para que la clave cupiera en el bus de datos de 64 bits del chip, reservando 8 bits de paridad.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Porque 56 bits eran suficientes frente a ataques conocidos.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Debido a un requisito de la NSA de limitar la seguridad.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Para ajustar DES al estándar de bloques de 64 bits.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-26",
+    "text": "¿Qué estándar de cifrado fue aprobado por el NIST en 2001 para reemplazar a DES?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Blowfish",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Twofish",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "AES",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "IDEA",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-27",
+    "text": "¿Cuál es el tamaño de bloque y la longitud de clave útil en DES?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Bloque de 128 bits, clave de 128 bits útiles",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Bloque de 64 bits, clave de 56 bits útiles",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Bloque de 64 bits, clave de 64 bits útiles",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Bloque de 128 bits, clave de 56 bits útiles",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-28",
+    "text": "¿Cuántas rondas tiene DES?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "8 rondas",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "12 rondas",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "16 rondas",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "20 rondas",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-29",
+    "text": "¿Qué ataque teórico sobre DES requiere alrededor de 2^47 textos en claro elegidos?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Criptoanálisis lineal",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Criptoanálisis diferencial",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Fuerza bruta",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Ataque por temporización",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-30",
+    "text": "¿Qué ataque sobre DES mejora el diferencial y necesita unos 2^43 textos en claro conocidos?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Fuerza bruta",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Criptoanálisis lineal",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Criptoanálisis diferencial",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Ataque de potencia",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-31",
+    "text": "¿Por qué se consideraba impráctico el ataque de fuerza bruta contra DES en 1977 sin hardware especializado?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Porque a 1 M de pruebas por segundo tardaría unos 1000 años.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Porque el espacio de claves era realmente mayor de 2^56.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Porque no existían detectores fiables de texto en claro.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Porque la NSA protegía las claves.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-32",
+    "text": "¿Qué organización logró romper DES en 1998 en sólo 3 días con 250 K$ de presupuesto?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "NIST",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "NSA",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Electronic Frontier Foundation (EFF)",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "IBM",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": true,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-33",
+    "text": "¿Cuál de estos no es un cifrador en bloque?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "AES",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "DES",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "RC4",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Blowfish",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-34",
+    "text": "¿Qué cifrador es un estándar internacional de 1991 que no alcanzó el éxito de DES o AES?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "RC4",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Blowfish",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "IDEA",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Twofish",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-35",
+    "text": "¿Cómo se llama el algoritmo de Bruce Schneier de 1993 que sirvió de base a bcrypt?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "IDEA",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Blowfish",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Twofish",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "RC5",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-36",
+    "text": "¿Qué modo de operación convierte un cifrador en bloque en un cifrador en flujo realimentando el texto cifrado anterior?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "ECB",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "CBC",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "CFB",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "OFB",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-37",
+    "text": "¿Qué función no lineal se utiliza en cada ronda de DES?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Permutación P",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "S-boxes",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Desplazamiento circular",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "XOR con la subclave",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-38",
+    "text": "¿Qué rol cumplen las S-boxes en los cifradores en bloque como DES?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Proporcionan no linealidad sustituyendo bloques de bits de forma dependiente de la clave.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Realizan permutaciones de bits para difundir la información.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Generan subclaves de ronda a partir de la clave original.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Sirven como vector de inicialización (IV).",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-39",
+    "text": "¿Cuál es la fase inicial y la fase final en el esquema DES?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Permutación inicial y permutación inversa",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Generación de subclaves y selección permutada",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Desplazamiento circular y sustitución S-box",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Intercambio de mitades",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-40",
+    "text": "¿Cómo se generan las subclaves de ronda en DES?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Mediante tablas de sustitución estáticas",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Desplazamiento circular de la clave y selección permutada de 48 bits",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Hash de la clave con MD5",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Uso de la función F con la clave completa",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-41",
+    "text": "¿Por qué Triple DES aplica tres operaciones (C–D–E) en lugar de dos cifrados con distintas claves?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Para duplicar la longitud de clave sin aumentar significativamente el costo.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Para complicar el ataque de hombre en el medio (MITM).",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Para triplicar la seguridad teórica.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Para acelerar el proceso de cifrado en hardware legado.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-42",
+    "text": "¿Qué modo de operación es inseguro porque repite la salida para bloques idénticos de entrada?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "ECB",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "CBC",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "CFB",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "CTR",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-43",
+    "text": "¿Qué se observa visualmente al cifrar una imagen con ECB?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Aparece totalmente aleatoria.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Se ve únicamente ruido en los bordes.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "El resultado es todo negro.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Se mantiene el patrón original en bloques (p. ej. el pingüino).",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-44",
+    "text": "En CBC, ¿qué se hace con el bloque cifrado anterior antes de cifrar el siguiente bloque de texto claro?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Permutación inicial",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "XOR con el siguiente bloque de texto claro",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Sustitución por S-boxes",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Desplazamiento circular",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-45",
+    "text": "¿Por qué es necesario el relleno (padding) en los modos ECB y CBC?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Porque el texto puede no ser múltiplo del tamaño de bloque.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Para proporcionar un vector de inicialización.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Para probar la integridad tras el descifrado.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Para asegurar la no linealidad.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-46",
+    "text": "¿Qué modo de operación realimenta la salida del cifrador en bloque para producir un cifrador en flujo sin necesidad de padding?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "ECB",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "CBC",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "OFB",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "CTR",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-47",
+    "text": "¿Qué modo de operación usa un contador cifrado y luego XOR con el texto en claro, permitiendo cifrado en paralelo?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "ECB",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "CBC",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "OFB",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "CTR",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-48",
+    "text": "¿Cuál es la ventaja principal de CTR sobre OFB?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Permite paralelizar el cifrado de bloques.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Evita por completo la necesidad de un IV.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Protege contra ataques de potencia.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "No requiere tener el algoritmo de descifrado.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-49",
+    "text": "¿Para qué se utiliza principalmente el modo AES-XTS?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "SSL/TLS en navegadores web",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Cifrado de discos a nivel de sector",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Comunicación IoT en tiempo real",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Mensajería instantánea cifrada",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-50",
+    "text": "¿Qué modo combina AES-CTR con autentificación mediante aritmética de Galois?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "AES-CBC",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "AES-CCM",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "AES-GCM",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "AES-XTS",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-51",
+    "text": "Además de confidencialidad, ¿qué aporta AES-GCM?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Compresión de datos",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Generación de IVs seguros",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Integridad y autenticidad (AEAD)",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Caducidad automática de la clave",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-52",
+    "text": "¿Qué alternativa a AES-GCM se emplea en TLS para mejorar el rendimiento en software sin AES-NI?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "GOST 28147-89",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "ChaCha20-Poly1305",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "DES-XTS",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "RC4-HMAC",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-53",
+    "text": "¿Qué es AES-NI?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Un conjunto de instrucciones de hardware para acelerar AES.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Un modo de operación de AES en software puro.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Un algoritmo rival de AES.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Una biblioteca de cifrado en Java.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-54",
+    "text": "¿Qué vulnerabilidad aprovecha la variación en tiempos de acceso a caché para extraer claves?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Criptoanálisis diferencial",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Ataque por temporización (timing attack)",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Criptoanálisis lineal",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Fuerza bruta distribuida",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-55",
+    "text": "¿Qué ataque side-channel se basa en medir el consumo energético o el calor para inferir la clave?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Ataque de co-residencia en VM",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Ataque por temporización de caché",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Análisis de potencia (power analysis)",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Criptoanálisis diferencial",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-56",
+    "text": "¿Qué ataque microarquitectural busca co-residencia con la víctima en la nube y mide latencias de CPU?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Criptoanálisis lineal",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Ataque de canal por caché en VM",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Fuerza bruta en cloud",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Ataque de co-residencia en máquina virtual",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-57",
+    "text": "¿Qué técnica de criptoanálisis requiere que el atacante pueda elegir los mensajes a cifrar?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Fuerza bruta",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Criptoanálisis lineal",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Criptoanálisis diferencial",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Ataque por temporización",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-58",
+    "text": "¿Qué técnica solo precisa textos en claro conocidos, no elegidos, para operar?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Criptoanálisis diferencial",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Criptoanálisis lineal",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Fuerza bruta",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Ataque de potencia",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-59",
+    "text": "¿Qué métrica evalúa la calidad de una S-box en términos de resistencia a aproximaciones lineales?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Avalanche",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Difusión",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Equilibrio de bits",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "No linealidad",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-60",
+    "text": "¿Qué mejora en DES se hizo a las S-boxes para reforzar la resistencia al criptoanálisis diferencial?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Se añadió una ronda extra",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Se cambió la permutación inicial",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Se redujo la longitud de clave",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Se diseñaron para minimizar caminos diferenciales",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-61",
+    "text": "¿Cuál de estos cifradores no está basado en redes Feistel?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "DES",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Blowfish",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "AES",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "RC5",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-62",
+    "text": "¿Cuál es el tamaño de bloque de AES?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "64 bits",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "56 bits",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "192 bits",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "128 bits",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-63",
+    "text": "¿Qué operación de AES aplica un desplazamiento de filas en la matriz de estado?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "SubBytes",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "ShiftRows",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "MixColumns",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "AddRoundKey",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-64",
+    "text": "¿Qué función de AES se omite en la ronda final?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "SubBytes",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "ShiftRows",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "MixColumns",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "AddRoundKey",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-65",
+    "text": "¿Qué operación de AES consiste en hacer XOR de la subclave con el estado?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "SubBytes",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "ShiftRows",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "MixColumns",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "AddRoundKey",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-66",
+    "text": "¿Cómo representa AES internamente su bloque de 128 bits?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Vector lineal de 128 bits",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Matriz de 4×4 bytes",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Lista de 16 palabras de 8 bits",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Grafo de permutaciones",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-67",
+    "text": "¿Qué tamaño de clave AES ofrece el mayor nivel de seguridad?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "128 bits",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "192 bits",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "256 bits",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "512 bits",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-68",
+    "text": "¿Cuál es una ventaja de ChaCha20-Poly1305 sobre AES-GCM en dispositivos sin aceleración AES-NI?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Mejor rendimiento constante en software",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Menor uso de memoria",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Claves más cortas",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Compatibilidad con hardware antiguo",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-69",
+    "text": "¿Qué protocolo de seguridad web utiliza AES-GCM como cifrado autenticado por defecto?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "SSH",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "TLS",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "IPsec",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Kerberos",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-70",
+    "text": "¿Qué modo de operación se recomienda para comunicaciones en tiempo real sin relleno y con paralelización?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "CBC",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "ECB",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "OFB",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "CTR",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-71",
+    "text": "En Go, ¿qué tipo implementa cipher.NewCTR?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "cipher.Block",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "cipher.BlockMode",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "cipher.Stream",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "io.Reader",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-72",
+    "text": "En Go, ¿por qué es necesario reinicializar el cifrador CTR antes de descifrar?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Porque Go libera automáticamente la clave después de cifrar.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Porque el contador interno debe comenzar en el mismo valor inicial para reproducir el flujo cifrante.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Porque el bloque final requiere un padding especial.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Porque el cifrador solo funciona una vez por clave.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-73",
+    "text": "En modo CTR, reutilizar un mismo nonce provoca…",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "La reutilización del flujo cifrante, permitiendo ligar dos textos en claro mediante XOR de sus cifrados.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Una mayor resistencia a ataques de fuerza bruta.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Que el algoritmo cambie automáticamente a modo CBC.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Que se genere un vector de inicialización impredecible.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-74",
+    "text": "¿Cómo se genera correctamente un IV aleatorio en Go?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Utilizando la función math/rand.Int().",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Leyendo bytes con crypto/rand.Read().",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Derivándolo de la clave con SHA-256.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Usando time.Now().UnixNano().",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-75",
+    "text": "Un padding mal implementado en CBC puede dar lugar a un…",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Padding oracle (oráculo de relleno).",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Ataque de temporización.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Reutilización de IV.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Fuga del keystream.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-76",
+    "text": "En modo CBC, el IV debe ser…",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Aleatorio y único para cada mensaje.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Fijo y conocido por ambas partes.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Igual que la clave.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Derivado del primer bloque de texto claro.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-77",
+    "text": "¿Cómo mitigar los ataques de temporización en AES?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Usando saltos de ejecución aleatorios.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Empleando AES-NI o implementaciones de tiempo constante sin tablas.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Aumentando el número de rondas.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Utilizando CBC en lugar de GCM.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-78",
+    "text": "ChaCha20-Poly1305 se prefiere a AES-GCM en…",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Servidores con aceleración AES-NI.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Dispositivos sin hardware AES, como móviles y IoT.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Hardware FPGA dedicado.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Encriptación de disco en reposo.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-79",
+    "text": "¿Cuál de estos métodos de Go retorna un objeto que implementa cipher.AEAD?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "cipher.NewCTR",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "cipher.NewCBCEncrypter",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "cipher.NewGCM",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "cipher.NewCFBEncrypter",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-80",
+    "text": "¿Qué ocurre al reutilizar un mismo nonce en AES-GCM?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "La librería genera automáticamente un nonce nuevo.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Solo compromete la integridad, no la confidencialidad.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Se rompen la confidencialidad y la autenticidad de los datos.",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "No tiene ningún efecto adverso.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-81",
+    "text": "¿Qué interfaz define en Go los métodos Seal y Open para cifrado autenticado?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "cipher.Stream",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "cipher.BlockMode",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "cipher.AEAD",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "io.ReadWriter",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-82",
+    "text": "En TLS 1.3, ¿qué algoritmos AEAD se recomiendan?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "CBC-HMAC y ChaCha20",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "AES-GCM y ChaCha20-Poly1305",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "RC4-HMAC y AES-ECB",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "AES-XTS y AES-CTR",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-83",
+    "text": "¿Por qué el modo XTS utiliza dos claves?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Para proporcionar autenticación junto al cifrado.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Para permitir relleno dinámico de bloques.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Para diferenciar el cifrado de datos y el de posición (tweak) en discos.",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Para aumentar la longitud de clave a 512 bits.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-84",
+    "text": "¿Qué modo de operación requiere padding explícito al cifrar un mensaje de longitud arbitraria?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "CBC",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "OFB",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "CTR",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "GCM",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-85",
+    "text": "¿Qué ataque side-channel se basa en medir variaciones del consumo energético?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Ataque por temporización.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Análisis de potencia (power analysis).",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Criptoanálisis diferencial.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Ataque de co-residencia.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-86",
+    "text": "Para mitigar ataques por canal de caché, se usan implementaciones…",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Que dependen de tablas S-box en RAM.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "De tiempo constante y sin accesos a tablas dependientes de la clave.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Con paralelización de flujo AES.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Que alternan modos de operación en cada bloque.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-87",
+    "text": "En Go, ¿qué interfaz distingue un cifrador por flujo de uno autenticado?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "cipher.Block",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "cipher.BlockMode",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "cipher.AEAD",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "io.Writer",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-88",
+    "text": "¿En qué paquete de la librería estándar de Go se define la interfaz AEAD?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "crypto/tls",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "crypto/cipher",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "crypto/aes",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "crypto/sha256",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-89",
+    "text": "¿Qué protocolo web utiliza AES-GCM por defecto para asegurar confidencialidad e integridad?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "SSH",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "TLS",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "IPsec",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Kerberos",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  },
+  {
+    "id": "q-sds06-bloquePreguntas-90",
+    "text": "¿En qué situación elegirías ChaCha20-Poly1305 sobre AES-GCM?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "En entornos sin aceleración AES-NI, como CPUs de dispositivos móviles.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Cuando dispongas de hardware AES dedicado.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Para cifrar discos en reposo con XTS.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "En comunicaciones en tiempo real con padding CBC.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.171Z"
+  }
+]

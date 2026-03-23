@@ -1,0 +1,1423 @@
+[
+  {
+    "id": "q-sds10-ejerciciosPreguntas-1",
+    "text": "¿Qué ventaja ofrece derivar kLogin = SHA-512(passwd) en el cliente antes de enviarlo al servidor?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Permite cifrar la contraseña en el servidor.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Genera un resumen de la contraseña con longitud fija antes de la transmisión.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Encripta la clave simétrica.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Introduce una marca temporal en la autentificación.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.181Z"
+  },
+  {
+    "id": "q-sds10-ejerciciosPreguntas-2",
+    "text": "¿Qué algoritmo de derivación de claves utiliza el servidor en el ejemplo para verificar la autenticación?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "PBKDF2 con SHA-256",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Argon2",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "BCrypt",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Scrypt",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.181Z"
+  },
+  {
+    "id": "q-sds10-ejerciciosPreguntas-3",
+    "text": "¿Cuál es la principal ventaja de almacenar contraseñas con una salt aleatoria por usuario?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Reducir el tamaño de los hashes en la base de datos",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Prevenir ataques de rainbow tables",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Mejorar el rendimiento de las búsquedas",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Permitir contraseñas más cortas",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.181Z"
+  },
+  {
+    "id": "q-sds10-ejerciciosPreguntas-4",
+    "text": "¿Por qué el ejercicio no especifica parámetros criptográficos concretos para HTTPS/TLS?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Porque el protocolo los negocia dinámicamente entre cliente y servidor",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Porque siempre se usa AES-128 en TLS",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Porque TLS no admite cifrado configurable",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Porque es responsabilidad del sistema operativo",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.181Z"
+  },
+  {
+    "id": "q-sds10-ejerciciosPreguntas-5",
+    "text": "En el cifrado a nivel de sistema operativo para discos, ¿qué modo se emplea típicamente?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "AES-CBC",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "ChaCha20",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "AES-XTS",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "RSA",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.181Z"
+  },
+  {
+    "id": "q-sds10-ejerciciosPreguntas-6",
+    "text": "¿Cuál de estos modos de cifrado ofrece garantía de integridad además de confidencialidad?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "AES-CTR",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "ChaCha20-Poly1305",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "AES-CBC",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "RSA-OAEP",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.181Z"
+  },
+  {
+    "id": "q-sds10-ejerciciosPreguntas-7",
+    "text": "¿Qué función cumple la operación EKpriv(H(M)) en la firma digital de un análisis?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Cifrar todo el mensaje original",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Crear un resumen cifrado que garantiza integridad y no repudio",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Generar una clave compartida",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Establecer un canal seguro",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.181Z"
+  },
+  {
+    "id": "q-sds10-ejerciciosPreguntas-8",
+    "text": "¿Qué combinación de algoritmos se propone como opción equilibrada para firma digital y resumen en el contexto del laboratorio?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "RSA-1024 y SHA-256",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "ECDSA-256 y SHA-512",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "RSA-3072 y MD5",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "ECDSA-512 y SHA-1",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.181Z"
+  },
+  {
+    "id": "q-sds10-ejerciciosPreguntas-9",
+    "text": "¿Por qué es necesaria una marca temporal (timestamp) en cada solicitud del registro digital?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Para cifrar la petición con mayor seguridad",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Para evitar ataques de repetición y definir caducidad",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Para comprimir los datos antes de enviar",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Para autenticar al usuario automáticamente",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.181Z"
+  },
+  {
+    "id": "q-sds10-ejerciciosPreguntas-10",
+    "text": "¿Qué paso adicional proporciona confidencialidad más allá de HTTPS en el protocolo de registro digital?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Uso de JSON Web Tokens (JWT)",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Cifrar la petición con una clave simétrica y cifrar esta clave con la clave pública de la entidad",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Configurar políticas CORS estrictas",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Añadir sal a la contraseña del usuario",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.181Z"
+  },
+  {
+    "id": "q-sds10-ejerciciosPreguntas-11",
+    "text": "¿Cuál es una característica distintiva de ChaCha20 frente a AES en modo CTR para cifrado a nivel de aplicación?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "ChaCha20 no proporciona confidencialidad",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "AES-CTR siempre incluye autenticación de mensaje",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "ChaCha20 siempre usa clave de 256 bits y no tiene modos de operación variables",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "AES-CTR no es compatible con dispositivos móviles",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.181Z"
+  },
+  {
+    "id": "q-sds10-ejerciciosPreguntas-12",
+    "text": "¿Qué rol puede asumir el portal para facilitar la verificación de firmas por parte del paciente o terceros?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Firmar los resultados con contraseñas en lugar de claves públicas",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Comprobar las firmas digitalmente y presentar el estado de validez al usuario",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Omitir la verificación para mejorar rendimiento",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Revocar certificados tras cada sesión",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.181Z"
+  },
+  {
+    "id": "q-sds10-ejerciciosPreguntas-13",
+    "text": "¿Qué técnica describe el uso de “pepper” en el hashing de contraseñas?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Generar una salt distinta para cada autenticación",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Concatenar una clave secreta global antes de hashear",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Usar Argon2 en lugar de SHA-512",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Derivar la clave con PBKDF2 en el cliente",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.181Z"
+  },
+  {
+    "id": "q-sds10-ejerciciosPreguntas-14",
+    "text": "¿Para qué sirve concatenar user||passwd antes de derivar kLogin en la autenticación cliente-servidor?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Evitar que dos usuarios con la misma contraseña tengan el mismo hash",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Reducir la longitud total de la contraseña",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Cifrar la contraseña con una clave pública",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Acelerar el proceso de verificación de la contraseña",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.181Z"
+  },
+  {
+    "id": "q-sds10-ejerciciosPreguntas-15",
+    "text": "¿Cuál es el propósito de aplicar kLogin = SHA-512(passwd) en el cliente antes de enviarlo al servidor?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Cifrar la contraseña en el servidor.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Reducir el riesgo de que la contraseña viaje en texto claro.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Aumentar el tamaño de la contraseña.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Introducir una marca temporal.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.181Z"
+  },
+  {
+    "id": "q-sds10-ejerciciosPreguntas-16",
+    "text": "¿Por qué se utiliza una salt aleatoria por usuario al almacenar contraseñas?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Para que todas las contraseñas tengan el mismo hash.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Para impedir ataques de rainbow tables.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Para acelerar la verificación de contraseñas.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Para permitir contraseñas más cortas.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.181Z"
+  },
+  {
+    "id": "q-sds10-ejerciciosPreguntas-17",
+    "text": "¿Qué añade la “pepper” al esquema de hashing de contraseñas?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Una salt distinta para cada autenticación.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Un valor secreto global concatenado antes de hashear.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Un algoritmo de derivación más lento.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Una marca temporal al hash.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.181Z"
+  },
+  {
+    "id": "q-sds10-ejerciciosPreguntas-18",
+    "text": "¿Qué función cumple Argon2 en el proceso de autenticación del servidor?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Derivar la clave kLogin con sal y ajustes para resistencia a GPU.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Generar la salt aleatoria en el cliente.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Cifrar la contraseña en tránsito.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Crear una firma digital de la contraseña.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.181Z"
+  },
+  {
+    "id": "q-sds10-ejerciciosPreguntas-19",
+    "text": "¿Cuál es la razón de no especificar algoritmos concretos al usar HTTPS/TLS?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Porque el cliente y el servidor negocian dinámicamente los parámetros.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Porque TLS solo admite AES-256.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Porque siempre se usa RSA en TLS.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Porque HTTPS no admite cifrado configurable.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.181Z"
+  },
+  {
+    "id": "q-sds10-ejerciciosPreguntas-20",
+    "text": "En cifrado a nivel de disco a través del sistema operativo, ¿qué modo se emplea habitualmente?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "AES-CBC",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "ChaCha20",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "AES-XTS",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "RSA-OAEP",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.181Z"
+  },
+  {
+    "id": "q-sds10-ejerciciosPreguntas-21",
+    "text": "¿Qué limitación suelen tener las implementaciones de cifrado “transparentes” de bases de datos?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Sólo usan ChaCha20.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Guardan la clave en disco sin posibilidad de rotación.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "No cifran los índices.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "No funcionan en la nube.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.181Z"
+  },
+  {
+    "id": "q-sds10-ejerciciosPreguntas-22",
+    "text": "Cuando se cifra en la aplicación con AES en modo CTR, ¿qué aspecto no garantiza por sí solo?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Integridad de los datos.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Confidencialidad.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Rendimiento.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Compatibilidad.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.181Z"
+  },
+  {
+    "id": "q-sds10-ejerciciosPreguntas-23",
+    "text": "¿Qué ventaja ofrece ChaCha20-Poly1305 frente a AES-CTR?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Mayor velocidad en hardware PCI.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Autenticación e integridad además de confidencialidad.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Claves variables de 512 bit.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Soporte nativo en todos los navegadores.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.181Z"
+  },
+  {
+    "id": "q-sds10-ejerciciosPreguntas-24",
+    "text": "¿Por qué se utiliza EKpriv(H(M)) al firmar digitalmente un análisis?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Para cifrar todo el mensaje M.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Para crear un resumen firmado que evita repudio e integra content.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Para intercambiar claves simétricas.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Para negociar una sesión TLS.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.181Z"
+  },
+  {
+    "id": "q-sds10-ejerciciosPreguntas-25",
+    "text": "¿Qué combinación se sugiere como opción equilibrada para firma y hash en el laboratorio?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "RSA-1024 + MD5",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "ECDSA-256 + SHA-512",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "RSA-3072 + SHA-512",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "DSA-2048 + SHA-1",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.181Z"
+  },
+  {
+    "id": "q-sds10-ejerciciosPreguntas-26",
+    "text": "¿Cuál es la función de la marca temporal en cada solicitud del registro digital?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Identificar automáticamente al usuario.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Prevenir ataques de repetición y definir caducidad.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Comprimir el mensaje antes de firmar.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Agregar una salt adicional al registro.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.181Z"
+  },
+  {
+    "id": "q-sds10-ejerciciosPreguntas-27",
+    "text": "¿Qué paso añade confidencialidad extra sobre TLS en el protocolo de registro digital?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Uso de JWT con encriptación.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Cifrar el mensaje con clave simétrica y cifrar esta clave con la clave pública de la entidad.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Aplicar políticas CORS estrictas.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Derivar kLogin con PBKDF2.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.181Z"
+  },
+  {
+    "id": "q-sds10-ejerciciosPreguntas-28",
+    "text": "¿Cuál es la diferencia clave entre CORS y CSRF?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "CORS controla orígenes de peticiones desde el navegador; CSRF explota credenciales del usuario.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "CSRF negocia el cifrado en TLS; CORS no.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "CORS añade autenticación; CSRF no.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "CSRF solo afecta a WebSockets.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.181Z"
+  },
+  {
+    "id": "q-sds10-ejerciciosPreguntas-29",
+    "text": "¿Por qué no se recomienda especificar un algoritmo concreto dentro de “HTTPS” al responder un examen?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Porque TLS negocia automáticamente el algoritmo con el otro extremo.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Porque HTTPS siempre usa RSA.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Porque no importa el algoritmo en TLS.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Porque HTTPS no cifra la capa de aplicación.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.181Z"
+  },
+  {
+    "id": "q-sds10-ejerciciosPreguntas-30",
+    "text": "¿Qué ventaja práctica tiene usar RSA-3072 en vez de RSA-2048 para firma digital?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Mejora la compatibilidad con navegadores antiguos.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Aumenta el margen de seguridad para que la firma perdure sin ser rota.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Reduce el tamaño de la clave pública almacenada.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Permite firmas más rápidas en hardware móvil.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.181Z"
+  },
+  {
+    "id": "q-sds10-ejerciciosPreguntas-31",
+    "text": "¿Cuál es el motivo para ofrecer al portal la comprobación de firmas en lugar de dejarlo al paciente?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Para mejorar el rendimiento del servidor.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Para abstraer la complejidad de verificación al usuario final.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Para omitir la autoridad certificadora.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Para almacenar menos claves públicas.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.181Z"
+  },
+  {
+    "id": "q-sds10-ejerciciosPreguntas-32",
+    "text": "¿Cómo se evita que un atacante reutilice un mensaje firmado (ataque de repetición)?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Cifrando la marca temporal con RSA.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Incluyendo un timestamp único en la firma.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Usando AES-XTS en cada mensaje.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Añadiendo sal aleatoria al mensaje.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.181Z"
+  },
+  {
+    "id": "q-sds10-ejerciciosPreguntas-33",
+    "text": "¿Qué representa Kc = EKpubR(Ks) en el esquema de confidencialidad adicional?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "La firma del mensaje con clave simétrica.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "El cifrado de la clave simétrica Ks con la clave pública de la entidad.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "La derivación de Ks mediante hashing.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "El intercambio de certificados digitales.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.181Z"
+  },
+  {
+    "id": "q-sds10-ejerciciosPreguntas-34",
+    "text": "¿Cuál es el papel de la autoridad certificadora (CA) en el esquema de firma digital?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Generar las claves privadas de todos los usuarios.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Firmar las claves públicas para validar su autenticidad.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Cifrar las peticiones antes de enviarlas.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Negociar los parámetros de TLS.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.181Z"
+  },
+  {
+    "id": "q-sds10-ejerciciosPreguntas-35",
+    "text": "Un cliente web necesita llamar a una API en otro dominio para obtener datos. Tras implementarlo, el navegador bloquea la petición y se registra un error de CORS. ¿Cuál es la causa y cómo solucionarlo?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Se debe desactivar HTTPS en la API.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "El servidor API debe incluir el encabezado Access-Control-Allow-Origin con el origen del cliente.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Hay que cambiar SHA-512 por SHA-256 en la petición.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Incrementar el tiempo de espera (timeout) de la petición.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.181Z"
+  },
+  {
+    "id": "q-sds10-ejerciciosPreguntas-36",
+    "text": "Se detecta que un atacante captura mensajes legítimos firmados y los reenvía días después para falsificar solicitudes. ¿Qué medida evita este ataque de repetición?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Generar un hash más largo.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Incluir un timestamp único dentro de los datos firmados.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Cambiar SHA-512 por MD5.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Usar solo AES-CTR en la firma.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.181Z"
+  },
+  {
+    "id": "q-sds10-ejerciciosPreguntas-37",
+    "text": "Un usuario conecta por HTTP y un atacante redirige la conexión a HTTP inseguro al hacer stripping. ¿Cómo se previene este ataque?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Configurando HSTS (Strict-Transport-Security) en el servidor.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Aumentando la longitud de la clave RSA.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Activando CSRF tokens en cada formulario.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Cambiando PBKDF2 por Argon2.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.181Z"
+  },
+  {
+    "id": "q-sds10-ejerciciosPreguntas-38",
+    "text": "Para que una contraseña resista ataques de GPU durante años, ¿qué parámetro de Argon2 es más crítico aumentar?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "La longitud de la salt aleatoria.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "El número de teclas derivadas.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "El coste de memoria (memory cost).",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "El tamaño de la clave pública.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.181Z"
+  },
+  {
+    "id": "q-sds10-ejerciciosPreguntas-39",
+    "text": "En un laboratorio con usuarios ancianos, ¿qué segundo factor de autenticación es más usable?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Token hardware OTP con pantalla.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "PIN complejo de 12 dígitos.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Firma digital con certificado.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Código OTP enviado por SMS tras registro presencial.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.181Z"
+  },
+  {
+    "id": "q-sds10-ejerciciosPreguntas-40",
+    "text": "Deseas que tu firma digital con RSA no se vuelva insegura en los próximos 10 años. ¿Qué tamaño mínimo de clave debes usar?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "1024 bits",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "3072 bits",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "2048 bits",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "512 bits",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.181Z"
+  },
+  {
+    "id": "q-sds10-ejerciciosPreguntas-41",
+    "text": "Para añadir una capa extra de confidencialidad, el solicitante cifra Mf||T con una clave simétrica Ks y luego cifra Ks con la clave pública del servidor. ¿Cómo se llama esta técnica?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Cifrado híbrido (hybrid encryption).",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Autenticación mutua.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Cifrado por bloques (block encryption).",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Modo de operación XTS.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.181Z"
+  },
+  {
+    "id": "q-sds10-ejerciciosPreguntas-42",
+    "text": "La base de datos ofrece cifrado “transparente” pero no puedes elegir la clave. ¿Qué opción es más segura para evitar este problema?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Confiar en la implementación de la base de datos.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Cifrar los datos en la capa de aplicación antes de almacenarlos.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Cambiar a ChaCha20-Poly1305 en TLS.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Derivar kLogin con SHA-512 en el cliente.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.181Z"
+  },
+  {
+    "id": "q-sds10-ejerciciosPreguntas-43",
+    "text": "Al describir HTTPS en un examen, un alumno incluye “AES-256-GCM” como algoritmo fijo. ¿Por qué es incorrecto?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Porque TLS negocia dinámicamente el algoritmo en el handshake.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Porque TLS no admite GCM.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Porque HTTPS usa siempre ChaCha20.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Porque los navegadores solo soportan CBC.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.181Z"
+  },
+  {
+    "id": "q-sds10-ejerciciosPreguntas-44",
+    "text": "Un hospital externo quiere verificar la firma de un análisis clínico enviado por el portal. ¿Quién es el responsable de facilitar esta verificación?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El paciente, que descarga la firma y la comprueba manualmente.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "El portal, que presenta al hospital el estado de validez tras comprobar la firma.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "La entidad certificadora, que genera un nuevo certificado cada sesión.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "El analista, que reenvía su clave privada.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.181Z"
+  },
+  {
+    "id": "q-sds10-ejerciciosPreguntas-45",
+    "text": "El portal debe recibir solicitudes (firmadas+cifradas) y almacenarlas de forma que solo él pueda leerlas y siempre quede constancia de autoría. ¿Qué combinación aplicar?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Cifrado híbrido: cifrar solicitud con Ks, cifrar Ks con clave pública del portal, y firma de (S||T) con clave privada del solicitante.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Solo firma digital de S con RSA-2048.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "TLS en transporte y hash de S en SHA-256.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Almacenamiento en disco sin cifrar y sin firma.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.181Z"
+  },
+  {
+    "id": "q-sds10-ejerciciosPreguntas-46",
+    "text": "¿Qué diferencia clave tiene el “pepper” respecto a la “salt” en el hashing de contraseñas?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El pepper es secreto y global; la salt es pública y única por usuario.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "El pepper se utiliza solo en Argon2; la salt solo en SHA-512.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "El pepper añade una marca temporal; la salt no.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "La salt cifra la contraseña; el pepper la firma.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.181Z"
+  },
+  {
+    "id": "q-sds10-ejerciciosPreguntas-47",
+    "text": "En Argon2, un parámetro de “time cost” muy alto puede:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Aumentar el uso de memoria.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Reducir la longitud de la salt.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Incrementar el tiempo de cómputo de la derivación.",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Disminuir la seguridad contra GPU.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.181Z"
+  },
+  {
+    "id": "q-sds10-ejerciciosPreguntas-48",
+    "text": "Para un sistema web con biometría como segundo factor, ¿cuál es el mayor riesgo mencionado?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Que la cara no sea tan única como una contraseña.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Que la biometría actúe solo como proxy y no sea tan segura como la contraseña.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Que Face ID falle bajo HTTPS.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Que el usuario olvide su PIN.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.181Z"
+  },
+  {
+    "id": "q-sds10-ejerciciosPreguntas-49",
+    "text": "En un entorno con alta carga de firma/verificación en tiempo real, ¿qué algoritmo suele elegirse por rendimiento?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "RSA-4096",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "SHA-512",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "ECDSA-256",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "MD5",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.181Z"
+  }
+]

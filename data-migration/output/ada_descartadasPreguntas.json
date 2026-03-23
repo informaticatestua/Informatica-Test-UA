@@ -1,0 +1,1971 @@
+[
+  {
+    "id": "q-ada_descartadasPreguntas-1",
+    "text": "Dada la version restringida del problema del laberinto, ¿se podría modificar la solucion naive de divide y venceras para que obtenga el numero total de caminos diferentes, de cualquier longitud, que conducen a la salida desde el origen?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "No se puede, puesto que se trata de un nuevo problema que no cumple las condiciones de aplicacion de divide y venceras.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Sí, pero puesto que se trata de un nuevo problema, hay que cambiar la recurrencia matematica inicial.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "No se puede, ya que no se trataría de un problema de optimizacion",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Dada la version general del problema del laberinto, se pretende resolver mediante vuelta atras haciendo uso de un mecanismo de poda basado en la mejor solucion encontrada hasta el momento. ¿Cuando se podaría un nodo?",
+        "isCorrect": false
+      },
+      {
+        "id": "e",
+        "text": "1",
+        "isCorrect": false
+      },
+      {
+        "id": "f",
+        "text": "Cuando el valor de su cota optimista supere al valor de la mejor cota pesimistaencontrada hasta el momento.",
+        "isCorrect": false
+      },
+      {
+        "id": "g",
+        "text": "Cuando el valor de su cota optimista supere al valor de su cota pesimista.",
+        "isCorrect": false
+      },
+      {
+        "id": "h",
+        "text": "Cuando el valor de su cota pesimista supere al valor de su cota optimista.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.039Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-2",
+    "text": "Dado el problema del laberinto con tres movimientos, se desea saber el numero de caminos distintos desde la casilla inicial (1,1) hasta la casilla (n,m) y para ello se aplica un esquema de programacion dinamica. En cuanto a la complejidad temporal, ¿cual es la mejora de la version recursiva con memoizacion frente a la recursiva ingenua que se obtiene a partir del esquema divide y venceras?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "de una complejidad exponencial que se obtendria con la ingenua se reduciria a polinomica con la de memoizacion",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "de una complejidad cuadratica que se obtendria con la ingenua se reduciria a lineal con la de memoizacion",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "la mejora no esta garantizada puesto que la version recursiva con memoizacion podria ser peor que la obtenida a partir del esquema divide y venceras",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.039Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-3",
+    "text": "Dado el problema del laberinto con tres movimientos, se desea saber el numero de caminos distintos desde la casilla incial (1,1) hasta la casilla (n,m) y para ello se aplica el esquema programacion dinamica para obtener un algoritmo lo mas eficiente posible en cuanto a complejidad temporal y espacial, ¿cuales serian ambas complejidades?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "temporal promedio[max(n,m)] y espacial promedio[max (n,m)]",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "temporal promedio(n x m) y espacial promedio[min (n,m)]",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "temporal promedio(n x m) y espacial promedio(n x m)",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.039Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-4",
+    "text": "Dada la version general del problema del laberinto, tratamos de completar un nodo cualquiera del arbol de busqueda con el camino que, en caso de existir, obtendríaamos asumiendo solo los tres movimientos de la version restringida. ¿Que obtendríamos en el caso de completar el nodo?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Una cota optimista para ese nodo",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Un nodo hoja del subarbol generado por aquel nodo",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Nada de interes, puesto que el camino resultante no contemplaría todos los movimientos permitidos.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.039Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-5",
+    "text": "Dada la version restringida del problema del laberinto, si solo se desea conocer la longitud del camino de salida mas corto, ¿cual es la mejor complejidad temporal y espacial que se puede conseguir si se aplica programacion dinamica?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Temporal Θ(nm) y espacial Θ(mín{n, m})",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Ninguna de las otras dos opciones es cierta.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Temporal Θ(nm) y espacial Θ(nm)",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.039Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-6",
+    "text": "Dada la version general del problema del laberinto ¿Que ocurre si la cota optimista de un nodo resulta ser el valor que se obtiene de una solucion factible pero que no es la mejor en el subarbol generado por ese nodo?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Nada especial, las cotas optimistas se corresponden con soluciones factibles que no tienen por que ser las mejores.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Que el algoritmo sería mas lento pues se explorarían mas nodos de los necesarios.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Que el algoritmo sería incorrecto pues podria descartarse el nodo que conduce a la solucion optima.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.039Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-7",
+    "text": "Se pretende resolver la version general del problema del laberinto mediante ramificacion y poda. Para obtener la cota optimista de un nodo cualquiera procedemos así: calculamos el numero de casillas que quedan, por la diagonal derecha-abajo, hasta llegar a una pared del laberinto. A ese valor le sumamos el numero de casillas que podrían quedar desde esa pared hasta la salida utilizando unicamente movimientos del tipo abajo o derecha, segun corresponda. ¿Que podemos decir acerca de la cota optimista que se obtendría?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Que es una cota optimista correcta y ademas puede obtenerse con complejidad temporal constante",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Que no sería eficiente con respecto a otras cotas optimistas, ya que su calculo requiere una complejidad temporal que no es constante",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Que no cumple la condicion para ser una cota optimista correcta.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.039Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-8",
+    "text": "Dada la version restringida del problema del laberinto, ¿cuál de las estrategias siguientes proveería de una cota optimista para ramificacion y poda?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Suponer que en adelante todas las casillas del laberinto son accesibles",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Las otras dos estrategias son ambas validas.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Suponer que ya no se van a realizar mas movimientos",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.039Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-9",
+    "text": "Dado el problema del laberinto con tres movimientos, se pretende conocer la longitud del camino de salida mas corto. Para ello se aplica el esquema voraz con un criterio de seleccion que consiste en elegir primero el movimiento Este siempre que la casilla sea accesible. Si no lo es se descarta ese movimiento y se prueba con Sureste y por ultimo, si este tampoco es posible, se escoge el movimiento Sur. ¿Que se puede decir del algoritmo obtenido?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "que en realidad no es un algoritmo voraz pues las decisiones que se toman no deberian reconsiderarse",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "que en realidad no es un algoritmo voraz pues el criterio de seleccion no lo e",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "que es un algoritmo voraz pero sin garantia de solucionar el problema",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.039Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-10",
+    "text": "Con respecto a la tecnica poda con memoria, solo una de las siguientes afirmaciones es cierta. ¿Cual es?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "No resulta eficaz para resolver la version general del problema del laberinto mediante ramificación y poda.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "No se puede aplicar para resolver la version restringida del problema del laberinto",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "En una solucion de vuelta atras para la version general del problema del laberinto, sirve también para descartar ciclos.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.039Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-11",
+    "text": "Estamos resolviendo la version restringida del problema del laberinto. Ya hemos obtenido el almacen de resultados parciales. ¿Con que complejidad temporal podemos obtener un camino de salida de longitud mínima si es que existe?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Θ(mn)",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Θ(m +n)",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Ω(mín(n, m)) y O(mn)",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.039Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-12",
+    "text": "Dada la version restringida del problema del laberinto, estamos interesados en obtener, para cada casilla accesible del laberinto, el camino mas corto entre el origen y esa casilla. ¿Que esquema es el mas apropiado en este caso?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "La version iterativa de programacion dinamica.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Ambas tecnicas resultan equivalentes.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Memoizacion",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.039Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-13",
+    "text": "Dada la solución naive de la version restringida del problema del laberinto, en general, ¿cuantas veces se llega al caso base de la recursion?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Un valor que puede crecer exponencialmente con el tamano del laberinto.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Un valor que a lo sumo es n x m.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Solo una",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.039Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-14",
+    "text": "Dado el problema del laberinto con tres movimientos, ¿cual de las estrategias siguientes proveeria de una cota optimista para ramificacion y poda?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "suponer que ya no se van a realizar mas movimientos",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "suponer que en adelante todas las casillas del laberinto son accesibles",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "las otras dos estrategias son ambas validas",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.039Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-15",
+    "text": "¿Cual es la característica principal de un algoritmo voraz aplicado al problema del laberinto?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Toma decisiones locales optimas en cada paso sin considerar el panorama general.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Explora exhaustivamente todas las posibles soluciones del laberinto.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Utiliza una estrategia basada en estimaciones heurísticas para encontrar la solucion optima",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.039Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-16",
+    "text": "Para resolver la version general del problema de la mochila con n objetos y carga maxima W, hemos escrito un algoritmo de divide y venceras que, sucesivamente, divide el problema en dos subproblemas; cada uno de ellos toma la mitad de los objetos y la mitad de la carga maxima de la mochila. El caso base ocurre cuando solo hay un objeto que se añade a la solucion si cabe en la fraccion de carga maxima que corresponde a ese subproblema, y si no cabe se descarta. Asumiendo que n y W son potencias exactas de 2, ¿que podemos decir de esta solución?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Que, aunque con los resultados de los subproblemas se puede componer la solución del problema original, esta formulacion no mejora la solución estudiada en clase.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Que no cumple el teorema de reduccion",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Que con los resultados de los subproblemas no siempre se puede componer la solucion del problema original",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.039Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-17",
+    "text": "Se pretende resolver la version general del problema del laberinto mediante ramificacion y poda y para ello se usa una estrategia que consiste en priorizar las expansiones de los nodos que contienen un camino explorado mas corto. ¿Que podemos decir del algoritmo resultante?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Que la primera hoja a la que se llegue es la solucion del problema y por lo tanto, ya no sera necesario explorar mas nodos de la lista de nodos vivos, aunque no esté vacía.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Que el recorrido en el arbol de busqueda sera equivalente a un recorrido por niveles, por lo que no es necesario utilizar una cola de prioridad.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Las otras dos opciones son ambas ciertas.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.039Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-18",
+    "text": "Dado el problema del laberinto con tres movimientos, se desea saber el numero de caminos distintos desde la casilla inicial (1,1) hasta la casilla (n,m) y para ello se aplica un esquema de divide y venceras, ¿Cual seria la recurrencia apropiada para el caso general?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "nc(n,m) = nc(n - 1,m) + nc(n,m - 1) + nc(n - 1,m - 1)",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "ninguna de las otras dos recurrencias se corresponde con un esquema de divide y venceras",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "nc(n,m) = nc(n - 1,m) * nc(n,m - 1) * nc(n - 1,m - 1)",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.039Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-19",
+    "text": "Dado el problema del laberinto con tres movimientos, ¿se puede aplicar un esquema de programacion dinamica para obtener un camino de salida?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "no, para garantizar que se encuentra un camino de salida hay que aplicar metodos de busqueda exhaustiva como vuelta atras o ramificacion y poda.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "si, en caso de existir con este esquema siempre se puede encontrar un camino de salida",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "no, con este esquema se puede conocer el numero total de caminos distintos que conducen a la salida pero no se puede saber la composicion de ninguno de ellos.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.039Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-20",
+    "text": "¿Cual de los siguientes enfoques es mas eficiente para resolver la version restringida del problema del laberinto?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Enfoque voraz",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Enfoque de programacion dinamica",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Enfoque de vuelta atras",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.039Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-21",
+    "text": "Se pretende resolver la version general del problema del laberinto mediante un algoritmo de busqueda y enumeracion. Para reducir el numero de nodos explorados, ¿que mecanismo de los relacionados garantiza encontrar la solucion y resulta a priori mas eficaz?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Usar una matriz de enteros donde se almacena la longitud del mejor camino encontrado hasta el momento que llega a cada casilla del laberinto. Cada casilla (i, j) de la matriz se inicializa con el valor infinito",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Usar una matriz de booleanos para descartar caminos que llegan a una casilla ya visitada. Cada casilla (i, j) de la matriz se inicializa con el valor false.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Usar una matriz de enteros donde se almacena la longitud del mejor camino encontrado hasta el momento que llega a cada casilla del laberinto. Cada casilla (i, j) de la matriz se inicializa con la solucion de programacion dinamica para la version restringida del problema asumiendo que el destino es (i, j)",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.039Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-22",
+    "text": "¿Como se utiliza la cola de prioridad en el algoritmo de ramificacion y poda para resolver el problema del laberinto?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Los nodos se extraen de la cola de prioridad segun se vayan obteniendo",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Los nodos se agregan a la cola de prioridad segun una estimacion heurística para priorizar los caminos mas prometedores.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Se agregan los nodos a la cola de prioridad en orden aleatorio para explorar todas las posibilidades",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.039Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-23",
+    "text": "Dado el problema del laberinto con tres movimientos, se desea saber el numero de caminos distintos desde la casilla inicial  (1, 1) hasta la casilla (n, m) y para ello se aplica un esquema de programacion dinamica. En cuanto a la complejidad temporal, ¿cual es la mejora de la version recursiva con memoizacion frente a la recursiva ingenua que se obtiene a partir del esquema divide y venceras?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "De una complejidad cuadratica que se obtendría con la ingenuase reduciría a lineal con la de memoizacion",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "De una complejidad exponencial que se obtendría con la ingenuase reduciría a polinomica con la de memoizacion",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "La mejora no esta garantizada puesto que la version recursivacon memoizacion podría ser peor que la obtenida a partir delesquema divide y venceras.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.039Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-24",
+    "text": "Dado el problema del laberinto con tres movimientos, ¿cual de las estrategias siguientes proveería de una cota optimista para ramificacion y poda?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Suponer que en adelante todas las casillas del laberinto son accesibles",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Las otras dos estrategias son ambas validas",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Suponer que ya no se van a realizar mas movimientos",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.039Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-25",
+    "text": "Dado el problema del laberinto con tres movimientos, se desea saber el número de caminos distintos desde la casilla inicial (1, 1) hasta la casilla(n,m) y para ello se aplica el esquema de programación dinámica paraobtener un algoritmo lo más eficiente posible en cuanto a complejidad temporal y espacial. ¿Cuáles serían ambas complejidades?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Temporal Θ(max{n, m}) y espacial Θ(max{n, m})",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Temporal Θ(n · m) y espacial Θ(n · m)",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Temporal Θ(n · m) y espacial Θ(min{n, m})",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.039Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-26",
+    "text": "Dado el problema del laberinto con tres movimientos, ¿se puede aplicar un esquema de programacion dinamica para obtener un camino de salida?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "No, con este esquema se puede conocer el numero total de caminos distintos que conducen a la salida pero no se puede saber la composicion de ninguno de ellos",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "No, para garantizar que se encuentra un camino de salida hay que aplicar metodos de busqueda exhaustiva como vuelta atras o ramificacion y poda",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Sí, con este esquema siempre se puede encontrar un camino de salida si existe.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.039Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-27",
+    "text": "Dado el problema del laberinto con tres movimientos, se desea saber el numero de caminos distintos desde la casilla inicial (1,1) hasta la casilla (n, m) y para ello se aplica un esquema de divide y venceras.¿Cual sería la recurrencia apropiada para el caso general?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "nc(n, m) = nc(n - 1, m) + nc(n, m - 1) + nc(n - 1, m - 1)",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Ninguna de las otras dos recurrencias es valida.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "nc(n, m) = nc(n - 1, m) * nc(n, m - 1) * nc(n - 1, m - 1)",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.039Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-28",
+    "text": "Dado el problema del laberinto con tres movimientos, se desea saber el numero de caminos distintos desde la casilla inicial (1,1) hasta la casilla (n,m) y para ello se aplica un esquema de programacion dinamica. En cuanto a la complejidad temporal, ¿cual es la mejora de la version recursiva con memoizacion frente a la recursiva ingenua que se obtiene a partir del esquema divide y venceras?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "la mejora no esta garantizada puesto que la version recursiva con memoizacion podria ser peor que la obtenida a partir del esquema divide y venceras",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "de una complejidad exponencial que se obtendria con la ingenua se reduciria a polinomica con la de memoizacion",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "de una complejidad cuadratica que se obtendria con la ingenua se reduciria a lineal con la de memoizacion",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.040Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-29",
+    "text": "Dado el problema del laberinto con tres movimientos, se pretende conocer la longitud del camino de salida mas corto. Para ello se aplica el esquema voraz con un criterio de seleccion que consiste en elegir primero el movimiento Este siempre que la casilla sea accesible. Si no lo es se descarta ese movimiento y se prueba con Sureste y por ultimo, si este tampoco es posible, se escoge el movimiento Sur. ¿Que se puede decir del algoritmo obtenido?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "que en realidad no es un algoritmo voraz pues el criterio de seleccion no lo es",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "que en realidad no es un algoritmo voraz pues las decisiones que se toman no deberian reconsiderarse",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "que es un algoritmo voraz pero sin garantia de solucionar el problema",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.040Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-30",
+    "text": "Dado el problema del laberinto con tres movimientos, ¿se puede aplicar un esquema de programacion dinamica para obtener un camino de salida?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "no, para garantizar que se encuentra un camino de salida hay que aplicar metodos de busqueda exhaustiva como vuelta atras o ramificacion y poda.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "si, en caso de existir con este esquema siempre se puede encontrar un camino de salida",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "no, con este esquema se puede  conocer el numero total de caminos distintos que conducen a la salida pero no se puede saber la composicion de ninguno de ellos.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.040Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-31",
+    "text": "Dado el problema del laberinto con tres movimientos, se desea saber el numero de caminos distintos desde la casilla inicial (1,1) hasta la casilla (n,m) y para ello se aplica un esquema de divide y venceras, ¿Cual seria la recurrencia apropiada para el caso general?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "nc(n,m) = nc(n -1,m) * nc(n,m -1) * nc(n -1,m -1)",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "ninguna  de  las  otras  dos  recurrenciasse  corresponde  con  un  esquema  de  divide  y venceras",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "nc(n,m) = nc(n -1,m) + nc(n,m -1) + nc(n -1,m -1)",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.040Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-32",
+    "text": "Dado el problema dellaberinto con tres movimientos, se desea saber el numero de caminos distintos desde la casilla incial (1,1) hasta la casilla (n,m) y para ello se aplica el  esquema  programacion  dinamica  para  obtener  un  algoritmo  lo  mas  eficiente posible  en  cuanto  a  complejidad  temporal  y  espacial,  ¿cuales  serian  ambas complejidades?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "temporal promedio(n x m) y espacial promedio[min (n,m)]",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "temporal promedio(n x m) y espacial promedio(n x m)",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "temporal promedio[max(n,m)] y espacial promedio[max (n,m)]",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.040Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-33",
+    "text": "Dado  el  problema  del  laberinto  con  tres  movimientos,  ¿cual  de  las  estrategias siguientes proveeria de una cota optimista para ramificacion y poda?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "las otras dos estrategias son ambas valida",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "suponer que ya no se van a realizar mas movimientos",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "suponer que en adelante todas las casillas del laberinto son accesibles",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.040Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-34",
+    "text": "Se pretende resolver la versión general del problema del laberinto mediante ramificacióny poda y para ello se usa una estrategia que consiste en priorizar las expansiones de losnodos que contienen un camino explorado más corto. ¿Qué podemos decir del algoritmoresultante?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Las otras dos opciones son ambas ciertas.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Que la primera hoja a la que se llegue es la solución del problema y por lo tanto,ya no será necesario explorar más nodos de la lista de nodos vivos, aunque no esté vacía.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Que el recorrido en el árbol de búsqueda será equivalente a un recorrido por niveles,por lo que no es necesario utilizar una cola de prioridad.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.040Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-35",
+    "text": "Se pretende resolver la versión general del problema del laberinto mediante un algoritmode búsqueda y enumeración. Para reducir el número de nodos explorados, ¿qué mecanismode los relacionados garantiza encontrar la solución y resulta a priori más eficaz?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Usar una matriz de enteros donde se almacena la longitud del mejor camino encon-trado hasta el momento que llega a cada casilla del laberinto. Cada casilla (i, j) dela matriz se inicializa con el valor infinito.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Usar una matriz de enteros donde se almacena la longitud del mejor camino en-contrado hasta el momento que llega a cada casilla del laberinto. Cada casilla (i, j)de la matriz se inicializa con la solución de programación dinámica para la versiónrestringida del problema asumiendo que el destino es (i, j).",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Usar una matriz de booleanos para descartar caminos que llegan a una casilla yavisitada. Cada casilla (i, j) de la matriz se inicializa con el valor false.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.040Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-36",
+    "text": "Dada la versión general del problema del laberinto, se pretende resolver mediante vueltaatrás haciendo uso de un mecanismo de poda basado en la mejor solución encontrada hastael momento. ¿Cuándo se podaría un nodo?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Cuando el valor de su cota optimista supere al valor de la mejor cota pesimistaencontrada hasta el momento.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Cuando el valor de su cota pesimista supere al valor de su cota optimista.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Cuando el valor de su cota optimista supere al valor de su cota pesimista.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.040Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-37",
+    "text": "Dada la versión restringida del problema del laberinto, estamos interesados en obtener, paracada casilla accesible del laberinto, el camino más corto entre el origen y esa casilla. ¿Quéesquema es el más apropiado en este caso?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "La versión iterativa de programación dinámica.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Memoización.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Ambas técnicas resultan equivalentes.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.040Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-38",
+    "text": "Dada la versión general del problema del laberinto, tratamos de completar un nodo cual-quiera del árbol de búsqueda con el camino que, en caso de existir, obtendríamos asumiendosolo los tres movimientos de la versión restringida. ¿Qué obtendríamos en el caso de completar el nodo?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Un nodo hoja del subárbol generado por aquel nodo.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Nada de interés, puesto que el camino resultante no contemplaría todos los movi-mientos permitidos.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Una cota optimista para ese nodo.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.040Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-39",
+    "text": "Dada la versión restringida del problema del laberinto, ¿cuál de las estrategias siguientesproveería de una cota optimista para ramificación y poda?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Suponer que ya no se van a realizar más movimientos.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Suponer que en adelante todas las casillas del laberinto son accesibles.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Las otras dos estrategias son ambas válidas.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.040Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-40",
+    "text": "Con respecto a la técnica poda con memoria, solo una de las siguientes afirmaciones es cierta.¿Cuál es?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "En una solución de vuelta atrás para la versión general del problema del laberinto,sirve también para descartar ciclos.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "No resulta eficaz para resolver la versión general del problema del laberinto me-diante ramificación y poda.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "No se puede aplicar para resolver la versión restringida del problema del laberinto.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.040Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-41",
+    "text": "Dada la versión general del problema del laberinto ¿Qué ocurre si la cota optimista de unnodo resulta ser el valor que se obtiene de una solución factible pero que no es la mejor enel subárbol generado por ese nodo?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Que el algoritmo sería más lento pues se explorarían más nodos de los necesarios.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Nada especial, las cotas optimistas se corresponden con soluciones factibles que notienen por qué ser las mejores.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Que el algoritmo sería incorrecto pues podría descartarse el nodo que conduce a lasolución óptima.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.040Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-42",
+    "text": "Dada la solución naive de la versión restringida del problema del laberinto, en general,¿cuántas veces se llega al caso base de la recursión?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Un valor que a lo sumo es n · m.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Solo una.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Un valor que puede crecer exponencialmente con el tamaño del laberinto.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.040Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-43",
+    "text": "Dada la versión restringida del problema del laberinto, si solo se desea conocer la longituddel camino de salida más corto, ¿cuál es la mejor complejidad temporal y espacial que sepuede conseguir si se aplica programación dinámica?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Temporal Θ(nm) y espacial Θ(mín{n,m})",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Temporal Θ(nm) y espacial Θ(nm)",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Ninguna de las otras dos opciones es cierta.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.040Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-44",
+    "text": "¿Cómo se utiliza la cola de prioridad en el algoritmo de ramificación y poda para resolverel problema del laberinto?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Los nodos se agregan a la cola de prioridad según una estimación heurística parapriorizar los caminos más prometedores.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Se agregan los nodos a la cola de prioridad en orden aleatorio para explorar todaslas posibilidades.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Los nodos se extraen de la cola de prioridad según se vayan obteniendo.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.040Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-45",
+    "text": "Estamos resolviendo la versión restringida del problema del laberinto. Ya hemos obtenidoel almacén de resultados parciales. ¿Con qué complejidad temporal podemos obtener uncamino de salida de longitud mínima si es que existe?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Θ(mn)",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Ω(mín(n, m)) y O(mn)",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Θ(m+n)",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.040Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-46",
+    "text": "Se pretende resolver la versión general del problema del laberinto mediante ramificacióny poda. Para obtener la cota optimista de un nodo cualquiera procedemos así: calculamosel número de casillas que quedan, por la diagonal derecha–abajo, hasta llegar a una pareddel laberinto. A ese valor le sumamos el número de casillas que podrían quedar desde esapared hasta la salida utilizando únicamente movimientos del tipo abajo o derecha, segúncorresponda. ¿Que podemos decir acerca de la cota optimista que se obtendría?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Que no cumple la condición para ser una cota optimista correcta.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Que es una cota optimista correcta y además puede obtenerse con complejidad tem-poral constante.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Que no sería eficiente con respecto a otras cotas optimistas, ya que su cálculo re-quiere una complejidad temporal que no es constante.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.040Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-47",
+    "text": "Dada la versión restringida del problema del laberinto, ¿se podría modificar la solución nai-ve de divide y vencerás para que obtenga el número total de caminos diferentes, de cualquierlongitud, que conducen a la salida desde el origen?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "No se puede, puesto que se trata de un nuevo problema que no cumple las condi-ciones de aplicación de divide y vencerás.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Sí, pero puesto que se trata de un nuevo problema, hay que cambiar la recurrenciamatemática inicial.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "No se puede, ya que no se trataría de un problema de optimización.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.040Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-48",
+    "text": "¿Cuál de los siguientes enfoques es más eficiente para resolver la versión restringida del problema del laberinto?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Enfoque de programación dinámica.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Enfoque voraz.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Enfoque de vuelta atrás.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.040Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-49",
+    "text": "¿Cuál es la característica principal de un algoritmo voraz aplicado al problema del laberin-to?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Explora exhaustivamente todas las posibles soluciones del laberinto.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Utiliza una estrategia basada en estimaciones heurísticas para encontrar la soluciónóptima.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Toma decisiones locales óptimas en cada paso sin considerar el panorama general.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.040Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-50",
+    "text": "¿Que inconveniente presenta la siguiente funcion?```void maze(const Maze &maze, vector< vector< bool > > &visited, Point &currentPoint,size_t currentLength, size_t &currentBestLength) {\\n\\tif (currentPoint == maze.exit()) {\\n\\t\\tcurrentBestLength = min(currentBestLength, currentLength);\\n\\t\\treturn;\\n\\t}\\n\\tfor (auto step : allSteps) {\\n\\t\\tPoint next = currentPoint.next(step);\\n\\t\\tif (maze.is_valid(next) && !visited[next.x()][next.y()] && currentLength <  currentBestLength) {\\n\\t\\t\\tvisited[next.x()][next.y()] = true;\\n\\t\\t\\tmaze(maze, visited, next, currentLength + 1, bestLength);\\n\\t\\t\\tvisited[next.x()][next.y()] = false;\\n\\t\\t}\\n\\t}\\n\\treturn;\\n}```",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Que no detecta todos los subproblemas repetidos que pueden aparecer",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Que la poda basada en la mejor solucion hasta el momento se puede mejorar facilmente",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Las otras dos opciones son ambas ciertas",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.040Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-51",
+    "text": "La distancia de Manhattan (d) entre dos puntos (x1, y1) y (x2, y2) viene dada por la expresión d = |x1 - x2| + |y1 - y2|. ¿Podría utilizarse como cota optimista para resolver la versión general de problema del laberinto?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "No, puesto que incumple la condición para ser una cota optimista correcta.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Sí, pero hay otros estimadores que se suelen comportar mejor ante este problema.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Sí, y además tiene la ventaja de que se puede calcular con complejidad temporal constante.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.040Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-52",
+    "text": "Dada la versión general del problema del laberinto, se pretende resolver mediante vuelta atrás haciendo uso de un mecanismo de poda basado en la mejor solución encontrada hasta el momento. ¿Cuándo se podaría un nodo?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Cuando el valor de su cota optimista supere al valor de la mejor cota pesimista encontrada hasta el momento.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Cuando el valor de su cota pesimista supere al valor de su cota optimista.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Cuando el valor de su cota optimista supere al valor de su cota pesimista.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.040Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-53",
+    "text": "Con respecto a la técnica poda con memoria, solo una de las siguientes afirmaciones es cierta. ¿Cuál es?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "No resulta eficaz para resolver la versión general del problema del laberinto mediante ramificación y poda.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "No se puede aplicar para resolver la versión restringida del problema del laberinto.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "En una solución de vuelta atrás para la versión general del problema del laberinto, sirve también para descartar ciclos.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.040Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-54",
+    "text": "Se pretende resolver la versión general del problema del laberinto mediante ramificación y poda. Para obtener la cota optimista de un nodo cualquiera procedemos así: calculamos el número de casillas que quedan, por la diagonal derecha-abajo, hasta llegar a una pared del laberinto. A ese valor le sumamos el número de casillas que podrían quedar desde esa pared hasta la salida utilizando únicamente movimientos del tipo abajo o derecha, según corresponda. ¿Qué podemos decir acerca de la cota optimista que se obtendría?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Que no cumple la condición para ser una cota optimista correcta.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Que no sería eficiente con respecto a otras cotas optimistas, ya que su cálculo requiere una complejidad temporal que no es constante.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Que es una cota optimista correcta y además puede obtenerse con complejidad temporal constante.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.040Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-55",
+    "text": "¿Qué inconveniente presenta la siguiente función?```void maze(const Maze &maze, vector<vector<bool>> &visited, Point &currentPoint, size_t currentLength, size_t &currentBestLength) { \\n\\tif (currentPoint == maze.exit()) { \\n\\t\\tcurrentBestLength = min(currentBestLength, currentLength); \\n\\t\\treturn; \\n\\t} \\n \\n\\tfor (auto step : allSteps) { \\n\\t\\tPoint next = currentPoint.next(step); \\n\\t\\tif (maze.is_valid(next) && !visited[next.x()][next.y()] && currentLength < currentBestLength) { \\n\\t\\t\\tvisited[next.x()][next.y()] = true; \\n\\t\\t\\tmaze(maze, visited, next, currentLength + 1, bestLength); \\n\\t\\t\\tvisited[next.x()][next.y()] = false; \\n\\t\\t} \\n\\t} \\n\\treturn; \\n}```",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Que no detecta todos los subproblemas repetidos que pueden aparecer.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Que la poda basada en la mejor solución hasta el momento se puede mejorar fácilmente.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Las otras dos opciones son ambas ciertas.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.040Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-56",
+    "text": "Se pretende resolver la versión general del problema del laberinto mediante ramificación y poda y para ello se usa una estrategia que consiste en priorizar las expansiones de los nodos que contienen un camino explorado más corto. ¿Qué podemos decir del algoritmo resultante?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Que la primera hoja a la que se llegue es la solución del problema y por lo tanto, ya no será necesario explorar más nodos de la lista de nodos vivos, aunque no esté vacía.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Que el recorrido en el árbol de búsqueda será equivalente a un recorrido por niveles, por lo que no es necesario utilizar una cola de prioridad.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Las otras dos opciones son ambas ciertas.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.040Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-57",
+    "text": "Dada la versión restringida del problema del laberinto, estamos interesados en obtener, para cada casilla accesible del laberinto, el camino más corto entre el origen y esa casilla. ¿Qué esquema es el más apropiado en este caso?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "La versión iterativa de programación dinámica.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Memoización.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Ambas técnicas resultan equivalentes.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.040Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-58",
+    "text": "Dada la versión general del problema del laberinto ¿Qué ocurre si la cota optimista de un nodo resulta ser el valor que se obtiene de una solución factible pero que no es la mejor en el subárbol generado por ese nodo?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Nada especial, las cotas optimistas se corresponden con soluciones factibles que no tienen por qué ser las mejores.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Que el algoritmo sería incorrecto pues podría descartarse el nodo que conduce a la solución óptima.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Que el algoritmo sería más lento pues se explorarían más nodos de los necesarios.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.040Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-59",
+    "text": "Dada la versión restringida del problema del laberinto, si solo se desea conocer la longitud del camino de salida más corto, ¿cuál es la mejor complejidad temporal y espacial que se puede conseguir si se aplica programación dinámica?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Temporal Θ(nm) y espacial Θ(min{n, m})",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Ninguna de las otras opciones es cierta.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Temporal Θ(nm) y espacial Θ(nm)",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.040Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-60",
+    "text": "Dada la versión general del problema del laberinto, tratamos de completar un nodo cualquiera del árbol de búsqueda con el camino que, en caso de existir, obtendríamos asumiendo solo los tres movimientos de la versión restringida. ¿Qué obtendríamos en el caso de completar el nodo?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Una cota optimista para ese nodo.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Un nodo hoja del subárbol generado por aquel nodo.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Nada de interés, puesto que el camino resultante no contemplaría todos los movimientos permitidos.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.040Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-61",
+    "text": "Dada la versión restringida del problema del laberinto, ¿se podría modificar la solución naive de divide y vencerás para que obtenga el número total de caminos diferentes, de cualquier longitud, que conducen a la salida desde el origen?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "No se puede, ya que no se trataría de un problema de optimización.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "No se puede, puesto que se trata de un nuevo problema que no cumple las condiciones de aplicación de divide y vencerás.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Sí, pero puesto que se trata de un nuevo problema, hay que cambiar la recurrencia matemática inicial.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.040Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-62",
+    "text": "Estamos resolviendo la versión restringida del problema del laberinto. Ya hemos obtenido el almacén de resultados parciales. ¿Con qué complejidad temporal podemos obtener un camino de salida de longitud mínima si es que existe?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Θ(m + n)",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Ω(min(n, m)) y O(mn)",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Θ(mn)",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.040Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-63",
+    "text": "Se pretende resolver la versión general del problema del laberinto mediante un algoritmo de búsqueda y enumeración. Para reducir el número de nodos explorados, ¿qué mecanismo de los relacionados garantiza encontrar la solución y resulta a priori más eficaz?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Usar una matriz de booleanos para descartar caminos que llegan a una casilla ya visitada. Cada casilla (i, j) de la matriz se inicializa con el valor false.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Usar una matriz de enteros donde se almacena la longitud del mejor camino encontrado hasta el momento que llega a cada casilla del laberinto. Cada casilla (i, j) de la matriz se inicializa con el valor infinito.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Usar una matriz de enteros donde se almacena la longitud del mejor camino encontrado hasta el momento que llega a cada casilla del laberinto. Cada casilla (i, j) de la matriz se inicializa con la solución de programación dinámica para la versión restringida del problema asumiendo que el destino es (i, j).",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.040Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-64",
+    "text": "¿Cuál es la característica principal de un algoritmo voraz aplicado al problema del laberinto?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Explora exhaustivamente todas las posibles soluciones del laberinto.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Toma decisiones locales óptimas en cada paso sin considerar el panorama general.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Utiliza una estrategia basada en estimaciones heurísticas para encontrar la solución óptima.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.040Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-65",
+    "text": "Dada la versión restringida del problema del laberinto, ¿cuál de las estrategias siguientes proveería de una cota optimista para ramificación y poda?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Suponer que en adelante todas las casillas del laberinto son accesibles.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Las otras dos estrategias son ambas válidas.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Suponer que ya no se van a realizar más movimientos.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.040Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-66",
+    "text": "¿Cuál de los siguientes enfoques es más eficiente para resolver la versión restringida del problema del laberinto?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Enfoque voraz.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Enfoque de programación dinámica.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Enfoque de vuelta atrás.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.040Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-67",
+    "text": "¿Cómo se utiliza la cola de prioridad en el algoritmo de ramificación y poda para resolver el problema del laberinto?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Se agregan los nodos a la cola de prioridad en orden aleatorio para explorar todas las posibilidades.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Los nodos se agregan a la cola de prioridad según una estimación heurística para priorizar los caminos más prometedores.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Los nodos se extraen de la cola de prioridad según se vayan obteniendo.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.040Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-68",
+    "text": "Dada la solución naive de la versión restringida del problema del laberinto, en general, ¿cuántas veces se llega al caso base de la recursión?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Solo una.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Un valor que puede crecer exponencialmente con el tamaño del laberinto.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Un valor que a lo sumo es n · m.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.040Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-69",
+    "text": "Para resolver la versión simplificada del problema del encaminamiento óptimo, se ha diseñado la función met(m, n), que obtiene el mínimo tráfico de la red entre el servidor 0 y el n - 1 colocando, en el sitio más adecuado, m puertas de enlace. Para acelerarla, aplicamos la técnica de memoización. ¿Qué estructura del almacén será la más adecuada?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "una tabla (dos índices)",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "un vector (un índice)",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "una constante (ningún índice)",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.040Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-70",
+    "text": "Se pretende resolver el problema del encaminamiento óptimo (versión general) mediante ramificación y poda y para ello se hace uso de una cota que consiste en asumir que, independientemente de las puertas ya colocadas, los restantes nodos aún no tratados no van a ser puerta de enlace. ¿Qué podemos decir de esta cota?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Que no es cota, ni optimista ni pesimista.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Que es una cota optimista.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Que es una cota pesimista.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.040Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-71",
+    "text": "A partir del problema del encaminamiento óptimo (versión simplificada), modificamos la expresión que obtiene el tráfico estimado de la red; ahora es $$ \\sum_{i=0}^{n-1} c_i (d_i - d_{p_i})^2 $$ (d_i es la distancia de i al primer servidor del bus; p_i es la puerta de acceso más cercana a i). Disponemos de la nueva función ogw(k, n) que obtiene el mínimo tráfico de la subred colocando solo una puerta de enlace en el lugar apropiado entre el servidor k y el n − 1 (ambos incluidos). Estamos interesados en una función met(m, n) que calcule el mínimo tráfico de la red colocando, en las mejores ubicaciones, m puertas de enlace. Sabiendo que met(1, n) = ogw(0, n), ¿cómo se podría calcular ahora, de forma recursiva, met(m, n), con 1 ≤ m ≤ n?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "De la misma manera que en el problema original que se ha trabajado en las sesiones de prácticas.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "No se puede pues, con la modificación planteada, no se cumple la propiedad de subestructura óptima.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Como la distancia está elevada al cuadrado, esta función no se puede calcular recursivamente.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": true,
+    "createdAt": "2026-03-13T14:45:39.040Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-72",
+    "text": "Se pretende resolver el problema del encaminamiento óptimo mediante ramificación y poda (versión general) y para ello se implementa la lista de nodos vivos con una pila. ¿qué podemos decir del algoritmo resultante frente a una solución de vuelta atrás?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Que para mejorar la solución de vuelta atrás será necesario hacer uso de las cotas pesimistas de los nodos intermedios.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Que será más eficiente que la solución de vuelta atrás, tanto en tiempo como en espacio requerido.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Que ambos, el de vuelta atrás y el de ramificación y poda, estarían utilizando la misma estrategia de búsqueda.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.040Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-73",
+    "text": "Se quiere resolver el problema del encaminamiento óptimo (versión simplificada) mediante un algoritmo voraz que sigue la siguiente estrategia: \\n\\na) suponer que no hay puertas de acceso. \\nb) buscar cual es el servidor (que aún no es puerta de acceso) que al hacerlo puerta de acceso produce un tráfico menor. \\nc) marcar el servidor encontrado como puerta de acceso. \\nd) repetir los dos últimos pasos hasta que se tenga m puertas de acceso.",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El algoritmo no devuelve en general la solución óptima del problema.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "El algoritmo no es voraz.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "El algoritmo siempre devuelve la solución óptima del problema.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.040Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-74",
+    "text": "Para un problema concreto, ¿puede ser que la técnica de ramificación y poda pode más que la de vuelta atrás pero al final sea más lenta?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Sí, puede pasar incluso con implementaciones muy eficientes.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "No, la que poda más es siempre más rápida.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "No, a menos que la implementación sea muy ineficiente.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.040Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-75",
+    "text": "Se quiere resolver el problema del encaminamiento óptimo (versión simplificada) mediante un algoritmo voraz que sigue la siguiente estrategia: \\n\\na) marcar todos los servidores como puertas de acceso (por tanto, el tráfico será cero). \\nb) buscar de qué nodo tenemos que quitar la puerta de acceso para que el aumento de tráfico sea mínimo. \\nc) quitar la puerta de acceso encontrada. \\nd) repetir los dos últimos pasos hasta que se tenga m puertas de acceso.",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El algoritmo no es voraz.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "El algoritmo siempre devuelve la solución óptima del problema.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "El algoritmo no devuelve en general la solución óptima del problema.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.040Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-76",
+    "text": "Se pretende resolver la versión general del problema del encaminamiento óptimo mediante la técnica de programación dinámica. ¿Con qué inconveniente nos encontraríamos?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Las otras dos opciones son ambas verdaderas.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Que el programa resultante solo sería capaz de resolver los casos sencillos.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Que no se cumple la propiedad de subestructura óptima.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.040Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-77",
+    "text": "Dado el problema del encaminamiento óptimo (versión simplificada), la siguiente función pretende encontrar la mejor ubicación de las puertas de enlace haciendo uso del almacén M. ¿Es correcta? \\n\\nNota: la función pair<int, double> ogw(...) devuelve, respectivamente, la mejor ubicación de una puerta de enlace entre dos nodos; y el tráfico asociado a esa ubicación de la puerta de enlace)```double met_naive(vector<int>* M, const vector<double>* d, const vector<double>* c, int n, int m) \\n{ \\n\\tdouble best_traffic; \\n\\tint best_gw; \\n\\tif (m == 1) { \\n\\t\\ttie(best_gw, best_traffic) = ogw(d, c, 0, n); \\n\\t} else { \\n\\t\\tbest_traffic = numeric_limits<double>::max(); \\n\\t\\tfor (int node = m - 1; node < n; node++) { \\n\\t\\t\\tauto [candidate_gw, traffic] = ogw(d, c, node, n); \\n\\t\\t\\ttraffic += met_naive(M, d, c, node, m-1); \\n\\t\\t\\tif (traffic < best_traffic) { \\n\\t\\t\\t\\tbest_traffic = traffic; \\n\\t\\t\\t\\tbest_gw = candidate_gw; \\n\\t\\t\\t} \\n\\t\\t} \\n\\t} \\n\\tM[n] = best_gw; \\n\\treturn best_traffic; \\n}```",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Sí, aunque solo resolverá ejemplos sencillos.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "No, ya que no resuelve todos los subproblemas necesarios.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "No, puesto que no será posible extraer la mejor ubicación de las puertas a partir del almacén M.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.040Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-78",
+    "text": "Dado el problema del encaminamiento óptimo (versión general), el valor que se obtiene con el método voraz es ...",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "... una cota superior para el valor óptimo, pero que nunca coincide con este.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "... una cota inferior para el valor óptimo.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "... una cota superior para el valor óptimo que a veces coincide con este.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.040Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-79",
+    "text": "Hemos resuelto el problema del encaminamiento óptimo (versión simplificada) mediante un algoritmo de programación dinámica cuya complejidad espacial ha resultado ser O(n). ¿Qué podemos asegurar de esta solución?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Que no es correcta si lo que se pretende es encontrar el valor del tráfico estimado para la mejor disposición de las puertas de enlace.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Que no podremos determinar dónde colocar las puertas de enlace.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Que no es la más eficiente si lo que se pretende es encontrar, utilizando las técnicas estudiadas durante el curso, el valor del tráfico estimado para la mejor disposición de las puertas de enlace.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.040Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-80",
+    "text": "Se pretende resolver el problema del encaminamiento óptimo (versión general) mediante ramificación y poda. Si un nodo interno del árbol de búsqueda se completa colocando las restantes puertas de enlace en los servidores con más carga de entre los que quedan por analizar. ¿Qué obtenemos?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "las otras dos opciones son ambas falsas.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Una cota pesimista, es decir, una hoja del árbol de búsqueda situada más abajo que ese nodo interno, en la misma rama.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Una cota optimista, es decir, una hoja del árbol de búsqueda situada más abajo que ese nodo interno, en la misma rama.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.040Z"
+  },
+  {
+    "id": "q-ada_descartadasPreguntas-81",
+    "text": "Teniendo en cuenta que ogw(k, n) obtiene el tráfico estimado si se coloca una sola puerta de enlace entre los nodos k y n - 1, ¿cuál de las siguientes recurrencias es la más apropiada para resolver la versión simplificada del problema del encaminamiento óptimo mediante divide y vencerás?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "$$ met(m, n) = \\begin{cases} ogw(0, n) & \\text{si } m = 1 \\\\ \\min_{k \\in [m-1,n-1]} (met(m - 1, k) + ogw(k, n)) & \\text{si } m > 1 \\end{cases}$$",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "$$ met(m, n) = \\begin{cases} ogw(0, n) & \\text{si } m = 1 \\\\ \\min_{k \\in [0,n-1]} (met(m - 1, k) + ogw(k, n)) & \\text{si } m > 1 \\end{cases}$$",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "$$ met(m, n) = \\begin{cases} ogw(0, n) & \\text{si } m = 1 \\\\ \\min_{k \\in [0,m-1]} (met(m - 1, k) + ogw(k, n)) & \\text{si } m > 1 \\end{cases}$$",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": true,
+    "createdAt": "2026-03-13T14:45:39.040Z"
+  }
+]

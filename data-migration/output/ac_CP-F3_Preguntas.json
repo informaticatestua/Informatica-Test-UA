@@ -1,0 +1,602 @@
+[
+  {
+    "id": "q-ac_CP-F3_Preguntas-1",
+    "text": "En un kernel en CUDA,",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Cada hilo de un grid ejecuta un código distinto.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Cada bloque de un grid ejecuta un código distinto.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Todos los hilos agrupados en un grid ejecutan el mismo código.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.011Z"
+  },
+  {
+    "id": "q-ac_CP-F3_Preguntas-2",
+    "text": "¿Qué es un kernel en la GPU?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Es la función que se ejecutará en los distintos hilos de la GPU de manera secuencial",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Es la función que se ejecutará en los distintos hilos de la GPU de manera simultánea",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Es la función que se ejecutará con un modelo MISD en los distintos hilos de la GPU",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.011Z"
+  },
+  {
+    "id": "q-ac_CP-F3_Preguntas-3",
+    "text": "¿Qué hace el siguiente fragmento de código? ```cudaMemcpy(C, c_d, VECTOR_ELEMENTS * sizeof(float), cudaMemcpyDeviceToHost)```",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Copia VECTOR_ELEMENTS componentes en punto flotante de los vectores A y B desde la memoria de la CPU hasta la memoria de la GPU.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Copia VECTOR_ELEMENTS componentes en punto flotante de los vectores A y B desde la memoria de la GPU hasta la memoria de la CPU.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Copia VECTOR_ELEMENTS componentes enteras de los vectores A y B desde la memoria de la GPU hasta la memoria de la CPU.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.011Z"
+  },
+  {
+    "id": "q-ac_CP-F3_Preguntas-4",
+    "text": "En una invocación al kernel en un programa en CUDA, ¿Cuál es correcta?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El programador ha de especificar el número de hilos por bloque. El tamaño del grid está fijado de antemano.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "El programador ha de especificar el número de hilos por bloque y el número de bloques que forman el grid.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "El programador ha de especificar el identificador del hilo dentro del bloque y el identificador del bloque dentro del grid al que se quiera invocar.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.011Z"
+  },
+  {
+    "id": "q-ac_CP-F3_Preguntas-5",
+    "text": "¿Qué hace el siguiente fragmento de código? ```# Copy input vectors to device memory \\ncudaMemcpy(A_d, A, VECTOR_ELEMENTS * sizeof(float), cudaMemcpyHostToDevice); \\ncudaMemcpy(B_d, B, VECTOR_ELEMENTS * sizeof(float), cudaMemcpyHostToDevice);``` \\nSeleccione una:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Copia VECTOR_ELEMENTS componentes en punto flotante de los vectores A y B desde la memoria de la GPU hasta la memoria de la CPU.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Copia VECTOR_ELEMENTS componentes enteras de los vectores A y B desde la memoria de la CPU hasta la memoria de la GPU.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Copia VECTOR_ELEMENTS componentes en punto flotante de los vectores A y B desde la memoria de la CPU hasta la memoria de la GPU.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.011Z"
+  },
+  {
+    "id": "q-ac_CP-F3_Preguntas-6",
+    "text": "En el nivel más alto encontramos un proceso sobre la CPU (Host) que realiza los siguientes pasos:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "1. Inicializa GPU. 2. Reserva memoria en la parte host y device. 3. Copia datos desde la memoria device al host. 4. Lanza la ejecución de múltiples copias del kernel. 5. Copia datos desde el host hacia la memoria device. 6. Se repiten los pasos 3-5 tantas veces como sea necesario. 7. Libera memoria y finaliza la ejecución proceso maestro.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "1. Inicializa GPU. 2. Reserva memoria en la parte host y device. 3. Copia datos desde el host hacia la memoria device. 4. Lanza la ejecución de múltiples copias del kernel. 5. Copia datos desde la memoria device al host. 6. Se repiten los pasos 3-5 tantas veces como sea necesario. 7. Libera memoria y finaliza la ejecución proceso maestro.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "1. Inicializa GPU. 2. Copia datos desde el host hacia la memoria device. 3. Lanza la ejecución de múltiples copias del kernel. 4. Copia datos desde la memoria device al host. 5. Se repiten los pasos 3-5 tantas veces como sea necesario.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.011Z"
+  },
+  {
+    "id": "q-ac_CP-F3_Preguntas-7",
+    "text": "¿Qué especificador en la declaración nos permite definir la función vecadd para que se ejecute en la GPU?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "__global__ void vecadd()",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "__host__ void vecadd()",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "__kernel__ void vecadd()",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.011Z"
+  },
+  {
+    "id": "q-ac_CP-F3_Preguntas-8",
+    "text": "¿Qué hace la siguiente función? ```__global__ void vecadd(float* C, const float* A, const float* B)\\n{ \\n\\t# ================================================================ \\n\\t# Calcula el índice para acceder a cada elemento \\n\\t# Calcula la suma de las posiciones correspondientes y almacena el resultado \\n\\t# ================================================================\\n\\n\\tconst int i = (threadIdx.x + blockIdx.x * blockDim.x) * COMPUTE_N_ELEMENTS_PER_THREAD; \\n\\tif ( i < VECTOR_ELEMENTS ) \\n\\t{ \\n\\t\\tfor(int j=0; j < COMPUTE_N_ELEMENTS_PER_THREAD; j++) \\n\\t\\t{ \\n\\t\\t\\tC[i+j] = A[i+j] + B[i+j]; \\n\\t\\t} \\n\\t}\\n}```",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Es una función global que realiza la suma en el host de las VECTOR_ELEMENTS componentes del vector.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Es el Kernel que se ejecuta en paralelo por cada hilo en la GPU para calcular la suma de las VECTOR_ELEMENTS componentes del vector. Cada hilo realiza la suma del número de componentes del vector indicado por COMPUTE_N_ELEMENTS_PER_THREAD.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Es el Kernel que se ejecuta en paralelo por cada hilo en la GPU para calcular la suma de las VECTOR_ELEMENTS componentes del vector. Cada hilo solo puede realizar una única suma.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.011Z"
+  },
+  {
+    "id": "q-ac_CP-F3_Preguntas-9",
+    "text": "¿Qué hace el siguiente fragmento de código?```# ===================================================\\n# Calcula las dimensiones del grid e invoca el kernel\\n# ===================================================\\ndim3 block(512);\\ndim3 grid( (VECTOR_ELEMENTS + (block.x*COMPUTE_N_ELEMENTS_PER_THREAD-1)) / (block.x*COMPUTE_N_ELEMENTS_PER_THREAD) );\\n\\n#ifdef DEBUG\\n\\tprintf(\" # of threads in a block %d/n\", block.x);\\n\\tprintf(\" # of blocks in a grid %d/n\", grid.x);\\n\\tprintf(\" Executing the kernel.../n\");\\n#endif\\n\\ngpu_start_time = getTime();\\n\\nvecAdd<<<grid,block>>>(C_d,A_d,B_d);\\n\\ncudaThreadSynchronize();\\ngpu_end_time = getTime();\\nERROR_CHECK\\n```",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Define la estructura y dimensión de los bloques y del grid e invoca al kernel. La estructura definida para los bloques es de una dimensión.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Define la estructura y dimensión de los bloques y del grid pero no se invoca ningún kernel. La estructura definida para los bloques es de una dimensión.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Define la estructura y dimensión de los bloques y del grid e invoca al kernel. La estructura definida para los bloques es de dos dimensiones.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.011Z"
+  },
+  {
+    "id": "q-ac_CP-F3_Preguntas-10",
+    "text": "Sobre la complejidad y dimensión de la cache, la unidad de control y las ALUs de la CPU frente a la GPU ¿Cuál de las siguientes afirmaciones es cierta?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Las memorias caches de la GPU son individualmente de mayor tamaño que la cache de la CPU",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Las ALUs de la CPU son más complejas y mucho menos numerosas que las ALUs de la GPU",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "La unidad de control de la CPU es mucho más simple que las unidades de control de la GPU",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.011Z"
+  },
+  {
+    "id": "q-ac_CP-F3_Preguntas-11",
+    "text": "EN CUANTO A LAS DIFERENCIAS ENTRE LA CPU Y LA GPU:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Una CPU multinúcleo necesita unos pocos hilos más que la GPU para ser igual de eficiente",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Los hilos de la GPU son más ligeros que los de la CPU, necesitando más hilos que esta última para ser eficiente.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Las latencias de memoria en la CPU son mayores que en la GPU.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.011Z"
+  },
+  {
+    "id": "q-ac_CP-F3_Preguntas-12",
+    "text": "LA FUNCIÓN QUE SE EJECUTARÁ EN LOS DISTINTOS HILOS QUE SE CREARÁN EN LA TARJETA GRÁFICA DE FORMA PARALELA LE LLAMAMOS:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Kernel",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Bloque",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Grid",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.011Z"
+  },
+  {
+    "id": "q-ac_CP-F3_Preguntas-13",
+    "text": "LAS SIGLAS CUDA (Compute Unified Device Architecture) HACEN REFERENCIA A:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Tanto a un compilador como a un conjunto de herramientas de desarrollo creadas por NVIDIA.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Tanto a un compilador como a un conjunto de herramientas de desarrollo creados por INTEL.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Tanto a un compilador como a un conjunto de herramientas de desarrollo creados por AMD.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.011Z"
+  },
+  {
+    "id": "q-ac_CP-F3_Preguntas-14",
+    "text": "EN UNA INVOCACIÓN AL KERNEL EN UN PROGRAMA EN CUDA. ¿QUÉ OPCIÓN ES LA CORRECTA?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El programador ha de especificar el identificador del hilo dentro del bloque y el identificador del bloque dentro del grid al que se quiere invocar.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "El programador ha de especificar el número de hilos por bloque y el número de bloques que forman el grid.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "El programador ha de especificar el número de hilos por bloque. El tamaño del grid está fijado de antemano.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.011Z"
+  },
+  {
+    "id": "q-ac_CP-F3_Preguntas-15",
+    "text": "LA ARQUITECTURA CUDA SE CARACTERIZA SEGÚN LA TAXONOMÍA DE FLYNN CON EL TIPO:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "SIMD",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "MISD",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "MIMD",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.011Z"
+  },
+  {
+    "id": "q-ac_CP-F3_Preguntas-16",
+    "text": "EN RELACIÓN A CÓMO ORGANIZA CUDA LOS HILOS, ¿CUÁL DE LAS AFIRMACIONES ES CIERTA?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El grid es una estructura formada directamente por hilos.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "El bloque es una estructura formada por grids dentro de los que se organizan los hilos.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "El grid es una estructura formada por bloques dentro de los que se organizan los hilos.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.011Z"
+  },
+  {
+    "id": "q-ac_CP-F3_Preguntas-17",
+    "text": "SI TENEMOS LA VARIABLE dimGrid DEFINIDA COMO \"dim3 dimGrid(4,4,1);\" ESTAMOS ESPECIFICANDO QUE:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Se crean 8 bloques organizados como una matriz 2D.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Se crean 16 bloques organizados como una matriz 2D.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Se crean 4 bloques organizados como una matriz 2D.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.011Z"
+  },
+  {
+    "id": "q-ac_CP-F3_Preguntas-18",
+    "text": "SI TENEMOS LA VARIABLE blockDim DEFINIDA COMO \"dim3 blockDim(16,64,1);\" ESTAMOS ESPECIFICANDO QUE:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Se crean 80 hilos en cada bloque organizados como una matriz 2D.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Se crean 16 hilos en cada bloque organizados como una matriz 2D.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Se crean 1024 hilos en cada bloque organizados como una matriz 2D.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.011Z"
+  },
+  {
+    "id": "q-ac_CP-F3_Preguntas-19",
+    "text": "EN CUANTO A LA ORGANIZACIÓN DE LOS HILOS:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Cada bloque de hilos se ejecuta sobre varios Streaming Multiprocessors.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Los bloques pueden estructurar los hilos en 1D, 2D o 3D dimensiones.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Un Streaming Multiprocessor solo tiene asignado un bloque de hilos.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.011Z"
+  },
+  {
+    "id": "q-ac_CP-F3_Preguntas-20",
+    "text": "UNA VEZ EJECUTADO EL KERNEL, ¿QUÉ ES LO QUE DISTINGUE INDIVIDUALMENTE A CADA HILO?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "La combinación de los índices de bloque y hilo",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "La combinación del índice de hilo y el número de hilos",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "La combinación del índice de bloque y el número de bloques",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.011Z"
+  },
+  {
+    "id": "q-ac_CP-F3_Preguntas-21",
+    "text": "LA MEMORIA DE LA GPU:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Tiene un ancho de banda mucho mayor que el de la memoria principal de una CPU",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Tiene un ancho de banda menor que el de la memoria principal de una CPU",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Tiene un ancho de banda similar a la memoria principal de una CPU",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.011Z"
+  },
+  {
+    "id": "q-ac_CP-F3_Preguntas-22",
+    "text": "LA INVOCACIÓN SIGUIENTE ``` \"vecAdd<<<grid,block>>>(C_d,A_d,B_d);\"``` DONDE:```dim3 block(512); \\ndim3 grid(4);```GENERARÁ:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "512 ejecuciones de la función vecAdd",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "1024 ejecuciones de la función vecAdd",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "2048 ejecuciones de la función vecAdd",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.011Z"
+  },
+  {
+    "id": "q-ac_CP-F3_Preguntas-23",
+    "text": "SEGÚN LA SENTENCIA VERDADERA, SELECCIONE UNA:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El tiempo de ejecución de la GPU siempre será mayor que en la CPU",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "El tiempo de ejecución en la GPU siempre será menor que en la CPU",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Hay situaciones en las que el tiempo de ejecución en la GPU es mayor que en la CPU",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.011Z"
+  },
+  {
+    "id": "q-ac_CP-F3_Preguntas-24",
+    "text": "UN PROGRAMA EN CUDA:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Se ejecuta completamente en la tarjeta gráfica",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Consta de 3 partes: parte host, parte GPU y parte del sistema operativo.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Consta de 2 partes: parte host y parte GPU",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.011Z"
+  },
+  {
+    "id": "q-ac_CP-F3_Preguntas-25",
+    "text": "DADA LA INVOCACIÓN SIGUIENTE ```\"vecAdd<<<grid,block>>>(C_d,A_d,B_d);\"``` DONDE:```dim3 block(512); \\ndim3 grid(4);```EN EL KERNEL SE TIENE LA SIGUIENTE DECLARACIÓN:```int i = (threadIdx.x + blockIdx.x * blockDim.x) * COMPUTE_N_ELEMENTS_PER_THREAD;```¿QUÉ VALOR TOMA LA VARIABLE blockDim.x?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Toma el valor de 512",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Toma el valor 2048",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Toma el valor 4",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.011Z"
+  }
+]

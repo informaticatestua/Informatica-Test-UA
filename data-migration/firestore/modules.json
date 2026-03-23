@@ -1,0 +1,278 @@
+[
+  {
+    "id": "ac-pr-ctica",
+    "subjectId": "ac",
+    "name": "Práctica",
+    "createdAt": "2026-03-13T17:50:45.052Z"
+  },
+  {
+    "id": "ac-cp-f2",
+    "subjectId": "ac",
+    "name": "CP-F2",
+    "createdAt": "2026-03-13T17:50:45.053Z"
+  },
+  {
+    "id": "ac-cp-f3",
+    "subjectId": "ac",
+    "name": "CP-F3",
+    "createdAt": "2026-03-13T17:50:45.053Z"
+  },
+  {
+    "id": "ac-ct1-2",
+    "subjectId": "ac",
+    "name": "CT1-2",
+    "createdAt": "2026-03-13T17:50:45.054Z"
+  },
+  {
+    "id": "ac-ct3-4",
+    "subjectId": "ac",
+    "name": "CT3-4",
+    "createdAt": "2026-03-13T17:50:45.054Z"
+  },
+  {
+    "id": "ada-parcial-1",
+    "subjectId": "ada",
+    "name": "Parcial 1",
+    "createdAt": "2026-03-13T17:50:45.055Z"
+  },
+  {
+    "id": "ada-parcial-2",
+    "subjectId": "ada",
+    "name": "Parcial 2",
+    "createdAt": "2026-03-13T17:50:45.055Z"
+  },
+  {
+    "id": "ada-general",
+    "subjectId": "ada",
+    "name": "General",
+    "createdAt": "2026-03-13T17:50:45.061Z"
+  },
+  {
+    "id": "ada-descartadas",
+    "subjectId": "ada",
+    "name": "Descartadas",
+    "createdAt": "2026-03-13T17:50:45.063Z"
+  },
+  {
+    "id": "adi-general",
+    "subjectId": "adi",
+    "name": "General",
+    "createdAt": "2026-03-13T17:50:45.065Z"
+  },
+  {
+    "id": "dca-no-oficial",
+    "subjectId": "dca",
+    "name": "No Oficial",
+    "createdAt": "2026-03-13T17:50:45.067Z"
+  },
+  {
+    "id": "dca-oficial",
+    "subjectId": "dca",
+    "name": "Oficial",
+    "createdAt": "2026-03-13T17:50:45.068Z"
+  },
+  {
+    "id": "dss-general",
+    "subjectId": "dss",
+    "name": "General",
+    "createdAt": "2026-03-13T17:50:45.070Z"
+  },
+  {
+    "id": "gcs-p1-no-oficial",
+    "subjectId": "gcs",
+    "name": "P1 No Oficial",
+    "createdAt": "2026-03-13T17:50:45.072Z"
+  },
+  {
+    "id": "gcs-p1-antiguo",
+    "subjectId": "gcs",
+    "name": "P1 Antiguo",
+    "createdAt": "2026-03-13T17:50:45.072Z"
+  },
+  {
+    "id": "gcs-p2-antiguo",
+    "subjectId": "gcs",
+    "name": "P2 Antiguo",
+    "createdAt": "2026-03-13T17:50:45.072Z"
+  },
+  {
+    "id": "gpi-general",
+    "subjectId": "gpi",
+    "name": "General",
+    "createdAt": "2026-03-13T17:50:45.073Z"
+  },
+  {
+    "id": "hada-general",
+    "subjectId": "hada",
+    "name": "General",
+    "createdAt": "2026-03-13T17:50:45.075Z"
+  },
+  {
+    "id": "ic-parte-1",
+    "subjectId": "ic",
+    "name": "Parte 1",
+    "createdAt": "2026-03-13T17:50:45.075Z"
+  },
+  {
+    "id": "mads-parte-1-no-oficial",
+    "subjectId": "mads",
+    "name": "Parte 1 No Oficial",
+    "createdAt": "2026-03-13T17:50:45.079Z"
+  },
+  {
+    "id": "mads-parte-2-no-oficial",
+    "subjectId": "mads",
+    "name": "Parte 2 No Oficial",
+    "createdAt": "2026-03-13T17:50:45.082Z"
+  },
+  {
+    "id": "ped-general",
+    "subjectId": "ped",
+    "name": "General",
+    "createdAt": "2026-03-13T17:50:45.084Z"
+  },
+  {
+    "id": "ppss-parte-1",
+    "subjectId": "ppss",
+    "name": "Parte 1",
+    "createdAt": "2026-03-13T17:50:45.085Z"
+  },
+  {
+    "id": "ppss-parte-2",
+    "subjectId": "ppss",
+    "name": "Parte 2",
+    "createdAt": "2026-03-13T17:50:45.085Z"
+  },
+  {
+    "id": "redes-enero-2023-2024",
+    "subjectId": "redes",
+    "name": "Enero 2023-2024",
+    "createdAt": "2026-03-13T17:50:45.085Z"
+  },
+  {
+    "id": "redes-enero-2024-2025",
+    "subjectId": "redes",
+    "name": "Enero 2024-2025",
+    "createdAt": "2026-03-13T17:50:45.086Z"
+  },
+  {
+    "id": "redes-enero-2025-2026",
+    "subjectId": "redes",
+    "name": "Enero 2025-2026",
+    "createdAt": "2026-03-13T17:50:45.086Z"
+  },
+  {
+    "id": "redes-julio-2024-2025",
+    "subjectId": "redes",
+    "name": "Julio 2024-2025",
+    "createdAt": "2026-03-13T17:50:45.086Z"
+  },
+  {
+    "id": "redes-general",
+    "subjectId": "redes",
+    "name": "General",
+    "createdAt": "2026-03-13T17:50:45.100Z"
+  },
+  {
+    "id": "sds-presentaci-n",
+    "subjectId": "sds",
+    "name": "Presentación",
+    "createdAt": "2026-03-13T17:50:45.101Z"
+  },
+  {
+    "id": "sds-introducci-n-general",
+    "subjectId": "sds",
+    "name": "Introducción General",
+    "createdAt": "2026-03-13T17:50:45.102Z"
+  },
+  {
+    "id": "sds-introducci-n-a-criptograf-a",
+    "subjectId": "sds",
+    "name": "Introducción a Criptografía",
+    "createdAt": "2026-03-13T17:50:45.102Z"
+  },
+  {
+    "id": "sds-aleatorios",
+    "subjectId": "sds",
+    "name": "Aleatorios",
+    "createdAt": "2026-03-13T17:50:45.103Z"
+  },
+  {
+    "id": "sds-flujo",
+    "subjectId": "sds",
+    "name": "Flujo",
+    "createdAt": "2026-03-13T17:50:45.103Z"
+  },
+  {
+    "id": "sds-bloque",
+    "subjectId": "sds",
+    "name": "Bloque",
+    "createdAt": "2026-03-13T17:50:45.104Z"
+  },
+  {
+    "id": "sds-hash",
+    "subjectId": "sds",
+    "name": "Hash",
+    "createdAt": "2026-03-13T17:50:45.105Z"
+  },
+  {
+    "id": "sds-p-blica",
+    "subjectId": "sds",
+    "name": "Pública",
+    "createdAt": "2026-03-13T17:50:45.105Z"
+  },
+  {
+    "id": "sds-transporte",
+    "subjectId": "sds",
+    "name": "Transporte",
+    "createdAt": "2026-03-13T17:50:45.106Z"
+  },
+  {
+    "id": "sds-ejercicios",
+    "subjectId": "sds",
+    "name": "Ejercicios",
+    "createdAt": "2026-03-13T17:50:45.107Z"
+  },
+  {
+    "id": "sds-malware",
+    "subjectId": "sds",
+    "name": "Malware",
+    "createdAt": "2026-03-13T17:50:45.108Z"
+  },
+  {
+    "id": "sds-ataques",
+    "subjectId": "sds",
+    "name": "Ataques",
+    "createdAt": "2026-03-13T17:50:45.108Z"
+  },
+  {
+    "id": "sds-wireless",
+    "subjectId": "sds",
+    "name": "Wireless",
+    "createdAt": "2026-03-13T17:50:45.109Z"
+  },
+  {
+    "id": "sds-recomendaciones",
+    "subjectId": "sds",
+    "name": "Recomendaciones",
+    "createdAt": "2026-03-13T17:50:45.109Z"
+  },
+  {
+    "id": "si-general",
+    "subjectId": "si",
+    "name": "General",
+    "createdAt": "2026-03-13T17:50:45.110Z"
+  },
+  {
+    "id": "sti-general",
+    "subjectId": "sti",
+    "name": "General",
+    "createdAt": "2026-03-13T17:50:45.111Z"
+  },
+  {
+    "id": "taes-definitivo",
+    "subjectId": "taes",
+    "name": "Definitivo",
+    "createdAt": "2026-03-13T17:50:45.117Z"
+  }
+]

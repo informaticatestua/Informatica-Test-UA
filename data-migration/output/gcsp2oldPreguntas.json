@@ -1,0 +1,176 @@
+[
+  {
+    "id": "q-gcsp2oldPreguntas-1",
+    "text": "¿Qué enfoque se utiliza en la simulación para predecir las interacciones de los usuarios?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Evaluaciones subjetivas",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Observación directa de usuarios",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Análisis de tareas no estructuradas",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Teorías formales y componentes matemáticos",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.075Z"
+  },
+  {
+    "id": "q-gcsp2oldPreguntas-2",
+    "text": "¿Qué representa el \"Operadores\" en el método GOMS?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Métodos de interacción",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Acciones del usuario",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Reglas de decisión",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Objetivos del usuario",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.075Z"
+  },
+  {
+    "id": "q-gcsp2oldPreguntas-3",
+    "text": "¿Qué principio es un fundamento de la Evaluación Heurística según Nielsen?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Visibilidad del estado del sistema",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Inmersión",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Eficiencia de uso",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Adaptabilidad",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.075Z"
+  },
+  {
+    "id": "q-gcsp2oldPreguntas-4",
+    "text": "¿Cuál es el propósito de los métodos de testeo de usabilidad sin usuarios?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Reducir los costos de desarrollo de software",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Aumentar la participación del usuario en el diseño",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Sustituir completamente las pruebas con usuarios reales",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Identificar problemas de usabilidad antes de las pruebas con usuarios",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.075Z"
+  },
+  {
+    "id": "q-gcsp2oldPreguntas-5",
+    "text": "¿En qué se diferencia la Simulación del Paseo Cognitivo?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "En su enfoque en la eficiencia del usuario",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "En su enfoque en los principios de diseño",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "En la utilización de modelos matemáticos",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "En la necesidad de prototipos avanzados",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.075Z"
+  },
+  {
+    "id": "q-gcsp2oldPreguntas-6",
+    "text": "¿Cuál es una ventaja del paseo cognitivo?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "No requiere tener acceso a usuarios finales",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Permite un análisis detallado de la interfaz",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "No requiere experiencia del usuario",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Facilita la comparación de diseños alternativos",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.075Z"
+  }
+]

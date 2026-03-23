@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #256af4;
+  --color-primary-glow: rgba(37, 106, 244, 0.15);
+  --color-background-light: #f5f6f8;
+  --color-background-dark: #0a0c10;
+  --color-glass-bg: rgba(255, 255, 255, 0.03);
+  --color-glass-border: rgba(255, 255, 255, 0.1);
+}
+
+/* KaTeX support */
+@import "katex/dist/katex.min.css";
+
+:root {
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+  @apply bg-background-dark text-slate-100 antialiased min-h-screen selection:bg-primary/30;
+}
+
+.glass {
+  background: var(--color-glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--color-glass-border);
+}
+
+.hero-glow {
+  background: radial-gradient(circle at center, var(--color-primary-glow) 0%, transparent 70%);
+}
+
+.card-hover {
+  @apply transition-all duration-300;
+}
+
+.card-hover:hover {
+  border-color: rgba(37, 106, 244, 0.5);
+  box-shadow: 0 0 20px var(--color-primary-glow);
+}
+
+.katex {
+  font-size: 1.1em;
+}

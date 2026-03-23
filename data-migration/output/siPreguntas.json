@@ -1,0 +1,1742 @@
+[
+  {
+    "id": "q-siPreguntas-1",
+    "text": "¿Searle demostró que se puede hacer cosas sin ser conscientes de ello?:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "1. Correcto, además, para él la consciencia es fundamental al hablar de inteligencia.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "2. Incorrecto, él cree que la consciencia no es esencial para la inteligencia.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "3. Correcto, pero él no ve la consciencia como un factor clave.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "4. Incorrecto, él argumenta que la consciencia y la inteligencia son independientes.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.191Z"
+  },
+  {
+    "id": "q-siPreguntas-2",
+    "text": "¿Según Howard Gardner existen distintos tipos de inteligencia?:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "1. Cierto, entre ellas la inteligencia emocional, naturalista, cibernética, etc.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "2. Falso, él sostiene que solo existe un tipo de inteligencia.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "3. Cierto, pero él solo reconoce la inteligencia emocional y lógico-matemática.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "4. Falso, él argumenta que la inteligencia no se puede categorizar.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.191Z"
+  },
+  {
+    "id": "q-siPreguntas-3",
+    "text": "¿Hofstadter postuló que una de las características de la inteligencia es responder de forma rápida a problemas o situaciones diferentes?:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "1. No forma parte de las características que postuló.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "2. Sí, es una de las características esenciales.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "3. Solo en el contexto de la inteligencia artificial.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "4. No, pero sí enfatiza la adaptabilidad y el aprendizaje.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.191Z"
+  },
+  {
+    "id": "q-siPreguntas-4",
+    "text": "¿Según Howard Gardner la inteligencia emocional es formada por?:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "1. La inteligencia intrapersonal y la interpersonal.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "2. La inteligencia lógico-matemática y la naturalista.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "3. La inteligencia musical y la lingüística.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "4. La inteligencia kinestésica y la espacial.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.191Z"
+  },
+  {
+    "id": "q-siPreguntas-5",
+    "text": "¿La inteligencia interpersonal según Howard Gardner es?:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "1. La inteligencia que nos permite entender a los demás.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "2. La capacidad de manejar las propias emociones.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "3. La habilidad para resolver problemas matemáticos.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "4. La facultad de comprender y manipular objetos físicos.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.191Z"
+  },
+  {
+    "id": "q-siPreguntas-6",
+    "text": "Según Howard Gardner, la inteligencia que consiste en formar un modelo mental del mundo en tres dimensiones es la definición de:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "1. Inteligencia espacial.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "2. Inteligencia naturalista.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "3. Inteligencia lógico-matemática.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "4. Inteligencia lingüística.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.191Z"
+  },
+  {
+    "id": "q-siPreguntas-7",
+    "text": "¿Según Howard Gardner la inteligencia espacial consiste en?:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "1. Formar un modelo mental del mundo en tres dimensiones.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "2. La capacidad de entender y manipular números y lógica.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "3. La habilidad para comprender las emociones de uno mismo.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "4. El talento para el movimiento corporal y la manipulación de objetos.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.191Z"
+  },
+  {
+    "id": "q-siPreguntas-8",
+    "text": "El experimento de la 'Sala china' de John Searle tiene relación con el test de Turing en:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "1. Intentar demostrar que el test de Turing no es prueba suficiente de inteligencia.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "2. Confirmar la validez del test de Turing.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "3. Mostrar una variante del test de Turing.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "4. No tiene relación alguna con el test de Turing.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.191Z"
+  },
+  {
+    "id": "q-siPreguntas-9",
+    "text": "¿Cuál de las siguientes afirmaciones acerca de la IA es incorrecta?:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "1. La IA débil a un computador actuar con un comportamiento inteligente para resolver problemas complejos siendo consciente de las acciones y decisiones que toma.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "2. La IA fuerte busca imitar la conciencia y el razonamiento humano.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "3. La IA débil se enfoca en tareas específicas sin buscar emular la conciencia humana.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "4. La IA fuerte es un concepto aún no alcanzado completamente.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.191Z"
+  },
+  {
+    "id": "q-siPreguntas-10",
+    "text": "¿La inteligencia intrapersonal según Howard Gardner es?:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "1. La inteligencia que nos permite entendernos a nosotros mismos.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "2. La capacidad de relacionarnos efectivamente con los demás.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "3. La habilidad para resolver problemas matemáticos y lógicos.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "4. La aptitud para crear y comprender expresiones artísticas.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.191Z"
+  },
+  {
+    "id": "q-siPreguntas-11",
+    "text": "Reflexionando sobre la historia de la IA, ¿Podemos afirmar que se ha conseguido alcanzar una inteligencia artificial fuerte?:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "1. No, es un objetivo distante, solo se ha iniciado el camino.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "2. Sí, ya se han desarrollado sistemas con inteligencia comparable a la humana.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "3. Parcialmente, en algunos campos específicos pero no en general.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "4. Aún es un tema de debate y no hay consenso.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.191Z"
+  },
+  {
+    "id": "q-siPreguntas-12",
+    "text": "El término Inteligencia Artificial se introdujo en:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "1. La Conferencia de Dartmouth (1956).",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "2. Los trabajos de Alan Turing en la década de 1940.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "3. La primera presentación pública de un robot.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "4. Un artículo científico de John McCarthy en 1960.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.191Z"
+  },
+  {
+    "id": "q-siPreguntas-13",
+    "text": "¿Quién diferencia varios tipos de inteligencia?:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "1. Howard Gardner.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "2. John Searle.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "3. Alan Turing.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "4. Daniel Goleman.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.191Z"
+  },
+  {
+    "id": "q-siPreguntas-14",
+    "text": "¿De qué es capaz una IA débil?:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "1. De resolver problemas complejos.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "2. De tener conciencia y emociones.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "3. De replicar completamente la inteligencia humana.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "4. De aprender y adaptarse de forma autónoma.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.191Z"
+  },
+  {
+    "id": "q-siPreguntas-15",
+    "text": "¿Cuál fue el primer robot que venció a un campeón del mundo vigente de ajedrez?:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "1. Deep Blue.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "2. AlphaGo.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "3. Watson.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "4. Kasparov.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.191Z"
+  },
+  {
+    "id": "q-siPreguntas-16",
+    "text": "Según Howard Gardner, la inteligencia que utilizamos cuando observamos y estudiamos la naturaleza es:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "1. Inteligencia naturalista.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "2. Inteligencia espacial.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "3. Inteligencia kinestésica.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "4. Inteligencia lógico-matemática.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.191Z"
+  },
+  {
+    "id": "q-siPreguntas-17",
+    "text": "El futuro próximo de la IA está orientado a:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "1. Crear robots capaces de abordar tareas complicadas o peligrosas para el ser humano.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "2. Desarrollar sistemas con conciencia propia.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "3. Replicar la inteligencia humana en todos los aspectos.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "4. Solucionar problemas ambientales globales.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.191Z"
+  },
+  {
+    "id": "q-siPreguntas-18",
+    "text": "¿Cuál de las siguientes sería una definición de IA?:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "1. Sistemas que piensan como humanos.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "2. Máquinas capaces de realizar tareas sin intervención humana.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "3. Robots con emociones y sentimientos.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "4. Sistemas que superan la inteligencia humana.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.191Z"
+  },
+  {
+    "id": "q-siPreguntas-19",
+    "text": "En la actualidad, la IA que se emplea es:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "1. La IA débil.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "2. La IA fuerte.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "3. IA con conciencia.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "4. IA con autoaprendizaje avanzado.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.191Z"
+  },
+  {
+    "id": "q-siPreguntas-20",
+    "text": "Según Howard Gardner, la inteligencia intrapersonal y la interpersonal conforman la:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "1. Inteligencia Emocional.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "2. Inteligencia Cognitiva.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "3. Inteligencia Espacial.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "4. Inteligencia Lógica.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.191Z"
+  },
+  {
+    "id": "q-siPreguntas-21",
+    "text": "En el campo de la IA y poder dotar de consciencia a las máquinas es cierto que:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "1. Aún no se puede dotar de consciencia a una máquina ni está previsto poder hacerlo hasta dentro de muchos años.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "2. Se ha logrado dotar de consciencia básica a algunas máquinas.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "3. La dotación de consciencia a máquinas es un objetivo a corto plazo.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "4. Las máquinas ya poseen formas primitivas de consciencia.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.191Z"
+  },
+  {
+    "id": "q-siPreguntas-22",
+    "text": "¿Cuál es la principal diferencia entre Turing y Searle?:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "1. Uno creó un test para ver si la máquina era inteligente y el otro creó su contraejemplo.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "2. Ambos tenían enfoques similares respecto a la inteligencia artificial.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "3. Searle se centró en la consciencia, mientras Turing en la inteligencia.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "4. Turing trabajó en la criptografía, Searle en la filosofía del lenguaje.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.191Z"
+  },
+  {
+    "id": "q-siPreguntas-23",
+    "text": "No existe ninguna diferencia entre la IA fuerte y la débil:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "1. Falso.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "2. Cierto.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "3. Las diferencias son mínimas y a menudo indistinguibles.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "4. La diferencia solo radica en la complejidad del algoritmo.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.191Z"
+  },
+  {
+    "id": "q-siPreguntas-24",
+    "text": "En qué década se produjo la Etapa de Expansión de la IA:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "1. En los 80.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "2. En los 70.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "3. En los 90.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "4. En los 60.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.191Z"
+  },
+  {
+    "id": "q-siPreguntas-25",
+    "text": "¿En qué conferencia y en qué año se definió el campo de la inteligencia artificial?:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "1. En la conferencia de Dartmouth en el año 1956.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "2. En una reunión en MIT en 1962.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "3. En una conferencia en Harvard en 1950.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "4. En un simposio en Stanford en 1965.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.191Z"
+  },
+  {
+    "id": "q-siPreguntas-26",
+    "text": "Según Gardner, la inteligencia que nos permite entender a los demás es:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "1. Inteligencia interpersonal.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "2. Inteligencia intrapersonal.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "3. Inteligencia emocional.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "4. Inteligencia lógica.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.191Z"
+  },
+  {
+    "id": "q-siPreguntas-27",
+    "text": "Según Howard Gardner, la inteligencia emocional de qué otras inteligencias consta?:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "1. Inteligencia intrapersonal e interpersonal.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "2. Inteligencia lógico-matemática y lingüística.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "3. Inteligencia musical y kinestésica.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "4. Inteligencia naturalista y espacial.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.191Z"
+  },
+  {
+    "id": "q-siPreguntas-28",
+    "text": "En cuanto al futuro próximo de la IA, podemos concluir que se orienta hacia:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "1. Abordar aquellas tareas que, ya sea por lo incómodo, peligroso o complicado, conviene delegarlas en sistemas inteligentes artificiales.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "2. Desarrollar máquinas con emociones y conciencia.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "3. Superar la inteligencia humana en todas las áreas.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "4. Resolver problemas ambientales y sociales globales.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.191Z"
+  },
+  {
+    "id": "q-siPreguntas-29",
+    "text": "Según Howard Gardner, la inteligencia que está formada por la inteligencia intrapersonal y la interpersonal y juntas determinan nuestra capacidad de dirigir nuestra propia vida de manera satisfactoria, se denomina:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "1. Ninguna de las anteriores.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "2. Inteligencia Emocional.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "3. Inteligencia Cognitiva.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "4. Inteligencia Social.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.191Z"
+  },
+  {
+    "id": "q-siPreguntas-30",
+    "text": "La diferencia entre la IA débil y la IA fuerte es:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "1. La IA fuerte es la creada para pensar y ser consciente, y la IA débil solamente se comporta de manera inteligente.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "2. No hay diferencia significativa entre ambas.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "3. La IA débil es más avanzada que la IA fuerte.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "4. La IA fuerte se enfoca en tareas específicas, mientras que la IA débil tiene aplicaciones más generales.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.191Z"
+  },
+  {
+    "id": "q-siPreguntas-31",
+    "text": "¿En qué consistía el test de Alan Turing?:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "1. Demuestra la existencia de inteligencia en una máquina.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "2. Determina si una máquina puede pensar como un humano.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "3. Evalúa la capacidad de una máquina para aprender.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "4. Mide la eficiencia de una máquina en tareas específicas.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.191Z"
+  },
+  {
+    "id": "q-siPreguntas-32",
+    "text": "¿Superar el test de Turing es condición suficiente para determinar que una máquina es inteligente?:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "1. No, ya que la máquina puede estar siguiendo reglas sin que haya inteligencia.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "2. Sí, porque demuestra la capacidad de imitar la inteligencia humana.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "3. Depende del contexto y la complejidad de las tareas realizadas.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "4. Sí, ya que es el estándar aceptado para medir la inteligencia de una máquina.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.191Z"
+  },
+  {
+    "id": "q-siPreguntas-33",
+    "text": "Si un robot puede resolver ciertos problemas complejos, podemos afirmar con total seguridad que posee una Inteligencia...:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "1. Débil, puesto que el ordenador no tiene consciencia como un ser humano, simplemente resuelve problemas modelando su inteligencia.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "2. Fuerte, ya que resolver problemas complejos requiere un alto nivel de inteligencia.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "3. Emocional, ya que la resolución de problemas implica cierto grado de empatía y comprensión.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "4. Espacial, ya que los problemas complejos a menudo involucran la manipulación de objetos en un entorno.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.191Z"
+  },
+  {
+    "id": "q-siPreguntas-34",
+    "text": "El test de Searle en su contraejemplo del test de Turing nos sirve para apreciar:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "1. La IA fuerte.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "2. La IA débil.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "3. La capacidad de las máquinas para tener conciencia.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "4. Los límites del test de Turing en medir la inteligencia.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.191Z"
+  },
+  {
+    "id": "q-siPreguntas-35",
+    "text": "El término Inteligencia Artificial se introdujo en...:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "1. La Conferencia de Dartmouth (1956).",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "2. Los trabajos de Alan Turing en la década de 1940.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "3. Una publicación de John McCarthy en la década de 1960.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "4. Una conferencia en MIT en la década de 1950.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.191Z"
+  },
+  {
+    "id": "q-siPreguntas-36",
+    "text": "Si una persona A le gana en una partida de ajedrez a otra persona B, ¿significa que la persona A es más inteligente que la persona B?:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "1. No, aunque le ganes al ajedrez a otra persona no implica que seas más inteligente.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "2. Sí, ya que el ajedrez es un indicador claro de la inteligencia general.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "3. Depende de las circunstancias y habilidades específicas de cada jugador.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "4. Sí, pero solo en el contexto de la inteligencia espacial y lógica.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.191Z"
+  },
+  {
+    "id": "q-siPreguntas-37",
+    "text": "¿Cómo se relacionan los siguientes términos? 'Pensar como', 'actuar como', 'IA fuerte', 'IA débil', 'tener consciencia' 'no tener consciencia' 'Test de Turing' y 'La sala china':",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "1. Hay dos grupos, el primero es: 'Pensar como', 'IA fuerte', 'tener consciencia', 'La sala china' y el segundo grupo es: 'actuar como', 'IA débil', 'no tener consciencia' 'Test de Turing'.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "2. Todos estos términos están directamente relacionados con la IA fuerte.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "3. Están divididos en términos que se refieren a capacidades humanas y capacidades de máquinas.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "4. No hay una relación clara entre estos términos.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.191Z"
+  },
+  {
+    "id": "q-siPreguntas-38",
+    "text": "¿Cuál de las siguientes afirmaciones es correcta?:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "1. Para Searle, la inteligencia artificial se basa en la capacidad de una máquina para ser consciente como un humano, característica principal de una IA fuerte.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "2. La inteligencia artificial no puede ser consciente bajo ninguna circunstancia.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "3. La IA fuerte y la IA débil son lo mismo en términos de conciencia.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "4. La consciencia no es un factor relevante en la inteligencia artificial.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.191Z"
+  },
+  {
+    "id": "q-siPreguntas-39",
+    "text": "¿Qué definición de Inteligencia Artificial (IA) se adapta mejor al criterio de la asignatura?:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "1. 'El arte de construir máquinas capaces de hacer cosas que requerirían inteligencia si las hicieran los seres humanos'. (Minsky, 1986).",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "2. La IA es la simulación de procesos de inteligencia humana por parte de máquinas.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "3. La inteligencia artificial se refiere a cualquier inteligencia demostrada por máquinas.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "4. La IA es la capacidad de una máquina para aprender y adaptarse.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.191Z"
+  },
+  {
+    "id": "q-siPreguntas-40",
+    "text": "La inteligencia Intrapersonal...:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "1. Es la que nos permite entendernos a nosotros mismos.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "2. Es la capacidad de relacionarse con otros seres humanos.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "3. Es la habilidad para resolver problemas matemáticos.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "4. Se refiere a la capacidad de crear y comprender la música.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.191Z"
+  },
+  {
+    "id": "q-siPreguntas-41",
+    "text": "Según los tipos de inteligencia de Howard Gardner, ¿cuál de ellos consiste en entendernos a nosotros mismos?:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "1. Inteligencia intrapersonal.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "2. Inteligencia interpersonal.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "3. Inteligencia lógico-matemática.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "4. Inteligencia naturalista.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.191Z"
+  },
+  {
+    "id": "q-siPreguntas-42",
+    "text": "¿Qué es la inteligencia?:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "1. Es el conjunto de habilidades desarrolladas por el hombre para recibir información, analizarla, comprenderla, almacenarla y saberla aplicar en el futuro para la resolución de problemas.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "2. La inteligencia es la capacidad de memorizar y repetir información.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "3. Es la habilidad de una máquina para realizar tareas complejas.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "4. Se refiere únicamente a la capacidad de razonamiento lógico.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.191Z"
+  },
+  {
+    "id": "q-siPreguntas-43",
+    "text": "Alcanzar la consciencia se plantea como un objetivo de:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "1. IA Fuerte.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "2. IA Débil.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "3. IA General.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "4. IA Aplicada.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.191Z"
+  },
+  {
+    "id": "q-siPreguntas-44",
+    "text": "¿Superar el test de Alan Turing nos garantiza que la máquina tendrá una IA fuerte?:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "1. No, Searle con 'la sala china' demuestra que el test de Turing no es suficiente ya que una máquina puede realizar una acción sin saber que hace y por qué lo hace.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "2. Sí, porque demuestra que la máquina puede pensar y razonar.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "3. Sí, ya que el test evalúa la capacidad de la máquina de ser consciente.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "4. No, porque el test solo evalúa la capacidad de imitar respuestas humanas.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.191Z"
+  },
+  {
+    "id": "q-siPreguntas-45",
+    "text": "Asistentes de voz como Siri (Apple) o Voz S (Samsung), que son capaces de responder a cualquier pregunta en nuestro lenguaje natural, concluimos que pasan correctamente el test de Turing:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "1. Verdadero, ya que según dicho test no es posible distinguir entre máquina y ser humano.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "2. Falso, porque todavía no pueden imitar completamente la conversación humana.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "3. Verdadero, pero solo en tareas específicas de procesamiento del lenguaje.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "4. Falso, ya que no demuestran consciencia ni comprensión.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.191Z"
+  },
+  {
+    "id": "q-siPreguntas-46",
+    "text": "¿Qué nos quiere dar a entender Searle con el experimento de la sala china?:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "1. Que el Test de Turing no tenía razón, porque si un computador realiza un trabajo no significa que sea consciente de lo que hace.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "2. Que las máquinas pueden ser conscientes si pasan el test de Turing.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "3. Que la inteligencia artificial ya ha alcanzado el nivel de consciencia humana.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "4. Que los computadores pueden entender y procesar lenguaje como los humanos.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.191Z"
+  },
+  {
+    "id": "q-siPreguntas-47",
+    "text": "La definición del campo de la I.A se fijó en:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "1. La conferencia de Dartmouth (1956).",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "2. Una reunión en MIT en la década de 1970.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "3. Un artículo de Alan Turing en 1950.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "4. La conferencia de Stanford en 1965.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.191Z"
+  },
+  {
+    "id": "q-siPreguntas-48",
+    "text": "Según Howard Gardner la inteligencia corporal-kinestésica es la inteligencia de los:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "1. Cirujanos, artesanos, deportistas y bailarines.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "2. Escritores, poetas y filósofos.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "3. Músicos, compositores y cantantes.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "4. Científicos, matemáticos y lógicos.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.191Z"
+  },
+  {
+    "id": "q-siPreguntas-49",
+    "text": "¿Cuál de las siguientes listas representa aspectos de la inteligencia?:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "1. La memoria, la resolución de problemas y la creatividad.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "2. La capacidad de calcular rápidamente, la precisión y la eficiencia.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "3. La habilidad para seguir instrucciones, la rapidez y la repetición.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "4. La capacidad de almacenar mucha información, la velocidad y el procesamiento.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.191Z"
+  },
+  {
+    "id": "q-siPreguntas-50",
+    "text": "Si un robot es capaz de resolver problemas complejos y además posee inteligencia emocional. ¿Cuál de las siguientes afirmaciones es la más correcta?:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "1. Pasaría el test de Turing.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "2. No puede tener inteligencia emocional, ya que es una máquina.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "3. Sería considerado como una IA fuerte, pero no superaría el test de Turing.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "4. Su inteligencia emocional no influye en su capacidad para resolver problemas.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.191Z"
+  },
+  {
+    "id": "q-siPreguntas-51",
+    "text": "Sobre el comportamiento inteligente:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "1. Las máquinas pueden manifestar un comportamiento inteligente para resolver un determinado problema.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "2. Solo los seres humanos pueden manifestar un comportamiento verdaderamente inteligente.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "3. El comportamiento inteligente implica tener conciencia.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "4. Un comportamiento inteligente siempre supera al test de Turing.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.191Z"
+  },
+  {
+    "id": "q-siPreguntas-52",
+    "text": "Searle mediante el contraejemplo del test de Turing afirma que:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "1. Actualmente, una máquina no puede ser del todo inteligente (no es suficiente el test de Turing).",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "2. El test de Turing es un método infalible para medir la inteligencia.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "3. Todas las máquinas que pasan el test de Turing son conscientes.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "4. La inteligencia de una máquina se basa exclusivamente en su capacidad para procesar lenguaje.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.192Z"
+  },
+  {
+    "id": "q-siPreguntas-53",
+    "text": "¿Cuál de las siguientes definiciones no se corresponde con la Inteligencia Intrapersonal?:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "1. Aquella que nos permite entender a los demás.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "2. La capacidad de entenderse a uno mismo.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "3. La habilidad para reflexionar y autoevaluarse.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "4. El conocimiento de las propias emociones y motivaciones.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.192Z"
+  },
+  {
+    "id": "q-siPreguntas-54",
+    "text": "¿Cómo podemos dotar a una máquina de una IA fuerte?:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "1. Proporcionándole la capacidad de procesamiento e inteligencia necesarios hasta el punto de alcanzar el pensamiento consciente.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "2. No es posible dotar a una máquina de IA fuerte en el sentido humano de la palabra.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "3. A través del aprendizaje automático y la acumulación de datos.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "4. Mediante la programación de reglas y algoritmos complejos.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.192Z"
+  },
+  {
+    "id": "q-siPreguntas-55",
+    "text": "En el famoso experimento mental de John Searle 'La habitación china', popularizado por Roger Penrose, una computadora:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "1. Maneja información sintáctica; respuestas en base a una serie de reglas predefinidas sin consciencia alguna de la propia acción.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "2. Demuestra consciencia y comprensión del lenguaje.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "3. Es capaz de generar respuestas emocionales.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "4. Muestra una inteligencia comparable a la humana.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.192Z"
+  },
+  {
+    "id": "q-siPreguntas-56",
+    "text": "Según Howard Gardner, la inteligencia cibernética es:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "1. La que desarrollan las personas estudiando y aprovechando la ciencia que se ocupa de los sistemas de control y telecomunicaciones.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "2. La habilidad de interactuar y comprender los sistemas informáticos.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "3. La capacidad de crear y programar máquinas inteligentes.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "4. La inteligencia relacionada con el manejo de las redes sociales y la información digital.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.192Z"
+  },
+  {
+    "id": "q-siPreguntas-57",
+    "text": "Según Howard Gardner, los que tienen Inteligencia Lingüística son:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "1. Los escritores.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "2. Los matemáticos.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "3. Los músicos.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "4. Los deportistas.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.192Z"
+  },
+  {
+    "id": "q-siPreguntas-58",
+    "text": "¿En qué estado se encuentra actualmente la IA?:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "1. No disponemos de una IA completa, lo que nos obliga a afrontar problemas concretos.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "2. En un estado avanzado, con máquinas conscientes de sí mismas.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "3. En una etapa temprana, centrada principalmente en el aprendizaje automático.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "4. En un estado estacionario sin avances significativos en los últimos años.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.192Z"
+  },
+  {
+    "id": "q-siPreguntas-59",
+    "text": "Según la clasificación de Howard Gardner cuántos tipos de inteligencia existen:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "1. 8.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "2. 5.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "3. 10.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "4. 12.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.192Z"
+  },
+  {
+    "id": "q-siPreguntas-60",
+    "text": "¿Es posible decidir si una persona es más inteligente que otra?:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "1. Depende del tipo de inteligencia.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "2. Sí, siempre se puede medir y comparar la inteligencia.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "3. No, la inteligencia es un concepto subjetivo y no puede compararse.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "4. Solo en contextos académicos o de rendimiento específico.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.192Z"
+  }
+]

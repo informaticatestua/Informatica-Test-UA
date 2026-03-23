@@ -1,0 +1,2522 @@
+[
+  {
+    "id": "q-ada-p1Preguntas-1",
+    "text": "¿Cuál es el objetivo de la etapa de análisis en el Diseño y Análisis de un Algoritmo?:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Determinar el lenguaje y herramientas disponibles para su desarrollo.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Estimar los recursos que consumirá el algoritmo una vez implementado.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Estimar la potencia y características del equipo informático necesarios para el correcto funcionamiento del algoritmo.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.016Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-2",
+    "text": "¿Cuál de las siguientes jerarquías de complejidades es la correcta?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "O(1)⊂O(lg n)⊂O(lg lg n) ⊂ ...",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "... ⊂ (n!)⊂O(2^n) ⊂O(n^n)",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "... ⊂ (2^n)⊂O(n!) ⊂O(n^n)",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.016Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-3",
+    "text": "¿Cuál de los siguientes algoritmos de ordenación tiene menor complejidad?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Burbuja",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Inserción directa",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Mergesort",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.016Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-4",
+    "text": "¿El tiempo de ejecución de un algoritmo depende de la talla del problema?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Sí, siempre",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "No, nunca",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "No necesariamente",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.016Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-5",
+    "text": "Ordena de menor a mayor las siguientes complejidades \\n\\t1. O(1) \\n\\t2. O(n^2) \\n\\t3. O(nlgn) \\n\\t4. O(n!)",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "3, 1, 2 y 4",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "1, 3, 2 y 4",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "1, 3, 4 y 2",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.016Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-6",
+    "text": "El estudio de la complejidad resulta realmente interesante para tamaños grandes de problema por varios motivos:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Las diferencias reales en tiempo de compilación de algoritmos con diferente coste para tamaños pequeños del problema no suelen ser muy significativas.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Las diferencias reales en tiempo de ejecución de algoritmos con diferente coste para tamaños grandes del problema no suelen ser muy significativas.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Ninguna de las anteriores.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.016Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-7",
+    "text": "¿Por que se emplean funciones de coste para expresar el coste de una algoritmo?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Para poder expresar el coste de los algoritmos con mayor exactitud",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Para que la expresión del coste del algoritmo sea válida para cualquier entrada al mismo",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Para poder expresar el coste de un algoritmo mediante una expresión matemática",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.016Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-8",
+    "text": "El caso base de una ecuación de recurrencia asociada a la complejidad temporal de un algoritmo expresa:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El coste de dicho algoritmo en el mejor de los casos.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "El coste de dicho algoritmo en el peor de los casos.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Ninguna de las anteriores.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.016Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-9",
+    "text": "La complejidad de la función TB es: ```función TB (A: vector[λ]; iz , de : N) : N \\nvar n,i:N; \\n\\tn=iz-de+1 \\n\\topcion \\n\\t\\t(n < 1) : devuelve ( 0 ) ; \\n\\t\\t(n = 1) : devuelve ( 1 ) ; \\n\\t\\t(n > 1) : si (A[iz] = A[de]) entonces \\n\\t\\t\\t\\tdevuelve (TB( A, iz + 1, de - 1 ) + 1); \\n\\t\\t\\tsino \\n\\t\\t\\t\\tdevuelve (TB( A, iz + 1, de - 1 )) ; \\n\\t\\t\\tfinsi ; \\n\\tfopcion \\nfin ```",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Θ (n)",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Θ (n · lg n)",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Θ (n^2 · lg n)",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.016Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-10",
+    "text": "Dado el polinomio $$f(n)= a_mn^m + a_{m-1}n^{m-1} + … + a_0,$$ con $$a_m \\in{R^+}$$ entonces f pertenece al orden:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "$$O(n^m)$$.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "$$Ω(n^m)$$.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Las dos respuestas anteriores son correctas.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": true,
+    "createdAt": "2026-03-13T14:45:39.016Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-11",
+    "text": "Si $$f1(n) \\in{ Ο(g1(n))}$$ y $$f2(n) \\in{ Ο(g2(n))}$$ entonces:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "$$f1(n)·f2(n) \\in{ Ο(maximo(g1(n),g2(n)))}$$",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "$$f1(n)·f2(n) \\in{ Ο (g1(n)· g2(n))}$$",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Ambas son correctas",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": true,
+    "createdAt": "2026-03-13T14:45:39.016Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-12",
+    "text": "Si $$f1(n) \\in{ Ο(g1(n))}$$ y $$f2(n) \\in{ Ο(g2(n))}$$ entonces:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "$$f1(n)+f2(n) \\in{ Ο(maximo(g1(n),g2(n)))}$$",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "$$f1(n)+f2(n) \\in{ Ο (g1(n)+g2(n))}$$",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Ambas son correctas",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": true,
+    "createdAt": "2026-03-13T14:45:39.016Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-13",
+    "text": "Un algoritmo cuya talla es n y que tarda $$40^n$$ segundos en resolver cualquier instancia tiene una complejidad temporal:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "$$\\Theta{( n^n )}$$",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "$$\\Theta{( 4^n )}$$",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Ninguna de las anteriores",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": true,
+    "createdAt": "2026-03-13T14:45:39.016Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-14",
+    "text": "Si dos algoritmos tienen la misma complejidad asintótica:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "No necesitan exactamente el mismo tiempo para su ejecución.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Necesitan exactamente el mismo tiempo para su ejecución.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Ninguna de las anteriores",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.016Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-15",
+    "text": "Los algoritmos directos de ordenación, respecto de los indirectos:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Presentan una mayor complejidad temporal y sus tiempos de ejecución absolutos son mayores.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Presentan una menor complejidad temporal y sus tiempos de ejecución absolutos son menores.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Presentan una mayor complejidad temporal si bien sus tiempos de ejecución absolutos son menores.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.016Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-16",
+    "text": "La talla o tamaño de un problema depende de:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Conjunto de valores asociados a la entrada y salida del problema.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Conjunto de valores asociados a la salida del problema.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Conjunto de valores asociados a la entrada del problema.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.016Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-17",
+    "text": "En un algoritmo recursivo, la forma de dividir el problema en subproblemas:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Influye en la complejidad espacial del mismo.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Influye en su complejidad temporal.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "No influye en ninguna de sus complejidades.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.016Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-18",
+    "text": "$$f(n) = 5n+3m·n +11$$ entonces $$f(n)$$ pertenece a:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "$$O (n·m)$$.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "$$O (n^m)$$.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Las dos son correctas",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": true,
+    "createdAt": "2026-03-13T14:45:39.016Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-19",
+    "text": "El sumatorio, desde $$i=1$$ hasta n, de $$i^k$$ pertenece a:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "$$Ο(n^{k+1})$$",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "$$Ο(n^k)$$",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Ninguna de las anteriores",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": true,
+    "createdAt": "2026-03-13T14:45:39.016Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-20",
+    "text": "La complejidad de la función A2 es: ```Funcion A2 (n, a: entero):entero; \\nVar r: entero; fvar \\n\\tsi (a² > n) devuelve 0 \\n\\tsino \\n\\t\\tr:= A2(n, 2a); \\n\\t\\topción \\n\\t\\t\\tn < a²: devuelve r; \\n\\t\\t\\tn ≥ a² : devuelve r + a; \\n\\t\\tfopción \\n\\tfsi \\nfin```",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "$$O(\\sqrt{n} · a)$$",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "$$O( \\sqrt{n} / a)$$",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "$$O( n / \\sqrt{a} )$$",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": true,
+    "createdAt": "2026-03-13T14:45:39.016Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-21",
+    "text": "Cual de las siguientes definiciones es cierta:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Las cotas de complejidad se emplean cuando para una misma talla se obtienen diferentes complejidades dependiendo de la entrada al problema.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Las cotas de complejidad se emplean cuando para diferentes tallas se obtienen diferentes complejidades dependiendo de la entrada al problema.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Ninguna de las anteriores",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.016Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-22",
+    "text": "Cuando para distintas instancias de problema con el mismo tamaño no obtenemos el mismo resultado:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "No es posible calcular la complejidad a priori y debemos ejecutar el programa varias veces con la misma talla y obtener el tiempo medio para hallar la complejidad media.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "No se puede aplicar la técnica de paso de programa, ya que esta técnica es para calcular la complejidad a priori.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Calculamos el máximo y mínimo coste que nos puede dar el algoritmo.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.016Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-23",
+    "text": "$$f(n) = 5n+5$$ ¿ $$f(n)$$ pertenece a $$O(n)$$?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Si. El valor de c es 5 y el valor mínimo de n_0 es de 3",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Si. El valor de c es 9 y el valor mínimo de n_0 es de 1",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Si. El valor de c es 6 y el valor mínimo de n_0 es de 5",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": true,
+    "createdAt": "2026-03-13T14:45:39.016Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-24",
+    "text": "$$f(n) = 10n+7$$ ¿ $$f(n)$$ pertenece a $$O(n 2)$$$?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Si. Para c = 1 y a partir de un valor de n_0 =10.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Sí Para cualquier valor de c positivo siempre existe un n_0 a partir del que se cumple.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "No.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": true,
+    "createdAt": "2026-03-13T14:45:39.016Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-25",
+    "text": "Si f(n) ∈ Ω (g(n)) entonces:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "∃ c, n_0 ∈ R^+ : f(n) ≥ c· g(n) ∀ n ≥ n_0",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "∃ c, n_0 ∈ R^+ : f(n) ≥ c· g(n) ∀ n",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "∃ c, n_0 ∈ R^+ : f(n) ≤ c· g(n) ∀ n ≥ n_0",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.016Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-26",
+    "text": "El coste asociado a la siguiente ecuación de recurrencia es: \\n$$f(n) = \\begin{cases} 1 & n \\leq 1 \\\\ n + f(\\frac{n}{2}) + f(\\frac{n}{2}) & n > 1 \\end{cases}$$",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Θ(n lg n^2)",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Θ(n^2 lg n)",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Θ(n lg n)",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": true,
+    "createdAt": "2026-03-13T14:45:39.016Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-27",
+    "text": "Un algoritmo recursivo basado en el esquema divide y vencerás...",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "... será más eficiente cuanto más equitativa sea la división en subproblemas.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Las demás opciones son verdaderas.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "... nunca tendrá una complejidad exponencial.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.016Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-28",
+    "text": "Indicad cuál de estas tres expresiones es falsa.",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Θ(n / 2) = Θ(n)",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Θ(n) ⊆ Θ(n^2)",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Θ(n) ⊆ Θ(n)",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.016Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-29",
+    "text": "¿Cuál de estas tres expresiones es falsa?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "3n^2 + 1 ∈ O(n^3)",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "n + n log(n) ∈ Ω(n)",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "n + n log(n) ∈ Θ(n)",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.016Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-30",
+    "text": "Indica cuál es la complejidad en el peor caso de la función replace:```unsigned bound( const vector<int>& v ) {\\n\\tfor( unsigned i = 0; i < v.size(); i++ )\\n\\t\\tif( v[i] == '0')\\n\\t\\t\\treturn i;\\n\\treturn v.size();\\n}\\n\\nvoid replace( vector<int>& v, int c ) {\\n\\tfor( unsigned i = 0; i < bound(v); i++)\\n\\t\\tv[i] = c;\\n}\\n```",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "O(n log n)",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "O(n^2)",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "O(n)",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.016Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-31",
+    "text": "¿Cuál es la complejidad temporal de la siguiente función recursiva?```unsigned desperdicio (unsigned n){ \\n\\tif (n<=1) \\n\\t\\treturn 0; \\n\\tunsigned sum = desperdicio(n/2) + desperdicio(n/2); \\n\\tfor (unsigned i=1; i<=n-1; i++) \\n\\t\\tfor (unsigned j=1; j<=i; j++) \\n\\t\\t\\tsum+=1; \\n\\treturn sum; \\n} \\n```",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Θ(n^2)",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Θ(2^n)",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Θ(n^2 log n)",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.016Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-32",
+    "text": "Sea f(n) la solución de la relación de recurrencia f(n) = 2f(n/2) + 1; f(1) = 1. Indica cual de estas tres expresiones es cierta.",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "f(n) ∈ Θ(n)",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "f(n) ∈ Θ(n^2)",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "f(n) ∈ Θ(n log n)",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.016Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-33",
+    "text": "Considerad estos dos fragmentos:```s=0; for(i=0;i<n;i++) s+=i;``` y ```s=0; for(i=0;i<n;i++) if (a[i] != 0) s+=i;``` y un array a[i] de números enteros. Indicad cuál de estas tres afirmaciones es cierta:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El coste temporal asintótico del primer programa en el caso peor es más alto que en el segundo.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "El coste temporal asintótico, tanto en el caso mejor como en el caso peor, de los dos programas es el mismo.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "El coste temporal asintótico del segundo programa en el caso peor es más alto que en el primero.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.016Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-34",
+    "text": "Indica cual es la complejidad, en función de n, del fragmento siguiente:```int a = 0; \\nfor( int i = 0; i < n; i++ ) \\n\\tfor( int j = i; j > 0; j /= 2 ) \\n\\t\\ta += a[i][j];```",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "O(n log n)",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "O(n)",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "O(n^2)",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.016Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-35",
+    "text": "Indica cuál es la complejidad en función de n, donde K es una constante (no depende de n ), del fragmento siguiente:```for( int i = K; i < n - K; i++ ){ \\n\\tA[i] = 0; \\n\\tfor( int j = i - K; j < i + K; j++ ) \\n\\t\\tA[i] += B[j]; \\n}```",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "O(n)",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "O(n log n)",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "O(n^2)",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.016Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-36",
+    "text": "Pertenece $$3n^2 + 3$$ a $$O(n^3)$$?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Solo para c = 1 y n_0 = 5.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "No.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Sí.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": true,
+    "createdAt": "2026-03-13T14:45:39.016Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-37",
+    "text": "La complejidad temporal en el mejor de los casos...",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Las demás opciones son verdaderas.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "... es el tiempo que tarda el algoritmo en resolver la talla más pequeña que se le puede presentar.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "... es una función de la talla que tiene que estar definida para todos los posibles valores de esta.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.016Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-38",
+    "text": "La versión de Quicksort que utiliza como pivote la mediana del vector...",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "... se comporta mejor cuando el vector ya está ordenado.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "... se comporta peor cuando el vector ya está ordenado.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "... El hecho de que el vector estuviera previamente ordenado o no, no influye en la complejidad temporal de este algoritmo.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.016Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-39",
+    "text": "Dada la siguiente relación de recurrencia, ¿Qué cota es verdadera? \\n\\n$$f(n) = \\begin{cases} 1 & n = 1 \\\\ \\sqrt{n} + 3f(\\frac{n}{3}) & n > 1 \\end{cases}$$",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "f(n) ∈ Θ(n)",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "f(n) ∈ Θ(n^3)",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "f(n) ∈ Θ(√n log n)",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": true,
+    "createdAt": "2026-03-13T14:45:39.016Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-40",
+    "text": "Un problema de tamaño $$n$$ puede transformarse en tiempo $$O(n^2)$$ en nueve de tamaño $$n/3$$. Por otro lado, la solución al problema cuando la talla es $$1$$ requiere un tiempo constante. \\n¿Cuál de estas clases de coste temporal asintótico es la más ajustada?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "O(n^2)",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "O(n^2 log n)",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "O(n log n)",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": true,
+    "createdAt": "2026-03-13T14:45:39.016Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-41",
+    "text": "Indica cuál es la complejidad, en función de $$n$$, del siguiente fragmento de código: ```s=0; for(i=0;i<n;i++) for(j=i;j<n;j++) s+=i*j;```",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "$$\\Theta(n^2)$$",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "$$O(n^2)$$ pero no $$\\Omega(n^2)$$",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "$$\\Theta(n)$$",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": true,
+    "createdAt": "2026-03-13T14:45:39.016Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-42",
+    "text": "Sea ƒ(n) la solución de la relación de recurrencia ƒ (n) = 2ƒ(n-1)+1 ƒ(1) = 1. Indicad cuál de estas tres expresiones es cierta:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "ƒ(n) ∈ Θ(n)",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "ƒ(n) ∈ Θ(2^n)",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "ƒ(n) ∈ Θ(n^2)",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.016Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-43",
+    "text": "Un programa con dos bucles anidados uno dentro del otro, El primero hace $$n$$ iteraciones aproximadamente y el segundo la mitad, tarda un tiempo",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "$$O(n \\log{n})$$",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "$$O(n^2)$$",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "$$O(n \\sqrt{n})$$",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": true,
+    "createdAt": "2026-03-13T14:45:39.016Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-44",
+    "text": "Un problema de tamaño $$n$$ puede transformarse en tiempo $$O(\\frac{n}{2})$$ en nueve de tamaño $$\\frac{n}{3}$$; por otro lado, la solución al problema cuando la talla es 1 requiere un tiempo constante. ¿Cuál de estas clases de coste temporal asintótico es la más ajustada?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "$$O(n \\log n)$$",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "$$O(n^2 \\log n)$$",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "$$O(n^2)$$",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": true,
+    "createdAt": "2026-03-13T14:45:39.016Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-45",
+    "text": "¿Cuál es la complejidad temporal de la siguiente función recursiva?```unsigned desperdicio (unsigned n){ \\nif (n<=1) \\n\\treturn 0; \\nunsigned sum = desperdicio (n/2) + desperdicio (n/2); \\nfor (unsigned i=1; i<n-1; i++) \\n\\tfor (unsigned j=1; j<=i; j++) \\n\\t\\tfor (unsigned k=1; k<=j; k++) \\n\\t\\t\\tsum+=i*j*k; \\nreturn sum; \\n}```",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "$$O(2^n)$$",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "$$O(n^3 \\log n)$$",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "$$O(n^3)$$",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": true,
+    "createdAt": "2026-03-13T14:45:39.016Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-46",
+    "text": "Los algoritmos de ordenación Quicksort y Mergesort tienen en común ...",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "... que se ejecutan en tiempo O(n).",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "... que ordenan el vector sin usar espacio adicional.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "... que aplican la estrategia de divide y vencerás.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.016Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-47",
+    "text": "Indica cuál es la complejidad de la función siguiente:```unsigned sum( const mat &A ) {    # A es una matriz cuadrada \\n\\tunsigned d = A.n_rows(); \\n\\tunsigned a = 0; \\n\\tfor( unsigned i = 0; i < d; i++ ) \\n\\t\\tfor( unsigned j = 0; j < d; j++ ) \\n\\t\\t\\ta += A(i,j); \\n\\treturn a; \\n}```",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "$$O(n^2)$$",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "$$O(n)$$",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "$$O(n \\log n)$$",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": true,
+    "createdAt": "2026-03-13T14:45:39.016Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-48",
+    "text": "Indicad cuál de estas tres expresiones es falsa.",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "$$\\Theta(n/2) = \\space\\space\\space\\space\\space\\space\\space \\Theta(n)$$",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "$$\\Theta(n) \\subseteq \\space \\Theta(n)$$",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "$$\\Theta(n) \\subseteq \\space \\Theta(n^2)$$",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": true,
+    "createdAt": "2026-03-13T14:45:39.016Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-49",
+    "text": "¿Cuál de estos tres problemas de optimización no tiene, o no se le conoce, una solución voraz óptima?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El árbol de cobertura de coste mínimo de un grafo conexo.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "El problema de la mochila discreta o sin fraccionamiento.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "El problema de la mochila continua o con fraccionamiento.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.016Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-50",
+    "text": "Los algoritmos de programación dinámica hacen uso ...",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "... de que la solución óptima se puede construir añadiendo a la solución el elemento óptimo de los elementos restantes, uno a uno.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "... de que se puede ahorrar cálculos guardando resultados anteriores en un almacén.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "... de una estrategia trivial consistente en examinar todas las soluciones posibles.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.016Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-51",
+    "text": "Cuando se calculan los coeficientes binomiales usando la recursión $$\\binom{n}{r} = \\binom{n-1}{r} + \\binom{n-1}{r-1} $$, con $$ \\binom{n}{0} = \\binom{n}{n} = 1 $$, qué problema se da y cómo se puede resolver?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "La recursión puede ser infinita y por tanto es necesario organizarla según el esquema iterativo de programación dinámica.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Se repiten muchos cálculos y ello se puede evitar haciendo uso de una estrategia voraz.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Se repiten muchos cálculos y ello se puede evitar usando programación dinámica.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": true,
+    "createdAt": "2026-03-13T14:45:39.016Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-52",
+    "text": "Sea $$f(n)$$ la solución de la relación de recurrencia $$f(n) = 2f(n/2) + n $$; $$ f(1) = 1 $$. Indicad cuál de estas tres expresiones es cierta.",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "$$ f(n) \\in \\Theta(n^2) $$",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "$$ f(n) \\in \\Theta(n) $$",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "$$ f(n) \\in \\Theta(n \\log n) $$",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": true,
+    "createdAt": "2026-03-13T14:45:39.016Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-53",
+    "text": "Para que la complejidad de un algoritmo presente caso mejor y peor distintos ...",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "... es condición necesaria y suficiente que existan instancias distintas del problema con el mismo tamaño.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "... es condición necesaria que existan instancias distintas del problema con el mismo tamaño.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "... es condición suficiente que existan instancias distintas del problema con el mismo tamaño.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.017Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-54",
+    "text": "Indicad cuál de estas tres expresiones es cierta:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "$$ O(n^2) \\subseteq O(2^{\\log(n)}) \\subset   O(2^n) $$",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "$$ O(n^2) \\subseteq O(2^{\\log(n)}) \\subseteq O(2^n) $$",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "$$ O(2^{\\log(n)}) \\subseteq O(n^2) \\subseteq O(2^n) $$",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": true,
+    "createdAt": "2026-03-13T14:45:39.017Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-55",
+    "text": "La complejidad temporal en el mejor de los casos de un algoritmo recursivo...",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "... coincide con el valor del caso base de la ecuación de recurrencia que expresa la complejidad temporal del algoritmo.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Las demás opciones son falsas.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "... siempre coincidirá con la complejidad temporal de las instancias que están en el caso base del algoritmo recursivo.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.017Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-56",
+    "text": "Considerad la función siguiente:```int M( int i, int f ) { \\n\\tif ( i == f ) \\n\\t\\treturn i; \\n\\telse { \\n\\t\\te = v[ M( i, (i+f)/2 ) ]; \\n\\t\\tf = v[ M( (i+f)/2+1, f ) ]; \\n\\t\\tif (e<f) \\n\\t\\t\\treturn e; \\n\\t\\telse \\n\\t\\t\\treturn f; \\n\\t} \\n}```Si la talla del problema viene dada por $$ n = f - i + 1 $$, ¿cuál es el coste temporal asintótico en el supuesto de que $$ n $$ sea una potencia de 2?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "$$ O(n) $$.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "$$ O(n^2) $$.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "$$ O(n \\log(n)) $$.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": true,
+    "createdAt": "2026-03-13T14:45:39.017Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-57",
+    "text": "El coste temporal asintótico del fragmento ```s=0; for(i=0;i<n;i++) for(j=i;j<n;j++) s+=i*j;``` y el del fragmento ```s=0; for(i=0;i<n;i++) for(j=0;j<n;j++) s+=i*i*j;```son ...",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "a. ... iguales.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "b. ... el del segundo, menor que el del primero.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "c. ... el del primero, menor que el del segundo.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.017Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-58",
+    "text": "La versión de Quicksort que utiliza como pivote el elemento del vector que ocupa la primera posición ...",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "... se comporta mejor cuando el vector ya está ordenado.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "... se comporta peor cuando el vector ya está ordenado.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "... El hecho de que el vector estuviera previamente ordenado o no, no influye en la complejidad temporal de este algoritmo.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.017Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-59",
+    "text": "La versión de Quicksort que utiliza como pivote el elemento del vector que ocupa la posición central ...",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "... se comporta mejor cuando el vector ya está ordenado.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "... se comporta peor cuando el vector ya está ordenado.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "... no presenta casos mejor y peor distintos para instancias del mismo tamaño.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.017Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-60",
+    "text": "Dada la siguiente relación de recurrencia, ¿Qué cota es verdadera? \\n\\n $$ f(n) = \\begin{cases} 1 & n = 1 \\\\ n + 3f(n/3) & n > 1 \\end{cases} $$",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "$$ f(n) \\in \\Theta(n \\log n) $$",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "$$ f(n) \\in \\Theta(n^3) $$",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "$$ f(n) \\in \\Theta(n) $$",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": true,
+    "createdAt": "2026-03-13T14:45:39.017Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-61",
+    "text": "Sobre la complejidad temporal de la siguiente función: ```unsigned desperdicio (unsigned n){ \\n\\tif (n<=1) \\n\\t\\treturn 0; \\n\\tunsigned sum = desperdicio (n/2) + desperdicio (n/2) + desperdicio (n/2); \\n\\tfor (unsigned i=1; i<n-1; i++) \\n\\t\\tfor (unsigned j=1; j<=i; j++) \\n\\t\\t\\tfor (unsigned k=1; k<=j; k++) \\n\\t\\t\\t\\tsum+=i*j*k; \\n\\treturn sum; \\n}```",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Ninguna de las otras dos alternativas es cierta.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Las complejidades en los casos mejor y peor son distintas.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "El mejor de los casos se da cuando n ≤ 1 y en tal caso la complejidad es constante.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.017Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-62",
+    "text": "Con respecto al esquema Divide y vencerás, ¿es cierta la siguiente afirmación? \\nSi la talla se reparte equitativamente entre los subproblemas, entonces la complejidad temporal resultante es una función logarítmica. \\n",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "No, nunca, puesto que también hay que añadir el coste de la división en subproblemas y la posterior combinación.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "No tiene porqué, la complejidad temporal no depende únicamente del tamaño resultante de los subproblemas.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Sí, siempre, en Divide y Vencerás la complejidad temporal depende únicamente del tamaño de los subproblemas.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.017Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-63",
+    "text": "¿Qué cota se deduce de la siguiente relación de recurrencia? \\n\\n $$ f(n) = \\begin{cases} 1 & n = 1 \\\\ n + 4f(\\frac{n}{2}) & n > 1 \\end{cases} $$",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "f(n) ∈ Θ(n^2)",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "f(n) ∈ Θ(n)",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "f(n) ∈ Θ(n log n)",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": true,
+    "createdAt": "2026-03-13T14:45:39.017Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-64",
+    "text": "¿Cuál de estas tres expresiones es falsa?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "$$ 2n^3 - 10n^2 + 1 \\in O(n^3) $$",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "$$ n + n \\sqrt{n} \\in \\Omega(n) $$",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "$$ n + n \\sqrt{n} \\in \\Theta(n) $$",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": true,
+    "createdAt": "2026-03-13T14:45:39.017Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-65",
+    "text": "Sea $$ f(n) = n \\log(n) + n $$.",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "... $$ f(n) \\in \\Omega(n \\log(n)) $$",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "... $$ f(n) \\in O(n \\log(n)) $$",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Las otras dos opciones son ciertas",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": true,
+    "createdAt": "2026-03-13T14:45:39.017Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-66",
+    "text": "¿Cuál es la complejidad temporal de la siguiente función?```int ejemplo (vector < int > & v){ \\n\\tint n=v.size(); \\n\\tint j,i=2; \\n\\tint sum=0; \\n\\twhile (n>0 && i<n){ \\n\\t\\tj=i; \\n\\t\\twhile (v[j] != v[1]){ \\n\\t\\t\\tsum+=v[j]; \\n\\t\\t\\tj=j/2; \\n\\t\\t} \\n\\t\\ti++; \\n\\t} \\n\\treturn sum; \\n}```",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "$$ \\Theta(n \\log n) $$",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "$$ \\Theta(n^2) $$",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "$$ \\Omega(n) $$",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": true,
+    "createdAt": "2026-03-13T14:45:39.017Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-67",
+    "text": "En cuanto a la complejidad temporal de la siguiente función:```int ejemplo (vector < int > & v){ \\n\\tint n=v.size(); \\n\\tint j,i=2; \\n\\tint sum=0; \\n\\twhile (n>0 && i<n){ \\n\\t\\tj=i; \\n\\t\\twhile (v[j] != v[1]){ \\n\\t\\t\\tsum+=v[j]; \\n\\t\\t\\tj=j/2; \\n\\t\\t} \\n\\t\\ti++; \\n\\t} \\n\\treturn sum; \\n}```",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Las complejidades en el mejor y en el peor de los casos no coinciden.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "El mejor de los casos se da cuando \\( n = 0 \\), su complejidad es constante.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Esta función no presenta casos mejor y peor puesto que solo puede haber una instancia para cada una de las posibles talla",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.017Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-68",
+    "text": "Indica cuál es la complejidad, en función de \\( n \\), del fragmento siguiente:```for( int i = n; i > 0; i /= 2 ) \\n\\tfor( int j = n; j > 0; j /= 2 ) \\n\\t\\ta += A[i][j]; \\n```",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "$$ O(\\log^2(n)) $$",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "$$ O(n \\log(n)) $$",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "$$ O(n^2) $$",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": true,
+    "createdAt": "2026-03-13T14:45:39.017Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-69",
+    "text": "Indica cuál es la complejidad, en función de \\( n \\), del fragmento siguiente:```a = 0; \\nfor( int i = 0; i < n*n; i++ ) \\n\\ta += A[(i + j) % n];```",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "$$ O(n^2) $$",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "$$ O(n \\log(n)) $$",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "$$ O(n) $$",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": true,
+    "createdAt": "2026-03-13T14:45:39.017Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-70",
+    "text": "La versión deQuicksort que utiliza como pivote la mediana del vector...",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "... no presenta caso mejor y peor distintos para instancias del mismo tamaño.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "... es más eficiente si el vector ya está ordenado.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "... es la versión con mejor complejidad en el mejor de los casos.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.017Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-71",
+    "text": "El siguiente fragmento del algoritmo de ordenación Quicksort reorganiza los elementos del vector para obtener una subsecuencia de elementos menores que el pivote y otra de mayores. Su complejidad temporal, con respecto al tamaño del vector v, que está delimitado por los valores pi y pf, es...```x = v[pi]; \\ni = pi+1; \\nj = pf; \\ndo { \\n\\twhile (i<=pf && v[i] < x) i++; \\n\\twhile (v[j] > x ) j--; \\n\\tif (i <= j ) { \\n\\t\\tswap( v[i],v[j] ); \\n\\t\\ti++; \\n\\t\\tj--; \\n\\t} \\n} while (i < j); \\nswap(v[pi],v[j]);``` \\nNota: La función swap se realiza en tiempo constante.",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "... lineal en cualquier caso.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "... cuadrática en el peor de los casos.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "... lineal en el caso peor y constante en el caso mejor.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.017Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-72",
+    "text": "Dada la siguiente relación de recurrencia, ¿Qué cota es verdadera?  \\n\\n$$ f(n) = \\begin{cases} 1 & n = 1 \\\\ n + 2f(n-1) & n \\geq 1 \\end{cases} $$",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "$$ f(n) \\in \\Omega(2^n) $$",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "$$ f(n) \\in \\Theta(n^2) $$",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "$$ f(n) \\in \\Theta(2^n) $$",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": true,
+    "createdAt": "2026-03-13T14:45:39.017Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-73",
+    "text": "¿Cuál es la solución a la siguiente relación de recurrencia? \\n\\n$$ f(n) = \\begin{cases} \\Theta(1) & n = 0 \\\\ \\Theta(1) + f(n/3) & n > 0 \\end{cases} $$",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "$$ f(n) \\in \\Theta(\\log(n)) $$.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "$$ f(n) \\in \\Theta(n/3) $$.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Ninguna de las otras dos es cierta.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": true,
+    "createdAt": "2026-03-13T14:45:39.017Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-74",
+    "text": "De las siguientes expresiones, o bien dos son verdaderas y una es falsa o bien al contrario: dos son falsas y una es verdadera. Marca la que en este sentido es distinta a las otras dos.",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "$$ 2n^3 - 10n^2 + 1 \\in O(n^3) $$",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "$$ n + n\\sqrt{n} \\in \\Omega(n) $$",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "$$ n + n\\sqrt{n} \\in \\Theta(n) $$",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": true,
+    "createdAt": "2026-03-13T14:45:39.017Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-75",
+    "text": "Si $$ f \\in \\Omega(g_1) $$ y $$ f \\in \\Omega(g_2) $$ entonces",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "$$ f \\not\\in \\Omega(\\min(g_1, g_2)) $$",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "$$ f \\in \\Omega(g_1 \\cdot g_2) $$",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "$$ f \\in \\Omega(g_1 + g_2) $$",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": true,
+    "createdAt": "2026-03-13T14:45:39.017Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-76",
+    "text": "¿Cuál de las siguientes relaciones de recurrencia expresa mejor la complejidad espacial es la del algoritmo Mergesort?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "$$ T(n) = n + T(n - 1) \\space\\space$$ para $$\\space\\space n > 1 \\space\\space$$ y $$\\space\\space T(n) \\space = \\space\\space\\space\\space\\space\\space\\space 1 \\space\\space$$ para $$\\space\\space n \\leq \\space\\space 1 $$",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "$$ T(n) = n + T(n/2) \\space\\space$$ para $$\\space\\space n > 1 \\space\\space$$ y $$\\space\\space T(n) \\space = \\space\\space\\space\\space\\space\\space\\space 1 \\space\\space$$ para $$\\space\\space n \\leq \\space\\space 1 $$",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "$$ T(n) = n + 2T(n/2) \\space\\space$$ para $$\\space\\space n > 1 \\space\\space$$ y $$\\space\\space T(n) \\space\\ = \\space\\space\\space\\space\\space\\space\\space 1 \\space\\space$$ para $$\\space\\space n \\leq \\space\\space 1 $$",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": true,
+    "createdAt": "2026-03-13T14:45:39.017Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-77",
+    "text": "De las siguientes expresiones, o bien dos son verdaderas y una es falsa, o bien dos son falsas y una es verdadera. Marca la que (en este sentido) es distinta a las otras dos.",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "$$ \\log(n^3) \\not\\in \\Theta(\\log_3(n)) $$",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "$$ \\Theta(\\log^2(n)) = \\Theta(\\log^3(n)) $$",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "$$ \\Theta(\\log_2(n)) = \\Theta(\\log_3(n)) $$",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": true,
+    "createdAt": "2026-03-13T14:45:39.017Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-78",
+    "text": "Un problema de tamaño $$ n $$ puede transformarse en tiempo $$ O(1) $$ en siete de tamaño $$ \\frac{n}{7} $$; por otro lado, la solución al problema cuando la talla es 1 requiere un tiempo constante. \\n¿Cuál de estas clases de coste temporal asintótico es la más ajustada?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "$$ O(n^2) $$",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "$$ O(n) $$",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "$$ O(n \\log n) $$",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": true,
+    "createdAt": "2026-03-13T14:45:39.017Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-79",
+    "text": "Con respecto al parámetro n, ¿Cuál es la complejidad temporal de la siguiente función? \\n```void f(unsigned n){\\n\\tif(n<2)return;\\n\\tfor(int i=0;i<pow(n,2);i++)\\n\\t\\tcout<< \"*\";\\n\\tfor(int i=0;i<5;i++)\\n\\t\\tf(n/2);\\n}```",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "$$O(5^{log\\,n})$$",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "$$O(n^2\\,log\\,n)$$",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "$$O(n^2)$$",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": true,
+    "createdAt": "2026-03-13T14:45:39.017Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-80",
+    "text": "Se pretende obtener la complejidad temporal en el caso más desfavorable de la siguiente función. \\n```int exa(vector<int> &v){ \\n\\tint i, sum = 0, n = v.size(); \\n\\tif(n>0){ \\n\\t\\tint j=n; \\n\\t\\twhile(sum<100 and j!=0({ \\n\\t\\t\\tj = j /2; \\n\\t\\t\\tsum = 0; \\n\\t\\t\\tfor(i = j;i<n;i++) \\n\\t\\t\\t\\tsum += v[i]; \\n\\t\\t} \\n\\t\\treturn j; \\n\\t} \\n\\telse return -1; \\n}```",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "$$ C_s(n)=\\sum^{log(n+1)}_{k=1}(n-n/2^k)\\in O(n\\log n) $$",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "$$ C_s(n)=\\sum^{log\\,n}_{j=1}\\sum^{j}_{i=1}(1/2)^i \\in O(n\\log n) $$",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "$$ C_s(n)=\\sum^{n/2}_{j=0}(1/2\\sum^{n}_{i=j}1) \\in O(n\\log n) $$",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": true,
+    "createdAt": "2026-03-13T14:45:39.017Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-81",
+    "text": "Las siguientes funciones calculan el valor de potencia n-+esima de dos. ¿Cuál es el más eficiente en cuanto a coste temporal?\\n```unsigned long pot2_1 (unsigned n){ \\n\\tif(n==0) return 1; \\n\\tif(n%2==0) return pot2_1(n/2) * pot2_1(n/2); \\n\\telse return 2 * pot2_1(n/2) * pot2_1(n/2); \\n} \\n\\nunsigned long pot2_2(unsigned n){ \\n\\tif(n==0) return 1; \\nm\\t unsigned long aux= pot2_2(n/2); \\n\\tif(n%2==0) return aux * aux; \\n\\telse return 2 * aux * aux; \\n}``` \\n Seleccione una:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "La primera, pot2_1(n), es más eficiente que la otra.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Las dos funciones son equivalentes en cuanto a coste temporal.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "La segunda, pot2_2(n), es más eficiente que la otra.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.017Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-82",
+    "text": "Tenemos un vector desordenado y queremos obtener los tres elementos más pequeños. ¿Cuál seria la complejidad emporal más ajustada para hacerlo? (sin pérdida de generalidad puedes suponer que en el vector todos los elementos son distintos) \\nSeleccione una:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El logaritmo de la longitud del vector",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Lineal con la longitud del vector",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Cuadrática con la longitud del vector",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.017Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-83",
+    "text": "Supongamos que una solución recursiva a un problema de optimización muestra estas dos características: por un lado, se basa en obtener soluciones óptimas a problemas parciales más pequeños, y por otro, estos subproblemas se resuelven más de una vez durante el proceso recursivo. Este problema es candidato a tener una solución alternativa basada en \\nSeleccione una:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "un algoritmo de programación dinámica.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "un algoritmo voraz.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "un algoritmo del estilo de divide y vencerás.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.017Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-84",
+    "text": "Si $$ f ∉ O(g_1) $$ y $$ f \\in O(g_2) $$ entonces siempre se cumplirá: \\nSeleccione una:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "$$ f \\in \\Omega(min(g_1,g_2)) $$",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "$$ f \\in \\Omega(g_1 + g_2) $$",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "$$ f ∉ O(max(g_1, g_2)) $$",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": true,
+    "createdAt": "2026-03-13T14:45:39.017Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-85",
+    "text": "Con respecto al parámetro n, ¿Cuál es la complejidad temporal de la siguiente función? \\n```void f(unsigned n){ \\n\\t if(n < 1) return; \\n\\tfor(int i = 0; i < n; i++) \\n\\t\\tfor(int j = 0; j < n;j++) \\n\\t\\t\\tfor(int k = 0; k < n;k++) \\n\\t\\t\\t\\tcout << \"*\"; \\n\\tfor(int i = 0;i < 8;i++) \\n\\t\\tf(n / 2); \\n}``` \\nSeleccione una:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "$$ \\Theta(n^3 \\log n) $$",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "$$ \\Theta(n^3) $$",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "$$ \\Theta(n^2 \\log n) $$",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": true,
+    "createdAt": "2026-03-13T14:45:39.017Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-86",
+    "text": "¿En qué caso la complejidad temporal del algoritmo de ordenación Quicksort es igual a la complejidad temporal del algoritmo Mergesort? \\nSeleccione una:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "En el caso mejor de ambos.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "En el caso peor de ambos.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Tanto en el caso peor como en el caso mejor de ambo",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.017Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-87",
+    "text": "Di cuál de estos resultados de coste temporal asintótico es falsa: \\nSeleccione una:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "La ordenación de un vector usando el algoritmo Quicksort requiere en el peor caso un tiempo en $$ O(n^2) $$",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "La ordenación de un vector usando el algoritmo Mergesort requiere en el peor caso un tiempo en $$ O(n^2) $$",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "La búsqueda binaria en un vector ordenado requiere en el peor caso un tiempo en $$ O(\\log n) $$",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": true,
+    "createdAt": "2026-03-13T14:45:39.017Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-88",
+    "text": "De las siguientes expresiones, o bien dos son verdaderas y una es falsa, o bien dos son falsas y una es verdadera. Marca la que (en este sentido) es  distinta a las otras dos. \\nSeleccione una:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "$$ O(n^2) \\subset O(2^{\\log_2(n)}) \\subset O(2^n) $$",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "$$ O(2^{\\log_2(n)}) \\subset O(n^2) \\subset O(n!) $$",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "$$ O(4^{\\log_2(n)}) \\subset O(n) \\subset O(2^n) $$",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": true,
+    "createdAt": "2026-03-13T14:45:39.017Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-89",
+    "text": "Tenemos un vector ordenado de tamano $$n_0$$ y un vector desordenado de tamano $$n_d$$ y queremos obtener un vector ordenado con todos los elementos. ¿Qué serå más rápido? \\nSeleccione una:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Depende de si $$ n_o > n_d $$ o no.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Insertar los elementos del vector desordenado (uno a uno) en el vector ordenado.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Ordenar el desordenado y luego mezclar las listas.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": true,
+    "createdAt": "2026-03-13T14:45:39.017Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-90",
+    "text": "La complejidad temporal (o coste temporal asintötico) en el mejor de los casos... \\nSeleccione una:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Las otras dos opciones son ambas verdaderas.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "... es una función de la talla, o tamano del problema, que tiene que estar definida para todos los posibles valores de ésta",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "... es el tiempo que tarda el algoritmo en resolver la talla más pequena que se le puede presentar.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.017Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-91",
+    "text": "Con respecto al parámetro n, ¿Cuál es la complejidad temporal de la siguiente función? \\n```void f(unsigned n){ \\n\\tif(n < 1) return; \\n\\tfor( int i = 0;i < n; i++) \\n\\t\\tfor(int j = 0; j < n; j++) \\n\\t\\t\\tfor(int k = 0; k < n; k++) \\n\\t\\t\\t\\tcout << \"*\"; \\n\\tfor(int i = 0; i < 8; i++) \\n\\t\\tif(n / 2); \\n}``` \\nSeleccione una:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "$$ \\Theta(n^3) $$",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "$$ \\Theta(n^2 \\log n) $$",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "$$ \\Theta(n^3 \\log n) $$",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": true,
+    "createdAt": "2026-03-13T14:45:39.017Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-92",
+    "text": "Sea la siguiente relacion de recurrencia: \\n$$ T(n) = \\begin{cases} 1 & si\\,n \\le 1 \\\\ 8T(\\frac{n}{8}) + g(n) & en\\,otro\\, caso\\end{cases} $$ \\nSi $$ T(n) \\in \\Theta(n^2) $$, ¿en cuál de estos tres casos nos podemos encontrar? \\nSeleccione una:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "$$ g(n) = \\space\\space\\space\\space\\space\\space\\space n^3  $$",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "$$ g(n) = \\space\\space\\space\\space\\space\\space\\space n^2 $$",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "$$ g(n) = \\space\\space\\space\\space\\space\\space\\space n $$",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": true,
+    "createdAt": "2026-03-13T14:45:39.017Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-93",
+    "text": "¿Cuál de los siguientes algoritmos de ordenación necesita un espacio de almacenamiento adicional al vector que se ordena con complejidad O(n)? \\nSeleccione una:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Mergesort.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Quicksort.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Bubblesort.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.017Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-94",
+    "text": "Si $$ f ∉ O(g_1) $$ y $$ f \\in O(g_2) $$ entonces siempre se cumplirá: \\nSeleccione una:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "$$ f \\in \\Omega(g_1 + g_2) $$",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "$$ f ∉ O(max(g_1, g_2)) $$",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "$$ f \\in \\Omega(min(g_1, g_2)) $$",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": true,
+    "createdAt": "2026-03-13T14:45:39.017Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-95",
+    "text": "Con respecto al parámetro n, ¿Cuál es la complejidad temporal de la siguiente función? \\n```void f(unsigned n){ \\n\\tif(n < 2) return; \\n\\tfor(int i = 0; i < pow(n,2); i++) \\n\\t\\tcout << \"*\"; \\n\\tf(n - 2); \\n}``` \\nSeleccione una:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "$$ \\Theta(n^2 \\log n) $$",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "$$ \\Theta(n^2) $$",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "$$ \\Theta(n^3) $$",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": true,
+    "createdAt": "2026-03-13T14:45:39.017Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-96",
+    "text": "Si $$ f ∉ O(g_1) $$ y $$ f \\in O(g_2) $$ enbtonces siempre se cumplirá: \\nSeleccione una:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "$$ f \\in \\Omega(min(g_1, g_2)) $$",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "$$ f \\in \\Omega(g_1 + g_2) $$",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "$$ f ∉ \\Omega(max(g_1, g_2)) $$",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": true,
+    "createdAt": "2026-03-13T14:45:39.017Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-97",
+    "text": "¿Qué nos proporciona la media entre el coste temporal asintótico (o complejidad temporal) en el peor caso y el coste temporal asintótico en el mejor caso? \\nSeleccione una:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El coste temporal promedio.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "El coste temporal asintótico en eI caso medio.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "En general, nada de interés.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.017Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-98",
+    "text": "Las siguientes funciones calculan el valor de la potencia n-ésima de dos. ¿Cuál es más eficiente en cuanto a coste temporal? \\n```unsigned long pot2_1(unsigned n){ \\n\\tif(n==0) return 1; \\n\\tif(n%2==0)return pot2_1(n/2) * pot2_1(n/2); \\n\\telse return 2 * pot2_1(n/2) * pot2_1(n/2); \\n} \\n\\nunsigned long pot2_2(unsigned n){ \\n\\t if(n==0) return 1; \\n\\treturn 2 * pot2_2(n-1); \\n}``` \\nSeleccione una:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "La segunda, pot2_2(n), es más eficiente que la otra.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Las dos funciones son equivalentes en cuanto a coste temporal.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "La primera, pot2_1(n), es más eficiente que la otra.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.017Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-99",
+    "text": "Con respecto al parámetro n, ¿Cuál es la complejidad temporal de la siguiente función? \\n```void f(unsigned n){ \\n\\tif(n < 2) return; \\n\\tfor(int i = 0; i < pow(n,2); i++) \\n\\t\\tcout << \"*\"; \\n\\tfor(int i = 0; i < 5; i++) \\n\\t\\tf(n/2); \\n}``` \\nSeleccione una:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "$$ \\Theta(n^2) $$",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "$$ \\Theta(n^2 \\log n) $$",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "$$ \\Theta(5^{\\log n}) $$",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": true,
+    "createdAt": "2026-03-13T14:45:39.017Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-100",
+    "text": "¿Qué algoritmo es asintóticamente más rápido, el Quicksort o el Mergesort? \\nSeleccione una:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Los dos son igual de rápidos ya que el coste temporal asintótico de ambos es O(n log(n)).",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "como su nombre indica, el Quicksort.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "el Mergesort es siempre más rápido o igual (salvo una constante) que el Quicksort.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.017Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-101",
+    "text": "La solucion Optima al problema de encontrar el arbol de recubrimiento de coste minimo para un grafo no dirigido, conexo y ponderado \\nSeleccione una:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "... se construye haciendo crecer varios arboles que al final acaban injertados en un unico arbol.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "... puede construir un unico arbol que va creciendo o bien construir un bosque de arboles que al final se injenan en un unico arbol",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "... se construye haciendo crecer un unico arbol.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.017Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-102",
+    "text": "Se pretende implementar mediante programación dinámica iterativa la función recursiva: \\n```int f(int x, int y){ \\n\\tif(x <= y) return 1; \\n\\treturn x + f(x-1,y); \\n}``` \\n¿Cuál es la mejor complejidad espacial que se puede conseguir? \\nSeleccione una:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "$$ O(x) $$",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "$$ O(1) $$",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "$$ O(x^2) $$",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": true,
+    "createdAt": "2026-03-13T14:45:39.017Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-103",
+    "text": "iCual de los siguientes pares de problemas son equivalentes en cuanto al tipo de solucian (Optima, factible, etc.) aportada por el método voraz? \\nSeleccione una:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "La mochila continua y la asignación de tareas.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "El fontanero diligente y el problema del cambio.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "La mochila discreta y la asignación de tareas.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.017Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-104",
+    "text": "De los problemas siguientes, indicad cual no se puede tratar eficientemente como los otros dos: \\nSeleccione una:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El problema de cortar un tubo de forma que se obtenga el maximo beneficio posible.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "El problema de la mochila sin fraccionamiento y sin restricciones en cuanto al dominio de los pesos de los objetos y de sus valores.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "El problema del cambio, o sea, el de encontrar la manera de entregar una cantidad de dinero usando el minimo de monedas posibles.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.017Z"
+  },
+  {
+    "id": "q-ada-p1Preguntas-105",
+    "text": "La eficiencia de los algoritmos voraces se basa en el hecho de que ... \\nSeleccione una:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "... antes de tomar una decisiön se comprueba si satisface las retricciones del problema.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "... las decisiones tomadas nunca se reconsideran.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "... con antelaciön, Ias posibles decisiones se ordenan de mejor a peor.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.017Z"
+  }
+]

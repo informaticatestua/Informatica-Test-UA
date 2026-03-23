@@ -1,0 +1,4937 @@
+[
+  {
+    "id": "q-sds09-transportePreguntas-1",
+    "text": "¿Cómo se denominan los datos cuando están siendo transmitidos por la red?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Datos en descanso",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Datos en tránsito",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Datos en reposo",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Datos en capa",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.177Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-2",
+    "text": "¿Cuál fue el nombre original del protocolo que hoy conocemos como TLS?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "SSL",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "SSH",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "IPSec",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "DTLS",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.177Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-3",
+    "text": "¿Qué versión de TLS es actualmente la más segura y rápida?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "TLS 1.0",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "TLS 1.2",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "TLS 1.3",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "TLS 1.1",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.177Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-4",
+    "text": "¿En qué consiste principalmente el «handshake» de TLS?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Cifrado simétrico de todos los datos",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Negociación de algoritmos, validación de certificados y generación de claves simétricas",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Compresión de las cabeceras HTTP",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Multiplexación de conexiones TCP",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.177Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-5",
+    "text": "¿Qué mecanismo de integridad utiliza TLS durante la transmisión?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "CRC32",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "SHA-1 puro",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "MD5",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "HMAC",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.177Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-6",
+    "text": "¿Qué protocolo emplea TLS para asegurar el tráfico HTTP?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "HTTPS",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "HTTP/2",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "QUIC",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "STARTTLS",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.177Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-7",
+    "text": "¿Qué tipo de validación de certificados muestra el nombre legal de la empresa en el navegador?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Domain Validation (DV)",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Organization Validation (OV)",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Extended Validation (EV)",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Basic Validation (BV)",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.177Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-8",
+    "text": "¿Qué protocolo creó Google originalmente para acelerar la web y sirvió de base a HTTP/2?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "SPDY",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "QUIC",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "HTTP/1.1",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "DTLS",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.177Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-9",
+    "text": "¿Cuál de estas características es propia de HTTP/2 frente a HTTP/1.1?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Usa UDP en lugar de TCP",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Multiplexación en una sola conexión y Server Push",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Cifrado obligatorio sin excepción",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Validación de certificados de cliente",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.177Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-10",
+    "text": "¿Qué elemento de seguridad obliga HTTP/2 a usar por defecto?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Compresión de datos",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Handshake rápido de TLS",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "TLS (HTTPS)",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Autenticación mutua (mTLS)",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.177Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-11",
+    "text": "¿Sobre qué protocolo de transporte se construye QUIC (y por tanto HTTP/3)?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "TCP",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "UDP",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "SCTP",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "ICMP",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.177Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-12",
+    "text": "¿Qué ventaja aporta el «0-RTT» de QUIC/HTTP3?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Reducir latencia en visitas frecuentes",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Multiplexar varias conexiones TCP",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Comprimir cabeceras HTTP",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Validar dominios más rápido",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.177Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-13",
+    "text": "¿Qué protocolo sustituyó a Telnet para ofrecer acceso remoto seguro?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "FTP",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "HTTP",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "IPSec",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "SSH",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.177Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-14",
+    "text": "¿Cuál de estos métodos de autenticación en SSH evita ataques de fuerza bruta?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Autenticación por contraseña",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Autenticación por clave pública",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Autenticación por Kerberos",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Autenticación por OTP",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.177Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-15",
+    "text": "¿Qué comando o protocolo de SSH se usa para transferir archivos de forma segura?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "HTTP",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "HTTPS",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "SFTP/SCP",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "FTP",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.177Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-16",
+    "text": "En IPSec, ¿qué modo protege únicamente la carga útil del paquete IP?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Modo transporte",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Modo túnel",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Modo mixto",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Modo seguro",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.177Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-17",
+    "text": "¿Qué componente de IPSec proporciona confidencialidad, autenticidad e integridad?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "AH (Authentication Header)",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "ESP (Encapsulating Security Payload)",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "IKE (Internet Key Exchange)",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "HMAC",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.177Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-18",
+    "text": "¿Cuál de estos protocolos VPN es moderno, eficiente y muy fácil de configurar?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "L2TP/IPSec",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "PPTP",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "OpenVPN",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "WireGuard",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.177Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-19",
+    "text": "¿Qué extensión añade TLS de forma negociada a protocolos como SMTP o IMAP?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "DTLS",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "mTLS",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "STARTTLS",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "QUIC",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.177Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-20",
+    "text": "¿En qué situación es especialmente útil mTLS (mutual TLS)?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Para comprimir datos en tránsito",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Cuando cliente y servidor deben autenticarse mutuamente (p. ej. APIs internas)",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Para tunelizar puertos TCP",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Para acelerar conexiones web públicas",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.177Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-21",
+    "text": "¿Cuál es la principal diferencia entre datos “en tránsito” y “en reposo”?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Se cifran mediante hardware vs. software",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "En tránsito se refiere a transmisión; en reposo a almacenamiento",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "En tránsito se almacenan en memoria; en reposo en disco",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "En reposo se cifran; en tránsito no",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.177Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-22",
+    "text": "¿TLS puede asegurar cualquier conexión TCP o solo HTTPS?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Solo conexiones HTTP",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Cualquier conexión TCP",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Solo conexiones FTP",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Solo conexiones SSH",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.177Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-23",
+    "text": "¿Qué protocolo cifra automáticamente las consultas DNS?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "HTTPS",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "TLS",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "DNS over HTTPS (DoH)",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "SSH",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.177Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-24",
+    "text": "¿Cuál es una ventaja de usar Cloudflare DNS 1.1.1.1?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Mayor ancho de banda",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Cifrado extremo a extremo",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Funciona sin Internet",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Privacidad y rapidez en resolución DNS",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.177Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-25",
+    "text": "¿Qué parte del tráfico web NO está protegida por HTTPS?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "URL completa",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Consulta DNS",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Cuerpo de la respuesta HTTP",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Cabeceras HTTP",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.177Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-26",
+    "text": "Según GDPR, ¿qué tipo de cifrado es obligatorio?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Cifrado en tránsito y en reposo",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Solo cifrado en reposo",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Solo cifrado simétrico",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Ninguno",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.177Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-27",
+    "text": "¿Por qué no se emiten certificados TLS válidos para localhost?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Porque localhost no es un dominio público",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Porque TLS no soporta IP",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Porque no hay autoridad que valide IP loopback",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Porque no existe el protocolo",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.177Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-28",
+    "text": "¿Qué servicio permite ocultar los datos de registro WHOIS de un dominio?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "DNSSEC",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Privacidad de WHOIS",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "SPF",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "CDN",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.177Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-29",
+    "text": "¿Cómo era el HTTP original de 1992?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Multiplexado y binario",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Texto plano y sin estado",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Basado en UDP",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Con cifrado integrado",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.177Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-30",
+    "text": "¿Por qué HTTP/1.1 era ineficiente para recursos múltiples?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "No soportaba GET",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "No soportaba cifrado",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "No podía enviar imágenes",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Requería handshake y conexión para cada recurso",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.177Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-31",
+    "text": "¿Qué técnica de SPDY reducía el número de conexiones simultáneas?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Multiplexación en una sola conexión",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Compresión de imagen",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Validación de certificados",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Autenticación mutua",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-32",
+    "text": "¿Qué funcionalidad de HTTP/2 permite enviar recursos antes de que el cliente los solicite?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "TLS 1.3",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Server Push",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "DNS prefetch",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Header Compression",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-33",
+    "text": "¿Cuál es una mejora de control de flujo en HTTP/2?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Eliminación de TLS",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Compresión de datos",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Priorización de streams",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Encapsulación de paquetes",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-34",
+    "text": "¿Qué característica de HTTP/2 ayuda a mitigar ataques DDoS basados en múltiples handshakes?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Cifrado simétrico",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Conexión única multiplexada",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Uso de UDP",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Validación de cliente",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-35",
+    "text": "¿Qué es QUIC?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Una implementación de TLS sobre TCP",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Un protocolo de transporte sobre UDP integrado con TLS 1.3",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Un protocolo de enlace de datos",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Un estándar de WHOIS",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-36",
+    "text": "¿Cuál es la ventaja de QUIC respecto a TCP en cuanto al bloqueo de cabecera?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Elimina head-of-line blocking",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Elimina cifrado",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Aumenta la latencia",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Reduce cabeceras HTTP",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-37",
+    "text": "¿Qué permite la característica 0-RTT de QUIC?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Autenticación mutua",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Compresión de TLS",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Reanudar sesiones sin handshake completo",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Priorizar streams",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-38",
+    "text": "¿Qué protocolo remoto inseguro fue reemplazado por SSH?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "HTTP",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Telnet",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "FTP",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "SMTP",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-39",
+    "text": "¿Qué algoritmo simétrico suele usar SSH para proteger datos en sesión?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "RSA",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "AES",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "HMAC",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "SHA-256",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-40",
+    "text": "En SSH, ¿qué garantiza la integridad de los mensajes?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "AES",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "RSA",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "HMAC",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "UDP",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-41",
+    "text": "¿Qué opción de SSH permite redirigir el puerto local a un puerto remoto de forma segura?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Túnel de puertos",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "SCP",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "SFTP",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "FTP",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-42",
+    "text": "¿Cuál de estos NO es un modo de funcionamiento de IPSec?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Transporte",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Túnel",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Modo mixto",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Estático",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-43",
+    "text": "¿Qué componente de IPSec NO ofrece confidencialidad?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "ESP",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "AH",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "HMAC",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "IKE",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-44",
+    "text": "¿Cuál es una característica clave de WireGuard frente a OpenVPN?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Usa PPTP",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Requiere Java",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Configuración más sencilla y ligero",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Opera en modo túnel",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-45",
+    "text": "¿Cuál de estos se define como DTLS?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "TLS sobre TCP",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "HTTP seguro",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "TLS adaptado para UDP",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "SSH alternativo",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-46",
+    "text": "¿Para qué se usa STARTTLS?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Cifrar UDP",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Sustituir SSH",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Protocolo VPN",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Añadir TLS a SMTP/IMAP/POP3",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-47",
+    "text": "¿Qué riesgo existe al usar STARTTLS sin configuración estricta?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Demora alta",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Ataque de degradación (downgrade)",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Pérdida de datos",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Bloqueo de DNS",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-48",
+    "text": "¿Qué autenticación requiere mTLS que no exige TLS tradicional?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Certificado del cliente",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Cifrado simétrico",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Compresión de datos",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Multiplexación",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-49",
+    "text": "¿Qué biblioteca de Go incluye soporte experimental para HTTP/3 (QUIC)?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "net/http estándar",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "crypto/tls",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "ssh",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "quic-go",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-50",
+    "text": "¿Qué tipo de sistemas heredados suelen impedir actualizar protocolos de seguridad en empresas?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Sistemas Linux modernos",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Navegadores Chrome",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Máquinas virtuales con Windows 7 y Java antiguo",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Smartphones iOS",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-51",
+    "text": "¿Cuál de las siguientes fases NO forma parte del handshake inicial de TLS?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Negociación de algoritmos criptográficos",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Intercambio y validación de certificados",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Generación de clave simétrica",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Compresión de cabeceras HTTP",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-52",
+    "text": "¿Qué propiedad garantiza que una sesión TLS pasada no pueda comprometerse si la clave privada del servidor se expone posteriormente?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Reanudación de sesión",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "HMAC",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Perfect Forward Secrecy",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Renegociación",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-53",
+    "text": "¿Qué mecanismo de reanudación de sesión TLS permite evitar un handshake completo?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Renegociación",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Session ID o Session Ticket",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Cipher Suite",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "OCSP stapling",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-54",
+    "text": "¿Qué algoritmo asimétrico se usa comúnmente en el handshake TLS para intercambiar la clave premaster?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "RSA",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "AES",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "HMAC",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "ChaCha20",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-55",
+    "text": "¿Cuál de estas curvas elípticas es frecuentemente utilizada en TLS?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "secp256k1",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "X25519",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Curve25519",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "P-521",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-56",
+    "text": "¿Qué header de seguridad obliga al navegador a usar siempre HTTPS tras la primera visita?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "X-Frame-Options",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Content-Security-Policy",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Strict-Transport-Security",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "X-XSS-Protection",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-57",
+    "text": "¿Qué protocolo sustituyó oficialmente a SSL 3.0?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "TLS 1.0",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "TLS 1.2",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "TLS 1.3",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "DTLS",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-58",
+    "text": "¿Qué ataque explota la compresión en TLS para filtrar datos sensibles?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Heartbleed",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "CRIME",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "BEAST",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "POODLE",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-59",
+    "text": "¿Cuál es la finalidad principal de HTTPS?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Asegurar la comunicación HTTP mediante TLS",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Acelerar la descarga de recursos",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Autenticar clientes",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Comprimir respuestas",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-60",
+    "text": "¿Qué validación de certificado muestra solo el candado sin detalles de empresa?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Domain Validation (DV)",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Organization Validation (OV)",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Extended Validation (EV)",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Certificate Transparency",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-61",
+    "text": "¿Qué característica de HSTS mejora la seguridad de HTTPS?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Permite downgrade attacks",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Fuerza HTTPS durante un periodo definido",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Comprime cabeceras HTTP",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Multiplexa conexiones",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-62",
+    "text": "¿Qué protocolo ayuda a comprobar la revocación de certificados en tiempo real?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "CRL",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "DNSSEC",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "OCSP",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "HTTP/2",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-63",
+    "text": "¿Qué header se usa para especificar un pinning de certificado?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "X-Content-Type-Options",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Public-Key-Pins",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "X-Powered-By",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "X-Frame-Options",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-64",
+    "text": "¿Qué estándar recomienda evitar HPKP debido a riesgos de bloqueo accidental?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "RFC 9239",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "RFC 5246",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "RFC 2818",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "RFC 7540",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-65",
+    "text": "¿Qué cabecera CSP sirve para mitigar ataques de inyección de scripts?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Content-Security-Policy",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "X-Content-Type-Options",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "HSTS",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "HPKP",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-66",
+    "text": "¿Qué flag de cookie refuerza la seguridad en HTTPS?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Secure flag",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "HttpOnly",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "SameSite",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Path",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-67",
+    "text": "¿Qué archivo contiene la petición para emitir un certificado TLS?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "CSR (Certificate Signing Request)",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "CRT",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "PEM",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "PFX",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-68",
+    "text": "¿Qué mecanismo permite comprobar si un certificado ha sido revocado sin descargar toda la lista?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "CRL",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "HSTS",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "OCSP",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "HPKP",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-69",
+    "text": "¿Qué nivel de autoridad emite certificados intermedios en una PKI?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Intermediate CA",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Root CA",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "End-entity",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "OCSP responder",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-70",
+    "text": "¿Qué técnica aumenta la seguridad haciendo coincidir el certificado esperado con uno presentado?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Certificate pinning",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "DNSSEC",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "OCSP stapling",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Certificate revocation",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-71",
+    "text": "¿Cuál es la función de un CRL?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Listar certificados revocados",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Confirmar validez de dominios",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Comprimir certificados",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Intercambiar claves simétricas",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-72",
+    "text": "¿Qué formato binario se usa comúnmente para almacenar certificados y claves?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "DER",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "PKCS#12",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "PEM",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "CSR",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-73",
+    "text": "¿Cuál es el periodo máximo recomendado para la vigencia de un certificado DV en navegadores modernos?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "398 días",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "2 años",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "5 años",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "10 años",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-74",
+    "text": "¿Qué foro define directrices para algoritmos en certificados TLS?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "CA/B Forum",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Mozilla",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "IETF",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Cloudflare",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-75",
+    "text": "¿Qué técnica comprime cabeceras HTTP en HTTP/2?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "HPACK",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "GZIP de cuerpo",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Brotli",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Deflate de SSL",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-76",
+    "text": "¿Qué funcionalidad permite a HTTP/2 priorizar recursos según necesidad?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Priorización de streams",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "DNS prefetch",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "OCSP Stapling",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Public Key Pinning",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-77",
+    "text": "¿Cuál es un beneficio de Server Push en HTTP/2?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Envía recursos sin solicitud explícita",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Elimina TLS",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Evita handshake",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Acelera DNS",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-78",
+    "text": "¿Cómo llama HTTP/2 a la apertura de nuevos canales de datos dentro de una conexión?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Streams",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Channels",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Threads",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Multiplex",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-79",
+    "text": "¿Qué puerto estándar usa HTTP/2 con cifrado?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "443",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "80",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "8080",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "8443",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-80",
+    "text": "¿Qué ataque explota cabeceras comprimidas en HTTP/2?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "BREACH",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "BEAST",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "POODLE",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Heartbleed",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-81",
+    "text": "¿Qué mecanismo permite la multiplexación de peticiones HTTP/2?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Una única conexión TCP multiplexada por streams",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Múltiples conexiones TCP",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "UDP",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "SCTP",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-82",
+    "text": "¿HTTP/2 obliga a usar TLS en todas las implementaciones?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Recomendado pero no obligado por especificación",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Sí, siempre",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "No, nunca",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Solo en servidores Google",
+        "isCorrect": false
+      },
+      {
+        "id": "e",
+        "text": "QUIC y HTTP/3 (8 preguntas)",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-83",
+    "text": "¿Qué transporte usa QUIC para enviar datagramas?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "UDP",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "TCP",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "SCTP",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "ICMP",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-84",
+    "text": "¿Qué versión de TLS usa QUIC de forma nativa?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "TLS 1.3",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "TLS 1.2",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "SSL 3.0",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "DTLS",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-85",
+    "text": "¿Qué beneficio aporta el 0-RTT en QUIC/HTTP 3?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Inicio rápido sin handshake completo",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Compresión de cabeceras",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Multiplexación",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Validación OCSP",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-86",
+    "text": "¿Cuál es un riesgo asociado al uso de 0-RTT?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Ataques replay",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Falta de integridad",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Latencia alta",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "DDoS",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-87",
+    "text": "¿Qué funcionalidad de QUIC mejora el cambio entre Wi-Fi y datos móviles?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Roaming sin perder conexión",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Compresión de SSL",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Multiplex en TCP",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Mantenimiento de conexión con cambio de IP",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-88",
+    "text": "¿Qué problema de TCP intenta resolver QUIC?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Head-of-Line blocking",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Ataques DDoS",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Revocación de certificados",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Pérdida de DNS",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-89",
+    "text": "¿Qué RFC define QUIC?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "RFC 9000",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "RFC 7540",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "RFC 5246",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "RFC 3962",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-90",
+    "text": "¿Qué servidor web requiere módulo adicional para HTTP 3?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "NGINX/opcional módulo",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "IIS",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Lighttpd",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Caddy",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-91",
+    "text": "¿Qué puerto estándar utiliza SSH?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "22",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "21",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "23",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "80",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-92",
+    "text": "¿Qué protocolo inseguro reemplazó SSH por seguridad?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Telnet",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "FTP",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "HTTP",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "POP3",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-93",
+    "text": "¿Cuál de estos métodos de autenticación SSH es más seguro?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Clave pública",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Challenge-response",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Kerberos",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Usuario/contraseña",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-94",
+    "text": "¿Qué comando SSH copia archivos de forma segura?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "scp",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "ftp",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "sftp",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "rsync",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-95",
+    "text": "¿Qué característica de SSH permite redirigir puertos locales a remotos?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Túneles SSH",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Agent forwarding",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "X11 forwarding",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Multiplex",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-96",
+    "text": "¿Qué versión de SSH es la recomendada?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "SSH-2",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "SSH-1",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "SSH-1.99",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "SSH-3",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-97",
+    "text": "¿Qué cifrado simétrico puede usar SSH para proteger datos?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "AES",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "RSA",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "MD5",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "SHA-1",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-98",
+    "text": "¿Qué función permite usar la autenticación de agente en SSH (ssh-agent)?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Agent forwarding",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Port forwarding",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "X11 forwarding",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Host-based authentication",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-99",
+    "text": "¿Qué componente de IPSec proporciona autenticación e integridad sin confidencialidad?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "AH",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "ESP",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "IKE",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "NAT-T",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-100",
+    "text": "¿Qué modo de IPSec encapsula todo el paquete IP dentro de otro?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Modo túnel",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Modo transporte",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Modo mixto",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Modo fragmentado",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-101",
+    "text": "¿Qué protocolo se encarga del intercambio de claves en IPSec?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "IKE",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "HMAC",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "ESP",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "OSPF",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-102",
+    "text": "¿Qué puerto UDP usa IKEv2 por defecto?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "500",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "137",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "1701",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "4500",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-103",
+    "text": "¿Qué algoritmo de cifrado es típico en ESP?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "AES",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "MD5",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "HMAC",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "RSA",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-104",
+    "text": "¿Cuál es una aplicación común de IPSec?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "VPN site-to-site",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Control de acceso Wi-Fi",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Cifrado de correo electrónico",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Multiplexación HTTP",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-105",
+    "text": "¿Qué entidad representa una Security Association en IPSec?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "SA",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "CA",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "OCSP",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "CRL",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-106",
+    "text": "¿Qué RFC define AH y ESP?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "RFC 4301",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "RFC 2401",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "RFC 7540",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "RFC 9000",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-107",
+    "text": "¿Qué protocolo VPN moderno se basa en UDP y es fácil de configurar?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "WireGuard",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "OpenVPN",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "IPSec",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "L2TP",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-108",
+    "text": "¿Cuál de estos no es prevalente en VPN actuales?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Telnet",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "IPSec",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "OpenVPN",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "WireGuard",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-109",
+    "text": "¿Qué tecnología VPN ofrece roaming sin abrir puertos?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Tailscale",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "L2TP/IPSec",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "PPTP",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "SSTP",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-110",
+    "text": "¿Qué servicio VPN basado en WireGuard suelen bloquear algunas universidades?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Tailscale",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "OpenVPN",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "IPSec",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "PPTP",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-111",
+    "text": "¿Qué característica es clave en redes Zero Trust?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Acceso sin privilegios predeterminados",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Autenticación continua de cada conexión",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Uso de PPTP",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Uso de HTTP",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-112",
+    "text": "¿Qué protocolo VPN obsoleto es fácil de romper?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "PPTP",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "IKEv2",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "SSTP",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "WireGuard",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-113",
+    "text": "¿Qué factor geográfico puede engañar la localización de una VPN?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El ISP asignado IP",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "El certificado TLS",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "El encryption cipher",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "La compresión HTTP",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-114",
+    "text": "¿Cuál es un beneficio de usar un VPN en Wi-Fi pública?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Proteger tráfico DNS y TCP",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Acelerar HTTP/2",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Multiplexar conexiones",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Validar certificados",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-115",
+    "text": "¿Qué variante de TLS funciona sobre UDP?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "DTLS",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "SSL",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "HTTPS",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "QUIC",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-116",
+    "text": "¿Para qué se usa principalmente DTLS?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Aplicaciones en tiempo real (VoIP, WebRTC)",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Conexiones HTTP seguras",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Transferir archivos grandes",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Gestión de certificados",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-117",
+    "text": "¿Qué característica de DTLS ayuda con la pérdida de paquetes?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Tolerancia al desorden",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Multiplexación",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Retransmisión implícita",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Cifrado simétrico",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-118",
+    "text": "¿Qué protocolo de videoconferencia utiliza DTLS?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "WebRTC",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "SIP",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "FTP",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "HTTP/3",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-119",
+    "text": "¿Cómo maneja DTLS la falta de conexión orientada?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Incluye secuencias y retransmisiones",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Usa TCP internamente",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Multiplexa streams",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Usa Wireshark",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-120",
+    "text": "¿DTLS puede implementar renegociación como TLS?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "No, tiene limitaciones",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Sí, de la misma forma",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Solo con TCP",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Nunca",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-121",
+    "text": "¿Qué header HTTP es irrelevante para DTLS?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Strict-Transport-Security",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Content-Type",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Transfer-Encoding",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Cache-Control",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-122",
+    "text": "¿Qué vulnerabilidad de TLS también puede afectar a DTLS?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "CRIME",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "BEAST",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "POODLE",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "DDoS",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-123",
+    "text": "¿Qué extensión añade TLS a protocolos de correo como SMTP?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "STARTTLS",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "SMTPS",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "DTLS",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "HTTPS",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-124",
+    "text": "¿Qué peligro conlleva usar STARTTLS mal configurado?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Ataque de degradación (downgrade)",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Replay attack",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "CRIME",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "HSTS mal configurado",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-125",
+    "text": "¿Cómo inicia un cliente la negociación STARTTLS?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Enviando comando STARTTLS",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Conectando al puerto 465 seguro",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Comando EHLO",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Descargando CRL",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-126",
+    "text": "¿Qué puerto estándar usa SMTP con STARTTLS?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "587",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "25",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "465",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "110",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-127",
+    "text": "¿Por qué STARTTLS se considera menos seguro que TLS implícito?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Permite ataque de degradación",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Usa UDP",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "No cifra cabeceras",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "No comprime datos",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-128",
+    "text": "¿Qué protocolo NO soporta STARTTLS?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "FTP",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "DNS",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "POP3",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "IMAP",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-129",
+    "text": "¿Qué mecanismo mitiga el downgrade en STARTTLS?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "MTA-STS",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "OCSP stapling",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "DNSSEC",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "HSTS for SMTP",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-130",
+    "text": "¿Qué puerto usa POP3 con STARTTLS?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "143",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "993",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "110",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "21",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-131",
+    "text": "¿Qué diferencia principal tiene mTLS respecto a TLS habitual?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Autenticación mutua de cliente y servidor",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Usa UDP",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Comprime datos mutuamente",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "No usa certificados",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-132",
+    "text": "¿Para qué se emplea mTLS en microservicios?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Asegurar comunicación bidireccional",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Acelerar HTTP",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Evitar CRL",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Renegociación",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-133",
+    "text": "¿Qué implicación tiene mTLS en gestión de certificados?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Requiere emitir certificados para clientes",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Debe revocar automáticamente",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Elimina OCSP",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Usa solo DV",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-134",
+    "text": "¿En qué capa opera mTLS?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Capa de transporte",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Capa de aplicación",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Capa de red",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Capa física",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-135",
+    "text": "¿Cuál es un uso típico de mTLS?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "APIs internas seguras",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Streaming multimedia",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "DNS recursivo",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Compresión de cabeceras",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-136",
+    "text": "¿Qué header HTTP es innecesario en mTLS?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "WWW-Authenticate",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Public-Key-Pins",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Strict-Transport-Security",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Content-Security-Policy",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-137",
+    "text": "¿Un cliente sin certificado válido en mTLS puede…?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Ser denegado acceso",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Leer datos",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Renegociar handshake",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Iniciar sesión",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-138",
+    "text": "¿Qué protocolo se combina con mTLS en arquitecturas Zero Trust?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "gRPC mutual TLS",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "SSH",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "STARTTLS",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "IPSec",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-139",
+    "text": "¿Qué extensión asegura la integridad de las respuestas DNS?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "DNSSEC",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "DoH",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "DoT",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "STARTTLS",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-140",
+    "text": "¿Qué puerto usa DoH normalmente?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "443",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "53",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "853",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "80",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-141",
+    "text": "¿Qué ventaja tiene DoT sobre DNS tradicional?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Cifrado de consultas DNS",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Mayor compatibilidad",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Opera en UDP",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Requiere certificados DV",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-142",
+    "text": "¿Qué protocolo DNS usa HTTP para transportar consultas?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "DoH",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "DNSSEC",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "QUIC",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "SPDY",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-143",
+    "text": "¿Qué aspecto NO cubre DNSSEC?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Cifrado de datos",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Integridad",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Autenticidad",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Latencia",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-144",
+    "text": "¿Qué servidor DNS gratuito implementa DoH?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "1.1.1.1",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "8.8.8.8",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "9.9.9.9",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "208.67.222.222",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-145",
+    "text": "¿Qué ataque falsifica respuestas DNS?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "DNS spoofing",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "CRIME",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "BEAST",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "XSS",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-146",
+    "text": "¿Qué beneficio aporta combinar DoH y HTTPS?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Privacidad completa en navegación",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Multiplexación",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Reducción de latencia",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Evita CRL",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-147",
+    "text": "¿Qué vulnerabilidad afectó a OpenSSL en 2014?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Heartbleed",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "POODLE",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "BEAST",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "CRIME",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-148",
+    "text": "¿Qué ataque explota el fallback forzado a SSL 3.0?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "POODLE",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "BREACH",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "BEAST",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "CRIME",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-149",
+    "text": "¿Qué mitigación aplica TLS para proteger contra BEAST?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Uso de GCM",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Eliminación de CBC",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "RC4 como fallback",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "DES",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-150",
+    "text": "¿Qué mejora de protocolo reduce la vulnerabilidad a DoS por handshakes?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "HTTP/2",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "SSH",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "DTLS",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "QUIC",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-151",
+    "text": "¿Qué ataque explota compresión TLS y HTTP/1.1?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "BREACH",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "CRIME",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "POODLE",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Heartbleed",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-152",
+    "text": "¿Qué característica de HTTP/3 dificulta inyección de paquetes?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Cifrado integrado y conexión única",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Compresión HPACK",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Dial UDP",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Uso de HTTP textual",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-153",
+    "text": "¿Contra qué vulnerabilidad TLS se introdujo encrypt-then-MAC?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "BEAST",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "CRIME",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Heartbleed",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "STARTTLS downgrade",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-154",
+    "text": "¿Qué herramienta permite analizar handshakes TLS?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Wireshark",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "curl",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "openssl s_client",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "dig",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-155",
+    "text": "En NGINX, ¿qué directiva define el archivo de certificado TLS?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "ssl_certificate",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "ssl_protocols",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "ssl_ciphers",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "ssl_prefer_server_ciphers",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-156",
+    "text": "En Apache, ¿qué módulo se habilita para HTTP/2?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "mod_http2",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "mod_ssl",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "mod_gnutls",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "mod_rewrite",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-157",
+    "text": "¿Qué comando permite probar la conexión TLS a un servidor?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "openssl s_client",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "ping",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "telnet",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "ssh",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-158",
+    "text": "¿Qué opción de openssl muestra la cadena de certificados?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "-showcerts",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "-verify",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "-issuer",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "-certinfo",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-159",
+    "text": "¿Qué herramienta automatiza certificados Let’s Encrypt?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Certbot",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Wireshark",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "OpenSSL",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Acme.sh",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-160",
+    "text": "Para habilitar OCSP stapling en NGINX, ¿qué directiva se usa?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "ssl_stapling",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "ssl_ocsp",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "ssl_handshake_timeout",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "ssl_session_cache",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-161",
+    "text": "¿Qué registro DNS se usa en el desafío DNS-01 de Let’s Encrypt?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "TXT",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "CNAME",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "A",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "MX",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-162",
+    "text": "¿Qué cabecera de seguridad se configura en Apache con Header always set?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Strict-Transport-Security",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Content-Security-Policy",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Public-Key-Pins",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "X-Frame-Options",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-163",
+    "text": "¿Qué paquete de Go implementa TLS en la biblioteca estándar?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "crypto/tls",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "net/http",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "net",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "encoding/pem",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-164",
+    "text": "¿Qué paquete externo ofrece soporte para HTTP/3 en Go?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "github.com/lucas-clemente/quic-go",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "http3",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "tls3",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "quic-go",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-165",
+    "text": "¿Cómo crea un cliente HTTP con TLS personalizado en Go?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "&http.Client{Transport: &http.Transport{TLSClientConfig: cfg}}",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "http.Client{TLSConfig: cfg}",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "tls.Dial",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "net.DialTLS",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-166",
+    "text": "¿Qué paquete de Go provee funcionalidades SSH?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "golang.org/x/crypto/ssh",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "net/ssh",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "crypto/ssh",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "ssh",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-167",
+    "text": "¿Qué función Go carga un par de certificado y clave del disco?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "tls.LoadX509KeyPair",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "tls.Config{}",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "os.Open",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "pem.Decode",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-168",
+    "text": "¿Qué método añade certificados CA a un pool en Go?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "certPool.AppendCertsFromPEM",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "x509.NewCertPool",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "tls.GenerateCA",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "net.Listen",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-169",
+    "text": "¿Qué función Go lee y decodifica un PEM del disco?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "ioutil.ReadFile + pem.Decode",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "tls.DecodePEM",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "os.ReadPEM",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "ioutil.ReadFile + tls.X509KeyPair",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  },
+  {
+    "id": "q-sds09-transportePreguntas-170",
+    "text": "¿Qué import no estándar añade HTTP/2 en Go?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "_ \"golang.org/x/net/http2\"",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "_ \"crypto/http2\"",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "_ \"net/http2\"",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "_ \"http2\"",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.178Z"
+  }
+]

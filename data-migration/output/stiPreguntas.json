@@ -1,0 +1,6005 @@
+[
+  {
+    "id": "q-stiPreguntas-1",
+    "text": "Cuando unas pocas empresas ofrecen básicamente el mismo bien, tendremos:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Monopolio",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Oligopolio",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Competencia monopolística",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Competencia perfecta",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.193Z"
+  },
+  {
+    "id": "q-stiPreguntas-2",
+    "text": "Los “staff” son dentro de la estructura organizativa de una empresa:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El personal que sirve de consulta y asesoramiento.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Las organizaciones de la empresa que aúnan la autoridad y la responsabilidad de forma compartida.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Las estructuras que se forman dentro de la empresa de manera temporal para llevar a cabo proyectos específicos.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Ninguna de las anteriores",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.193Z"
+  },
+  {
+    "id": "q-stiPreguntas-3",
+    "text": "¿Cuál de los siguientes criterios serían válidos para clasificar las empresas por su tamaño?:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El volumen de ventas y el número de trabajadores.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "El número de clientes y proveedores.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "El tamaño de la superficie sobre las que se encuentran sus instalaciones.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "El número de personas que invierten en capital.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.193Z"
+  },
+  {
+    "id": "q-stiPreguntas-4",
+    "text": "En una estructura organizativa empresarial matricial:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "No existen conflictos entre los gerentes funcionales y los de proyectos o productos.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Los empleados tienen dos jefes: un jefe de función y un jefe de proyecto o producto.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "El personal se distribuye por áreas funcionales y no por proyectos.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Ninguna de las anteriores.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.193Z"
+  },
+  {
+    "id": "q-stiPreguntas-5",
+    "text": "Si queremos un diseño organizativo en el que prime la cualificación y especialización de los trabajadores, estamos hablando de un:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Modelo numérico",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Modelo por tiempo",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Modelo por funciones",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Ninguna de las anteriores",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.193Z"
+  },
+  {
+    "id": "q-stiPreguntas-6",
+    "text": "La forma en que se registran legalmente las empresas depende:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Únicamente del número de personas que invierten en capital",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Únicamente de las responsabilidades que tengan los socios",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "De su actividad (industrial o de servicios)",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Ninguna de las anteriores",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.193Z"
+  },
+  {
+    "id": "q-stiPreguntas-7",
+    "text": "En el diseño organizativo moderno encontramos:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Estructuras lineales",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Estructuras funcional",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Estructuras matriciales.",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Todas las anteriores son correctas",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.193Z"
+  },
+  {
+    "id": "q-stiPreguntas-8",
+    "text": "El organigrama de una empresa:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Determina todas las actividades que se llevan a cabo en la empresa",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Determina todas las relaciones entre personas, grupos y departamentos",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Proporciona una visión estática de una organización",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Ninguna de las anteriores",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.193Z"
+  },
+  {
+    "id": "q-stiPreguntas-9",
+    "text": "Una empresa con 20 trabajadores y una facturación de 12 millones de euros que pertenece al cien por cien a una gran empresaes una:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Pequeña empresa",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Mediana empresa",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Gran empresa",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Ninguna de las anteriores",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.193Z"
+  },
+  {
+    "id": "q-stiPreguntas-10",
+    "text": "Una empresa con dos socios y con la responsabilidad limitada al capital que es de 5.000€ podrá ser:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Sociedad Limitada",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Sociedad Cooperativa",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Sociedad Civil",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Sociedad Anónima",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.193Z"
+  },
+  {
+    "id": "q-stiPreguntas-11",
+    "text": "Una empresa con 500 trabajadores y una facturación de 60 millones de euros es una:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Pequeña empresa",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Mediana empresa",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Gran empresa",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Ninguna de las anteriores",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.193Z"
+  },
+  {
+    "id": "q-stiPreguntas-12",
+    "text": "¿Qué estructura de organización no se usa en la empresa:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Matricial",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Funcional",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Jerarquica",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Orgánica",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.193Z"
+  },
+  {
+    "id": "q-stiPreguntas-13",
+    "text": "El Modelo Numérico de diseño organizativo esta basado en el numero de:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Procesos",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Personas",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Departamentos",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Funciones",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.193Z"
+  },
+  {
+    "id": "q-stiPreguntas-14",
+    "text": "Según Kotler (1996), la inteligencia de marketing es:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Toda la información interna de la empresa en cuanto a estrategias de marketing: publicidad, estudios de mercado, etc",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Información sobre el entorno empresarial: competidores, productos semejantes, etc",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Tanto la información interna de la empresa como la información externa.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Kotler sólo hace referencia a información interna de marketing y a comunicaciones de marketing que fluyen de dentro de la empresa al entorno.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.193Z"
+  },
+  {
+    "id": "q-stiPreguntas-15",
+    "text": "El método MRP II:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Tiene en cuenta únicamente la planificación de materiales de producción.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Tiene en cuenta tanto las necesidades de materiales de producción como la de personal y maquinaria necesarios.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Establece un punto de reorden para mantener unos niveles mínimos de inventario.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Significa Minimal Requirements Planning",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.193Z"
+  },
+  {
+    "id": "q-stiPreguntas-16",
+    "text": "El control de inventarios es realizado por:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Los sistemas de trabajo del conocimiento",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Los sistema de información gerencial",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Los sistemas de apoyo a toma de decisiones",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Los sistemas de procesamiento de transacciones",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.193Z"
+  },
+  {
+    "id": "q-stiPreguntas-17",
+    "text": "Según Laudon y Laudon (2004) los niveles organizativos de la empresa están constituidos por:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Nivel estratégico, nivel del conocimiento, nivel administrativo y nivel operativo.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Nivel funcional, nivel operacional y nivel directivo.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Nivel financiero, nivel de marketing, nivel de producción y nivel de recursos humanos.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Ninguna de las anteriores.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.193Z"
+  },
+  {
+    "id": "q-stiPreguntas-18",
+    "text": "El subsistema de entrada de Inteligencia de Recursos Humanos:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Obtiene datos de carácter personal de los empleados (nombre, dirección, etc).",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Obtiene información en relación con los trabajadores y los puestos de trabajo ocupados hasta el momento para estudiar futuros ascensos o detectar habilidades.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Recopila información en relación a leyes de contratación, bolsas de trabajo, etc.",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Obtiene los datos de tipo financiero de los empleados (salario, impuestos, etc.)",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.193Z"
+  },
+  {
+    "id": "q-stiPreguntas-19",
+    "text": "En el proceso de desarrollo de un Sistema de Información:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Existen 3 etapas: Análisis de sistemas, diseño de sistemas e implementación.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "En la etapa de Análisis de sistemas se estudia el diseño físico.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "En la etapa de Implementación únicamente se realiza la implementación del sistema",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Ninguna de las anteriores",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.193Z"
+  },
+  {
+    "id": "q-stiPreguntas-20",
+    "text": "En el desarrollo de un Sistema de Información:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Los usuarios finales no deben estar implicados",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "No es necesario estudiar el sistema actual, únicamente se deben estudiar los requerimientos de los usuarios para proponer una solución a los problemas",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Una vez diseñada e implementada la solución escogida, se debe evaluar el impacto y en su caso, refinar dicha solución",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Ninguna de las anteriores",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.193Z"
+  },
+  {
+    "id": "q-stiPreguntas-21",
+    "text": "En una empresa:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Para cada nivel jerárquico existen diferentes sistemas de información",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Entre los sistemas de información para directivos encontramos los siguientes: ROP, MRP y MRPII",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Los sistemas de información se clasifican en función del número de usuarios",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Ninguna de las anteriores",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.193Z"
+  },
+  {
+    "id": "q-stiPreguntas-22",
+    "text": "El responsible de la planificación, supervisión y desarrollo de un sistema es el:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Propietario del Sistema",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Análista del Sistema",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Diseñador del sistema",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Project manager",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.193Z"
+  },
+  {
+    "id": "q-stiPreguntas-23",
+    "text": "¿Qué fase no corresponde al desarrollo de un sistema?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Análisis",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Supervisión",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Diseño",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Implementación",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.193Z"
+  },
+  {
+    "id": "q-stiPreguntas-24",
+    "text": "¿Qué nivel organizativo no es definido por Laudon y Laudon?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Operativo",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Estratégico",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Técnico",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Administrativo",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.193Z"
+  },
+  {
+    "id": "q-stiPreguntas-25",
+    "text": "El concepto “La Empresa forma parte de un sistema más amplio con el que intercambia bienes, servicios e información” es el de:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Organización matricial",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Cadena de valor extendida",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Alinación objetivos estratégico.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Ninguna de las anteriores",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.193Z"
+  },
+  {
+    "id": "q-stiPreguntas-26",
+    "text": "Un Sistema de Informacion debe de ser considerado:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Un gasto necesario para que la empresa tenga una imagen de eficiencia.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Como una inversión de capital, igual que con otros activos.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Los componetes de informática de la empresa.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Ninguna de las anteriores",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.193Z"
+  },
+  {
+    "id": "q-stiPreguntas-27",
+    "text": "En el desarrollo de un Sistema de Información hay que tener en cuenta:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Los usuarios finales no deben estar implicados",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "No es necesario estudiar el sistema actual, únicamente se deben estudiar los requerimientos de los usuarios para proponer una solución a los problemas",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Una vez diseñada e implementada la solución escogida, se debe evaluar el impacto y en su caso, refinar dicha solución",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Ninguna de las anteriores",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.193Z"
+  },
+  {
+    "id": "q-stiPreguntas-28",
+    "text": "Persona que utilizan los SI de forma regular para capturar, introducir, validar, transformar y almacenar datos e información:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Propietario del Sistema",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Analista del Sistema",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Diseñador del sistema",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Usuario del Sistema",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.193Z"
+  },
+  {
+    "id": "q-stiPreguntas-29",
+    "text": "El método MRP II:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Tiene en cuenta únicamente la planificación de materiales de producción.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Tiene en cuenta tanto las necesidades de materiales de producción como la de personal y maquinaria necesarios.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Establece un punto de reorden para mantener unos niveles mínimos de inventario.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Significa Minimal Requirements Planning",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.193Z"
+  },
+  {
+    "id": "q-stiPreguntas-30",
+    "text": "Los componentes de un SI son:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Entrada, Transformación y Salida",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Objetivos, Datos y Procesos",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Personas, Datos y Procesos",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Personas, Datos, Procesos y Tecnología",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.193Z"
+  },
+  {
+    "id": "q-stiPreguntas-31",
+    "text": "Cual de estos principios no corresponde al desarrollo de un SI:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Implicar a los usuarios del sistema",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Documentar",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Dividir los problemas y resolverlos uno a uno",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Ninguno de los anteriores",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.193Z"
+  },
+  {
+    "id": "q-stiPreguntas-32",
+    "text": "¿Qué modelo de gestión permite agrupar las actividades de una empresa según la secuencia lógica en la cual se ejecutan?:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Gestión por departamentos",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Gestión por producción.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Gestión por procesos.",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Ninguna de las anteriores",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.193Z"
+  },
+  {
+    "id": "q-stiPreguntas-33",
+    "text": "La acción que se realiza en una empresa y se responsabiliza un empleado es:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El Proceso",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "La Actividad",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "La Secuencia",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "La Tarea",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.193Z"
+  },
+  {
+    "id": "q-stiPreguntas-34",
+    "text": "Cual no es un objetivo de la gestión por procesos:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Controlar el trabajo de los departamentos.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Comprender como las entradas se transforman en salidas y como la información une a las diferentes actividades",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Obtener una orientación del negocio hacia el cliente y sus necesidades",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Dar una visión sistemática del negocio.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.193Z"
+  },
+  {
+    "id": "q-stiPreguntas-35",
+    "text": "Cual no es un componte básico en un proceso:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Inputs.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Outputs.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Programación.",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Sistema de control.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.193Z"
+  },
+  {
+    "id": "q-stiPreguntas-36",
+    "text": "En un diagrama de Flujo de datos, los datos intermedios los guardamos en:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El Diccionario de Datos",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Los Almacenes de Datos",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Los Procesos",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Ninguna de las anteriores",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.193Z"
+  },
+  {
+    "id": "q-stiPreguntas-37",
+    "text": "En una gestión por procesos el sistema de valor:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Son todas las actividades de la empresa",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Es todo el conjunto de procesos de la empresa",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Son solamente las actividades que reportan beneficios a la empresa",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Ninguna de las anteriores",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.193Z"
+  },
+  {
+    "id": "q-stiPreguntas-38",
+    "text": "Los problemas en una organización funcional surgen debido a que:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "La información de un área puede no ser trasladable a otra",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Las actividades se pueden realizar de forma fragmentada",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Los departamentos pueden tener visiones distintas de una misma actividad",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Todas son ciertas",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.193Z"
+  },
+  {
+    "id": "q-stiPreguntas-39",
+    "text": "El análisis estructurado:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Define el software y hardware necesario para modelar los procesos de la empresa",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Utiliza técnicas orientadas a objetos para definir los procesos",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Asegura que cada empleado realice sus tareas de forma correcta",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Determina la secuencia y los procedimientos de trabajo para un proceso",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.193Z"
+  },
+  {
+    "id": "q-stiPreguntas-40",
+    "text": "En el análisis estructurado utilizando diagramas de flujos de datos el diseño es:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Ascendente",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Descendente",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "En ambas direcciones",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Indistinto",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.193Z"
+  },
+  {
+    "id": "q-stiPreguntas-41",
+    "text": "¿Cuál no es un elemento básico de un proceso?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Sistema de control",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Programación",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Entradas",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Salidas",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.193Z"
+  },
+  {
+    "id": "q-stiPreguntas-42",
+    "text": "Los componentes de un SI son:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Entrada, Transformación y Salida",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Objetivos, Datos y Procesos",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Personas, Datos y Procesos",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Personas, Datos, Procesos y Tecnología",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.193Z"
+  },
+  {
+    "id": "q-stiPreguntas-43",
+    "text": "Cual de estos principios no corresponde al desarrollo de un SI:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Implicar a los usuarios del sistema",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Documentar",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Dividir los problemas y resolverlos uno a uno",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Ninguno de los anteriores",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.193Z"
+  },
+  {
+    "id": "q-stiPreguntas-44",
+    "text": "¿Cuál de estas no es una ventaja de la Gestión por Procesos?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Eliminar actividades sin valor añadido",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Reducir los costes",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Definir con precisión la cadena de mando",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Mejorar la calidad",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.193Z"
+  },
+  {
+    "id": "q-stiPreguntas-45",
+    "text": "El análisis estructurado no asegura que las actividades de un proceso se realicen:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Lo más rápidamente posible",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "De la forma correcta",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Por las personas adecuadas",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "En el orden correcto",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.193Z"
+  },
+  {
+    "id": "q-stiPreguntas-46",
+    "text": "A la hora de realizar la mejora de procesos, la Reingeniería (BPI):",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Realiza pequeñas modificaciones procesos",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Realiza una mejora gradual de los procesos",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Realiza modificaciones profundas y los procesos ya definidos se tiran a la basura",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Ninguna de las anteriores",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.193Z"
+  },
+  {
+    "id": "q-stiPreguntas-47",
+    "text": "En BPM se establece:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Como funciona la información",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Qué es lo que se hace en la empresa",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Lo que genera beneficio en el negocio",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Lo que deben de hacer los gestores del negocio",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.193Z"
+  },
+  {
+    "id": "q-stiPreguntas-48",
+    "text": "¿Qué modelo de gestión permite agrupar las actividades de una empresa según la secuencia lógica en la cual se ejecutan?:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Gestión por departamentos",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Gestión por producción.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Gestión por procesos.",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Ninguna de las anteriores.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.193Z"
+  },
+  {
+    "id": "q-stiPreguntas-49",
+    "text": "La acción que se realiza en una empresa y se responsabiliza un empleado es:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El Proceso",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "La Actividad",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "La Secuencia",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "La Tarea",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.193Z"
+  },
+  {
+    "id": "q-stiPreguntas-50",
+    "text": "Cual no es un objetivo de la gestión por procesos:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Controlar el trabajo de los departamentos.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Comprender como las entradas se transforman en salidas y como la información une a las diferentes actividades",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Obtener una orientación del negocio hacia el cliente y sus necesidades",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Dar una visión sistemática del negocio.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.193Z"
+  },
+  {
+    "id": "q-stiPreguntas-51",
+    "text": "Cual no es un componte básico en un proceso:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Inputs.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Outputs.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Programación.",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Sistema de control.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.193Z"
+  },
+  {
+    "id": "q-stiPreguntas-52",
+    "text": "En un diagrama de Flujo de datos, los datos intermedios los guardamos en:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El Diccionario de Datos",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Los Almacenes de Datos",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Los Procesos.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Ninguna de las anteriores.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.193Z"
+  },
+  {
+    "id": "q-stiPreguntas-53",
+    "text": "Los problemas en una organización funcional surgen debido a que:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "La información de un área puede no ser trasladable a otra",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Las actividades se pueden realizar de forma fragmentada",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Los departamentos pueden tener visiones distintas de una misma actividad",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Todas son ciertas",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.193Z"
+  },
+  {
+    "id": "q-stiPreguntas-54",
+    "text": "El análisis estructurado:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Define el software y hardware necesario para modelar los procesos de la empresa",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Utiliza técnicas orientadas a objetos para definir los procesos",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Asegura que cada empleado realice sus tareas de forma correcta",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Determina la secuencia y los procedimientos de trabajo para un proceso",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.193Z"
+  },
+  {
+    "id": "q-stiPreguntas-55",
+    "text": "En el análisis estructurado utilizando diagramas de flujos de datos el diseño es:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Ascendente",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Descendente",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "En ambas direcciones",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Indistinto.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.193Z"
+  },
+  {
+    "id": "q-stiPreguntas-56",
+    "text": "¿Cúal no es un elemento básico de un proceso?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Sistema de control",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Programación",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Entradas",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Salidas",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.193Z"
+  },
+  {
+    "id": "q-stiPreguntas-57",
+    "text": "Los componentes de un SI son:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Entrada, Transformación y Salida",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Objetivos, Datos y Procesos",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Personas, Datos y Procesos",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Personas, Datos, Procesos y Tecnología",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.193Z"
+  },
+  {
+    "id": "q-stiPreguntas-58",
+    "text": "Cual de estos principios no corresponde al desarrollo de un SI:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Implicar a los usuarios del sistema",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Documentar",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Dividir los problemas y resolverlos uno a uno",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Ninguno de los anteriores",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.193Z"
+  },
+  {
+    "id": "q-stiPreguntas-59",
+    "text": "¿Cual de estas no es una ventaja de la Gestión por Procesos?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Eliminar actividades sin valor añadido",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Reducir los costes",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Definir con precisión la cadena de mando",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Mejorar la calidad",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.193Z"
+  },
+  {
+    "id": "q-stiPreguntas-60",
+    "text": "El análisis estructurado no asegura que las actividades de un proceso se realicen:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Lo más rápidamente posible",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "De la forma correcta",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Por las personas adecuadas",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "En el orden correcto",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.193Z"
+  },
+  {
+    "id": "q-stiPreguntas-61",
+    "text": "A la hora de realizar la mejora de procesos, la Reingeniería (BPI)",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Realiza pequeñas modificaciones procesos",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Realiza una mejora gradual de los procesos",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Realiza modificaciones profundas y los procesos ya definidos se tiran a la basura",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Ninguna de las anteriores",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.193Z"
+  },
+  {
+    "id": "q-stiPreguntas-62",
+    "text": "En BPM se establece:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Como funciona la información",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Qué es lo que se hace en la empresa",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Lo que genera beneficio en el negocio",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Lo que deben de hacer los gestores del negocio",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.193Z"
+  },
+  {
+    "id": "q-stiPreguntas-63",
+    "text": "Para realizar una reparación de artículos rechazados en la producción utilizaríamos una orden de producción:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Estándar.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Especial.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "De desmontaje.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Ninguna de las anteriores.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.193Z"
+  },
+  {
+    "id": "q-stiPreguntas-64",
+    "text": "Un albarán es un documento que:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Que implica una orden de pago de materiales.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Que indica los artículos que se han entregado.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Que contiene una orden de fabricación",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Ninguno de los anteriores.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.193Z"
+  },
+  {
+    "id": "q-stiPreguntas-65",
+    "text": "Donde se indica qué productos finales hay que fabricar y en qué plazos terminarse.",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Programa Maestro de Producción.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Albarán",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Hoja de Pedido.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Orden de producción.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.193Z"
+  },
+  {
+    "id": "q-stiPreguntas-66",
+    "text": "Las listas de materiales del producto:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Son de 3 tipos: de ventas, de compras y de montaje",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "No se pueden alterar en la etapa de producción",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Se utilizan en las órdenes de fabricación estándar",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Ninguna de las anteriores es corrrecta.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.193Z"
+  },
+  {
+    "id": "q-stiPreguntas-67",
+    "text": "En un almacén el Disponible es:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Stock + Comprometido - Solicitado",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Stock + Comprometido + Solicitado",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Stock – Comprometido – Solicitado",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Stock – Comprometido + Solicitado",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.193Z"
+  },
+  {
+    "id": "q-stiPreguntas-68",
+    "text": "Al realizar un pedido de compra:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Aumenta el Stock",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Aumenta el Disponible",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Aumenta el Comprometido.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Ninguna de las anteriores.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.193Z"
+  },
+  {
+    "id": "q-stiPreguntas-69",
+    "text": "Las órdenes de fabricación:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "No se pueden crear manualmente o de forma automática a partir de recomendaciones MRP",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Si son de tipo especial envían el producto acabado al pendiente",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Si son de tipo estándar envían el producto acabado al pendiente",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Ninguna de las anteriores es correcta",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.193Z"
+  },
+  {
+    "id": "q-stiPreguntas-70",
+    "text": "Mediante la planificación de requerimientos de materiales:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Se consiguen niveles de stock máximos",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Se realizan pronósticos de demanda de los clientes",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Se elabora un Plan Maestro de Producción, el cual no puede ser modificado",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Se obtiene como única salida las órdenes de compras de material",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.193Z"
+  },
+  {
+    "id": "q-stiPreguntas-71",
+    "text": "Al realizar un pedido de compra",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Se aumenta el Stock",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Disminuye el solicitado",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Disminuye el disponible",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "No se modifica el comprometido",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.193Z"
+  },
+  {
+    "id": "q-stiPreguntas-72",
+    "text": "El programa maestro de producción se basa en:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Exclusivamente en los pedidos de los clientes",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Exclusivamente en las previsiones de demanda",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "En una ponderación de pedidos y previsiones de demanda",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Al 50% entre pedidos y previsiones.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.193Z"
+  },
+  {
+    "id": "q-stiPreguntas-73",
+    "text": "Una factura de compra en base a un albarán",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Aumenta el stock",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Disminuye la deuda con el proveedor",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Disminuye el stock",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Aumenta la deuda con el proveedor",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.193Z"
+  },
+  {
+    "id": "q-stiPreguntas-74",
+    "text": "En una orden de fabricación estándar cuando se pasa al estado de planificado el producto acabado.",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Aumenta el stock y diminuye el disponible.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Aumentan el solicitado y el disponible",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Disminuye el comprometido y el solicitado",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Disminuyen el solicitado y el stock",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-75",
+    "text": "¿En un proceso de compra a proveedores en la recepción de materiales con que documento se controla la entrega?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "La hoja de pedido",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "El albarán",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "La factura",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Ninguno de los anteriores",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-76",
+    "text": "Los tipos de listas de materiales son:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "De Venta, de Montaje y de Producción",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Estándar, Especiales y de Desmontaje",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Estándar, de Montaje y de Desmontaje",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "De Venta, Especiales y de Producción",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-77",
+    "text": "¿En un proceso de compra a proveedores en la recepción de materiales con que documento se controla la entrega?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "La hoja de pedido",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "El albarán",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "La factura",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Ninguno de los anteriores",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-78",
+    "text": "En un almacén el Disponible es:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Stock + Comprometido - Solicitado",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Stock + Comprometido + Solicitado",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Stock – Comprometido – Solicitado",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Stock – Comprometido + Solicitado",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-79",
+    "text": "Cual es el orden correcto en la secuencia de un proceso de venta.",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Oferta, Pedido, Factura, Albarán",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Pedido, Oferta, Factura, Albarán",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Oferta, Pedido, Albarán, Factura",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Oferta, Albarán, Pedido, Factura",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-80",
+    "text": "En una factura en base a un albarán:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Disminuye la cantidad en stock",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Aumenta la deuda de nuestro cliente",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Disminuye la cantidad comprometida",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Ninguna de las anteriores es correcta.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-81",
+    "text": "En una empresa:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Los clientes tienen establecido un límite de crédito fijo",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Los pedidos se realizan siempre en base a un presupuesto",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Los presupuestos, pedidos y albaranes son documentos obligatorios",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Ninguna de las anteriores es correcta.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-82",
+    "text": "Al crear un pedido en una venta en nuestro almacén:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El Disponible y el Comprometido aumentan.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "El Disponible y el Comprometido disminuyen.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "El Stock disminuye.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "El Stock permanece igual.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-83",
+    "text": "La autorización de servir un pedido se realiza.",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Lo antes posible",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Si todos los artículos están disponible.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Si se ha comprobado que el cliente no supera su límite de crédito.",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Si el cliente ha pagado los anteriores pedidos.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-84",
+    "text": "En el circuito de ventas:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Al crear un albarán la cantidad en stock y la cantidad de comprometido disminuyen",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Todos los documentos que intervienen en el proceso de ventas (oferta, pedido, albarán y factura), pueden hacer referencia a uno o varios documentos anteriores",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Al crear un pedido de venta disminuye el stock y la cantidad disponible",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Ninguna de las anteriores es correcta",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-85",
+    "text": "Que frase es correcta en relación a la numeración de las Facturas.",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "No es necesaria su numeración",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Una factura debe tener un número mayor que otra de fecha anterior.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Una factura puede tener un número menor que otra de fecha anterior.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Debe de tener el mismo número que el albarán.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-86",
+    "text": "Cual es el orden correcto en la secuencia en una Factura Proforma",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Oferta, Pedido, Factura Proforma, Albarán",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Pedido, Oferta, Factura Proforma, Albarán",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Oferta, Pedido, Albarán, Factura Proforma",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Oferta, Albarán, Pedido, Factura Proforma",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-87",
+    "text": "La regla del 20-80 permite:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Conocer a los mejores clientes.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Calcular el margen comercial en un facturación.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Prever la rotacción de los productos estrella",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Determinar el precio de un producto estrella",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-88",
+    "text": "Una factura proforma",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Sigue la numeración habitual del proceso de facturación.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Se realiza a clientes del mismo grupo empresarial.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Es un documento que sirve para justificar una inversión.",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Es equivalente a un albarán.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-89",
+    "text": "Cuando se entrega mercancía a un cliente se le debe de entregar:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Un Albarán.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Una Factura",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Un Recibo",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Un abono.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-90",
+    "text": "Un albarán de venta supone",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Aumentar el comprometido y disminuir el stock",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Aumentar el disponible y el comprometido",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Disminuir el comprometido y el stock",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Ninguna de las anteriores",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-91",
+    "text": "Al emitir una factura de venta en base a un pedido:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Disminuyen el stock y la cantidad comprometida",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Disminuye la cantidad comprometida",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Disminuye el stock",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Disminuye el stock y aumenta la cantidad comprometida",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-92",
+    "text": "¿Que documentos son opcionales en el proceso de venta?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Ofertas, pedidos y albaranes",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Ofertas y pedidos",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Pedidos y albaranes",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Ofertas y albaranes",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-93",
+    "text": "En qué consiste endosar un pagaré",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Pagarlo",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Presentarlo a descuento en el banco",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Transferirle el documento a un tercero para que lo cobre",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Invalidarlo",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-94",
+    "text": "¿Qué caso de los siguientes es un efecto impagado?:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Una Factura Proforma no aceptada.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Un cheque sin fondos.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Una letra presentada a descuento en el Banco y no pagada en su vencimiento.",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Ninguna de las anteriores.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-95",
+    "text": "Que documento de pago emite el acreedor y se puede descontar en el Banco:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Pagaré",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Letra de Cambio",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Cheque",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Recibo",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-96",
+    "text": "¿Qué característica es correcta en un cheque?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Se puede presentar a descuento",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Ofrece la máxima seguridad jurídica frente a un impagado",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "No se puede endosar",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Ninguna de las anteriores",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-97",
+    "text": "El Nivel de reclamación ante un impagado depende:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "De los días transcurridos desde el vencimiento del cobro.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Del crédito del cliente",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "De la cantidad de la deuda",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "De ninguno de los anteriores.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-98",
+    "text": "Cuando existen efectos impagados:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Si la entidad financiera nos ha adelantado el dinero y llegado el vencimiento el cliente no atiende el efecto, solamente tendremos que abonar el dinero adelantado por la entidad financiera",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Se puede recuperar la totalidad de la deuda, los gastos ocasionados por el impago y una cantidad extra en concepto de intereses",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Siempre es la entidad financiera la encargada de solicitar las cantidades impagadas al deudor",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Ninguna de las anteriores es correcta",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-99",
+    "text": "En relación a los pagarés podemos afirmar que:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Se pueden cobrar de forma inmediata como descuento de crédito en una entidad financiera",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Se debe esperar siempre a su vencimiento para proceder al cobro",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Es el acreedor el que emite el pagaré",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "No se pueden endosar",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-100",
+    "text": "Entre los tipos de documentos de cobro:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Los cheques tienen un librador (el que emite el cheque) y un librado (el que cobra el cheque)",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "La letra de cambio tiene un emisor (llamado también deudor) y un receptor (llamado también acreedor)",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "El recibo tiene un emisor (llamado también librador) y un receptor (llamado también beneficiario)",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Ninguna de las anteriores es correcta.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-101",
+    "text": "¿Que documento no se puede endosar?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Una letra de cambio",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Un pagaré",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Un recibo",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Un cheque",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-102",
+    "text": "¿Qué documento ofrece una mayor seguridad jurídica para reclamar",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Una letra de cambio",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Un pagaré",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Un recibo",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Un cheque",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-103",
+    "text": "Si un cliente no paga un efecto que hemos descontado en una línea de crédito a su vencimiento.",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El banco le reclamará el pago.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "El banco nos cargará el importe, los intereses y los gastos.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "El banco nos cargará el importe y los gastos",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "El banco nos cargará el importe",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-104",
+    "text": "Que medio de cobro permite un tratamiento mecanizado con el Banco",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Pagaré",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Letra de Cambio",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Cheque",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Recibo",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-105",
+    "text": "Si un cliente no paga un efecto que hemos descontado en una línea de crédito a su vencimiento.",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El banco le reclamará el pago.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "El banco nos cargará el importe, los intereses y los gastos.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "El banco nos cargará el importe y los gastos",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "El banco nos cargará el importe",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-106",
+    "text": "¿Que documento de pago no se puede descontar en la línea de crédito de la que disponga una empresa en un banco?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Pagare",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Letra de Cambio",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Cheque",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Ninguna de las anteriores",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-107",
+    "text": "¿Qué caso de los siguientes es un efecto impagado?:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Una Factura Proforma no aceptada.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Un cheque sin fondos.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Una letra presentada a descuento en el Banco y no pagada en su vencimiento.",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Ninguna de las anteriores",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-108",
+    "text": "En la Cuenta de Pérdidas y Ganancias los gastos e ingresos Financieros se calculan:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Antes de los gastos e ingresos de explotación.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Después de los gastos e ingresos extraordinarios.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Antes de los gastos e ingresos extraordinarios.",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "No se calculan en esta cuenta.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-109",
+    "text": "Un asiento en el Diario:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Puede tener un solo apunte.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "De fecha posterior puede tener un número más bajo que otro de fecha anterior.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Si es acreedor debe de tener el haber positivo.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "De fecha posterior debe tener un número mayor que otro de fecha anterior",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-110",
+    "text": "Las acciones propias aquellas que son propiedad de la empresa:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Forman parte del Inmovilizado.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Forman parte del Pasivo.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Forman parte del Disponible.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Ninguna de las anteriores es correcta.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-111",
+    "text": "¿Qué componente no forma parte del activo circulante?:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Existencias.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Realizable.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Inmovilizado",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Disponible.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-112",
+    "text": "Las patentes de una empresa forman parte de:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Inmovilizado material.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Inmovilizado inmaterial.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Existencias.",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Disponible.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-113",
+    "text": "El Inmovilizado pertenece:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Al Activo Circulante",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Al Pasivo Fijo",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Al Pasivo Circulante",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Al Activo Fijo",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-114",
+    "text": "La Caja forma parte del:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Realizable",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Disponible",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Activo fijo",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Pasivo fijo",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-115",
+    "text": "Para calcular los beneficios de explotación se utiliza:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Balance de Sumas y Saldos",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Balance de Situación",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Balance de Pérdidas y Ganancias",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Balance de Comprobación",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-116",
+    "text": "¿Qué componente no forma parte del activo circulante?:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Existencias.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Realizable.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Inmovilizado",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Disponible.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-117",
+    "text": "Las patentes de una empresa forman parte de:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Inmovilizado material.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Inmovilizado inmaterial.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Existencias.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Disponible.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-118",
+    "text": "En la Cuenta de Pérdidas y Ganancias los gastos e ingresos Financieros se calculan:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Antes de los gastos e ingresos de explotación.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Después de los gastos e ingresos extraordinarios.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Antes de los gastos e ingresos extraordinarios.",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "No se calculan en esta cuenta.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-119",
+    "text": "Las acciones propias aquellas que son propiedad de la empresa:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Forman parte del Inmovilizado.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Forman parte del Pasivo.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Forman parte del Disponible.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Ninguna de las anteriores es correcta",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-120",
+    "text": "Para calcular la situación patrimonial se utiliza el:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Balance de Sumas y Saldos",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Balance de Situación",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Balance de Pérdidas y Ganancias",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Balance de Comprobación",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-121",
+    "text": "En la Cuenta de Pérdidas y Ganancias los gastos e ingresos extraordinarios se calculan:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Despueses de los gastos e ingresos de explotación.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Después de los gastos e ingresos financieros.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Antes de los gastos e ingresos financieross.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "No se calculan",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-122",
+    "text": "Las cuentas de Activo:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Aumentan añadiendo en el debe y disminuyen añadiendo en el haber",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Aumentan añadiendo en el haber y disminuyen añadiendo en el debe",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Aumentan añadiendo en el haber y disminuyen disminuyendo en el debe",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Aumentan disminuyendo en el haber y disminuyen añadiendo en el deber",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-123",
+    "text": "Los descuentos sobre compras por pronto pago",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Son ingresos",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Son gastos",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Son existencias",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Son realizable",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-124",
+    "text": "Para calcular el balance de situación es necesario tener calculado",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Sólo el balance de sumas y saldos",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "El balance de perdidas y ganancias",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "El diario",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Ninguno de los anteriores",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-125",
+    "text": "Una disminución de las existencias generará:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Una disminución del pasivo, y pérdidas en la empresa",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Una disminución del activo, un aumento de la rotación y un aumento de la rentabilidad económica.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Una disminución del activo, una disminución de la rotación y una disminución de la rentabilidad económica.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Una disminución del pasivo, y ganancias en la empresa.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-126",
+    "text": "¿Qué es el apalancamiento?:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Ventas / Activo.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Activo / Recursos Propios.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Recursos Propios/Pasivo.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Margen/Activo.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-127",
+    "text": "Las Auditorías financieras:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Son realizadas por el personal que realiza la contabilidad.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Forman parte de los balances de la empresa",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Son realizadas por personal ajeno al que realiza la contabilidad.",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "No puede ser interna.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-128",
+    "text": "Si el Activo Fijo de una empresa es de 300.000€ y el Pasivo Fijo es de 400.000€, el Fondo de Maniobra será:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "-100.000€.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "700.000€.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "-700.000€.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "100.000€.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-129",
+    "text": "Si el fondo de maniobra de una empresa es -40.000€ la situación patrimonial de la empresa es:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "De estabilidad total.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "De suspensión de pagos.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "De estabilidad patrimonial.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "De tesorería estable.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-130",
+    "text": "Si FM es el Fondo de Maniobra y AC y PC son el activo y el pasivo circulante, qué ecuación es correcta:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "AC = PC + FM.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "FM = AC + PC",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "PC = AC + PC",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Ninguna de las anteriores es correcta",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-131",
+    "text": "¿Qué es la rotación?:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Ventas/Tiempo",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Activo/Ventas",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Ventas/Activo",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Beneficio/Ventas",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-132",
+    "text": "En una Auditoría qué acción no se realiza:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Se revisa la contabilización de los movimientos de la empresa",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Se corrigen los apuntes erróneos",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Se comprueba la documentación de esos movimientos",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Se comprueba el correcto funcionamiento del proceso contable",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-133",
+    "text": "Si el Activo Fijo de una empresa es de 300.000€ y el Pasivo Fijo es de 400.000€, el Fondo de Maniobra será:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "-100.000€.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "700.000€.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "-700.000€.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "100.000€.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-134",
+    "text": "Si el fondo de maniobra de una empresa es -40.000€ la situación patrimonial de la empresa es:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "De estabilidad total.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "De suspensión de pagos.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "De estabilidad patrimonial.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "De tesorería estable.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-135",
+    "text": "Una disminución de las existencias generará:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Una disminución del pasivo, y pérdidas en la empresa",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Una disminución del activo, un aumento de la rotación y un aumento de la rentabilidad económica.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Una disminución del activo, una disminución de la rotación y una disminución de la rentabilidad económica.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Una disminución del pasivo, y ganancias en la empresa.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-136",
+    "text": "¿Qué es el apalancamiento?:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Ventas / Activo",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Activo / Recursos Propios.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Recursos Propios/Pasivo.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Margen/Activo.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-137",
+    "text": "Las Auditorías financieras:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Son realizadas por el personal que realiza la contabilidad.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Forman parte de los balances de la empresa",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Son realizadas por personal ajeno al que realiza la contabilidad.",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "No puede ser interna.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-138",
+    "text": "Para calcular la situación patrimonial de la empresa se utiliza el:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Balance de Sumas y Saldos",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Balance de Perdidas y Ganancias",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Balance de Situación",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Balance de Comprobación",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-139",
+    "text": "El flujo de caja financiero se calcula",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Ingresos - gastos",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Beneficios - impuestos",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Cobros - pagos",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Ninguno de los anteriores",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-140",
+    "text": "¿Cómo se mide la capacidad de pago de las deudas a corto plazo con lo disponible en caja y bancos?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Ratio de Autonomía",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Ratio de Garantía",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Ratio de Calidad de la Deuda",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Ratio de Disponibilidad",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-141",
+    "text": "La rentabilidad financiera es:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Beneficio Neto / Recursos Propios",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Beneficio Neto / Ventas",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Ventas / Recursos Propios",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Ninguno de los anteriores",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-142",
+    "text": "El ratio que mide lo mismo que el fondo de maniobra es:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Solvencia",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Garantía",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Liquidez",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Tesorería",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-143",
+    "text": "El Tipo de Retención al IRPF en una nómina:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Es el mismo para cualquier trabajador.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Depende exclusivamente del sueldo anual.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Depende exclusivamente de la situación personal y familiar.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Ninguno de los anteriores.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-144",
+    "text": "Las bajas por enfermedad por contingencias comunes:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Se comunican cuando se produce el alta del trabajador.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Son abonadas por la mutualidad que haya suscrito la empresa.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Son abonadas por la seguridad social al trabajador.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Son abonadas por la empresa y se descuentan de los pagos a la Seguridad Social.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-145",
+    "text": "Los gastos por desplazamiento provisional de un trabajador:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Siempre cotizan a la Seguridad Social y al IRPF.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Nunca cotizan a Seguridad Social y al IRPF.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "No cotizan a Seguridad Social y al IRPF hasta una cierta cantidad.",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Cotizan a la Seguridad Social pero no al IRPF.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-146",
+    "text": "Las pagas extraordinarias:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "No se les aplica la retención del IRPF.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Se divide su importe entre la nómina de todos los meses para calcular las cuotas de la Seguridad Social",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Se divide su importe entre la nómina de todos los meses para calcular las retenciones del IRPF.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Están libres de cuotas de la Seguridad Social.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-147",
+    "text": "Los Grupos de Cotización a la Seguridad Social están relacionados:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Con la categoría profesional de los trabajadores.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Con el sueldo anual del trabajador.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Con el sueldo mensual.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Con el convenio colectivo.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-148",
+    "text": "La trasformación de contratos de formación en indefinidos",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Son obligatorios",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Pueden tener bonificaciones en la cuota a la Seguridad Social",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Están exentos de pagos del IRPF",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "No se puede realizar en ningún caso",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-149",
+    "text": "Los gastos de locomoción si se utilizan medios públicos",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Cotizan a la Seguridad social a partir de una determinada cantidad",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Cotizan a la Seguridad Social en su totalidad",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "No cotizan a la Seguridad Social pero sí al IRPF",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "No cotizan ni a la Seguridad Social ni al IRPF",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-150",
+    "text": "El boletín de liquidación de pagos a la Seguridad Social donde aparece lo correspondiente a cada uno de los trabajadores es el:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "TC0",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "TC1",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "TC2",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "TC3",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-151",
+    "text": "Las diatas por manutención",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Estan obligadas a cotizar a la Seguridad Social siempre y a partir de un valor diario al IRPF.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Estan obligadas a cotizar al IRPF siempre y a partir de un valor diario a la Seguridad Social .",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Estan obligadas a cotizar a la Seguridad Social y al IRPF a partir de un valor diario.",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Nunca estan obligadas a cotizar a la Seguridad Social y al IRP.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-152",
+    "text": "¿Qué concepto no se tiene en cuenta en el cálculo de la retención del IRPF?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "La categoría profesional.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "El sueldo bruto anual",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Las cargas familiares",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "El grado de discapacidad.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-153",
+    "text": "Durante una baja el trabajador",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Percibe el sueldo de la Seguridad Social",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "La empresa le paga una parte de su salario que después le es devuelto por la Seguridad Social",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "La empresa le paga una parte de su salario que se puede deducir de la cuota mensual a la Seguridad Social.",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "No percibe ningún salario.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-154",
+    "text": "Una crisis económica que crea una contracción en el Mercado de una empresa es una:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Debilidad.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Amenaza.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Fortaleza.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Oportunidad.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-155",
+    "text": "la empresa se enfrenta a amenazas externas sin las fortalezas internas necesarias para luchar contra la competencia de adoptar una estrategia:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Defensiva.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Ofensiva.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "De Supervivencia.",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "De Reorientación.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-156",
+    "text": "Un producto que ha alcanzado sus máximas ventas en los últimos años está en fase:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Emergente.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Crecimiento.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Madurez.",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Declive.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-157",
+    "text": "Si el V.A.N. de una inversión de 500.000 € empresa para un tipo de interés esperado del 15% a 5 años es de 3.000€, entonces:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El TIR > 15.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "El TIR < 15",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "El Pay Back es de 5 años.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "El TIR = 15.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-158",
+    "text": "El PAY BACK se alcanza cuando:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Cuando el TIR es cero.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Cuando se cumplen el año en que el VAN es cero para un tipo de interés del 10%.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Cuando se cumplen el año en que el VAN es cero para un tipo de interés del 0%.",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "En ninguno de los casos anteriores.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-159",
+    "text": "Para una empresa de fabricación de chupetes, el incremento de la población inmigante joven supondría en un análiss DAFO una:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Debilidad",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Amenaza",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Fortaleza",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Oportunidad",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-160",
+    "text": "Para una inversión a cinco años, si su TIR = 10 %, su Pay Back es:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Mayor de 5 %",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Mayor del 10 %",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Menor de 5 años",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Igual a 5 años",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-161",
+    "text": "Una buena imagen de marca supondría en un análiss DAFO una:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Debilidad",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Amenaza",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Fortaleza",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Oportunidad",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-162",
+    "text": "Una empresa basada en las Tecnologías de la Información y las Comunicaciones:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Necesita una gran inversión en Tecnología.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Con menos Activos puede hacer más ventas que un negocio tradicional.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Tiene un periodo corto de duración.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Ninguna de las anteriores es cierta.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-163",
+    "text": "¿Qué expresión no es correcta?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "B2C: Business to Consumer",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "B2B: Business to Business",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "C2C: Counting to Counting",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "A2A: Administration to Administration",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-164",
+    "text": "Una pasarela de pago:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Es un software que hay que programar específico para cada tienda virtual.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Es el único medio de pago en una tienda virtual.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "La tiene que proveer una entidad bancaria.",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Ninguna de las anteriores es cierta.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-165",
+    "text": "¿Qué es el NFC?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Es una conexión inalámbrica sin restricciones",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Es la Nueva Fiscalidad Comunitaria para el negocio electrónico",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Es la Nueva Forma de Comercio de las tiendas electrónicas.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Es una Conexión Inalámbrica por Próximidad.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-166",
+    "text": "Un mercado electrónico que reune agentes de seguros con las compañías de seguros es un:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Un B2B vertical",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Un B2B horizontal",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Un A2C vertical",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Un B2C horizontal",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-167",
+    "text": "El CRM",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Es el sistema de gestion de contenidos",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Es el sistema de gestión de relaciones con clientes",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Es el sistema de gestión de marketing relacional",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Es el sistema de gestión de recursos de almacén",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-168",
+    "text": "¿Cómo se puede comprobar con mayor seguridad si un mismo usuario vuelva a cargar una página web?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Con los logs del servidor",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Con las Cookies",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Con la IP del ordenador de lectura",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Con le Proxy utilizado",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-169",
+    "text": "Los anuncios vinculados al contenido de la página son:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Los Banners",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Layers",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Intersicial",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Publicidad contextual",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-170",
+    "text": "¿Qué sistema mide la contratación publicitaria a través del cual el anunciante paga cada vez que un usuario es conducido a su Web Site y se registra en este?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "CPM",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "CPC",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "CPL",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "CPA",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-171",
+    "text": "El método para crear campañas de marketing por palabra que nos permitan aparecer para las principales palabras clave es:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "CTR",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "CPC",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "SEO",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "SEM",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-172",
+    "text": "¿Qué es el Freemium",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Un modelo de nogocio",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Una tecnología para crear aplicaciones de móviles",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Un sistema de localización sin usar GPS",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Ninguno de los anteriores",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-173",
+    "text": "En el principio del principio 90-9-1 el 9 corresponde a",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Creadores",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Audiencia",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Productores",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Realizadores",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-174",
+    "text": "¿Qué tipo de mercado es el que trasladamos el negocio de un pais a otro?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Existentes.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Resegmentado",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Clon.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Nuevos.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-175",
+    "text": "¿Qué mide el apalancamiento?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "La escasa internacionalización de una empresa",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "El nivel de actividad de una empresa",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "El nivel de obsolescencia de una empresa",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "El nivel de endeudamiento de una empresa",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-176",
+    "text": "Si el V.A.N. de una inversión de 4.000.000 € para un tipo de interés esperado del 15% a 5 años es de 0€, entonces:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El TIR > 15",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "El TIR < 15.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "El Pay Back es de 5 años",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "El TIR = 15.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-177",
+    "text": "El método para aparecer en los primeros puestos de un buscador pagando para unas palabras clave es:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "SEO",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "SEM",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "CTR",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "CPC",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-178",
+    "text": "La tarifa de Primas de A.T. y E.P. (Accidentes de Trabajo y Enfermedades Profesionales) dependen:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El trabajador no tiene obligación de presentarlo lo hace el servicio médico.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Del número de bajas por enfermedad que se producen al mes",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "De la actividad profesional CNAE:",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Del número de trabajadores de la empresa",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-179",
+    "text": "Si el Pasivo Circulante de una empresa es de 600.000€ y el Activo Circulante es de 500.000€, el Fondo de Maniobra será:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "-100.000€.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "-1.100.000€.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "100.000€.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "1.100.000€.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-180",
+    "text": "Un nicho de mercado:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Es un grupo, o zona donde hay muchos clientes potenciales.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Es un grupo, o zona donde hay muchos competidores potenciales.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Es un grupo, o zona donde hay muchos trabajadores potenciales.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Es un grupo, o zona donde hay muchos proveedores potenciales.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-181",
+    "text": "Con qué actuación NO conseguiríamos que el fondo de maniobra de una empresa no sea negativo:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Vendiendo Activos",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Renegociando la deuda a corto plazo para pasarla a largo plazo.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Vendiendo existencias",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Ampliando Capital",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-182",
+    "text": "Si el fondo de maniobra de una empresa es 80.000€ y los recursospropios son de 5.000€ entonces la situación patrimonial de la empresa es:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "De estabilidad patrimonial.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "De quiebra",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "De estabilidad total.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "De suspensión de pagos.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-183",
+    "text": "Un mercado electrónico que reúne inmobiliarias con empresas que quieren alquilar locales es un:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Un A2C vertical.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Un B2B vertical.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Un B2C horizontal.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Un B2B horizontal.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-184",
+    "text": "Los gastos de locomoción en una nómina:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Tributan siempre.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Hay una cantidad exenta de tributación.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "No tributan nunca.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Ninguna de las otras tres es correcta.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-185",
+    "text": "Las deudas de los clientes de una empresa forman parte de:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Inmovilizado material",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Inmovilizado financiero",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Realizable",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Inmovilizado inmaterial",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-186",
+    "text": "¿Cuántos segmentos de clientes se pueden definir en el Biz model canvas?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "En el Biz model canvas, no se define los segmentos de clientes.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "En el Biz model canvas, se pueden definir varios segmentos de clientes.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "En el Biz model canvas, no es importante definir el segmento de cliente.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "En el Biz model canvas, solo se puede definir un segmento de clientes.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-187",
+    "text": "Las Debilidades en el análisis DAFO estudian:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Los aspectos del proyecto donde la competencia es inferior",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Los aspectos del proyecto donde la competencia es superior.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Los aspectos del proyecto donde puede darse una ventaja competitiva.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Los aspectos del proyecto donde la competencia tiene dificultades.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-188",
+    "text": "Cuando tenemos una baja por enfermedad profesional:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El trabajador tiene obligación de presentarlo cuando se reincorpora al trabajo.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "El trabajador tiene obligación de presentarlo en 24 horas y las empresas en 2 días.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "El trabajador no tiene obligación de presentarlo lo hace el servicio médico.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "El trabajador tiene obligación de presentarlo en 3 días y las empresas en 5 días.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-189",
+    "text": "Si el máximo Tipo de Retención al IRPF es del 43% para tramos superiores a los 53.407,20, en una nómina de 90.000 el tipo a aplicar sería:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "> 43%",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "< 43%",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "43 %",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Estaría exento de impuesto.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-190",
+    "text": "¿Qué apartado forma parte del Biz model canvas?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Facturación.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Inmovilizado.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Canales.",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Gestión usuarios.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-191",
+    "text": "Qué documento de pago se puede descontar en la línea de crédito de la que disponga una empresa en un Banco:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Factura aceptada en un Confirming.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Cheque barrado.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Factura Proforma",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Recibo con numeración especial.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-192",
+    "text": "¿Cúal es la actividad más básica en BPM?:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Las Tareas.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Las Secuencias.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Los Procesos.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Las Actividades.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-193",
+    "text": "Una empresa con 60 trabajadores y una facturación de 60 millones de euros es una:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Multinacional.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Gran empresa.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Mediana empresa.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Pequeña empresa.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-194",
+    "text": "¿Qué forma jurídica tiene la responsabilidad limitada?:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Empresario individual",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Sociedad Civil",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Comunidad de bienes",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Sociedad Anónima",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-195",
+    "text": "La regla 20-80:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El 80% de los clientes compran el 20% de los productos.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "El 20% de los productos son más baratos que el resto del 80%.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "El 80% de las ventas corresponden al 20% de los productos.",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "El 20% de los clientes suponen el 80% de las ventas.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-196",
+    "text": "¿qué documento es obligatorio en una venta?:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Una factura es un documento obligatorio para la contabilidad de la empresa.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Una albarán es un documento obligatorio en una venta directa.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Un pedido es un documento obligatorio para reclamar una devolución.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Un abono es un documento obligatorio en una venta al contado.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-197",
+    "text": "La lista de materiales se puede llamar:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Escandallo",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Elemento Padre.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Ninguno de los otros tres.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Orden de fabricación",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-198",
+    "text": "Si queremos conocer la situación de solvencia económico-financiera de una empresa en un momento concreto, tenemos que consultar:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Libro mayor.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "La cuenta de pérdidas y ganancias.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Balance de situación.",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Libro diario.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-199",
+    "text": "¿Qué componente forma parte del activo circulante?:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Reservas voluntarias.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Realizable.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Exigible.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Inmovilizado financiero.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-200",
+    "text": "¿Cúal es el valor contable de una empresa?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Los Activos Financieros.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "El realizable.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Los Recursos Propios.",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "El Beneficio",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-201",
+    "text": "Entre los tipos de documentos de cobro:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "La letra de cambio tiene un emisor (llamado también deudor) y un receptor (llamado también acreedor).",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Los cheques se pueden cobrar antes de esa la fecha que figura en el mismo.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Los cheques no se pueden cobrar antes de esa la fecha que figura en el mismo.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Los pagarés son iguales a los cheques.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-202",
+    "text": "¿Para que sirve una orden de fabricación?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Se utiliza para crear un artículo de producción normal.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Se utiliza para descomponer un artículo superior del producto normal en sus componentes.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Para realizar actividades que no son necesariamente artículos de la lista de materiales.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "para definir la lista de materiales.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-203",
+    "text": "Siendo P=Pasivo, A=Activo, Pe=Pasivo Exigible, ¿cúal de las siguientes expresiones es correcta?:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "P = A + Pe + Pe.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "P = A + Pe.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "P = A - Pe.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "P = A - Pe + Pe.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-204",
+    "text": "Al crear un pedido de cliente en una venta en nuestro almacén:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El Disponible y el Comprometido aumentan.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "El Stock permanece igual y el Comprometido aumenta.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "El Stock y el Comprometido se quedan igual.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "El Stock permanece igual y el Comprometido disminuye.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-205",
+    "text": "El método para aparecer en los primeros puestos de un buscador pagando para unas palabras clave es:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "CIR.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "CPC.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "SEM.",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "SEO.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-206",
+    "text": "Si el V.A.N. de una inversión de 4.000.000 € para un tipo de interés esperado del 15% a 5 años es de 0€, entonces:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "EI TIR < 15.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "EI Pay Back es de 5 años.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "EI 15.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "EI TIR 15.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  },
+  {
+    "id": "q-stiPreguntas-207",
+    "text": "Las deudas de los clientes de una empresa forman parte de:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Inmovilizado financiero",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Inmovilizado inmaterial",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Realizable",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Inmovilizado material",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.194Z"
+  }
+]

@@ -1,0 +1,1713 @@
+[
+  {
+    "id": "q-sds02-introgoPreguntas-1",
+    "text": "¿Cuál es la extensión de los archivos fuente de Go?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": ".go",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": ".gol",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": ".goexe",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": ".g",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.162Z"
+  },
+  {
+    "id": "q-sds02-introgoPreguntas-2",
+    "text": "¿Cómo deben nombrarse, según convención, los ficheros Go?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "En minúsculas",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "En mayúsculas",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "En CamelCase",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Con espacios",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.162Z"
+  },
+  {
+    "id": "q-sds02-introgoPreguntas-3",
+    "text": "¿Qué carácter se utiliza para separar palabras en los nombres de fichero Go?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Punto (.)",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Subrayado (_)",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Guión (-)",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Ninguno; se usa CamelCase",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.162Z"
+  },
+  {
+    "id": "q-sds02-introgoPreguntas-4",
+    "text": "¿Qué indica un fichero cuyo nombre termina en _test.go?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Contiene pruebas unitarias",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Es el fichero principal de ejecución",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Define el módulo de Go",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Debe ignorarse al compilar",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.162Z"
+  },
+  {
+    "id": "q-sds02-introgoPreguntas-5",
+    "text": "¿Cómo determina Go la visibilidad de paquetes y símbolos?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Primer letra mayúscula → público; minúscula → privado",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Prefijo export → público; internal → privado",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Sufijo _pub → público; _priv → privado",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Mediante etiquetas en comentarios",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.162Z"
+  },
+  {
+    "id": "q-sds02-introgoPreguntas-6",
+    "text": "¿Qué paquete y función se requieren para que un programa Go sea ejecutable?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "package main y func main()",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "package exec y func start()",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "package app y func run()",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "package go y func init()",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.162Z"
+  },
+  {
+    "id": "q-sds02-introgoPreguntas-7",
+    "text": "¿Con qué palabra clave se declaran funciones en Go?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "func",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "def",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "fn",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "function",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.162Z"
+  },
+  {
+    "id": "q-sds02-introgoPreguntas-8",
+    "text": "¿Qué requisito tiene Go con la llave de apertura { en la declaración de una función?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Debe ir en la misma línea que la cabecera func",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Debe ir siempre en la siguiente línea",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Es opcional si la función es corta",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Se omite si no hay parámetros",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.162Z"
+  },
+  {
+    "id": "q-sds02-introgoPreguntas-9",
+    "text": "¿Cómo se ejecuta un programa Go sin generar un binario permanente?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "go run",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "go exec",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "go interp",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "go shell",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.162Z"
+  },
+  {
+    "id": "q-sds02-introgoPreguntas-10",
+    "text": "¿Qué comando se utiliza para generar un ejecutable a partir del código Go?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "go build",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "go compile",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "go make",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "go install",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.162Z"
+  },
+  {
+    "id": "q-sds02-introgoPreguntas-11",
+    "text": "¿Cómo se declara una constante en Go?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "const nombre = valor",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "var nombre = valor",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "let nombre = valor",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "define nombre valor",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.162Z"
+  },
+  {
+    "id": "q-sds02-introgoPreguntas-12",
+    "text": "¿Qué permiten las constantes en Go en cuanto a operaciones aritméticas?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Realizar operaciones con precisión arbitraria",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Solo operaciones enteras",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Solo operaciones de punto flotante",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "No permiten operaciones matemáticas",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.162Z"
+  },
+  {
+    "id": "q-sds02-introgoPreguntas-13",
+    "text": "¿Qué sintaxis permite declarar e inicializar una variable rápidamente con inferencia de tipo?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "x := 42",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "var x = 42",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "let x := 42",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "define x 42",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.162Z"
+  },
+  {
+    "id": "q-sds02-introgoPreguntas-14",
+    "text": "¿Qué valor inicial recibe una variable de tipo entero si no se le asigna explícitamente?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "0",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "1",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "-1",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "nil",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.162Z"
+  },
+  {
+    "id": "q-sds02-introgoPreguntas-15",
+    "text": "¿Cuál es la única sentencia de bucle en Go?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "for",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "while",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "loop",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "repeat",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.162Z"
+  },
+  {
+    "id": "q-sds02-introgoPreguntas-16",
+    "text": "¿Cómo se representa un bucle infinito en Go?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "for { … }",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "while true { … }",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "for (;;) { … }",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "loop { … }",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.162Z"
+  },
+  {
+    "id": "q-sds02-introgoPreguntas-17",
+    "text": "¿Por qué Go no incluye el operador ternario cond ? a : b?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Se reemplaza por if … else para mayor claridad",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Porque Go no admite condiciones",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Porque lo sustituye switch",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Para forzar el uso de for",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.162Z"
+  },
+  {
+    "id": "q-sds02-introgoPreguntas-18",
+    "text": "¿Qué ventaja ofrece el switch en Go respecto a otros lenguajes?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "No requiere break al final de cada case",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Solo admite constantes enteras",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Solo permite un case por switch",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Obliga a usar default",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.162Z"
+  },
+  {
+    "id": "q-sds02-introgoPreguntas-19",
+    "text": "¿Cómo se define un array de enteros de longitud 5?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "var a [5]int",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "a := []int{5}",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "array<int,5> a",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "make([5]int)",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.162Z"
+  },
+  {
+    "id": "q-sds02-introgoPreguntas-20",
+    "text": "¿Cuál es la diferencia principal entre arrays y slices en Go?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El tamaño del array forma parte de su tipo; el slice es dinámico",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "El array usa heap; el slice usa stack",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "El slice es de solo lectura; el array es mutable",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "El slice no necesita importe de librería; el array sí",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.162Z"
+  },
+  {
+    "id": "q-sds02-introgoPreguntas-21",
+    "text": "¿Qué función propia devuelve la longitud de un slice o array?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "len()",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "cap()",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "size()",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "length()",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.162Z"
+  },
+  {
+    "id": "q-sds02-introgoPreguntas-22",
+    "text": "¿Cómo se añade un elemento al final de un slice s?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "s = append(s, valor)",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "s.push(valor)",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "s.add(valor)",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "s += valor",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.162Z"
+  },
+  {
+    "id": "q-sds02-introgoPreguntas-23",
+    "text": "¿Cómo se crea un slice con longitud 3 y capacidad 5 de enteros?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "make([]int, 3, 5)",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "[]int{3,5}",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "initSlice(3,5)",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "newSlice(3,5)",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.162Z"
+  },
+  {
+    "id": "q-sds02-introgoPreguntas-24",
+    "text": "¿Cómo se obtiene, mediante reslicing, un slice con los elementos 2, 3 y 4 de s?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "s[2:5]",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "s[2..4]",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "slice(s,2,4)",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "s.slice(2,4)",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.162Z"
+  },
+  {
+    "id": "q-sds02-introgoPreguntas-25",
+    "text": "¿Cómo se crea un mapa vacío con claves string y valores int?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "make(map[string]int)",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "map[string]int{}",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "newMap[string]int()",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "map{}.make(string,int)",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.162Z"
+  },
+  {
+    "id": "q-sds02-introgoPreguntas-26",
+    "text": "¿Cómo se comprueba la existencia de la clave \"k\" en un mapa m?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "v, ok := m[\"k\"]",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "exists := m.has(\"k\")",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "if m[\"k\"] != nil",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "_, ok := m.get(\"k\")",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.162Z"
+  },
+  {
+    "id": "q-sds02-introgoPreguntas-27",
+    "text": "¿Qué forma de for permite iterar sobre un slice y obtener índice y valor?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "for i, v := range s { … }",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "foreach i, v in s { … }",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "for idx, val := iter(s) { … }",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "for (i,v) in s { … }",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.162Z"
+  },
+  {
+    "id": "q-sds02-introgoPreguntas-28",
+    "text": "¿Cómo se representan las cadenas en Go?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Como slices de bytes inmutables codificados en UTF-8",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Como arrays de rune mutables",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Como string con longitud fija",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Como listas enlazadas de caracteres",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.162Z"
+  },
+  {
+    "id": "q-sds02-introgoPreguntas-29",
+    "text": "¿Qué convención utiliza Go para devolver errores desde la mayoría de las funciones de librería estándar?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Dos valores, siendo el segundo de tipo error",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Un único valor nulo si no hay error",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Excepciones lanzadas al fallar",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Callbacks de error",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.162Z"
+  },
+  {
+    "id": "q-sds02-introgoPreguntas-30",
+    "text": "¿Cuál es el patrón idiomático para manejar errores en Go?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Devolver el resultado y un valor error como segundo retorno",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Lanzar excepciones con throw y capturarlas con catch",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Retornar valores nulos en caso de error",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Usar un callback onError(err)",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.162Z"
+  },
+  {
+    "id": "q-sds02-introgoPreguntas-31",
+    "text": "¿Cómo defines una función anónima (closure) en Go?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "def f(x int) int { return x*x }",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "f := func(x int) int { return x*x }",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "func f(int) int { return x*x }",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "function(x int) int => x*x",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.162Z"
+  },
+  {
+    "id": "q-sds02-introgoPreguntas-32",
+    "text": "¿Qué palabra clave lanza una función como goroutine?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "go",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "goroutine",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "spawn",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "async",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.162Z"
+  },
+  {
+    "id": "q-sds02-introgoPreguntas-33",
+    "text": "¿Cuál es el tipo básico para comunicar goroutines en Go?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Canal (chan)",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Mutex (sync.Mutex)",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "WaitGroup (sync.WaitGroup)",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Buffer (bufio.Reader)",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.162Z"
+  },
+  {
+    "id": "q-sds02-introgoPreguntas-34",
+    "text": "¿Cómo se declara un canal no bufferizado de enteros?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "make(chan int)",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "make(chan int, 1)",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "chan int{}",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "new(chan int)",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.162Z"
+  },
+  {
+    "id": "q-sds02-introgoPreguntas-35",
+    "text": "¿Qué sucede si envías un valor a un canal no bufferizado sin un receptor activo?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Produce un deadlock y panic",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "El valor se descarta silenciosamente",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Se envía a un buffer interno",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "El canal se cierra automáticamente",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.162Z"
+  },
+  {
+    "id": "q-sds02-introgoPreguntas-36",
+    "text": "¿Qué función de time devuelve la hora actual?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "time.Now()",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "time.Current()",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "time.Now",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "time.Get()",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.162Z"
+  },
+  {
+    "id": "q-sds02-introgoPreguntas-37",
+    "text": "¿Cómo pausas la ejecución durante 2 segundos?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "time.Sleep(2 * time.Second)",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "time.Wait(2)",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "sleep(2)",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "time.Delay(2000)",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.162Z"
+  },
+  {
+    "id": "q-sds02-introgoPreguntas-38",
+    "text": "¿Qué función lee todo el contenido de un archivo en memoria?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "ioutil.ReadFile(\"file.go\")",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "os.Open(\"file.go\")",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "bufio.NewReader(\"file.go\")",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "io.Copy(\"file.go\")",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.162Z"
+  },
+  {
+    "id": "q-sds02-introgoPreguntas-39",
+    "text": "¿Cómo realizas una petición HTTP GET a una URL?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "http.Get(\"https://example.com\")",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "net.Get(\"https://example.com\")",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "http.Request(\"GET\", url)",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "http.Call(\"GET\", url)",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.162Z"
+  },
+  {
+    "id": "q-sds02-introgoPreguntas-40",
+    "text": "¿Qué función codifica un valor Go a JSON?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "json.Marshal(v)",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "json.Encode(v)",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "json.ToJSON(v)",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "json.Print(v)",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.162Z"
+  },
+  {
+    "id": "q-sds02-introgoPreguntas-41",
+    "text": "¿Qué función decodifica datos JSON en una variable Go?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "json.Unmarshal(data, &v)",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "json.Decode(data, &v)",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "json.Parse(data, &v)",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "json.ToStruct(data, &v)",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.162Z"
+  },
+  {
+    "id": "q-sds02-introgoPreguntas-42",
+    "text": "¿Cómo etiquetas un campo Nombre para que en JSON aparezca como nombre?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "`json:\"nombre\"`",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "`field:\"nombre\"`",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "`tag:\"nombre\"`",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "`json=\"nombre\"`",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.162Z"
+  },
+  {
+    "id": "q-sds02-introgoPreguntas-43",
+    "text": "¿Qué paquete estándar proporciona soporte para compresión gzip?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "compress/gzip",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "gzip",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "archive/gzip",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "compress",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.162Z"
+  },
+  {
+    "id": "q-sds02-introgoPreguntas-44",
+    "text": "¿Qué paquete estándar se utiliza para cifrado AES?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "crypto/aes",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "encoding/aes",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "cipher/aes",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "aes",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.162Z"
+  },
+  {
+    "id": "q-sds02-introgoPreguntas-45",
+    "text": "¿Cómo creas un valor error con un mensaje personalizado?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "errors.New(\"mensaje\")",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "fmt.Error(\"mensaje\")",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "newError(\"mensaje\")",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "error(\"mensaje\")",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.163Z"
+  },
+  {
+    "id": "q-sds02-introgoPreguntas-46",
+    "text": "¿Qué función genera un número aleatorio entero comprendido entre 0 y n-1?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "rand.Int()",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "math.Random()",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "rand.Intn(n)",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "rand.Float64()",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.163Z"
+  },
+  {
+    "id": "q-sds02-introgoPreguntas-47",
+    "text": "¿Cómo defines un closure que incrementa un contador y devuelve el nuevo valor?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "inc := func() int { count++; return count }",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "count := 0; inc := func() int { count++; return count }",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "func inc() int { count++; return count }",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "inc := closure() { count++; return count }",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.163Z"
+  },
+  {
+    "id": "q-sds02-introgoPreguntas-48",
+    "text": "¿Cuál es la ventaja principal de usar closures en Go?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Mantener estado interno sin variables globales",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Ejecutar código en paralelo",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Reemplazar la herencia clásica de objetos",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Forzar tipado dinámico",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.163Z"
+  },
+  {
+    "id": "q-sds02-introgoPreguntas-49",
+    "text": "¿Qué función de net/http se utiliza para iniciar un servidor web?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "http.ListenAndServe(\":8080\", handler)",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "http.ServeHTTP()",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "http.HandleFunc()",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "http.NewServer()",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.163Z"
+  },
+  {
+    "id": "q-sds02-introgoPreguntas-50",
+    "text": "¿Qué comando se utiliza para inicializar un nuevo módulo Go en un proyecto existente?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "go mod init",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "go mod tidy",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "go mod vendor",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "go mod download",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.163Z"
+  },
+  {
+    "id": "q-sds02-introgoPreguntas-51",
+    "text": "¿Qué hace el comando go mod tidy?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Elimina dependencias no usadas y añade las necesarias al go.mod",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Solo descarga dependencias sin modificar go.mod",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Actualiza las versiones de dependencias a la última",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Genera la carpeta vendor",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.163Z"
+  },
+  {
+    "id": "q-sds02-introgoPreguntas-52",
+    "text": "¿Cómo se crea una carpeta vendor con todas las dependencias locales?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "go mod vendor",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "go mod tidy",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "go mod download",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "go get vendor",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.163Z"
+  },
+  {
+    "id": "q-sds02-introgoPreguntas-53",
+    "text": "¿Cuál es la convención de nombres para los archivos de prueba unitaria en Go?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "<nombre>_test.go",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "<nombre>.test.go",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "<nombre>_unit.go",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "<nombre>_spec.go",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.163Z"
+  },
+  {
+    "id": "q-sds02-introgoPreguntas-54",
+    "text": "¿Cómo se ejecutan todas las pruebas unitarias de un paquete y sus subdirectorios?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "go test ./...",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "go test -run all",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "go unit",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "go run tests",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.163Z"
+  },
+  {
+    "id": "q-sds02-introgoPreguntas-55",
+    "text": "¿Qué comando muestra el porcentaje de cobertura de pruebas?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "go test -cover",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "go test -v",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "go test -run coverage",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "go test -coverprofile=coverage.out",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.163Z"
+  },
+  {
+    "id": "q-sds02-introgoPreguntas-56",
+    "text": "¿Qué formato de función se usa para benchmarks en Go?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "func BenchmarkXxx(b *testing.B)",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "func benchXxx(b *testing.B)",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "func TestXxx(b *testing.B)",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "func Benchmark(b *testing.B)",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.163Z"
+  },
+  {
+    "id": "q-sds02-introgoPreguntas-57",
+    "text": "¿Qué herramienta proporciona un servidor local para consultar documentación de Go?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "godoc",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "go doc",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "go help",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "go fmt",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.163Z"
+  },
+  {
+    "id": "q-sds02-introgoPreguntas-58",
+    "text": "¿Cómo se consulta la documentación de una función específica desde la línea de comandos?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "go doc fmt.Println",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "godoc fmt.Println",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "go help fmt.Println",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "go doc.Println",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.163Z"
+  },
+  {
+    "id": "q-sds02-introgoPreguntas-59",
+    "text": "¿Qué comando descarga todas las dependencias listadas en go.mod sin crear ni modificar carpetas vendor?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "go mod download",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "go get",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "go mod tidy",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "go mod init",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.163Z"
+  }
+]

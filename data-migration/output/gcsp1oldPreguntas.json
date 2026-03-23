@@ -1,0 +1,582 @@
+[
+  {
+    "id": "q-gcsp1oldPreguntas-1",
+    "text": "¿Cuál es el objetivo principal de utilizar el Diferencial Semántico en los cuestionarios?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Medir la consistencia interna",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Determinar la facilidad de aprendizaje",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Calificar actitudes hacia objetos",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Evaluar la carga cognitiva",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.074Z"
+  },
+  {
+    "id": "q-gcsp1oldPreguntas-2",
+    "text": "¿Cuál es la principal razón para utilizar cuestionarios estandarizados en lugar de inventar uno propio?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Han sido validados mediante métodos psicométricos",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Ofrecen resultados instantáneos",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Son más fáciles de crear",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Requieren menos participantes",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.074Z"
+  },
+  {
+    "id": "q-gcsp1oldPreguntas-3",
+    "text": "¿Cuál es una limitación de los cuestionarios post-test y post-task?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "No proporcionan datos sobre el rendimiento objetivo",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "No miden la percepción subjetiva",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Siempre requieren validación externa",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Solo evalúan la estética visual",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.074Z"
+  },
+  {
+    "id": "q-gcsp1oldPreguntas-4",
+    "text": "¿Qué cuestionario se basa en la ISO 9241 para sus ítems?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "ISOMETRICS",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "WISAWI",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "SUS",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "SUMI",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.074Z"
+  },
+  {
+    "id": "q-gcsp1oldPreguntas-5",
+    "text": "¿Qué indica un número más alto en una escala Likert?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Actitudes más negativas",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Que se trata de una escala aditiva",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Actitudes más positivas",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Menor usabilidad",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.074Z"
+  },
+  {
+    "id": "q-gcsp1oldPreguntas-6",
+    "text": "¿Cuál no es un método válido para crear cuestionarios según el documento?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Modelos teóricos de psicología",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Estándares ISO",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Metodología 'grounded theory'",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Teorías de diseño gráfico",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.074Z"
+  },
+  {
+    "id": "q-gcsp1oldPreguntas-7",
+    "text": "¿Cuál de estos es un motivo válido para utilizar cuestionarios de UX?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Comparar con versiones anteriores del producto",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Ignorar las opiniones de los usuarios",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Sustituir las pruebas de usabilidad",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Determinar el precio adecuado al que debe lanzarse un producto",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.074Z"
+  },
+  {
+    "id": "q-gcsp1oldPreguntas-8",
+    "text": "¿Qué escala NO es mencionada como un tipo de escala para la creación de ítems de cuestionarios?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Escala de Maslow",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Likert",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Diferencial semántico",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Guttman",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.074Z"
+  },
+  {
+    "id": "q-gcsp1oldPreguntas-9",
+    "text": "¿Qué propiedades tienen las actitudes que se miden en los cuestionarios de UX?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Objetivas y subjetivas",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Positivas y negativas",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Duración y frecuencia",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Dirección e intensidad",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.074Z"
+  },
+  {
+    "id": "q-gcsp1oldPreguntas-10",
+    "text": "¿Qué aspecto no es evaluable mediante el Net Promoter Score según el documento?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Lealtad del usuario",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Satisfacción del cliente",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Usabilidad",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Impacto en las ventas",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.074Z"
+  },
+  {
+    "id": "q-gcsp1oldPreguntas-11",
+    "text": "¿Qué es el coeficiente Alpha de Cronbach?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Una medida de fiabilidad",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Una medida de validez de constructo",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Una medida de causalidad",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Una medida de validez de contenido",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.074Z"
+  },
+  {
+    "id": "q-gcsp1oldPreguntas-12",
+    "text": "¿Qué no se menciona como una limitación de los cuestionarios post-test y post-task?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Son subjetivos y pueden no ser completamente fiables",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "No proporcionan indicaciones específicas sobre cómo mejorar",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "No son útiles para comparar distintas versiones de un producto",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "No recogen datos objetivos de rendimiento",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.074Z"
+  },
+  {
+    "id": "q-gcsp1oldPreguntas-13",
+    "text": "¿Qué cuestionario proporciona una medida global de la usabilidad del sitio o aplicación?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "SUS",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "CSUQ",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "SUMI",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "UMUX",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.074Z"
+  },
+  {
+    "id": "q-gcsp1oldPreguntas-14",
+    "text": "¿Cuál es la recomendación general sobre el valor objetivo de SUS para indicar una experiencia de usuario por encima de la media?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Al menos 95",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Al menos 65",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Al menos 80",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Al menos 50",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.074Z"
+  },
+  {
+    "id": "q-gcsp1oldPreguntas-15",
+    "text": "¿Cuál de las siguientes no es una dimensión de calidad de un cuestionario mencionada en el documento?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Validez de constructo",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Validez de contenido",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Validez de causalidad",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Validez de criterio",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.074Z"
+  },
+  {
+    "id": "q-gcsp1oldPreguntas-16",
+    "text": "El documento señala que la sensibilidad del SUS se ve afectada por varios factores. ¿Cuál de los siguientes NO es uno de ellos?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Tipo de producto evaluado",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Color del interfaz",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Edad del usuario",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Género del usuario",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.074Z"
+  },
+  {
+    "id": "q-gcsp1oldPreguntas-17",
+    "text": "¿Qué cuestionario está diseñado para medir la apariencia visual de sitios web?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "UMUX",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "WISAWI",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "ACSI",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "SUS",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.074Z"
+  },
+  {
+    "id": "q-gcsp1oldPreguntas-18",
+    "text": "¿Qué propósito principal tiene el SUS (System Usability Scale) según el documento?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Proveer una medida específica de la eficiencia del sistema",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Entregar una medida global de la usabilidad del sitio o aplicación",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Comparar la facilidad de uso entre diferentes sistemas",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Evaluar la estética visual de la aplicación",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.074Z"
+  },
+  {
+    "id": "q-gcsp1oldPreguntas-19",
+    "text": "¿Qué escala utiliza el Net Promoter Score (NPS) para evaluar la lealtad del usuario?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "1 a 7",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "0 a 5",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "1 a 10",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "0 a 10",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.074Z"
+  },
+  {
+    "id": "q-gcsp1oldPreguntas-20",
+    "text": "¿Cuál de las siguientes afirmaciones es correcta con respecto a la sensibilidad del SUS?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "La sensibilidad del SUS al tipo de plataforma (móvil, tablet, PC) es baja, mostrando puntuaciones uniformes a través de diferentes dispositivos.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "El SUS es especialmente insensible al tipo de producto evaluado, lo que indica que las puntuaciones son consistentes a través de diferentes categorías de productos.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Aunque el SUS es sensible a la edad, no muestra una sensibilidad significativa al género de los participantes.",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "El SUS muestra una sensibilidad alta tanto a la edad como al género de los participantes, indicando diferencias significativas en las puntuaciones basadas en estos factores.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.074Z"
+  }
+]

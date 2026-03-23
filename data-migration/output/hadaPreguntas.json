@@ -1,0 +1,6538 @@
+[
+  {
+    "id": "q-hadaPreguntas-1",
+    "text": "Git es un sistema de control de versiones:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Centralizado.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Distribuído.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Centralizado en unos casos, distribuído en otros.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Ninguna de las anteriores.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-2",
+    "text": "La operación commit de Git:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Taslada los datos del repositorio local a la copia maestra del mismo.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Traslada los cambios hechos en la copia de rabajo al repositorio local.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Traslada los cambios hechos en la copia de trabajo a un repositorio remoto.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Clona repositorios.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-3",
+    "text": "La operación branch de Git:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Es la única que podemos usar para crear ramas.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Es la única que podemos usar para cambiar de rama.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Es la única que podemos usar para renombrar una rama.",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Ninguna de las anteriores.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-4",
+    "text": "Para guardar una copia temporal de tu directorio de trabajo:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Utilizamos la operación Git bisect",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Utilizamos la operación Git clone",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Utilizamos la operación Git stash",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "No se puede realizar una copia, el directorio de trabajo es único",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-5",
+    "text": "Git guarda toda la meta-información de un proyecto en:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Una base de datos relacional",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Un directorio único para cada usuario",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "En un directorio único por proyecto",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "En un archivo de configuración",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-6",
+    "text": "Trabajando con Git si dos programadores modifican el mismo archivo:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "No tiene por qué producirse un conflicto",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Siempre se producirá un conflicto",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Git no permite modificar simultáneamente en un mismo archivo",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Ninguna de las anteriores",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-7",
+    "text": "En Git la clave “SHA-1” está asociada a:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Cada copia del repositorio",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Cada usuario que puede hacer commits en el proyecto",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Un conjunto de commits",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Cada commit",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-8",
+    "text": "En un sistema de control de versiones centralizado la operación “push”:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "No existe",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Hace el mismo papel que en uno distribuido",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Es equivalente a pull",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Es equivalente a rebase",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-9",
+    "text": "Si en Git quisiéramos deshacer un commit sin perder la parte de la historia del proyecto donde aparece este commit:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "No podemos",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Usaremos la orden git revert",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Usaremos la orden git reset",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Usaremos la orden git rewind",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-10",
+    "text": "Para modificar un mensaje de un commit:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Un mensaje de un commit no se puede modificar",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Utilizamos la opción -amend para modificar el último commit",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Debemos de hacer un checkout del archivo y luego usamos -amend",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Ninguna de las anteriores",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-11",
+    "text": "La operación checkout de Git:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Sirve para cambiarse de una rama a otra con la opción -b",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "La podemos usar para cambiar de rama",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Sirve únicamente para actualizar la copia de trabajo con la versión del repositorio local",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Ninguna de las anteriores",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-12",
+    "text": "C# es un lenguaje",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "débilmente tipado",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "fuertemente tipado",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "no tiene tipos",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "ninguna de las anteriores",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-13",
+    "text": "En C# el tipo ArrayList",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "permite almacenar elementos de tipo string",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "todos los elementos almacenados en un ArrayList son tratados como objetos",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "todos los elementos deben ser del mismo tipo",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "ninguna de las anteriores",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-14",
+    "text": "En la arquitectura de capas propuesta",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Las entidades de negocio siempre acceden directamente a las BBDD",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Las entidades de negocio solo en algunas ocasiones acceden directamente a las BBDD",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Las entidades de negocio no acceden directamente a las BBDD nunca",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Ninguna de las anteriores",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-15",
+    "text": "Las tareas CRUD son llevadas a cabo por:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "La interfaz de usuario",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "La lógica de negocio",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "El componente de acceso a datos",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Ninguna de las anteriores",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-16",
+    "text": "Las librerías dinámicas:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "No hay que compilarlas",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Deben llevar el prefijo lib y la extensión .a",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Hacen crecer el ejecutable final",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Ninguna de las anteriores",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-17",
+    "text": "en ASP.net...",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "una aplicación Web está formada por un conjunto de páginas web",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "una aplicación web solo existe en una localización que ha sido publicada por IIS como un Directorio Virtual",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "todo lo que requiera la aplicación web debe localizarse en el cliente",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Todas son ciertas",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-18",
+    "text": "Las páginas maestras",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "me permiten crear una plantilla común para todas las páginas de la aplicación web",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "pueden ejecutarse sobre cualquier navegador html",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "deben contener controles de usuario",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "ninguna de las anteriores",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-19",
+    "text": "En asp",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "no es posible trabajar con cookies",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "podemos crear una cookie como instancia de la clase Cookie",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "podemos crear una cookie como instancia de la clase HttpCookie",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "podemos crear una cookie como instancia de la clase AspCookie",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-20",
+    "text": "En asp la clase que representa un Email se llama",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Email",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "SmtpClient",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "MailMessage",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Mail",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-21",
+    "text": "El objeto Response",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Lo utiliza el servidor para enviar información al cliente",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "b. Lo utiliza el cliente para enviar información del servidor",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Este objeto se utiliza para leer las cookies creadas en el cliente",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Ninguna de las anteriores",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-22",
+    "text": "El atributo runat = “server”",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Se declara en los controles que requieren procesamiento en el cliente",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Se declara en los controles que requieren procesamiento en el servidor",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Tiene asociado una hoja de estilo CSS",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Optimiza el SEO del sitio web",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-23",
+    "text": "En el acceso conectado, recuperamos una fila de una consulta",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Con el método nextRow de la clase Row",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Con el método anotherRow de la clase DataReader",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Con el método Read de la clase DataReader",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Con el método Read de la clase DataRow",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-24",
+    "text": "En el acceso conectado, la cadena de conexión se pasa como parámetro",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Al constructor de la clase SqlCommand",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Al constructor de la clase SqlDataReader",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Al constructor de la clase ExecuteReader",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Al constructor de la clase SqlConnection",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-25",
+    "text": "La propiedad que indica si un control de validación es correcto se llama",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "causesValidation",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "isOK",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "isValid",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "isCorrect",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-26",
+    "text": "En el objeto Application",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Mantengo el contador de visitas del sitio web",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Mantengo el nombre de usuario",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Las dos anteriores son verdaderas",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Ninguna de las anteriores",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-27",
+    "text": "En el objeto Session",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Mantengo el contador de visitas del sitio web",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Mantengo el nombre del usuario",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Las dos anteriores son verdaderas",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Ninguna de las anteriores",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-28",
+    "text": "La información guardada en la sesión",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Perdura entre diferentes sesiones del mismo usuario",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Perdura solo durante la sesión actual del usuario",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Perdura hasta que el usuario la borre",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Ninguna de las anteriores",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-29",
+    "text": "En el acceso desconectado la clase que está entre nuestra aplicación y la conexión de las BBDD se llama:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "DataReader",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "DataSet",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "DataAdapter",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Command",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-30",
+    "text": "Los objetos de la clase DataColumn",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Contiene datos de nuestra aplicación",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Esa clase no existe",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Contienen información sobre una columna",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Ninguna de las anteriores",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-31",
+    "text": "La concurrencia en el método desconectado de ADO.net",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Se gestiona bloqueando las filas hasta que el usuario las libere",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Se gestiona con la estrategia Lastwin",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Debemos escribir el código necesario para gestionarla",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Se guarda una copia del dataset original y se compara la BBDD para ver si ha sido modificada",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-32",
+    "text": "En .NET cada lenguaje de programación define sus propios tipos de datos",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "cierto",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "falso",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "solo coinciden los tipos de datos de C# y F#",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "ninguna de las anteriores",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-33",
+    "text": "Un directorio virtual",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "debe ser implementado en la clase derivada",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "debe heredar de una interfaz",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "debe ser implementado y sobrescrito en la clase derivada",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "se identifica por un alias que representa la localización física en el servidor",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-34",
+    "text": "El término code behind",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "hace referencia a código asp",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "hace referencia a código C#",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "hace referencia a código asp y C#",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "ninguna de las anteriores",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-35",
+    "text": "Las Entidades de Negocio:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "*Pueden ser representadas con DataSets",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "*Tienen asociado un CAD que les proporciona el acceso y mapeo de datos",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Las dos con * son correctas",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Ninguna de las anteriores son correctas",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-36",
+    "text": "En la programación dirigida por eventos, la cola de eventos:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Es necesaria.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "No es necesaria.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Depende del lenguaje de programación usado.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Ninguna de las anteriores.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-37",
+    "text": "En C#:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Es correcta la expresion float a = 3,5;",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Es necesario inicializar las variables",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "La conversion implicita tiene perdida de informacion",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-38",
+    "text": "En C#:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Existe un recolector de basura",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Debemos destruir las variables manualmente",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Microsoft dice que esta basado en Java",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-39",
+    "text": "En C#:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "No se pueden manejar excepciones",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Se puede hacer un try sin catch",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "El bloque finally se ejecuta siempre",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-40",
+    "text": "En C#:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "No se puede hacer casting",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Con la conversion implicita perdemos datos",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Con la conversion explicita perdemos datos",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-41",
+    "text": "En el modelo de capas:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "La Interfaz llama al EN",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "El CAD llama al EN",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "El EN llama a la Interfaz",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-42",
+    "text": "Donde se guarda la aplicacion WEB:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "En una Carpeta",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "En un Directorio Virtual",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "En LocalHost",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-43",
+    "text": "RAD son las siglas de:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Rapido Desarrollo de Aplicaciones",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Rapido Analisis y Desarrollo",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Rapido Diseño de Aplicaciones",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-44",
+    "text": "Al establecer la etiqueta runat = \"server\":",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "EI formulario no debe ser procesado en el servidor",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "EI formulario lo envia el servidor",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "EI formulario se debe procesar en el servidor",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-45",
+    "text": "Un proyecto WEB:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Sirve para aplicaciones web avanzadas",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Sirve para paginas web sencillas",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "No podemos referenciar DLLs",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-46",
+    "text": "Las paginas maestras:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Solo puede haber 1 pagina maestra",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Proporcionan seguridad a la pagina",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Proporcionan coherencia a la pagina",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-47",
+    "text": "En las master pages (paginas maestras):",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Definimos el contenido comun y los contenedores de contenido",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Hacemos referencia a otras paginas maestras",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Creamos el contenido de los contenedores",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-48",
+    "text": "El enlace entre el mensaje del evento y el mensaje especifico se lleva a cabo mediante:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Emisor de eventos",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Delegado de eventos",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Receptor de eventos",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-49",
+    "text": "Los delegados son:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Puntero a funcion",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Puntero a mensaje",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Puntero a destino",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-50",
+    "text": "Un Boton es de tipo:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "No Postback",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Evento de cache",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Evento de envio",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-51",
+    "text": "Un Textbox es de tipo:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Evento de cache",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "No Postback",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Ambas son Correctas",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-52",
+    "text": "Se puede transformar No Postback a Postback:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Los eventos No Postback ya son Postback",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Asignando AutoPostback = true",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Asignando PostBack = true",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-53",
+    "text": "Se puede generar estilo de web sin usar archivo CSS:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Si, con codigo inline",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "No, tiene que existir este archivo",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Ninguna de las anteriores",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-54",
+    "text": "Con el comando Response.Redirect():",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Podemos enviar parametros dentro de la web",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Solo podemos acceder a paginas en el directorio raiz",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Ninguna de las anteriores",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-55",
+    "text": "Para leer parametros en la Web usamos:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Commander",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Request",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Application",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-56",
+    "text": "Un menu estatico es aquel que:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Son estaticas las porciones especificadas",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "El control del menu es variable",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "El control del menu esta expandido completamente",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-57",
+    "text": "Un menu dinamico es aquel que:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Son estaticas las porciones especificadas",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Toda la estructura es siempre visible",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "El control del menu esta espandido completamente",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-58",
+    "text": "Con RequiredFieldValidator Validamos:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "La cadena sea numerica",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "La cadena no sea vacia",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "La cadena sea alfabetica",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-59",
+    "text": "Los controladores de validacion pueden ser:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Estaticos",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Dinamicos",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Los dos",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-60",
+    "text": "En los controladores de validacion (marcar la falsa):",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "No se puede controlar un rango de datos",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Se puede controlar una expresion",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Podemos definir nuestro propio control",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-61",
+    "text": "En el objeto sesion:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Al acabar el timeout se cierra sesion",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Al cerrar el navegador se borran los datos",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Ambas son correctas",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-62",
+    "text": "Para cerrar sesion usamos:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Session.Abandon",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Session.Remove",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Session.Close",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-63",
+    "text": "Cuales estan implementados como colecciones o conjuntos de pares nombre-valor:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Session",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Application",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Ambas",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-64",
+    "text": "Si queremos asignar variables para todos los usuarios usaremos:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Session",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Application",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Ambas",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-65",
+    "text": "Las variables application pueden ser bloqueadas:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Si",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "No",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Depende del criterio a seguir",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-66",
+    "text": "El archivo Global.asax:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Contiene etiquetas HTML",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Contiene etiquetas XML",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "No contiene etiquetas ASP.NET",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-67",
+    "text": "Los cambios en Global.asax:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Requieren reinicio de aplicacion",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Requieren compilacion de aplicacion",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Se ejecutan con normalidad",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-68",
+    "text": "En el entorno conectado usaremos:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Dataset",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Datareader",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Dataconect",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-69",
+    "text": "En el entorno desconectado usaremos:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Dataset",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Datareader",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Dataconect",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-70",
+    "text": "Los Objetos Connection y Command:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Tienen prefijo",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "No tienen prefijo",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Tienen prefijo, como dataset",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-71",
+    "text": "El archivo web.config:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Basado en ASP.NET",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Basado en HTML",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Basado en XML",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-72",
+    "text": "Para realizar un SELECT:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "ExecuteNonQuery",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "ExecuteCommand",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "ExecuteReader",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-73",
+    "text": "Con DataAdapter:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Debemos gestionar en todo momento la apertura y cierre de la BBDD",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "La gestion por abrir y cerrar la BBDD es automatica",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "La gestion por abrir y cerrar la BBDD es automatica utilizando CommandBuilder",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-74",
+    "text": "Con DataAdapter:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Debemos gestionar en todo momento la apertura y cierre de la BBDD",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "La gestion por insertar, borrar y actualizar la BBDD es automatica",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "La gestion por insertar, borrar y actualizar la BBDD es automatica utilizando CommandBuilder",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-75",
+    "text": "GridView:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Con asistente",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Con codigo",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Los dos",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-76",
+    "text": "La concurrencia pesimista es:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Cuando una fila es leida, esta queda bloqueada para su lectura para cualquier otro que la demande hasta que aquel que la posee la libere.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Las filas estan disponibles para su lectura en todo momento, estas pueden ser leidas por distintos usuarios al mismo tiempo.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Esta tecnica implica que no existe control. El ultimo cambio en escribirse es el que permanece.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-77",
+    "text": "La concurrencia last win es:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Cuando una fila es leida, esta queda bloqueada para su lectura para cualquier otro que la demande hasta que aquel que la posee la libere.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Las filas estan disponibles para su lectura en todo momento, estas pueden ser leidas por distintos usuarios al mismo tiempo.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Esta tecnica implica que no existe control. El ultimo cambio en escribirse es el que permanece.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-78",
+    "text": "La concurrencia positiva es:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Cuando una fila es leida, esta queda bloqueada para su lectura para cualquier otro que la demande hasta que aquel que la posee la libere.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Las filas estan disponibles para su lectura en todo momento, estas pueden ser leidas por distintos usuarios al mismo tiempo.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Esta tecnica implica que no existe control. El ultimo cambio en escribirse es el que permanece.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-79",
+    "text": "Cuando tenemos que hacer un acceso complicado usaremos:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "DataReader",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "DataAdapter",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "DataSet",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-80",
+    "text": "Si trabajamos con mas de una BBDD usaremos:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "DataSet",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "DataReader",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "DataAdapter",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-81",
+    "text": "En las Cookies:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Los datos se borran siempre cuando el usuario cierra la ventana del navegador",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Las cookies no se pierden cuando se cierra el navegador (a no ser que el usuario las borre)",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Una cookie se representa por la clase Cookie",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-82",
+    "text": "En las Cookies:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Los datos se borran siempre cuando el usuario cierra la ventana del navegador",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Las cookies no se pueden borrar con fechas ya expiradas",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Una cookie se representa por la clase HttpCookie",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-83",
+    "text": "La extension de los controles de usuario es:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "aspx",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "ascx",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "asdx",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-84",
+    "text": "En Git la operación pull equivale a:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Fetch+merge",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Merge",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Push",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Rebase",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-85",
+    "text": "Con HTML",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "podemos implementar páginas estáticas",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "podemos implementar páginas dinámicas",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "podemos implementar páginas dinámicas y responsive",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "es un lenguaje orientado a objetos",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-86",
+    "text": "La etiqueta HEAD en HTML contiene",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "el contenido de una página HTML",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "scripts y metainformación del documento",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "es dónde se definen los eventos",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Esta etiqueta no existe",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-87",
+    "text": "Las hojas de estilo CSS externas se incluyen",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "en el elemento body de la página",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "en cada elemento HTML al que queramos aplicar estilo",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "en el elemento head de la página",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "en el elemento form de la página",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-88",
+    "text": "EI método get para enviar datos (en form)",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "envia los datos en el cuerpo de la página",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "envía los datos en la URL",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "es muy seguro para el envío de datos",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "permite enviar una gran cantidad de datos",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-89",
+    "text": "EI atributo runat=server",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Puede tomar también el valor runat=client",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Indica que se procesa en el servidor el código",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Solo se incluye en los formularios aspnet",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Solo se incluye en los controles aspnet",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-90",
+    "text": "Para maquetar una web",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "debemos usar el elemento table",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "usaremos divs o/y etiquetas de organización + CSS",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "debemos usar divs y CSS",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "debemos usar etiquetas de organización",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-91",
+    "text": "EI código de interfaz de ASPNET",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "es igual al HTML",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "la estructura es HTML pero las etiquetas no",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "incluye siempre una directiva @Master",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "se ejecuta en el cliente",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-92",
+    "text": "Para pasar parámetros cuando navego a otra página ASPNET",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "uso el método form",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "uso el método redirect",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "uso el método get",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "no se pueden pasar parámetros",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-93",
+    "text": "Los manejadores de eventos en ASPNET",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "siguen la signatura de EventArgs",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "siguen la signatura del delegado EventHandler",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "tienen tres parámetros: this, args y data",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "se conectan con los eventos en el main",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-94",
+    "text": "Las páginas maestras en ASPNET",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "sirven para definir un layout comun",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "son ejecutables",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "no se pueden reutilizar",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "incluyen la directiva @Page",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-95",
+    "text": "Los eventos en ASPNET",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "se originan en el servidor",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "se originan en el cliente y se procesan en el cliente",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "se procesan en el cliente",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "se originan en el cliente y se procesan en el servidor",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-96",
+    "text": "Los formularios en HTML",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "tienen eventos click",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "se recargan automáticamente",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "envian datos a otra página",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "tienen tres métodos de envio de datos",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-97",
+    "text": "Los fomularios en ASPNET",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "envian datos en el cuerpo de la página",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "son páginas web",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "incluyen un elemento runat=client",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "podemos tener varios en una misma página",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-98",
+    "text": "¿A qué método se invoca en el control Data Adapter para cargar el dataset generado?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Fill()",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "ExecuteQuery()",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Read()",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-99",
+    "text": "¿Cuál es el tipo del cual heredan todos los tipos de dato de la plataforma .NET?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "System.Object",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "System.Type",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "System.Class",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "System.ValueType",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-100",
+    "text": "ASP.NET es un:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Tecnología de secuencias de comandos del lado del servidor",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Tecnología de secuencias de comandos del lado del cliente",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Lenguaje de programación",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Lenguaje de programación de base de datos igual que SQL.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-101",
+    "text": "¿Cuando una página .aspx es solicitada por el servidor web, el resultado será renderizado al browseren el siguiente formato?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "HTML",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "XML",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "WML",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "JSP",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-102",
+    "text": "¿Cuál es la palabra reservada para crear una instancia de una clase?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "CreateObject",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "New",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Create",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Ninguna de las opciones es correcta.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-103",
+    "text": "¿Cuál es el bloque que utiliza .NET para proveer administración estructurada de excepciones?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "If/Else",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "OnError/Goto",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Try/Catch/Finally",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Throw",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-104",
+    "text": "Si se desea definir un comportamiento para un conjunto de clases no necesariamente relacionadas entre sí, la mejor opción sería:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Definir una jerarquía de herencia entre las clases",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Definir una interfaz",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Relacionar las clases mediante una asociación bi-direccional",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Encapsular el comportamiento en una clase agregada",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-105",
+    "text": "¿Cómo hacer que un cuadro de texto acepte contraseñas?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Establezca la propiedad Modo en Contraseña",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Establezca la propiedad TextMode en Contraseña",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Tienes que agregar el control Password ASP.NET",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-106",
+    "text": "Los controles de validacion:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "si permiten validar expresiones regulares",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "solo permiten validar entradas numéricas",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "no permiten validar expresiones regulares",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "solo permiten validar entradas de texto",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-107",
+    "text": "Las aplicaciones de ASP.NET:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "solo se pueden desarrollar en J#",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "solo se pueden desarrollar en VB.NET",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "solo se pueden desarrollar en C#",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "ninguna de las anteriores",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-108",
+    "text": "Para saber quién hizo commit en un fichero ejecuto:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "git merge fichero",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "git commit fichero",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "git branch fichero",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "git blame fichero",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-109",
+    "text": "Una solución (en VisualStudio):",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Puede contener sólo dos proyectos siendo uno de ellos proyecto de libreria.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Sólo se puede crear para aplicaciones Web.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Puede contener un conjunto de proyectos.",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Ninguna de las anteriores.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-110",
+    "text": "En una aplicación de consola C# el enlace entre un evento y su controlador",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "se implementa mediante un delegado",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "se realiza automáticamente",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "se implementa mediante un delegado que es un puntero a función",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "se implementa mediante un puntero a función",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-111",
+    "text": "El control gridView",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "es un control de navegación",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "es un control para mostrar datos",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "es un control para mostrar usuarios",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "sólo se usa con comandos select",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-112",
+    "text": "En una aplicación de 3 capas",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "La lógica de negocio (EN) realizará las operaciones de la BD",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Habrá una clase CAD por cada clase EN",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Los CAD llamarán a los EN",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "La interfaz llamará a los CAD",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-113",
+    "text": "¿Por qué deberíamos usar AJAX?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "En la capa CAD para la gestión de acceso a los repositorios de datos",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Cuando necesitemos trabajar en modo desconectado con una base de datos",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Cuando sea necesario tener un diseño y estética en la página web",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Cuando sean necesarias actualizaciones parciales de la página mostrando sólo las partes que han cambiado",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-114",
+    "text": "EI siguiente código de ADO.NET: SqlConnection c= new SqlConnection(s); c.Open(); SqlCommand com= new SqlCommand(' 'Insert Into Cliente (usuario,contrasenya,dni) VALUES (' '+ cl.Usuario + ' ',cl.contrasenya + + cl.DNI+' ')',c); com.ExecuteReader(); c.Close();",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Es incorrecto, utiliza un método de acceso conectado",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Es correcto, utiliza un método de acceso desconectado",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Es correcto, utiliza un método de acceso conectado",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Es incorrecto, utiliza un método de acceso desconectado",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-115",
+    "text": "En el acceso conectado a la BBDD de ADO.net, el código: String s= ConfigurationManager.ConnectionStrings[\"bdExamenConnectionString\"].ToString(); SqlConnection c= new SqlConnection(s); c.Open(); SqlCommand com= new SqlCommand(' 'Insert Into Cliente (usuario,contrasenya,dni) VALUES (' '+ cl.Usuario + ',cl.contrasenya + \",' + cl.DNI+' ')',c); com.ExecuteReader(); c.Close();",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Es incorrecto, se está usando un método para recuperar datos",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Es correcto, recuperamos la cadena de conexión del web.xml y se obtiene el número de registros afectados en la base de datos.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Es correcto, recuperamos la cadena de conexión del web.config y se actualiza la base de datos",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Es incorrecto, para insertar el usuario en la base datos se usaría el método ExecuteCommand",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-116",
+    "text": "En el acceso conectado a la BBDD de ADO.net, el código: String s= ConfigurationManager.ConnectionStrings[\"bdExamenConnectionString\"].ToString(); SqlConnection c= new SqlConnection(s); c.Open(); SqlCommand com= new SqlCommand(' 'Insert Into Cliente (usuario,contrasenya,dni) VALUES (' '+ cl.Usuario + ',cl.contrasenya + \",' + cl.DNI+' ')',c); com.ExecuteNonQuery(); c.Close(); REVISADA",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Es correcto, recuperamos la cadena de conexión del web.config e insertamos un usuario",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Es correcto, recuperamos la cadena de conexión del web.xml y se actualiza la base de datos",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Es incorrecto, para insertar el usuario en la base datos se usaría el método ExecuteCommand",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Es incorrecto, para recuperar la cadena de conexion del web.config se usaria el objeto webconfig",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-117",
+    "text": "¿Qué ocurre si intento lanzar un evento que no tiene un manejador asociado?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "No ocurre nada, simplemente no sucede ninguna acción posterior",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "No se puede dar tal caso: todos los eventos tienen un manejador de eventos asociado por defecto",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "No se puede, se produce una excepción 'EventWithoutHandler'",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "No se puede, el evento es nulo en tal caso",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-118",
+    "text": "En una aplicación ASP.NET toda la computación se realiza:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "En el servidor y en el cliente",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "En el servidor",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Ninguna",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "En el cliente",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-119",
+    "text": "¿Qué significa el siguiente mensaje al ejecutar el comando git status? On branch master; Changes not staged for commit: (use \"git add ... to update what Will be commited) (use \"git checkout -- to discard changes in working directory) modified: foo.cs",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Tengo todos mis cambios en foo.cs al dia en el repositorio local, faltaría enviarlos al repositorio remoto",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Tengo conflictos sin resolver en el archivo foo.cs que debo solucionar para actualizar la historia del repositorio",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Tengo todos mis cambios en foo.cs al dia en el repositorio local y en el remoto",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Tengo algunos cambios en el archivo foo.cs sin invluir en el repositorio local, que debo añadirlos al área de preparación o bien deshacer los cambios",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-120",
+    "text": "EI archivo Global.asax:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Ninguna de las respuestas ofrecidas es correctas",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Permite realizar cambios en él sin necesidad de reiniciar la aplicación",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Puede contener etiquetas HTM pero no ASP.NET",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Permite escribir cualquier tipo de código de aplicación",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-121",
+    "text": "Respecto al modelo de tres capas, ¿cuál de las siguientes afirmaciones es correcta?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "La gestión de eventos lo realiza los EN",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Cada EN puede llamar a su CAD",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Por cada CAD tiene que existir una tabla en la base de datos",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "EI GridView tiene que obtener los datos directamente de los CAD",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-122",
+    "text": "En mi página web tengo un asp:label que inicializo a una cadena vacía en el Page_Load únicamente si isPostBack es false. Adicionalmente, tengo un botón asociado a un evento que concatena una letra \"a\" al componente asp:label anterior. Si al lanzar la página, pulso tres veces el botón, ¿qué veré en el componente asp:Label?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Nada",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "\"aaa\"",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "\"aa\"",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "\"aa\"",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-123",
+    "text": "El siguiente código en una página de contenido: <%@  Page  Language=\"C#\"  MasterPageFile=\"esqueleto.master\"   AutoEventWireup=\"true\" CodeBehind=\"WebForm.aspx.cs\"  Inherits=\"WebApplication.Webform\" %>",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Es correcto. la propiedad MasterPageFile indica el lenguaje en el que está programada la maestra llamada esqueleto.master",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Es incorrecto, la propiedad MasterPageFile debería llamarse Master e indicaría que está asociado a una página maestra llamada esqueleto.master",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Es incorrecto, la propiedad MasterPageFile debería llamarse MasterPage e indicaría que está asociado a una página maestra llamada esqueleto.master",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Es correcto, la propiedad MasterPageFile indica que está asociado a una página maestra de nombre esqueleto.master",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-124",
+    "text": "EI motor AJAX hace que la interacción del usuario con la aplicación:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Sea independiente del servidor con el que trabajamos",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Sea asíncrona en unas ocasiones y síncronas en otras",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Ninguna",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Sea asíncrona",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-125",
+    "text": "Indica qué afirmación es FALSA:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Las bibliotecas dinámicas ocupan menos espacio en memoria",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Las bibliotecas estáticas tienen un mejor rendimiento",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Las bibliotecas estáticas se enlazan en tiempo de compilación",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Las bibliotecas dinámicas permiten cambiar funcionalidad de una aplicación sin recompilar",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-126",
+    "text": "Respecto a los parámetros de la cadena de conexión a la base de datos, indica qué afirmación es correcta",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "EI parámetro Connection Timeout define el tiempo de espera mínimo que debe esperar una conexión para intentar conectar con éxito con el servidor SQL",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "EI parámetro DataSource indica el nombre del servidor SQL",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "EI parámetro AttachDBFileName especifica el nombre del servidor, la cadena de conexión y el tiempo de espera máximo para establecer la conexión",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "EI parámetro integrated security recibe como parámetro un valor entero",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-127",
+    "text": "Asumiendo un entorno desconectado con un gridview vinculado a un DataSet por código. Si quiero borrar un usuario de la base de datos con un id específico ¿Dónde comprobaría la condición del id?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Iterando por el vector Rows de DataTable y haciendo Delete sobre la/s fila/s en las que coincide el id",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "En la cadena SQL del constructor de SqlDataAdaqpter, para luego hacer delete en la/s fila/s recuperadas",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Se puede hacer tanto en el constructor de SqlDataAdapter o iterando por el vector Rows del DataTable",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "No es necesario comprobar. Se puede borrar la fila utilizando la sentencia Rows[id].Remove() del DataTable directamente.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-128",
+    "text": "¿Que es el área de staging?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Es el repositorio donde git almacena las versiones del fuente",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Es el área de trabajo",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Es el área previo donde se indexa y formatean los ficheros antes de la ejecución del commit y que además permite la compresión de los datos para enviarlos al repositorio remoto",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Es el repositorio donde se indexa y formatean los ficheros antes de la ejecución del commit",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-129",
+    "text": "EI siguiente código de clase librería llamada operaciones.cs: namespace calculadora{Class Operaciones{ public static double suma(double suml, double sum2) (...)}}",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Es incorrecto ya que no se puede definir un método estático en una librería",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Todas son incorrectas",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Es correcto: la llamada desde otro proyecto enlazado se realizará mediante la siguiente instrucción: Operaciones.Suma(23.8, 22,1);",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Es correcto, la llamada desde otro proyecto enlazado se realizará mediante la siguiente instrucción: double resultado= new Operaciones.suma (23.8, 22,1);",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-130",
+    "text": "Respecto al tema de la programación dirigida por eventos, ¿cuál de las siguientes afirmaciones es falsa?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Un delegado es un puntero a una función",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "por defecto, los manejadores de evento devuelven void",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Un callback es un puntero a una fucnión",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Un delegado es un tipo de dato que representa referencias a métodos",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-131",
+    "text": "En github, para añadir un hito:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Los hitos deben ir asociados a un pull request",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "No se pueden añadir hitos en github",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Un hito debe ir asociado a una tarea",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Debo hacerlo desde la pestaña issues",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-132",
+    "text": "En la programación dirigida por eventos, el siguiente código: if(b < minBateria) bateriaMinimoexcedido (this, new BateriaMinimoExcedidoArgs (b))",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Es Incorrecto. Faltaría lanzar el evento si el porcentaje de batería está por encima del mínimo",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Es correcto. Si el porcentaje de batería está por debajo del mínimo y el manejador del evento ha sido establecido, 10 lanzamos.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Es incorrecto. Si el porcentaje de batería está por debajo del mínimo, lanzamos el evento. Le faltaría comprobar que hay manejadores asociados al evento bateriaMinimoExcedido asi: (bateriaMinExcedido != null)",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Es correcto. Si el porcentaje de batería está por encima del mínimo y el manejador del evento ha sido establecido, 10 lanzamos.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-133",
+    "text": "En git, ¿Cómo puedo crear la rama \"rama_examen\" y moverme a ella en el mismo paso?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "git checkout -b rama_examen",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "git branch rama_examen",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "git checkout rama_examen",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "git checkout -d rama_examen",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-134",
+    "text": "Con git, ¿cómo puedo recuperar un único fichero desde un servidor remoto (rama master) a mi repositorio local?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "git fetch origin/master -- <fichero>",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "git pull + git checkout origin/master -- <fichero>",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "git fetch + git checkout origin/master -- <fichero>",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "git pull origin/master -- <fichero>",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-135",
+    "text": "En el entorno desconectado de ADO.NET",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Utilizamos DataReader para leer los objetos de una tabla.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Utilizaremos el método Fill del objeto SqlDataReader, para insertar los datos en el DataSet",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Siempre utilizaremos el objeto DataTable",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Utilizaremos el método Fill del objeto SqlDataAdapter, para insertar los datos en el DataSet.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-136",
+    "text": "El siguiente código del cuerpo de una página aspx:  <body><form id=”form1”<div></div><form></body>",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Ninguna de las opciones es correcta",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Es incorrecto, la etiqueta form debe ser asp:form",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Es correcto, una página sólo puede tener un form",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Es incorrecto, la etiqueta form debe ser webform",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-137",
+    "text": "En la ejecución diferida de código...",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Sólo se puede implentar en lenguaje C",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "El dispatcher dispara los eventos",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Tiene su origen el el concepto de callback",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Para utilizarla necesitamos la biblioteca <stdlib.h>",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-138",
+    "text": "En una aplicación de compra-venta, tengo una relación \"pedidos\" de muchos-a-muchos entre Usuario y Producto. Si en esta aplicación, implementada por capas, quiero recuperar de la base de datos todos los productos que me ha pedido un determinado usuario, ¿qué clase debería implementar este método?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "CADUsuario",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "CADProducto",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "CADPedido",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Podría ir tanto en CADUsuario como en CADProducto (pero no en ambas).",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-139",
+    "text": "En la ejecución diferida del código...",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Para utilizarla necesitamos la biblioteca <stdlib.h>.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "EI dispatcher dispara los eventos.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Tiene su origen en el concepto callback",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Sólo se puede implementar en lenguaje C.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-140",
+    "text": "Dentro del evento rowUpdatingEvent de un Gridview, el siguiente código: GridViewRow fila = GridView1.Rows[e.RowsIndex]; ENProducto p = new ENProducto(); p.nombre =; p.descripcion =; DataSet modificado = p.UpdateProducto(); GridView1.DataSource = modificado; GridView1.EditIndex=-1 GridView1.DataBind();",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Es incorrecto, recuperamos la cadena de conexión del web.config pero no se actualiza el origen de datos.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Es correcto, se actualiza el GridView con métodos de acceso conectado.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Es incorrecto, este evento se produce al seleccionar una fila.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Es correcto, se actualiza el GridView con métodos de acceso desconectado.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-141",
+    "text": "Dentro del evento rowUpdatingEvent de un Gridview, el siguiente código: GridViewRow fila = GridView1.Rows[e.RowsIndex]; ENProducto p = new ENProducto(); p.nombre = fila.Cells[0].text; p.descripcion = fila.Cells[1].text; DataSet modificado = p.UpdateProducto(); GridView1.DataSource = modificado; GridView1.EditIndex=-1; REVISADA",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Es correcto, se actualiza el GridView con métodos de acceso conectado.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Es correcto, se actualiza el GridView con métodos de acceso desconectado.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Es incorrecto, recuperamos la cadena de conexión del web.config pero no se actualiza el origen de datos.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Es incorrecto, no se está mostrando el resultado en el GridView",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-142",
+    "text": "EI código en C#:  public event cinturonQuitado;",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Es incorrecto.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Es correcto, sirve para definir un manejador llamado cinturonQuitado.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Es correcto, sirve para definir un evento Ilamado cinturonQuitado",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Es correcto, sirve para definir un delegado llamado cinturonQuitado",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-143",
+    "text": "Una rama local en Git:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "No se puede llamar igual que una remota",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Puede estar en modo detached-head",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Ninguna de las anteriores.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Se puede llamar igual que otra local",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-144",
+    "text": "Un biblioteca en .NET Framework:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Debemos añadir una referencia a los proyectos en los que lo estén empleando.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Si es de tipo dinámico, se añade automáticamente una referencia a los proyectos en los que lo estén empleando. Si es de tipo estático, debemos añadir manualmente una referencia a los proyectos en los que lo estén empleando.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Se añade automáticamente una referencia a los proyectos en los que lo estén empleando.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Produce un ejecutable, no una DLL.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.084Z"
+  },
+  {
+    "id": "q-hadaPreguntas-145",
+    "text": "El control aspnet menú:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Ninguna de las opciones es correcta",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "No puede tener elementos anidados.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Debe llevar la propiedad autopostback=true",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Está compuesto de elementos listItem",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-146",
+    "text": "En una aplicación de tres capas:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Habrá una clase CAD compartida por todas las clases EN",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "La capa MVC llamará a la IU.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "La capa IU llamará a los EN.",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "La capa EN llamará a la capa IU.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-147",
+    "text": "El evento con la signatura protected void Page_Load(object sender, EventArgs e):",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Es incorrecto, la signatura del evento es protected void Page_Loading(object sender, EventArgs e)",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Se invoca solo si la propiedad AutoEventWireup es false",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Se invoca solo si la propiedad AutoEventWireup es true",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Es incorrecto, la signatura del evento es protected void Page_Load(object sender)",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-148",
+    "text": "El evento con la signatura protected void Page_Load(object sender, EventArgs e): REVISADA",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Se invoca cuando se carga la página independientemente de si se pulsa un botón o no.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Es incorrecto, la signatura del evento es protected void Page_Load (object sender)",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Es incorrecto, la signatura del evento es protected void Page_Load (button sender, EventArgs e)",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Se invoca sólo si se pulsa un botón en la web y se lanza un evento.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-149",
+    "text": "El control UpdatePanel de AJAX: Seleccione una:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Todas las respuestas ofrecidas son correctas.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Requiere el control ScriptManager.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Permite refrescar únicamente una parte concreta de la página.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Puede ser activado mediante eventos producidos fuera del panel.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-150",
+    "text": "En una aplicación de una tienda online, en la vista administrador tengo una opción para mostrar todos los usuarios:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Llamare al CADUsuario al pulsar la opción correspondiente.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Lo mas eficiente es mostrar los usuarios en un control de datos.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Utilizaré el método conectado",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Llamare al CADUsuario en el evento PageLoad.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-151",
+    "text": "En el entorno conectado de ADO.NET, con respecto a los datos recuperados de la base de datos en una consulta:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Todos los registros se disponen en un array de tipo Row[] .",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Se leen registro a registro.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Todos los registros se disponen en un array de tipo DataReader[]",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Todos los registros se disponen en un objeto DataTable.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-152",
+    "text": "En el entorno desconectado de ADO.NET, con respecto a los datos recuperados de la base de datos en una consulta:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Todos los registros se disponen en un array de tipo Row[] .",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Se leen registro a registro.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Todos los registros se disponen en un array de tipo DataReader[]",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Todos los registros se disponen en un objeto DataTable.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-153",
+    "text": "En ASP.net",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "por defecto todos los eventos son de tipo no-postback",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "ninguna opción ofrecida es correcta",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "los eventos postback se quedan en una cola en el cliente hasta que se realiza el envio al servidor",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "la propiedad autopostback sirve para convertir un evento cached en postback",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-154",
+    "text": "En visualStudio:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Para utilizar una biblioteca debo crear un proyecto de tipo librería",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Los proyectos de librería pueden crearse de manera independiente",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Los proyectos de librería siempre llevan asociados un proyecto de consola o interfaz grafica.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Las bibliotecas se enlazan al poner el ejecutable en marcha",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-155",
+    "text": "En C#, invocamos a un evento de la siguiente manera:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "mievento e= new mievento(mieventoArgs);",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "mievento(this, new mieventoArgs(value));",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "mievento(mieventoArgs);",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "mievento (this, mieventoArgs):",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-156",
+    "text": "El componente encargado de llevar a cabo la persistencia de las aplicaciones se llama:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Componente de lógica de negocio",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Componente de interfaz de usuario",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Componente de acceso a datos",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Ninguna de las opciones ofrecidas es correcta",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-157",
+    "text": "En el acceso conectado a la BBDD de ADO.net, el código: String s ConfigurationManager.ConnectionStrings(\"bdExanenConnectionString”).ToString(); SqlConnection c = new SqlConnection(s); c.Open(): SqlCommand com = new SqlCommand (‘ ‘ Insert Into Cliente(usuario,contrasenya,dni) VALUES ( ‘ ‘ + cl.Usuario + ‘ ‘, ...... com.ExecuteNonQuery(); c.Close();",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Es incorrecto, para recuperar la cadena de conexión del web.config se usuaria el objeto WebConfig",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Es incorrecto, para insertar el usuario en la base de datos se usaría el método ExecuteCommand.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Es correcto, recuperamos la cadena de conexión del web.config e insertamos un usuario.",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Es correcto, recuperamos la cadena de conexión del web.xml y se actualiza la base de datos",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-158",
+    "text": "NET nos permite trabajar con:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "BBDD SQL solo en aplicaciones web",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "sólo BBDD SQL en aplicaciones web y de consola/escritorio",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Ninguna opción ofrecida es correcta",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "solo con BBDD Access en aplicaciones de consola/escritorio",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-159",
+    "text": "El archivo .gitignore:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Le dice a git que directorios debe rastrear.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Le dice a git que archivos no debe ignorar",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Le dice a git que archivos debe incluir bajo el control de versiones.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Ninguna de las anteriores.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-160",
+    "text": "Una pagina aspnet es valida....",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Si el servidor dice que es valida",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Si todos sus controles de validación son validos",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Si al menos uno de sus controles de validación es valido",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Ninguna opción ofrecida es correcta",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-161",
+    "text": "En el acceso desconectado la información pasa",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "a un DataRow desde un DataTable",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "a un DataSet desde un DataTable",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "a un DataSet desde un DataAdapter",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "a un DataTable desde un SQLCommand",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-162",
+    "text": "¿Cómo puedo con git automatizar la búsqueda de un cambio que ha provocado errores en mi proyecto?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "git test",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "git blame",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "git bisect",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "git log",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-163",
+    "text": "La etiqueta form en aspnet:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Puede declararse varias veces en una pagina aspnet",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Debe ser única en una pagina aspnet",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Debe llevar el atributo action indicando la pagina aspnet destino",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "No debe utilizarse en aspnet",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-164",
+    "text": "Dado el siguiente código ubicado en la capa CAD, indica la afirmación verdadera: public Dataset ListarClientes() { DataSet bdvirtual = new DataSet(); SqlConnection c = new SqlConnection(s); SqlDataReader dr = new SqlDataReader(“select * from Cliente”, c); da.Fill (bdvirtual, \"cliente\"); return bdvirtual;",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Es correcto, se realiza un listado con método desconectado.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Es incorrecto, en el entorno desconectado no debo crear el objeto SqlConnection.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Es incorrecto, hay objetos que no pertenecen al entorno desconectado.",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Es correcto, este código devuelve un DataSet con todos los clientes",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-165",
+    "text": "Para utilizar el AjaxControl Toolkit:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Debo usar el control updatePanel.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Debo instalar un motor AJAX en el navegador.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Debo añadir una librería a visualStudio.",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Ninguna opción es correcta",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-166",
+    "text": "En ADO.net el objeto DataReader:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Se utiliza para ejecutar sentencias SQL en el modo conectado.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Se utiliza para ejecutar sentencias SQL en el modo desconectado",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Utiliza el método Readline para leer el conjunto de resultados.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Es la mejor elección para acceso a datos simple, por su buen rendimiento.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-167",
+    "text": "La propiedad Page.IsPostBack de asp.net:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Nos devuelve un valor que indica si la página se está cargando como respuesta a un valor por el cliente o es la primera vez que se obtiene acceso a ella.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Ninguna opción ofrecida es correcta",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Se utiliza en el método manejador del evento Page init",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Devuelve true solo la primera vez que se carga la pagina",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-168",
+    "text": "El control de validación RegularExpressionValidator de ASP.NET:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Obliga al usuario a introducir un valor",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Compara el valor del control a validar con el de otro control",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Valida que el numero introducido este dentro de un rango definido",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Valida que el valor introducido por el usuario siga un patrón definido por el desarrollador",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-169",
+    "text": "En C# un evento:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Ninguna de las opciones ofrecidas es correcta.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Sólo puede estar conectado con métodos de una clase.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Sólo puede tener conectado un manejador.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Puede tener conectados varios manejadores.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-170",
+    "text": "Respecto el componente SlideShowExtender, del Ajax Control Toolkit, indica que afirmación es cierta",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El servicio web sólo puede contender una función que devuelva una conjunto Slide.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Utiliza un servicio web con extensión asmx.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Se pueden cargar hasta un maximo de 30 imágenes",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "No es necesario incorporar el componente ScriptManager.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-171",
+    "text": "Dado el siguiente código ubicado en el evento Page_Load, indica la afirmación verdadera:  If(!Page.IsPostBack) { d = enl.listarClientesD(); GridView1.DataSource = d; }",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Es incorrecto, la propiedad IsPostBack nunca será false.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Es correcto, este código asigna un DataSet a un GridView.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Es incorrecto, los datos no se han enlazado.",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Ninguna de las respuestas ofrecidas es correcta",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-172",
+    "text": "Dado el siguiente código ubicado en el evento Page_Load para mostrar datos en un gridView, indica la afirmación verdadera:  If(!Page.IsPostBack) { d = enl.listarClientesD(); GridView1.DataSource = d; } REVISADA",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Es incorrecto, la propiedad IsPostBack nunca será false.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Es correcto en caso de que listarClientesD() devuelva un dataset, este codigo asigna un DataSet a un GridView y lo muestra",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Es correcto en caso de que listarClientesD() devuelva un datareader, este codigo asigna un DataReader a un GridView y lo muestra",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Es incorrecto, los datos no se han enlazado.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-173",
+    "text": "En el entorno conectado de ADO.NET, ¿cómo podemos saber si una modificación ha sido correctamente aplicada?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El código no ha lanzado ninguna excepción.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Ninguna de las respuestas ofrecidas es correcta.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "El método ExecuteQuery asociado devuelve true.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "El método ExecuteNonQuery asociado devuelve true.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-174",
+    "text": "En C#, quiero añadir un atributo a una clase cuyo valor pueda modificarse únicamente en el constructor y que no pueda leerse desde el exterior. Para ello usaré:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "public int Value {public get; private set; }",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "private int Value { get; set;}",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "private const int value;",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "private readonly int value;",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-175",
+    "text": "Con el acceso desconectado",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "podemos atender mas peticiones simultaneas",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "podemos atender menos peticiones simultaneas",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "podemos atender las mismas peticiones simultáneas que con el acceso conectado",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "el acceso desconectado solo esta disponible en la version professional de NET",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-176",
+    "text": "¿Dónde es más apropiado almacenar la cadena de conexión para una base de datos en ASP.NET?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Como atributo estático en cada CAD.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Como atributo constante en cada CAD.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Como atributo estático y constante en cada CAD.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "En el archivo web.config",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-177",
+    "text": "En el acceso conectado a la BBDD de ADO.net, el código: String s ConfigurationManager.ConnectionStrings[\"bdExamenConnectionString\"].Tostring(); SqlConnection c = newSqlConnection(s); SqlCommand com = new SqlCommand(“Select * from cliente”, c); Com.ExecuteNonQuery(); c.Close();",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Es correcto, recuperamos la cadena de conexión del web.xml y se obtiene el número de usuarios guardados en la base de datos",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Es incorrecto, no se está usando un método para consultar datos",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Es correcto, recuperamos la cadena de conexión del web.config y se obtienen los usuarios guardados en la base de datos.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Es incorrecto, para consultar los usuarios en la base de datos se usaría el método ExecuteCommand",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-178",
+    "text": "En el siguiente codigo de ADO.net, el código: String s ConfigurationManager.ConnectionStrings[\"bdExamenConnectionString\"]; SqlConnection c = new SqlConnection(s); c.Open(); SqlCommand com = new SqlCommand(“Select * from cliente”, c); Com.ExecuteReader(); c.Close(); REVISADA",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Es correcto, utiliza un metodo del acceso conectado",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Es correcto, utiliza un metodo del acceso desconectado",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Es incorrecto, la conexion no se abre correctamente",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Es incorrecto, no se está obteniendo correctamente la cadena de conexion",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-179",
+    "text": "En mi página web tengo un asp:Label que inicializo a cadena vacía en el Page.Load. Adicionalmente, tengo un botón asociado a un evento que concatena una letra \"a\" al componente asp:Label anterior. Si al lanzar la página, pulso tres veces el botón, ¿qué veré en el componente asp:Label?:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "\"aa\"",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "\"aaa\"",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Nada",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "\"a\"",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-180",
+    "text": "En git, al fusionar ramas si recibo el error Error: Entry ‘ ‘ not uptodate. Cannot merge. (Changes in working directory)",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Hay que ejecutar git merge --abort para deshacer el merge.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Significa que hay cambios que entran en conflicto con otros desarrolladores.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Significa que hay diferencias entre el directorio de trabajo y el staging area.",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Significa que hay diferencias entre el directorio de trabajo y el repositorio.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-181",
+    "text": "Si ejecuto el comando git log -15:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Borraré los 15 últimos commits de la historia.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Obtendré los 15 primeros commits del repositorio.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Obtendré los 15 últimos commits del repositorio.",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Obtendré hasta 15 ramas.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-182",
+    "text": "El control aspnet menú:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "No puede tener elementos anidados.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Está compuesto de elementos listItem",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Debe llevar la propiedad autopostback=true",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Ninguna de las opciones es correcta",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-183",
+    "text": "Las funciones lambda:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Permiten especificar los tipos de datos de los parámetros.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Ninguna de las opciones ofrecidas es correcta",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "No pueden definirse con delegados",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Se definen única y exclusivamente con el operador lambda.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-184",
+    "text": "En una aplicación ASP.NET, el archivo de configuración:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Sirve para incluir opciones de seguridad, estado, memoria, etc.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Está basado en XML",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Todas las opciones ofrecidas son correctas.",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Sirve para definir la cadena de conexión a la BBDD.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-185",
+    "text": "Un biblioteca en .NET Framework:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Debemos añadir una referencia a los proyectos en los que lo estén empleando.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Produce un ejecutable, no una DLL.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Se añade automáticamente una referencia a los proyectos en los que lo estén empleando.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Si es de tipo dinámico, se añade automáticamente una referencia a los proyectos en los que lo estén empleando. Si es de tipo estático, debemos añadir manualmente una referencia a los proyectos en los que lo estén empleando.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-186",
+    "text": "El AJAX toolkit incluye:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Controles AJAX especiales de acceso a datos",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "solo un nuevo control que se lama SlideshowPanel para refinar el control asp:image.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Controles adicionales y extensores de controles para incluir nuevos comportamientos o propiedades a los ya existentes",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Los mismos controles de validación pero implementados con AJAX",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-187",
+    "text": "En ADO.net acceso conectado a BBDD",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Ninguna de las opciones ofrecidas es correcta",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Para ejecutar una sentencia insert debemos utilizar el método ExecuteReader del objetoCommand",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Necesitamos utilizar el objeto DataAdapter para ejecutar el comando SQL",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Siempre hay que realizar una select",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-188",
+    "text": "Si se emite un evento sin tener código conectado:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "No pasa nada, pero solo en C#",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "No pasa nada si es la primera vez.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Tendremos un error de ejecución desde la segunda vez que ocurra",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Ninguna de las opciones ofrecidas es correcta.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-189",
+    "text": "En git... ¿cómo puedo obtener un archivo tal y como se encontraba en una versión determinada del proyecto?:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "git show HEAD~3:file.html < myversion.html",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "git generatefile HEAD~3",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "No es posible realizar esta acción en git.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "git checkout HEAD~3 --file.html",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-190",
+    "text": "En una aplicacion de consola de C# la conexión de los eventos con los manejadores:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "debe realizarse siempre en el constructor",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "ninguna de las opciones ofrecidas es correcta",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "debe realizarse siempre en el main",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "no es obligatoria su conexión",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-191",
+    "text": "En el acceso conectado de ADO.NET, la cadena de conexión se pasa como parámetro",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "al constructor de la clase SqlCommand",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "al constructor de la clase ExecuteReader",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "al constructor de la clase SqlDataReader",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "al constructor de la clase SqlConnection",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-192",
+    "text": "En mi web ASP.NET quiero añadir en una etiqueta un saludo al azar desde el evento Page_Load. ¿Qué diferencias hay entre usar la etiqueta label de HTML o el componente asp:Label?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Ambos son posibles pero la etiqueta de HTML es más eficiente al ser tecnología de cliente.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Sólo es posible con el asp:Label.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Solo es posible con la etiqueta label de HTML",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Ambos son posibles pero el componente asp:Label es más eficiente al ser tecnología de servidor.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-193",
+    "text": "En .NET , el control AJAX ScriptManager:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Se ejecuta en el cliente",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Se ejecuta en el servidor",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Se ejecuta parte en el servidor y parte en el cliente",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Todas las anteriores son correctas",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-194",
+    "text": "El código en C#: public event cinturonQuitado;",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Es incorrecto.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Es correcto, sirve para definir un delegado llamado cinturonQuitado",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Es correcto, sirve para definir un evento llamado cinturonQuitado",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Es correcto, sirve para definir un manejador llamado cinturonQuitado.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-195",
+    "text": "En un Git Flow típico, cuando encuentro un bug:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Abro una rama nueva para corregirlo. Puedo hacer varios commits en esta nueva rama pero solo se fusiona con la rama principal al solucionar el bug",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Abro una rama nueva para corregirlo. Puedo hacer varios commits en esa nueva rama pero cada uno se fusiona con la rama principal inmediatamente.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Se corrige en la rama principal directamente.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Abro una rama nueva para corregirlo. Sólo puedo hacer un único commit para solucionar el bug, que se fusiona después con la rama principal.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-196",
+    "text": "En mi repositorio local he creado una etiqueta con el comando git tag v1.8. Si quiero compartir esta etiqueta con el servidor remoto necesito ejecutar:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "git fetch origin -t.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "git push origin -t v1.8",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "git push origin --tags",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "git pull origin v1.8.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-197",
+    "text": "En el acceso conectado de ADO.NET , recuperamos una fila de una consulta",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "con el método Read de la clase DataRow.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "con el método nextRow de la clase Row",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "con el metodo anotherRow de la clase DataReader",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "con el método Read de la clase DataReader.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-198",
+    "text": "La plataforma .NET ofrece:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Un entorno de ejecución de código gestionado.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Un entorno de ejecución de código nativo.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Un entorno de ejecución de código nativo y gestionado.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Un entorno de ejecución de código no gestionado.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-199",
+    "text": "La plataforma VisualStudio:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Funciona en cualquier sistema operativo.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Funciona solo en Windows.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Funciona solo en Linux.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Funciona solo en Mac OS.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-200",
+    "text": "El CLR significa:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Common Language Runtime",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Common Language Repository",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Common Language Reader",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Common Language Reflection",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-201",
+    "text": "En C# las entradas y salidas de datos se realizan mediante:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "La clase Console.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "La clase System.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "La clase System.IO.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "La clase System.InputOutput.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-202",
+    "text": "ArrayList representa:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Un array de objetos que puede crecer dinámicamente.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Un array de objetos que no puede crecer dinámicamente.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Representa una colección de objetos tipo FIFO.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Representa una colección de objetos tipo LIFO.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-203",
+    "text": "Hashtable representa:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Una colección de objetos tipo FIFO.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Una colección de objetos tipo LIFO.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Un array de objetos que puede crecer dinámicamente.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Una colección pares clave/valor organizados por el valor hash code de la clave.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-204",
+    "text": "Queue representa:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Una colección de objetos tipo FIFO.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Una colección de objetos tipo LIFO.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Un array de objetos que puede crecer dinámicamente.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Una colección pares clave/valor organizados por el valor hash code de la clave.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-205",
+    "text": "Stack representa:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Una colección de objetos tipo LIFO.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Una colección de objetos tipo FIFO.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Un array de objetos que puede crecer dinámicamente.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Una colección pares clave/valor organizados por el valor hash code de la clave.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-206",
+    "text": "El componente encargado de llevar a cabo la persistencia de la aplicación se llama:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Componente de interfaz de usuario",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Componente de acceso a datos",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Componente de lógica de negocio",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "No contesto(equivalente a no marcar ninguna)",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-207",
+    "text": "Dependiendo del tipo de BBDD utilizada en ADO.net",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "sólo en el acceso conectado el prefijo cambiará dependiendo del tipo de BBDD",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "ninguna de las opciones ofrecidas es correctas",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "todos los objetos llevarán un prefijo diferente (Sql,OleDb..)",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "el objeto DataSet y el objeto DataReader no llevan prefijo",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-208",
+    "text": "EI control de validación RangeValidator de asp.net:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Realiza la validación en el servidor",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Ninguna de las anteriores",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Compara el valor del control a validar con el de otro control",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Valida que el número introducido esté dentro de un rango definido",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-209",
+    "text": "En una aplicación de consola C# para comprobar que un evento tiene asociado al menos un controlador",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "se tiene que comprobar antes de lanzar el eventos",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "se tiene que comprobar en el main",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "no es necesario comprobarlo",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "se realiza automáticamente",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-210",
+    "text": "Los SCV, según la forma de almacenar los contenidos, se clasifican en:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Centralizados y distribuidos",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Centralizados y colaborativos",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Distribuidos y exclusivos",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Centralizados y exclusivos",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-211",
+    "text": "En el acceso desconectado a la BBDD de ADO.net, el código: DataSet bdv = new DataSet(); SqlConnection c = new SqlConnection(s);SqlDataAdapter da = new SqlDataAdapter(\"select * from Cliente\"); da.Fill(bdv, c);",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Es correcto, estamos actualizando la bbdd",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Es correcto, rellenamos el dataset local",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Es incorrecto",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Ninguna de las anteriores",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-212",
+    "text": "En el modo desconectado, dado el sifguiente método ubicado en la capa CAD,  indica cuál es la afirmación verdadera: public DataSet InsertarCliente(ENCliente cli) {    SqlConnection c= new SqlConnection(s);   c.Open();   SqlCommand com= new SqlCommand(' 'Insert Into Cliente (usuario,contrasenya,dni) VALUES (' '+ cli.Usuario + ' ',cli.contrasenya + '',' + cli.DNI+' ')',c); Dataset ds= new DataSet(); da.Fill(ds,\"Cliente\"): SqlCommandBuilder cbuilder =new SqlCommandBuilder(da);  return ds; c.Close();",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Es incorrecto, este método no inserta un cliente",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Es incorrecto, no debe devolver nada",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Es correcto, este método inserta un nuevo cliente y devuelve un DataSet",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Es incorrecto, se debe especificar una sentencia Update",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-213",
+    "text": "En C# el enlace entre un evento y su controlador",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "las dos con * son ciertas",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "*se implementa mediante un delegado",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "se realiza automáticamente",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "*se implementa mediante un puntero a función",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-214",
+    "text": "En una aplicación ASP.NET, si tenemos la operación de borrado siguiente: SqlConnection c = new SqlConnection(s); c.Open(); string sql = \"Delete from usuarios where activo=false\" SqlCommand com = new SqlCommand(sql, c);",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Mediante el método ExecuteNonQuery de la siguiente manera sql.ExecuteNonQuery(com);",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Mediante el método ExecuteNonQuery de la siguiente manera com.ExecuteNonQuery();",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Mediante el método ExecuteNonQuery de la siguiente manera sql.ExecuteNonQuery();",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Mediante el método ExecuteNonQuery de la siguiente manera com.ExecuteNonQuery(sql);",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-215",
+    "text": "En una aplicación ASP.NET, si tenemos la operación de actualización siguiente: SqlConnection c = new SqlConnection(s); c.Open(); string sql = \"Update  from usuarios where activo=false\" SqlCommand com = new SqlCommand(sql, c); REVISADA",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Mediante el método ExecuteQuery de la siguiente manera sql.ExecuteQuery();",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Mediante el método ExecuteNonQuery de la siguiente manera com.ExecuteNonQuery();",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Mediante el método ExecuteNonQuery de la siguiente manera com.ExecuteNonQuery(sql,c);",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Mediante el método ExecuteNonQuery de la siguiente manera sql.ExecuteNonQuery(com);",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-216",
+    "text": "La validacion de un correo electronico es:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "\\S+@\\S+\\.\\S+",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "\\w+@\\w+\\.\\w+",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "\\D+@\\D+\\.\\D+",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-217",
+    "text": "En una aplicación de consola C# para comprobar que un evento tiene asociado al menos un controlador",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "se realiza automáticamente",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "no es necesario comprobarlo",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "se tiene que comprobar antes de lanzar el evento",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "se tiene que comprobar en el main",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-218",
+    "text": "El control de validación RangeValidator de asp.net:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Ninguna es correcta",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Compara el valor del control a validar con el de otro control",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Sólo valida que el número introducido esté dentro de un rango definido",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Realiza la validación en el servidor",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-219",
+    "text": "En un modelo de tres capas, la interfaz y gestión de eventos se realizará por:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "La capa EN.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "La capa IU.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "La capa MVC.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "La capa CAD.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-220",
+    "text": "Utilizando AJAX, en el navegador:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Se utiliza un objeto XmlHttpRequest y C",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Se utiliza un objeto HttpRequest y JavaScript",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Se utiliza un objeto XmlHttpRequest y JavaScript",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Todas las respuestas ofrecidas son incorrectas",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-221",
+    "text": "En el entorno desconectado de ADO.NET, los conflictos cuando varios usuarios modifican los mismos registros a la vez se gestionan: REVISADA",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Aplicando una concurrencia pesimista donde se bloquean las filas cada vez que se accede a ellas.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Aplicando una concurrencia positiva y se bloquean las filas cada vez que se accede a ellas.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Aplicando una concurrencia positiva, de forma que se produce un error cuando se intenta modificar una fila ya modificada.",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Manteniendo el último cambio que se escribió.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-222",
+    "text": "En el entorno desconectado,¿Cómo podemos saber si una modificacion ha sido correctamente aplicada?: REVISADA",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El código no ha lanzado ninguna excepción",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "El método Update de DataAdapter devuelve true",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Ninguna es correcta",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "El método ExecuteNonQuery asociado devuelve el número de filas adectadas",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-223",
+    "text": "Asumiendo un entorno desconectado con un gridview vinculado a un DataSet por código. Si quiero actualizar un usuario de la base de datos con un id específico ¿cómo accedería a ese usuario en concreto? REVISADA",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Iterando por el vector Rows de DataTable y haciendo Update sobre la/s fila/s en las que coincide el id",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "En la cadena SQL del constructor de SqlDataAdaqpter, para luego hacer Update en la/s fila/s recuperadas",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Se puede hacer tanto en el constructor de SqlDataAdapter o iterando por el vector Rows del DataTable",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "No es necesario comprobar nada",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-224",
+    "text": "En el entorno desconectado de ADO.NET: REVISADA",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "En la concurrencia pesimista, el objeto DataSet mantiene dos versiones de las filas que leímos",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "La concurrencia positiva permite leer cualquier fila en cualquier momento y modificarla sin ningún problema.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "La concurrencia pesimista permite leer cualquier fila en cualquier momento y devolvería error en caso de que la fila haya sido modificada tras su lectura si queremos actualizarla.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "La concurrencia positiva permite leer cualquier fila en cualquier momento y devolvería error en caso de que la fila haya sido modificada tras su lectura si queremos actualizarla.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-225",
+    "text": "En el acceso conectado a la BBDD de ADO.net, el código del método \"public bool readUsuario(ENUsuario en)\": String s = ConfigurationManager.ConnectionStrings[\"bdExamenConnectionStringt']. ToString ( ) ; Sq1Connection conn = new Sq1Connection (s) ; conn.Open(); string comando = \"SELECT * FROM Usuarios WHERE nif=' \" + en.niftJsuario +\"'\": SqICommand com = new SgICommand (comando, conn) ; Sg1DataReader dr = com. ExecuteReader ( ) ; en.nifUsuario = dr[\"nif\"].ToString() ; en. nombreUsuario = dr[\"nombre\"] .ToString() ; en.edadUsuario = int. Parse (dr [\"edad\"] .ToString ( ) ) ; dr. Close ( ) ; c. Close(); Seleccione una: REVISADA",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Es incorrecto, para leer el usuario utilizaríamos el método Executecommand.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Es incorrecto, se produce una excepción.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "A y B son correctas.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Es correcto, recuperamos la cadena de conexión del web.config y leemos el usuario con el nif pasado como parámetro.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-226",
+    "text": "El objeto DataReader en un entorno conectado: REVISADA",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Para recuperar los datos mediante un DataReader, creamos una instancia del objeto Command y a continuacion creamos el DataReader llamando al método ExecuteReader",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Para recuperar los datos mediante un DataReader, creamos una instancia del objeto Command y a continuacion crearemos el DataReader llamando al metodo Read",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "El metodo Read permite acceder tanto al registro siguiente como al registro anterior",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Los datos obtenidos son de lectura y escritura",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-227",
+    "text": "En una aplicacion aspnet si utilizamos el modelo de 3 capas REVISADA",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Ninguna es correcta",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Cada capa debe tener una referencia a la otra capa",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "La BBDD debe ir en la carpeta de los CAD",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Cada capa debe ir en una carpeta diferente",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-228",
+    "text": "En una aplicacion dividida en 3 capas, los CAD pueden: REVISADA",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Solo pueden tener los metodos CRUD de acceso a BBDD",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "*Invocar a procedimientos almacenados",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Las dos con * son ciertas",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "*Controlar la seguridad y autorizacion",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-229",
+    "text": "Queremos desarrollar una función que envíe un email a un cliente cada vez que se realice una nueva compra, con la factura. ¿Cuáles de estos objetos utilizaremos en nuestra función?: REVISADA",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "SmtpClient, MailMessage, MailAttach.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "SmtpClient, MailMessage, MailAddress.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "SmtpClient.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "SendEmail, SmtpClient, MailMessage.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-230",
+    "text": "El delegado EventHandler tiene la siguiente signatura en C#: REVISADA",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "delegate void EventHandler(object sender, EventArgs e);",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "delegate void EventHandler(object sender, object e);",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "delegate int EventHandler(object sender, EventArgs e);",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "delegate object EventHandler(object sender, EventArgs e);",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-231",
+    "text": "Cuando estamos utilizando el comando bisect de Git. ¿con qué comando se indica el último estado bueno conocido, en el que el código funcionaba correctamente?: REVISADA",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "git bisect start",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "git bisect good",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "git bisect SHA-I",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "git bisect ok",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-232",
+    "text": "Después de inicializar un repositorio Git nuevo y crear un archivo llamado git-file.html, cuál de los siguientes comandos no funcionará si lo ejecutamos? REVISADA",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "git add .",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "git status",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "git add git-file.html",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "git commit —m \"git web file added\"",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-233",
+    "text": "¿Qué es Git? REVISADA",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Un lenguaje de programación que se utilizó para crear Linux",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Un alias para Github",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Un sistema de control de versiones",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Una plataforma de repositorio remoto",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  },
+  {
+    "id": "q-hadaPreguntas-234",
+    "text": "La siguiente sentencia: \"Git añade de forma automatica los archivos que vamos creando al repositorio e inmediatamente empieza a monitorizarlos\" es: REVISADA",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Depende. Si se inicializa el repositorio con el comando \"git init\" y se crea un archivo .gitignore, entonces la respuesta es Verdadera.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Falsa.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Verdadera.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Depende. Si se inicializa el repositorio con el comando \"git init\" entonces la respuesta es Verdadera.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.085Z"
+  }
+]

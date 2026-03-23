@@ -1,0 +1,110 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import InternalPageLayout from '../components/layout/InternalPageLayout.astro';
+import { getSubjects } from '../lib/firebase/service';
+
+const subjects = await getSubjects();
+---
+
+<BaseLayout title="Sugerir Pregunta">
+    <InternalPageLayout>
+        <div slot="header">
+            <h1 class="text-3xl font-bold">Sugerir Nueva Pregunta</h1>
+            <p class="text-blue-100 italic">Ayuda a otros compañeros aportando material nuevo</p>
+        </div>
+
+        <div class="max-w-3xl mx-auto mt-8 bg-white rounded-3xl p-8 shadow-sm border border-gray-100">
+            <form id="suggestion-form" class="space-y-6">
+                <div>
+                    <label class="block text-sm font-bold text-gray-700 mb-2">Asignatura</label>
+                    <select name="subjectId" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all">
+                        <option value="">Selecciona una asignatura...</option>
+                        {subjects.map(s => (
+                            <option value={(s as any).id}>{s.name}</option>
+                        ))}
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-bold text-gray-700 mb-2">Texto de la Pregunta (Soporta $fómulas$)</label>
+                    <textarea name="text" required rows="4" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="Escribe aquí el enunciado..."></textarea>
+                </div>
+
+                <div class="space-y-4">
+                    <label class="block text-sm font-bold text-gray-700">Opciones de Respuesta</label>
+                    <div class="grid grid-cols-1 gap-4">
+                        {[1, 2, 3, 4].map(i => (
+                            <div class="flex items-center space-x-3">
+                                <input type="radio" name="correctIndex" value={i-1} required class="w-5 h-5 text-primary focus:ring-primary" />
+                                <input type="text" name={`option-${i-1}`} placeholder={`Opción ${i}`} class="flex-1 px-4 py-2 rounded-lg border border-gray-200 focus:ring-2 focus:ring-primary outline-none" required={i <= 2} />
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                <div class="pt-6">
+                    <button type="submit" class="w-full bg-primary text-white font-bold py-4 rounded-2xl hover:bg-opacity-90 hover:shadow-lg transform active:scale-[0.98] transition-all flex items-center justify-center space-x-2">
+                        <span class="material-icons-outlined">send</span>
+                        <span>Enviar Sugerencia</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </InternalPageLayout>
+</BaseLayout>
+
+<script>
+    const form = document.querySelector('#suggestion-form');
+    form?.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const submitBtn = form.querySelector('button[type="submit"]');
+        if (!submitBtn) return;
+        const originalText = submitBtn.innerText;
+        
+        submitBtn.disabled = true;
+        submitBtn.innerText = 'Enviando...';
+        
+        const formData = new FormData(form);
+        
+        const options = [];
+        const correctIndex = parseInt(String(formData.get('correctIndex') || '0'), 10);
+        
+        for (let i = 0; i < 4; i++) {
+            const optText = formData.get(`option-${i}`);
+            if (optText) {
+                options.push({
+                    id: `opt-${i}`,
+                    text: optText,
+                    isCorrect: i === correctIndex
+                });
+            }
+        }
+        
+        const data = {
+            subjectId: formData.get('subjectId'),
+            text: formData.get('text'),
+            options: options
+        };
+        
+        try {
+            const response = await fetch('/api/suggest', {
+                method: 'POST',
+                body: JSON.stringify(data),
+                headers: { 'Content-Type': 'application/json' }
+            });
+            
+            if (response.ok) {
+                alert('¡Gracias! Tu sugerencia ha sido enviada y será revisada pronto.');
+                form.reset();
+                window.location.href = '/';
+            } else {
+                throw new Error('Fallback failed');
+            }
+        } catch (err) {
+            alert('Error al enviar la sugerencia. Revisa tu conexión.');
+        } finally {
+            submitBtn.disabled = false;
+            submitBtn.innerText = originalText;
+        }
+    });
+</script>

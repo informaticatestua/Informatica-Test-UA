@@ -1,0 +1,138 @@
+[
+  {
+    "id": "ac",
+    "name": "AC",
+    "category": "Segundo Curso",
+    "icon": "💻",
+    "color": "#4D96FF",
+    "createdAt": "2026-03-13T17:50:45.051Z"
+  },
+  {
+    "id": "ada",
+    "name": "ADA",
+    "category": "Segundo Curso",
+    "icon": "📚",
+    "color": "#FF6B6B",
+    "createdAt": "2026-03-13T17:50:45.055Z"
+  },
+  {
+    "id": "adi",
+    "name": "ADI",
+    "category": "Tercer Curso",
+    "icon": "🗄️",
+    "color": "#27AE60",
+    "createdAt": "2026-03-13T17:50:45.065Z"
+  },
+  {
+    "id": "dca",
+    "name": "DCA",
+    "category": "Rama Software",
+    "icon": "⚙️",
+    "color": "#6BCB77",
+    "createdAt": "2026-03-13T17:50:45.067Z"
+  },
+  {
+    "id": "dss",
+    "name": "DSS",
+    "category": "Tercer Curso",
+    "icon": "📚",
+    "color": "#666666",
+    "createdAt": "2026-03-13T17:50:45.070Z"
+  },
+  {
+    "id": "gcs",
+    "name": "GCS",
+    "category": "Rama Software",
+    "icon": "📚",
+    "color": "#666666",
+    "createdAt": "2026-03-13T17:50:45.072Z"
+  },
+  {
+    "id": "gpi",
+    "name": "GPI",
+    "category": "Tercer Curso",
+    "icon": "📊",
+    "color": "#FF8E3C",
+    "createdAt": "2026-03-13T17:50:45.073Z"
+  },
+  {
+    "id": "hada",
+    "name": "HADA",
+    "category": "Segundo Curso",
+    "icon": "🛠️",
+    "color": "#FF4C29",
+    "createdAt": "2026-03-13T17:50:45.075Z"
+  },
+  {
+    "id": "ic",
+    "name": "IC",
+    "category": "Tercer Curso",
+    "icon": "🔌",
+    "color": "#334756",
+    "createdAt": "2026-03-13T17:50:45.075Z"
+  },
+  {
+    "id": "mads",
+    "name": "MADS",
+    "category": "Cuarto Curso",
+    "icon": "🔧",
+    "color": "#212121",
+    "createdAt": "2026-03-13T17:50:45.079Z"
+  },
+  {
+    "id": "ped",
+    "name": "PED",
+    "category": "Segundo Curso",
+    "icon": "📝",
+    "color": "#00ADB5",
+    "createdAt": "2026-03-13T17:50:45.084Z"
+  },
+  {
+    "id": "ppss",
+    "name": "PPSS",
+    "category": "Tercer Curso",
+    "icon": "🧪",
+    "color": "#F08A5D",
+    "createdAt": "2026-03-13T17:50:45.085Z"
+  },
+  {
+    "id": "redes",
+    "name": "REDES",
+    "category": "Segundo Curso",
+    "icon": "🌐",
+    "color": "#FFD93D",
+    "createdAt": "2026-03-13T17:50:45.085Z"
+  },
+  {
+    "id": "sds",
+    "name": "SDS",
+    "category": "Rama Software",
+    "icon": "🛡️",
+    "color": "#9452FF",
+    "createdAt": "2026-03-13T17:50:45.101Z"
+  },
+  {
+    "id": "si",
+    "name": "SI",
+    "category": "Tercer Curso",
+    "icon": "📁",
+    "color": "#3498DB",
+    "createdAt": "2026-03-13T17:50:45.110Z"
+  },
+  {
+    "id": "sti",
+    "name": "STI",
+    "category": "Primer Curso",
+    "icon": "📡",
+    "color": "#E67E22",
+    "createdAt": "2026-03-13T17:50:45.111Z"
+  },
+  {
+    "id": "taes",
+    "name": "TAES",
+    "category": "Tercer Curso",
+    "icon": "🚀",
+    "color": "#B83280",
+    "createdAt": "2026-03-13T17:50:45.117Z"
+  }
+]

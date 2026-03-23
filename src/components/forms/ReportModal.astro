@@ -1,0 +1,94 @@
+---
+---
+<div id="report-modal" class="hidden fixed inset-0 z-[100] backdrop-blur-md bg-black/60 flex items-center justify-center p-4">
+    <div class="glass border-white/10 rounded-[2.5rem] max-w-lg w-full p-10 shadow-3xl transform transition-all scale-95 opacity-0 modal-content relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-primary to-blue-400"></div>
+        
+        <div class="flex justify-between items-start mb-8">
+            <h2 class="text-2xl font-black text-white flex items-center gap-3">
+                <span class="material-symbols-outlined text-rose-500 text-3xl">warn</span>
+                <span>Reportar Error</span>
+            </h2>
+            <button class="text-slate-500 hover:text-white transition-colors close-modal group">
+                <span class="material-symbols-outlined text-2xl group-hover:rotate-90 transition-transform duration-300">close</span>
+            </button>
+        </div>
+
+        <form id="report-form" class="space-y-6">
+            <input type="hidden" name="questionId" id="report-q-id">
+            
+            <div class="space-y-2">
+                <label class="block text-xs font-black text-slate-500 uppercase tracking-widest pl-1">¿Qué sucede?</label>
+                <select name="type" required class="block w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-white focus:border-primary/50 focus:ring-4 focus:ring-primary/10 outline-none transition-all appearance-none cursor-pointer">
+                    <option value="wrong_answer" class="bg-slate-900">Respuesta incorrecta</option>
+                    <option value="typo" class="bg-slate-900">Error tipográfico / ortográfico</option>
+                    <option value="math_error" class="bg-slate-900">Error en fórmula matemática</option>
+                    <option value="other" class="bg-slate-900">Otro motivo</option>
+                </select>
+            </div>
+
+            <div class="space-y-2">
+                <label class="block text-xs font-black text-slate-500 uppercase tracking-widest pl-1">Descripción (opcional)</label>
+                <textarea name="description" rows="3" class="block w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-white placeholder:text-slate-600 focus:border-primary/50 focus:ring-4 focus:ring-primary/10 outline-none resize-none transition-all" placeholder="Explica brevemente qué está mal..."></textarea>
+            </div>
+
+            <button type="submit" class="w-full py-5 bg-primary text-white rounded-2xl font-black text-lg hover:shadow-[0_0_25px_rgba(37,106,244,0.3)] hover:bg-primary/90 transition-all active:scale-95 shadow-xl shadow-primary/10">
+                Enviar Reporte
+            </button>
+        </form>
+    </div>
+</div>
+
+<script type="module">
+    import { logEvent } from '../../lib/firebase/client';
+
+    const modal = document.getElementById('report-modal');
+    const content = modal?.querySelector('.modal-content');
+    const closeBtns = modal?.querySelectorAll('.close-modal');
+    const form = document.getElementById('report-form');
+
+    function closeModal() {
+        content?.classList.replace('scale-100', 'scale-95');
+        content?.classList.replace('opacity-100', 'opacity-0');
+        setTimeout(() => modal?.classList.add('hidden'), 200);
+    }
+
+    closeBtns?.forEach(btn => btn.addEventListener('click', closeModal));
+
+    form?.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const formData = new FormData(form);
+        const payload = {
+            questionId: String(formData.get('questionId') ?? ''),
+            reason: String(formData.get('type') ?? ''),
+            details: String(formData.get('description') ?? '')
+        };
+
+        // Track report submission
+        logEvent('report_error', {
+            error_type: payload.reason,
+            question_id: payload.questionId
+        });
+
+        try {
+            const response = await fetch('/api/report', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            });
+
+            if (!response.ok) {
+                let body: any = null;
+                try { body = await response.json(); } catch {}
+                throw new Error(body?.error || 'Error al enviar el reporte');
+            }
+
+            alert('¡Reporte enviado con éxito! Gracias por colaborar.');
+            closeModal();
+            form.reset();
+        } catch (err) {
+            console.error('Report submit failed:', err);
+            alert('No se pudo enviar el reporte. Revisa tu conexión e intenta de nuevo.');
+        }
+    });
+</script>

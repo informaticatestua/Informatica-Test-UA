@@ -1,0 +1,818 @@
+[
+  {
+    "id": "q-ac_CP-F2_Preguntas-1",
+    "text": "¿Que afirmación es correcta en relación a la tecnología SSE?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "No permite en ningún caso utilizar los registros de propósito general.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "No permite operaciones de transferencia entre registros XMM y la memoria.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "No incorpora instrucciones de salto especiales.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.010Z"
+  },
+  {
+    "id": "q-ac_CP-F2_Preguntas-2",
+    "text": "Tras la siguiente instrucción SSE, si xmm0 = [10, 20, 30, 40]: \\n ``` shufps xmm0, xmm0, 0x5A ``` \\n ¿Cuál será el nuevo contenido de xmm0? Seleccione una:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "20, 20, 30, 30",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "20, 30, 20, 30",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "10, 20, 20, 40",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.010Z"
+  },
+  {
+    "id": "q-ac_CP-F2_Preguntas-3",
+    "text": "``` runspec --reportable --config=win32-x86-vc7.cfg -T base int ``` \\n¿Qué cambio en la línea de comandos de arriba se debe hacer para seleccionar eI benchmark suite CFP2000? Seleccione una:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Cambiar int por fp.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Cambiar int por cfp.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Cambiar base int por peak fp.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.010Z"
+  },
+  {
+    "id": "q-ac_CP-F2_Preguntas-4",
+    "text": "Indica el tipo de arquitectura que mejor se ajusta a la operación de multiplicación de un número por las componentes de un vector. Seleccione una:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "SISD",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "SIMD",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "MISD",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.010Z"
+  },
+  {
+    "id": "q-ac_CP-F2_Preguntas-5",
+    "text": "En ensamblador, cuando hablamos de word, nos referimos a...",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Tipos de datos de 2 bytes de tamaño",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Un conjunto de ocho bits",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Un procesador de texto",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.010Z"
+  },
+  {
+    "id": "q-ac_CP-F2_Preguntas-6",
+    "text": "¿En qué lenguajes estan escritas las aplicaciones que utiliza SPEC como benchmarks?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "C, C++ y C#",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "C, C++ y Fortran",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Java, Python y C",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.010Z"
+  },
+  {
+    "id": "q-ac_CP-F2_Preguntas-7",
+    "text": "¿Que opción es correcta como Instrucctón SSE para leer un dato de la memoria?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "movapd xmmO, [xmm1 + ebx]",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "movapd xmm0, [esi + ebx]",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "movapd ebx,  [xmm1 + ebx]",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.010Z"
+  },
+  {
+    "id": "q-ac_CP-F2_Preguntas-8",
+    "text": "El ejemplo \"inner product\" contiene la función \"sse3_inner\" que utiliza la instrucción \"addps\". Esta instrucción realiza lo siguiente:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Suma valores empaquetados en punto flotante de simple precisión",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Suma valores empaquetados enteros",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Suma valores empaquetados en un punto flotante de doble precisión",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.010Z"
+  },
+  {
+    "id": "q-ac_CP-F2_Preguntas-9",
+    "text": "```int DataTransferOptimised(int* pidst, int* pisrc, unsigned long SizeInBytes)\\n{\\n\\tunsigned long dwNumElements = SizeInBytes / sizeof(int);\\n\\tunsigned long dwNumPacks = dwNumElements / (128/(sizeof(int)*8));\\n\\n\\t__asm\\n\\t{\\n\\t\\tpusha;\\n\\tbegin:\\n\\t\\tmov ecx, SizeInBytes;\\n\\t\\tmov edi,pidst;\\n\\t\\tmov esi, pisrc;\\n\\tbegina:\\n\\t\\tcmp ecx,0;\\n\\t\\tjz end;\\n\\tbody:\\n\\t\\n\\t\\tmov ebx, SizeInBytes;\\n\\t\\tsub ebx, ecx;\\n\\t\\n\\t\\tmovdqa xmm1, [esi+ebx];\\n\\t\\tmovdqa [edi+ebx], xmm1;\\n\\t\\n\\tbodya:\\n\\t\\tsub ecx, 16;\\n\\t\\tjmp begina;\\n\\tend:\\n\\t\\tpopa;\\n\\t}\\n\\n\\treturn 0;\\n}\\n\\n#pragma warning(pop)\\n``` \\n La rutina data transfer optimizada realiza transferencias de datos entre memoria utilizando dos instrucciones \"movdqa\" que transfieren:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Los 8 bytes ubicados a partir la direccion de memoria [edi+ebx] hasta la direccion de memoria [esi+ebx], utilizando xmm1 como registro intermedio",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Los 16 bytes ubicados a partir la direccion de memoria [edi+ebx] hasta la direccion de memoria [esi+ebx], utilizando xmm1 como registro intermedio",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Los 16 bytes ubicados a partir la direccion de memoria [esi+ebx] hasta la direccion de memoria [edi+ebx], utilizando xmm1 como registro intermedio",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.010Z"
+  },
+  {
+    "id": "q-ac_CP-F2_Preguntas-10",
+    "text": "¿Que afirmación es incorrecta en relación a la tecnología SSE?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "SSE proporciona 8 nuevos registros de 128 bits",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "SSE utiliza los registros de la Unidad en Punto Flotante",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "SSE permite operar con datos empaquetados en punto flotante",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.010Z"
+  },
+  {
+    "id": "q-ac_CP-F2_Preguntas-11",
+    "text": "```__asm { \\n\\t(...) \\n\\tbucle: \\n\\t\\t... código ... \\n\\t\\t... 1000 instrucciones más ... \\n\\tCERRAR bucle \\n}``` \\n En el código ensamblador x86 anterior ¿Qué instrucción deberá ser CERRAR?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "JMP, puesto que no se trata de una etiqueta corta (<128 posiciones)",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "LOOP, puesto que se trata de un bucle",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "CLOSE, puesto que CERRAR es pseudocódigo",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.010Z"
+  },
+  {
+    "id": "q-ac_CP-F2_Preguntas-12",
+    "text": "¿Qué diferencia los conjuntos de pruebas CINT2000 de CFP2000?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "CINT contiene algoritmos de uso intensivo (INTensive); CFP son problemas matemáticos p-completos (full p).",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "CINT son benchmarks intensivos con operaciones de enteros, CFP para coma flotante (floating point)",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Trabajan interrupciones constantes al sistema (CINT) y ejecuciones completas del programa, full program (CFP). La 'C' en ambos indica que se trata de problemas de menor intensidad que los conjuntos 'A' (AINT, AFP) o 'B' (BINT, BFP).",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.010Z"
+  },
+  {
+    "id": "q-ac_CP-F2_Preguntas-13",
+    "text": "¿Qué parámetros contiene el archivo vcvars32.bat?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Contiene variables de entorno para encontrar/habilitar el compilador desde la línea de comandos",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Contiene variables de entorno del sistema operativo, referentes al uso de multitarea por parte de la CPU.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Contiene variables de entorno referentes a la elección de un subconjunto de pruebas SPEC.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.010Z"
+  },
+  {
+    "id": "q-ac_CP-F2_Preguntas-14",
+    "text": "```int vector[5] = {1,2,3,4,5}; \\n__asm \\n\\t{ \\n\\t\\tmov ecx, 2 \\n\\t\\tmov eax, [vector+ecx*4+4] \\n\\t\\tmov edx, [vector+ecx*4] \\n\\t\\tmov [vector+ecx*4], eax \\n\\t\\tmov [vector+ecx*4+4], edx \\n\\t}``` \\n¿Cómo quedaría vector tras la ejecución de las instrucciones del código x86 anterior?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "vector[5] = {1,2,4,3,5};",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "vector[5] = {1,3,2,4,5};",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "vector[5] = {1,2,3,5,4};",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.010Z"
+  },
+  {
+    "id": "q-ac_CP-F2_Preguntas-15",
+    "text": "```__asm \\n{ \\n\\tmov eax, edx \\n}``` \\nAnte este código x86 embebido, ¿qué ocurrirá?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Que el contenido de edx pasará a eax",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Un error de compilación al faltar un \";\" al final de línea",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Que el contenido de eax pasará a edx",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.010Z"
+  },
+  {
+    "id": "q-ac_CP-F2_Preguntas-16",
+    "text": "Según la taxonomía de Flynn, ¿en qué clasificación se incluirían las extensiones MMX/SSE?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Single Instruction Multiple Data",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Multiple Instruction Multiple Data",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "En cualquiera de ellas, MMX y SSE sirven para muchas cosas",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.010Z"
+  },
+  {
+    "id": "q-ac_CP-F2_Preguntas-17",
+    "text": "¿Qué hace la instrucción SSE \"cmpltpd\"?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Realiza el test de menor que de cada una de las dos quadruples palabras de 64 bits de los operandos.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Realiza el test de menor o igual que de cada una de las dos quadruples palabras de 64 bits de los operandos.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Realiza el test de menor que de cada uno de los bytes de los operandos.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.010Z"
+  },
+  {
+    "id": "q-ac_CP-F2_Preguntas-18",
+    "text": "¿Qué diferencia los conjuntos de pruebas CINT2000 de CFP2000?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "CINT son benchmarks intensivos con operaciones de enteros, CFP para coma flotante (floating point)",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Trabajan interrupciones constantes al sistema (CINT) y ejecuciones completas del programa, full program (CFP). La 'C' en ambos indica que se trata de problemas de menor intensidad que los conjuntos 'A' (AINT, AFP) o 'B' (BINT, BFP).",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "CINT contiene algoritmos de uso intensivo (INTensive); CFP son problemas matemáticos p-completos (full p).",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.010Z"
+  },
+  {
+    "id": "q-ac_CP-F2_Preguntas-19",
+    "text": "```constexpr int kElems = 40; \\nint vec[kElems] = {1, 2, 3, (...), 39, 40}; \\n_asm \\n{ \\n\\tmov esi, vec \\n\\tmov ecx, kElems \\n\\tbucle: \\n\\t\\t(... decrementa ecx, salta a fin si 0) \\n\\t\\tmov eax, [esi] \\n\\t\\tshl eax, 2 \\n\\t\\tadd esi, 4 \\n\\t\\t(... esi pasa a siguiente posición vector) \\n\\t\\tloop bucle \\n\\tfin: \\n}``` \\nAnte este código x86 embebido, ¿qué ocurrirá?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Los elementos del vector vec quedarán multiplicados por 2",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Los elementos del vector vec quedarán multiplicados por 4",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Los elementos del vector vec, serán desplazados todos a la izquierda una posición del vector (vec[i] = vec[i+1])",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.010Z"
+  },
+  {
+    "id": "q-ac_CP-F2_Preguntas-20",
+    "text": "```int vector[5] = {1,2,3,4,5}; \\n_asm \\n\\t{ \\n\\t\\tmov ecx, 2 \\n\\t\\tmov eax, [vector+ecx*4+4] \\n\\t\\tmov edx, [vector+ecx*4] \\n\\t\\tmov [vector+ecx*4], eax \\n\\t\\tmov [vector+ecx*4+4], edx \\n\\t}``` \\n¿Cómo quedaría vector tras la ejecución de las instrucciones del código x86 anterior?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "vector[5] = {1,3,2,4,5};",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "vector[5] = {1,2,4,3,5};",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "vector[5] = {1,2,3,5,4};",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.010Z"
+  },
+  {
+    "id": "q-ac_CP-F2_Preguntas-21",
+    "text": "```int vector[20] = {2,30,45,2,7,4,8,1,4,5,7,9,5,4,0,6,7,6,1,3}; \\n__asm \\n\\t{ \\n\\t\\tmov edi, 19 \\n\\t\\tmov edx, [vector+4*edi] \\n\\t}``` Ante este código x86 embebido, ¿qué valor será movido al registro EDX?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "3",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Causará un error de memoria por intentar acceder más allá de la longitud del vector",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "2",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.010Z"
+  },
+  {
+    "id": "q-ac_CP-F2_Preguntas-22",
+    "text": "```int vector[20] = {2,30,45,2,7,4,8,1,4,5,7,9,5,4,0,6,7,6,1,3}; \\n__asm \\n\\t{ \\n\\t\\tmov edi, 0 \\n\\t\\tinc edi \\n\\t\\t.... \\n\\t}``` ¿Qué instrucción añadiría al código x86 anterior para leer un elemento del vector?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "mov eax, [vector+4*edi]",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "mov eax, [vector+edi]",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "mov [vector+4*edi], eax",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.010Z"
+  },
+  {
+    "id": "q-ac_CP-F2_Preguntas-23",
+    "text": "```int a,b; \\n__asm \\n{ \\n\\tmov a, b \\n}``` \\n Ante este código x86 embebido, ¿qué ocurrirá?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Que el contenido de la posición de memoria a se copia en la posición de memoria b",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Que el contenido de la posición de memoria b se copia en la posición de memoria a",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Error de compilación: Tipo de operando incorrecto. mov no soporta dos referencias a memoria",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.010Z"
+  },
+  {
+    "id": "q-ac_CP-F2_Preguntas-24",
+    "text": "¿Cual de las siguientes afirmaciones sobre SPEC es falsa?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Todas las aplicaciones de CINT2000 y CFP2000 están escritas en C y C++",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "SPEC CPU2000 contiene dos suits CINT2000 y CFP2000",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Los principales objetivos de SPEC son: crear un benchmark estándar para medir el rendimiento de computadores y controlar y publicar los resultados de estos tests",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.010Z"
+  },
+  {
+    "id": "q-ac_CP-F2_Preguntas-25",
+    "text": "```int vector[20] = {2,30,45,2,7,4,8,1,4,5,7,9,5,4,0,6,7,6,1,3}; \\n__asm \\n\\t{ \\n\\t\\tmov edi, 0 \\n\\t\\tadd edi, 1 \\n\\t\\tmov eax, [vector+4*edi] \\n\\t}``` \\nAnte este código x86 embebido, ¿qué valor será movido al registro EAX?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "7",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "30",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "2",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.010Z"
+  },
+  {
+    "id": "q-ac_CP-F2_Preguntas-26",
+    "text": "```_asm \\n{ \\n\\tmov eax, [ebx] \\n}``` \\n Ante este código x86 embedido, ¿qué ocurrirá?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Que el contenido de la posición de memoria indicada por ebx pasará a eax.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Que el contenido de eax pasará a la posición de memoria indicada por ebx.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Que el contenido de ebx pasará a eax",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.010Z"
+  },
+  {
+    "id": "q-ac_CP-F2_Preguntas-27",
+    "text": "Si un bucle sobre un vector de 200 enteros necesita 200 iteraciones, ¿Cuántas tardará usando extensiones MMX/SSE?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "100, ya que cada instrucción MMX/SSE sólo puede trabajar con precisión doble.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "50, ya que cada instrucción MMX/SSE puede trabajar sobre 4 enteros a la vez.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "200, ya que no varia, las instrucciones quedarán igual.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.010Z"
+  },
+  {
+    "id": "q-ac_CP-F2_Preguntas-28",
+    "text": "Ante la instrucción para recorrer vector usando edi como valor de iteración: ```mov eax, [vector + edi]``` ¿De qué tipo de datos es vector?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Cualquier tipo de dato",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Un tipo de dato de 8 bits de tamaño, por ejemplo char",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Tendrfamos que ver la declaración de vector",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.010Z"
+  },
+  {
+    "id": "q-ac_CP-F2_Preguntas-29",
+    "text": "¿Cómo obtenemos las características de la máquina donde ejecutamos el SPEC?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El SPEC saca un informe del Sistema Operativo, pero debemos usar otros programas para obtener información del Hardware",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "El propio SPEC saca un informe detallado del Hardware y del Sistema Operativo",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Debemos utilizar programas específicos para ello",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.010Z"
+  },
+  {
+    "id": "q-ac_CP-F2_Preguntas-30",
+    "text": "```int a,b; \\na=10; \\nb=3; \\n_asm \\n{ \\n\\tmov eax, a \\n\\tmov ebx, b \\n\\tmov ecx, 0 \\n\\tbucle: \\n\\tcmp eax, ebx \\n\\t\\tjs fin \\n\\t\\tinc ecx sub eax, ebx \\n\\t\\tjmp bucle \\n\\t\\tfin : \\n}``` \\n¿Que afirmación es incorrecta?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "La instrucción \"js\" salta cuando el bit de signo de EFLAGS es 0",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "La instrucción \"js\" salta cuando el bit de signo de EFLAGS es 1",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "La instrucción jmp salta incondicionalmente la etiqueta \"bucle\"",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.010Z"
+  },
+  {
+    "id": "q-ac_CP-F2_Preguntas-31",
+    "text": "¿Qué longitud de vector puede albergar un registro xmm?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Depende del tipo de dato de la instrucción",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "8",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "4",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.010Z"
+  },
+  {
+    "id": "q-ac_CP-F2_Preguntas-32",
+    "text": "¿Cual de las siguientes afirmaciones es falsa?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Un informe SPEC proporciona una descripción detallada del Hardware, Software y parámetros de compilación",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Un informe SPEC publica resultadas de tiempos de ejecución básicas y optimizados",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Un informe SPEC publica resultados mediante tiempos de ejecución pero nunca ratios o eceleraciones",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.010Z"
+  },
+  {
+    "id": "q-ac_CP-F2_Preguntas-33",
+    "text": "```_declspec(align(16)) float valeur1[4];  \\n_declspec(align(16)) float valeur2[4]; \\n_declspec(align(16)) float valeur3[4]; \\n_declspec(align(16)) float valeur4[4]; \\n \\n// load vector 4x1 values in XMM0 to XMM3 \\nmovaps xmm0, valeur1 \\nmovaps xmm1, valeur2 \\nmovaps xmm2, valeur3 \\nmovaps xmm3, valeur4 \\n \\n// perform multiplication between matrix values and vector values \\nmulps xmm0, xmm4 \\nmulps xmm1, xmm5 \\nmulps xmm2, xmm6 \\nmulps xmm3, xmm7 \\n``` \\nEste fragmento de código dei ejemplo de multiplicación de matrices de la práctica 2 utiliza instrucción \"mulps\" para reaiizar lo siguiente:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Multiplica dos operandos con datos empaquetados en punto fotante de doble precisión",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Multiplica dos operandos con datos empaquetados en punto fotante de simple precisión",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Multiplica dos operandos con datos empaquetados enteros",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.010Z"
+  },
+  {
+    "id": "q-ac_CP-F2_Preguntas-34",
+    "text": "Ante la instrucción: ``` mov eax, [vector+2*edi] ``` ¿Cual de las siguientes afirmaciones es correcta en referencia al 2?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Iteramos sobre el vector de 2 en 2 posiciones",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Es el tamaño del vector, qué solo tiene 2 elementos",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Es el tamaño en bytes del tipo de datos de vector",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.010Z"
+  }
+]

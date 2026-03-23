@@ -1,0 +1,1017 @@
+[
+  {
+    "id": "q-redesJulio2425Preguntas-1",
+    "text": "Sobre el funcionamiento de una red de difusión es cierto que,",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Los paquetes no precisan incorporar cabeceras de protocolos.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "El uso de la dirección de difusión permite enviar varios paquetes a un solo equipo de la red.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Es necesario asignar una dirección única a cada equipo de la red.",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "La transmisión de un paquete a todos los equipos de la red no necesita el empleo de una cabecera en el paquete.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.130Z"
+  },
+  {
+    "id": "q-redesJulio2425Preguntas-2",
+    "text": "Si dos equipos (A y B) se encuentran dentro de la misma red de difusión inalámbrica, es cierto que:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Los equipos A y B pueden observar las transmisiones de los demás equipos de la red.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Si el equipo A envía un paquete con dirección destino B, sólo el equipo B recibirá el paquete.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Si el equipo A envía un paquete a una dirección de grupo al que no pertenece B, el equipo B no recibirá el paquete.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Todas las respuestas anteriores son ciertas.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.130Z"
+  },
+  {
+    "id": "q-redesJulio2425Preguntas-3",
+    "text": "Sobre el funcionamiento de una red de conmutación de paquetes basada en datagramas es cierto que:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Cada equipo determina la ruta que seguirán en la red los paquetes que transmita.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "El equipo destinatario de un paquete determina la ruta que seguirá el paquete en la red.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Los routers de la red determinan el camino de los paquetes en función de la dirección de origen en el paquete.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Es posible que un paquete pueda circular en un bucle en la red de comunicaciones.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.130Z"
+  },
+  {
+    "id": "q-redesJulio2425Preguntas-4",
+    "text": "Las redes de conmutación de paquetes por datagramas y circuitos virtuales tienen en común que:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Ambos tipos de redes presentan el mismo nivel de congestión.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Las redes de datagramas sufren congestión y las de circuitos virtuales sufren saturación.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Ambos tipos de redes emplean routers para el encaminamiento de la información.",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Ambos tipos de redes determinan una ruta en la red antes del envío de los paquetes entre un origen y un destino.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.130Z"
+  },
+  {
+    "id": "q-redesJulio2425Preguntas-5",
+    "text": "¿Qué topología de red precisa de tamaños de paquete mayores para la transmisión de información?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Malla.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Árbol.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Anillo.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "La topología de la red no afecta al tamaño de los paquetes.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.130Z"
+  },
+  {
+    "id": "q-redesJulio2425Preguntas-6",
+    "text": "Sobre una arquitectura de red con N niveles, es cierto que:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "La capa de nivel N siempre es la capa física.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Las capas del mismo nivel de la arquitectura se denominan pares.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Las capas del mismo nivel de la arquitectura se denominan adyacentes.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Todas las capas de la arquitectura tienen solo una capa adyacente.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.130Z"
+  },
+  {
+    "id": "q-redesJulio2425Preguntas-7",
+    "text": "Si la capa N de una arquitectura de red envía datos a su capa par, es cierto que:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Todos los paquetes que genera la capa N siempre incorporan la cabecera de la capa N-1.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Todos los paquetes que genera la capa N siempre incorporan la cabecera de la capa N.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Todos los paquetes que genera la capa N siempre incorporan la cabecera de la capa N+1.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Todas las respuestas anteriores son falsas.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.130Z"
+  },
+  {
+    "id": "q-redesJulio2425Preguntas-8",
+    "text": "Sobre el funcionamiento de los dispositivos de interconexión es FALSO que:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Todos tienen un número de capas inferior al número de capas de la arquitectura de red.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Cada dispositivo emplea diferente número de capas de la arquitectura de red.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Todos emplean la capa física de la arquitectura de red.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Todos analizan la cabecera IP para el reenvío de paquetes.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.130Z"
+  },
+  {
+    "id": "q-redesJulio2425Preguntas-9",
+    "text": "¿Cuántos eventos de entrada puede tener una transición en una máquina de estados finitos?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Siempre más de un evento de entrada.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Al menos un evento de entrada.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "No es obligada la existencia de un evento de entrada.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Un número de eventos de entrada igual al número de eventos de salida de la transición.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.130Z"
+  },
+  {
+    "id": "q-redesJulio2425Preguntas-10",
+    "text": "Si una señal de pulsos tiene una frecuencia fundamental de 2000 Hz, las 3 primeras componentes frecuenciales tendrán valor:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "2000 Hz, 4000 Hz y 6000 Hz.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "4000 Hz, 6000 Hz y 8000 Hz.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "2000 Hz, 3000 Hz y 4000 Hz.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "2000 Hz, 4000 Hz y 8000 Hz.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.130Z"
+  },
+  {
+    "id": "q-redesJulio2425Preguntas-11",
+    "text": "Sobre el espectro de frecuencias de una señal de datos es cierto que:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Representa el conjunto de componentes frecuenciales que pasan por un medio físico.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Representa la información de una señal en base a sus componentes frecuenciales.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Las componentes frecuenciales de mayor frecuencia tienen un mayor valor de amplitud.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Todas las señales de datos tienen la misma amplitud en la segunda componente frecuencial.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.130Z"
+  },
+  {
+    "id": "q-redesJulio2425Preguntas-12",
+    "text": "Sobre el teorema de Nyquist para la velocidad máxima de transmisión de una señal de datos en un medio, es cierto que:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Todos los medios físicos presentan la misma velocidad máxima si emplean codificación de 2 niveles.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Una señal no se propaga por un medio físico si emplea una velocidad superior al teorema de Nyquist.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "El aumento de la relación señal ruido en un medio físico aumenta el valor del teorema de Nyquist.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Una señal sufre errores si emplea una velocidad superior al valor del teorema de Nyquist.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.130Z"
+  },
+  {
+    "id": "q-redesJulio2425Preguntas-13",
+    "text": "¿En qué situación se podrá transmitir a mayor velocidad una señal de pulsos de 2 niveles sin que se produzcan errores?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Medio físico con ancho de banda de 1000 Hz y sin presencia de ruido.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Medio físico con ancho de banda de 2000 Hz y relación S/N de 1.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Medio físico con ancho de banda de 2000 Hz y sin presencia de ruido.",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Medio físico con ancho de banda de 1000 Hz y relación S/N de 3.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.130Z"
+  },
+  {
+    "id": "q-redesJulio2425Preguntas-14",
+    "text": "¿Qué tipo de ruido presente en un cable eléctrico es posible eliminar con un blindado?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Ruido cruzado.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Ruido de retardo.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Ruido de impulso.",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Ruido térmico.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.130Z"
+  },
+  {
+    "id": "q-redesJulio2425Preguntas-15",
+    "text": "¿En qué tipo de señalización en banda base NO se emplean niveles de tensión para codificar bits?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Binaria con retorno a cero bipolar.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Binaria sin retorno a cero unipolar.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Binaria sin retorno a cero bipolar.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Manchester.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.130Z"
+  },
+  {
+    "id": "q-redesJulio2425Preguntas-16",
+    "text": "¿En qué tipo de modulación se consigue menor velocidad de transmisión empleando un mismo ancho de banda?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "QPSK.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "PSK.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "FSK.",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "ASK.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.130Z"
+  },
+  {
+    "id": "q-redesJulio2425Preguntas-17",
+    "text": "¿A qué tipo de modulación le afecta más la presencia de ruido en el medio físico?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "QPSK.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "QAM.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "ASK.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "FSK.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.130Z"
+  },
+  {
+    "id": "q-redesJulio2425Preguntas-18",
+    "text": "La dispersión intermodal es un fenómeno propio de:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Las fibras multimodo de índice de salto e índice gradual.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Las fibras multimodo de índice de salto y fibras monomodo.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Las fibras monomodo.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "La dispersión intermodal está presente en todos los tipos de fibra óptica.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.130Z"
+  },
+  {
+    "id": "q-redesJulio2425Preguntas-19",
+    "text": "Las fibras ópticas permiten velocidades de transmisión superiores a los cables eléctricos debido a que:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Emplean señales de pulsos con más niveles que en las señales eléctricas.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Pueden combinar con WDM varios haces de luz en una sola fibra óptica.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Emplean potencias de transmisión mayores que en las señales eléctricas.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Las fibras ópticas tienen un ancho de banda similar a los cables eléctricos.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.130Z"
+  },
+  {
+    "id": "q-redesJulio2425Preguntas-20",
+    "text": "Sobre el funcionamiento de la comunicación satelital es cierto que,",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Se emplean APs en los satélites para gestionar el acceso desde tierra.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Los satélites actúan como repetidores de señales.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Emplean siempre las mismas frecuencias que las redes Wi-Fi.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "La cobertura de un satélite es la misma en cualquier órbita terrestre.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.130Z"
+  },
+  {
+    "id": "q-redesJulio2425Preguntas-21",
+    "text": "Sobre el funcionamiento de un protocolo de ventana deslizante con repetición NO selectiva es cierto que:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Nunca se producen errores en la transmisión de paquetes.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "El tamaño de la ventana del emisor siempre es 1.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "El tamaño de la ventana del receptor siempre es igual a la del emisor.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "A mayor tamaño de la ventana del emisor hay más rechazos de paquetes en el receptor en caso de error.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.130Z"
+  },
+  {
+    "id": "q-redesJulio2425Preguntas-22",
+    "text": "¿Qué red local del IEEE NO precisa del protocolo LLC para su funcionamiento?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "IEEE 802.3.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "IEEE 802.5.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "IEEE 802.11.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Todas las redes locales del IEEE emplean el protocolo LLC.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.130Z"
+  },
+  {
+    "id": "q-redesJulio2425Preguntas-23",
+    "text": "Las redes Ethernet 10BaseT basadas en concentradores se caracterizan por:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Su extensión está limitada a un solo concentrador donde se conectan todos los equipos.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Presentan un alto nivel de colisiones cuando aumenta el número de equipos en la red.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Emplear un solo par de hilos trenzados para transmitir y recibir paquetes.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Permitir el modo de funcionamiento half-duplex y full-duplex.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.130Z"
+  },
+  {
+    "id": "q-redesJulio2425Preguntas-24",
+    "text": "El proceso de aprendizaje de la tabla de reenvío en los puentes Ethernet se caracteriza por:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Emplear la dirección MAC origen en los paquetes Ethernet para construir la tabla de reenvío.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Emplear la dirección MAC destino en los paquetes Ethernet para construir la tabla de reenvío.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Un puente sólo dispone en su tabla de reenvío de las direcciones MAC de los segmentos a los que está conectado directamente.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "No es posible reenviar paquetes entre segmentos Ethernet hasta que se completa la tabla de reenvío con todas las direcciones MAC.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.130Z"
+  },
+  {
+    "id": "q-redesJulio2425Preguntas-25",
+    "text": "Sobre el funcionamiento de los conmutadores Ethernet 100BaseTX es cierto que:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Un conmutador NO dispone de tabla de reenvío para su funcionamiento.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Los puertos de un conmutador pueden tener conectado un equipo u otro conmutador.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Los puertos half-duplex permiten transmitir y recibir paquetes simultáneamente empleando los buffers.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "La transmisión de paquetes Ethernet de difusión provoca colisiones en los puertos full- duplex.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.130Z"
+  },
+  {
+    "id": "q-redesJulio2425Preguntas-26",
+    "text": "Sobre la tecnología Ethernet 100BaseFX es cierto que:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Emplea la codificación 8B/10B para la sincronización de señales.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Emplea la señalización 4D-PAM5 para la transmisión de pulsos de luz.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Emplea la señalización NRZI para la transmisión de pulsos de luz.",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Emplea la señalización MLT-3 para la transmisión de pulsos de luz.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.130Z"
+  },
+  {
+    "id": "q-redesJulio2425Preguntas-27",
+    "text": "Las redes Ethernet 40GBase-XX se caracterizan por:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Transmitir un pulso de luz en una fibra óptica a una velocidad de 40 Gbps.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Combinar varios pulsos de luz a 10 Gbps en una sola fibra óptica.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Emplear formatos de paquete Ethernet diferentes del resto de tecnologías Ethernet.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Emplear conmutadores que permiten puertos en modo half-duplex.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.130Z"
+  },
+  {
+    "id": "q-redesJulio2425Preguntas-28",
+    "text": "Sobre el funcionamiento de los conmutadores Ethernet VLAN es cierto que:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Permiten definir diferentes dominios de colisión con direcciones de red IP diferentes.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Un puerto de acceso permite conectividad con diferentes VLAN.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Los paquetes de difusión de una VLAN siempre son reenviados a todos los puertos del conmutador.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "El conocimiento de las VLAN existentes en diferentes conmutadores se realiza con el protocolo GVRP.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.130Z"
+  },
+  {
+    "id": "q-redesJulio2425Preguntas-29",
+    "text": "Sobre el funcionamiento de las redes inalámbricas Wi-Fi es cierto que:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Las colisiones entre equipos se eliminan con el mecanismo RTS/CTS.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "El mecanismo RTS/CTS reduce las colisiones en las redes con APs.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Cada tecnología Wi-Fi (4,5,6…) emplea frecuencias de transmisión diferentes.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "El aumento de la velocidad de transmisión aumenta la probabilidad de colisiones.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.130Z"
+  },
+  {
+    "id": "q-redesJulio2425Preguntas-30",
+    "text": "Sobre el mecanismo WPA2-PSK es cierto que:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Crea una clave de autenticación diferente en cada conexión a la red Wi-Fi.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Emplea la misma clave de autenticación para todos los usuarios de la red Wi-Fi.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Emplea exclusivamente el algoritmo de cifrado TKIP.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Emplea longitudes de clave de cifrado de 256 bits.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.130Z"
+  },
+  {
+    "id": "q-redesJulio2425Preguntas-31",
+    "text": "Sobre los mecanismos de autenticación WPA2-Enterprise es cierto que:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El mecanismo EAP/TLS emplea la misma clave de autenticación para todos los usuarios.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "El mecanismo PEAP no emplea certificados de seguridad en el proceso de autenticación.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Proporciona a cada usuario una clave primaria (MK) de cifrado diferente.",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "El mecanismo AES oculta la clave de acceso en el proceso de autenticación.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.130Z"
+  },
+  {
+    "id": "q-redesJulio2425Preguntas-32",
+    "text": "Sobre la congestión de los routers de Internet es cierto que:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El uso de CPUs más potentes permite reducir la congestión.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Paquetes de mayor tamaño sufren más congestión que los de menor tamaño.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "El protocolo UDP permite reducir la congestión en Internet.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "La reducción de la congestión sólo es posible reiniciando los routers.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.130Z"
+  },
+  {
+    "id": "q-redesJulio2425Preguntas-33",
+    "text": "Sobre los AS (Sistemás Autónomos) en Internet, es cierto que:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El organismo IAB asigna los identificadores de AS en Europa.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Los AS emplean el protocolo RIP para conocer el conjunto de redes existentes en Internet.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Los AS emplean el protocolo OSPF para determinar las rutas óptimas en los routers dentro del AS.",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "El router frontera de un AS siempre establece una conexión BGP al router frontera más cercano geográficamente.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.130Z"
+  },
+  {
+    "id": "q-redesJulio2425Preguntas-34",
+    "text": "¿Qué algoritmo de encaminamiento NO emplea un procedimiento matemático para determinar las rutas?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "BGP.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "RIPv1.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "RIPv2.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "OSPF.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.130Z"
+  },
+  {
+    "id": "q-redesJulio2425Preguntas-35",
+    "text": "Sobre el funcionamiento del protocolo IPv6 es cierto que,",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Las direcciones IP origen y destino se incluyen en una cabecera de extensión.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "En un paquete IPv6 todas las cabeceras de extensión tienen que estar presentes.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "La cabecera IPv6 tiene el mismo tamaño que la cabecera IPv4.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "El protocolo IPv6 permite definir direcciones IP de multidifusión.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.130Z"
+  }
+]

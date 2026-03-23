@@ -1,0 +1,1742 @@
+[
+  {
+    "id": "q-sds12-ataquesPreguntas-1",
+    "text": "¿Qué acción maliciosa puede llevar a cabo un ataque de Cross Site Scripting (XSS) en una aplicación web?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Robar cookies y secuestrar sesiones",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Inyectar consultas SQL en la base de datos",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Provocar un desbordamiento de búfer",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Realizar un ataque de denegación de servicio",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.185Z"
+  },
+  {
+    "id": "q-sds12-ataquesPreguntas-2",
+    "text": "¿Cuál de estos NO es un tipo de ataque XSS?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Reflejado",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Almacenado",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Basado en DOM",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Por desbordamiento de pila",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.185Z"
+  },
+  {
+    "id": "q-sds12-ataquesPreguntas-3",
+    "text": "¿Qué caracteriza principalmente a una inyección SQL?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "La manipulación del Document Object Model (DOM)",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "La inserción de comandos SQL en consultas por falta de filtrado",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "La descarga de malware en el cliente",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "El envenenamiento de la caché ARP",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.185Z"
+  },
+  {
+    "id": "q-sds12-ataquesPreguntas-4",
+    "text": "¿En qué consiste una inyección XML?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "En explotar un buffer overflow al procesar XML",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "En manipular cabeceras HTTP para ocultar el origen de una petición XML",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "En introducir código XML malicioso aprovechando una entrada sin filtrar",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "En secuestrar la sesión de usuario mediante cookies flash",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.185Z"
+  },
+  {
+    "id": "q-sds12-ataquesPreguntas-5",
+    "text": "¿Qué permite a un atacante una inyección de comandos o recorrido de directorios?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Escapar del directorio raíz del servidor y ejecutar comandos arbitrarios",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Robar tokens CSRF",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Modificar el atributo SameSite de una cookie",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Realizar un ataque de denegación de servicio distribuida",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.185Z"
+  },
+  {
+    "id": "q-sds12-ataquesPreguntas-6",
+    "text": "¿Cómo se define un ataque a la cadena de suministro (supply chain attack)?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Un ataque que explota vulnerabilidades en extensiones del navegador",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Comprometer software o hardware en algún punto antes de llegar al usuario final",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Inyectar scripts maliciosos en la respuesta HTTP",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Desbordar un búfer en el servidor web",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.185Z"
+  },
+  {
+    "id": "q-sds12-ataquesPreguntas-7",
+    "text": "¿Cuál de estos casos es un ejemplo real de ataque a la cadena de suministro?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Inyección de SQL en una API pública",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Un ataque XSS reflejado en una URL",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Compromiso del software Orion de SolarWinds",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Envenenamiento de la caché ARP en una red local",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.185Z"
+  },
+  {
+    "id": "q-sds12-ataquesPreguntas-8",
+    "text": "¿Qué describe mejor un “drive-by download”?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Capturar tráfico cifrado en un proxy SSL",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Envenenar cache DNS para redirigir al usuario",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Realizar un CSRF contra un banco",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Descargar y ejecutar código malicioso al visitar una web vulnerada",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.185Z"
+  },
+  {
+    "id": "q-sds12-ataquesPreguntas-9",
+    "text": "¿Qué cabecera HTTP manipula un atacante para ocultar de qué sitio proviene una petición?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Referer",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "User-Agent",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Accept-Language",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Host",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.185Z"
+  },
+  {
+    "id": "q-sds12-ataquesPreguntas-10",
+    "text": "Una **cookie de terceros** se caracteriza por:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Almacenarse solo en RAM durante la sesión",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Ser siempre cifrada via HTTPS",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Provenir de un dominio distinto al que el usuario está visitando",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "No poder persistir tras cerrar el navegador",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.185Z"
+  },
+  {
+    "id": "q-sds12-ataquesPreguntas-11",
+    "text": "¿Qué nombre recibe el ataque que consiste en robar o adivinar el token de sesión de un usuario?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "CSRF",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Session Hijacking",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "XSS",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "DDoS",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.185Z"
+  },
+  {
+    "id": "q-sds12-ataquesPreguntas-12",
+    "text": "¿En qué consiste un ataque CSRF (Cross-Site Request Forgery)?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Engañar al navegador para que realice acciones no deseadas en una sesión activa",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Inyectar JavaScript malicioso en un comentario almacenado",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Inyectar comandos SQL en una base de datos",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Provocar un desbordamiento de búfer en el servidor",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.185Z"
+  },
+  {
+    "id": "q-sds12-ataquesPreguntas-13",
+    "text": "¿Qué atributo de cookie ayuda a mitigar ataques CSRF?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "HttpOnly",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Secure",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Domain",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "SameSite",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.185Z"
+  },
+  {
+    "id": "q-sds12-ataquesPreguntas-14",
+    "text": "¿Qué tecnología de extensión del navegador tiene acceso absoluto al sistema operativo y al disco?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "ActiveX",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "WebAssembly",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "NaCl (Native Client)",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "gVisor",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.185Z"
+  },
+  {
+    "id": "q-sds12-ataquesPreguntas-15",
+    "text": "¿En qué consiste un **desbordamiento de búfer** (buffer overflow)?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Al escribir datos más allá de los límites de un búfer, sobrescribiendo memoria adyacente",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "En inyectar consultas SQL con comillas simple",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "En manipular las cookies de sesión",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "En redirigir peticiones HTTP a otro dominio",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.185Z"
+  },
+  {
+    "id": "q-sds12-ataquesPreguntas-16",
+    "text": "¿Cuál de estas técnicas dificulta la explotación de un buffer overflow?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Validar la entrada de usuario",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Aleatorización de direcciones de memoria (ASLR)",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Uso de cookies flash",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Envenenamiento ARP",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.185Z"
+  },
+  {
+    "id": "q-sds12-ataquesPreguntas-17",
+    "text": "¿Qué caracteriza a un ataque DDoS (Distributed Denial of Service)?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Uso de scripting en el cliente para robar sesiones",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Inyección de XML en servicios web",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Sobrecargar un recurso desde múltiples hosts controlados por el atacante",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Manipulación de cabeceras HTTP para ocultar el origen de la petición",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.185Z"
+  },
+  {
+    "id": "q-sds12-ataquesPreguntas-18",
+    "text": "¿En qué consiste el envenenamiento ARP (ARP poisoning)?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Modificar la caché ARP para que una IP apunte a la MAC del atacante",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Inyectar código JavaScript malicioso en un comentario almacenado",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Sustituir registros DNS para redirigir un dominio",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Provocar un desbordamiento de búfer en la pila",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.185Z"
+  },
+  {
+    "id": "q-sds12-ataquesPreguntas-19",
+    "text": "¿Qué hace un ataque de envenenamiento DNS (DNS poisoning)?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Sustituye la IP asociada a un nombre de dominio en el sistema DNS por una fraudulenta",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Roba cookies de sesión de terceros",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Realiza un ataque de denegación de servicio contra servidores DNS",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Inyecta comandos en una base de datos SQL a través de cabeceras HTTP",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.185Z"
+  },
+  {
+    "id": "q-sds12-ataquesPreguntas-20",
+    "text": "¿Qué es un ataque de Cross-Site Scripting (XSS)?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Interceptar paquetes de red",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Inyectar scripts maliciosos para que se ejecuten en el navegador de la víctima",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Saturar un servidor con peticiones",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Desbordar un búfer",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.185Z"
+  },
+  {
+    "id": "q-sds12-ataquesPreguntas-21",
+    "text": "¿Cuál de estas NO es una consecuencia típica de un ataque XSS?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Robar cookies del usuario",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Secuestrar sesiones",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Redirigir al usuario a sitios maliciosos",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Provocar un ataque de denegación de servicio (DoS)",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.185Z"
+  },
+  {
+    "id": "q-sds12-ataquesPreguntas-22",
+    "text": "¿Cuál de los siguientes NO es un tipo de ataque XSS?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Reflejado",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Almacenado",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Basado en DOM",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Buffer overflow",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.185Z"
+  },
+  {
+    "id": "q-sds12-ataquesPreguntas-23",
+    "text": "¿En qué consiste una inyección SQL?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Insertar comandos SQL en las consultas debido a falta de filtrado",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Cambiar cabeceras HTTP para ocultar el origen",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Inyectar scripts maliciosos en comentarios",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Desbordar un búfer en el servidor",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.185Z"
+  },
+  {
+    "id": "q-sds12-ataquesPreguntas-24",
+    "text": "¿Cuál de estas consultas demuestra una inyección SQL que fuerza siempre la condición a verdadera?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "SELECT \\* FROM users WHERE name = ‘\\$USER’",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "SELECT \\* FROM users WHERE name = ‘whatever’ OR ‘a’=‘a’",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "SELECT \\* FROM users WHERE name = ‘admin’; DROP TABLE users;",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "SELECT \\* FROM users WHERE name = ‘x’ AND ‘y’=‘z’",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": true,
+    "createdAt": "2026-03-13T14:45:39.185Z"
+  },
+  {
+    "id": "q-sds12-ataquesPreguntas-25",
+    "text": "¿En qué consiste una inyección de datos en formatos como XML, JSON o YAML?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Aprovechar entradas sin filtrar para insertar código de marcado que explote vulnerabilidades",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Interceptar paquetes cifrados de estos formatos",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Sobrescribir la pila de llamadas al procesar datos",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Redirigir las peticiones de datos a un servidor malicioso",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.185Z"
+  },
+  {
+    "id": "q-sds12-ataquesPreguntas-26",
+    "text": "¿Qué caracteriza principalmente a una inyección de comandos o recorrido de directorios?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Forzar siempre la condición de una consulta SQL a verdadera",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Insertar scripts JavaScript en los comentarios",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Escapar del directorio raíz del servidor web para leer archivos o ejecutar comandos arbitrarios",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Capturar y reproducir el tráfico HTTPS",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.185Z"
+  },
+  {
+    "id": "q-sds12-ataquesPreguntas-27",
+    "text": "¿Qué sigue a “../” en una URL para acceder a un archivo fuera del directorio raíz?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "/etc/passwd",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "../../../../../TopSecret.docx",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "/var/log/syslog",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "//admin/config.php",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.185Z"
+  },
+  {
+    "id": "q-sds12-ataquesPreguntas-28",
+    "text": "¿Cómo se define un ataque a la cadena de suministro (supply chain attack)?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Un ataque que usa scripts en la capa de red",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Comprometer componentes de software o hardware antes de llegar al usuario final",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Redirigir peticiones DNS",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Inyectar SQL en una API pública",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.185Z"
+  },
+  {
+    "id": "q-sds12-ataquesPreguntas-29",
+    "text": "¿Cuál es un ejemplo real de ataque a la cadena de suministro mencionado en clase?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Stuxnet",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "SolarWinds Orion",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Heartbleed",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Mirai",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.185Z"
+  },
+  {
+    "id": "q-sds12-ataquesPreguntas-30",
+    "text": "¿Qué vulnerabilidad crítica relacionada con la librería XZ afecta protocolos como SSH?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Cross-Site Scripting",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Buffer overflow en la pila",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Manipulación de formato XZ que permite ejecución remota",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Denegación de servicio mediante peticiones repetidas",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.185Z"
+  },
+  {
+    "id": "q-sds12-ataquesPreguntas-31",
+    "text": "¿Qué es un “drive-by download”?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Descarga y ejecución automática de malware al visitar una web vulnerable",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Inyección de comandos en un servidor al procesar parámetros",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Sustitución de un fichero legítimo por uno malicioso en el servidor",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Captura pasiva de paquetes de red",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.185Z"
+  },
+  {
+    "id": "q-sds12-ataquesPreguntas-32",
+    "text": "¿Cuál de estas extensiones del navegador tiene acceso absoluto al sistema operativo y disco?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "ActiveX",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "WebAssembly",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "NaCl (Native Client)",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "gVisor",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.185Z"
+  },
+  {
+    "id": "q-sds12-ataquesPreguntas-33",
+    "text": "¿Qué tecnología basada en sandboxing permite ejecutar código de alto rendimiento dentro del navegador?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "ActiveX",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "SQL bindings",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "WebAssembly",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Flash",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.185Z"
+  },
+  {
+    "id": "q-sds12-ataquesPreguntas-34",
+    "text": "¿Qué es un desbordamiento de búfer (buffer overflow)?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Intentar almacenar datos en RAM más allá de los límites de un búfer, sobrescribiendo memoria adyacente",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Insertar consultas SQL en la base de datos",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Inyectar scripts en el cliente",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Redirigir el tráfico DNS",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.185Z"
+  },
+  {
+    "id": "q-sds12-ataquesPreguntas-35",
+    "text": "¿Por qué un desbordamiento de pila (stack overflow) puede permitir la ejecución de código arbitrario?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Porque permite modificar la dirección de retorno de la función y saltar a código inyectado",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Porque corrompe las cabeceras HTTP",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Porque sobrescribe las cookies en la memoria",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Porque bloquea la entrada de usuario",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.185Z"
+  },
+  {
+    "id": "q-sds12-ataquesPreguntas-36",
+    "text": "¿En qué consiste un ataque de secuestro de sesión (session hijacking)?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Forzar una consulta SQL siempre verdadera",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Robar o adivinar el token de sesión de un usuario para suplantarlo",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Sobrescribir la pila de llamadas",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Inyectar XML malicioso",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.185Z"
+  },
+  {
+    "id": "q-sds12-ataquesPreguntas-37",
+    "text": "¿Qué es un ataque de reproducción (replay attack)?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Reenviar mensajes legítimos capturados para repetir una acción",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Interceptar y modificar datos en tránsito",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Inyectar código en la base de datos",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Saturar un servidor con peticiones",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.185Z"
+  },
+  {
+    "id": "q-sds12-ataquesPreguntas-38",
+    "text": "¿En qué consiste un ataque de Cross-Site Request Forgery (CSRF)?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Engañar al navegador para que realice acciones no deseadas en un sitio donde el usuario está autenticado",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Inyectar scripts JavaScript en un comentario almacenado",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Sobrescribir la memoria del servidor",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Redirigir DNS a un servidor malicioso",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.185Z"
+  },
+  {
+    "id": "q-sds12-ataquesPreguntas-39",
+    "text": "¿Cuál de estos escenarios describe mejor un ataque CSRF contra una cuenta bancaria?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Un script en otro sitio envía una petición de transferencia mientras la sesión está activa",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Inyección de SQL para robar contraseñas",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Desbordamiento de búfer para ejecutar código",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Envenenamiento de la caché ARP",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.185Z"
+  },
+  {
+    "id": "q-sds12-ataquesPreguntas-40",
+    "text": "¿Qué medida ayuda a proteger contra ataques CSRF?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Validar la entrada del usuario",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Utilizar cabeceras Host",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Inyectar scripts en la respuesta",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Implementar tokens CSRF en formularios y verificar en el servidor",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.185Z"
+  },
+  {
+    "id": "q-sds12-ataquesPreguntas-41",
+    "text": "¿Cuál atributo de cookie controla cuándo se envía al servidor y mitiga ataques CSRF?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "HttpOnly",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Secure",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Domain",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "SameSite",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.185Z"
+  },
+  {
+    "id": "q-sds12-ataquesPreguntas-42",
+    "text": "¿Cuál de estos NO es un ataque de aplicación típico?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Cross-Site Scripting (XSS)",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Inyección SQL",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Denegación de Servicio Distribuido (DDoS)",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Cross-Site Request Forgery (CSRF)",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.185Z"
+  },
+  {
+    "id": "q-sds12-ataquesPreguntas-43",
+    "text": "¿Cuál es una característica esencial de un ataque de Denegación de Servicio (DoS)?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Tener un recurso finito y consumirlo más rápido de lo que se repone",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Interceptar y modificar paquetes en tránsito",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Inyectar SQL en la base de datos",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Robar cookies de sesión",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.186Z"
+  },
+  {
+    "id": "q-sds12-ataquesPreguntas-44",
+    "text": "¿Qué diferencia principal tiene un ataque DDoS respecto a uno DoS?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Utiliza múltiples hosts controlados para realizar el ataque",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Ocurre a nivel de aplicación",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Involucra un único IP de origen",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Se limita a redes internas",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.186Z"
+  },
+  {
+    "id": "q-sds12-ataquesPreguntas-45",
+    "text": "¿Cuál de estos ataques explota respuestas amplificadas de DNS para saturar la red?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Ping Flood",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "DNS Amplification",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "SYN Flood",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Smurf Attack",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.186Z"
+  },
+  {
+    "id": "q-sds12-ataquesPreguntas-46",
+    "text": "¿Qué técnica de reclutamiento se usa para crear una botnet DDoS?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Scanning (detección de máquinas vulnerables)",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Drive-by download",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Inyección de comandos",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Envenenamiento de DNS",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.186Z"
+  },
+  {
+    "id": "q-sds12-ataquesPreguntas-47",
+    "text": "¿Cuál NO es una etapa típica en la creación de una botnet?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Scanning (detectar máquinas vulnerables)",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Inyección SQL en servidores públicos",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Instalación de software específico",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Control y actualización remota de bots",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.186Z"
+  },
+  {
+    "id": "q-sds12-ataquesPreguntas-48",
+    "text": "¿Qué diferencia hay entre un ataque MITM pasivo y uno activo?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El pasivo solo captura y reenvía datos sin modificar, el activo los altera",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "El pasivo infecta con malware, el activo solo escucha",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "El activo redirige DNS, el pasivo modifica cabeceras",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Ambos son equivalentes",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.186Z"
+  },
+  {
+    "id": "q-sds12-ataquesPreguntas-49",
+    "text": "¿Cómo se realiza un ataque de envenenamiento ARP (ARP poisoning)?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Sustituyendo la dirección MAC asociada a una IP en la caché ARP para redirigir el tráfico",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Inyectando scripts en la capa de red",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Forzando una condición SQL a verdadera",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Interceptando claves TLS",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.186Z"
+  },
+  {
+    "id": "q-sds12-ataquesPreguntas-50",
+    "text": "¿En qué consiste un ataque de envenenamiento DNS (DNS poisoning)?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Sustituir la IP devuelta para un nombre de dominio en un servidor DNS",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Robar cookies mediante un sitio malicioso",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Sobrescribir la pila de llamadas",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Saturar un servidor con peticiones",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.186Z"
+  },
+  {
+    "id": "q-sds12-ataquesPreguntas-51",
+    "text": "¿Cuál de estas no es una defensa válida contra ataques XSS e inyección SQL?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Validar y filtrar la entrada de usuario",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Utilizar consultas parametrizadas",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Escapar la salida HTML",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Desactivar HTTPS en el servidor",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.186Z"
+  },
+  {
+    "id": "q-sds12-ataquesPreguntas-52",
+    "text": "¿Qué técnica evita que la entrada del usuario modifique la estructura de una consulta SQL?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Filtros de red",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Consultas parametrizadas o declaraciones preparadas",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Inyecciones de cabeceras HTTP",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Desbordamiento de búfer",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.186Z"
+  },
+  {
+    "id": "q-sds12-ataquesPreguntas-53",
+    "text": "¿Qué método ayuda a impedir que scripts maliciosos se ejecuten en el HTML generado?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Escape/encoding de caracteres especiales",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Uso de cookies de terceros",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Interceptar paquetes con un firewall",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Deshabilitar JavaScript en el navegador",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.186Z"
+  },
+  {
+    "id": "q-sds12-ataquesPreguntas-54",
+    "text": "¿Qué técnica de protección de memoria aleatoriza la posición de segmentos para dificultar exploits?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Data Execution Prevention (DEP)",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Address Space Layout Randomization (ASLR)",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Input validation",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Cross-Site Request Forgery tokens",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.186Z"
+  },
+  {
+    "id": "q-sds12-ataquesPreguntas-55",
+    "text": "¿Qué mecanismo marca regiones de memoria como no ejecutables?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "NX bit / DEP",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "SameSite",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Prepared Statements",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Sandboxing",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.186Z"
+  },
+  {
+    "id": "q-sds12-ataquesPreguntas-56",
+    "text": "¿Cuál de estas soluciones confina código a un entorno restringido dentro del navegador?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Sandboxing (NaCl, gVisor, WebAssembly)",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Consultas parametrizadas",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "DNS Filtering",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Honeypot",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.186Z"
+  },
+  {
+    "id": "q-sds12-ataquesPreguntas-57",
+    "text": "¿Para qué sirve un honeypot en seguridad de redes?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Simular vulnerabilidades y registrar actividad maliciosa",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Acelerar el tráfico de red",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Realizar balanceo de carga",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Aumentar la aleatorización de memoria",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.186Z"
+  },
+  {
+    "id": "q-sds12-ataquesPreguntas-58",
+    "text": "¿Qué defensa de capa de aplicación limita la tasa de peticiones para mitigar DDoS?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Rate limiting",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Depuración de código",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Inyección de cabeceras",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Uso de cookies persistentes",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.186Z"
+  },
+  {
+    "id": "q-sds12-ataquesPreguntas-59",
+    "text": "¿Qué medida de red ayuda a bloquear tráfico con IP spoofed?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Filtrado de spoofing en el router o firewall",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Aislamiento de código en sandbox",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Validación de entradas en la aplicación",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Uso de tokens CSRF",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.186Z"
+  },
+  {
+    "id": "q-sds12-ataquesPreguntas-60",
+    "text": "¿Por qué es vital contar con un sistema de logs y monitoreo continuo?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Permite detectar actividad anómala y responder rápidamente a incidentes",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Acelera la página web",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Elimina la necesidad de firewalls",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Bloquea automáticamente todos los ataques",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.186Z"
+  }
+]

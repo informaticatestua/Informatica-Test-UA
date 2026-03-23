@@ -1,0 +1,121 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/layout/Header.astro';
+import { getGlobalStats } from '../../lib/firebase/service';
+
+const stats = await getGlobalStats();
+
+const mockStats = {
+    totalQuestions: stats.totalQuestions,
+    totalReports: stats.totalReports,
+    newSubmissions: stats.newSubmissions,
+    activeSubjects: stats.totalSubjects
+};
+---
+
+<BaseLayout title="Dashboard Admin">
+    <Header />
+    <div class="flex min-h-[calc(100vh-64px)]">
+        <!-- Sidebar -->
+        <aside class="w-64 bg-white border-r border-gray-200 hidden md:block">
+            <nav class="mt-8 px-4 space-y-2">
+                <a href="#" class="flex items-center space-x-3 p-3 rounded-xl bg-primary bg-opacity-10 text-primary font-bold">
+                    <span class="material-icons-outlined">dashboard</span>
+                    <span>Resumen</span>
+                </a>
+                <a href="#" class="flex items-center space-x-3 p-3 rounded-xl text-gray-600 hover:bg-gray-50 transition-all">
+                    <span class="material-icons-outlined">report</span>
+                    <span>Reportes</span>
+                    <span class="ml-auto bg-red-100 text-red-600 text-xs px-2 py-1 rounded-full">{mockStats.totalReports}</span>
+                </a>
+                <a href="#" class="flex items-center space-x-3 p-3 rounded-xl text-gray-600 hover:bg-gray-50 transition-all">
+                    <span class="material-icons-outlined">add_circle</span>
+                    <span>Nuevas Sugerencias</span>
+                    <span class="ml-auto bg-green-100 text-green-600 text-xs px-2 py-1 rounded-full">{mockStats.newSubmissions}</span>
+                </a>
+                <a href="#" class="flex items-center space-x-3 p-3 rounded-xl text-gray-600 hover:bg-gray-50 transition-all">
+                    <span class="material-icons-outlined">library_books</span>
+                    <span>Asignaturas</span>
+                </a>
+                <div class="pt-8 mt-8 border-t border-gray-100">
+                    <button id="logout-btn" class="flex items-center space-x-3 p-3 rounded-xl text-red-500 hover:bg-red-50 transition-all w-full text-left">
+                        <span class="material-icons-outlined">logout</span>
+                        <span>Cerrar Sesión</span>
+                    </button>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 bg-gray-50 p-8">
+            <div class="max-w-6xl mx-auto">
+                <h1 class="text-3xl font-bold text-gray-900 mb-8">Resumen General</h1>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                    <div class="bg-white p-6 rounded-3xl shadow-sm border border-gray-100">
+                        <div class="text-blue-500 bg-blue-50 w-12 h-12 rounded-2xl flex items-center justify-center mb-4">
+                            <span class="material-icons-outlined">quiz</span>
+                        </div>
+                        <div class="text-3xl font-bold text-gray-900">{mockStats.totalQuestions}</div>
+                        <div class="text-gray-500 text-sm">Preguntas totales</div>
+                    </div>
+                    <div class="bg-white p-6 rounded-3xl shadow-sm border border-gray-100">
+                        <div class="text-red-500 bg-red-50 w-12 h-12 rounded-2xl flex items-center justify-center mb-4">
+                            <span class="material-icons-outlined">report</span>
+                        </div>
+                        <div class="text-3xl font-bold text-gray-900">{mockStats.totalReports}</div>
+                        <div class="text-gray-500 text-sm">Reportes pendientes</div>
+                    </div>
+                    <div class="bg-white p-6 rounded-3xl shadow-sm border border-gray-100">
+                        <div class="text-green-500 bg-green-50 w-12 h-12 rounded-2xl flex items-center justify-center mb-4">
+                            <span class="material-icons-outlined">auto_awesome</span>
+                        </div>
+                        <div class="text-3xl font-bold text-gray-900">{mockStats.newSubmissions}</div>
+                        <div class="text-gray-500 text-sm">Sugerencias nuevas</div>
+                    </div>
+                    <div class="bg-white p-6 rounded-3xl shadow-sm border border-gray-100">
+                        <div class="text-purple-500 bg-purple-50 w-12 h-12 rounded-2xl flex items-center justify-center mb-4">
+                            <span class="material-icons-outlined">school</span>
+                        </div>
+                        <div class="text-3xl font-bold text-gray-900">{mockStats.activeSubjects}</div>
+                        <div class="text-gray-500 text-sm">Asignaturas activas</div>
+                    </div>
+                </div>
+
+                <!-- Recent Activities / Lists -->
+                <div class="bg-white rounded-3xl shadow-sm border border-gray-100 p-8">
+                    <h2 class="text-xl font-bold text-gray-900 mb-6 flex items-center space-x-2">
+                        <span class="material-icons-outlined text-red-500">warning</span>
+                        <span>Últimos Reportes</span>
+                    </h2>
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between p-4 bg-gray-50 rounded-2xl border border-gray-100">
+                            <div>
+                                <div class="font-bold text-gray-800">Error en la respuesta correcta</div>
+                                <div class="text-xs text-gray-500">Pregunta q-ada-p1-12 • Hace 2 horas</div>
+                            </div>
+                            <button class="px-4 py-2 text-sm font-bold text-primary hover:bg-primary hover:bg-opacity-5 rounded-lg border border-primary transition-all">Ver detalle</button>
+                        </div>
+                        <div class="flex items-center justify-between p-4 bg-gray-50 rounded-2xl border border-gray-100">
+                            <div>
+                                <div class="font-bold text-gray-800">Fórmula no se visualiza correctamente</div>
+                                <div class="text-xs text-gray-500">Pregunta q-ac-p2-45 • Hace 5 horas</div>
+                            </div>
+                            <button class="px-4 py-2 text-sm font-bold text-primary hover:bg-primary hover:bg-opacity-5 rounded-lg border border-primary transition-all">Ver detalle</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</BaseLayout>
+
+<script>
+    import { auth } from '../../lib/firebase/client';
+    import { signOut } from 'firebase/auth';
+
+    document.querySelector('#logout-btn')?.addEventListener('click', async () => {
+        await signOut(auth);
+        window.location.href = '/admin/login';
+    });
+</script>

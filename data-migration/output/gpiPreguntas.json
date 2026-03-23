@@ -1,0 +1,5510 @@
+[
+  {
+    "id": "q-gpiPreguntas-1",
+    "text": "En el analisis EVA, el indicador CV se calcula como:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "BCWP - ACWP",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "BCWP - BWCS",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "BCWP / BCWS",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "BCWP / ACWP",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.077Z"
+  },
+  {
+    "id": "q-gpiPreguntas-2",
+    "text": "¿Cual de las siguientes no es una tecnica de estimacion de costes de un proyecto?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Todas son tecnicas de estimacion",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Juicio experto",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Modelado de algoritmos de costes",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Ley de parkingson",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.077Z"
+  },
+  {
+    "id": "q-gpiPreguntas-3",
+    "text": "Tenemos tres actividades: A, B y C. A precede a B. Las holguras totales son: HT(A) = 2, HT(B) = 4 y HT(C) = 3. Las holguras libres son: HL(A) = 3, HL(B) = 2, HL(C) = 3. Si A se retrasa 2 dias, ¿Que les ocurre a B y C?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Las condiciones iniciales no se pueden dar",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "B se convierte en critica",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Nada, ya que no sobrepasamos la holgura total de A",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "La holgura total de B y C pasa a ser de 2 y 1 dia respectivamente",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.077Z"
+  },
+  {
+    "id": "q-gpiPreguntas-4",
+    "text": "¿Cual de las siguientes es una causa legal para poder transmitir los derechos de Propiedad Intelectual?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "En virtud de relacion laboral",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Mortis causa",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Todas son ciertas",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Intervivos",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.077Z"
+  },
+  {
+    "id": "q-gpiPreguntas-5",
+    "text": "En el caso de que hayamos desarrollado un software de gestion de autonomos en forma de servicio web. ¿Quien deberia encargarse del cumplimiento del cumplimiento de la legislacion a nvel de proteccion de datos?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "No seria necesario al no tratarse de una aplicacion de escritorio",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Nosotros como desarrolladores de la aplicacion",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Los vendedores del servicio",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Los clientes suscritos a nuestro servicio",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.077Z"
+  },
+  {
+    "id": "q-gpiPreguntas-6",
+    "text": "Suponemos que en en un momento del desarrollo de un proyecto tenemos unos valores de SPI>1 y CPI<1. ¿Que podemos decir en esta situacion?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Puede ser que nos sobre personal",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Deberiamos aumentar el ritmo de trabajo para ajustarnos a la agenda",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Puede ser que nos falte personal",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Esos dos valores son incompatibles",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.077Z"
+  },
+  {
+    "id": "q-gpiPreguntas-7",
+    "text": "Las versiones de un sistema:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Superan en numero a las releases",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Incluyen documentacion tecnica",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Tienen un coste menor que las releases",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Todas son ciertas",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.077Z"
+  },
+  {
+    "id": "q-gpiPreguntas-8",
+    "text": "El plan detallado de un proyecto",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Contiene todas las actividades incluidas en el plan general",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Solo corresponde a una fase del proyecto",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Todas son falsas",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Se hace siempre de dos en dos iteraciones",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.077Z"
+  },
+  {
+    "id": "q-gpiPreguntas-9",
+    "text": "¿En nuestras practicas, se que fase del mdelo UP ha sido objetivo la implementacion de la capa logica de negocio y acceso a datos?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Construccion",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Inicio",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Transicion",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Elaboracion",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.077Z"
+  },
+  {
+    "id": "q-gpiPreguntas-10",
+    "text": "¿Que aspecto ha sido el mas importante a la hora d establecer los objetivos de las fases de elaboracion y construccion en el modelo UP seguido para la planificacion del software de gestion de autonomos?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El modelo de proceso",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Los recursos empleados",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "La arquitectura elegida",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Los requerimientos funcionales y no funcionales",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.077Z"
+  },
+  {
+    "id": "q-gpiPreguntas-11",
+    "text": "Las caracteristicas del software libre son:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Solo se pueden usar en la enseñanza e investigacion",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Tiene limitaciones de usuario",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Estan disponibles en una pagina web que se llama www.softlibre.com",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Se distribuyen libremente y son de codigo abierto",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.077Z"
+  },
+  {
+    "id": "q-gpiPreguntas-12",
+    "text": "La cadena de actividades que determina la duracion global minima de un proyecto se conoce como :",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Cronograma",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Diagrama de Gantt",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Linea base",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Camino critico",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.077Z"
+  },
+  {
+    "id": "q-gpiPreguntas-13",
+    "text": "En el analisis EVA, la tarea/proyecto esta por encima de lo presupuestado si:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "BCWP < BCWS",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "BCWP > ACWP",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Todas son falsas",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "BCWP > BCWS",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.077Z"
+  },
+  {
+    "id": "q-gpiPreguntas-14",
+    "text": "¿Cual de las siguientes afirmaciones es falsa?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El conocimiento semantico se adquiere mediante memorizacion",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "El conocimiento sintactico se adquiere mediante experiencia y aprendizaje activo",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Todas son falsas",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "El nuevo conocimiento semantico puede interferir con conocimiento semantico ya existente",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.077Z"
+  },
+  {
+    "id": "q-gpiPreguntas-15",
+    "text": "La LOPDGDD no se aplicara en caso de:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Datos de personas fallecidas",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Datos ya excluidos en el RGPD",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Materias consideradas clasificadas",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Todas son ciertas",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.077Z"
+  },
+  {
+    "id": "q-gpiPreguntas-16",
+    "text": "¿Cual de las siguientes licencias no es propia del software libre?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Creative commons",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "BSD",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "OEM",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "GPL",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.077Z"
+  },
+  {
+    "id": "q-gpiPreguntas-17",
+    "text": "¿Que importancia tiene el RGPD?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Establece un marco para regular a las empresas sobre las llamadas que un ciudadano puede recibir para venderle productos",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Establece un marco para el registro de patentes de empresas",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Es una recomendacion europea que esta en estudio para su redaccion definitiva",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Establece un marco europeo relativo a la proteccion de las personas fisicas en lo que respecta al tratamiento de sus datos personales y a la libre circulacion de estos datos",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.077Z"
+  },
+  {
+    "id": "q-gpiPreguntas-18",
+    "text": "Extra: ¿Como se calcula el CPI?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "BCWP - ACWP",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "BCWP - BCWS",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "BCWP / ACWP",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "BCWP / BCWS",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.077Z"
+  },
+  {
+    "id": "q-gpiPreguntas-19",
+    "text": "Segun la LOPDGDD ¿A partir de que edad un menor puede expresar consentimiento en terminos de proteccion de datos?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "12",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "14",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "18",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "16",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.077Z"
+  },
+  {
+    "id": "q-gpiPreguntas-20",
+    "text": "Extra: ¿Como se calcula el SV?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "BCWP - BCWS",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "BCWP / ACWP",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "BCWP / BCWS",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "BCWP - ACWP",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.077Z"
+  },
+  {
+    "id": "q-gpiPreguntas-21",
+    "text": "Extra: ¿Como se calcula el SPI?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "BCWP / ACWP",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "BCWP - ACWP",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "BCWP / BCWS",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "BCWP - BCWS",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.077Z"
+  },
+  {
+    "id": "q-gpiPreguntas-22",
+    "text": "Monitorizar una agenda tiene como objetivo fundamental",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Presentar al cliente las desviaciones producidas en el proyecto para que sea consciente de que se va a retrasar la entrega",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Consiste en comprobar si la agenda real se ajusta a la planificada",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Sirve para justificar las horas dedicadas a un proyecto",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Se usa como seguimiento interno",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.077Z"
+  },
+  {
+    "id": "q-gpiPreguntas-23",
+    "text": "En una iteracion del Plan detallado se establece una actividad de revision de los riesgosdel proyecto. Dicha actividad consiste en:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Identificar mas riesgos para el proyecto",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Volver a analizar la probabilidad y los efectos de todos los riesgos del plan",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Revisar los identificadores potenciales que se marcaron en el plan de proyecto",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Revisar las estrategias establecidas en el plan de riesgos",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.077Z"
+  },
+  {
+    "id": "q-gpiPreguntas-24",
+    "text": "¿Que podemos decir de una tarea si conocemos los valores BCWS = 1200 y BCWP = ACWP?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Deberia haber comenzado",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Va retrasada",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Todas son ciertas",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "No ha comenzado",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.077Z"
+  },
+  {
+    "id": "q-gpiPreguntas-25",
+    "text": "Un documento de plan de proyecto:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Proporciona un conjunto de actividades que tienen como objetivo el exito del proyecto",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Proporciona las estimaciones del proyecto",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Proporciona visibilidad al proceso de desarrollo de software",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Todas son ciertas",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.077Z"
+  },
+  {
+    "id": "q-gpiPreguntas-26",
+    "text": "Extra: ¿Como se calcula el CV?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "BCWP - BCWS",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "BCWP / BCWS",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "BCWP - ACWP",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "BCWP / ACWP",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.077Z"
+  },
+  {
+    "id": "q-gpiPreguntas-27",
+    "text": "¿Que tecnica de estimacion de costes se basa en contabilizar pantallas, informes y modulos de calculo?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Puntos funcion",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Puntos objeto",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Estimacion por analogia",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Pricing to win",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.077Z"
+  },
+  {
+    "id": "q-gpiPreguntas-28",
+    "text": "En el modelo UP:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El numero de iteraciones es igual en todas las fases",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "La fase de inicio consta siempre de una iteracion",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Todas son falsas",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Las iteraciones tienen siempre la misma duracion",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.077Z"
+  },
+  {
+    "id": "q-gpiPreguntas-29",
+    "text": "En el análisis EVA, la tarea/proyecto va con retraso según la agenda si:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "BCWP<ACWP",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "BCWP<BCWS",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "BCWP>ACWP",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "BCWP>BCWS",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.077Z"
+  },
+  {
+    "id": "q-gpiPreguntas-30",
+    "text": "Tenemos tres actividades: A, B y C. A precede a B. Las holguras totales son: HT(A)=4, HT(B)=2,  HT(C)=3,Las holguras libres son: HL(A)= 3, HL(B)=2, HL(C)=3,  Si A se retrasa 4 días, ¿qué les ocurre a B y C?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "La holgura total de B y C pasa a ser de 1 y 2 dias respectivamente",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Ninguna de las anteriores es cierta",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "B se convierte en critica",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Nada, ya que no sobrepasamos la holgura total de A",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.077Z"
+  },
+  {
+    "id": "q-gpiPreguntas-31",
+    "text": "Dado que un riesgo siempre va a existir hay que….",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Contar con un proceso de gestión de proyectos adecuado para reducir losriesgos en su totalidad",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Es falso, los riesgos no siempre existen",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Establecer mecanismos de seguimiento y prevención",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "No es necesario tener planes de contingencia porque la experiencia demuestraque no es posible contener los riesgos en su totalidad",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.077Z"
+  },
+  {
+    "id": "q-gpiPreguntas-32",
+    "text": "En el análisis EVA, el indicador SV se calcula como:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "BCWP-BCWS",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "BCWP/BCWS",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "BCWP/ACWP",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "BCWP-ACWP",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.077Z"
+  },
+  {
+    "id": "q-gpiPreguntas-33",
+    "text": "¿Cual de las siguientes no es una técnica de estimación de costes de un proyecto?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Modelado algorítmico de costes",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Juicio Experto",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Ley de Parkinson",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Gantt",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.077Z"
+  },
+  {
+    "id": "q-gpiPreguntas-34",
+    "text": "En Scrum, la gráfica “Burn-Down” indica:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "La velocidad de desarrollo del equipo.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "La cantidad de trabajo pendiente en un sprint",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Los posibles impedimentos del equipo.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Todas son ciertas",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.077Z"
+  },
+  {
+    "id": "q-gpiPreguntas-35",
+    "text": "¿Hasta que momento durante la ejecución de un proyecto, la contingencia debe serconsiderada?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Hasta el fin del proyecto",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Hasta que el tiempo y los avances del proyecto demuestren que el riesgo se hareducido lo suficiente o desaparecido",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Hasta ejecutar un 70% del presupuesto asigando a la contingencia",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Hasta que el proyecto se dore de mas presupuesto",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.077Z"
+  },
+  {
+    "id": "q-gpiPreguntas-36",
+    "text": "El modelo basado en prototipos",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Permite reducir riesgos y costes de desarrollo",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "El sistema resultante es un prototipo",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Reduce las horas de implementación",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Es posible utilizarlo sólo con lenguajes orientados a objetos",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.077Z"
+  },
+  {
+    "id": "q-gpiPreguntas-37",
+    "text": "El cono de la incertidumbre",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Dice que conforme avanza el proyecto menos errores de estimación tenemos.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Todas las anteriores son falsas.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Dice que conforme avanza el proyecto más errores de estimación descubrimos",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "No puedo aplicarlo sino hago el seguimiento del proyecto.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.077Z"
+  },
+  {
+    "id": "q-gpiPreguntas-38",
+    "text": "¿Cuál de los siguientes libros es el principal recomendado en la asignatura?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Ingeniería del software\" 7ª Edición. Ian Sommerville",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Ingeniería del Software: un enfoque práctico. 5º edición.Roger S. Pressman.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "\"Desarrollo y Gestión de Proyectos Informáticos\". Steve McConnell",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "\"Técnicas de Programación y Control de Proyectos\". C.Romero López. Pirámide",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.077Z"
+  },
+  {
+    "id": "q-gpiPreguntas-39",
+    "text": "Según el RGPD, el RAT (registro de Actividades de Tratamiento) es obligatorio para",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Solo para la Administración Publica",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Empresas de menos de 250 empleados y PYMES",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Cualquier empresa publica o privada",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Empresas de 250 empleados o más",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.077Z"
+  },
+  {
+    "id": "q-gpiPreguntas-40",
+    "text": "En el análisis EVA, el indicador CPI se calcula como",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "BCWP/ACWP",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "BCWP-BCWS",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "BCWP-ACWP",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "BCWP/BCWS",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.077Z"
+  },
+  {
+    "id": "q-gpiPreguntas-41",
+    "text": "¿Cuál de los siguientes elementos NO es un elemento de configuración (EC)?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "La estructura de directorios",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Los ejecutables de la aplicación",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Todos los anteriores son elementos de configuración.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "La definición de las tablas de la BD de la aplicación",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.077Z"
+  },
+  {
+    "id": "q-gpiPreguntas-42",
+    "text": "En el registro de la propiedad intelectual de un software bajo una relación laboral,¿para qué sirve el documento de declaración de autor asalariado de un empleado?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Para la cesión de los derechos de explotación del software de la empresa al empleado",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Para la cesión de los derechos de explotación del software del empleado a la empresa",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Para la cesión de los derechos de autoría del software del empleado a la empresa",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Para la cesión de los derechos de autoría del software de la empresa al empleado",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.077Z"
+  },
+  {
+    "id": "q-gpiPreguntas-43",
+    "text": "Señala cuál de las siguientes características corresponden a la metodología SCRUM",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Reuniones diarias, y trabajo individual.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Es incremental, reuniones diarias y se basa en roles.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Se basa en roles y pasa a segundo plano la calidad del proyecto",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Lo importante es el trabajo individual y la documentación que se realice sobre la aplicación.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.077Z"
+  },
+  {
+    "id": "q-gpiPreguntas-44",
+    "text": "Muchas organizaciones fortalecen sus equipos de gestión de riesgos, para que estossean identificados a priori, pero lo que ocurre realmente es…",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Es imposible identificar los riesgos a priori",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Lo mas usual es identificar los riesgos de ejecución",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "No se identifican a tiempo",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Identifican normalmente riegos muy poco probables",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.077Z"
+  },
+  {
+    "id": "q-gpiPreguntas-45",
+    "text": "Los modelos de SCRUM y XP",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Tienen unos roles predefinidos.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Ofrecen resultados al cliente al finalizar cada iteración",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Utilizan historias de usuario para definir requisitos.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Todas son ciertas.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.077Z"
+  },
+  {
+    "id": "q-gpiPreguntas-46",
+    "text": "Indica cuál de las siguientes metodólogas son ágiles",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Kanban, Scrum, Extrem Programming",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Cobol, c++, Java.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Uml , PPo,itil.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Ninguna de las anteriores.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.077Z"
+  },
+  {
+    "id": "q-gpiPreguntas-47",
+    "text": "Tenemos la actividad A B y C. A precede a B. Las holguras totales sonHT(A)=2,HT(B)=4,HT(C)=3. Las holguras libres son HL(A)=3,HL(B)=2,HL(C)=3. Si A seretrasa 2 dias. ¿qué les ocurre a B y C?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Nada, ya que no sobrepasamos la holgura total de A",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "La holgura total de B y C pasa a ser de 2 y 1 dias respectivamente.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "B se convierte en critica",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Las condiciones iniciales no se pueden dar.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.077Z"
+  },
+  {
+    "id": "q-gpiPreguntas-48",
+    "text": "En el análisis EVA, la tarea/proyecto está por encima de lo presupuesto si:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "BCWP>BCWS",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "BCWP>ACWP",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "BCWP<ACWP",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "BCWP-ACWP",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.077Z"
+  },
+  {
+    "id": "q-gpiPreguntas-49",
+    "text": "En el proceso unificado de desarrollo de software:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "La tarea de establecer los requisitos es más intensa en la primera fase aunque en las fasessiguientes los requisitos se pueden modificar",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "El establecimiento de requisitos requiere del mismo esfuerzo en todas las fases.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Los requisitos siempre se establecen a partir de prototipos.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Los requisitos se establecen en la primera fase y no se permite ningún cambio en las fasessiguientes",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.077Z"
+  },
+  {
+    "id": "q-gpiPreguntas-50",
+    "text": "En la pirámide de jerarquia de necesidades donde se encuentran la mayoría de jefes de proyecto.",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "No les afecta esta jerarquía, es sólo para empleados.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Necesidades seguridad",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Necesidades autorrealización.",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Necesidades sociales,",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.077Z"
+  },
+  {
+    "id": "q-gpiPreguntas-51",
+    "text": "Ms Project es",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Una herramienta de seguimiento de proyectos",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Una herramienta de estimación de costes de proyectos",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Una herramienta de desarrollo de proyectos",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Una herramienta de modelado de proyectos",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.077Z"
+  },
+  {
+    "id": "q-gpiPreguntas-52",
+    "text": "Un impedimento en SCRUM",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Se refleja como una línea vertical en el gráfico burn-down.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Ninguna de las anteriores.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Se refleja como una línea discontinua en el gráfico burn-d.own.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Se refleja como una línea horizontal en el gráfico burn-down.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.077Z"
+  },
+  {
+    "id": "q-gpiPreguntas-53",
+    "text": "¿Cuál de estas características no es de la metodología SCRUM?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Demo al cliente al final de cada iteración",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Metodología iterativa e incremental",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Reuniones diarias.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Descanso cada 15 días para renovar las ideas",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.077Z"
+  },
+  {
+    "id": "q-gpiPreguntas-54",
+    "text": "¿Cual de las siguientes afirmaciones es cierta?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El conocimiento semántico se adquiere mediante memorización",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "El conocimiento sintáctico se adquiere mediante experiencia y aprendizaje activo",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Ninguna de las anteriores",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "El nuevo conocimiento semántico puede interferir con conocimiento semántico ya existente.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.077Z"
+  },
+  {
+    "id": "q-gpiPreguntas-55",
+    "text": "Las metodologías de desarrollo de software tienen como objetivo:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Todas son ciertas",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Proporcionar sistemas que satisfagan a todas las personas afectadas por el mismo",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Desarrollar un sistema dentro de un tiempo apropiado y con unos costes aceptables",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Establecer los requisitos de un sistema.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.077Z"
+  },
+  {
+    "id": "q-gpiPreguntas-56",
+    "text": "Las metodologías ágiles se caracterizan",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Por hacer más énfasis en la documentación a entregar",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Por inventarse a finales del S XIX en la revolución industrial",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Ponen en el centro el proyecto a entregar no al cliente",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Simplificar la complejidad de otras metodologías",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.077Z"
+  },
+  {
+    "id": "q-gpiPreguntas-57",
+    "text": "¿Qué podemos decir de una tarea si conocemos los valores BCWS=1200 y BCWP=ACWP?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Todas son ciertas",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Va retrasada",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Debería haber comenzado",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "No ha comenzado",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.077Z"
+  },
+  {
+    "id": "q-gpiPreguntas-58",
+    "text": "La LOPDGDD no será de aplicación en el caso de",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Materias consideras clasificadas",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Todas son ciertas",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Datos de personas fallecidas",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Datos ya excluidos en el RGPD",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.077Z"
+  },
+  {
+    "id": "q-gpiPreguntas-59",
+    "text": "La normativa vigente en España en materia de protección de datos es:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Actualmente en nuestro Estado solo nos afecta la LOPD 3/2018",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "RGDP UE de 2018 y LOPD 3/2018",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "LOPD 15/1999 y RGPD UE de 2016",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "RGDP UE de 2016 y LOPD 3/2018",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.077Z"
+  },
+  {
+    "id": "q-gpiPreguntas-60",
+    "text": "Las releases de una sistema:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Superan en numero a las versiones",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Incluyen documentación técnica",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Tienen un costo menor que las versiones",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Todas son ciertas",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.077Z"
+  },
+  {
+    "id": "q-gpiPreguntas-61",
+    "text": "En Scrum, un Sprint:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Tiene la duración que el cliente indique.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Tiene una duración prefijada",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Puede alargarse el tiempo necesario hasta acabar todas las tareas pendientes.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Ninguna de las anteriores",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.077Z"
+  },
+  {
+    "id": "q-gpiPreguntas-62",
+    "text": "Según la LOPDGDD ¿A partir de qué edad puede un menor expresar el consentimiento en términos de protección de datos?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "18 años",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "16 años",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "14 años",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "El padre o tutor legal será el que lo haga en su nombre mientras forme parte de launidad familliar",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-63",
+    "text": "¿Cuál es la distribución de tiempo dentro de un de desarrollo de equipo?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "30% Trabajando sólo, 20% actividades de gestión, 50% Interactuando con otragente",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "30% Trabajando sólo, 20% actividades no productivas, 50% Interactuando conotra gente.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "20% Implementando, 30% Interactuando con otra gente y 50% en actividadesde gestión",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "20% Trabajando sólo, 30% actividades no productivas, 50% Interactuando conotra gente.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-64",
+    "text": "En eXtreme programming:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Cada iteración debe acabar con una versión lista para su producción.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "No es necesario que se escriban las pruebas antes de comenzar a programar",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Ninguna de las anteriores.",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "No es necesario que el cliente esté in situ, ya que, se pueden utilizar especificaciones escritaspara la siguiente iteración.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-65",
+    "text": "Un plan de proyecto…",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Es una representación abstracta de un proceso que proporciona informaciónparcial sobre el proceso software",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Es un conjunto de actividades que tienen como objetivo el desarrollo de unproducto software",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Todas las afirmaciones son falsas.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Proporciona visibilidad al progreso del proyecto",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-66",
+    "text": "¿Cuál de los siguientes tipos de licencia no es propia del software libre?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Creative Commons",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "OEM",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "GPL",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "BSD",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-67",
+    "text": "Cuando el desarrollo del plan del proyecto existen restricciones de tiempo y presupuestoestablecidas por el cliente, estos deben..",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Ser descartadas ya que no se podrán hacer ajustes en el presupuesto",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Deben ser consideradas evaluando su impacto en el proyecto",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Ser descartadas ya que hay que ignorar completamente al cliente",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Ser incluidas y ajustar el programa",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-68",
+    "text": "Una de las recomendaciones que se deben tener en cuenta durante la estimación derecursos y tiempo de un proyecto informático es:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Planificar siempre como si los recursos estuvieran asignados al 100%",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Asignar varias tareas en el mismo periodo, así si una no se puede realizar se realizaraotra",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Todas las respuestas son válidas",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Identificar las tareas que consumen más recursos",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-69",
+    "text": "¿Qué es la refactorización en XP?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "La simplificación del código sin modificar su comportamiento",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Ninguna de las anteriores",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Las acciones que realizan los testers para definir los casos de prueba",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Las acciones que realizan los programadores para pasar las pruebas unitarias",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-70",
+    "text": "¿Qué podemos decir de una tarea si conocemos los valores BCWS=BCWP=0 y ACWP=800?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "No debería haber comenzado, pero sí lo ha hecho",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Debería haber comenzado y no lo ha hecho",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "El valor ACWP es erróneo",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "El valor BCWP es erróneo",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-71",
+    "text": "¿Cuál de las siguientes no es técnica de estimación de costes de un proyecto?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Juicio Experto",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Gantt",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Modelado algorítmico de costes",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Ley de Parkinson",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-72",
+    "text": "En el modelo UP…",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "La fase de inicio siempre consta de una única iteración",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "La fase de Transición suele ser la de mayor duración",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Las iteraciones pueden tener duraciones distintas",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "El numero de iteraciones es igual en todas las fases",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-73",
+    "text": "De los siguientes derechos regulados en la LOPD, ¿Cuál es un derecho digital?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Derecho de oposición",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Derecho de la intimidad en el ámbito laboral",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Derecho de supresión",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Derecho de rectificación",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-74",
+    "text": "En la fase de exploración de eXtreme programming:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El equipo de desarrollo establece la velocidad del proyecto.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Se prueba la tecnología y se construye un prototipo.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Se realizan tareas de soporte para el cliente.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "El cliente establece la prioridad de cada historia de usuario.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-75",
+    "text": "En el análisis EVA la tarea/proyecto va adelantada según la agenda si:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "BCWP > ACWP",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "BCWP < BCWS",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "BCWP > BCWS",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "BCWP < BCWS",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-76",
+    "text": "En el caso de producirse un retraso en una actividad, ¿cuál de las siguientes medidas seríala que menos afectaría a la agenda del proyecto?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Reemplazar a los recursos asignados a la misma",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Eliminar alguna funcionalidad",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Retrasarla según su holgura libre",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Retrasarla según su holgura total",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-77",
+    "text": "¿Qué multiplicador con valor alto reduciría el esfuerzo estimado en COCOMO?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Fiabilidad de producto y complejidad",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Dificultad de la plataforma",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Experiencia del personal",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Fiabilidad de producto y complejidad",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-78",
+    "text": "El método de planificación PERT es:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Una definición en base a una red (grafo dirigido) de dependencias de tareas que llevan al final del proyecto",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Una definición en forma de grafo no dirigido de tareas que ayudan a visualizar el Plan del Proyecto.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Una definición en forma de barras que dan un aspecto visual temporal del Plan del Proyecto.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-79",
+    "text": "¿Cuál de los siguientes tipos de licencia no es propia del software privativo?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Apache",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "EULA",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "PKC",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "ROK",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-80",
+    "text": "¿CuáI de las siguientes afirmaciones es CORRECTA?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Los riesgos no cambian durante todo el proyecto",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Los riesgos se definen y se gestionan de cualquier manera",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Los riesgos de un proyecto están vivos durante todo el proyecto y hay que adaptar el plan de riesgos permanentemente",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-81",
+    "text": "Desarrollamos un software para jugar al ajedrez. Para proteger este programa de la mejor forma posible:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Las dos anteriores son correctas, ya que ambas ofrecen igual grado de protección.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Lo registramos mediante una Patente del Software.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Lo registramos en el Registro de la Propiedad Intelectual",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-82",
+    "text": "¿Cuál de las siguientes afirmaciones relativas a la EDT no es correcta?:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "La suma del trabajo de todos los niveles inferiores debe corresponder al trabajo total de sus niveles inmediatamente superiores.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Lo que no aparece en la EDT no forma parte del proyecto y no se ejecuta salvo que se haya integrado y aprobado en el control de cambios del proyecto",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "La EDT representa todo el trabajo que hay que realizar para ejecutar el proyecto y entregar el producto o servicio solicitado.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "La EDT incluye todas las tareas necesarias para realizar el proyecto salvo las relacionadas con la gestión del proyecto.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-83",
+    "text": "En relación con la técnica PERT podemos afirmar que:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Una actividad comprendida entre dos actividades no tiene por qué ser crítica.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "En una actividad cualquiera el tiempo last podría ser menor que el tiempo early de dicha actividad.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "En una actividad el tiempo early es el tiempo máximo en el que se puede iniciar las actividades siguientes sin que ello retrase la duración del proyecto.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-84",
+    "text": "Tras recoger los requisitos del producto y definir el alcance del proyecto procederás a hacer",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Un listado de los paquetes de trabajo que una vez realizados completen los entregables",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Una descomposición a nivel de actividades para estimar el coste del proyecto.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "La estructura desglosada de tiempo para estimar la duración del proyecto.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Una organización del trabajo del equipo en paquetes de trabajo que ayudará en la comunicación con los interesados.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-85",
+    "text": "El plazo de protección de los derechos de autor según la LPI es",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "20 años a partir de la fecha de registro",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "70 años a partir de la fecha de registro",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "70 años a partir del fallecimiento del autor",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "20 años a partir del fallecimiento del autor",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-86",
+    "text": "Estudio de viabilidad en un proyecto software:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Solo debe realizarse el estudio de viabilidad cuando el cliente lo solicita.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Debe hacerse un estudio de viabilidad como una de las etapas iniciales del ciclo de vida.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Debe hacerse el estudio de viabilidad cuando el coste supere el umbral Boehm",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-87",
+    "text": "Una editorial solicita a una empresa de informática que desarrolle un software para un nuevo libro electrónico. El presidente de la empresa de informática asigna a un director de proyecto para que se haga cargo del desarrollo del proyecto. En este ámbito tenemos:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Patrocinador: Director de Proyecto. Vendedor/Socio de Negocio: Editorial.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Gerente de operaciones: Editorial. PMO: Presidente de la empresa de informática. Usuario: persona que compra el libro en el mercado.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Patrocinador: Presidente de la empresa de informática. Cliente: Editorial. Usuario: Persona que compra el libro electrónico en el mercado.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-88",
+    "text": "Según la LPI, ¿Cuál de las siguientes figuras tiene un plazo de protección indefinido?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Patentes",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Marcas",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Derechos de Autor",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Secretos comerciales",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-89",
+    "text": "Tras la elaboración del correspondiente grafo PERT, una empresa sabe que las holguras de las 4 actividades de uno de sus proyectos son las siguientes: H(A)=3 ; H(B)=2; H(C)=0 ; H(D)=4. Con esa información indica cuál de las siguientes afirmaciones es correcta:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El máximo retraso que puede experimentar la actividad A sin que se modifique la duración final del proyecto es 2",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Si la holgura de la actividad D se reduce en una unidad no se alteraría la duración final del proyecto.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "La duración final del proyecto será de 9.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-90",
+    "text": "Una empresa está haciendo un esfuerzo por mejorar el rendimiento de sus proyectos y crear registros históricos de proyectos pasados ¿Cuál es la mejor manera de lograrlo?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Crear informes de estado.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Crear planes para la dirección de proyectos.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Crear diagramas de red.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Crear registros lecciones aprendidas.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-91",
+    "text": "Durante la ejecución del proyecto, un miembro del equipo se acerca al PM porque no está seguro sobre qué trabajo debe realizar en el proyecto ¿Cuál de los siguientes documentos contiene descripción detallada de los paquetes de trabajo?:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Diccionario de la EDT",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Lista de actividades",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Plan de gestión del Alcance",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Enunciado del alcance del proyecto",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-92",
+    "text": "En un proyecto software:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Los riesgos se establecen con precisión en la fase de planificación, ya que suelen ser estables a lo largo del mismo.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Los riesgos identificados se suelen reducir sistemáticamente, es decir, se desarrollan acciones quepermitan aumentar la probabilidad de que un riesgo ocurra y/o disminuya el impacto negativo que produciría.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Los riesgos suelen ir cambiando a los largo del mismo, por lo que en instancias predefinidas conviene rehacer lasevaluaciones de riesgos.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-93",
+    "text": "La estimación con puntos de función:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Es una técnica de estimación empírica, al Igual que PERT",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "No es un modelo adecuado para proyectos \"tipo gestión\"",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Es independiente del lenguaje de implementación.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-94",
+    "text": "El estudio de viabilidad en un proyecto consiste en",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Estudio que garantice que el proyecto se puede integrar en otros sistemas de la empresa y sepuede hacer en plazo y coste",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Las dos anteriores son correctas.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Estudio que garantice que el proyecto es factible y es la mejor solución",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-95",
+    "text": "¿Qué modelo COCOMO utilizarías si el proyecto a desarrollar es muy complejo, restrictivo e innovador?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Semiacoplado",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Organico",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Empotrado",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-96",
+    "text": "Propiedades que se pueden medir en un software para evaluar su calidad:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Cumplimiento normativo, planificación temporal y adaptabilidad a nuevos entornos",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Características operativas, adaptabilidad a nuevos entornos y capacidad para soportar cambios",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Cumplimiento de la planificación temporal y de los requisitos funcionales del proyecto",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-97",
+    "text": "En un grafo de actividades (PERT):",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "No se consideran relaciones de precedencia entre las actividades.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "La holgura total de una actividad indica cuánto se puede atrasar su comienzo sin afectar la duración total del proyecto.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "El fin más tardío de una actividad es lo más tarde que puede comenzar una actividad, afectando con su retraso a laduración total del proyecto.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-98",
+    "text": "Como resultado de la Revisión Técnica Formal",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Se obtendrá un informe sobre consideraciones vistas únicamente en la codificación del software, ya quees la parte que realmente condiciona el funcionamiento de la aplicación.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Se obtendrá una lista con los sucesos de la revisión y un informe sumarial de dicha revisión",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "No se obtendrá ningún documento, únicamente se aprobará o no la salida del producto.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-99",
+    "text": "¿Cuál de los siguientes modelos de proceso es evolutivo?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Espiral",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Cascada",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Unificado",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Unificado y Espiral",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-100",
+    "text": "Según el modelo de estimación de “Puntos de función”, ¿Cuál de las siguientes afirmaciones es incorrecta?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Depende del lenguaje de programación.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Realiza la estimación a partir de los requisitos.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Es un modelo adecuado para proyectos de gestión",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-101",
+    "text": "Un PM ha sido asignado a un nuevo proyecto del que dispone de poca experiencia y es bastante más grande de otros proyectos en los que ha trabajado. El PM conoce a un amigo que ya ha dirigido proyectos similares ¿Qué debería hacer el PM?:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Esperar a la ejecución del proyecto para ver si necesitará ayuda.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Asegurarse de que todos los interesados acepten el alcance del proyecto",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Obtener registros históricos desde la oficina de gestión de proyectos",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Contactar con el PM del proyecto anterior y pedirle consejos.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-102",
+    "text": "En su proyecto ya se ha finalizado con la identificación de los interesados agregando información sobre sus roles, áreas de conocimiento, necesidades, intereses y expectativas ¿Cuál debería ser el siguiente paso a realizar?:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Evaluar cómo podrían influir los interesados en el proyecto.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Controlar la participación de los interesados en el proyecto.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Clasificar a los interesados según su influencia e intereses.",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Definir la mejor estrategia de comunicaciones con cada grupo de interesados.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-103",
+    "text": "En el modelo UP.",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Hay una versión por iteración.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Tenemos una release por fase.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Todas las anteriores son ciertas.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Puede haber más de una versión por iteración.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-104",
+    "text": "Los tipos básicos de relaciones entre fases de un proyecto son:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Relación secuencial, relación de superposición y relación iterativa.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Relación de gobernabilidad, relación con los stakeholders y relación bilateral.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Relación secuencial, relación bilateral y relación de superposición",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-105",
+    "text": "Tenemos una tarea en MicrosoftProject de 2 días de duración con un recurso asignado a tiempo completo ¿Qué ocurre si le asignamos otro recurso adicional también a tiempo completo?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El trabajo necesario para realizar la tarea se duplicará al ser dos recursos",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "La duración de la tarea se reducirá a la mitad",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Depende del tipo de tarea que tenga establecido",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Nada, simplemente tiene en cuenta que la tarea la realizan 2 recursos",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-106",
+    "text": "Indica cuál de las siguientes afirmaciones sobre dirección de proyectos es FALSA:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "La dirección de proyectos no es la encargada de equilibrar las restricciones contrapuestas del proyecto.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Los cinco grupos de procesos en la dirección de proyectos son: iniciación, planificación, ejecución, seguimiento y control y cierre.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "El objetivo principal de la dirección de proyectos es cumplir con los requisitos del proyecto",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-107",
+    "text": "Sobre la gestión de riesgos:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Para todo riesgo se debe determinar un conjunto de acciones para reducir o eliminar el riesgo",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "En la detección de riesgos, solo se deben identificar y atacar todos los riesgos específicos del proceso",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Los riegos y las decisiones se registran en un plan de gestión de riesgos al comienzo del proyecto, que se debeactualizar y monitorear a lo largo del mismo",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-108",
+    "text": "La holgura de una tarea:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Siempre es cero",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Es el tiempo máximo que puede durar una tarea en caso de comenzar en su inicio temprano y concluir en su fin tardío",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Es el tiempo que disponemos para jugar con el inicio de una tarea sin afectar al proyecto",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-109",
+    "text": "Indica cuál de las siguientes características aplican al modelo Canvas de negocio.",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Se puede dejar apartados sin rellenar, al menos con rellenar el 50 por ciento es válido.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Se utiliza solo para proyectos de robótica",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Es una herramienta nueva que surge después de la segunda guerra mundial",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Se basa en existencia de una propuesta de valor que tenemos que comunicar al cliente mediante un modelo canvas y rellenando todos los apartados",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-110",
+    "text": "¿Cuál de los siguientes NO es un modelo de estimación del software?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "COCOMO",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Técnica Delphi",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "WBS (Work Breakdown Structure)",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-111",
+    "text": "El objetivo básico del estudio de viabilidad es:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Incorporar el proyecto con las metas estratégicas de la empresa",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Determinar las actividades principales dentro del proyecto y desglosarlas en paquetes de trabajo componentes",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Determinar si la organización cuenta con los recursos y capacidades requeridas para llevar a cabo el proyecto",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-112",
+    "text": "Los diagramas de GANTT",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "se usan para la planificación temporal",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "se usan para la estimación",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "son unos diagramas de red que permiten calcularles camines y tiempos límite",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-113",
+    "text": "Ms Project es ...",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Una herramienta de modelado de proyectos",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Una herramienta de desarrollo de proyectos",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Una herramienta de estimación de costes de proyectos",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Una herramienta de seguimiento de proyectos",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-114",
+    "text": "COCOMO versus PUNTOS DE FUNCIÓN:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Ninguna de las anteriores es correcta",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Son dos técnicas distintas pero persiguen exactamente los mismos objetivos: dimensionar proyectos, plazos y costes.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "COCOMO estima costes, PUNTOS DE FUNCIÓN no aporta directamente una estimación de costes.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-115",
+    "text": "¿Cuándo tienen los interesados una mayor influencia en el proyecto?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "A lo largo del proyecto.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Al final.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Al inicio.",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "En la mitad.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-116",
+    "text": "El estudio de viabilidad del proyecto se realiza desde cuatro perspectivas diferentes:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Económico, técnico, operativo y legal",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Económico, normativo, legal y social",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Económico, técnico, operativo y social",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-117",
+    "text": "¿Quién debe cumplir la Ley Orgánica de Protección de Datos?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El responsable del fichero y quien decide sobre la finalidad, contenido y uso del tratamiento",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Persona o personas responsables de los ficheros.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "El responsable del fichero y el encargado del tratamiento.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-118",
+    "text": "En el análisis EVA, la tarea/proyecto está por debajo de lo presupuesto si:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "BCWP>ACWP",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "BCWP>BCWS",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "BCWP<ACWP",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "BCWS<ACWP",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-119",
+    "text": "¿Cuál de los siguientes parámetros EVA nos informa de la cantidad de trabajo planificado al final del proyecto/tarea?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "BCWP",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "BAC",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "ACWP",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "BCWS",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-120",
+    "text": "Indique cual de las siguientes sentencias es falsa:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Entre las actividades de la SQA no se encuentra la realización de las revisiones técnicas formales",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "La SQA es una actividad de protección que se aplica en todo el proceso de ingeniería del software",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Entre las actividades de la SQA se encuentra el control de cambios",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-121",
+    "text": "Usted está trabajando en un proyecto de investigación y desarrollo para lanzar un nuevo producto al mercado. Le quedan pocos días para finalizar el proyecto y está teniendo muchos problemas con los usuarios, el cliente, el patrocinador y los miembros del equipo, entre otros ¿Qué debería haber realizado primero para mitigar este tipo de problemas?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Identificar a todos los interesados.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Crear una matriz para la gestión de conflictos.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Determinar los requisitos y expectativas de los interesados.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Mantener una comunicación fluida con los interesados.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-122",
+    "text": "Indica cual de las siguientes afirmaciones es VERDADERA:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "La Garantía de Calidad del Software (SQA) es una actividad que se aplica en todo el proceso de ingeniería delsoftware.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Como resultado de una Revisión Técnica Formal se obtiene un informe sobre consideraciones vistas únicamente en la codificación del software, ya que es la parte que condiciona realmente el funcionamiento de la aplicación.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Uno de los grandes inconvenientes de las revisiones técnicas formales es que fomentan la inseguridad en el proyecto.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-123",
+    "text": "En relación a la patente software en España se protege:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "En España no se aceptan las patentes de software.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "El código fuente, el código objeto y los manuales de instrucciones.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "En España solo se protege el código fuente mediante patentes.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-124",
+    "text": "La Ley Orgánica 15/1999, de Protección de Datos de Carácter Personal (en adelante LOPDCP) tiene por objeto garantizar yproteger, en lo que concierne al tratamiento de los datos personales:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Las libertades públicas de las personas físicas",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Las libertades públicas y los derechos fundamentales de las personas físicas.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Las libertades públicas y los derechos fundamentales de las personas físicas y jurídicas.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-125",
+    "text": "La estimación con puntos de función:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Es una técnica de estimación empírica, al igual que PERT",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Es un modelo adecuado para proyectos “Tipo Gestión”",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Es dependiente del lenguaje de implementación",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-126",
+    "text": "La representación gráfica del WBS:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Nos muestra un grafo no ordenado donde los nodos son las tareas",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Nos muestra un árbol en que las hojas son las tareas",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Ninguna de las dos anteriores es correcta",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-127",
+    "text": "Respecto a la protección de datos del software de gestión de autónomos, indica cuál de las siguientes sería una acción obligatoria para cumplir con la legislación actual en el caso de desarrollaría como aplicación web",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Ninguna de las otras respuestas es correcta",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Nombrar un delegado de protección de datos",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Incluir un apartado de aviso legal en la web",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Resgitrar los ficheros con los datos de carácter personal en la AEPD",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-128",
+    "text": "Rol del gerente funcional:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Persona relacionada con la producción y el mantenimiento de los productos o servicios que vende la empresa",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Responsable de la gestión coordinada de proyectos relacionados.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Persona clave que desempeña el rol de gestor en un área de la empresa, como recursos humanos, finanzas,contabilidad o adquisiciones.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-129",
+    "text": "La Deontología Profesional:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Está recogida en normas y códigos deontológicos.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Está regulada por el Estado.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "No son exigibles a los profesionales de un determinado colectivo.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-130",
+    "text": "Obligaciones de las empresas respecto a los datos personales:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Desarrollar un Reglamento de Medidas de Seguridad e informar al Registro General de Protección de Datos sobre los datos de carácter personal sensible",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Proteger los ficheros para preservar la confidencialidad, legitimar los datos personales y declarar los ficheros con datos de carácter personal a la Agencia de Protección de Datos",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Proteger los ficheros para preservar la confidencialidad e implantar un responsable de seguridad junto con una Auditoría interna o externa.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-131",
+    "text": "Durante una reunión con algunos de los interesados del proyecto, se le pide al PM añadir más trabajo al alcance del proyecto. El PM revisó la correspondencia con el patrocinador antes que se firmara el acta de constitución y éste se negó aportar más financiación para el trabajo que supone modificar el alcance mencionado por los interesados. Lo mejor que el PM puede hacer es:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Evaluar el impacto sobre el proyecto antes de añadir más trabajo al alcance",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Decirle a los interesados que no se puede modificar ese aspecto del alcance",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Añadir el trabajo si el cronograma del proyecto lo permite",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Dejar que el patrocinador se entere de la solicitud de los interesados",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-132",
+    "text": "¿Cuál de las siguientes no es una causa legal para poder transmitir los derechos de propiedad intelectual?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "En virtud de relación mercantil",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "En virtud de relación laboral",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "mortis causa",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "inter vivos",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-133",
+    "text": "Analizando los valores EVA de la imagen...¿que podemos decir de la tarea 4? https://i.imgur.com/co7DiE0.png",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El valor BCWP es erroneo",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Debería haber comenzado y no lo ha hecho",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "El valor ACWP es erroneo",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Estamos Gucci",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-134",
+    "text": "Cuales son las tres claves de una buena gestión en un proyecto informático",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Agenda, Control y Personal",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Diseño, Agenda y Transición",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Problema, Personal y Proceso",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Diseño, Implementación y Feedback",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-135",
+    "text": "Analizando los valores EVA de la imagen...¿que podemos decir de la tarea 2? https://i.imgur.com/co7DiE0.png",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Todas son ciertas",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Va retrasada",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "No ha comenzado",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Debería haber comenzado",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-136",
+    "text": "En la pirámide de Maslow ¿donde se encuentran la mayoría de jefes de proyecto?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Necesidades de estima",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "No les afecta esta jerarquía, es solo para empleados.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Necesidades de seguridad",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Necesidades de autorrealización",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-137",
+    "text": "Analizando los valores EVA que tenemos en la foto...¿que podemos decir del proyecto en su conjunto? https://i.imgur.com/co7DiE0.png",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El proyecto va adelantado y su productividad es alta",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "El proyecto va adelantado y su productividad es baja",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "El proyecto va atrasado y su productividad es baja",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "El proyecto va atrasado y su productividad es alta",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-138",
+    "text": "Ms Project es...",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Una herramienta de desarrollo de proyectos",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Una herramienta de seguimiento de proyectos",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Una herramienta de modelado de proyectos",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Una herramienta de estimación de costes de proyectos",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-139",
+    "text": "¿Que ocurriría si en un proyecto el valor EVA de CPTR supera al valor CPTP?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El proyecto va atrasado",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Es una situación indeseable",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "El proyecto va adelantado",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Necesitamos contratar más personal",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-140",
+    "text": "Somos una empresa desarrolladora de una aplicación que recoge datos de análisis médicos del usuario(tensión arterial, nivel de glucosa, nivel de colesterol, etc.). Si recurrimos a la herramienta gratuita de Facilita 2.0 ...¿qué datos hay que completar o indicar que vamos a recolectar?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Hay que indicar que nos dedicamos al sector de la sanidad, teniendo que indicar después en que provincia nos situamos para que nos genere los documentos necesarios para situar al pie de nuestra aplicación y así cumplir la LGPD al 100%",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Datos médicos, DNI de los pacientes, Procedencia médica del paciente y otros datos biométricos",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Al indicar que nos dedicamos al sector de sanidad, la herramienta Facilita 2.0 no nos permite seguir",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Nada, no funciona la herramienta, no está activa actualmente",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-141",
+    "text": "Analizando los valores EVA de la imagen...¿qué podemos decir de la tarea 1?  https://i.imgur.com/co7DiE0.png",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Ha gastado menos de lo previsto",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Va adelantada respecto a la agenda",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Va atrasada respecto a la agenda",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "No podemos saber si ha terminado",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-142",
+    "text": "¿Cuales son las diferencias principales entre un presupuesto y un documento de estimación de costes?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El presupuesto es un documento que se entrega al cliente y el documento de estimación de costes es interno de la empresa",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "El presupuesto es un documento interno de la empresa, usado para .. bueno que esta no es, sigue leyendo anda",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "El documento de estimación de costes se usa para discutirlo con el cliente y que él nos indique nuevos requisitos y el presupuesto es un documento que se entrega al cliente para informarle de tiempos de entrega, precios de venta etc...",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "El presupuesto tiene precios fijos conseguidos mediante técnicas de estimación como la Ley de parkinson, Pricing to Win etc... y el documento de estimación de costes es un draft del presupuesto incluyendo en él, tiempos de entrega e información relevante a la venta del proyecto.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-143",
+    "text": "¿Que pasos sigue la gestión de riesgos en un proyecto informático? (En orden →)",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Análisis, Desarrollo, Planificación y Monitorización",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Identificación, Análisis, Planificación y Monitorización",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Reestructuración, Análisis, Desarrollo y Planificación",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Desarrollo, Análisis, Planificación y Evaluación",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-144",
+    "text": "¿Cuál es la distribución de tiempo dentro de un equipo de desarrollo?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "50% trabajando solo, 30% interactuando con otra gente, 20% actividades no productivas",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "20% trabajando solo, 30% actividades no productivas, 50% interactuando con otra gente",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "30% trabajando solo, 20% actividades no productivas, 50% interactuando con otra gente",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "50% actividades no productivas, 30% interactuando con otra gente, 20% trabajando solo",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-145",
+    "text": "Make es una herramienta case que soporta...",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "La gestión de versiones y releases",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "La planificación de una gestión de configuraciones",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Control de cambios",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "La construcción del sistema",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-146",
+    "text": "¿Que son los hitos en un proyecto informático?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Es una tarea para asignar recursos a las actividades de un proyecto",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Marcan el final de una actividad en proceso de desarrollo",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Son resultados del proyecto que se entregan a los clientes",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Un hito es comunmente conocido como welwitschia mirabilis, descubierto en 1922 por Howard Carter, oriundo de Maryland, EEUU",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-147",
+    "text": "Tenemos tres actividades: A,B y C. A precede a B. Las holguras son: HT(A)=4,HL(A)=3; HT(B)=2,HL(B)=2;HT(C)=3,HL(C)=3. Si A se retrasa 4 días, ¿que ocurre con B y C?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "La HT de B y C pasa a ser de 1 y 2 días respectivamente",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Nada",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Ninguna de las anteriores es cierta",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "B se convierte en crítica",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-148",
+    "text": "¿Que ocurriría si en un proyecto el valor EVA de BCWS supera al valor CPTR?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El proyecto va atrasado",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Tenemos que abortar el proyecto, puesto que estamos en la situación \"inaceptable\"",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "El proyecto va con márgen de tiempo",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Nos indica que tenemos que prescindir de personal ya que estamos gastando más de lo previsto",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-149",
+    "text": "¿Cuales son las ventajas de usar la Ley de Parkinson para estimar los costes de un proyecto?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "La empresa desarrolladora consigue el contrato.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Es preciso si se dispone de los datos adecuados",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "No realiza presupuestos abultados",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Método barato, además la estimación puede ser bastante precisa si se dispone de los expertos adecuados.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-150",
+    "text": "Analizando los valores EVA de la imagen...¿que podemos decir de la tarea 3? https://i.imgur.com/co7DiE0.png",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Está gastando menos de lo previsto",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Va retrasada",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "No ha comenzado",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Todas son falsas",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-151",
+    "text": "La gestión de proyectos ...",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Tiene como objetivo determinar qué hay que hacer, cómo hay que hacerlo y quién tiene que hacerlo",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Está fuertemente condicionada por la implementación del sistema",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Está fuertemente condicionada el diseño del sistema",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Tiene como objetivo el confeccionar una agenda del proyecto",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-152",
+    "text": "En el siguiente diagrama Gantt ¿qué modelo de proceso se está siguiendo? https://i.imgur.com/VlfaZSK.png",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Desarrollo Rápido de aplicaciones",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Cascada",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Prototipado",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Todos los anteriores",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-153",
+    "text": "¿Qué tarea no podemos realizar en Microsoft Project?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Todas las tareas de estas contestaciones se pueden realizar en Microsoft Project",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "La planificación detallada de todo el proyecto",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "La estimación del proyecto",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "El seguimiento del proyecto",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-154",
+    "text": "En el análisis EVA, la tarea/proyecto está por debajo de lo presupuestado si:ç",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "BCWP < ACWP",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "BCWP > ACWS",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "BCWP > ACWP",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "BCWP < ACWP",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-155",
+    "text": "¿Cuál es la distribución de tiempo dentro de un desarrollo de proyecto?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "30% Trabajando solo, 20% actividades de gestión, 50% interactuando con otra gente",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "30% Trabajando solo, 20% actividades no productivas, 50% interactuando con otra gente",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "20% Trabajando solo, 30% actividades no productivas, 50% interactuando con otra gente",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "20% Implementando, 30% interactuando con otra gente, 50% en actividades de gestión",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-156",
+    "text": "¿Qué podemos decir de una tarea si conocemos los valores BCWS=BCWP=600 y ACWP=1000?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Va adelantada respecto a la agenda",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Ha gastado menos de lo previsto",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Va atrasada respecto a la agenda",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "No podemos saber si ha terminado sin conocer su BAC",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-157",
+    "text": "El Plan detallado de un proyecto… Seleccione una:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Contiene todas las actividades incluidas en el plan general",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Todas son falsas",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Se hace siempre de dos en dos iteraciones",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Solo corresponde a una fase del proyecto",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-158",
+    "text": "Tenemos un proyecto con los siguientes datos del modelo EVA. ¿Cuál de las siguientes afirmaciones es falsa? ```+-------+------+------+------+------+ \\n| Tarea | BCWS | BCWP | ACWP | BAC  | \\n+-------+------+------+------+------+ \\n| Tarea0| 2800 | 1800 | 1800 | 2600 | \\n+-------+------+------+------+------+ \\n| Tarea1| 600  | 600  | 600  | 1200 | \\n+-------+------+------+------+------+ \\n| Tarea2| 1200 | 0    | 600  | 2600 | \\n+-------+------+------+------+------+ \\n| Tarea3| 1000 | 1200 | 800  | 2000 | \\n+-------+------+------+------+------+ \\n| Tarea4| 0    | 0    | 0    | 600  | \\n+-------+------+------+------+------+ \\n```",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "La tarea 1 ha comenzado y está realizada al 50%, va desarrollándose en el tiempo previsto y gastando también lo previsto",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "La tarea 3 va adelantada y consumiendo menos de lo previsto",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "La tarea 4 aún no ha comenzado",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "La tarea 0 va retrasada y consumiendo más de lo previsto",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-159",
+    "text": "¿Qué beneficios tiene las metodologías agiles?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Rapidez, documentación muy completa y trabajar de forma intensa la última semana antes de la entrega",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Eficiencia, rapidez y visión cliente",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Cliente, proveedores y cumplir el presupuesto",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Individualismo",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-160",
+    "text": "¿Qué tarea no hemos realizado en Microsoft Project?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "La planificación detallada de todo el proyecto",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "El seguimiento del proyecto",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "La estimación del proyecto",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "No hemos realizado ninguna de las anteriores en Microsoft Project",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-161",
+    "text": "Según la LPI, ¿Cual de los siguientes figuras tienen un plazo de protección indefinido?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Marcas",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Secretos comerciales",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Patentes",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Derecho de autor",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-162",
+    "text": "¿ Que podemos decir del proyecto en su conjunto? https://i.imgur.com/co7DiE0.png",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El proyecto va adelantado y su productividad es baja",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "El proyecto va atrasado y su productividad es alta",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "El proyecto va adelantado y su productividad es alta",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "El proyecto va atrasado y su productividad es baja",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-163",
+    "text": "¿Qué podemos decir de la tarea 1? https://i.imgur.com/co7DiE0.png",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "No podemos saber si ha terminado sin conocer su BAC",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Ha gastado menos de lo previsto",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Va adelantada respecto a la agenda",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Va atrasada respecto a la agenda",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-164",
+    "text": "¿Qué podemos decir de la tarea 2? https://i.imgur.com/co7DiE0.png",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "No ha comenzado",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Debería haber comenzado",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Va retrasada",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Todas son ciertas",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-165",
+    "text": "¿Qué podemos decir de la tarea 3? https://i.imgur.com/co7DiE0.png",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "No ha comenzado",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Va retrasada",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Está gastando menos de lo provisto",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Todas son falsas",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-166",
+    "text": "¿Qué podemos decir de la tarea 4?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Debería haber comenzado y no lo ha hecho",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "El valor BCWP es erróneo",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "El valor ACWP es erróneo",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "No debería haber comenzado per si lo ha hecho",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-167",
+    "text": "Analizando los valores de los parámetros EVA de la imagen... ```+-------+------+------+------+ \\n| Tarea | BCWS | BCWP | ACWP | \\n+-------+------+------+------+ \\n|TareaR | 2800 | 1800 | 2600 | \\n+-------+------+------+------+ \\n| Tarea1| 600  | 600  | 1000 | \\n+-------+------+------+------+ \\n| Tarea2| 1200 | 0    | 0    | \\n+-------+------+------+------+ \\n| Tarea3| 1000 | 1200 | 800  | \\n+-------+------+------+------+ \\n| Tarea4| 0    | 0    | 800  | \\n+-------+------+------+------+ \\n``` ¿Qué podemos decir del proyecto en su conjunto?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El proyecto va adelantado y su productividad es baja",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "El proyecto va atrasado y su productividad es alta",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "El proyecto va adelantado y su productividad es alta",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "El proyecto va atrasado y su productividad es baja",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-168",
+    "text": "Analizando los valores de los parámetros EVA de la imagen... ```+-------+------+------+------+ \\n| Tarea | BCWS | BCWP | ACWP | \\n+-------+------+------+------+ \\n|TareaR | 2800 | 1800 | 2600 | \\n+-------+------+------+------+ \\n| Tarea1| 600  | 600  | 1000 | \\n+-------+------+------+------+ \\n| Tarea2| 1200 | 0    | 0    | \\n+-------+------+------+------+ \\n| Tarea3| 1000 | 1200 | 800  | \\n+-------+------+------+------+ \\n| Tarea4| 0    | 0    | 800  | \\n+-------+------+------+------+ \\n``` ¿Qué podemos decir de la tarea 1?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "No podemos saber si ha terminado sin conocer su BAC",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Ha gastado menos de lo previsto",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Va adelantada respecto a la agenda",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Va atrasada respecto a la agenda",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-169",
+    "text": "Analizando los valores de los parámetros EVA de la imagen... ```+-------+------+------+------+ \\n| Tarea | BCWS | BCWP | ACWP | \\n+-------+------+------+------+ \\n|TareaR | 2800 | 1800 | 2600 | \\n+-------+------+------+------+ \\n| Tarea1| 600  | 600  | 1000 | \\n+-------+------+------+------+ \\n| Tarea2| 1200 | 0    | 0    | \\n+-------+------+------+------+ \\n| Tarea3| 1000 | 1200 | 800  | \\n+-------+------+------+------+ \\n| Tarea4| 0    | 0    | 800  | \\n+-------+------+------+------+ \\n``` ¿Qué podemos decir de la tarea 2?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "No ha comenzado",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Debería haber comenzado",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Va retrasada",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Todas son cierta",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-170",
+    "text": "Analizando los valores de los parámetros EVA de la imagen... ```+-------+------+------+------+ \\n| Tarea | BCWS | BCWP | ACWP | \\n+-------+------+------+------+ \\n|TareaR | 2800 | 1800 | 2600 | \\n+-------+------+------+------+ \\n| Tarea1| 600  | 600  | 1000 | \\n+-------+------+------+------+ \\n| Tarea2| 1200 | 0    | 0    | \\n+-------+------+------+------+ \\n| Tarea3| 1000 | 1200 | 800  | \\n+-------+------+------+------+ \\n| Tarea4| 0    | 0    | 800  | \\n+-------+------+------+------+ \\n``` ¿Qué podemos decir de la tarea 3?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "No ha comenzado",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Va retrasada",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Está gastando menos de lo previsto",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Todas son falsas",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-171",
+    "text": "Analizando los valores de los parámetros EVA de la imagen... ```+-------+------+------+------+ \\n| Tarea | BCWS | BCWP | ACWP | \\n+-------+------+------+------+ \\n|TareaR | 2800 | 1800 | 2600 | \\n+-------+------+------+------+ \\n| Tarea1| 600  | 600  | 1000 | \\n+-------+------+------+------+ \\n| Tarea2| 1200 | 0    | 0    | \\n+-------+------+------+------+ \\n| Tarea3| 1000 | 1200 | 800  | \\n+-------+------+------+------+ \\n| Tarea4| 0    | 0    | 800  | \\n+-------+------+------+------+ \\n``` ¿Qué podemos decir de la tarea 4?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Debería haber comenzado y no lo ha hecho",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "El valor BCWP es erróneo",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "El valor ACWP es erróneo",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "No debería haber comenzado pero sí lo ha hecho",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-172",
+    "text": "La necesidad de ........ es una de las mayores razones para la comunicación en un proyecto.",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Optimización",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Integridad",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Integración",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Diferenciación",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-173",
+    "text": "Un proyecto está lleno de modificaciones al acta de constitución ¿Quién tiene la responsabilidad principal de decidir si estos cambios son necesarios?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El PM",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "El equipo del proyecto",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "El patrocinador",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Los interesados",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-174",
+    "text": "El patrocinador está por comenzar el proceso de inicio de un proyecto. Todos los siguientes ítems son necesarios antes de comenzar este proceso, a excepción de:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El enunciado del trabajo.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Estándares de la industria.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "El director del proyecto.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Requisitos del negocio.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-175",
+    "text": "¿Por qué es tan importante que los interesados participen en los distintos procesos de un proyecto?:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Evita cambios en el alcance.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Mejora la probabilidad de un cliente satisfecho.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Definen las restricciones del alcance.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Sirve para una comunicación más fluida.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-176",
+    "text": "El PM y su equipo estuvieron dos meses involucrados en el proceso de inicio del proyecto. Después de identificar a los interesados, dieron por finalizado el proceso de inicio. Indique qué se acaba de finalizar y qué está a punto de comenzar:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Plan para la dirección del proyecto/La ejecución del proyecto.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Acta de constitución/Planificación del proyecto",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Ejecución del proyecto/Seguimiento y Control.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Acta de constitución/Ejecución del proyecto.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-177",
+    "text": "¿Cuál de las siguientes opciones es verdadera sobre el desarrollo del acta de constitución del proyecto?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El patrocinador crea el acta de constitución del proyecto y el director la aprueba",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "El equipo del proyecto crea el acta de constitución y la Oficina de proyectos la aprueba",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "El gerente ejecutivo crea el acta de constitución y el gerente funcional la aprueba",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "El director del proyecto crea el acta de constitución y el patrocinador la aprueba",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-178",
+    "text": "¿Cuál de los siguientes se incluye en el acta de constitución del proyecto?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Una estrategia de gestión de los riesgos",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Una estimación de los diferentes paquetes de trabajo",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Una estimación detallada de los recursos",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "El caso de negocio del proyecto",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-179",
+    "text": "Has creado el acta de constitución del proyecto, pero no se pudo aprobar. Tu director y su jefe pidieron que el proyecto se iniciara inmediatamente ¿Cuál de las siguientes es la mejor opción?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Crear un proceso de control de cambios integrados",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Mostrarle a tu director el impacto de proceder sin una aprobación",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Comenzar el trabajo solo con las actividades de la ruta crítica",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "No comenzar el proyecto",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-180",
+    "text": "El PM tiene por primera vez un problema con uno de los miembros del equipo. ¿Cuál es la mejor forma de comunicación para abordar el problema?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Comunicación formal escrita",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Comunicación formal verbal",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Comunicación informal escrita",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Comunicación informal verbal",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-181",
+    "text": "El resultado más probable de la falta de comunicación en un proyecto es:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El proyecto se retrase",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Aumente el nivel de confianza",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Se produzcan conflictos",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "La gerencia se disguste",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-182",
+    "text": "El sistema de numeración de una EDT permite al equipo del proyecto:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Estimar de forma sistemática los costes de los elementos de la EDT",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Proporcionar la justificación del proyecto",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Identificar el nivel en el que se encuentra cada actividad",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Usarlo en una herramienta software para la dirección de proyectos",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-183",
+    "text": "¿Cuál de las siguientes es una salida clave del proceso de verificar el alcance?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Un plan para la gestión del alcance más complejo",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "La aceptación del cliente de los entregables del proyecto",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Disponer de estimaciones del cronograma mejorada",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Un sistema de información para la mejora de la dirección de proyectos",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-184",
+    "text": "¿Cuándo debería realizarse el proceso de verificar el alcance?:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Al final del proyecto",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Al inicio del proyecto",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Al final de cada fase del proyecto",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Durante los procesos de planificación",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-185",
+    "text": "Después de varios años de trabajar en proyectos, te acabas de integrar en la oficina de la dirección de proyectos. Una de las cosas que quieres introducir en tu organización es el valor de la creación y utilización de EDT. Algunos de los directores de proyectos están en desacuerdo porque les entienden que les supondrá un trabajo añadido más. ¿Cuál de las siguientes sería la mejor de las respuestas posibles a dichos directores para convencerlos de usar EDT?:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "LAS EDT evitarán que el trabajo se omita",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Las EDT sólo son necesarias en proyectos grandes",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Las EDT sólo serán necesarias si el proyecto conlleva más de un contrato",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Las EDT son la única manera de identificar los riesgos del proyecto",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-186",
+    "text": "Un PM nuevo te ha pedido un consejo sobre la creación de una EDT. Después de explicarle el proceso, te pregunta qué software debe usar para crear la EDT y que debe hacer con la EDT cuando esté completada. Quizás responda que la imagen no es el resultado más valioso de crear una EDT, sino que es:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Un diagrama de barra",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "La aceptación del equipo",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Las definición de las actividades",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Disponer de una lista de riesgos",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-187",
+    "text": "Un PM acaba de ser asignado a un nuevo proyecto y se le ha entregado el acta de constitución del proyecto aprobada. Lo primero que el PM debe hacer es:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Crear el enunciado del alcance del proyecto",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Confirmar que todos los interesados conocen y aceptan el alcance",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Analizar los riesgos del proyecto",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Iniciar el proyecto en base a un plan para la dirección del proyecto",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-188",
+    "text": "¿Cuál de las siguientes puede crear el mayor malentendido en el enunciado de la definición del alcance del proyecto?:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Utilizar un lenguaje impreciso",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Utilizar una estructura y un orden cronológico deficiente",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Pequeñas variaciones en el tamaño de los paquetes de trabajo",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Demasiado detalle",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-189",
+    "text": "El cliente ha entregado el enunciado del alcance del proyecto ¿Cuál será el próximo paso?:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Ejecutar los paquetes de trabajo.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Realizar el Plan para la dirección del proyecto.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Completar la verificación del alcance.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Realizar el control integrado de cambios.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-190",
+    "text": "Tras la elaboración del correspondiente grafo PERT, una empresa calcula que el camino crítico de uno de sus proyectos es A-F-G. Si la duración de las actividades del camino crítico es 10, 19 y 10 semanas respectivamente, podemos asegurar que:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "La duración total del proyecto es de 39 semanas",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "La duración total del proyecto es de 19 semanas, ya que es la máxima duración de una de las actividades del camino crítico",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Estas actividades son las únicas que pueden retrasarse sin que se retrase la entrega final del proyecto",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-191",
+    "text": "La duración del proyecto es de 15 semanas, la varianza del camino crítico es 3,11 y su desviación estándar 1,76 semanas. La probabilidad de que el proyecto termine en 16 semanas es:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "62,5%",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "71,2%",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "77,3%",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-192",
+    "text": "Tu empresa está evaluando tres proyectos de inversión mutuamente excluyentes entre sí. El proyecto A tiene un 70% de probabilidad de ganar 5.000€ y un 30% de ganar 10.000€. El proyecto B tiene un 50% de probabilidad de ganar 70.000€ y un 50% de perder 10.000€. El proyecto C tiene un 25% de probabilidad de ganar 20.000€ y un 75% de perder 35.000€. En base al valor monetario esperado, ¿Qué proyecto es el mejor para tu empresa?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Proyecto A",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Proyecto B",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Proyecto C",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-193",
+    "text": "El código de ética y práctica profesional de la ACM-IEEE los ingenieros de software se adhieren a los ocho principios siguientes:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Sociedad, cliente, producto, empresario, juicio, administración, profesión y personal.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Cliente y empresario, producto, gestión, compañeros, juicio, administración, personal y computadores.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Sociedad, cliente y empresario, producto, valoración, gestión, profesión, compañeros y personal",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-194",
+    "text": "Tu empresa está evaluando tres proyectos de inversión mutuamente excluyentes entre sí. El proyecto A tiene un 50% de probabilidad de ganar 50.000€ y un 50% de perder 10.000€. El proyecto B tiene un 30% de probabilidad de ganar 40.000€ y un 70% de ganar 10.000€. El proyecto C tiene un 45% de probabilidad de ganar 50.000€ y un 55% de perder 5.000€. En base al valor monetario esperado, ¿Qué proyecto es el peor para tu empresa?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Proyecto A",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Proyecto B",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Proyecto C",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-195",
+    "text": "La ACM y la IEEE ha cooperado para crear un código de ética y práctica profesional. Este código se basa en ocho principios, uno de estos principios es la Valoración, el cual hace referencia a:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El ingeniero de software mantendrá la valoración de su juicio personal y profesional a lo largo de todo el proyecto.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "El ingeniero de software mantendrá la integridad e independencia en sus valoraciones profesionales",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "El ingeniero de software tiene la obligación de informar al cliente, teniendo en cuenta sus valoraciones personales.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-196",
+    "text": "Usted trabaja como responsable de un proyecto en una empresa con una estructura funcional. Su nivel de autoridad en el proyecto será:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Alto.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Medio.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Muy alto.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Bajo.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  },
+  {
+    "id": "q-gpiPreguntas-197",
+    "text": "Indica cuál de las siguientes afirmaciones sobre dirección de proyectos es incorrecta:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El objetivo principal de la dirección de proyectos es cumplir con los requisitos del proyecto.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Los cinco grupos de procesos en la dirección de proyectos son: iniciación, planificación, ejecución, seguimiento y control y cierre.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "La dirección de proyectos no es la encargada de equilibrar las restricciones contrapuestas del proyecto.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.078Z"
+  }
+]

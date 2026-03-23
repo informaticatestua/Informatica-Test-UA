@@ -1,0 +1,2549 @@
+[
+  {
+    "id": "q-ic-p1-1",
+    "text": "¿Cuál es la principal ventaja de paralelizar una aplicación?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Reducir la cantidad de memoria usada",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Aumentar la precisión de los resultados",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Disminuir el tiempo de ejecución",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Mejorar la legibilidad del código",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.090Z"
+  },
+  {
+    "id": "q-ic-p1-2",
+    "text": "¿Qué directiva de OpenMP se utiliza para paralelizar bucles en C/C++?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "#pragma omp thread",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "#pragma omp parallel for",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "#pragma omp distribute",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "#pragma omp loop",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.090Z"
+  },
+  {
+    "id": "q-ic-p1-3",
+    "text": "¿Qué parámetro se debe estudiar para analizar la eficiencia de un código paralelo en comparación con su versión secuencial?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Latencia",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Aceleración (speed-up)",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Overhead",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Ancho de banda",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.090Z"
+  },
+  {
+    "id": "q-ic-p1-4",
+    "text": "¿Qué tipo de paralelización se utiliza cuando múltiples hilos de un proceso comparten la misma memoria?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Paralelismo de procesos",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Paralelismo de datos",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Paralelismo de memoria compartida",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Paralelismo distribuido",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.090Z"
+  },
+  {
+    "id": "q-ic-p1-5",
+    "text": "¿Cuál es la principal desventaja de la paralelización?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "La sobrecarga de sincronización",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Aumento de la velocidad",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Disminución de la latencia",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Uso eficiente de la memoria",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.090Z"
+  },
+  {
+    "id": "q-ic-p1-6",
+    "text": "Explica por qué es importante que un programa sea lo suficientemente costoso computacionalmente antes de proceder a su paralelización.",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Si un programa no es computacionalmente costoso, la sobrecarga que introduce la paralelización (por la creación de hilos, la sincronización y la comunicación) puede superar los beneficios de reducir el tiempo de cómputo. En estos casos, el esfuerzo de paralelizar el código puede ser innecesario y el rendimiento no mejorará.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "La paralelización es siempre beneficiosa, ya que reduce el consumo de memoria y disminuye el número de operaciones del programa, sin importar el coste computacional inicial.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Paralelizar un programa solo es útil cuando los recursos de hardware son limitados, ya que la paralelización redistribuye las operaciones sin influir en el tiempo de ejecución.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Un programa debe ser paralelizado incluso si no es computacionalmente costoso, ya que cualquier tipo de paralelización garantiza una mejora en el rendimiento sin importar el problema a resolver.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.090Z"
+  },
+  {
+    "id": "q-ic-p1-7",
+    "text": "¿Qué es el speed-up y cómo se calcula en un programa paralelo?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El speed-up es una métrica que mide la mejora de rendimiento de un programa paralelo en comparación con su versión secuencial. Se calcula como la razón entre el tiempo de ejecución secuencial y el tiempo de ejecución paralelo. Es decir, speed-up = Tiempo secuencial / Tiempo paralelo. Si el valor es mayor que 1, significa que el programa ha mejorado su rendimiento con la paralelización.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "El speed-up es el tiempo total que un programa paralelo tarda en completarse y se calcula sumando el tiempo de ejecución paralelo y el número de núcleos utilizados en el procesamiento.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "El speed-up mide cuántos núcleos se han utilizado en la ejecución de un programa paralelo y se calcula dividiendo el tiempo de ejecución paralelo por el número de hilos empleados en la ejecución.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "El speed-up representa la cantidad de tareas realizadas en paralelo y se calcula como el producto entre el tiempo de ejecución secuencial y el número de hilos o núcleos disponibles.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.090Z"
+  },
+  {
+    "id": "q-ic-p1-8",
+    "text": "Describe la diferencia entre paralelismo de datos y paralelismo de tareas.",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El paralelismo de datos implica ejecutar la misma operación en diferentes subconjuntos de datos de manera simultánea. Es común en operaciones como el procesamiento de matrices o imágenes. El paralelismo de tareas, por otro lado, implica dividir un problema en diferentes tareas que pueden ejecutarse en paralelo, donde cada tarea realiza una operación distinta. Este tipo de paralelismo es más adecuado cuando las tareas son independientes entre sí.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "El paralelismo de datos implica dividir el programa en múltiples funciones que se ejecutan en paralelo, mientras que el paralelismo de tareas implica procesar la misma operación en datos grandes secuencialmente.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "El paralelismo de datos y el paralelismo de tareas son equivalentes, ambos consisten en ejecutar la misma operación en distintos núcleos sin importar el tipo de datos o tareas involucradas.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "El paralelismo de datos se utiliza solo cuando las tareas son completamente dependientes entre sí, mientras que el paralelismo de tareas se usa cuando la misma operación debe aplicarse a una gran cantidad de datos.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.090Z"
+  },
+  {
+    "id": "q-ic-p1-9",
+    "text": "Dado el siguiente código secuencial en C para sumar dos vectores: ```void sumarVectores(int *A, int *B, int *C, int N) { \\n\\tsentencia \\n\\tfor (int i = 0; i < N; i++) { \\n\\t\\tC[i] = A[i] + B[i]; \\n\\t} \\n}``` ¿Cuál de las siguientes opciones muestra una modificación correcta del código para que se ejecute en paralelo utilizando OpenMP y explica correctamente cómo funciona la paralelización en este caso?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "#pragma omp parallel for",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "#pragma omp for",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "#pragma omp parallel",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.090Z"
+  },
+  {
+    "id": "q-ic-p1-10",
+    "text": "¿Cuál es el objetivo principal de la paralelización?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Reduce el consumo de energía",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Mejora la legibilidad del código",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Acelera el tiempo de ejecución",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Facilita el mantenimiento del código",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.090Z"
+  },
+  {
+    "id": "q-ic-p1-11",
+    "text": "¿Cuál es un indicador de que la paralelización podría no ser efectiva?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Las tareas son altamente independientes",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Las tareas son altamente dependientes",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "El tiempo de ejecución se ha reducido bastante",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Se dispone de múltiples núcleos en el procesador",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.090Z"
+  },
+  {
+    "id": "q-ic-p1-12",
+    "text": "¿Cuál es un indicador de que la paralelización podría no ser efectiva?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Las tareas son altamente independientes",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Las tareas son altamente dependientes",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "El tiempo de ejecución se ha reducido bastante",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Se dispone de múltiples núcleos en el procesador",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.090Z"
+  },
+  {
+    "id": "q-ic-p1-13",
+    "text": "En la taxonomía de Flynn, ¿cuál de las siguientes arquitecturas es la más adecuada para ejecutar múltiples tareas independientes?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "SISD",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "SIMD",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "MIMD",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "MISD",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.090Z"
+  },
+  {
+    "id": "q-ic-p1-14",
+    "text": "¿Qué técnica de paralelismo se emplea cuando un programa realiza la misma operación en varios elementos de un conjunto de datos en paralelo?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Paralelismo de datos",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Paralelismo funcional",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Paralelismo a nivel de bucle",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Paralelismo de tareas",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.090Z"
+  },
+  {
+    "id": "q-ic-p1-15",
+    "text": "¿Cuál de los siguientes factores limita el speed-up ideal en un sistema paralelo?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Ley de Amdahl",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Tamaño del conjunto de datos",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Número de instrucciones en un hilo",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Tamaño de las instrucciones atómicas",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.090Z"
+  },
+  {
+    "id": "q-ic-p1-16",
+    "text": "¿Cuál de los siguientes problemas es específico de la programación paralela y no existe en programación secuencial?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Desbordamiento de pila",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Condiciones de carrera",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Uso excesivo de memoria",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Ciclos infinitos",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.090Z"
+  },
+  {
+    "id": "q-ic-p1-17",
+    "text": "¿Cuál de los siguientes factores puede afectar negativamente el rendimiento en un sistema paralelo?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Sincronización de hilos",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Uso eficiente de caché",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Dividir las tareas en bloques independientes",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Aumento del número de núcleos disponibles",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.090Z"
+  },
+  {
+    "id": "q-ic-p1-18",
+    "text": "¿Qué se busca optimizar al paralelizar un algoritmo con múltiples hilos?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Aumentar el número de instrucciones ejecutadas.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Reducir el número de hilos utilizados.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Aumentar el tiempo de espera entre hilos.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Minimizar el tiempo de ejecución total.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.090Z"
+  },
+  {
+    "id": "q-ic-p1-19",
+    "text": "Describe en qué consiste la Ley de Amdahl y cómo afecta a la escalabilidad de un programa paralelo.",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "La Ley de Amdahl establece que el speed-up máximo de un programa paralelo está limitado por la proporción de código que no se puede paralelizar.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "La Ley de Amdahl establece que el speed-up máximo de un programa paralelo aumenta indefinidamente con el número de procesadores, sin importar la proporción de código no paralelizable.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Según la Ley de Amdahl, el rendimiento de un programa paralelo siempre será óptimo cuando se divida el trabajo en partes iguales entre los procesadores, sin importar la cantidad de código secuencial.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "La Ley de Amdahl indica que el speed-up de un programa paralelo depende únicamente del número de procesadores y no considera el porcentaje de código que debe ejecutarse secuencialmente.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.090Z"
+  },
+  {
+    "id": "q-ic-p1-20",
+    "text": "Imagina un algoritmo de búsqueda secuencial en un gran archivo de texto. Propón un enfoque paralelo para mejorar su eficiencia y describe brevemente el patrón de paralelización que utilizarías.",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Dividir el archivo en partes iguales y asignar a cada hilo una sección para buscar el patrón de texto.Uno de los patrones que se puede usar es Divide y vencerás (dividir el problema y ejecutar las búsquedas en paralelo). Cada hilo devuelve las posiciones del patrón encontrado y al final se combinan los resultados.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "El enfoque paralelo más eficiente para mejorar la búsqueda secuencial en un gran archivo de texto es ejecutar el mismo algoritmo en cada hilo repetidamente en toda la extensión del archivo, sin dividirlo en partes.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "El mejor patrón de paralelización para este problema es asignar todos los hilos a trabajar en la misma sección del archivo simultáneamente, para asegurar que cada parte del archivo se busque más rápido.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Un enfoque paralelo eficiente sería asignar a cada hilo la búsqueda de patrones diferentes en lugar de dividir el archivo, ya que la búsqueda de varios patrones simultáneamente aumenta el rendimiento global.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.090Z"
+  },
+  {
+    "id": "q-ic-p1-21",
+    "text": "Explica cómo el uso de la memoria caché afecta el rendimiento de un programa paralelo. Proporciona un ejemplo de cómo la reorganización de datos puede mejorar la eficiencia en caché.",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "La caché mejora el rendimiento cuando los datos se encuentran localmente cerca del procesador. Por ejemplo, si un array de matrices se recorre de forma desordenada, reorganizar los accesos a una forma contigua (procesar fila por fila) reduce los fallos de caché.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "El uso de la memoria caché no afecta significativamente el rendimiento de un programa paralelo, ya que todos los procesadores acceden a la memoria principal de manera uniforme y sin penalización por localización.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Reorganizar los accesos a los datos en memoria no tiene ningún impacto en la eficiencia de caché, ya que los fallos de caché solo dependen del tamaño de los datos, no de cómo se acceden.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Un ejemplo de cómo mejorar la eficiencia en caché sería acceder a los elementos de un array de forma completamente aleatoria, ya que esto evita que los procesadores saturen la caché con los mismos datos.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.090Z"
+  },
+  {
+    "id": "q-ic-p1-22",
+    "text": "¿Qué opción de compilación es la más idónea para optimizar al máximo el tiempo de ejecución si tu programa trabaja con bucles pesados y múltiples vectores?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "g++ -O1 -march=native -o programa programa.cpp",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "g++ -funroll-loops -flto -o programa programa.cpp",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "g++ -O1 -funroll-loops -o programa programa.cpp",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "g++ -funroll-loops -ftree-vectorize -o programa programa.cpp",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.090Z"
+  },
+  {
+    "id": "q-ic-p1-23",
+    "text": "¿Cuál de los siguientes parámetros mejora en mayor medida el tamaño del binario del programa?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Ofast",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Oz",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Os",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Og",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.090Z"
+  },
+  {
+    "id": "q-ic-p1-24",
+    "text": "¿Cual es la principal característica de un programa que es buen candidato a ser paralelizado?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Tareas secuenciales.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Alta dependencia de datos entre tareas.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Tareas independientes.",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Uso intensivo de memoria compartida.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.090Z"
+  },
+  {
+    "id": "q-ic-p1-25",
+    "text": "¿Cuál debe ser el primer paso en el análisis previo a la paralelización de un programa?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Dividir el programa en subrutinas.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Identificar las partes que pueden ejecutarse en paralelo.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Estimar el tiempo de ejecución total del programa",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Medir el rendimiento de la versión secuencial.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.090Z"
+  },
+  {
+    "id": "q-ic-p1-26",
+    "text": "¿Qué característica de un programa indica que no es un buen candidato para la paralelización?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Un alto grado de dependencia entre tareas.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Gran cantidad de cálculos independientes.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Acceso frecuente a datos que no cambian.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Tareas que requieren mucha memoria.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.090Z"
+  },
+  {
+    "id": "q-ic-p1-27",
+    "text": "Recordando los ejercicios con grifos, si un conjunto de grifos tiene una ganancia de 3 y utiliza 6 grifos para llenar el depósito, ¿cuál es su ganancia?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "2",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "1",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "0,5",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "0,75",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.090Z"
+  },
+  {
+    "id": "q-ic-p1-28",
+    "text": "¿Qué características tiene que tener un programa para ser un buen candidato a ser paralelizado?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Las características principales para que un programa sea un buen candidato a ser paralelizado son: alta carga computacional, bucles largos o repetitivos y poca dependencia entre  tareas. Unos claros ejemplos pueden ser simulaciones científicas o procesamiento de imágenes, pues permiten dividir el trabajo en múltiples núcleos.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Un programa es un buen candidato para ser paralelizado cuando tiene una gran cantidad de operaciones secuenciales, ya que los hilos pueden compartir la misma tarea sin necesidad de coordinación.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Un buen candidato para la paralelización es aquel programa que tiene una fuerte dependencia entre tareas, ya que permite que todos los hilos trabajen en sincronía constante.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Programas con baja carga computacional y tareas muy interdependientes son ideales para paralelización, porque los hilos pueden esperar unos a otros sin sobrecargar el sistema.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.090Z"
+  },
+  {
+    "id": "q-ic-p1-29",
+    "text": "¿Es un programa cuyo tiempo de ejecución es muy bajo un buen candidato a ser paralelizado? ¿Donde es más efectiva la paralelización?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "No es un buen candidato para ser paralelizado ya que el overhead asociado a la creación de hilos, sincronización y comunicación puede superar las ganancias en rendimiento. La paralelización es más efectiva en problemas de mayor tamaño, donde se justifica el uso de múltiples recursos.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Un programa con tiempo de ejecución muy bajo es un excelente candidato para ser paralelizado, ya que cualquier programa puede beneficiarse de tener más hilos, sin importar su complejidad o duración.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "La paralelización es más efectiva en programas muy cortos, ya que al dividir el trabajo en pequeños fragmentos, se reduce aún más el tiempo de ejecución global.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Incluso si un programa tiene un tiempo de ejecución muy bajo, la creación de hilos siempre mejora el rendimiento porque el overhead de sincronización y comunicación es insignificante.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.090Z"
+  },
+  {
+    "id": "q-ic-p1-30",
+    "text": "¿En que puede ayudar utilizar un grafo de tareas en el estudio para paralelizar un programa?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Un grafo de tareas puede ser muy útil en el estudio para la paralelización de un programa ya que permite visualizar dependencias entre tareas y así ayudar a identificar qué partes del programa pueden llegar a ejecutarse en paralelo.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Un grafo de tareas no es útil para la paralelización de un programa, ya que no proporciona ninguna información relevante sobre las dependencias entre tareas ni sobre qué partes pueden ejecutarse en paralelo.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "El uso de un grafo de tareas solo ayuda a identificar el orden secuencial de ejecución de las tareas, pero no tiene ningún impacto en la detección de oportunidades de paralelización.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Un grafo de tareas es irrelevante en la paralelización, ya que todos los programas pueden ser divididos en partes iguales sin importar las dependencias entre tareas.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.090Z"
+  },
+  {
+    "id": "q-ic-p1-31",
+    "text": "¿Qué tipo de aplicaciones son más idóneas para la paralelización?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Aplicaciones con muchos cálculos paralelos",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Aplicaciones interactivas",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Aplicaciones con un 100% de paralelismo de datos",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Aplicaciones que no dependen de la memoria",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.090Z"
+  },
+  {
+    "id": "q-ic-p1-32",
+    "text": "¿Cuál es una técnica utilizada para estimar la eficiencia de un proceso de paralelización?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Uso de métodos heurísticos",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Speed-up",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Ajuste de algoritmos",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Despliegue en clústeres",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.090Z"
+  },
+  {
+    "id": "q-ic-p1-33",
+    "text": "¿Qué arquitecturas son idóneas para la paralelización de una aplicación?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Computadoras con un solo núcleo",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "GP-GPU y sistemas multi-núcleo",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Computadoras con un solo proceso",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Arquitecturas distribuidas simples",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.090Z"
+  },
+  {
+    "id": "q-ic-p1-34",
+    "text": "¿Qué se debe estudiar para justificar la paralelización de una aplicación?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "La complejidad algorítmica",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "El coste computacional",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "La cantidad de memoria requerida",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "La portabilidad del código",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.090Z"
+  },
+  {
+    "id": "q-ic-p1-35",
+    "text": "¿Qué parte de un código secuencial permite identificar si es paralelizable?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El flujo de datos",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Las dependencias entre tareas",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "La interfaz de usuario",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "La cantidad de variables",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.090Z"
+  },
+  {
+    "id": "q-ic-p1-36",
+    "text": "¿Qué herramienta puede utilizarse para visualizar las dependencias en un código?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Herramientas de depuración",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Grafos de dependencia",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Optimizadores de compilador",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Análisis de complejidad",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.090Z"
+  },
+  {
+    "id": "q-ic-p1-37",
+    "text": "Describe un problema que podría beneficiarse de la paralelización y porqué.",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Por ejemplo, la simulación de fluidos puede beneficiarse de la paralelización, ya que involucra múltiples cálculos complejos que se pueden dividir en subprocesos y ejecutar simultáneamente, lo que reduce el tiempo total de procesamiento.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Un programa que simplemente imprime una lista de números en orden sería un buen candidato para paralelización, ya que dividir la tarea en subprocesos siempre acelera la ejecución, independientemente de la complejidad.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "El cálculo de sumas sencillas de un par de números sería un gran ejemplo de un problema que se beneficiaría enormemente de la paralelización, ya que cada suma se puede ejecutar en un hilo separado para mejorar la velocidad.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "La edición de un documento de texto es un buen ejemplo de un problema que se beneficia de la paralelización, ya que varios hilos pueden editar el mismo texto simultáneamente, lo que mejora la eficiencia de escritura.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.090Z"
+  },
+  {
+    "id": "q-ic-p1-38",
+    "text": "¿Qué tipo de arquitectura paralela es más adecuada para la simulación de fluidos computacionales?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Clústeres o GP-GPU debido a la alta demanda de procesamiento en paralelo.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "La arquitectura más adecuada para la simulación de fluidos computacionales es una CPU de un solo núcleo, ya que permite procesar cada cálculo de manera secuencial sin sobrecargar el sistema.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "La mejor arquitectura para simulaciones de fluidos computacionales es una red de dispositivos móviles, ya que su procesamiento en paralelo es suficiente para manejar los cálculos complejos de este tipo de simulaciones.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Para simulaciones de fluidos computacionales, la arquitectura más eficiente es la basada en almacenamiento en la nube, ya que se enfoca más en el almacenamiento de datos que en el procesamiento paralelo intensivo.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.090Z"
+  },
+  {
+    "id": "q-ic-p1-39",
+    "text": "¿Cómo afecta el uso de parámetros de compilación al rendimiento de un programa paralelizado?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Los parámetros de compilación pueden permitir optimizaciones como la autovectorización y el uso de instrucciones SIMD, lo que mejora el rendimiento al aprovechar mejor los recursos del procesador.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "El uso de parámetros de compilación no afecta el rendimiento de un programa paralelizado, ya que las optimizaciones solo dependen del hardware, no de cómo se compila el programa.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Los parámetros de compilación siempre empeoran el rendimiento de un programa paralelizado, ya que añaden instrucciones innecesarias y ralentizan la ejecución.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Los parámetros de compilación solo influyen en el tamaño del archivo final, pero no tienen ningún impacto en la eficiencia o el rendimiento de un programa paralelizado.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.090Z"
+  },
+  {
+    "id": "q-ic-p1-40",
+    "text": "Explica la importancia de las métricas de rendimiento, como el \"speed-up\", en la evaluación de un programa paralelizado.",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El \"speed-up\" mide la ganancia de rendimiento obtenida al ejecutar un programa en paralelo en comparación con su ejecución secuencial, lo que ayuda a evaluar la efectividad de la paralelización.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Las métricas de rendimiento, como el \"speed-up\", no son importantes en la evaluación de un programa paralelizado, ya que el número de hilos utilizados siempre garantiza un mejor rendimiento sin necesidad de mediciones.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "El \"speed-up\" mide solo el tiempo total de ejecución del programa, sin importar si se ejecuta en paralelo o de manera secuencial, por lo que no es útil para evaluar la efectividad de la paralelización.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "El \"speed-up\" no es una métrica relevante, ya que un programa paralelizado siempre es más eficiente independientemente del número de hilos o la proporción de código que se paraleliza.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.090Z"
+  },
+  {
+    "id": "q-ic-p1-41",
+    "text": "Explica por qué es importante considerar la caché del sistema cuando se paraleliza un programa y cómo podría afectar el rendimiento.",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "La caché juega un papel crucial en el rendimiento de programas paralelizados, ya que el acceso eficiente a los datos almacenados en la caché puede reducir significativamente el tiempo de ejecución. Un mal uso de la caché puede resultar en accesos a memoria más lentos, lo que disminuye la eficiencia del programa.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "La caché del sistema no es relevante cuando se paraleliza un programa, ya que los procesadores siempre tienen acceso a los datos con la misma velocidad, sin importar su ubicación en la memoria.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "El uso de la caché solo afecta a programas secuenciales, no a programas paralelizados, ya que cada hilo tiene su propio acceso directo a la memoria principal, lo que hace que la caché sea innecesaria.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Es mejor ignorar la caché del sistema al paralelizar un programa, ya que usar la caché puede aumentar los fallos de memoria y hacer que el programa sea menos eficiente.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.090Z"
+  },
+  {
+    "id": "q-ic-p1-42",
+    "text": "¿Cuál de las siguientes afirmaciones sobre la paralelización del \"Juego de la Vida\" de Conway es correcta?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "La paralelización del \"Juego de la Vida\" no mejora el rendimiento en matrices de gran tamaño debido a la dependencia entre celdas.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "La paralelización del \"Juego de la Vida\" es más eficiente en sistemas de un solo núcleo.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "La paralelización del \"Juego de la Vida\" mejora el rendimiento ya que cada celda solo depende de un conjunto pequeño de celdas vecinas.",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "El \"Juego de la Vida\" solo se puede paralelizar en sistemas con más de 16 núcleos.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.090Z"
+  },
+  {
+    "id": "q-ic-p1-43",
+    "text": "¿Qué técnica de paralelización es más adecuada para un problema donde múltiples tareas deben acceder y modificar un gran conjunto de datos compartidos de forma concurrente?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Paralelismo de datos",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Paralelismo de tareas",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Paralelismo de memoria compartida",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Paralelismo de memoria distribuida",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.090Z"
+  },
+  {
+    "id": "q-ic-p1-44",
+    "text": "Supongamos que tienes un algoritmo que procesa una imagen de 1000x1000 píxeles y tarda 200 segundos en completarse. Si duplicas la resolución de la imagen a 2000x2000 píxeles, ¿cuánto tiempo estimas que tardará en procesarse la nueva imagen si la complejidad del algoritmo es 0(n^2), donde n es la dimensión de la imagen?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El tiempo estimado de procesamiento: 800 segundos.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "El tiempo estimado de procesamiento: 400 segundos.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "El tiempo estimado de procesamiento: 200 segundos.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "El tiempo estimado de procesamiento: 1600 segundos.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.090Z"
+  },
+  {
+    "id": "q-ic-p1-45",
+    "text": "¿Cuál de las siguientes afirmaciones es verdadera respecto al uso de barreras de sincronización en la paralelización del \"Juego de la Vida\" de Conway?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Las barreras de sincronización son necesarias en cada iteración, ya que todas las celdas dependen de la actualización completa de la matriz.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Las barreras de sincronización pueden ser ignoradas en implementaciones con memoria distribuida.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Las barreras de sincronización solo se necesitan en las celdas de los bordes de la matriz.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Las barreras de sincronización incrementan la latencia de acceso a la memoria pero son imprescindibles para garantizar la consistencia.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.090Z"
+  },
+  {
+    "id": "q-ic-p1-46",
+    "text": "¿Qué ocurre si en una implementación paralela del \"Juego de la Vida\" no se maneja correctamente la sincronización entre hilos?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Las celdas se actualizarán correctamente, pero el rendimiento disminuirá.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Algunas celdas podrían utilizar el estado actualizado mientras que otras utilizarán el estado antiguo, generando resultados inconsistentes.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Los hilos competirán por los mismos datos, lo que provocará un error de segmentación.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "El programa no será afectado, ya que la sincronización no es necesaria en cada iteración.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.090Z"
+  },
+  {
+    "id": "q-ic-p1-47",
+    "text": "¿Cuál es la función del parámetro -O3 en el comando de compilación de GCC?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Optimiza el código para tamaño.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Optimiza el código para velocidad.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Desactiva todas las optimizaciones.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Aumenta el tamaño del código.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.090Z"
+  },
+  {
+    "id": "q-ic-p1-48",
+    "text": "¿Qué hace la opción -march=native en GCC?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Compila para cualquier arquitectura.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Activa optimizaciones específicas para la arquitectura del procesador en uso.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Desactiva todas las optimizaciones.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Aumenta el tamaño del archivo ejecutable.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.090Z"
+  },
+  {
+    "id": "q-ic-p1-49",
+    "text": "¿Cuál es la principal ventaja de usar -flto (Link Time Optimization)?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Mejora la legibilidad del código.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Reduce el tiempo de compilación.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Permite optimizar el código en el enlace, mejorando el rendimiento final.",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Hace que el código sea más portátil.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.090Z"
+  },
+  {
+    "id": "q-ic-p1-50",
+    "text": "¿Qué representa el COLOR_LIMIT en el código de la práctica?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "La cantidad máxima de colores que se pueden utilizar.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "El valor máximo para los componentes de color RGB en la imagen.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "La resolución máxima de la imagen.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "La cantidad de píxeles en la imagen.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.090Z"
+  },
+  {
+    "id": "q-ic-p1-51",
+    "text": "En la función smoothing, ¿qué hace el código cuando suma los valores de los píxeles vecinos?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Mejora el contraste de la imagen.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Aumenta el brillo de la imagen.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Suaviza la imagen, reduciendo el ruido.",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Cambia los colores de la imagen a escala de grises.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.090Z"
+  },
+  {
+    "id": "q-ic-p1-52",
+    "text": "¿Cuál de estos tipos de variables es más propenso a ser una variable caliente del programa?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Variables globales",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Variables locales",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Variables puntuales",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Arrays de puntos de datos",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.090Z"
+  },
+  {
+    "id": "q-ic-p1-53",
+    "text": "¿Cuál de estos parámetros de optimización supone una mayor optimización por normal general?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "-free-vectorize",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "-ffast-math",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "-03",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "-funroll-loops",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.091Z"
+  },
+  {
+    "id": "q-ic-p1-54",
+    "text": "¿Qué se espera que lleve a cabo el parámetro -ffast-math?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Permite que GCC aproveche todas las instrucciones disponibles en la CPU",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Se espera una mejora en cálculos matemáticos a costa de precisión en ciertos casos",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Se espera que reduzca la sobrecarga de la iteración en los bucles",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Se espera que mejore significativamente los cálculos repetitivos como los bucles",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.091Z"
+  },
+  {
+    "id": "q-ic-p1-55",
+    "text": "Si tu programa secuencial no gestiona adecuadamente la memoria dinámica…",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El programa correrá más rápido pero no podrá guardar memoria",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "El programa podría generar fugas de memoria",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "El programa generará resultados incorrectos por no poder acceder a memoria dinámica",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "El programa simplemente ignora la memoria dinámica",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.091Z"
+  },
+  {
+    "id": "q-ic-p1-56",
+    "text": "¿Cuál de estas herramientas es una de las principales a la hora de analizar el uso de memoria en C/C++?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "gcc",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "gdb",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "make",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "valgrind",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.091Z"
+  },
+  {
+    "id": "q-ic-p1-57",
+    "text": "¿Cuál de estas causas es la más común en fugas de memoria de C/C + +?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "No liberar memoria después de usar malloc o new",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Asignar memoria que nunca se va a utilizar",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Un uso de la memoria excesivo",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "El uso de la misma zona de memoria en gran cantidad de funciones",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.091Z"
+  },
+  {
+    "id": "q-ic-p1-58",
+    "text": "¿Cuál de las siguientes métricas NO se utiliza comúnmente para justificar la paralelización de una aplicación?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Speedup",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Eficiencia",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Complejidad algorítmica",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Tiempo de ejecución secuencial",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.091Z"
+  },
+  {
+    "id": "q-ic-p1-59",
+    "text": "¿Qué arquitectura es más adecuada para aplicaciones con alta intensidad de cómputo y paralelismo de datos?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "CPU multi-núcleo",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "GP-CPU",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Cluster de servidores",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Sistema big.LITTLE",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.091Z"
+  },
+  {
+    "id": "q-ic-p1-60",
+    "text": "¿Qué parámetro de compilación puede afectar significativamente el rendimiento de una aplicación paralela?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "-O3",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "-Wall",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "-g",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "-std=c++11",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.091Z"
+  },
+  {
+    "id": "q-ic-p1-61",
+    "text": "¿Cuál de las siguientes afirmaciones sobre la Ley de Amdahl es correcta?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Siempre predice un speedup lineal con el número de procesadores",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "No tiene en cuenta la parte secuencial del programa",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Establece un límite superior al speedup alcanzable",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Es aplicable sólo a sistemas de memoria distribuida",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.091Z"
+  },
+  {
+    "id": "q-ic-p1-62",
+    "text": "¿Qué tipo de aplicación es generalmente más adecuada para la paralelización en sistemas de memoria distribuida?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Aplicaciones con alta dependencia de datos entre tareas",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Aplicaciones con tareas independientes y baja comunicación",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Aplicaciones con necesidad de acceso frecuente a memoria compartida",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Aplicaciones con un alto grado de sincronización entre hilos",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.091Z"
+  },
+  {
+    "id": "q-ic-p1-63",
+    "text": "¿Cuál de los siguientes NO es un beneficio típico de la paralelización de una aplicación?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Reducción del tiempo de ejecución",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Aumento de la capacidad de procesamiento de datos",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Mejora de la precisión de los cálculos",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Posibilidad de resolver problemas más grandes",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.091Z"
+  },
+  {
+    "id": "q-ic-p1-64",
+    "text": "¿Cuál de las siguientes opciones de optimización se debe evitar al ejecutar el programa en una máquina virtual?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "-O3.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "-O2.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "-march=native.",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Todos los anteriores son opciones correctas",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.091Z"
+  },
+  {
+    "id": "q-ic-p1-65",
+    "text": "¿Qué tipo de paralelización se centra como objetivo principal en dividir los datos en subconjuntos para procesarlos simultáneamente?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Paralelización a nivel de datos.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Paralelización a nivel de procesos.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Paralelización a nivel de instrucciones.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Se produce en todos los tipos de paralelización.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.091Z"
+  },
+  {
+    "id": "q-ic-p1-66",
+    "text": "¿Cuál de los siguientes factores afecta más al rendimiento de una aplicación paralelizada?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "La cantidad de memoria RAM.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "El número de núcleos disponibles.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "El tamaño del disco duro.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "La fuente de alimentación.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.091Z"
+  },
+  {
+    "id": "q-ic-p1-67",
+    "text": "¿Qué recurso se aprovecha mejor cuando se paraleliza un programa?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "La capacidad de la tarjeta gráfica",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "El número de núcleos del procesador",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "El espacio en el disco duro",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "La velocidad de la CPU",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.091Z"
+  },
+  {
+    "id": "q-ic-p1-68",
+    "text": "¿Por qué la paralelización no siempre es posible en todos los programas?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Porque algunos programas requieren una gran cantidad de memoria RAM",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Porque la mayoría de los procesadores no soportan más de un hilo",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Porque algunos programas tienen tareas que dependen unas de otras y deben ejecutarse en orden",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Porque la paralelización siempre causa errores en el código",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.091Z"
+  },
+  {
+    "id": "q-ic-p1-69",
+    "text": "¿Qué es la eficiencia en el contexto de la paralelización de un programa?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "La relación entre la ganancia de velocidad obtenida y el número de procesadores utilizados",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "El número de núcleos que se usan para ejecutar el programa",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "El tiempo que tarda el programa en acceder al disco duro",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "La cantidad de memoria utilizada durante la ejecución del programa",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.091Z"
+  },
+  {
+    "id": "q-ic-p1-70",
+    "text": "¿Cuál es un buen ejemplo de un problema susceptible de paralelización?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Sumar dos números",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Multiplicar matrices",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Buscar el valor máximo en una lista pequeña",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Mostrar \"Hola, mundo\" en la pantalla",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.091Z"
+  },
+  {
+    "id": "q-ic-p1-71",
+    "text": "¿Por qué se deben elegir aplicaciones secuenciales con un coste computacional elevado para paralelizarlas?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Porque reducen el tiempo de ejecución secuencial",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Porque la paralelización introduce una sobrecarga temporal",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Porque necesitan menos memoria",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Porque se ejecutan en menos líneas de código",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.091Z"
+  },
+  {
+    "id": "q-ic-p1-72",
+    "text": "¿Por qué no es recomendable paralelizar un problema que se resuelve rápidamente?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Porque el código se vuelve más difícil de entender",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Porque la sobrecarga de la paralelización puede ser mayor que el beneficio",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Porque requiere demasiada memoria",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Porque los resultados pueden no ser precisos",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.091Z"
+  },
+  {
+    "id": "q-ic-p1-73",
+    "text": "¿Cuál de los siguientes problemas sería menos adecuado para paralelizar según las recomendaciones de la práctica?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Un algoritmo de búsqueda que procesa grandes cantidades de datos",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Un algoritmo que realiza cálculos meteorológicos complejos",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Un juego interactivo con decisiones en tiempo real",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Un proceso de simulación física",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.091Z"
+  },
+  {
+    "id": "q-ic-p1-74",
+    "text": "¿Qué técnica se debe usar para demostrar si un código secuencial puede paralelizarse de forma efectiva?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Medir el número de funciones",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Estudiar las dependencias entre tareas mediante un grafo",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Contar los comentarios en el código",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Revisar el nombre de las variables",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.091Z"
+  },
+  {
+    "id": "q-ic-p1-75",
+    "text": "¿Cuál de las siguientes afirmaciones sobre la autovectorización en el compilador GCC es correcta?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Es un proceso manual que el programador debe realizar",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Es una técnica que permite ejecutar varias operaciones en paralelo utilizando instrucciones SIMD",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Solo se utiliza en aplicaciones secuenciales",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "No mejora el rendimiento en arquitecturas multinúcleo",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.091Z"
+  },
+  {
+    "id": "q-ic-p1-76",
+    "text": "¿Cuál de los siguientes métodos se utiliza para enviar datos entre procesos en un programa MPI?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "pthread_create",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "MPI_Send y MPI_Recv",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "fork y exec",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "cudaMemcpy",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.091Z"
+  },
+  {
+    "id": "q-ic-p1-77",
+    "text": "¿En un programa MPI, ¿qué función se utiliza para sincronizar todos los procesos involucrados en la ejecución paralela?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "MPI_Barrier",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "MPI_Bcast",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "MPI_Scatter",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "MPI_Finalize",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.091Z"
+  },
+  {
+    "id": "q-ic-p1-78",
+    "text": "¿Qué tipo de análisis se realiza para medir el impacto de la paralelización en el rendimiento de una aplicación?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "MPI es más fácil de implementar en programas secuenciales.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "MPI es más eficiente en arquitecturas de memoria compartida.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "MPI permite la comunicación explícita entre procesos en sistemas distribuidos.",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "MPI no requiere optimización del código para mejorar el rendimiento.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.091Z"
+  },
+  {
+    "id": "q-ic-p1-79",
+    "text": "¿Qué operación en MPI distribuye un conjunto de datos desde un proceso raíz a todos los demás procesos en el grupo?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "MPI_Scatter",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "MPI_Gather",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "MPI_Bcast",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "MPI_Reduce",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.091Z"
+  },
+  {
+    "id": "q-ic-p1-80",
+    "text": "¿Cuál es la finalidad de la función MPI_Init en un programa MPI?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Iniciar la ejecución del código paralelo.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Configurar los parámetros del compilador.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Inicializar el entorno de ejecución MPI.",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Sincronizar los procesos entre sí.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.091Z"
+  },
+  {
+    "id": "q-ic-p1-81",
+    "text": "¿Qué sucede si no se llama a la función MPI_Finalize al final de un programa MPI?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El programa se ejecuta correctamente sin problemas.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Los recursos del sistema no se liberan correctamente.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "El programa termina inmediatamente con un error.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "No se produce ninguna salida.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.091Z"
+  },
+  {
+    "id": "q-ic-p1-82",
+    "text": "¿Qué modelo de programación se utiliza en MPI para comunicar procesos en sistemas de memoria distribuida?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Memoria compartida",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Paso de mensajes",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Memoria centralizada",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Multiprocesamiento de hilos",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.091Z"
+  },
+  {
+    "id": "q-ic-p1-83",
+    "text": "¿Cuál de las siguientes es una de las cuatro categorías de instrucciones en MPI?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Para transferir datos entre múltiples procesos",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Para gestionar la memoria compartida entre procesos",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Para sincronizar hilos en el mismo nodo",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Para asignar memoria a cada proceso",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.091Z"
+  },
+  {
+    "id": "q-ic-p1-84",
+    "text": "¿Qué significa la especificación “MPI” en el contexto de programación paralela?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Interfaz de Paso de Mensajes",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Interfaz de Procesos Múltiples",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Memoria Procesada Internamente",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Interfaz de Programa Modular",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.091Z"
+  },
+  {
+    "id": "q-ic-p1-85",
+    "text": "¿Cuál es una ventaja clave del uso de MPI en comparación con otros modelos de programación paralela?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Reducción del consumo de memoria",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Portabilidad y facilidad de uso en arquitecturas multicomputadora",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Mayor precisión en los cálculos",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Disminución de la latencia en sistemas de un solo nodo",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.091Z"
+  },
+  {
+    "id": "q-ic-p1-86",
+    "text": "¿Qué implementación de MPI es adecuada para sistemas de código abierto?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "OpenMPI",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "IBM MPI",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Cray MPI",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "SGI MPI",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.091Z"
+  },
+  {
+    "id": "q-ic-p1-87",
+    "text": "En MPI, ¿qué instrucción se utiliza para inicializar el entorno de comunicación entre procesos?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "MPI_Open()",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "MPI_Start()",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "MPI_Init()",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "MPI_Connect()",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.091Z"
+  },
+  {
+    "id": "q-ic-p1-88",
+    "text": "¿Cuál es la función de la operación MPI_Gather en MPI?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Recolecta datos de todos los procesos y los envía a un proceso raíz",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Distribuye datos del proceso raíz a todos los demás procesos",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Sincroniza los procesos en un punto común de ejecución",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Divide datos en fragmentos para distribuir entre procesos",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.091Z"
+  }
+]

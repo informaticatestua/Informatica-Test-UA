@@ -1,0 +1,1556 @@
+[
+  {
+    "id": "q-taesDefinitivoPreguntas-1",
+    "text": "¿Cuales son las fases del modelo en cascada?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Análisis y Diseño de Software, Sprint, Revisión del Sprint",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Sprint, Revisión del Sprint y Retrosprectiva",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Definición de requerimientos y Mantenimiento",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Definición de requerimientos, Análisis y Diseño de Software, Implementación,Prueba,Implantación,Mantenimiento",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.197Z"
+  },
+  {
+    "id": "q-taesDefinitivoPreguntas-2",
+    "text": "El manifiesto Ágil ..",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Lo definen 100 expertos en 2007",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Es una de las conclusiones de la conferencia de la OTAN en 1968",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Lo definen 17 expertos en 2001",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Es un cuento de Edgar Allan Poe",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.197Z"
+  },
+  {
+    "id": "q-taesDefinitivoPreguntas-3",
+    "text": "Los actores del proceso Scrum son",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Product Owner, Scrum Master y Equipo de desarrollo",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Stakeholders",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Roles, eventos y artefactos",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Harrison Ford, Mark Hamill y Carrie Fisher",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.197Z"
+  },
+  {
+    "id": "q-taesDefinitivoPreguntas-4",
+    "text": "¿Como se denomina la reunión en la que en base a las peticiones del cliente se determinan cuales van a ser las funcionalidades que se incorporarán al producto en el siguiente Sprint?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Retrospectiva",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Planificación del Sprint",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Sprint Estimation",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Scrum Diario",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.197Z"
+  },
+  {
+    "id": "q-taesDefinitivoPreguntas-5",
+    "text": "En Scrum un incremento se produce",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "En cada retrospectiva del Sprint",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Cada día",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "En cada Sprint",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "En cada planificación del Sprint",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.197Z"
+  },
+  {
+    "id": "q-taesDefinitivoPreguntas-6",
+    "text": "La afirmación \"Un equipo Scrum tiene espíritu de colaboración y un propósito común, conseguir la menor desviación del plan del proyecto\" es",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Verdadera",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Falsa",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.197Z"
+  },
+  {
+    "id": "q-taesDefinitivoPreguntas-7",
+    "text": "La reunión de revisión del Sprint se debe realizar",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Cuando se decidió en la reunión de planificación de un Sprint.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Cuando el propietario modifique algunas de las tareas del presente sprint",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Cuando se detecta una desviación importante del tiempo previsto sobre el que se está utilizando.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Cuando el Scrum Master lo considere oportuno.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.197Z"
+  },
+  {
+    "id": "q-taesDefinitivoPreguntas-8",
+    "text": "¿Como se llama la reunión en la que el equipo realiza un auto análisis de su forma de trabajar?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Retrospectiva",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Scrum Diario",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Revisión",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Planificación",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.197Z"
+  },
+  {
+    "id": "q-taesDefinitivoPreguntas-9",
+    "text": "Los StakeHolders o interesados pueden acudir a la reunión de planificación del Sprint",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "En el primer Sprint deben acudir, a partir del segundo solo bajo petición del equipo o del o Product owner",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Nunca, deben delegar en el Product Owner",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Cuando el equipo o el Product Owner lo consideren oportuno",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Siempre que lo deseen",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.197Z"
+  },
+  {
+    "id": "q-taesDefinitivoPreguntas-10",
+    "text": "La Pila del Sprint es:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Un producto que permite dar energía a los miembros del equipo de desarrollo",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "La lista de requisitos definida y priorizada por el Dueño del producto al inicio del proyecto.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "El conjunto de elementos de la Pila del producto seleccionados para el Sprint más el plan para conseguir el Objetivo del Sprint.",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "La lista de tareas de la que tomaremos el elemento a desarrollar durante el Sprint.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.197Z"
+  },
+  {
+    "id": "q-taesDefinitivoPreguntas-11",
+    "text": "¿Qué puede ser terminado en este Sprint?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "En la reunión de planificación de Sprint, el Scrum Team, bajo el liderazgo del Product Owner deben seleccionar aquellos PBI del Product Backlog que van a formar parte del siguiente Sprint.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Los elementos de la Lista de Producto seleccionados por el Sprint depende únicamente del Equipo de desarrollo.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "El Scrum Master decide cuál es el objetivo del Sprint y lo traslada al Equipo de desarrollo.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "El Dueño del producto y el Scrum Master deciden qué elementos de la Pila del producto se realizarán durante el Sprint.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.197Z"
+  },
+  {
+    "id": "q-taesDefinitivoPreguntas-12",
+    "text": "La Pila del Producto cambia:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "No cambia nunca",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Solo a requerimiento del Scrum Master si un elemento es demasiado complejo.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Cambia constantemente para que el producto sea más adecuado, competitivo y útil.",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Cuando el producto deja de ser competitivo o útil o necesita una refactorización",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.197Z"
+  },
+  {
+    "id": "q-taesDefinitivoPreguntas-13",
+    "text": "La preparación (grooming) de la Pila del Producto:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Es un proceso en el cuál el Scrum Master y el Equipo de desarrollo evalúan la dificultad de los elementos a realizar durante el Sprint.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Es el acto de añadir detalle, estimaciones y ordenación a los elementos de la Pila del Producto.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Es el proceso de quemar todo rastro del Product Backlog una vez finalizado el proyecto",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Es un proceso en el cuál el Dueño del producto y el Scrum Master definen qué se hará durante el Sprint.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.197Z"
+  },
+  {
+    "id": "q-taesDefinitivoPreguntas-14",
+    "text": "La Pila del Producto está normalmente ordenada por:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Teniendo en cuenta valor, riesgo, prioridad y necesidad.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Los criterios de dificultad técnica definidos únicamente por el Equipo de Desarrollo.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Dificultad y riesgo definidos por el Scrum Master y el Equipo de Desarrollo.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "La Pila de Producto no está ordenada",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.197Z"
+  },
+  {
+    "id": "q-taesDefinitivoPreguntas-15",
+    "text": "Si se requieren nueva tareas al aprender más acerca del trabajo necesario para conseguir el Objetivo del Sprint:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El Scrum Master deberá proteger al Equipo de cambios a la Pila del Sprint.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "El Dueño del Producto y los interesados o StakeHolders deberán esperar a la siguiente",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "El Equipo de Desarrollo lo añade a la Pila del Sprint.",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Se pueden incluir previa consulta a los interesados o StakeHolders",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.197Z"
+  },
+  {
+    "id": "q-taesDefinitivoPreguntas-16",
+    "text": "¿Qué elementos de la Pila del Producto estarán en los primeros lugares de la lista?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Aquellos elementos más difíciles o de mayor riesgo para detectar cuanto antes la posibilidad de éxito del sistema siguiendo el principio ‘Fail fast, fail cheap, fail often’.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Los que el equipo de trabajo defina cómo más fáciles de acometer y permitan por tanto entregar valor más rápidamente.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Los que fueron escritos primero",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Los elementos definidos como prioritarios por el Dueño del Producto y para los que hay mayor claridad y detalle.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.197Z"
+  },
+  {
+    "id": "q-taesDefinitivoPreguntas-17",
+    "text": "Cada Incremento del producto es:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Toda unidad de código o librería utilizada en el proyecto.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Lo contrario de decremento",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "La entrega de software que se realiza a la finalización del proyecto y sus sucesivas versiones.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Exhaustivamente probado, asegurando que todos los Incrementos funcionan en conjunto.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.197Z"
+  },
+  {
+    "id": "q-taesDefinitivoPreguntas-18",
+    "text": "La Definición de Terminado",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Se utiliza para evaluar cuándo se ha completado el trabajo sobre el Incremento del producto en el Sprint.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Es utilizada al final del proyecto para comprobar que el trabajo ha sido correctamente realizado.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Es realizada únicamente por el Equipo de trabajo que decide cuándo se ha terminado un trabajo y por tanto puede marcarse como ‘Hecho’.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Es utilizada en una expresión para acabar las reuniones con los interesados o Stakeholders",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.197Z"
+  },
+  {
+    "id": "q-taesDefinitivoPreguntas-19",
+    "text": "¿Cuándo podemos decir que un Sprint ha acabado?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Cuando el Product Owner o Dueño del Producto deciden que es tiempo suficiente y quiere ver el estado de los trabajos.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Cuando todos los elementos de la pila pasan a Terminado",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Cuando se ha acabado el tiempo prefijado para cada Sprint.",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Cuando se han completado todas las funcionalidades previstas para el Sprint.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.197Z"
+  },
+  {
+    "id": "q-taesDefinitivoPreguntas-20",
+    "text": "La definición de ‘Terminado’ o ‘Done’:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Es establecida en cada Sprint por el Scrum Master que, en la reunión de demo, decide si se aprueba o no la funcionalidad desarrollada.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Debe ser entendida por todos los miembros del equipo de trabajo de forma que haya transparencia a la hora de decidir cuándo una funcionalidad está realmente ‘Terminada’ o ‘Done’.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Es establecida al inicio del proyecto por el Product Owner mediante un criterio que sólo él comparte y que no puede ser cambiada o modificada a lo largo del proyecto para mantener la coherencia.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "La pactan en cada reunión de Sprint Diario los miembros del equipo de desarrollo",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.197Z"
+  },
+  {
+    "id": "q-taesDefinitivoPreguntas-21",
+    "text": "Cuando varios equipos Scrum trabajan en un mismo producto:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Cada equipo Scrum debe trabajar en un producto diferente y por tanto tener una Pila propia y única para su producto.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Depende del dinero disponible se pueden disponer de una o varias pilas de producto",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Cada equipo de trabajo tendrán una Pila del Producto propia.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Una misma Pila del Producto puede ser compartida entre todos los equipos.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.197Z"
+  },
+  {
+    "id": "q-taesDefinitivoPreguntas-22",
+    "text": "El seguimiento del progreso del Sprint:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Se resolverá mediante un tablero Kanban y diagramas de Gantt.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Solo se conoce al final del Sprint mediante los gráficos BurnOut y Burn Down",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "En cualquier momento durante un Sprint, es posible sumar el trabajo restante en los elementos de la Pila del Sprint para gestionar su progreso.",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "Es responsabilidad del Dueño del producto y del Scrum Master.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.197Z"
+  },
+  {
+    "id": "q-taesDefinitivoPreguntas-23",
+    "text": "La responsabilidad de proporcionar todas las estimaciones recae en:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "De los tres marcados en el resto de opciones",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "El Scrum Master.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "El Dueño del producto.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "El Equipo de Desarrollo.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.197Z"
+  },
+  {
+    "id": "q-taesDefinitivoPreguntas-24",
+    "text": "El tiempo empleado en trabajar en los elementos de la Pila del Sprint:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Es la variable más utilizada en el seguimiento de proyectos con Scrum.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Es inversamente proporcional al tiempo que se había previsto",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "No es tenido en cuenta por Scrum. El trabajo restante y la fecha son las únicas variables de interés.",
+        "isCorrect": true
+      },
+      {
+        "id": "d",
+        "text": "El Equipo de Desarrollo monitoriza el tiempo empleado en cada elemento de la Pila del Sprint y lo registra diariamente.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.197Z"
+  },
+  {
+    "id": "q-taesDefinitivoPreguntas-25",
+    "text": "El Dueño del Producto hace seguimiento:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "De las horas de trabajo empleadas al menos una vez por cada Demo/Revisión del Sprint.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "El dueño de producto no debe hacer ningún seguimiento.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Al menos una vez a la finalización de las fases de Análisis, Diseño y Desarrollo.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Del trabajo restante total al menos una vez por cada Demo/Revisión del Sprint.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.197Z"
+  },
+  {
+    "id": "q-taesDefinitivoPreguntas-26",
+    "text": "La información sobre el trabajo restante en las revisiones de Sprint previas:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Solo se puede conocer por ordén judicial",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Estará disponible sólo al Scrum Master y al Equipo de Desarrollo.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Es calculada, junto a las horas empleadas en cada tarea, al menos una vez por semana.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Se muestra de forma transparente a todos los interesados.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.197Z"
+  },
+  {
+    "id": "q-taesDefinitivoPreguntas-27",
+    "text": "Transparencia de los artefactos (Pila del Producto, Pila del Sprint, Seguimiento del Progreso):",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El Seguimiento del Progreso o trabajo restante mediante Gráfica Burndown o similares es opcional y puede ser interna al Equipo de Trabajo y Scrum Master a menos que el Product Owner o Interesados demanden conocer el estado del proyecto en una reunión de seguimiento.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Scrum se basa en la transparencia y es labor del Scrum Master fomentar y mejorar la transparencia de lo artefactos utilizados.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Se debe utilizar alternativamente o las gráficas Burn Up y las Burn Down",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Los artefactos de Scrum deben ser totalmente transparentes a Product Owner e Interesados en las reuniones de seguimiento bimensuales que se organicen.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.197Z"
+  },
+  {
+    "id": "q-taesDefinitivoPreguntas-28",
+    "text": "¿Puede un Sprint ser terminado de forma precipitada?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Sí, si el equipo de trabajo comprueba que las tareas comprometidas no podrán ser realizadas a tiempo en ningún caso.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Sí, si la meta del Sprint o las funcionalidades a desarrollar ya no van a ser útiles o han quedado obsoletas.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "No, la meta de cada Sprint es un compromiso alcanzado por el equipo de trabajo que intentará realizar lo establecido en el Sprint hasta el final del mismo",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.197Z"
+  },
+  {
+    "id": "q-taesDefinitivoPreguntas-29",
+    "text": "¿A que elemento corresponde la siguiente definición? Es un diagrama cartesiano que representa en las ordenadas el trabajo estimado para desarrollar el producto y en el eje de abcisas las fechas medidas según las duraciones previstas para los sprints",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Pila de producto",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Tablero Kanban",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Gráfica de Avance o Burn Down",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Gráfico de producto o Burn Up",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.197Z"
+  },
+  {
+    "id": "q-taesDefinitivoPreguntas-30",
+    "text": "Un equipo Scrum tiene espíritu de colaboración y un propósito común : conseguir la menor desviación del plan de proyecto.",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Falso",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Verdadero",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.197Z"
+  },
+  {
+    "id": "q-taesDefinitivoPreguntas-31",
+    "text": "¿Cual de las siguientes definiciones de velocidad consideras más correcta?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Tiempo real del sprint dividido por el tiempo ideal estimado",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Puntos de trabajo estimados divididos entre el tiempo real del sprint",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Tiempo sobrante en un sprint. Puede ser negativo",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Cantidad de trabajo realizado por unidad de tiempo",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.197Z"
+  },
+  {
+    "id": "q-taesDefinitivoPreguntas-32",
+    "text": "¿Cuál de las siguientes es la razón por la que se suele emplear un juego de cartas con números en secuencia de Fibonacci en la estimación de poquer?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Para lograr mayor precisión en equipos reducidos",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Para que resulte más fácil al descomposición de tareas grandes",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Para evitar empates en medida de lo posible",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Para agrupar mejor las estimaciones al aumentar el tamaño de las tareas y con el margen previsible de error",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.197Z"
+  },
+  {
+    "id": "q-taesDefinitivoPreguntas-33",
+    "text": "¿Cuál es la unidad empleada en la gestión ágil para medir el esfuerzo para completar una tarea?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Puntos de función",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Punto de Scrum",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Horas ideales",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "No hay una unidad estándar. Cada organización decide la suya según sus circunstancias.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.197Z"
+  },
+  {
+    "id": "q-taesDefinitivoPreguntas-34",
+    "text": "¿Cual de las siguientes afirmaciones es cierta respecto a la estimación de póquer?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Es una práctica que facilita la elaboración del presupuesto a un cliente",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Es una práctica de la Ingeniería de Software Clásica actualmte en desuso",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Es una práctica ágil para la determinación del tamaño ideal del equipo de desarrollo",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Es una práctica ágil empleada para estimar el esfuerzo que requieren las tareas",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.197Z"
+  },
+  {
+    "id": "q-taesDefinitivoPreguntas-35",
+    "text": "Para monitorizar el avance de un proyecto la gestión ágil mide",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El trabajo realizado menos el trabajo estimado",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "El trabajo pendiente",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "El trabajo realizado",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "El trabajo realizado o pendiente en función del gestor del proyecto",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.197Z"
+  },
+  {
+    "id": "q-taesDefinitivoPreguntas-36",
+    "text": "El término WIP se refiere a",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Número máximo de personas que pueden estar trabajando en ese área de forma simultanea",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Es un parámetro relativo a un día y representa el trabajo que se está llevando a cabo en ese día",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "El parámetro que mide el número mínimo de tareas que pueden encontrarse en un estado de forma simultanea",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "El tiempo relativo que falta para completar las tareas que están en curso",
+        "isCorrect": false
+      },
+      {
+        "id": "e",
+        "text": "El parámetro que mide el número máximo de tareas que pueden encontrarse en un estado de forma simultanea",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.197Z"
+  },
+  {
+    "id": "q-taesDefinitivoPreguntas-37",
+    "text": "Un hombre apareció después de que el propietario apagara las luces",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "No hay datos",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Incorrecto",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Correcto",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.197Z"
+  },
+  {
+    "id": "q-taesDefinitivoPreguntas-38",
+    "text": "El ladrón fue un hombre",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "No hay datos",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Incorrecto",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Correcto",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.197Z"
+  },
+  {
+    "id": "q-taesDefinitivoPreguntas-39",
+    "text": "El hombre que apareció no pidió dinero",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Incorrecto",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "No hay datos",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Correcto",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.197Z"
+  },
+  {
+    "id": "q-taesDefinitivoPreguntas-40",
+    "text": "El propietario vació la caja registradora",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Correcto",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Incorrecto",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "No hay datos",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.197Z"
+  },
+  {
+    "id": "q-taesDefinitivoPreguntas-41",
+    "text": "Una vez que el hombre pidió dinero, lo colocara en su bolsillo, salió corriendo",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "No hay datos",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Incorrecto",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Correcto",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.197Z"
+  },
+  {
+    "id": "q-taesDefinitivoPreguntas-42",
+    "text": "El ladrón pidió dinero al propietario",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Correcto",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "No hay datos",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Incorrecto",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.197Z"
+  },
+  {
+    "id": "q-taesDefinitivoPreguntas-43",
+    "text": "Un farmacéutico acababa de apagar las luces, cuando un hombre entró en la farmacia.",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Correcto",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Incorrecto",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "No hay datos",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.197Z"
+  },
+  {
+    "id": "q-taesDefinitivoPreguntas-44",
+    "text": "Era pleno día cuando el hombre apareció.",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Correcto",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Incorrecto",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "No hay datos",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.197Z"
+  },
+  {
+    "id": "q-taesDefinitivoPreguntas-45",
+    "text": "El hombre que apareció en la farmacia, abrió la caja registradora",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Correcto",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Incorrecto",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "No hay datos",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.197Z"
+  },
+  {
+    "id": "q-taesDefinitivoPreguntas-46",
+    "text": "La Pila del Producto está normalmente ordenada por:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Teniendo en cuenta valor, riesgo, prioridad y necesidad.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "La Pila de Producto no está ordenada",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Dificultad y riesgo definidos por el Scrum Master y el Equipo de Desarrollo.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Los criterios de dificultad técnica definidos únicamente por el Equipo de Desarrollo.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.197Z"
+  },
+  {
+    "id": "q-taesDefinitivoPreguntas-47",
+    "text": "En Scrum un incremento se produce",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "En cada planificación del Sprint",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "En cada retrospectiva del Sprint",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "En cada Sprint",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Cada día",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.197Z"
+  },
+  {
+    "id": "q-taesDefinitivoPreguntas-48",
+    "text": "¿Cuándo podemos decir que un Sprint ha acabado?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Cuando el Product Owner o Dueño del Producto deciden que es tiempo suficiente y quiere ver el estado de los trabajos.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Cuando se han completado todas las funcionalidades previstas para el Sprint.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Cuando todos los elementos de la pila pasan a Terminado",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Cuando se ha acabado el tiempo prefijado para cada Sprint.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.197Z"
+  },
+  {
+    "id": "q-taesDefinitivoPreguntas-49",
+    "text": "Cada Incremento del producto es:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Exhaustivamente probado, asegurando que todos los Incrementos funcionan en conjunto.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Lo contrario de decremento",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Toda unidad de código o librería utilizada en el proyecto.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "La entrega de software que se realiza a la finalización del proyecto y sus sucesivas versiones.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.197Z"
+  },
+  {
+    "id": "q-taesDefinitivoPreguntas-50",
+    "text": "¿Qué puede ser terminado en este Sprint?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "En la reunión de planificación de Sprint, el Scrum Team, bajo el liderazgo del Product Owner deben seleccionar aquellos PBI del Product Backlog que van a formar parte del siguiente Sprint.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "El Dueño del producto y el Scrum Master deciden qué elementos de la Pila del producto se realizarán durante el Sprint.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Los elementos de la Lista de Producto seleccionados por el Sprint depende únicamente del Equipo de desarrollo.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "El Scrum Master decide cuál es el objetivo del Sprint y lo traslada al Equipo de desarrollo.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.199Z"
+  },
+  {
+    "id": "q-taesDefinitivoPreguntas-51",
+    "text": "La preparación (grooming) de la Pila del Producto:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Es el acto de añadir detalle, estimaciones y ordenación a los elementos de la Pila del Producto.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Es un proceso en el cuál el Scrum Master y el Equipo de desarrollo evalúan la dificultad de los elementos a realizar durante el Sprint.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Es un proceso en el cuál el Dueño del producto y el Scrum Master definen qué se hará durante el Sprint.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Es el proceso de quemar todo rastro del Product Backlog una vez finalizado el proyecto",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.199Z"
+  },
+  {
+    "id": "q-taesDefinitivoPreguntas-52",
+    "text": "La responsabilidad de proporcionar todas las estimaciones recae en:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El Dueño del producto.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "El Equipo de Desarrollo.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "De los tres marcados en el resto de opciones",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "El Scrum Master.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.199Z"
+  },
+  {
+    "id": "q-taesDefinitivoPreguntas-53",
+    "text": "¿Puede un Sprint ser terminado de forma precipitada?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "No, la meta de cada Sprint es un compromiso alcanzado por el equipo de trabajo que intentará realizar lo establecido en el Sprint hasta el final del mismo",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Sí, si el equipo de trabajo comprueba que las tareas comprometidas no podrán ser realizadas a tiempo en ningún caso.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Sí, si la meta del Sprint o las funcionalidades a desarrollar ya no van a ser útiles o han quedado obsoletas.",
+        "isCorrect": true
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.199Z"
+  },
+  {
+    "id": "q-taesDefinitivoPreguntas-54",
+    "text": "Transparencia de los artefactos (Pila del Producto, Pila del Sprint, Seguimiento del Progreso):",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Scrum se basa en la transparencia y es labor del Scrum Master fomentar y mejorar la transparencia de los artefactos utilizados.",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "Los artefactos de Scrum deben ser totalmente transparentes a Product Owner e Interesados en las reuniones de seguimiento bimensuales que se organicen.",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "Se debe utilizar alternativamente o las gráficas Burn Up y las Burn Down",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "El Seguimiento del Progreso o trabajo restante mediante Gráfica Burndown o similares es opcional y puede ser interna al Equipo de Trabajo y Scrum Master a menos que el Product Owner o Interesados demanden conocer el estado del proyecto en una reunión de seguimiento.",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.200Z"
+  },
+  {
+    "id": "q-taesDefinitivoPreguntas-55",
+    "text": "La reunión de revisión del Sprint se debe realizar",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "Cuando el Scrum Master lo considere oportuno.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Cuando se decidió en la reunión de planificación de un Sprint.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Cuando se detecta una desviación importante del tiempo previsto sobre el que se está utilizando.",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Cuando el propietario modifique algunas de las tareas del presente sprint",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.200Z"
+  },
+  {
+    "id": "q-taesDefinitivoPreguntas-56",
+    "text": "Si se requieren nueva tareas al aprender más acerca del trabajo necesario para conseguir el Objetivo del Sprint:",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "El Scrum Master deberá proteger al Equipo de cambios a la Pila del Sprint.",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "El Equipo de Desarrollo lo añade a la Pila del Sprint.",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Se pueden incluir previa consulta a los interesados o StakeHolders",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "El Dueño del Producto y los interesados o StakeHolders deberán esperar a la siguiente",
+        "isCorrect": false
+      }
+    ],
+    "mathSupported": false,
+    "createdAt": "2026-03-13T14:45:39.200Z"
+  }
+]
