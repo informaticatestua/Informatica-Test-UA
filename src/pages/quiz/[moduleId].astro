@@ -3,75 +3,40 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Navbar from '../../components/layout/Navbar.astro';
 import Footer from '../../components/layout/Footer.astro';
 import ReportModal from '../../components/forms/ReportModal.astro';
-import { getSubjects, getModulesForSubject, getQuestionsForModule } from '../../lib/firebase/service';
-
-export async function getStaticPaths() {
-  try {
-    const subjects = await getSubjects();
-    const allPaths = [];
-
-    for (const subject of subjects) {
-      const modules = await getModulesForSubject((subject as any).id);
-      for (const mod of modules) {
-        // Asegurar que courseId y subjectId están siempre presentes
-        const courseId = (mod as any).courseId;
-        const subjectId = (mod as any).subjectId || (subject as any).id;
-        
-        if (!courseId || !subjectId) {
-          console.warn(`⚠️ Missing IDs for module ${(mod as any).id}: courseId=${courseId}, subjectId=${subjectId}`);
-          continue;
-        }
-        
-        allPaths.push({
-          params: { moduleId: (mod as any).id },
-          props: { 
-            module: mod, 
-            subject,
-            courseId,
-            subjectId
-          }
-        });
-      }
-    }
-
-    return allPaths;
-  } catch (error) {
-    console.error('Failed generating quiz static paths:', error);
-    return [];
-  }
-}
+import { getModule, getSubject, getQuestionsForModule } from '../../lib/supabase/service';
 
 const { moduleId } = Astro.params;
-const { module, subject, courseId, subjectId } = Astro.props as any;
 
-let firestoreErrorMessage: string | null = null;
+const module = await getModule(moduleId as string);
+if (!module) return Astro.redirect('/');
+
+const subject = await getSubject(module.subject_id);
+if (!subject) return Astro.redirect('/');
+
+let errorMessage: string | null = null;
 let moduleQuestionsRaw: any[] = [];
 try {
-  console.log(`🔍 QUIZ DEBUG: moduleId=${moduleId}, courseId=${courseId}, subjectId=${subjectId}`);
-  moduleQuestionsRaw = await getQuestionsForModule(moduleId as string, courseId as string, subjectId as string);
-  console.log(`✅ Questions loaded: ${moduleQuestionsRaw.length} preguntas`);
+  moduleQuestionsRaw = await getQuestionsForModule(moduleId as string);
 } catch (error) {
-  firestoreErrorMessage = (error as Error).message || 'Error al consultar Firestore';
-  console.error('Error fetching quiz questions:', error);
+  errorMessage = (error as Error).message || 'Error al cargar las preguntas.';
 }
 
-// Optimize payload going to the client (always safe for the browser).
-const sanitizedQuestions = (moduleQuestionsRaw || []).map((q: any) => ({
+const sanitizedQuestions = moduleQuestionsRaw.map((q: any) => ({
   id: q?.id,
   text: q?.text,
   options: (Array.isArray(q?.options) ? q.options : []).map((o: any) => ({
     id: o?.id,
     text: o?.text,
-    isCorrect: o?.isCorrect
+    is_correct: o?.is_correct
   })),
-  imagePath: q?.imagePath || null
+  image_path: q?.image_path || null
 }));
 ---
 
 <BaseLayout title={`${subject.name} - ${module.name} | TestUA`}>
     <Navbar />
     
-    <main class="flex-1" data-course-id={courseId} data-subject-id={subjectId} data-module-id={moduleId}>
+    <main class="flex-1" data-module-id={moduleId}>
         <!-- Quiz Header -->
         <div class="glass border-b border-white/5 py-8 px-6 lg:px-20 relative overflow-hidden">
             <div class="max-w-7xl mx-auto flex flex-col gap-6 relative z-10">
@@ -80,8 +45,6 @@ const sanitizedQuestions = (moduleQuestionsRaw || []).map((q: any) => ({
                     <a href="/" class="hover:text-primary transition-colors flex items-center gap-1" aria-label="Volver a Inicio">
                         <span class="material-symbols-outlined text-[14px]">home</span>
                     </a>
-                    <span class="opacity-40 material-symbols-outlined text-[14px]">chevron_right</span>
-                    <span class="truncate">{courseId?.replace('curso-', 'Curso ')}</span>
                     <span class="opacity-40 material-symbols-outlined text-[14px]">chevron_right</span>
                     <a href={`/subject/${subject.id}`} class="hover:text-primary transition-colors truncate" aria-label={`Volver a ${subject.name}`}>
                         {subject.name}
@@ -101,22 +64,20 @@ const sanitizedQuestions = (moduleQuestionsRaw || []).map((q: any) => ({
                         </div>
                     </div>
                     
-                    <!-- Redesigned Scorecard -->
+                    <!-- Scorecard -->
                     <div class="glass px-6 py-4 rounded-2xl border border-white/5 flex items-center gap-8 shadow-inner shadow-black/20">
                         <div class="text-center group">
-                            <span class="block text-[10px] uppercase font-black tracking-[0.2em] text-slate-500 mb-1" aria-label="Aciertos">Aciertos</span>
+                            <span class="block text-[10px] uppercase font-black tracking-[0.2em] text-slate-500 mb-1">Aciertos</span>
                             <span class="text-2xl font-black text-emerald-500 group-hover:scale-110 transition-transform inline-block" id="score-correct">0</span>
                         </div>
                         <div class="w-px h-10 bg-white/5"></div>
                         <div class="text-center group">
-                            <span class="block text-[10px] uppercase font-black tracking-[0.2em] text-slate-500 mb-1" aria-label="Fallos">Fallos</span>
+                            <span class="block text-[10px] uppercase font-black tracking-[0.2em] text-slate-500 mb-1">Fallos</span>
                             <span class="text-2xl font-black text-rose-500 group-hover:scale-110 transition-transform inline-block" id="score-incorrect">0</span>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Hero glow effect -->
             <div class="absolute top-0 right-0 w-[400px] h-full bg-primary/5 blur-[100px] -z-10 pointer-events-none"></div>
         </div>
 
@@ -150,7 +111,7 @@ const sanitizedQuestions = (moduleQuestionsRaw || []).map((q: any) => ({
                     </div>
                     <h3 class="text-2xl font-black text-white mb-2">No se pudo cargar el test</h3>
                     <p class="text-slate-300 text-sm max-w-md">
-                        {firestoreErrorMessage ?? 'Comprueba la conexión e intenta de nuevo.'}
+                        {errorMessage ?? 'Comprueba la conexión e intenta de nuevo.'}
                     </p>
                 </div>
 
@@ -164,7 +125,7 @@ const sanitizedQuestions = (moduleQuestionsRaw || []).map((q: any) => ({
                 </div>
 
                 <!-- State: Finished -->
-                <div id="quiz-finished" class="hidden glass rounded-[3rem] border border-white/10 p-16 text-center transform shadow-2xl relative overflow-hidden opacity-0 translate-y-12 transition-all duration-700">
+                <div id="quiz-finished" class="hidden glass rounded-[3rem] border border-white/10 p-16 text-center shadow-2xl relative overflow-hidden opacity-0 translate-y-12 transition-all duration-700">
                     <div class="absolute inset-0 bg-gradient-to-b from-primary/10 to-transparent pointer-events-none"></div>
                     
                     <div class="w-28 h-28 bg-emerald-500/10 rounded-full flex items-center justify-center mb-8 border-4 border-emerald-500/20 shadow-2xl mx-auto relative z-10">
@@ -174,14 +135,43 @@ const sanitizedQuestions = (moduleQuestionsRaw || []).map((q: any) => ({
                     <h2 class="text-4xl font-black text-white mb-4 tracking-tight relative z-10">Módulo Completado</h2>
                     <p class="text-slate-400 mb-12 max-w-md mx-auto text-lg font-medium relative z-10">Has finalizado satisfactoriamente todas las preguntas de este test.</p>
                     
-                    <div class="flex flex-col sm:flex-row gap-6 justify-center w-full relative z-10">
+                    <div class="flex flex-col sm:flex-row gap-6 justify-center w-full relative z-10 mb-8">
                         <button onclick="window.location.reload()" class="bg-white text-black hover:bg-slate-200 font-black py-5 px-10 rounded-2xl transition-all shadow-xl flex items-center justify-center gap-3 active:scale-95">
                             <span class="material-symbols-outlined text-xl">refresh</span>
                             <span>REPETIR</span>
                         </button>
+                        <button onclick="showSummary()" class="glass text-primary hover:bg-primary/10 font-black py-5 px-10 rounded-2xl transition-all border border-primary/30 flex items-center justify-center gap-3 active:scale-95">
+                            <span class="material-symbols-outlined text-xl">summarize</span>
+                            <span>RESUMEN</span>
+                        </button>
                         <a href={`/subject/${subject.id}`} class="glass text-white hover:bg-white/5 font-black py-5 px-10 rounded-2xl transition-all border border-white/10 flex items-center justify-center gap-3 active:scale-95">
                             <span class="material-symbols-outlined text-xl">list</span>
                             <span>MÓDULOS</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- State: Summary -->
+                <div id="quiz-summary" class="hidden">
+                    <div class="flex items-center justify-between mb-10">
+                        <div>
+                            <h2 class="text-3xl font-black text-white tracking-tight">Resumen del Test</h2>
+                            <p class="text-slate-400 text-sm mt-1">Todas las preguntas con sus respuestas correctas.</p>
+                        </div>
+                        <button id="export-pdf-btn" class="flex items-center gap-2 bg-primary hover:bg-primary/90 text-white font-black py-3 px-6 rounded-xl transition-all shadow-lg shadow-primary/20 active:scale-95">
+                            <span class="material-symbols-outlined text-xl">picture_as_pdf</span>
+                            <span>Exportar PDF</span>
+                        </button>
+                    </div>
+                    <div id="summary-container" class="space-y-6"></div>
+                    <div class="mt-10 flex gap-4">
+                        <button onclick="window.location.reload()" class="bg-white text-black hover:bg-slate-200 font-black py-4 px-8 rounded-2xl transition-all shadow-xl flex items-center gap-2 active:scale-95">
+                            <span class="material-symbols-outlined">refresh</span>
+                            REPETIR
+                        </button>
+                        <a href={`/subject/${subject.id}`} class="glass text-white hover:bg-white/5 font-black py-4 px-8 rounded-2xl transition-all border border-white/10 flex items-center gap-2 active:scale-95">
+                            <span class="material-symbols-outlined">list</span>
+                            MÓDULOS
                         </a>
                     </div>
                 </div>
@@ -200,18 +190,14 @@ const sanitizedQuestions = (moduleQuestionsRaw || []).map((q: any) => ({
                     </div>
 
                     <div class="glass border-white/5 rounded-[2.5rem] p-10 mb-10 shadow-3xl bg-white/[0.02]">
-                        <h2 id="question-text" class="text-2xl md:text-3xl font-bold text-white leading-tight mb-0">
-                            <!-- Text injected via JS -->
-                        </h2>
+                        <h2 id="question-text" class="text-2xl md:text-3xl font-bold text-white leading-tight mb-0"></h2>
                     </div>
 
                     <div id="question-image-container" class="hidden mb-12 glass rounded-3xl overflow-hidden border border-white/5 p-6 flex justify-center bg-black/20 shadow-inner">
                         <img id="question-image" src="" alt="Imagen de pregunta" class="max-h-96 object-contain rounded-xl shadow-2xl" />
                     </div>
 
-                    <div id="options-container" class="space-y-4">
-                        <!-- Options injected via JS -->
-                    </div>
+                    <div id="options-container" class="space-y-4"></div>
 
                     <div id="next-action-container" class="hidden mt-16 flex justify-center animate-fade-in-up">
                         <button id="next-button" class="bg-primary hover:bg-primary/90 text-white font-black py-5 px-20 rounded-2xl transition-all shadow-2xl shadow-primary/20 hover:-translate-y-1 active:scale-95 flex items-center gap-4 group">
@@ -230,128 +216,96 @@ const sanitizedQuestions = (moduleQuestionsRaw || []).map((q: any) => ({
 </BaseLayout>
 
 <script id="quiz-data" type="application/json" set:html={JSON.stringify(sanitizedQuestions)}></script>
+<script id="quiz-meta" type="application/json" set:html={JSON.stringify({ subjectName: subject.name, moduleName: module.name, subjectId: subject.id, errorMessage })}></script>
 
-<script type="module" define:vars={{ subjectName: subject.name, moduleName: module.name, firestoreErrorMessage }}>
-    import { logEvent } from '../../lib/firebase/client';
-
-    // 1. Initial Data Setup & Shuffle
+<script type="module">
+    // ── Parse data ─────────────────────────────────────────────────────────────
     let questions = [];
+    let meta = { subjectName: '', moduleName: '', subjectId: '', errorMessage: null };
     try {
-        const rawText = document.getElementById('quiz-data')?.textContent || '[]';
-        const questionsRaw = JSON.parse(rawText);
-        questions = Array.isArray(questionsRaw) ? questionsRaw : [];
-    } catch (e) {
-        console.error('Failed to parse quiz data JSON:', e);
-        questions = [];
-    }
+        questions = JSON.parse(document.getElementById('quiz-data')?.textContent || '[]');
+        meta = JSON.parse(document.getElementById('quiz-meta')?.textContent || '{}');
+    } catch {}
     questions = questions.sort(() => Math.random() - 0.5);
+
+    // Track user answers for summary
+    const userAnswers = [];
 
     let currentIndex = 0;
     let correctCount = 0;
     let incorrectCount = 0;
     let isAnswered = false;
 
-    // 2. DOM Elements Mapping
-    const qCard = document.getElementById('question-card');
-    const loadingState = document.getElementById('quiz-loading');
-    const emptyState = document.getElementById('quiz-empty');
+    // ── DOM ────────────────────────────────────────────────────────────────────
+    const qCard          = document.getElementById('question-card');
+    const loadingState   = document.getElementById('quiz-loading');
+    const emptyState     = document.getElementById('quiz-empty');
     const quizErrorState = document.getElementById('quiz-error');
-    const finishedState = document.getElementById('quiz-finished');
-    
-    const qText = document.getElementById('question-text');
-    const qBadge = document.getElementById('question-badge');
-    const optsContainer = document.getElementById('options-container');
+    const finishedState  = document.getElementById('quiz-finished');
+    const summarySection = document.getElementById('quiz-summary');
+    const summaryContainer = document.getElementById('summary-container');
+
+    const qText          = document.getElementById('question-text');
+    const qBadge         = document.getElementById('question-badge');
+    const optsContainer  = document.getElementById('options-container');
     const nextBtnContainer = document.getElementById('next-action-container');
-    const nextBtn = document.getElementById('next-button');
-    const imgContainer = document.getElementById('question-image-container');
-    const imgTag = document.getElementById('question-image');
+    const nextBtn        = document.getElementById('next-button');
+    const imgContainer   = document.getElementById('question-image-container');
+    const imgTag         = document.getElementById('question-image');
 
-    const scoreCorrect = document.getElementById('score-correct');
+    const scoreCorrect   = document.getElementById('score-correct');
     const scoreIncorrect = document.getElementById('score-incorrect');
-    const progText = document.getElementById('progress-text');
-    const progPerc = document.getElementById('progress-percentage');
-    const progBar = document.getElementById('progress-bar');
+    const progText       = document.getElementById('progress-text');
+    const progPerc       = document.getElementById('progress-percentage');
+    const progBar        = document.getElementById('progress-bar');
 
-    // 3. Core Engine Functions
-    async function initQuiz() {
-        console.log('Quiz init started', { loadingState, questionsLength: questions.length });
-        
-        if (!loadingState) {
-            console.error('Loading state element not found!');
-            return;
-        }
-        
-        loadingState.classList.add('hidden');
-
-        if (firestoreErrorMessage) {
-            quizErrorState?.classList.remove('hidden');
-            return;
-        }
-        
-        if (questions.length === 0) {
-            console.warn('No questions found');
-            emptyState?.classList.remove('hidden');
-            return;
-        }
-
-        // Track quiz start
-        await logEvent('quiz_start', {
-            subject_name: subjectName,
-            module_name: moduleName,
-            total_questions: questions.length
-        });
-
+    // ── Init ───────────────────────────────────────────────────────────────────
+    function initQuiz() {
+        loadingState?.classList.add('hidden');
+        if (meta.errorMessage) { quizErrorState?.classList.remove('hidden'); return; }
+        if (questions.length === 0) { emptyState?.classList.remove('hidden'); return; }
         updateProgress();
         renderQuestion();
     }
 
+    // ── Render question ────────────────────────────────────────────────────────
     function renderQuestion() {
-        if (!qCard || !nextBtnContainer || !optsContainer || !qText || !qBadge || !imgContainer || !imgTag) return;
-        
-        if (currentIndex >= questions.length) {
-            showFinishedState();
-            return;
-        }
+        if (!qCard || !nextBtnContainer || !optsContainer || !qText || !qBadge) return;
+        if (currentIndex >= questions.length) { showFinishedState(); return; }
 
         const q = questions[currentIndex];
         isAnswered = false;
 
-        // Reset UI with smooth exit animation
         qCard.classList.remove('opacity-100', 'translate-y-0');
         qCard.classList.add('opacity-0', 'translate-y-12');
         nextBtnContainer.classList.add('hidden');
-        
+
         setTimeout(() => {
             qText.innerHTML = q.text.replace(/\n/g, '<br>');
             qBadge.textContent = `Pregunta ${currentIndex + 1} de ${questions.length}`;
 
-            if (q.imagePath) {
-                imgContainer.classList.remove('hidden');
-                imgTag.src = q.imagePath;
+            if (q.image_path) {
+                imgContainer?.classList.remove('hidden');
+                if (imgTag) imgTag.src = q.image_path;
             } else {
-                imgContainer.classList.add('hidden');
+                imgContainer?.classList.add('hidden');
             }
 
             const shuffledOptions = [...q.options].sort(() => Math.random() - 0.5);
             optsContainer.innerHTML = '';
-            
+
             shuffledOptions.forEach((opt, idx) => {
                 const btn = document.createElement('button');
                 btn.className = 'w-full text-left p-6 md:p-7 rounded-3xl glass border-white/5 hover:border-primary/40 hover:bg-primary/5 transition-all duration-300 group relative flex items-center gap-6 option-btn focus:outline-none focus:ring-4 focus:ring-primary/10 shadow-lg';
-                btn.dataset.correct = opt.isCorrect;
-                
+                btn.dataset.correct = opt.is_correct;
                 const letter = String.fromCharCode(65 + idx);
-                
                 btn.innerHTML = `
-                    <span class="w-12 h-12 rounded-2xl glass border-white/10 group-hover:border-primary/40 group-hover:bg-primary/20 flex-shrink-0 flex items-center justify-center text-sm font-black text-slate-500 group-hover:text-primary transition-all letter-indicator">
-                        ${letter}
-                    </span>
+                    <span class="w-12 h-12 rounded-2xl glass border-white/10 group-hover:border-primary/40 group-hover:bg-primary/20 flex-shrink-0 flex items-center justify-center text-sm font-black text-slate-500 group-hover:text-primary transition-all letter-indicator">${letter}</span>
                     <span class="text-white text-xl leading-relaxed font-semibold flex-grow transition-colors">${opt.text}</span>
                     <span class="material-symbols-outlined hidden status-icon correct-icon text-emerald-500 text-4xl" style="font-variation-settings: 'FILL' 1">check_circle</span>
                     <span class="material-symbols-outlined hidden status-icon incorrect-icon text-rose-500 text-4xl" style="font-variation-settings: 'FILL' 1">cancel</span>
                 `;
-
-                btn.addEventListener('click', () => handleSelect(btn, opt.isCorrect));
+                btn.addEventListener('click', () => handleSelect(btn, opt.is_correct, q, opt));
                 optsContainer.appendChild(btn);
             });
 
@@ -364,29 +318,20 @@ const sanitizedQuestions = (moduleQuestionsRaw || []).map((q: any) => ({
         }, 500);
     }
 
-    function handleSelect(selectedBtn, isCorrect) {
-        if (isAnswered || !optsContainer || !scoreCorrect || !scoreIncorrect) return;
+    function handleSelect(selectedBtn, isCorrect, question, selectedOption) {
+        if (isAnswered || !optsContainer) return;
         isAnswered = true;
 
-        const currentQuestion = questions[currentIndex];
-
-        // Track answer (no await to avoid blocking UI)
-        logEvent('question_answer', {
-            subject_name: subjectName,
-            module_name: moduleName,
-            question_id: currentQuestion.id,
-            is_correct: isCorrect
-        }).catch(e => console.error('Analytics error:', e));
+        // Save answer for summary
+        userAnswers.push({ question, selectedOption, isCorrect });
 
         const allBtns = optsContainer.querySelectorAll('.option-btn');
         allBtns.forEach(btn => {
-            // `.option-btn` is always a <button> in this UI.
             btn.disabled = true;
             btn.classList.add('cursor-default', 'opacity-40');
-            
             if (btn.dataset.correct === 'true') {
                 btn.classList.remove('opacity-40', 'border-white/5');
-                btn.classList.add('border-emerald-500/60', 'bg-emerald-500/10', 'ring-4', 'ring-emerald-500/10', 'shadow-2xl');
+                btn.classList.add('border-emerald-500/60', 'bg-emerald-500/10', 'ring-4', 'ring-emerald-500/10');
                 btn.querySelector('.correct-icon')?.classList.remove('hidden');
                 btn.querySelector('.letter-indicator')?.classList.add('border-emerald-500/50', 'text-emerald-500', 'bg-emerald-500/20');
             }
@@ -394,24 +339,20 @@ const sanitizedQuestions = (moduleQuestionsRaw || []).map((q: any) => ({
 
         if (isCorrect) {
             correctCount++;
-            scoreCorrect.textContent = correctCount.toString();
-            selectedBtn.classList.add('scale-[1.03]', 'shadow-emerald-500/20');
+            if (scoreCorrect) scoreCorrect.textContent = String(correctCount);
+            selectedBtn.classList.add('scale-[1.03]');
         } else {
             incorrectCount++;
-            scoreIncorrect.textContent = incorrectCount.toString();
+            if (scoreIncorrect) scoreIncorrect.textContent = String(incorrectCount);
             selectedBtn.classList.remove('opacity-40');
-            selectedBtn.classList.add('border-rose-500/60', 'bg-rose-500/10', 'ring-4', 'ring-rose-500/10', 'shadow-2xl', 'z-10');
+            selectedBtn.classList.add('border-rose-500/60', 'bg-rose-500/10', 'ring-4', 'ring-rose-500/10');
             selectedBtn.querySelector('.incorrect-icon')?.classList.remove('hidden');
             selectedBtn.querySelector('.letter-indicator')?.classList.add('border-rose-500/50', 'text-rose-500', 'bg-rose-500/20');
-
             selectedBtn.animate([
-                { transform: 'translateX(0)' },
-                { transform: 'translateX(-8px)' },
-                { transform: 'translateX(8px)' },
-                { transform: 'translateX(-4px)' },
-                { transform: 'translateX(4px)' },
+                { transform: 'translateX(0)' }, { transform: 'translateX(-8px)' },
+                { transform: 'translateX(8px)' }, { transform: 'translateX(-4px)' },
                 { transform: 'translateX(0)' }
-            ], { duration: 500, easing: 'ease-in-out' });
+            ], { duration: 400, easing: 'ease-in-out' });
         }
 
         nextBtnContainer?.classList.remove('hidden');
@@ -419,64 +360,162 @@ const sanitizedQuestions = (moduleQuestionsRaw || []).map((q: any) => ({
     }
 
     function updateProgress() {
-        if (!progText || !progPerc || !progBar) return;
-        const total = questions.length;
-        const current = currentIndex + 1;
-        const perc = Math.min(Math.round((current / total) * 100), 100);
-        
-        progText.textContent = `Progreso del Simulacro`;
-        progPerc.textContent = `${perc}%`;
-        progBar.style.width = `${perc}%`;
+        const perc = Math.min(Math.round(((currentIndex + 1) / questions.length) * 100), 100);
+        if (progText) progText.textContent = 'Progreso del Simulacro';
+        if (progPerc) progPerc.textContent = `${perc}%`;
+        if (progBar) progBar.style.width = `${perc}%`;
     }
 
     function showFinishedState() {
-        if (!qCard || !finishedState) return;
-        qCard.classList.add('hidden');
-        finishedState.classList.remove('hidden');
-        
+        qCard?.classList.add('hidden');
+        finishedState?.classList.remove('hidden');
         const total = correctCount + incorrectCount;
-        const note = total > 0 ? (Math.round((correctCount / total) * 100) / 10).toFixed(1) : "0.0";
-        
-        // Track quiz completion
-        logEvent('quiz_complete', {
-            subject_name: subjectName,
-            module_name: moduleName,
-            score: parseFloat(note),
-            correct_answers: correctCount,
-            total_questions: total
-        });
-
+        const note = total > 0 ? (Math.round((correctCount / total) * 100) / 10).toFixed(1) : '0.0';
         setTimeout(() => {
-            finishedState.classList.add('opacity-100', 'translate-y-0');
-            finishedState.classList.remove('opacity-0', 'translate-y-12');
-            
-            const gradeContainer = document.createElement('div');
-            gradeContainer.className = `mt-6 mb-12 mx-auto w-fit px-12 py-6 rounded-[2rem] glass font-black shadow-2xl border flex flex-col items-center gap-1 ${parseFloat(note) >= 5 ? 'border-emerald-500/30 text-emerald-500 bg-emerald-500/5' : 'border-rose-500/30 text-rose-500 bg-rose-500/5'}`;
-            gradeContainer.innerHTML = `
+            finishedState?.classList.add('opacity-100', 'translate-y-0');
+            finishedState?.classList.remove('opacity-0', 'translate-y-12');
+            const gradeEl = document.createElement('div');
+            const pass = parseFloat(note) >= 5;
+            gradeEl.className = `mt-6 mb-12 mx-auto w-fit px-12 py-6 rounded-[2rem] glass font-black shadow-2xl border flex flex-col items-center gap-1 ${pass ? 'border-emerald-500/30 text-emerald-500 bg-emerald-500/5' : 'border-rose-500/30 text-rose-500 bg-rose-500/5'}`;
+            gradeEl.innerHTML = `
                 <span class="text-[10px] uppercase tracking-[0.3em] text-slate-500">Tu Calificación</span>
                 <span class="text-6xl tracking-tighter">${note}</span>
                 <span class="text-sm opacity-50">sobre 10</span>
             `;
-            finishedState.insertBefore(gradeContainer, finishedState.querySelector('p'));
+            const p = finishedState?.querySelector('p');
+            if (p && finishedState) finishedState.insertBefore(gradeEl, p);
         }, 100);
     }
 
-    // 4. Listeners & Global Helpers
+    // ── Summary ────────────────────────────────────────────────────────────────
+    window.showSummary = function() {
+        finishedState?.classList.add('hidden');
+        summarySection?.classList.remove('hidden');
+        if (!summaryContainer) return;
+        summaryContainer.innerHTML = '';
+
+        questions.forEach((q, qIdx) => {
+            const userAnswer = userAnswers.find(a => a.question.id === q.id);
+            const card = document.createElement('div');
+            card.className = 'glass rounded-3xl border border-white/5 p-8';
+            const qNum = qIdx + 1;
+            
+            const optionsHTML = q.options.map(opt => {
+                const isCorrect = opt.is_correct;
+                const wasSelected = userAnswer?.selectedOption?.id === opt.id || 
+                                    userAnswer?.selectedOption?.text === opt.text;
+                let cls = 'flex items-start gap-3 p-4 rounded-2xl border ';
+                if (isCorrect) cls += 'border-emerald-500/40 bg-emerald-500/10';
+                else if (wasSelected && !isCorrect) cls += 'border-rose-500/40 bg-rose-500/10';
+                else cls += 'border-white/5 bg-white/2';
+                
+                const icon = isCorrect ? '✓' : (wasSelected && !isCorrect ? '✗' : '');
+                const iconColor = isCorrect ? 'text-emerald-400' : 'text-rose-400';
+                return `<div class="${cls}">
+                    <span class="font-black text-sm mt-0.5 w-5 shrink-0 ${iconColor}">${icon}</span>
+                    <span class="text-sm ${isCorrect ? 'text-emerald-300 font-bold' : (wasSelected && !isCorrect ? 'text-rose-300' : 'text-slate-300')}">${opt.text}</span>
+                </div>`;
+            }).join('');
+
+            card.innerHTML = `
+                <div class="flex items-start gap-4 mb-6">
+                    <span class="shrink-0 w-8 h-8 rounded-xl glass border border-white/10 flex items-center justify-center text-xs font-black text-slate-400">${qNum}</span>
+                    <p class="text-white font-semibold text-lg leading-snug">${q.text.replace(/\n/g, '<br>')}</p>
+                </div>
+                ${q.image_path ? `<img src="${q.image_path}" alt="Imagen pregunta ${qNum}" class="mb-6 max-h-60 object-contain rounded-xl border border-white/10">` : ''}
+                <div class="space-y-2">${optionsHTML}</div>
+            `;
+            summaryContainer.appendChild(card);
+        });
+    };
+
+    // ── PDF Export ─────────────────────────────────────────────────────────────
+    document.getElementById('export-pdf-btn')?.addEventListener('click', async () => {
+        const btn = document.getElementById('export-pdf-btn');
+        if (btn) { btn.textContent = 'Generando...'; btn.disabled = true; }
+
+        try {
+            const { default: jsPDF } = await import('https://cdn.jsdelivr.net/npm/jspdf@2.5.2/dist/jspdf.umd.min.js');
+            const doc = new jsPDF.jsPDF({ unit: 'mm', format: 'a4' });
+            
+            const pageW = doc.internal.pageSize.getWidth();
+            const margin = 15;
+            const maxW = pageW - margin * 2;
+            let y = 20;
+
+            // Title
+            doc.setFontSize(18);
+            doc.setTextColor(30, 30, 60);
+            doc.setFont('helvetica', 'bold');
+            doc.text(`${meta.subjectName} — ${meta.moduleName}`, margin, y);
+            y += 8;
+            doc.setFontSize(10);
+            doc.setTextColor(100, 100, 120);
+            doc.setFont('helvetica', 'normal');
+            doc.text(`Resumen generado el ${new Date().toLocaleDateString('es-ES')} · TestUA`, margin, y);
+            y += 12;
+            doc.setDrawColor(220, 220, 240);
+            doc.line(margin, y, pageW - margin, y);
+            y += 10;
+
+            questions.forEach((q, idx) => {
+                if (y > 260) { doc.addPage(); y = 20; }
+
+                // Question number + text
+                doc.setFontSize(11);
+                doc.setFont('helvetica', 'bold');
+                doc.setTextColor(20, 20, 50);
+                const qLabel = `${idx + 1}.`;
+                const qLines = doc.splitTextToSize(`${qLabel} ${q.text}`, maxW);
+                doc.text(qLines, margin, y);
+                y += qLines.length * 6 + 4;
+
+                // Options
+                q.options.forEach(opt => {
+                    if (y > 265) { doc.addPage(); y = 20; }
+                    if (opt.is_correct) {
+                        doc.setFillColor(220, 252, 231);
+                        doc.setDrawColor(134, 239, 172);
+                        doc.setTextColor(22, 101, 52);
+                        doc.setFont('helvetica', 'bold');
+                    } else {
+                        doc.setFillColor(248, 248, 255);
+                        doc.setDrawColor(220, 220, 240);
+                        doc.setTextColor(80, 80, 100);
+                        doc.setFont('helvetica', 'normal');
+                    }
+                    const optLines = doc.splitTextToSize(`  ${opt.is_correct ? '✓' : '○'} ${opt.text}`, maxW - 4);
+                    const boxH = optLines.length * 5.5 + 4;
+                    doc.roundedRect(margin, y - 4, maxW, boxH, 2, 2, 'FD');
+                    doc.text(optLines, margin + 3, y);
+                    y += boxH + 2;
+                });
+
+                y += 6;
+            });
+
+            doc.save(`${meta.moduleName}.pdf`);
+        } catch(e) {
+            alert('No se pudo generar el PDF. Comprueba la conexión.');
+        } finally {
+            if (btn) { btn.innerHTML = '<span class="material-symbols-outlined text-xl">picture_as_pdf</span> Exportar PDF'; btn.disabled = false; }
+        }
+    });
+
+    // ── Next + keyboard ─────────────────────────────────────────────────────────
     nextBtn?.addEventListener('click', () => {
         currentIndex++;
         updateProgress();
         renderQuestion();
     });
 
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' && isAnswered) {
-            nextBtn?.click();
-        }
+    document.addEventListener('keydown', e => {
+        if (e.key === 'Enter' && isAnswered) nextBtn?.click();
     });
 
-    // Global bridge for the ReportModal
+    // ── Report modal bridge ─────────────────────────────────────────────────────
     window.reportCurrentQuestion = () => {
-        if(questions[currentIndex]) {
+        if (questions[currentIndex]) {
             const id = questions[currentIndex].id;
             const modal = document.querySelector('#report-modal');
             const input = document.querySelector('#report-q-id');
@@ -493,10 +532,10 @@ const sanitizedQuestions = (moduleQuestionsRaw || []).map((q: any) => ({
 
     document.querySelectorAll('.close-modal').forEach(btn => {
         btn.addEventListener('click', () => {
-             const modal = document.querySelector('#report-modal');
-             modal?.querySelector('.modal-content')?.classList.add('scale-95', 'opacity-0');
-             modal?.querySelector('.modal-content')?.classList.remove('scale-100', 'opacity-100');
-             setTimeout(() => modal?.classList.add('hidden'), 300);
+            const modal = document.querySelector('#report-modal');
+            modal?.querySelector('.modal-content')?.classList.add('scale-95', 'opacity-0');
+            modal?.querySelector('.modal-content')?.classList.remove('scale-100', 'opacity-100');
+            setTimeout(() => modal?.classList.add('hidden'), 300);
         });
     });
 
@@ -512,4 +551,3 @@ const sanitizedQuestions = (moduleQuestionsRaw || []).map((q: any) => ({
         to { opacity: 1; transform: translateY(0); }
     }
 </style>
-

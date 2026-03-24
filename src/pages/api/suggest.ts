@@ -1,16 +1,36 @@
 import type { APIRoute } from 'astro';
-import { submitQuestionSuggestion } from '../../lib/firebase/service';
+import { submitSuggestion } from '../../lib/supabase/service';
 
 export const POST: APIRoute = async ({ request }) => {
   try {
-    const data = await request.json();
-    await submitQuestionSuggestion(data);
-    return new Response(JSON.stringify({ success: true }), { status: 200 });
-  } catch (error) {
-    return new Response(JSON.stringify({ error: (error as Error).message }), { status: 500 });
-  }
-};
+    const body = await request.json();
+    const { subject_id, module_id, question_text, options, contributor_note } = body;
 
-export const GET: APIRoute = async () => {
-  return new Response(JSON.stringify({ error: 'Method Not Allowed' }), { status: 405 });
+    if (!subject_id || !question_text || !Array.isArray(options) || options.length < 2) {
+      return new Response(JSON.stringify({ error: 'Faltan campos obligatorios o hay menos de 2 opciones.' }), {
+        status: 400,
+        headers: { 'Content-Type': 'application/json' }
+      });
+    }
+
+    const hasCorrect = options.some((o: any) => o.is_correct === true);
+    if (!hasCorrect) {
+      return new Response(JSON.stringify({ error: 'Debes marcar al menos una respuesta correcta.' }), {
+        status: 400,
+        headers: { 'Content-Type': 'application/json' }
+      });
+    }
+
+    await submitSuggestion({ subject_id, module_id, question_text, options, contributor_note });
+
+    return new Response(JSON.stringify({ ok: true }), {
+      status: 200,
+      headers: { 'Content-Type': 'application/json' }
+    });
+  } catch (err: any) {
+    return new Response(JSON.stringify({ error: err.message ?? 'Error interno.' }), {
+      status: 500,
+      headers: { 'Content-Type': 'application/json' }
+    });
+  }
 };

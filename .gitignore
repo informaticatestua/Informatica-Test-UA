@@ -22,4 +22,7 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
-"data-migration/service-account.json" 
+
+# secrets and service accounts
+data-migration/service-account.json
+*.json.local

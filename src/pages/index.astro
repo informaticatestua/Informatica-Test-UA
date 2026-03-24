@@ -2,7 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Navbar from '../components/layout/Navbar.astro';
 import Footer from '../components/layout/Footer.astro';
-import { getSubjects, getModulesForSubject } from '../lib/firebase/service';
+import { getSubjects, getModulesForSubject } from '../lib/supabase/service';
 
 const sortedSubjects = await getSubjects();
 
@@ -141,24 +141,5 @@ uniqueCategories.forEach((c: any) => {
     <Footer />
 </BaseLayout>
 
-<script type="module">
-    import { logEvent } from '../lib/firebase/client';
 
-        const cards = document.querySelectorAll('.subject-card');
-
-        // Track page view
-        logEvent('page_view', { page_title: 'Home', page_location: window.location.href });
-
-        // Track subject card clicks
-        cards.forEach(card => {
-            card.addEventListener('click', () => {
-                const subjectName = card.getAttribute('title') || card.textContent?.trim();
-                logEvent('select_content', {
-                    content_type: 'subject',
-                    item_id: subjectName
-                });
-            });
-        });
-    });
-</script>
 

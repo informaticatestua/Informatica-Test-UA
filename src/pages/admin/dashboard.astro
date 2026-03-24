@@ -1,121 +1,336 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import Header from '../../components/layout/Header.astro';
-import { getGlobalStats } from '../../lib/firebase/service';
+import { getPendingReports, getPendingSuggestions, getGlobalStats } from '../../lib/supabase/service';
+import { createServerClient } from '../../lib/supabase/server';
 
-const stats = await getGlobalStats();
+const token = Astro.cookies.get('sb-access-token')?.value;
+if (!token) return Astro.redirect('/admin/login');
 
-const mockStats = {
-    totalQuestions: stats.totalQuestions,
-    totalReports: stats.totalReports,
-    newSubmissions: stats.newSubmissions,
-    activeSubjects: stats.totalSubjects
+const supabase = createServerClient(token);
+const { data: { user } } = await supabase.auth.getUser();
+
+if (!user) {
+  Astro.cookies.delete('sb-access-token', { path: '/' });
+  return Astro.redirect('/admin/login');
+}
+
+let reports: any[] = [];
+let suggestions: any[] = [];
+let stats = { totalQuestions: 0, totalModules: 0, pendingReports: 0, pendingSuggestions: 0 };
+let errorMsg = null;
+
+try {
+  reports = await getPendingReports();
+  suggestions = await getPendingSuggestions();
+  stats = await getGlobalStats();
+} catch (error) {
+  console.error(error);
+  errorMsg = (error as Error).message || 'Error cargando datos del dashboard';
+}
+
+// Helper to format date
+const formatDate = (dateString: string) => {
+  return new Date(dateString).toLocaleDateString('es-ES', { 
+    day: '2-digit', month: 'short', year: 'numeric',
+    hour: '2-digit', minute: '2-digit'
+  });
 };
 ---
 
-<BaseLayout title="Dashboard Admin">
-    <Header />
-    <div class="flex min-h-[calc(100vh-64px)]">
+<BaseLayout title="Panel de Administración | TestUA">
+    <div class="min-h-screen bg-slate-950 flex flex-col md:flex-row relative overflow-hidden">
+        
         <!-- Sidebar -->
-        <aside class="w-64 bg-white border-r border-gray-200 hidden md:block">
-            <nav class="mt-8 px-4 space-y-2">
-                <a href="#" class="flex items-center space-x-3 p-3 rounded-xl bg-primary bg-opacity-10 text-primary font-bold">
-                    <span class="material-icons-outlined">dashboard</span>
-                    <span>Resumen</span>
+        <aside class="w-full md:w-72 glass border-r border-white/5 flex flex-col z-20 sticky top-0 md:h-screen">
+            <div class="p-8 pb-4">
+                <a href="/" class="flex items-center gap-3 group mb-8">
+                    <div class="w-10 h-10 rounded-xl overflow-hidden shadow-lg group-hover:shadow-primary/30 transition-all bg-white/5 flex items-center justify-center border border-white/10 group-hover:border-primary/50">
+                        <img src="/logo.png" alt="Logo" class="w-full h-full object-contain p-1" />
+                    </div>
+                    <div>
+                        <h2 class="text-lg font-bold tracking-tight text-white mb-0.5" style="line-height: 1;">AdminPanel</h2>
+                        <span class="text-[9px] font-black uppercase tracking-widest text-primary drop-shadow-[0_0_10px_rgba(37,106,244,0.5)]">Test UA</span>
+                    </div>
                 </a>
-                <a href="#" class="flex items-center space-x-3 p-3 rounded-xl text-gray-600 hover:bg-gray-50 transition-all">
-                    <span class="material-icons-outlined">report</span>
-                    <span>Reportes</span>
-                    <span class="ml-auto bg-red-100 text-red-600 text-xs px-2 py-1 rounded-full">{mockStats.totalReports}</span>
+            </div>
+
+            <nav class="flex-1 px-4 space-y-2 overflow-y-auto hidden md:block">
+                <div class="px-4 py-2 mt-4 text-[10px] font-black uppercase tracking-widest text-slate-500">Moderación</div>
+                
+                <a href="#reports" class="flex items-center justify-between px-4 py-3 rounded-xl bg-white/5 border border-white/5 text-white hover:bg-white/10 transition-colors group">
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-rose-400 text-xl group-hover:scale-110 transition-transform">flag</span>
+                        <span class="font-medium text-sm">Reportes</span>
+                    </div>
+                    {stats.pendingReports > 0 && (
+                        <span class="bg-rose-500/20 text-rose-400 border border-rose-500/30 text-[10px] font-black px-2 py-0.5 rounded-md">{stats.pendingReports}</span>
+                    )}
                 </a>
-                <a href="#" class="flex items-center space-x-3 p-3 rounded-xl text-gray-600 hover:bg-gray-50 transition-all">
-                    <span class="material-icons-outlined">add_circle</span>
-                    <span>Nuevas Sugerencias</span>
-                    <span class="ml-auto bg-green-100 text-green-600 text-xs px-2 py-1 rounded-full">{mockStats.newSubmissions}</span>
+
+                <a href="#suggestions" class="flex items-center justify-between px-4 py-3 rounded-xl border border-transparent text-slate-400 hover:bg-white/5 hover:text-white transition-colors group">
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-emerald-400 text-xl group-hover:scale-110 transition-transform">lightbulb</span>
+                        <span class="font-medium text-sm">Sugerencias</span>
+                    </div>
+                    {stats.pendingSuggestions > 0 && (
+                        <span class="bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-[10px] font-black px-2 py-0.5 rounded-md">{stats.pendingSuggestions}</span>
+                    )}
                 </a>
-                <a href="#" class="flex items-center space-x-3 p-3 rounded-xl text-gray-600 hover:bg-gray-50 transition-all">
-                    <span class="material-icons-outlined">library_books</span>
-                    <span>Asignaturas</span>
-                </a>
-                <div class="pt-8 mt-8 border-t border-gray-100">
-                    <button id="logout-btn" class="flex items-center space-x-3 p-3 rounded-xl text-red-500 hover:bg-red-50 transition-all w-full text-left">
-                        <span class="material-icons-outlined">logout</span>
-                        <span>Cerrar Sesión</span>
-                    </button>
-                </div>
             </nav>
+
+            <div class="p-6 mt-auto border-t border-white/5">
+                <div class="flex items-center gap-4 mb-6 px-2">
+                    <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-primary to-blue-400 p-[2px]">
+                        <div class="w-full h-full bg-slate-900 rounded-full flex items-center justify-center text-sm font-black text-white">
+                            {user?.email?.charAt(0).toUpperCase() || 'A'}
+                        </div>
+                    </div>
+                    <div class="overflow-hidden">
+                        <p class="text-xs font-bold text-white truncate">{user?.email}</p>
+                        <p class="text-[10px] text-slate-500 uppercase tracking-widest">Administrador</p>
+                    </div>
+                </div>
+
+                <form method="POST" action="/api/auth/logout">
+                    <button type="submit" class="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl border border-white/10 text-slate-400 hover:text-rose-400 hover:border-rose-500/30 hover:bg-rose-500/10 transition-all text-sm font-bold">
+                        <span class="material-symbols-outlined text-[18px]">logout</span>
+                        Cerrar Sesión
+                    </button>
+                </form>
+            </div>
         </aside>
 
         <!-- Main Content -->
-        <main class="flex-1 bg-gray-50 p-8">
-            <div class="max-w-6xl mx-auto">
-                <h1 class="text-3xl font-bold text-gray-900 mb-8">Resumen General</h1>
+        <main class="flex-1 overflow-y-auto relative h-screen">
+            <!-- Background effects -->
+            <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 blur-[120px] rounded-full pointer-events-none -z-10 animate-pulse-slow"></div>
+            <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-emerald-500/5 blur-[120px] rounded-full pointer-events-none -z-10 animate-pulse-slow font-delay-2000"></div>
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-                    <div class="bg-white p-6 rounded-3xl shadow-sm border border-gray-100">
-                        <div class="text-blue-500 bg-blue-50 w-12 h-12 rounded-2xl flex items-center justify-center mb-4">
-                            <span class="material-icons-outlined">quiz</span>
+            <div class="p-6 md:p-12 lg:p-16 max-w-6xl mx-auto space-y-16">
+                <!-- Header & Stats -->
+                <div>
+                    <h1 class="text-3xl md:text-4xl font-black tracking-tight text-white mb-8">Resumen General</h1>
+                    
+                    {errorMsg && (
+                        <div class="bg-rose-500/10 border border-rose-500/30 rounded-2xl p-4 mb-8 text-rose-400 font-medium flex items-start gap-3">
+                            <span class="material-symbols-outlined">error</span>
+                            <p>{errorMsg}</p>
                         </div>
-                        <div class="text-3xl font-bold text-gray-900">{mockStats.totalQuestions}</div>
-                        <div class="text-gray-500 text-sm">Preguntas totales</div>
-                    </div>
-                    <div class="bg-white p-6 rounded-3xl shadow-sm border border-gray-100">
-                        <div class="text-red-500 bg-red-50 w-12 h-12 rounded-2xl flex items-center justify-center mb-4">
-                            <span class="material-icons-outlined">report</span>
+                    )}
+
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+                        <div class="glass p-6 rounded-[2rem] border border-white/5 relative overflow-hidden group">
+                            <div class="absolute top-0 right-0 p-4 opacity-20 group-hover:opacity-100 transition-opacity"><span class="material-symbols-outlined text-4xl text-primary font-light">quiz</span></div>
+                            <p class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500 mb-2">Preguntas Totales</p>
+                            <p class="text-4xl font-black text-white tracking-tighter">{stats.totalQuestions}</p>
                         </div>
-                        <div class="text-3xl font-bold text-gray-900">{mockStats.totalReports}</div>
-                        <div class="text-gray-500 text-sm">Reportes pendientes</div>
-                    </div>
-                    <div class="bg-white p-6 rounded-3xl shadow-sm border border-gray-100">
-                        <div class="text-green-500 bg-green-50 w-12 h-12 rounded-2xl flex items-center justify-center mb-4">
-                            <span class="material-icons-outlined">auto_awesome</span>
+                        <div class="glass p-6 rounded-[2rem] border border-white/5 relative overflow-hidden group">
+                            <div class="absolute top-0 right-0 p-4 opacity-20 group-hover:opacity-100 transition-opacity"><span class="material-symbols-outlined text-4xl text-blue-400 font-light">folder</span></div>
+                            <p class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500 mb-2">Módulos</p>
+                            <p class="text-4xl font-black text-white tracking-tighter">{stats.totalModules}</p>
                         </div>
-                        <div class="text-3xl font-bold text-gray-900">{mockStats.newSubmissions}</div>
-                        <div class="text-gray-500 text-sm">Sugerencias nuevas</div>
-                    </div>
-                    <div class="bg-white p-6 rounded-3xl shadow-sm border border-gray-100">
-                        <div class="text-purple-500 bg-purple-50 w-12 h-12 rounded-2xl flex items-center justify-center mb-4">
-                            <span class="material-icons-outlined">school</span>
+                        <div class="glass p-6 rounded-[2rem] border border-rose-500/20 bg-rose-500/5 relative overflow-hidden group">
+                            <div class="absolute top-0 right-0 p-4 opacity-20 group-hover:opacity-100 transition-opacity"><span class="material-symbols-outlined text-4xl text-rose-500 font-light">flag</span></div>
+                            <p class="text-[10px] font-black uppercase tracking-[0.2em] text-rose-400 mb-2">Reportes Pendientes</p>
+                            <p class="text-4xl font-black text-rose-500 tracking-tighter">{stats.pendingReports}</p>
                         </div>
-                        <div class="text-3xl font-bold text-gray-900">{mockStats.activeSubjects}</div>
-                        <div class="text-gray-500 text-sm">Asignaturas activas</div>
+                        <div class="glass p-6 rounded-[2rem] border border-emerald-500/20 bg-emerald-500/5 relative overflow-hidden group">
+                            <div class="absolute top-0 right-0 p-4 opacity-20 group-hover:opacity-100 transition-opacity"><span class="material-symbols-outlined text-4xl text-emerald-500 font-light">lightbulb</span></div>
+                            <p class="text-[10px] font-black uppercase tracking-[0.2em] text-emerald-400 mb-2">Sugerencias Pendientes</p>
+                            <p class="text-4xl font-black text-emerald-500 tracking-tighter">{stats.pendingSuggestions}</p>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Recent Activities / Lists -->
-                <div class="bg-white rounded-3xl shadow-sm border border-gray-100 p-8">
-                    <h2 class="text-xl font-bold text-gray-900 mb-6 flex items-center space-x-2">
-                        <span class="material-icons-outlined text-red-500">warning</span>
-                        <span>Últimos Reportes</span>
-                    </h2>
-                    <div class="space-y-4">
-                        <div class="flex items-center justify-between p-4 bg-gray-50 rounded-2xl border border-gray-100">
-                            <div>
-                                <div class="font-bold text-gray-800">Error en la respuesta correcta</div>
-                                <div class="text-xs text-gray-500">Pregunta q-ada-p1-12 • Hace 2 horas</div>
-                            </div>
-                            <button class="px-4 py-2 text-sm font-bold text-primary hover:bg-primary hover:bg-opacity-5 rounded-lg border border-primary transition-all">Ver detalle</button>
+                <!-- Reports Section -->
+                <section id="reports" class="scroll-mt-12">
+                    <div class="flex items-end justify-between mb-8">
+                        <div>
+                            <h2 class="text-2xl font-black text-white flex items-center gap-3">
+                                <span class="material-symbols-outlined text-rose-500">flag</span>
+                                Reportes de Usuarios
+                            </h2>
+                            <p class="text-slate-400 text-sm mt-1">Revisa y toma acción sobre los posibles errores en las preguntas.</p>
                         </div>
-                        <div class="flex items-center justify-between p-4 bg-gray-50 rounded-2xl border border-gray-100">
-                            <div>
-                                <div class="font-bold text-gray-800">Fórmula no se visualiza correctamente</div>
-                                <div class="text-xs text-gray-500">Pregunta q-ac-p2-45 • Hace 5 horas</div>
-                            </div>
-                            <button class="px-4 py-2 text-sm font-bold text-primary hover:bg-primary hover:bg-opacity-5 rounded-lg border border-primary transition-all">Ver detalle</button>
-                        </div>
+                        <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-bold text-slate-400">{reports.length} pendientes</span>
                     </div>
-                </div>
+
+                    {reports.length === 0 ? (
+                        <div class="glass rounded-[2rem] border border-white/5 p-12 text-center">
+                            <div class="w-16 h-16 rounded-full bg-emerald-500/10 text-emerald-500 flex items-center justify-center mx-auto mb-4 border border-emerald-500/20">
+                                <span class="material-symbols-outlined text-2xl">check_circle</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2">Todo en orden</h3>
+                            <p class="text-slate-400 text-sm">No hay reportes de errores pendientes de revisión.</p>
+                        </div>
+                    ) : (
+                        <div class="space-y-4">
+                            {reports.map((report) => (
+                                <div class="glass rounded-[2rem] border border-white/5 p-6 md:p-8 flex flex-col xl:flex-row gap-8 transition-all hover:bg-white/[0.02]" id={`report-${report.id}`}>
+                                    <div class="flex-1 space-y-4">
+                                        <div class="flex items-center gap-3">
+                                            <span class="px-3 py-1 rounded-full bg-rose-500/10 border border-rose-500/20 text-rose-400 text-[10px] font-black uppercase tracking-widest">
+                                                {report.reason.replace('_', ' ')}
+                                            </span>
+                                            <span class="text-xs text-slate-500 font-medium">{formatDate(report.created_at)}</span>
+                                        </div>
+                                        
+                                        <div>
+                                            <h4 class="text-xs font-black uppercase tracking-widest text-slate-500 mb-2">Pregunta Original</h4>
+                                            <div class="p-4 rounded-xl bg-black/20 border border-white/5 line-clamp-2 hover:line-clamp-none transition-all cursor-pointer">
+                                                <p class="text-sm text-slate-300 font-medium">{report.questions?.text || 'Pregunta eliminada'}</p>
+                                            </div>
+                                        </div>
+
+                                        {report.details && (
+                                            <div>
+                                                <h4 class="text-xs font-black uppercase tracking-widest text-slate-500 mb-2">Detalles del usuario</h4>
+                                                <p class="text-sm text-white bg-primary/10 border border-primary/20 p-4 rounded-xl italic">"{report.details}"</p>
+                                            </div>
+                                        )}
+                                    </div>
+                                    
+                                    <div class="xl:w-64 flex flex-row xl:flex-col gap-3 justify-end items-end shrink-0">
+                                        <button onclick={`handleAction('report', '${report.id}', 'accepted')`} class="flex-1 xl:w-full py-4 px-6 bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-500 border border-emerald-500/30 font-bold rounded-xl transition-all flex items-center justify-center gap-2 active:scale-95">
+                                            <span class="material-symbols-outlined text-lg">check</span>
+                                            <span>Aceptar</span>
+                                        </button>
+                                        <button onclick={`handleAction('report', '${report.id}', 'rejected')`} class="flex-1 xl:w-full py-4 px-6 bg-slate-800 hover:bg-slate-700 text-slate-300 border border-white/5 font-bold rounded-xl transition-all flex items-center justify-center gap-2 active:scale-95">
+                                            <span class="material-symbols-outlined text-lg">close</span>
+                                            <span>Rechazar</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    )}
+                </section>
+
+                <!-- Suggestions Section -->
+                <section id="suggestions" class="scroll-mt-12 pb-24">
+                    <div class="flex items-end justify-between mb-8">
+                        <div>
+                            <h2 class="text-2xl font-black text-white flex items-center gap-3">
+                                <span class="material-symbols-outlined text-emerald-500">lightbulb</span>
+                                Sugerencias de la Comunidad
+                            </h2>
+                            <p class="text-slate-400 text-sm mt-1">Revisa y aprueba nuevas preguntas aportadas por los usuarios.</p>
+                        </div>
+                        <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-bold text-slate-400">{suggestions.length} pendientes</span>
+                    </div>
+
+                    {suggestions.length === 0 ? (
+                        <div class="glass rounded-[2rem] border border-white/5 p-12 text-center">
+                            <div class="w-16 h-16 rounded-full bg-emerald-500/10 text-emerald-500 flex items-center justify-center mx-auto mb-4 border border-emerald-500/20">
+                                <span class="material-symbols-outlined text-2xl">check_circle</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2">Bandeja vacía</h3>
+                            <p class="text-slate-400 text-sm">No hay nuevas sugerencias pendientes de revisión.</p>
+                        </div>
+                    ) : (
+                        <div class="space-y-4">
+                            {suggestions.map((suggestion) => (
+                                <div class="glass rounded-[2rem] border border-white/5 p-6 md:p-8 flex flex-col xl:flex-row gap-8 transition-all hover:bg-white/[0.02]" id={`suggestion-${suggestion.id}`}>
+                                    <div class="flex-1 space-y-6">
+                                        <div class="flex items-center gap-3">
+                                            <span class="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[10px] font-black uppercase tracking-widest">
+                                                Nueva Pregunta
+                                            </span>
+                                            <span class="text-xs text-slate-500 font-medium">
+                                                Asignatura: <strong class="text-slate-300">{suggestion.subjects?.name || suggestion.subject_id}</strong>
+                                            </span>
+                                            <span class="text-xs text-slate-500 opacity-50">•</span>
+                                            <span class="text-xs text-slate-500 font-medium">{formatDate(suggestion.created_at)}</span>
+                                        </div>
+                                        
+                                        <div>
+                                            <p class="text-lg text-white font-semibold leading-relaxed mb-4">{suggestion.question_text}</p>
+                                            
+                                            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                                                {Array.isArray(suggestion.options) && suggestion.options.map((opt: any, idx: number) => (
+                                                    <div class={`p-3 rounded-xl border flex items-start gap-3 text-sm ${opt.is_correct ? 'border-emerald-500/40 bg-emerald-500/10 text-emerald-300 font-semibold' : 'border-white/5 bg-black/20 text-slate-400'}`}>
+                                                        <span class="mt-0.5 shrink-0 w-4 font-black">{opt.is_correct ? '✓' : '○'}</span>
+                                                        <span>{opt.text}</span>
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        </div>
+
+                                        {suggestion.contributor_note && (
+                                            <div>
+                                                <h4 class="text-xs font-black uppercase tracking-widest text-slate-500 mb-2">Nota del autor</h4>
+                                                <p class="text-sm text-slate-300 p-4 rounded-xl bg-white/5 border border-white/5 italic">"{suggestion.contributor_note}"</p>
+                                            </div>
+                                        )}
+                                    </div>
+                                    
+                                    <div class="xl:w-64 flex flex-row xl:flex-col gap-3 justify-end items-end shrink-0">
+                                        <button onclick={`handleAction('suggestion', '${suggestion.id}', 'accepted')`} class="flex-1 xl:w-full py-4 px-6 bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-500 border border-emerald-500/30 font-bold rounded-xl transition-all flex items-center justify-center gap-2 active:scale-95">
+                                            <span class="material-symbols-outlined text-lg">check_circle</span>
+                                            <span>Aceptar Subida</span>
+                                        </button>
+                                        <button onclick={`handleAction('suggestion', '${suggestion.id}', 'rejected')`} class="flex-1 xl:w-full py-4 px-6 bg-slate-800 hover:bg-slate-700 text-slate-300 border border-white/5 font-bold rounded-xl transition-all flex items-center justify-center gap-2 active:scale-95">
+                                            <span class="material-symbols-outlined text-lg">delete</span>
+                                            <span>Descartar</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    )}
+                </section>
             </div>
         </main>
     </div>
 </BaseLayout>
 
-<script>
-    import { auth } from '../../lib/firebase/client';
-    import { signOut } from 'firebase/auth';
+<script is:inline>
+    // Action handler injected to client
+    async function handleAction(type, id, status) {
+        let confirmed = true;
+        
+        if (status === 'rejected') {
+            confirmed = confirm(`¿Estás seguro de que quieres rechazar y archivar este ${type === 'report' ? 'reporte' : 'sugerencia'}?`);
+        } else if (type === 'suggestion' && status === 'accepted') {
+            confirmed = confirm('¿Aprobar esta pregunta? Se insertará en la base de datos oficial (módulo PENDIENTE).');
+        }
 
-    document.querySelector('#logout-btn')?.addEventListener('click', async () => {
-        await signOut(auth);
-        window.location.href = '/admin/login';
-    });
+        if (!confirmed) return;
+
+        const el = document.getElementById(`${type}-${id}`);
+        if (el) {
+            el.style.opacity = '0.5';
+            el.style.pointerEvents = 'none';
+        }
+
+        try {
+            const endpoint = `/api/admin/update-${type}`;
+            const response = await fetch(endpoint, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ 
+                    [type === 'report' ? 'reportId' : 'suggestionId']: id, 
+                    status 
+                })
+            });
+
+            if (response.ok) {
+                if (el) {
+                    el.style.transition = 'all 0.5s ease-out';
+                    el.style.transform = 'translateY(20px)';
+                    el.style.opacity = '0';
+                    setTimeout(() => el.remove(), 500);
+                }
+            } else {
+                const body = await response.json();
+                throw new Error(body.error || 'Server error');
+            }
+        } catch (error) {
+            alert(`Error: ${error.message}`);
+            if (el) {
+                el.style.opacity = '1';
+                el.style.pointerEvents = 'auto';
+            }
+        }
+    }
 </script>

@@ -40,7 +40,6 @@
 </div>
 
 <script type="module">
-    import { logEvent } from '../../lib/firebase/client';
 
     const modal = document.getElementById('report-modal');
     const content = modal?.querySelector('.modal-content');
@@ -64,11 +63,7 @@
             details: String(formData.get('description') ?? '')
         };
 
-        // Track report submission
-        logEvent('report_error', {
-            error_type: payload.reason,
-            question_id: payload.questionId
-        });
+
 
         try {
             const response = await fetch('/api/report', {

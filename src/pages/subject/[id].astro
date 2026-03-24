@@ -2,25 +2,20 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Navbar from '../../components/layout/Navbar.astro';
 import Footer from '../../components/layout/Footer.astro';
-import { getSubjects, getModulesForSubject, getQuestionsForModule } from '../../lib/firebase/service';
-
-export async function getStaticPaths() {
-  const subjects = await getSubjects();
-  return subjects.map(subject => ({
-    params: { id: (subject as any).id },
-    props: { subject }
-  }));
-}
+import { getSubject, getModulesForSubject, getQuestionsForModule } from '../../lib/supabase/service';
 
 const { id } = Astro.params;
-const { subject } = Astro.props as any;
+const subject = await getSubject(id as string);
+
+if (!subject) {
+  return Astro.redirect('/');
+}
 
 const subjectModules = await getModulesForSubject(id as string);
 
 const modulesWithCounts = await Promise.all(subjectModules.map(async m => {
-    // Pasar courseId y subjectId explícitamente para optimizar la consulta
-    const qCount = (await getQuestionsForModule((m as any).id, (m as any).courseId, id as string)).length;
-    return { ...m, questionCount: qCount };
+    const questions = await getQuestionsForModule((m as any).id);
+    return { ...m, questionCount: questions.length };
 }));
 
 const totalQuestions = modulesWithCounts.reduce((acc, curr) => acc + curr.questionCount, 0);
@@ -155,28 +150,4 @@ const iconMap: Record<string, string> = {
     <Footer />
 </BaseLayout>
 
-<script define:vars={{ subjectName: subject.name }}>
-    import { logEvent } from '../../lib/firebase/client';
 
-    document.addEventListener('DOMContentLoaded', () => {
-        // Track page view
-        logEvent('page_view', { 
-            page_title: `Asignatura: ${subjectName}`, 
-            page_location: window.location.href,
-            subject_name: subjectName
-        });
-
-        // Track module selection
-        const moduleCards = document.querySelectorAll('a[href^="/quiz/"]');
-        moduleCards.forEach(card => {
-            card.addEventListener('click', () => {
-                const moduleName = card.querySelector('h3')?.textContent;
-                logEvent('select_content', {
-                    content_type: 'module',
-                    item_id: moduleName,
-                    subject_name: subjectName
-                });
-            });
-        });
-    });
-</script>

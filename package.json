@@ -12,11 +12,13 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/node": "^10.0.3",
     "@fontsource/inter": "^5.2.8",
+    "@supabase/supabase-js": "^2.100.0",
     "@tailwindcss/vite": "^4.2.1",
     "astro": "^6.0.4",
-    "firebase": "^12.10.0",
-    "firebase-admin": "^13.7.0",
+    "html2canvas": "^1.4.1",
+    "jspdf": "^4.2.1",
     "katex": "^0.16.38",
     "lucide-astro": "^0.556.0",
     "tailwindcss": "^4.2.1"
