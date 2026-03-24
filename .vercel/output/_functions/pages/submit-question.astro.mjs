@@ -1,8 +1,8 @@
 import { e as createComponent, k as renderComponent, m as maybeRenderHead, n as renderSlot, r as renderTemplate, l as renderScript, g as addAttribute } from '../chunks/astro/server_3QkxrEKH.mjs';
 import 'piccolore';
-import { $ as $$BaseLayout } from '../chunks/BaseLayout_DXpAHIBk.mjs';
+import { $ as $$BaseLayout } from '../chunks/BaseLayout_D1PuRcm2.mjs';
 import { $ as $$Header } from '../chunks/Header_Do1pdDvG.mjs';
-import { j as getSubjects } from '../chunks/service_DAF_8fqT.mjs';
+import { j as getSubjects } from '../chunks/service_BrFuEpE7.mjs';
 export { renderers } from '../renderers.mjs';
 
 const $$InternalPageLayout = createComponent(($$result, $$props, $$slots) => {

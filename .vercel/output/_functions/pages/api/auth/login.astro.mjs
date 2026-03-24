@@ -1,4 +1,4 @@
-import { g as getServerClient } from '../../../chunks/server_ghbxFmdQ.mjs';
+import { g as getServerClient } from '../../../chunks/server_CZpMGDek.mjs';
 export { renderers } from '../../../renderers.mjs';
 
 const POST = async ({ request, cookies, redirect }) => {

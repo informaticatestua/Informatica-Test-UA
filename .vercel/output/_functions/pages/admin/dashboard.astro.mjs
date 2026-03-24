@@ -1,8 +1,8 @@
 import { e as createComponent, r as renderTemplate, k as renderComponent, h as createAstro, m as maybeRenderHead, g as addAttribute } from '../../chunks/astro/server_3QkxrEKH.mjs';
 import 'piccolore';
-import { $ as $$BaseLayout } from '../../chunks/BaseLayout_DXpAHIBk.mjs';
-import { g as getPendingReports, a as getPendingSuggestions, b as getGlobalStats } from '../../chunks/service_DAF_8fqT.mjs';
-import { c as createServerClient } from '../../chunks/server_ghbxFmdQ.mjs';
+import { $ as $$BaseLayout } from '../../chunks/BaseLayout_D1PuRcm2.mjs';
+import { g as getPendingReports, a as getPendingSuggestions, b as getGlobalStats } from '../../chunks/service_BrFuEpE7.mjs';
+import { c as createServerClient } from '../../chunks/server_CZpMGDek.mjs';
 export { renderers } from '../../renderers.mjs';
 
 var __freeze = Object.freeze;

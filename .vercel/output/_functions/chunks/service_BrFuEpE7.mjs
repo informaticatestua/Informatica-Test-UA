@@ -1,4 +1,4 @@
-import { g as getServerClient } from './server_ghbxFmdQ.mjs';
+import { g as getServerClient } from './server_CZpMGDek.mjs';
 
 async function getSubjects() {
   const db = getServerClient();

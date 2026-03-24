@@ -1,5 +1,5 @@
 import { d as defineMiddleware, s as sequence } from './chunks/index_BaYamgcS.mjs';
-import { g as getServerClient } from './chunks/server_ghbxFmdQ.mjs';
+import { g as getServerClient } from './chunks/server_CZpMGDek.mjs';
 import 'es-module-lexer';
 import './chunks/astro-designed-error-pages_BeVD66ve.mjs';
 import 'piccolore';
