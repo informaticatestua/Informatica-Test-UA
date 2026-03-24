@@ -35,28 +35,45 @@ import Header from '../../components/layout/Header.astro';
 </BaseLayout>
 
 <script>
-    import { auth } from '../../lib/firebase/client';
-    import { signInWithEmailAndPassword } from 'firebase/auth';
-
-    const form = document.querySelector('#login-form');
+    const form = document.querySelector('#login-form') as HTMLFormElement;
     const errorMsg = document.querySelector('#error-message');
+    const submitBtn = form?.querySelector('button[type="submit"]');
 
     form?.addEventListener('submit', async (e) => {
         e.preventDefault();
-        const emailEl = document.querySelector('#email');
-        const passwordEl = document.querySelector('#password');
-        const email = emailEl instanceof HTMLInputElement ? emailEl.value : '';
-        const password = passwordEl instanceof HTMLInputElement ? passwordEl.value : '';
+        const emailEl = document.querySelector('#email') as HTMLInputElement;
+        const passwordEl = document.querySelector('#password') as HTMLInputElement;
+        const email = emailEl?.value;
+        const password = passwordEl?.value;
+
+        if (errorMsg) errorMsg.classList.add('hidden');
+        if (submitBtn) {
+            (submitBtn as HTMLButtonElement).disabled = true;
+            submitBtn.classList.add('opacity-50', 'cursor-not-allowed');
+        }
 
         try {
-            await signInWithEmailAndPassword(auth, email, password);
-            window.location.href = '/admin/dashboard';
-        } catch (error) {
+            const res = await fetch('/api/auth/login', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email, password })
+            });
+
+            const data = await res.json();
+            if (res.ok) {
+                window.location.href = '/admin/dashboard';
+            } else {
+                throw new Error(data.error || 'Credenciales incorrectas.');
+            }
+        } catch (error: any) {
             if (errorMsg) {
-                errorMsg.textContent = 'Credenciales incorrectas o error de conexión.';
+                errorMsg.textContent = error.message || 'Error de conexión.';
                 errorMsg.classList.remove('hidden');
+            }
+            if (submitBtn) {
+                (submitBtn as HTMLButtonElement).disabled = false;
+                submitBtn.classList.remove('opacity-50', 'cursor-not-allowed');
             }
         }
     });
-
 </script>

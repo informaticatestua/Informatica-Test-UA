@@ -21,7 +21,7 @@ export function getServerClient() {
  * Creates a Supabase client scoped to a user session (for admin pages).
  * Pass the access_token from the session cookie.
  */
-export function getSessionClient(accessToken: string) {
+export function createServerClient(accessToken: string) {
   const client = createClient(
     import.meta.env.PUBLIC_SUPABASE_URL,
     import.meta.env.PUBLIC_SUPABASE_ANON_KEY,

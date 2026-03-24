@@ -187,3 +187,23 @@ export async function getGlobalStats() {
     newSubmissions: suggestions.count ?? 0,
   };
 }
+
+// ── Mutations ─────────────────────────────────────────────────────────────────
+
+export async function updateReportStatus(id: string, status: 'accepted' | 'rejected') {
+  const db = getServerClient();
+  const { error } = await db
+    .from('reports')
+    .update({ status })
+    .eq('id', id);
+  if (error) throw new Error(`updateReportStatus: ${error.message}`);
+}
+
+export async function updateSuggestionStatus(id: string, status: 'accepted' | 'rejected') {
+  const db = getServerClient();
+  const { error } = await db
+    .from('suggestions')
+    .update({ status })
+    .eq('id', id);
+  if (error) throw new Error(`updateSuggestionStatus: ${error.message}`);
+}
