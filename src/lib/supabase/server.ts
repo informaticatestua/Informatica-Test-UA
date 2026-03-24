@@ -5,10 +5,14 @@ import { createClient } from '@supabase/supabase-js';
  * NEVER import this on the client side.
  */
 export function getServerClient() {
-  return createClient(
-    import.meta.env.PUBLIC_SUPABASE_URL,
-    import.meta.env.SUPABASE_SERVICE_ROLE_KEY,
-    {
+  const url = import.meta.env.PUBLIC_SUPABASE_URL;
+  const key = import.meta.env.SUPABASE_SERVICE_ROLE_KEY;
+
+  if (!url || !key) {
+    throw new Error("Missing Supabase environment variables. Ensure PUBLIC_SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY are set.");
+  }
+
+  return createClient(url, key, {
       auth: {
         autoRefreshToken: false,
         persistSession: false
