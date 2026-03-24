@@ -1,0 +1,145 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/layout/Navbar.astro';
+import Footer from '../components/layout/Footer.astro';
+import { getSubjects, getModulesForSubject } from '../lib/supabase/service';
+
+const sortedSubjects = await getSubjects();
+
+// Fetch modules to conditionally generate links
+const subjectsWithLinks = (await Promise.all(sortedSubjects.map(async (subject: any) => {
+    const modules = await getModulesForSubject(subject.id);
+    return {
+        ...subject,
+        modulesCount: modules.length,
+        href: modules.length === 1 ? `/quiz/${(modules[0] as any).id}` : `/subject/${subject.id}`
+    };
+}))).filter(s => s.id !== 'ic' && s.id !== 'si').map(s => {
+    if (s.id === 'mads' || s.id.includes('mads')) {
+        s.category = 'Rama Software';
+    }
+    return s;
+});
+
+// Icon mapping from emoji to Material Symbols
+const iconMap: Record<string, string> = {
+  '💻': 'terminal',
+  '📚': 'library_books',
+  '🗄️': 'database',
+  '⚙️': 'settings',
+  '📊': 'bar_chart',
+  '🛠️': 'build',
+  '🔌': 'power',
+  '🔧': 'build',
+  '📝': 'description',
+  '🧪': 'home_health',
+  '🌐': 'language',
+  '🛡️': 'shield',
+  '📁': 'folder',
+  '📡': 'settings_input_antenna',
+  '🚀': 'rocket'
+};
+
+const uniqueCategories = [...new Set(subjectsWithLinks.map(s => s.category).filter(Boolean))];
+const order = ['Cuarto Curso (Rama Software)', 'Rama Software', 'Cuarto Curso', 'Tercer Curso', 'Segundo Curso', 'Primer Curso'];
+
+uniqueCategories.sort((a, b) => {
+    const iA = order.indexOf(a as string);
+    const iB = order.indexOf(b as string);
+    if (iA === -1 && iB === -1) return (a as string).localeCompare(b as string);
+    if (iA === -1) return 1;
+    if (iB === -1) return -1;
+    return iA - iB;
+});
+
+const groupedSubjects: Record<string, any[]> = {};
+uniqueCategories.forEach((c: any) => {
+    groupedSubjects[c] = subjectsWithLinks.filter(s => s.category === c);
+});
+---
+
+<BaseLayout title="Inicio">
+    <Navbar />
+    
+    <main class="flex-1 flex justify-center py-12 px-4 relative min-h-[90vh]">
+        <!-- Background Ambient -->
+        <div class="fixed top-[-10%] justify-center w-full flex pointer-events-none -z-10">
+            <div class="w-[600px] h-[600px] bg-primary/10 blur-[120px] rounded-full"></div>
+            <div class="w-[400px] h-[400px] bg-blue-500/10 blur-[100px] rounded-full absolute mix-blend-screen"></div>
+        </div>
+
+        <!-- Main App Container mimicking #app with glassmorphism -->
+        <div class="w-full max-w-4xl bg-[#151a24]/90 backdrop-blur-2xl border border-[#2a303c] rounded-[2rem] shadow-2xl p-8 md:p-12 relative" id="app">
+            
+            <h1 class="text-3xl md:text-5xl font-black text-center text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-400 tracking-tight mb-12">
+                Seleccione una asignatura
+            </h1>
+
+            <!-- Subjects Container with exact structure -->
+            <div id="subjects-container">
+                {uniqueCategories.map((category: any) => {
+                    const subjects = groupedSubjects[category];
+                    if (subjects.length === 0) return null;
+
+                    const isCentered = category === 'Primer Curso' || subjects.length === 1;
+                    let leftGroup, rightGroup;
+                    if (category === 'Segundo Curso') {
+                        leftGroup = subjects.filter((s: any) => s.id === 'redes');
+                        rightGroup = subjects.filter((s: any) => s.id !== 'redes');
+                    } else {
+                        const half = Math.ceil(subjects.length / 2);
+                        leftGroup = subjects.slice(0, half);
+                        rightGroup = subjects.slice(half);
+                    }
+
+                    // Limpiamos el nombre de la categoría para ser idéntico
+                    const displayCategory = category === 'Cuarto Curso (Rama Software)' ? 'Rama Software' : category;
+
+                    return (
+                        <div class="category-section w-full mb-8">
+                            <h3 class="text-lg font-black text-slate-300 mb-6 text-center uppercase tracking-widest">{displayCategory}</h3>
+                            
+                            {isCentered ? (
+                                <div class="flex flex-wrap justify-center gap-4 w-full mb-6">
+                                    {subjects.map((subject: any) => (
+                                        <a href={subject.href} title={subject.name} aria-label={`Ir a la asignatura ${subject.name}`} class="subject-card flex items-center px-5 py-2.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 text-white font-bold transition-all shadow-lg hover:-translate-y-0.5 hover:shadow-primary/20 text-sm whitespace-nowrap" data-name={subject.name.toLowerCase()}>
+                                            <span class="mr-2 text-base leading-none">{subject.icon}</span> {(subject.id as string).toUpperCase()}
+                                        </a>
+                                    ))}
+                                </div>
+                            ) : (
+                                <div class="grid grid-cols-1 md:grid-cols-[1fr_2px_1fr] gap-5 items-center mb-6">
+                                    <!-- Columna Izquierda (group-left) -->
+                                    <div class="flex flex-wrap justify-center md:justify-end gap-4">
+                                        {leftGroup.map((subject: any) => (
+                                            <a href={subject.href} title={subject.name} aria-label={`Ir a la asignatura ${subject.name}`} class="subject-card flex items-center px-5 py-2.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 text-white font-bold transition-all shadow-lg hover:-translate-y-0.5 hover:shadow-primary/20 text-sm whitespace-nowrap" data-name={subject.name.toLowerCase()}>
+                                                <span class="mr-2 text-base leading-none">{subject.icon}</span> {(subject.id as string).toUpperCase()}
+                                            </a>
+                                        ))}
+                                    </div>
+                                    
+                                    <!-- Separador vertical (separator) -->
+                                    <div class="hidden md:block w-[2px] h-[40px] bg-gradient-to-b from-transparent via-slate-600 to-transparent mx-auto"></div>
+                                    
+                                    <!-- Columna Derecha (group-right) -->
+                                    <div class="flex flex-wrap justify-center md:justify-start gap-4">
+                                        {rightGroup.map((subject: any) => (
+                                            <a href={subject.href} title={subject.name} aria-label={`Ir a la asignatura ${subject.name}`} class="subject-card flex items-center px-5 py-2.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 text-white font-bold transition-all shadow-lg hover:-translate-y-0.5 hover:shadow-primary/20 text-sm whitespace-nowrap" data-name={subject.name.toLowerCase()}>
+                                                <span class="mr-2 text-base leading-none">{subject.icon}</span> {(subject.id as string).toUpperCase()}
+                                            </a>
+                                        ))}
+                                    </div>
+                                </div>
+                            )}
+                        </div>
+                    );
+                })}
+            </div>
+        </div>
+    </main>
+
+    <Footer />
+</BaseLayout>
+
+
+
