@@ -109,6 +109,20 @@ export async function getQuestionsForModule(moduleId: string): Promise<Question[
   }));
 }
 
+export async function getQuestionCountForModule(moduleId: string): Promise<number> {
+  const db = getServerClient();
+  const { count, error } = await db
+    .from('questions')
+    .select('*', { count: 'exact', head: true })
+    .eq('module_id', moduleId);
+
+  if (error) {
+    console.error(`getQuestionCountForModule: ${error.message}`);
+    return 0;
+  }
+  return count ?? 0;
+}
+
 // ─── Reports ──────────────────────────────────────────────────────────────────
 
 export async function submitReport(data: {

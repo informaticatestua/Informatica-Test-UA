@@ -2,7 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Navbar from '../../components/layout/Navbar.astro';
 import Footer from '../../components/layout/Footer.astro';
-import { getSubject, getModulesForSubject, getQuestionsForModule } from '../../lib/supabase/service';
+import { getSubject, getModulesForSubject, getQuestionCountForModule } from '../../lib/supabase/service';
 
 const { id } = Astro.params;
 const subject = await getSubject(id as string);
@@ -14,8 +14,8 @@ if (!subject) {
 const subjectModules = await getModulesForSubject(id as string);
 
 const modulesWithCounts = await Promise.all(subjectModules.map(async m => {
-    const questions = await getQuestionsForModule((m as any).id);
-    return { ...m, questionCount: questions.length };
+    const questionCount = await getQuestionCountForModule((m as any).id);
+    return { ...m, questionCount };
 }));
 
 const totalQuestions = modulesWithCounts.reduce((acc, curr) => acc + curr.questionCount, 0);
