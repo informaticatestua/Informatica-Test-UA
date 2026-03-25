@@ -17,10 +17,14 @@
     "@supabase/supabase-js": "^2.100.0",
     "@tailwindcss/vite": "^4.2.1",
     "astro": "^5.0.0",
+    "highlight.js": "^11.11.1",
     "html2canvas": "^1.4.1",
     "jspdf": "^4.2.1",
     "katex": "^0.16.38",
     "lucide-astro": "^0.556.0",
+    "marked": "^17.0.5",
+    "marked-highlight": "^2.2.3",
+    "marked-katex-extension": "^5.1.7",
     "tailwindcss": "^4.2.1"
   },
   "devDependencies": {

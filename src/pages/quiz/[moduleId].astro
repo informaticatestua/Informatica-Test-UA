@@ -4,6 +4,41 @@ import Navbar from '../../components/layout/Navbar.astro';
 import Footer from '../../components/layout/Footer.astro';
 import ReportModal from '../../components/forms/ReportModal.astro';
 import { getModule, getSubject, getQuestionsForModule } from '../../lib/supabase/service';
+import { marked } from 'marked';
+import markedKatex from 'marked-katex-extension';
+import { markedHighlight } from 'marked-highlight';
+import hljs from 'highlight.js';
+
+marked.use(
+  markedHighlight({
+    langPrefix: 'hljs language-',
+    highlight(code, lang) {
+      const language = hljs.getLanguage(lang) ? lang : 'plaintext';
+      return hljs.highlight(code, { language }).value;
+    }
+  })
+);
+
+marked.use(markedKatex({
+  throwOnError: false,
+  displayMode: false
+}));
+
+function parseQuestionText(raw: string | undefined | null) {
+  if (!raw) return '';
+  return (marked.parse(raw) as string).trim();
+}
+
+function parseOptionText(raw: string | undefined | null) {
+  if (!raw) return '';
+  let parsed = (marked.parse(raw) as string).trim();
+  if (parsed.startsWith('<p>') && parsed.endsWith('</p>')) {
+    if (parsed.indexOf('<p>', 3) === -1) {
+      return parsed.slice(3, -4);
+    }
+  }
+  return parsed;
+}
 
 const { moduleId } = Astro.params;
 
@@ -23,10 +58,10 @@ try {
 
 const sanitizedQuestions = moduleQuestionsRaw.map((q: any) => ({
   id: q?.id,
-  text: q?.text,
+  text: parseQuestionText(q?.text),
   options: (Array.isArray(q?.options) ? q.options : []).map((o: any) => ({
     id: o?.id,
-    text: o?.text,
+    text: parseOptionText(o?.text),
     is_correct: o?.is_correct
   })),
   image_path: q?.image_path || null
@@ -281,7 +316,7 @@ const sanitizedQuestions = moduleQuestionsRaw.map((q: any) => ({
         nextBtnContainer.classList.add('hidden');
 
         setTimeout(() => {
-            qText.innerHTML = q.text.replace(/\n/g, '<br>');
+            qText.innerHTML = q.text;
             qBadge.textContent = `Pregunta ${currentIndex + 1} de ${questions.length}`;
 
             if (q.image_path) {
@@ -301,7 +336,7 @@ const sanitizedQuestions = moduleQuestionsRaw.map((q: any) => ({
                 const letter = String.fromCharCode(65 + idx);
                 btn.innerHTML = `
                     <span class="w-12 h-12 rounded-2xl glass border-white/10 group-hover:border-primary/40 group-hover:bg-primary/20 flex-shrink-0 flex items-center justify-center text-sm font-black text-slate-500 group-hover:text-primary transition-all letter-indicator">${letter}</span>
-                    <span class="text-white text-xl leading-relaxed font-semibold flex-grow transition-colors">${opt.text}</span>
+                    <div class="text-white text-xl leading-relaxed font-semibold flex-grow transition-colors quiz-content">${opt.text}</div>
                     <span class="material-symbols-outlined hidden status-icon correct-icon text-emerald-500 text-4xl" style="font-variation-settings: 'FILL' 1">check_circle</span>
                     <span class="material-symbols-outlined hidden status-icon incorrect-icon text-rose-500 text-4xl" style="font-variation-settings: 'FILL' 1">cancel</span>
                 `;
@@ -420,7 +455,7 @@ const sanitizedQuestions = moduleQuestionsRaw.map((q: any) => ({
             card.innerHTML = `
                 <div class="flex items-start gap-4 mb-6">
                     <span class="shrink-0 w-8 h-8 rounded-xl glass border border-white/10 flex items-center justify-center text-xs font-black text-slate-400">${qNum}</span>
-                    <p class="text-white font-semibold text-lg leading-snug">${q.text.replace(/\n/g, '<br>')}</p>
+                    <div class="text-white font-semibold text-lg leading-snug quiz-content w-full overflow-hidden">${q.text}</div>
                 </div>
                 ${q.image_path ? `<img src="${q.image_path}" alt="Imagen pregunta ${qNum}" class="mb-6 max-h-60 object-contain rounded-xl border border-white/10">` : ''}
                 <div class="space-y-2">${optionsHTML}</div>
@@ -543,6 +578,35 @@ const sanitizedQuestions = moduleQuestionsRaw.map((q: any) => ({
 </script>
 
 <style>
+    .quiz-content p {
+        margin-bottom: 1rem;
+    }
+    .quiz-content p:last-child {
+        margin-bottom: 0;
+    }
+    .quiz-content pre {
+        background: rgba(0,0,0,0.3);
+        padding: 1rem;
+        border-radius: 1rem;
+        overflow-x: auto;
+        margin: 1.25rem 0;
+        font-size: 0.85em;
+        border: 1px solid rgba(255,255,255,0.05);
+    }
+    .quiz-content code {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+        background: rgba(0,0,0,0.2);
+        padding: 0.2em 0.4em;
+        border-radius: 0.25em;
+    }
+    .quiz-content pre code {
+        background: transparent;
+        padding: 0;
+    }
+    .quiz-content img {
+        max-width: 100%;
+        border-radius: 0.75rem;
+    }
     .animate-fade-in-up {
         animation: fadeInUp 0.8s cubic-bezier(0.23, 1, 0.32, 1) forwards;
     }

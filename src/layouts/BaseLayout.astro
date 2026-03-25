@@ -25,22 +25,12 @@ const { title, description = "Plataforma de preguntas de test para estudiantes d
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" />
 		
-		<!-- KaTeX Auto-render -->
-		<script is:inline src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+		<!-- KaTeX CSS -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
+		<!-- Highlight.js CSS (Atom One Dark theme) -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css">
 	</head>
 	<body>
 		<slot />
-		
-		<script is:inline>
-			document.addEventListener('DOMContentLoaded', function() {
-				renderMathInElement(document.body, {
-					delimiters: [
-						{left: '$$', right: '$$', display: true},
-						{left: '$', right: '$', display: false}
-					],
-					throwOnError : false
-				});
-			});
-		</script>
 	</body>
 </html>
