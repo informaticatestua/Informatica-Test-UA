@@ -6,10 +6,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 	<div id="main-container" class="layout-container animate-fade-in">
 		<div id="app" class="flex flex-col gap-12">
 			<header class="text-center md:text-left">
-				<h1 id="app-title" class="font-heading text-4xl md:text-5xl font-bold tracking-tight text-textMain mb-4">
+				<h1 id="app-title" class="font-heading text-4xl md:text-5xl font-bold tracking-tight text-text-main mb-4">
 					Seleccione una asignatura
 				</h1>
-				<p class="text-textMuted text-lg md:text-xl max-w-2xl text-balance">
+				<p class="text-text-muted text-lg md:text-xl max-w-2xl text-balance">
 					Explora los distintos exámenes y test clasificados por curso y rama para poner a prueba tus conocimientos.
 				</p>
 			</header>
@@ -25,8 +25,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 							<button id="mads" class="ui-button">MADS NO OFICIAL</button>
 						</div>
 						
-						<div class="separator hidden md:block w-px self-stretch bg-borderSubtle"></div>
-						<div class="separator block md:hidden w-full h-px bg-borderSubtle my-2"></div>
+						<div class="separator hidden md:block w-px self-stretch bg-border-subtle"></div>
+						<div class="separator block md:hidden w-full h-px bg-border-subtle my-2"></div>
 						
 						<div class="group-right flex flex-col gap-3">
 							<button id="gcs" class="ui-button">GCS</button>
@@ -35,24 +35,24 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 					</div>
 
 					<!-- Sublistas Rama Software -->
-					<div id="mads-sublist" class="hidden mt-6 bg-surface p-5 sm:p-6 rounded-2xl border border-borderSubtle shadow-subtle animate-fade-in-up">
-						<h4 class="text-xs font-bold text-textMuted mb-4 uppercase tracking-wider">Exámenes MADS</h4>
+					<div id="mads-sublist" class="hidden mt-6 bg-surface p-5 sm:p-6 rounded-2xl border border-border-subtle shadow-subtle animate-fade-in-up">
+						<h4 class="text-xs font-bold text-text-muted mb-4 uppercase tracking-wider">Exámenes MADS</h4>
 						<div class="asignaturas listaoculta grid grid-cols-1 sm:grid-cols-2 gap-3">
 							<button id="MADS-NO-OFICIAL-P1" class="ui-button-primary">MADS NO OFICIAL P1</button>
 							<button id="MADS-NO-OFICIAL-P2" class="ui-button-primary">MADS NO OFICIAL P2</button>
 						</div>
 					</div>
 
-					<div id="dca-sublist" class="hidden mt-6 bg-surface p-5 sm:p-6 rounded-2xl border border-borderSubtle shadow-subtle animate-fade-in-up">
-						<h4 class="text-xs font-bold text-textMuted mb-4 uppercase tracking-wider">Exámenes DCA</h4>
+					<div id="dca-sublist" class="hidden mt-6 bg-surface p-5 sm:p-6 rounded-2xl border border-border-subtle shadow-subtle animate-fade-in-up">
+						<h4 class="text-xs font-bold text-text-muted mb-4 uppercase tracking-wider">Exámenes DCA</h4>
 						<div class="asignaturas listaoculta grid grid-cols-1 sm:grid-cols-2 gap-3">
 							<button id="dca-oficial" class="ui-button-primary">DCA OFICIAL</button>
 							<button id="dca-NO-OFICIAL" class="ui-button-primary">DCA NO OFICIAL</button>
 						</div>
 					</div>
 
-					<div id="gcs-sublist" class="hidden mt-6 bg-surface p-5 sm:p-6 rounded-2xl border border-borderSubtle shadow-subtle animate-fade-in-up">
-						<h4 class="text-xs font-bold text-textMuted mb-4 uppercase tracking-wider">Exámenes GCS</h4>
+					<div id="gcs-sublist" class="hidden mt-6 bg-surface p-5 sm:p-6 rounded-2xl border border-border-subtle shadow-subtle animate-fade-in-up">
+						<h4 class="text-xs font-bold text-text-muted mb-4 uppercase tracking-wider">Exámenes GCS</h4>
 						<div class="asignaturas listaoculta grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
 							<button id="gcsp1nooficial" class="ui-button-primary">GCS P1 NO OFICIAL 2025</button>
 							<button id="gcsp1old" class="ui-button-primary">GCS P1 old 2024</button>
@@ -60,8 +60,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 						</div>
 					</div>
 
-					<div id="sds-sublist" class="hidden mt-6 bg-surface p-5 sm:p-6 rounded-2xl border border-borderSubtle shadow-subtle animate-fade-in-up">
-						<h4 class="text-xs font-bold text-textMuted mb-4 uppercase tracking-wider">Exámenes SDS</h4>
+					<div id="sds-sublist" class="hidden mt-6 bg-surface p-5 sm:p-6 rounded-2xl border border-border-subtle shadow-subtle animate-fade-in-up">
+						<h4 class="text-xs font-bold text-text-muted mb-4 uppercase tracking-wider">Exámenes SDS</h4>
 						<div class="asignaturas listaoculta grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
 							<button id="sdsfull" class="ui-button-primary">SDS FULL</button>
 							<button id="sds01-presentacion" class="ui-button-primary">sds01 presentacion</button>
@@ -94,8 +94,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 							<button id="ic-p1" class="ui-button">IC P1</button>
 						</div>
 						
-						<div class="separator hidden md:block w-px self-stretch bg-borderSubtle"></div>
-						<div class="separator block md:hidden w-full h-px bg-borderSubtle my-2"></div>
+						<div class="separator hidden md:block w-px self-stretch bg-border-subtle"></div>
+						<div class="separator block md:hidden w-full h-px bg-border-subtle my-2"></div>
 						
 						<div class="group-right flex flex-col gap-3">
 							<button id="taes-definitivo" class="ui-button">TAES DEFINITIVO OLD</button>
@@ -103,8 +103,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 						</div>
 					</div>
 
-					<div id="ppss-sublist" class="hidden mt-6 bg-surface p-5 sm:p-6 rounded-2xl border border-borderSubtle shadow-subtle animate-fade-in-up">
-						<h4 class="text-xs font-bold text-textMuted mb-4 uppercase tracking-wider">Exámenes PPSS</h4>
+					<div id="ppss-sublist" class="hidden mt-6 bg-surface p-5 sm:p-6 rounded-2xl border border-border-subtle shadow-subtle animate-fade-in-up">
+						<h4 class="text-xs font-bold text-text-muted mb-4 uppercase tracking-wider">Exámenes PPSS</h4>
 						<div class="asignaturas listaoculta grid grid-cols-1 sm:grid-cols-2 gap-3">
 							<button id="ppss-p1" class="ui-button-primary">PPSS P1</button>
 							<button id="ppss-p2" class="ui-button-primary">PPSS P2</button>
@@ -122,8 +122,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 							<button id="redes" class="ui-button">REDES</button>
 						</div>
 						
-						<div class="separator hidden md:block w-px self-stretch bg-borderSubtle"></div>
-						<div class="separator block md:hidden w-full h-px bg-borderSubtle my-2"></div>
+						<div class="separator hidden md:block w-px self-stretch bg-border-subtle"></div>
+						<div class="separator block md:hidden w-full h-px bg-border-subtle my-2"></div>
 						
 						<div class="group-right flex flex-col gap-3">
 							<button id="ada" class="ui-button">ADA</button>
@@ -133,8 +133,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 						</div>
 					</div>
 
-					<div id="ada-sublist" class="hidden mt-6 bg-surface p-5 sm:p-6 rounded-2xl border border-borderSubtle shadow-subtle animate-fade-in-up">
-						<h4 class="text-xs font-bold text-textMuted mb-4 uppercase tracking-wider">Exámenes ADA</h4>
+					<div id="ada-sublist" class="hidden mt-6 bg-surface p-5 sm:p-6 rounded-2xl border border-border-subtle shadow-subtle animate-fade-in-up">
+						<h4 class="text-xs font-bold text-text-muted mb-4 uppercase tracking-wider">Exámenes ADA</h4>
 						<div class="asignaturas listaoculta grid grid-cols-1 sm:grid-cols-3 gap-3">
 							<button id="ada-p1" class="ui-button-primary">ada p1</button>
 							<button id="ada-p2" class="ui-button-primary">ada p2</button>
@@ -142,8 +142,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 						</div>
 					</div>
 
-					<div id="ac-sublist" class="hidden mt-6 bg-surface p-5 sm:p-6 rounded-2xl border border-borderSubtle shadow-subtle animate-fade-in-up">
-						<h4 class="text-xs font-bold text-textMuted mb-4 uppercase tracking-wider">Exámenes AC</h4>
+					<div id="ac-sublist" class="hidden mt-6 bg-surface p-5 sm:p-6 rounded-2xl border border-border-subtle shadow-subtle animate-fade-in-up">
+						<h4 class="text-xs font-bold text-text-muted mb-4 uppercase tracking-wider">Exámenes AC</h4>
 						<div class="asignaturas listaoculta grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
 							<button id="ac_CP-F2" class="ui-button-primary">ac CP F2</button>
 							<button id="ac_CP-F3" class="ui-button-primary">ac CP F3</button>
@@ -152,8 +152,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 						</div>
 					</div>
 
-					<div id="redes-sublist" class="hidden mt-6 bg-surface p-5 sm:p-6 rounded-2xl border border-borderSubtle shadow-subtle animate-fade-in-up">
-						<h4 class="text-xs font-bold text-textMuted mb-4 uppercase tracking-wider">Exámenes REDES</h4>
+					<div id="redes-sublist" class="hidden mt-6 bg-surface p-5 sm:p-6 rounded-2xl border border-border-subtle shadow-subtle animate-fade-in-up">
+						<h4 class="text-xs font-bold text-text-muted mb-4 uppercase tracking-wider">Exámenes REDES</h4>
 						<div class="asignaturas listaoculta grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
 							<button id="redes_full" class="ui-button-primary">redes full</button>
 							<button id="redesEnero2324" class="ui-button-primary">redes Enero 23 24</button>

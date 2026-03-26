@@ -43,17 +43,17 @@ const { title = "Preguntas y Respuestas • Community Edition" } = Astro.props;
 			}
 		</script>
 	</head>
-	<body class="min-h-screen bg-background text-textMain selection:bg-primary/20 flex flex-col items-center">
+	<body class="min-h-screen bg-background text-text-main selection:bg-primary/20 flex flex-col items-center">
 		<!-- Header / Navigation -->
-		<header class="sticky top-0 z-50 w-full backdrop-blur-md bg-surface/80 border-b border-borderSubtle transition-colors duration-300">
+		<header class="sticky top-0 z-50 w-full backdrop-blur-md bg-surface/80 border-b border-border-subtle transition-colors duration-300">
 			<div class="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
 				
 				<!-- Logo / Title -->
 				<a href="/" class="flex flex-col justify-center outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-md group">
-					<h2 class="text-lg md:text-xl font-heading font-semibold tracking-tight text-textMain group-hover:text-primary transition-colors">
+					<h2 class="text-lg md:text-xl font-heading font-semibold tracking-tight text-text-main group-hover:text-primary transition-colors">
 						Preguntas y Respuestas
 					</h2>
-					<span class="text-[10px] md:text-xs font-medium uppercase tracking-wider text-textMuted bg-borderSubtle/50 w-fit px-1.5 py-0.5 rounded-sm">
+					<span class="text-[10px] md:text-xs font-medium uppercase tracking-wider text-text-muted bg-border-subtle/50 w-fit px-1.5 py-0.5 rounded-sm">
 						Community Edition
 					</span>
 				</a>
@@ -61,7 +61,7 @@ const { title = "Preguntas y Respuestas • Community Edition" } = Astro.props;
 				<div class="flex items-center gap-4">
 					<!-- GitHub Link -->
 					<a href="https://github.com/spb49-ua/preguntasTestCommunity" target="_blank" rel="noopener noreferrer" 
-						class="text-textMuted hover:text-textMain transition-colors p-2 rounded-full hover:bg-borderSubtle/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+						class="text-text-muted hover:text-text-main transition-colors p-2 rounded-full hover:bg-border-subtle/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
 						aria-label="GitHub Repository">
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
 							<path d="M12 1.27a11 11 0 00-3.48 21.46c.55.09.73-.28.73-.55v-1.84c-3.03.64-3.67-1.46-3.67-1.46-.55-1.29-1.28-1.65-1.28-1.65-.92-.65.1-.65.1-.65 1.1 0 1.73 1.1 1.73 1.1.92 1.65 2.57 1.2 3.21.92a2 2 0 01.64-1.47c-2.47-.27-5.04-1.19-5.04-5.5 0-1.1.46-2.1 1.2-2.84a3.76 3.76 0 010-2.93s.91-.28 3.11 1.1c1.8-.49 3.7-.49 5.5 0 2.1-1.38 3.02-1.1 3.02-1.1a3.76 3.76 0 010 2.93c.83.74 1.2 1.74 1.2 2.94 0 4.21-2.57 5.13-5.04 5.4.45.37.82.92.82 2.02v3.03c0 .27.1.64.73.55A11 11 0 0012 1.27"></path>
@@ -69,7 +69,7 @@ const { title = "Preguntas y Respuestas • Community Edition" } = Astro.props;
 					</a>
 
 					<!-- Theme Toggle -->
-					<button id="theme-toggle" class="text-textMuted hover:text-textMain transition-colors p-2 rounded-full hover:bg-borderSubtle/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary" aria-label="Cambiar tema">
+					<button id="theme-toggle" class="text-text-muted hover:text-text-main transition-colors p-2 rounded-full hover:bg-border-subtle/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary" aria-label="Cambiar tema">
 						<!-- Sun Icon -->
 						<svg id="theme-sun" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 hidden dark:block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 							<circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
