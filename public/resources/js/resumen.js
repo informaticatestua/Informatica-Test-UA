@@ -161,6 +161,16 @@ function renderizarResumen(preguntas) {
 
         resumenContainer.appendChild(listaOpciones);
     });
+
+    // Renderizar expresiones matemáticas KaTeX en todo el resumen
+    if (typeof renderMathInElement !== "undefined") {
+        renderMathInElement(resumenContainer, {
+            delimiters: [
+                { left: "$$", right: "$$", display: false },
+                { left: "\\[", right: "\\]", display: true },
+            ],
+        });
+    }
 }
 
 // --- TEMA OSCURO / CLARO ---
