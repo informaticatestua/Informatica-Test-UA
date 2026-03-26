@@ -102,12 +102,17 @@ function procesarTextoPreguntas(preguntasTxt) {
         // Soportamos múltiples respuestas correctas (ej: "1, 3")
         const respuestasCorrectasIndices = respuesta.split(",").map((r) => parseInt(r.trim()));
 
-        // Extraemos el texto exacto de las opciones correctas
-        const textosRespuestas = respuestasCorrectasIndices.map((index) => opciones[index - 1]);
+        // Devolvemos todas las opciones con un flag de si son correctas
+        const todasLasOpciones = opciones
+            .filter((op) => op && op.toUpperCase() !== "NO MARCAR")
+            .map((texto, i) => ({
+                texto,
+                correcta: respuestasCorrectasIndices.includes(i + 1),
+            }));
 
         return {
-            pregunta: pregunta,
-            respuestasText: textosRespuestas.join(" | "), // Las unimos con una barra
+            pregunta,
+            opciones: todasLasOpciones,
         };
     });
 }
@@ -132,17 +137,29 @@ function renderizarResumen(preguntas) {
     resumenContainer.innerHTML = ""; // Limpiamos por si acaso
 
     preguntas.forEach((pregunta, index) => {
+        // Pregunta
         const preguntaElement = document.createElement("p");
+        preguntaElement.style.cssText = "margin-bottom: 8px; font-weight: 600;";
         preguntaElement.innerHTML = `<strong>${index + 1}.</strong> ${pregunta.pregunta}`;
         resumenContainer.appendChild(preguntaElement);
 
-        const respuestaElement = document.createElement("span");
-        respuestaElement.textContent = "Respuesta correcta: " + pregunta.respuestasText;
-        respuestaElement.className = "correct";
-        resumenContainer.appendChild(respuestaElement);
+        // Opciones
+        const listaOpciones = document.createElement("ul");
+        listaOpciones.style.cssText = "list-style: none; padding: 0; margin: 0 0 20px 12px;";
 
-        resumenContainer.appendChild(document.createElement("br"));
-        resumenContainer.appendChild(document.createElement("br"));
+        pregunta.opciones.forEach((opcion) => {
+            const li = document.createElement("li");
+            li.style.cssText = "margin-bottom: 4px; padding: 4px 8px; border-radius: 4px;";
+            if (opcion.correcta) {
+                li.className = "correct";
+                li.innerHTML = `✓ ${opcion.texto}`;
+            } else {
+                li.innerHTML = `○ ${opcion.texto}`;
+            }
+            listaOpciones.appendChild(li);
+        });
+
+        resumenContainer.appendChild(listaOpciones);
     });
 }
 

@@ -23,8 +23,11 @@ import ResumenLayout from '../../layouts/ResumenLayout.astro';
 	:global(#resumen p) {
 		@apply mb-[4px] text-text-main;
 	}
-	:global(#resumen span.correct) {
-		@apply inline-block bg-green-500/20 text-green-700 dark:text-green-300 px-[0.6em] py-[0.2em] rounded-[4px] mb-[16px] text-[0.9em];
+	:global(#resumen li.correct) {
+		@apply bg-green-500/15 text-green-700 dark:text-green-300 font-semibold;
+	}
+	:global(#resumen li) {
+		@apply text-text-muted;
 	}
 	:global(#resumen strong) {
 		@apply text-text-main font-semibold;
