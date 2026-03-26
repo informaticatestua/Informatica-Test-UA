@@ -1,6 +1,34 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --color-background: rgb(var(--bg-base));
+  --color-surface: rgb(var(--bg-surface));
+  --color-surface-hover: rgb(var(--bg-surface-hover));
+  --color-primary: rgb(var(--color-primary-rgb));
+  --color-primary-hover: rgb(var(--primary-hover));
+  --color-text-main: rgb(var(--text-main));
+  --color-text-muted: rgb(var(--text-muted));
+  --color-border-subtle: rgb(var(--border-subtle));
+  
+  --font-sans: "DM Sans", sans-serif;
+  --font-heading: "Outfit", sans-serif;
+  
+  --shadow-glass: 0 4px 30px rgba(0, 0, 0, 0.05);
+  --shadow-glass-dark: 0 4px 30px rgba(0, 0, 0, 0.2);
+  --shadow-subtle: 0 1px 2px 0 rgba(0, 0, 0, 0.03), 0 1px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px 0 rgba(0, 0, 0, 0.02);
+  
+  --animate-fade-in-up: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-fade-in: fadeIn 0.5s ease-out forwards;
+  
+  @keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(12px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+}
 
 @layer base {
   :root {
@@ -9,7 +37,7 @@
     --bg-surface: 255 255 255;
     --bg-surface-hover: 241 245 249;
     
-    --primary: 15 23 42;
+    --color-primary-rgb: 15 23 42;
     --primary-hover: 30 41 59;
     
     --text-main: 15 23 42;
@@ -18,13 +46,13 @@
     --border-subtle: 226 232 240;
   }
 
+  /* El .dark está por si se usa JavaScript para cambiar de tema */
   .dark {
-    /* Dark Theme */
     --bg-base: 2 6 23;
     --bg-surface: 15 23 42;
     --bg-surface-hover: 30 41 59;
     
-    --primary: 248 250 252;
+    --color-primary-rgb: 248 250 252;
     --primary-hover: 226 232 240;
     
     --text-main: 248 250 252;
@@ -34,11 +62,10 @@
   }
 
   html {
-    @apply bg-background text-textMain antialiased scroll-smooth transition-colors duration-300;
+    @apply bg-background text-text-main antialiased scroll-smooth transition-colors duration-300;
   }
 
   body {
-    /* To prevent scrollbar jump on Windows when navigating between pages */
     overflow-y: scroll;
   }
 }
@@ -51,16 +78,14 @@
 
 /* Custom Utilities for micro-interactions */
 @layer components {
-  /* Generous layout helpers */
   .layout-container {
     @apply w-full max-w-4xl mx-auto px-6 py-12 md:py-20;
   }
   
-  /* Modern Button / Card Styles */
   .ui-button {
     @apply relative overflow-hidden flex items-center justify-center 
-           bg-surface hover:bg-surfaceHover text-textMain 
-           border border-borderSubtle rounded-xl 
+           bg-surface hover:bg-surface-hover text-text-main 
+           border border-border-subtle rounded-xl 
            py-4 px-6 font-medium text-sm sm:text-base
            shadow-subtle hover:shadow-glass hover:-translate-y-0.5
            transition-all duration-300 ease-out focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background;
@@ -68,19 +93,17 @@
 
   .ui-button-primary {
     @apply relative overflow-hidden flex items-center justify-center 
-           bg-primary text-background hover:bg-primaryHover
+           bg-primary text-background hover:bg-primary-hover
            rounded-xl py-4 px-6 font-medium text-sm sm:text-base
            shadow-md hover:shadow-lg hover:-translate-y-0.5
            transition-all duration-300 ease-out focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background;
   }
 
-  /* Section Titles */
   .section-title {
-    @apply font-heading text-2xl md:text-3xl font-semibold mb-6 tracking-tight text-textMain;
+    @apply font-heading text-2xl md:text-3xl font-semibold mb-6 tracking-tight text-text-main;
   }
 
-  /* Separator */
   .ui-separator {
-    @apply w-full h-px bg-borderSubtle my-8;
+    @apply w-full h-px bg-border-subtle my-8;
   }
 }
