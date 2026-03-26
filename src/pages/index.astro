@@ -3,214 +3,213 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout>
-	<div id="main-container" class="layout-container animate-fade-in">
-		<div id="app" class="flex flex-col gap-12">
-			<header class="text-center md:text-left">
-				<h1 id="app-title" class="font-heading text-4xl md:text-5xl font-bold tracking-tight text-text-main mb-4">
-					Seleccione una asignatura
-				</h1>
-				<p class="text-text-muted text-lg md:text-xl max-w-2xl text-balance">
-					Explora los distintos exámenes y test clasificados por curso y rama para poner a prueba tus conocimientos.
-				</p>
-			</header>
-
-			<div id="asignaturas-container" class="flex flex-col gap-12">
+	<div id="main-container" class="flex flex-col items-center justify-center m-auto w-full">
+		<div id="app" class="relative w-max max-w-[95vw] text-center bg-surface shadow-md shadow-black/5 rounded-[5px] px-[40px] py-[30px] mx-auto my-[20px] box-border border border-border-subtle">
+			
+			<h1 id="app-title" class="text-[2em] font-heading font-extrabold mb-[20px] tracking-tight">
+				Seleccione una asignatura
+			</h1>
+			
+			<div id="asignaturas-container">
 				
-				<!-- RAMA SOFTWARE -->
-				<section class="group">
-					<h3 class="section-title">Rama Software</h3>
-					<div class="asignaturas grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-4 md:gap-8 items-start">
-						<div class="group-left flex flex-col gap-3">
-							<button id="dca" class="ui-button">DCA</button>
-							<button id="mads" class="ui-button">MADS NO OFICIAL</button>
-						</div>
-						
-						<div class="separator hidden md:block w-px self-stretch bg-border-subtle"></div>
-						<div class="separator block md:hidden w-full h-px bg-border-subtle my-2"></div>
-						
-						<div class="group-right flex flex-col gap-3">
-							<button id="gcs" class="ui-button">GCS</button>
-							<button id="sds" class="ui-button">SDS NO OFICIAL</button>
-						</div>
+				<!-- Rama Software -->
+				<h3 class="text-[1.2em] font-heading font-semibold mt-6 mb-2">Rama Software</h3>
+				<div class="asignaturas grid grid-cols-[1fr_2px_1fr] gap-[20px] w-full mb-[20px] items-center">
+					<div class="group-left flex justify-end gap-[10px] flex-wrap">
+						<button id="dca" class="btn">DCA</button>
+						<button id="mads" class="btn">MADS NO OFICIAL</button>
 					</div>
-
-					<!-- Sublistas Rama Software -->
-					<div id="mads-sublist" class="hidden mt-6 bg-surface p-5 sm:p-6 rounded-2xl border border-border-subtle shadow-subtle animate-fade-in-up">
-						<h4 class="text-xs font-bold text-text-muted mb-4 uppercase tracking-wider">Exámenes MADS</h4>
-						<div class="asignaturas listaoculta grid grid-cols-1 sm:grid-cols-2 gap-3">
-							<button id="MADS-NO-OFICIAL-P1" class="ui-button-primary">MADS NO OFICIAL P1</button>
-							<button id="MADS-NO-OFICIAL-P2" class="ui-button-primary">MADS NO OFICIAL P2</button>
-						</div>
+					<div class="separator w-[2px] h-[35px] bg-border-subtle mx-auto"></div>
+					<div class="group-right flex justify-start gap-[10px] flex-wrap">
+						<button id="gcs" class="btn">GCS</button>
+						<button id="sds" class="btn">SDS NO OFICIAL</button>
 					</div>
+				</div>
 
-					<div id="dca-sublist" class="hidden mt-6 bg-surface p-5 sm:p-6 rounded-2xl border border-border-subtle shadow-subtle animate-fade-in-up">
-						<h4 class="text-xs font-bold text-text-muted mb-4 uppercase tracking-wider">Exámenes DCA</h4>
-						<div class="asignaturas listaoculta grid grid-cols-1 sm:grid-cols-2 gap-3">
-							<button id="dca-oficial" class="ui-button-primary">DCA OFICIAL</button>
-							<button id="dca-NO-OFICIAL" class="ui-button-primary">DCA NO OFICIAL</button>
-						</div>
+				<div id="mads-sublist" class="hidden bg-surface-hover p-[20px] rounded-[8px] border border-border-subtle shadow-sm flex flex-col items-center mb-[20px] transition-all">
+					<h4 class="mt-0 mb-[15px] font-semibold text-text-muted">Exámenes MADS</h4>
+					<div class="asignaturas listaoculta flex justify-center items-center flex-wrap gap-[15px] w-full">
+						<button id="MADS-NO-OFICIAL-P1" class="btn-primary">MADS NO OFICIAL P1</button>
+						<button id="MADS-NO-OFICIAL-P2" class="btn-primary">MADS NO OFICIAL P2</button>
 					</div>
+				</div>
 
-					<div id="gcs-sublist" class="hidden mt-6 bg-surface p-5 sm:p-6 rounded-2xl border border-border-subtle shadow-subtle animate-fade-in-up">
-						<h4 class="text-xs font-bold text-text-muted mb-4 uppercase tracking-wider">Exámenes GCS</h4>
-						<div class="asignaturas listaoculta grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-							<button id="gcsp1nooficial" class="ui-button-primary">GCS P1 NO OFICIAL 2025</button>
-							<button id="gcsp1old" class="ui-button-primary">GCS P1 old 2024</button>
-							<button id="gcsp2old" class="ui-button-primary">GCS P2 old 2024</button>
-						</div>
+				<div id="dca-sublist" class="hidden bg-surface-hover p-[20px] rounded-[8px] border border-border-subtle shadow-sm flex flex-col items-center mb-[20px] transition-all">
+					<h4 class="mt-0 mb-[15px] font-semibold text-text-muted">Exámenes DCA</h4>
+					<div class="asignaturas listaoculta flex justify-center items-center flex-wrap gap-[15px] w-full">
+						<button id="dca-oficial" class="btn-primary">DCA OFICIAL</button>
+						<button id="dca-NO-OFICIAL" class="btn-primary">DCA NO OFICIAL</button>
 					</div>
+				</div>
 
-					<div id="sds-sublist" class="hidden mt-6 bg-surface p-5 sm:p-6 rounded-2xl border border-border-subtle shadow-subtle animate-fade-in-up">
-						<h4 class="text-xs font-bold text-text-muted mb-4 uppercase tracking-wider">Exámenes SDS</h4>
-						<div class="asignaturas listaoculta grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
-							<button id="sdsfull" class="ui-button-primary">SDS FULL</button>
-							<button id="sds01-presentacion" class="ui-button-primary">sds01 presentacion</button>
-							<button id="sds02-introgo" class="ui-button-primary">sds02 introgo</button>
-							<button id="sds03-introcripto" class="ui-button-primary">sds03 introcripto</button>
-							<button id="sds04-aleatorios" class="ui-button-primary">sds04 aleatorios</button>
-							<button id="sds05-flujo" class="ui-button-primary">sds05 flujo</button>
-							<button id="sds06-bloque" class="ui-button-primary">sds06 bloque</button>
-							<button id="sds07-hash" class="ui-button-primary">sds07 hash</button>
-							<button id="sds08-publica" class="ui-button-primary">sds08 publica</button>
-							<button id="sds09-transporte" class="ui-button-primary">sds09 transporte</button>
-							<button id="sds10-ejercicios" class="ui-button-primary">sds10 ejercicios</button>
-							<button id="sds11-malware" class="ui-button-primary">sds11 malware</button>
-							<button id="sds12-ataques" class="ui-button-primary">sds12 ataques</button>
-							<button id="sds13-wireless" class="ui-button-primary">sds13 wireless</button>
-							<button id="sds14-recomendaciones" class="ui-button-primary">sds14 recomendaciones</button>
-						</div>
+				<div id="gcs-sublist" class="hidden bg-surface-hover p-[20px] rounded-[8px] border border-border-subtle shadow-sm flex flex-col items-center mb-[20px] transition-all">
+					<h4 class="mt-0 mb-[15px] font-semibold text-text-muted">Exámenes GCS</h4>
+					<div class="asignaturas listaoculta flex justify-center items-center flex-wrap gap-[15px] w-full">
+						<button id="gcsp1nooficial" class="btn-primary">GCS P1 NO OFICIAL 2025</button>
+						<button id="gcsp1old" class="btn-primary">GCS P1 old 2024</button>
+						<button id="gcsp2old" class="btn-primary">GCS P2 old 2024</button>
 					</div>
-				</section>
+				</div>
 
-				<div class="ui-separator"></div>
-
-				<!-- TERCER CURSO -->
-				<section class="group">
-					<h3 class="section-title">Tercer Curso</h3>
-					<div class="asignaturas grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-4 md:gap-8 items-start">
-						<div class="group-left flex flex-col gap-3">
-							<button id="dss" class="ui-button">DSS</button>
-							<button id="gpi" class="ui-button">GPI</button>
-							<button id="ic-p1" class="ui-button">IC P1</button>
-						</div>
-						
-						<div class="separator hidden md:block w-px self-stretch bg-border-subtle"></div>
-						<div class="separator block md:hidden w-full h-px bg-border-subtle my-2"></div>
-						
-						<div class="group-right flex flex-col gap-3">
-							<button id="taes-definitivo" class="ui-button">TAES DEFINITIVO OLD</button>
-							<button id="ppss" class="ui-button">PPSS</button>
-						</div>
+				<div id="sds-sublist" class="hidden bg-surface-hover p-[20px] rounded-[8px] border border-border-subtle shadow-sm flex flex-col items-center mb-[20px] transition-all">
+					<h4 class="mt-0 mb-[15px] font-semibold text-text-muted">Exámenes SDS</h4>
+					<div class="asignaturas listaoculta flex justify-center items-center flex-wrap gap-[15px] w-full max-w-[800px]">
+						<button id="sdsfull" class="btn-primary">SDS FULL</button>
+						<button id="sds01-presentacion" class="btn-primary">sds01 presentacion</button>
+						<button id="sds02-introgo" class="btn-primary">sds02 introgo</button>
+						<button id="sds03-introcripto" class="btn-primary">sds03 introcripto</button>
+						<button id="sds04-aleatorios" class="btn-primary">sds04 aleatorios</button>
+						<button id="sds05-flujo" class="btn-primary">sds05 flujo</button>
+						<button id="sds06-bloque" class="btn-primary">sds06 bloque</button>
+						<button id="sds07-hash" class="btn-primary">sds07 hash</button>
+						<button id="sds08-publica" class="btn-primary">sds08 publica</button>
+						<button id="sds09-transporte" class="btn-primary">sds09 transporte</button>
+						<button id="sds10-ejercicios" class="btn-primary">sds10 ejercicios</button>
+						<button id="sds11-malware" class="btn-primary">sds11 malware</button>
+						<button id="sds12-ataques" class="btn-primary">sds12 ataques</button>
+						<button id="sds13-wireless" class="btn-primary">sds13 wireless</button>
+						<button id="sds14-recomendaciones" class="btn-primary">sds14 recomendaciones</button>
 					</div>
+				</div>
 
-					<div id="ppss-sublist" class="hidden mt-6 bg-surface p-5 sm:p-6 rounded-2xl border border-border-subtle shadow-subtle animate-fade-in-up">
-						<h4 class="text-xs font-bold text-text-muted mb-4 uppercase tracking-wider">Exámenes PPSS</h4>
-						<div class="asignaturas listaoculta grid grid-cols-1 sm:grid-cols-2 gap-3">
-							<button id="ppss-p1" class="ui-button-primary">PPSS P1</button>
-							<button id="ppss-p2" class="ui-button-primary">PPSS P2</button>
-						</div>
+				<!-- Tercer Curso -->
+				<h3 class="text-[1.2em] font-heading font-semibold mt-6 mb-2">Tercer Curso</h3>
+				<div class="asignaturas grid grid-cols-[1fr_2px_1fr] gap-[20px] w-full mb-[20px] items-center">
+					<div class="group-left flex justify-end gap-[10px] flex-wrap">
+						<button id="dss" class="btn">DSS</button>
+						<button id="gpi" class="btn">GPI</button>
+						<button id="ic-p1" class="btn">IC P1</button>
 					</div>
-				</section>
-
-				<div class="ui-separator"></div>
-
-				<!-- SEGUNDO CURSO -->
-				<section class="group">
-					<h3 class="section-title">Segundo Curso</h3>
-					<div class="asignaturas grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-4 md:gap-8 items-start">
-						<div class="group-left flex flex-col gap-3">
-							<button id="redes" class="ui-button">REDES</button>
-						</div>
-						
-						<div class="separator hidden md:block w-px self-stretch bg-border-subtle"></div>
-						<div class="separator block md:hidden w-full h-px bg-border-subtle my-2"></div>
-						
-						<div class="group-right flex flex-col gap-3">
-							<button id="ada" class="ui-button">ADA</button>
-							<button id="ped" class="ui-button">PED</button>
-							<button id="ac" class="ui-button">AC</button>
-							<button id="hada" class="ui-button">HADA</button>
-						</div>
+					<div class="separator w-[2px] h-[35px] bg-border-subtle mx-auto"></div>
+					<div class="group-right flex justify-start gap-[10px] flex-wrap">
+						<button id="taes-definitivo" class="btn">TAES DEFINITIVO OLD</button>
+						<button id="ppss" class="btn">PPSS</button>
 					</div>
+				</div>
 
-					<div id="ada-sublist" class="hidden mt-6 bg-surface p-5 sm:p-6 rounded-2xl border border-border-subtle shadow-subtle animate-fade-in-up">
-						<h4 class="text-xs font-bold text-text-muted mb-4 uppercase tracking-wider">Exámenes ADA</h4>
-						<div class="asignaturas listaoculta grid grid-cols-1 sm:grid-cols-3 gap-3">
-							<button id="ada-p1" class="ui-button-primary">ada p1</button>
-							<button id="ada-p2" class="ui-button-primary">ada p2</button>
-							<button id="ada-full" class="ui-button-primary">ada full</button>
-						</div>
+				<div id="ppss-sublist" class="hidden bg-surface-hover p-[20px] rounded-[8px] border border-border-subtle shadow-sm flex flex-col items-center mb-[20px] transition-all">
+					<h4 class="mt-0 mb-[15px] font-semibold text-text-muted">Exámenes PPSS</h4>
+					<div class="asignaturas listaoculta flex justify-center items-center flex-wrap gap-[15px] w-full">
+						<button id="ppss-p1" class="btn-primary">PPSS P1</button>
+						<button id="ppss-p2" class="btn-primary">PPSS P2</button>
 					</div>
+				</div>
 
-					<div id="ac-sublist" class="hidden mt-6 bg-surface p-5 sm:p-6 rounded-2xl border border-border-subtle shadow-subtle animate-fade-in-up">
-						<h4 class="text-xs font-bold text-text-muted mb-4 uppercase tracking-wider">Exámenes AC</h4>
-						<div class="asignaturas listaoculta grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
-							<button id="ac_CP-F2" class="ui-button-primary">ac CP F2</button>
-							<button id="ac_CP-F3" class="ui-button-primary">ac CP F3</button>
-							<button id="ac_CT1-2" class="ui-button-primary">ac CT1 2</button>
-							<button id="ac_CT3-4" class="ui-button-primary">ac CT3 4</button>
-						</div>
+				<!-- Segundo Curso -->
+				<h3 class="text-[1.2em] font-heading font-semibold mt-6 mb-2">Segundo Curso</h3>
+				<div class="asignaturas grid grid-cols-[1fr_2px_1fr] gap-[20px] w-full mb-[20px] items-center">
+					<div class="group-left flex justify-end gap-[10px] flex-wrap">
+						<button id="redes" class="btn">REDES</button>
 					</div>
-
-					<div id="redes-sublist" class="hidden mt-6 bg-surface p-5 sm:p-6 rounded-2xl border border-border-subtle shadow-subtle animate-fade-in-up">
-						<h4 class="text-xs font-bold text-text-muted mb-4 uppercase tracking-wider">Exámenes REDES</h4>
-						<div class="asignaturas listaoculta grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-							<button id="redes_full" class="ui-button-primary">redes full</button>
-							<button id="redesEnero2324" class="ui-button-primary">redes Enero 23 24</button>
-							<button id="redesEnero2425" class="ui-button-primary">redes Enero 24 25</button>
-							<button id="redesJulio2425" class="ui-button-primary">redes Julio 24 25</button>
-							<button id="redesEnero2526" class="ui-button-primary">redes Enero 25 26</button>
-						</div>
+					<div class="separator w-[2px] h-[35px] bg-border-subtle mx-auto"></div>
+					<div class="group-right flex justify-start gap-[10px] flex-wrap">
+						<button id="ada" class="btn">ADA</button>
+						<button id="ped" class="btn">PED</button>
+						<button id="ac" class="btn">AC</button>
+						<button id="hada" class="btn">HADA</button>
 					</div>
-				</section>
+				</div>
 
-				<div class="ui-separator"></div>
-
-				<!-- PRIMER CURSO -->
-				<section class="group mb-12">
-					<h3 class="section-title">Primer Curso</h3>
-					<div id="asignatura-centrada" class="max-w-md mx-auto w-full">
-						<button id="sti" class="ui-button w-full">STI</button>
+				<div id="ada-sublist" class="hidden bg-surface-hover p-[20px] rounded-[8px] border border-border-subtle shadow-sm flex flex-col items-center mb-[20px] transition-all">
+					<h4 class="mt-0 mb-[15px] font-semibold text-text-muted">Exámenes ADA</h4>
+					<div class="asignaturas listaoculta flex justify-center items-center flex-wrap gap-[15px] w-full">
+						<button id="ada-p1" class="btn-primary">ada p1</button>
+						<button id="ada-p2" class="btn-primary">ada p2</button>
+						<button id="ada-full" class="btn-primary">ada full</button>
 					</div>
-				</section>
+				</div>
 
+				<div id="ac-sublist" class="hidden bg-surface-hover p-[20px] rounded-[8px] border border-border-subtle shadow-sm flex flex-col items-center mb-[20px] transition-all">
+					<h4 class="mt-0 mb-[15px] font-semibold text-text-muted">Exámenes AC</h4>
+					<div class="asignaturas listaoculta flex justify-center items-center flex-wrap gap-[15px] w-full">
+						<button id="ac_CP-F2" class="btn-primary">ac CP F2</button>
+						<button id="ac_CP-F3" class="btn-primary">ac CP F3</button>
+						<button id="ac_CT1-2" class="btn-primary">ac CT1 2</button>
+						<button id="ac_CT3-4" class="btn-primary">ac CT3 4</button>
+					</div>
+				</div>
+
+				<div id="redes-sublist" class="hidden bg-surface-hover p-[20px] rounded-[8px] border border-border-subtle shadow-sm flex flex-col items-center mb-[20px] transition-all">
+					<h4 class="mt-0 mb-[15px] font-semibold text-text-muted">Exámenes REDES</h4>
+					<div class="asignaturas listaoculta flex justify-center items-center flex-wrap gap-[15px] w-full">
+						<button id="redes_full" class="btn-primary">redes full</button>
+						<button id="redesEnero2324" class="btn-primary">redes Enero 23 24</button>
+						<button id="redesEnero2425" class="btn-primary">redes Enero 24 25</button>
+						<button id="redesJulio2425" class="btn-primary">redes Julio 24 25</button>
+						<button id="redesEnero2526" class="btn-primary">redes Enero 25 26</button>
+					</div>
+				</div>
+
+				<!-- Primer Curso -->
+				<h3 class="text-[1.2em] font-heading font-semibold mt-6 mb-2">Primer Curso</h3>
+				<div id="asignatura-centrada" class="flex justify-center w-full mb-[20px]">
+					<button id="sti" class="btn">STI</button>
+				</div>
+				
 			</div>
 		</div>
 	</div>
 
 	<script>
-		// Lógica delegada de eventos para los botones
-		const container = document.getElementById("asignaturas-container");
-		
-		if (container) {
-			container.addEventListener("click", function (e) {
-				const target = e.target as HTMLElement;
-				// Asegurarnos de capturar el clic incluso si se hace clic en un hijo del botón
-				const button = target.closest("button");
+		document.getElementById("asignaturas-container")?.addEventListener("click", function (e) {
+			const target = e.target as HTMLElement;
+			if (target.tagName === "BUTTON") {
+				const idBoton = target.id;
+				if (!idBoton) return;
 				
-				if (button && container.contains(button)) {
-					const idBoton = button.id;
-					
-					// Prevenir lógica si el botón no tiene ID (ej. el toggle de tema podría colarse si estuviera dentro, pero no lo está)
-					if (!idBoton) return;
+				const sublist = document.getElementById(idBoton + "-sublist");
 
-					const sublist = document.getElementById(idBoton + "-sublist");
-
-					if (sublist) {
-						// Alternar menú ocultando los demás
-						const sublistas = document.querySelectorAll('[id$="-sublist"]');
-						sublistas.forEach((sub) => {
-							if (sub.id !== idBoton + "-sublist") {
-								sub.classList.add("hidden");
-							}
-						});
-						sublist.classList.toggle("hidden");
-					} else {
-						// REDIRECCIÓN A LA URL LIMPIA
-						window.location.href = `/${idBoton}`;
-					}
+				if (sublist) {
+					const sublistas = document.querySelectorAll('[id$="-sublist"]');
+					sublistas.forEach((sub) => {
+						if (sub.id !== idBoton + "-sublist") sub.classList.add("hidden");
+					});
+					sublist.classList.toggle("hidden");
+				} else {
+					window.location.href = `/${idBoton}`;
 				}
-			});
-		}
+			}
+		});
 	</script>
 </BaseLayout>
+
+<style>
+	/* Optamos por usar @apply dentro de un scope de Astro para no tener un HTML tan ensordecedor */
+	.btn {
+		@apply mt-[0px] px-[1.2em] py-[0.6em] text-[1em] border border-border-subtle text-text-main rounded-[5px] cursor-pointer whitespace-nowrap bg-surface hover:bg-surface-hover transition-colors shadow-subtle hover:shadow-sm font-medium;
+	}
+	.btn-primary {
+		@apply mt-[0px] px-[1.2em] py-[0.6em] text-[1em] border-none text-white rounded-[5px] cursor-pointer whitespace-nowrap bg-blue-600 hover:bg-blue-700 transition-colors shadow-sm hover:shadow font-medium;
+	}
+	
+	/* Aplicar bordes suaves a los botones */
+	@media (max-width: 767px) {
+		.asignaturas {
+			@apply flex flex-col items-center !important;
+		}
+		.group-left, .group-right {
+			@apply w-[100%] flex flex-wrap justify-center !important;
+		}
+		.separator {
+			@apply w-[100%] h-[1px] my-[10px] !important;
+		}
+		.btn, .btn-primary {
+			@apply m-[5px] px-[12px] py-[8px] text-[0.9em] min-w-[80px] !important;
+		}
+		#app {
+			@apply w-[95%] p-[15px] mt-[70px] !important;
+		}
+	}
+	
+	@media (max-width: 480px) {
+		h1 {
+			@apply text-[1.5em] !important;
+		}
+		h3 {
+			@apply text-[1.2em] !important;
+		}
+		.btn, .btn-primary {
+			@apply text-[0.8em] min-w-[70px] !important;
+		}
+	}
+</style>
