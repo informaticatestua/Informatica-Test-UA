@@ -140,7 +140,7 @@ function renderizarResumen(preguntas) {
         // Pregunta
         const preguntaElement = document.createElement("p");
         preguntaElement.style.cssText = "margin-bottom: 8px; font-weight: 600;";
-        preguntaElement.innerHTML = `<strong>${index + 1}.</strong> ${pregunta.pregunta}`;
+        preguntaElement.innerHTML = `<strong>${index + 1}.</strong> ${formatTextWithCode(pregunta.pregunta)}`;
         resumenContainer.appendChild(preguntaElement);
 
         // Opciones
@@ -152,9 +152,9 @@ function renderizarResumen(preguntas) {
             li.style.cssText = "margin-bottom: 4px; padding: 4px 8px; border-radius: 4px;";
             if (opcion.correcta) {
                 li.className = "correct";
-                li.innerHTML = `✓ ${opcion.texto}`;
+                li.innerHTML = `✓ ${formatTextWithCode(opcion.texto)}`;
             } else {
-                li.innerHTML = `○ ${opcion.texto}`;
+                li.innerHTML = `○ ${formatTextWithCode(opcion.texto)}`;
             }
             listaOpciones.appendChild(li);
         });
@@ -171,6 +171,63 @@ function renderizarResumen(preguntas) {
             ],
         });
     }
+
+    // Resaltar el código si hay Prism
+    if (typeof Prism !== "undefined") {
+        Prism.highlightAll();
+    }
+}
+
+// --- FUNCIONES DE FORMATEO (Copiadas de main.js) ---
+function escapeHTML(str) {
+    return str
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#39;");
+}
+
+function formatTextWithCode(text) {
+    if (!text) return "";
+    const parts = text.split("```");
+    let finalText = "";
+
+    parts.forEach((part, index) => {
+        if (index % 2 === 1) {
+            finalText +=
+                '<pre><code class="language-cpp">' +
+                escapeHTML(part)
+                    .replace(/\\n/g, "<br>")
+                    .replace(/\\t/g, "&nbsp;&nbsp;&nbsp;&nbsp;") +
+                "</code></pre>";
+        } else {
+            let escapedText = escapeHTML(part)
+                .replace(/\\n/g, "<br>")
+                .replace(/\\t/g, "&nbsp;&nbsp;&nbsp;&nbsp;");
+
+            const imageRegex = /!\[([^\]]*)\]\(([^)]+)\)(?:\{([^}]+)\})?/g;
+            escapedText = escapedText.replace(imageRegex, (match, alt, url, attrs) => {
+                let style = "max-width: 100%; height: auto;";
+                if (attrs) {
+                    const attrPairs = attrs.split(/\s+/);
+                    attrPairs.forEach((pair) => {
+                        const [key, value] = pair.split("=");
+                        if (key && value) {
+                            if (key.toLowerCase() === "width") {
+                                style += ` width:${value}px;`;
+                            } else if (key.toLowerCase() === "height") {
+                                style += ` height:${value}px;`;
+                            }
+                        }
+                    });
+                }
+                return `<img src="${url}" alt="${alt}" style="${style}" />`;
+            });
+            finalText += escapedText;
+        }
+    });
+    return finalText;
 }
 
 // --- TEMA OSCURO / CLARO ---
