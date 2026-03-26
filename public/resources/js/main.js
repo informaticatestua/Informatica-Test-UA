@@ -185,14 +185,18 @@ function mostrarPregunta() {
             input.name = "opcion";
             input.id = `opcion${i + 1}`;
             input.value = i + 1;
+            
             const label = document.createElement("label");
             label.htmlFor = `opcion${i + 1}`;
+            label.className = "opcion-container";
+            
             const span = document.createElement("span");
             span.innerHTML = opcion; // Usa innerHTML si la opción podría contener LaTeX
+            span.className = "opcion-label";
+            
+            label.appendChild(input);
             label.appendChild(span);
-            contenedorOpciones.appendChild(input);
             contenedorOpciones.appendChild(label);
-            contenedorOpciones.appendChild(document.createElement("br"));
         }
     });
 
@@ -340,8 +344,8 @@ function siguientePregunta() {
     const inputs = opciones.querySelectorAll("input");
     inputs.forEach((input) => {
         input.checked = false;
-        const span = input.nextElementSibling.querySelector("span");
-        span.classList.remove("correct", "incorrect");
+        const span = input.closest("label").querySelector("span");
+        if (span) span.classList.remove("correct", "incorrect");
     });
 
     document.getElementById("verificar").removeEventListener("click", siguientePregunta);
