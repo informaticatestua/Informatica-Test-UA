@@ -156,7 +156,7 @@ function renderizarResumen(preguntas) {
             
             const textDiv = document.createElement("div");
             textDiv.style.cssText = "flex-grow: 1; margin: 0; padding: 0;";
-            textDiv.innerHTML = formatTextWithCode(opcion.texto);
+            textDiv.innerHTML = formatTextWithCode(splitLongText(opcion.texto));
 
             if (opcion.correcta) {
                 li.className = "correct";
@@ -243,6 +243,36 @@ function formatTextWithCode(text) {
         }
     });
     return finalText;
+}
+
+function splitLongText(text) {
+    if (!text || text.length < 75) return text;
+    
+    // Prevent splitting markdown, formatting, HTML, or math
+    if (text.includes('<') || text.includes('\n') || text.includes('```') || text.includes('$$') || text.includes('\\[')) return text;
+    
+    const midPoint = Math.floor(text.length / 2);
+    let leftSpace = text.lastIndexOf(' ', midPoint);
+    let rightSpace = text.indexOf(' ', midPoint);
+    
+    let nearestSpace = -1;
+    if (leftSpace === -1 && rightSpace === -1) {
+        return text; 
+    } else if (leftSpace === -1) {
+        nearestSpace = rightSpace;
+    } else if (rightSpace === -1) {
+        nearestSpace = leftSpace;
+    } else {
+        if (midPoint - leftSpace <= rightSpace - midPoint) {
+            nearestSpace = leftSpace;
+        } else {
+            nearestSpace = rightSpace;
+        }
+    }
+    
+    if (nearestSpace < 25 || nearestSpace > text.length - 25) return text;
+    
+    return text.substring(0, nearestSpace) + '<br>' + text.substring(nearestSpace + 1);
 }
 
 // --- TEMA OSCURO / CLARO ---
