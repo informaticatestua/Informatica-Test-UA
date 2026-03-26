@@ -56,10 +56,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 	/* Opciones estilizaciones inyectadas dinamicamente por JS */
 	:global(form#opciones label) {
-		@apply flex items-center mb-[10px] cursor-pointer text-[0.95em] md:text-[1em] p-[10px] rounded-[5px] hover:bg-surface-hover transition-colors;
+		@apply flex items-start mb-[10px] cursor-pointer text-[0.95em] md:text-[1em] p-[10px] rounded-[5px] hover:bg-surface-hover transition-colors gap-[12px];
 	}
-	:global(form#opciones input[type="radio"]) {
-		@apply mr-[10px] w-[18px] h-[18px] accent-blue-600;
+	:global(form#opciones input[type="radio"]),
+	:global(form#opciones input[type="checkbox"]) {
+		@apply flex-shrink-0 mt-[2px] w-[18px] h-[18px] accent-blue-600;
+	}
+	:global(form#opciones .opcion-label) {
+		@apply flex-grow m-0 p-0 break-words;
 	}
 	:global(span.correct) {
 		@apply bg-green-500/30 px-[0.5em] py-[0.25em] rounded-[5px] my-[0.25em];
