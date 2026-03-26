@@ -1,0 +1,34 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Resumen • Community Edition">
+	<div id="app" class="w-max max-w-[95vw] mx-auto my-[20px] px-[40px] py-[30px] bg-surface border border-border-subtle rounded-[5px] shadow-subtle box-border">
+		<div id="resumen" class="text-left text-[0.95em] leading-relaxed"></div>
+		
+		<div class="flex gap-[10px] mt-[30px] flex-wrap justify-center">
+			<button onclick="window.history.back()" class="btn">← Volver al Quiz</button>
+			<button onclick="window.location.href = '/'" class="btn">Menú Principal</button>
+		</div>
+	</div>
+</BaseLayout>
+
+<style>
+	@reference "../../styles/global.css";
+	
+	.btn {
+		@apply px-[1.2em] py-[0.6em] text-[1em] border border-border-subtle text-text-main rounded-[5px] cursor-pointer whitespace-nowrap bg-surface hover:bg-surface-hover transition-colors shadow-subtle font-medium;
+	}
+
+	:global(#resumen p) {
+		@apply mb-[4px] text-text-main;
+	}
+	:global(#resumen span.correct) {
+		@apply inline-block bg-green-500/20 text-green-700 dark:text-green-300 px-[0.6em] py-[0.2em] rounded-[4px] mb-[16px] text-[0.9em];
+	}
+	:global(#resumen strong) {
+		@apply text-text-main font-semibold;
+	}
+</style>
+
+<script is:inline src="/resources/js/resumen.js"></script>
