@@ -1,0 +1,4647 @@
+¿Cuándo comenzaron a utilizarse los primeros computadores electrónicos programables en organismos oficiales y grandes empresas?
+2
+A principios del siglo XX.
+A mediados del siglo XX.
+A finales del siglo XIX.
+En los años 60.
+
+¿Cuál de las siguientes disciplinas es mencionada como una profesión antigua en comparación con la programación?
+3
+Economía.
+Informática.
+Arquitectura.
+Filosofía.
+
+¿Cuál de los siguientes sistemas software está mencionado como ejemplo en la sesión?
+1
+Sistema de gestión académica.
+Sistema de gestión de citas médicas.
+Sistema de seguridad bancaria.
+Sistema de control aéreo.
+
+¿Qué elemento no representa adecuadamente la metáfora de escritura en el desarrollo de software?
+4
+La legibilidad del código.
+La colaboración en equipo.
+La importancia de escribir para que otros puedan leer.
+La evolución continua del software.
+
+¿Cuál es el problema principal de la metáfora de la construcción en el desarrollo de software?
+1
+No considera el carácter flexible del software.
+Requiere mucho trabajo en equipo.
+Aumenta la complejidad de los proyectos.
+Solo aplica en proyectos grandes.
+
+¿Qué representan los usuarios finales en la metáfora de la jardinería aplicada al desarrollo de software?
+3
+Las raíces del jardín.
+Las herramientas de jardinería.
+La lluvia y el viento.
+Las flores y árboles.
+
+Según Frederick Brooks, ¿cuál de las siguientes es una tarea esencial en el desarrollo de software?
+4
+La compilación del software.
+La depuración del código.
+La generación de la documentación.
+La formulación de construcciones conceptuales.
+
+¿Cuál es una característica que diferencia el desarrollo de software de las ingenierías tradicionales, según Martin Fowler?
+2
+La poca influencia de los clientes.
+La impredecibilidad de los requisitos.
+La dependencia de las herramientas de software.
+La estabilidad de los entornos.
+
+¿Qué es la deuda técnica?
+2
+El costo monetario de desarrollar software.
+Problemas de diseño que dificultan la flexibilidad del software.
+La necesidad de refactorizar el código en cada iteración.
+El tiempo necesario para implementar cambios.
+
+¿Por qué es difícil visualizar el software según Brooks?
+1
+Porque el software no tiene representación física en un espacio.
+Porque el software siempre está en evolución.
+Porque los diagramas solo muestran una parte del sistema.
+Porque la mayoría de los sistemas son muy pequeños.
+
+¿Cuál es una ventaja de la metáfora de jardinería en el desarrollo de software?
+2
+Su similitud con la construcción de estructuras.
+Representa el carácter evolutivo y cambiante del software.
+El software crece automáticamente como un jardín.
+La precisión en la planificación del desarrollo.
+
+¿Por qué es importante elegir las metáforas adecuadas en una organización?
+3
+Para mejorar la calidad del producto.
+Para facilitar el aprendizaje técnico.
+Para establecer una cultura común en el equipo.
+Para acelerar el desarrollo de proyectos.
+
+¿Qué aspecto del desarrollo de software enfatiza la metáfora de hacer una película?
+4
+La precisión en el diseño del sistema.
+La independencia de cada desarrollador.
+La capacidad de cambio rápido en el producto.
+La creatividad y coordinación entre múltiples disciplinas.
+
+¿Qué limita la metáfora de construcción en comparación con el desarrollo de software?
+3
+El costo inicial del proyecto.
+La cantidad de documentación necesaria.
+La flexibilidad y facilidad de modificación del software.
+La capacidad de realizar pruebas rápidas.
+
+Según Brooks, ¿por qué la complejidad es una característica esencial del software?
+4
+Porque se pueden realizar muchos cambios.
+Porque es difícil de aprender para los desarrolladores.
+Porque requiere habilidades avanzadas de programación.
+Porque las entidades del software no se repiten y aumentan en número.
+
+¿Qué significa "deuda técnica" en el contexto del desarrollo ágil?
+3
+Gastos adicionales en licencias de software.
+Mejoras continuas en las herramientas de desarrollo.
+Problemas de diseño que hacen el software menos flexible con el tiempo.
+Cambios necesarios en el diseño a medida que avanzan las iteraciones.
+
+¿Cuál es el enfoque que Martin Fowler sugiere para gestionar la impredecibilidad en el desarrollo de software?
+2
+Seguir un proceso lineal de diseño.
+Desarrollar mediante iteraciones frecuentes.
+Evitar el cambio en los requisitos.
+Separar el desarrollo en fases de construcción y diseño.
+
+¿Qué representa la metáfora de crecimiento por acreción en el desarrollo de software?
+1
+La evolución incremental de funcionalidades.
+La implementación de código en distintas plataformas.
+La adaptación del software a nuevas tecnologías.
+La necesidad de realizar revisiones continuas de código.
+
+¿Cuál es uno de los problemas de aplicar la metáfora de "construir software" a un entorno ágil?
+3
+Requiere más recursos humanos.
+Facilita el mantenimiento del sistema.
+Limita la flexibilidad y adaptación continua.
+Reduce la productividad en las iteraciones.
+
+¿Qué es un beneficio clave de los métodos de desarrollo iterativo para el cliente?
+2
+Obtener todas las funcionalidades de una vez.
+Evaluar el producto en fases tempranas y ajustar requisitos.
+Aumentar el presupuesto del proyecto.
+Reducir la interacción con el equipo de desarrollo.
+
+¿Por qué el desarrollo de software no se adapta bien al modelo de cascada (waterfall)?
+2
+Porque el software es caro de construir.
+Porque el proceso de desarrollo es continuo y cambiante.
+Porque el diseño del software es siempre estático.
+Porque el modelo waterfall no permite pruebas.
+
+¿Cuál de las siguientes NO es una característica esencial del software según Brooks?
+4
+Complejidad.
+Cambiabilidad.
+Invisibilidad.
+Predictibilidad.
+
+¿Qué elemento de control introduce Fowler para manejar la incertidumbre en el desarrollo de software?
+3
+Un equipo de mantenimiento.
+Una fase de construcción bien definida.
+Retroalimentación continua mediante iteraciones.
+Documentación extensa de los requisitos.
+
+¿Qué problema tiene el uso de metáforas erróneas en un equipo de desarrollo de software?
+3
+Aumentan la velocidad del desarrollo.
+Reducen la colaboración en el equipo.
+Crean expectativas incorrectas sobre el proceso de trabajo.
+Eliminan la creatividad en el desarrollo.
+
+¿Qué destaca la metáfora de jardinería sobre el desarrollo de software?
+1
+El crecimiento orgánico y evolutivo del sistema.
+La necesidad de planificación detallada.
+La velocidad del desarrollo de software.
+La dependencia de herramientas externas.
+
+¿Qué propone Brooks para lidiar con la complejidad del desarrollo de software?
+2
+Usar mejores lenguajes de programación.
+Comprar o reutilizar software ya existente.
+Invertir en hardware de alto rendimiento.
+Contratar más desarrolladores.
+
+¿Qué tipo de iteraciones sugiere Fowler en un entorno de desarrollo ágil?
+4
+Iteraciones largas para asegurar la calidad.
+Iteraciones con todas las funcionalidades posibles.
+Iteraciones solo al final del proyecto.
+Iteraciones cortas con versiones funcionales.
+
+¿Qué enfatiza la metáfora de "hacer software como un juego cooperativo"?
+1
+La colaboración del equipo y la solución creativa de problemas.
+La necesidad de revisar continuamente el código.
+La libertad total en la toma de decisiones.
+La predictibilidad del desarrollo.
+
+¿Cuál de las siguientes NO es una metáfora usada comúnmente en el desarrollo de software?
+3
+Jardinería.
+Crecimiento por acreción.
+Ingeniería mecánica.
+Construcción.
+
+Según la sesión, ¿por qué es tan difícil predecir los requisitos en el desarrollo de software?
+4
+Porque los requisitos están bien definidos al inicio.
+Porque los cambios no afectan al sistema.
+Porque los usuarios no influyen en el desarrollo.
+Porque se descubren problemas e incertidumbres a lo largo del proyecto.
+
+¿Qué busca el cliente en un contrato ágil con iteraciones?
+2
+Fijar el coste y el alcance exacto.
+Obtener versiones funcionales del sistema en cada entrega.
+Limitar los cambios en los requisitos.
+Evitar involucrarse en el desarrollo.
+
+¿Qué NO es cierto sobre la deuda técnica en un proyecto de software?
+3
+Puede surgir por problemas de diseño acumulados.
+Hace el software menos flexible con el tiempo.
+Elimina la necesidad de refactorización.
+Puede ralentizar la incorporación de cambios futuros.
+
+¿Cuál de las siguientes características hace que el software sea único en comparación con otros productos?
+1
+Es fácilmente modificable.
+Es inmune a los errores.
+Es predecible y planificable.
+Es costoso de construir.
+
+¿Qué sugiere Fowler en cuanto a la relación con el cliente en un proceso adaptativo?
+3
+Limitar la participación del cliente en el proyecto.
+Mantener un control estricto sobre los cambios.
+Fomentar la colaboración y el ajuste continuo.
+Fijar una fecha límite inamovible.
+
+¿Cuál es una de las dificultades de representar visualmente el software?
+2
+Existen muchos lenguajes de programación.
+La estructura de software involucra múltiples grafos complejos.
+La estructura de software es fácilmente comprensible.
+Todo el software se organiza en módulos simples.
+
+¿Qué aspecto importante tiene el modelo de desarrollo incremental propuesto por Brooks?
+1
+Permite que el software crezca de manera orgánica.
+Acelera la fase de diseño inicial.
+Requiere muchos cambios en el equipo de desarrollo.
+Solo funciona en proyectos pequeños.
+
+¿Cuál es el propósito de realizar un prototipado rápido en el desarrollo de software?
+2
+Ahorrar costos en la fase de construcción.
+Ayudar al cliente a refinar y entender sus necesidades.
+Reducir el número de desarrolladores en el proyecto.
+Evitar la necesidad de pruebas adicionales.
+
+¿Qué representa el concepto de "acoplamiento" en el desarrollo de software?
+3
+La creación de módulos independientes.
+La facilidad para realizar cambios sin afectar al sistema.
+La dependencia mutua entre elementos del sistema ante cambios.
+La optimización de la ejecución del código.
+
+¿Cuál es una desventaja del modelo predictivo en comparación con el adaptativo en software?
+2
+Ofrece versiones tempranas del software.
+Limita la flexibilidad ante cambios de requisitos.
+Mejora la comunicación con el cliente.
+Reduce el riesgo de acoplamiento.
+
+¿Qué destaca la metáfora de la publicación periódica en el desarrollo ágil de software?
+4
+La planificación detallada de todas las funcionalidades.
+La adaptación a una única entrega final.
+La estructura invariable del software.
+La entrega continua de nuevas funcionalidades al cliente.
+
+¿Cuál es una ventaja clave de la metáfora de la "acreción" en el desarrollo de software?
+2
+Acelera la fase de diseño inicial.
+Permite un desarrollo incremental en el que se van añadiendo capas de funcionalidad.
+Facilita la comunicación con los usuarios.
+Reduce el tiempo de construcción.
+
+¿Cuál es un problema de la metáfora de escritura en el contexto del software?
+3
+Requiere la colaboración del equipo.
+Enfatiza la necesidad de escribir código legible.
+No refleja bien el carácter evolutivo y colectivo del software.
+Facilita el mantenimiento del software.
+
+¿Qué papel juegan los "usuarios finales" en el desarrollo de software según la metáfora de jardinería?
+1
+Son el equivalente a las fuerzas naturales que influyen en el jardín.
+Representan el crecimiento del software en el sistema.
+Son los encargados de supervisar los cambios.
+Determinan los fundamentos estructurales del sistema.
+
+¿Qué diferencia esencial existe entre el desarrollo de software y la construcción de edificios?
+2
+El software tiene una estructura inmutable.
+El software es modificable continuamente, incluso en su estructura básica.
+La fase de diseño es más importante en la construcción.
+Los edificios requieren más tiempo de construcción que el software.
+
+¿Cómo se relaciona el concepto de "deuda técnica" con el acoplamiento en el software?
+3
+La deuda técnica elimina el acoplamiento en el código.
+Ambos facilitan el mantenimiento del software.
+Un alto acoplamiento contribuye a la deuda técnica, haciendo el software más rígido.
+La deuda técnica no se ve afectada por el acoplamiento.
+
+¿Qué metáfora enfatiza el aspecto cooperativo y creativo del desarrollo de software?
+4
+Crecimiento por acreción.
+Jardinería.
+Escritura.
+Juego cooperativo.
+
+Según Brooks, ¿qué hace única a la tarea esencial en el desarrollo de software?
+1
+Es una actividad creativa que define las construcciones conceptuales necesarias.
+Es fácilmente optimizable con mejores herramientas.
+Permite reducir el tiempo de desarrollo.
+No afecta la complejidad del software.
+
+¿Qué es cierto sobre el "cliente adaptativo" en el modelo de desarrollo iterativo?
+2
+Solo participa en las fases iniciales del proyecto.
+Puede ajustar el enfoque y los requisitos en cada iteración.
+No puede influir en las decisiones de diseño.
+Su participación es opcional en este modelo.
+
+¿Cuál es un ejemplo de una tarea accidental en el desarrollo de software?
+4
+Formular las construcciones conceptuales.
+Decidir la arquitectura del sistema.
+Definir las necesidades del cliente.
+Implementar el diseño en un lenguaje de programación específico.
+
+¿Qué representa el término "refactorización" en el contexto de la deuda técnica?
+3
+La adición de nuevas funcionalidades al software.
+La eliminación de errores de ejecución.
+La reestructuración del código para reducir la deuda técnica y mejorar su flexibilidad.
+La creación de documentación adicional.
+
+Según la sesión, ¿qué aspecto del desarrollo de software enfatiza la metáfora de "publicación periódica"?
+1
+La entrega continua de nuevas funcionalidades en cada iteración.
+La fijación de requisitos al inicio del proyecto.
+La estructura inmutable del software.
+La reducción de la interacción con los usuarios.
+
+¿Cuál es un beneficio del desarrollo iterativo mencionado en la sesión?
+3
+Reducir la complejidad del sistema.
+Eliminar la necesidad de colaboración.
+Obtener retroalimentación temprana y ajustar el proyecto según el feedback.
+Limitar los cambios de diseño.
+
+Según Brooks, ¿qué característica hace que el software sea "invisible"?
+4
+El software siempre depende de los usuarios.
+Las estructuras del software son visualmente accesibles.
+La organización de su código es completamente gráfica.
+El software no se embebe en un espacio físico, lo que dificulta su representación visual.
+
+¿Qué ventaja tiene el enfoque ágil en cuanto a los cambios en los requisitos?
+2
+Facilita un contrato de precio fijo.
+Permite adaptarse rápidamente a las necesidades cambiantes del cliente.
+Reduce la comunicación necesaria con el cliente.
+Elimina la necesidad de prototipos.
+
+¿Cuál es el principal propósito de las metáforas en la cultura de una organización?
+3
+Reducir los conflictos entre equipos.
+Aumentar la eficiencia del desarrollo.
+Crear una dirección común y un conjunto de normas implícitas en el equipo.
+Facilitar la documentación.
+
+¿Cuál es una característica distintiva de los "métodos adaptativos" frente a los métodos predictivos?
+1
+Ajustan el alcance del proyecto a medida que avanza el desarrollo.
+Exigen una planificación detallada al inicio del proyecto.
+Reducen la necesidad de participación del cliente.
+Permiten solo una entrega final del software.
+
+¿Qué destaca la metáfora de la "película de cine" en el desarrollo de software?
+4
+La construcción del código base.
+La estructura modular del software.
+La necesidad de documentación.
+La colaboración entre expertos de diferentes áreas para crear un producto completo.
+
+¿Cuál es uno de los desafíos de aplicar una metáfora de ingeniería tradicional al desarrollo de software?
+2
+Permiten iteraciones rápidas.
+No recogen la flexibilidad y la adaptabilidad continua del software.
+Enfatizan demasiado la colaboración.
+Facilitan el crecimiento incremental del sistema.
+
+¿Qué ventaja competitiva menciona Mary Poppendieck sobre el cambio de última hora en el desarrollo de software?
+3
+Permite mantener los plazos sin ajustes.
+Facilita una mejor gestión del equipo.
+Permite al cliente adaptarse a cambios en el entorno y ganar ventaja sobre la competencia.
+Reduce el costo de desarrollo.
+
+¿Cuál es un riesgo de no controlar adecuadamente el acoplamiento en un sistema de software?
+4
+La documentación se vuelve obsoleta.
+Los usuarios pierden interés en el sistema.
+La velocidad de desarrollo aumenta.
+Un cambio pequeño puede desencadenar múltiples cambios en otros componentes.
+
+¿Cuál es una limitación del informe State of Agile según la sesión?
+2
+Se realiza solo en Europa.
+La información puede estar sesgada porque es voluntaria.
+No incluye datos sobre Scrum.
+Es únicamente para empresas con más de 100 empleados.
+
+¿Cuál es uno de los principales objetivos de las empresas que adoptan metodologías ágiles?
+1
+Acelerar la entrega de software.
+Mejorar la documentación del software.
+Reducir la deuda técnica.
+Aumentar el tamaño de los equipos de desarrollo.
+
+¿Qué porcentaje de los encuestados en 2020 ocupa el rol de Scrum Master o Agile Coach?
+1
+Cerca del 40%.
+Un 25%.
+Un 60%.
+Un 10%.
+
+¿Cuál es una de las principales formas de medir el éxito de Agile, según el informe?
+3
+Número de code smells eliminados.
+Cantidad de líneas de código producidas.
+Valor de negocio entregado al cliente.
+Cantidad de cambios realizados en el equipo.
+
+¿Qué práctica ágil es la más utilizada entre los encuestados?
+4
+Test-Driven Development.
+Refactorización.
+Iteraciones cortas.
+Daily standup.
+
+Según el informe, ¿cuál es la metodología ágil más utilizada en las empresas?
+1
+Scrum.
+Kanban.
+Lean.
+Extreme Programming (XP).
+
+¿Cuál es uno de los beneficios percibidos por las empresas que usan metodologías ágiles, según el informe?
+2
+Incrementar el número de funcionalidades desarrolladas.
+Mejorar la gestión de prioridades cambiantes.
+Aumentar el tamaño de los equipos de desarrollo.
+Reducir el presupuesto de los proyectos.
+
+¿Qué representa la filosofía de Kaizen en el contexto de Agile?
+4
+Mejorar la velocidad de desarrollo.
+Aumentar el uso de Scrum.
+Implementar más métricas de calidad de código.
+Buscar una mejora continua en los procesos.
+
+¿Qué problema puede surgir cuando una empresa se enfoca únicamente en maximizar ciertos indicadores de rendimiento?
+2
+El equipo pierde el enfoque en el desarrollo ágil.
+Puede haber un sobreajuste (overfitting), afectando otras áreas del equipo.
+La satisfacción del cliente aumenta.
+Se reduce el tiempo de desarrollo.
+
+¿Qué se entiende por Fake Scrum o Dark Scrum?
+3
+Un uso avanzado de las técnicas de Scrum.
+La inclusión de roles adicionales en el equipo.
+Un uso superficial de Scrum, sin entender sus principios ágiles.
+El uso de Scrum únicamente en fases avanzadas del desarrollo.
+
+¿Qué práctica avanzada de desarrollo es menos utilizada por las empresas, según el informe?
+3
+Unit testing.
+Daily standups.
+Continuous deployment.
+Planificación del sprint.
+
+Según el informe, ¿cuál de los siguientes objetivos tiene menos relevancia para las empresas que adoptan Agile?
+4
+Acelerar la entrega de software.
+Mejorar la productividad.
+Mejorar la calidad del software.
+Mejorar la mantenibilidad del software.
+
+¿Qué tipo de métricas se menciona como importante para medir el valor de un software desde el punto de vista del cliente?
+2
+Velocidad de desarrollo.
+Satisfacción del cliente y beneficios económicos.
+Cantidad de código desarrollado.
+Porcentaje de bugs resueltos.
+
+¿Qué ventaja tiene el uso de metrics de integración continua en un equipo ágil?
+3
+Mejoran el tiempo de entrega.
+Simplifican la colaboración entre equipos.
+Miden la calidad y consistencia del proceso de desarrollo en tiempo real.
+Aumentan la cantidad de historias entregadas.
+
+¿Qué caracteriza el Agile Industrial Complex mencionado en la sesión?
+1
+La comercialización de cursos y certificaciones de Scrum.
+La creación de equipos ágiles en grandes empresas.
+La estandarización de las prácticas ágiles en todos los sectores.
+El uso exclusivo de Scrum para todo tipo de proyectos.
+
+¿Cuál es el riesgo de una “obsesión por los procesos” en Agile?
+4
+Aumenta la cantidad de entregas al cliente.
+Mejora el rendimiento del equipo.
+Reduce el tamaño de los equipos.
+Se pierde el enfoque en las personas y la flexibilidad del equipo.
+
+¿Qué crítica se menciona hacia las certificaciones de Scrum?
+2
+Son solo para roles específicos.
+Certifican conocimiento básico sin asegurar habilidades prácticas.
+No son reconocidas internacionalmente.
+Son difíciles de obtener.
+
+¿Cuál de las siguientes prácticas pertenece a las prácticas más comunes de ingeniería ágil?
+1
+Unit testing.
+Test de aceptación.
+User stories.
+Customer journeys.
+
+¿Cuál es una característica importante de un equipo verdaderamente ágil, según el manifiesto ágil?
+3
+Depender de métricas de líneas de código.
+Evitar la experimentación.
+Ser auto-organizado y valorar las interacciones.
+Seguir rígidamente los procesos de la empresa.
+
+¿Qué enfoque resalta la frase "Move fast and break things"?
+4
+Optimización de la deuda técnica.
+Mejora de la satisfacción del cliente.
+Incremento en la seguridad del software.
+La experimentación y velocidad de entrega en el desarrollo.
+
+¿Qué indicador de éxito de Agile se relaciona directamente con la satisfacción del cliente?
+3
+Número de historias completadas por iteración.
+Porcentaje de cumplimiento de la planificación.
+Valor de negocio entregado al cliente.
+Número de code reviews realizados.
+
+¿Qué podría explicar el predominio de Scrum en las empresas según el informe?
+2
+Scrum tiene menos roles que otras metodologías.
+Scrum define roles, ceremonias y artefactos de forma clara y estructurada.
+La mayoría de las empresas solo adoptan prácticas de Lean.
+Scrum es más popular en Europa que en el resto del mundo.
+
+¿Cuál es uno de los riesgos del daily standup como práctica ágil?
+3
+Incrementar el tiempo de desarrollo.
+Perder la visibilidad del equipo en el proyecto.
+Convertirse en un ritual vacío que no aporte al equipo.
+Dificultar la planificación del sprint.
+
+Según la sesión, ¿cuál es un desafío al definir métricas para evaluar el éxito de Agile?
+1
+Encontrar indicadores que realmente midan el valor entregado al cliente.
+Medir el tiempo de desarrollo.
+Definir un único indicador de satisfacción del cliente.
+Aumentar la eficiencia en las reuniones.
+
+¿Qué porcentaje de empresas usa iteraciones cortas en sus procesos ágiles?
+4
+80%
+75%
+90%
+64%
+
+¿Qué implica la práctica de la "propiedad colectiva del código"?
+1
+Todos los miembros del equipo pueden contribuir y modificar el código.
+Solo los Scrum Masters revisan el código del equipo.
+Cada desarrollador se encarga de una parte específica del código.
+El equipo de testers supervisa la calidad del código.
+
+¿Cuál es una crítica a las certificaciones de Scrum mencionada en la sesión?
+2
+Son obligatorias para todos los miembros de un equipo ágil.
+Pueden otorgarse sin garantizar competencias prácticas avanzadas.
+Solo están disponibles en ciertos países.
+No permiten roles flexibles dentro de un equipo.
+
+¿Cuál es uno de los principales objetivos del Manifiesto Ágil en cuanto a los procesos?
+3
+Seguir estrictamente las herramientas de gestión.
+Priorizar la entrega de grandes cantidades de código.
+Dar más importancia a las personas y sus interacciones sobre los procesos.
+Fomentar procesos detallados para todos los equipos.
+
+¿Qué objetivo de Agile se refleja en el término Kaizen?
+2
+La entrega rápida de productos.
+La mejora continua en el equipo y procesos.
+La supervisión constante de los managers.
+La reducción de reuniones y feedback.
+
+¿Qué práctica ágil tiene un menor porcentaje de adopción según el informe?
+4
+Refactorización.
+Pair programming.
+Continuous deployment.
+Test-driven development (TDD).
+
+¿Cuál es una desventaja de enfocarse demasiado en métricas de planificación en Agile?
+4
+Reduce el tiempo de desarrollo.
+Mejora la colaboración del equipo.
+Aumenta la satisfacción del cliente.
+Puede llevar a ignorar la entrega de valor real al cliente.
+
+¿Qué significa la frase “Agile es un viaje”?
+2
+Agile solo se puede implementar en fases avanzadas.
+Agile es un proceso continuo de mejora y adaptación.
+La implementación de Agile tiene un fin concreto.
+Agile se centra solo en la entrega final de productos.
+
+¿Qué ventaja ofrece la auto-organización en equipos ágiles?
+3
+Evita la necesidad de certificaciones.
+Aumenta la cantidad de trabajo diario.
+Facilita la adaptación a cambios y mejora la autonomía.
+Mejora la relación con los clientes.
+
+¿Cuál de los siguientes conceptos pertenece a las métricas de servicio en un equipo ágil?
+1
+Tiempo medio de respuesta del servidor.
+Número de iteraciones completadas.
+Historias completadas por iteración.
+Bugs resueltos.
+
+¿Qué tipo de métricas se utilizan para medir el rendimiento de un equipo en entregas continuas?
+4
+Test de regresión.
+Evaluaciones de producto.
+Documentación detallada.
+Métricas de integración continua.
+
+¿Qué podría suceder si una empresa cae en el overfitting al maximizar ciertas métricas de rendimiento?
+2
+Mejoraría todos los aspectos del equipo.
+Se centraría en indicadores específicos y descuidaría otros aspectos importantes.
+Aumentaría la satisfacción del cliente.
+Reduciría el costo del proyecto.
+
+¿Qué significa el concepto de Dark Scrum según Ron Jeffries?
+3
+Uso de Scrum en proyectos pequeños.
+Aplicación de Scrum sin el uso de sprints.
+Uso superficial de Scrum sin entender ni aplicar la filosofía ágil.
+Incorporación de técnicas avanzadas de XP en Scrum.
+
+¿Cuál es el objetivo principal de Agile según la sesión?
+1
+Entregar valor de forma continua al cliente.
+Reducir el tiempo de las reuniones diarias.
+Aumentar la cantidad de documentación.
+Mejorar la estructura del equipo.
+
+¿Qué significa en Agile la frase “Abraza el cambio”?
+3
+Realizar entregas rápidas y finales.
+Evitar cualquier modificación en el proyecto.
+Adaptarse y aceptar cambios en requisitos para satisfacer al cliente.
+Minimizar la cantidad de iteraciones.
+
+¿Cuál es un método para obtener feedback sobre el valor de las características de software?
+4
+Aumentar las líneas de código.
+Medir el tiempo de desarrollo.
+Reducir el número de defectos.
+Usar encuestas, entrevistas y herramientas de análisis.
+
+¿Qué muestra el gráfico de demografía del State of Agile en cuanto al tamaño de los equipos de desarrollo en las empresas encuestadas?
+2
+La mayoría de las empresas tienen equipos de más de 5,000 personas.
+El 33% de las empresas tienen menos de 100 personas en sus equipos de software.
+La mayoría de las empresas tienen entre 1,000 y 5,000 desarrolladores.
+Los equipos de menos de 100 personas son una minoría.
+
+¿Qué porcentaje de los encuestados en el State of Agile 2020 son miembros de equipos de desarrollo?
+3
+Un 30%.
+Un 50%.
+Un 7%.
+Un 20%.
+
+¿Cuál es un motivo por el cual mejorar la mantenibilidad del software recibe menor prioridad en el informe?
+4
+No es una prioridad para las metodologías ágiles.
+Se percibe como un problema exclusivo de equipos grandes.
+Es un indicador difícil de medir.
+Puede asociarse con corregir errores en lugar de mejorar la agilidad.
+
+¿Qué es un KPI en el contexto de medición de rendimiento en Agile?
+1
+Un indicador clave de desempeño.
+Una metodología de certificación.
+Un tipo de sprint especial en Agile.
+Una práctica específica de XP.
+
+¿Cuál es un problema de adoptar indicadores clásicos en la evaluación de equipos ágiles?
+4
+Mejoran la relación con el cliente.
+Aumentan la rapidez de entrega.
+Simplifican la colaboración del equipo.
+Pueden no reflejar adecuadamente el valor entregado al cliente.
+
+¿Qué representa un OKR en un equipo ágil?
+3
+Un proceso de integración continua.
+Un tipo de reunión diaria.
+Un objetivo con resultados clave medibles.
+Un plan de retrospectiva.
+
+¿Cuál es un riesgo al medir el rendimiento de un equipo solo por la cantidad de código producido?
+2
+Aumenta la complejidad del código.
+Puede ignorarse el valor real del software y enfocarse en cantidad sobre calidad.
+Mejora la eficiencia del equipo.
+Permite una entrega más rápida al cliente.
+
+¿Qué es el Taylorismo en relación con los procesos rígidos?
+1
+Un modelo que optimiza el trabajo al tratar a los trabajadores como engranajes del proceso.
+Un enfoque de Agile que mejora la auto-organización.
+Una metodología de planificación iterativa.
+Una práctica ágil centrada en el feedback continuo.
+
+¿Cuál es un ejemplo de métrica de soporte mencionada en la sesión?
+4
+Número de iteraciones completadas.
+Cantidad de historias entregadas.
+Número de tareas asignadas por semana.
+Tiempo medio de reparación (MTTR).
+
+¿Qué papel juegan las métricas de integración continua en Agile?
+2
+Aumentan el tiempo de desarrollo.
+Permiten evaluar el estado del proyecto en tiempo real y detectar errores rápidamente.
+Reducen la necesidad de feedback del cliente.
+Son indicadores para evaluar al cliente.
+
+Según la sesión, ¿qué debe poder hacer un equipo verdaderamente ágil?
+4
+Cumplir todas las reglas de Scrum al pie de la letra.
+Aumentar la cantidad de reuniones.
+Crear código de la forma más rápida posible.
+Adaptar y modificar sus procesos de trabajo según sus necesidades.
+
+¿Qué indica la frase “Agile no es solo Scrum”?
+3
+Que Agile incluye más ceremonias que Scrum.
+Que Scrum es una metodología exclusiva para desarrollo de software.
+Que Agile es un enfoque más amplio y no se limita a un marco específico.
+Que Scrum se aplica únicamente en empresas grandes.
+
+¿Qué sucede si una organización aplica el "falso Scrum"?
+1
+Adopta las prácticas de Scrum sin abrazar los valores ágiles.
+Optimiza su proceso de desarrollo siguiendo el manifiesto ágil.
+Mejora el feedback constante con el cliente.
+Aumenta su capacidad de entregar software.
+
+¿Por qué es importante la capacidad técnica en un equipo ágil, más allá de usar Scrum?
+3
+Facilita la creación de nuevas funcionalidades.
+Aumenta la cantidad de iteraciones.
+Permite realizar cambios sin generar deuda técnica y asegurar la evolución del producto.
+Reduce la necesidad de métricas de éxito.
+
+¿Qué busca la mejora continua (Kaizen) en Agile?
+2
+Cumplir con los sprints programados.
+Incrementar el nivel de excelencia del equipo mediante ajustes constantes.
+Disminuir el número de retrospectivas.
+Mejorar la cantidad de tareas asignadas.
+
+¿Qué significa la expresión “move fast and break things” en el contexto de desarrollo ágil?
+2
+Crear un desarrollo lento pero seguro.
+Priorización de la experimentación y la velocidad, aunque implique riesgos.
+Minimizar la cantidad de pruebas realizadas.
+Aumentar el control de calidad en todos los proyectos.
+
+¿Por qué es crucial medir el valor entregado al cliente en Agile?
+3
+Ayuda a reducir el tiempo de desarrollo.
+Mejora la velocidad del equipo.
+Permite asegurarse de que el software realmente cumple con las necesidades del cliente.
+Reduce la complejidad del software.
+
+¿Qué tipo de métricas pueden indicar problemas en la experiencia de usuario final?
+4
+Número de commits realizados.
+Cantidad de iteraciones completadas.
+Frecuencia de retros.
+Métricas de servicio, como errores del servidor y tiempo de respuesta.
+
+¿Qué técnica de Extreme Programming (XP) mencionada es poco utilizada en las empresas según el informe?
+3
+Daily standup.
+Revisión de sprint.
+Pair programming.
+User stories.
+
+¿Qué importancia tiene el feedback del cliente en el desarrollo ágil?
+2
+Permite reducir las líneas de código.
+Asegura que el equipo pueda adaptar el software a las necesidades reales y cambiantes del cliente.
+Elimina la necesidad de iteraciones.
+Simplifica el proceso de integración continua.
+
+¿Qué porcentaje de empresas usa únicamente Scrum, según el informe State of Agile?
+1
+58%
+76%
+40%
+23%
+
+¿Por qué es posible que el informe muestre una alta adopción de Scrum en lugar de XP?
+2
+XP es una metodología más moderna que Scrum.
+Scrum ofrece un marco con roles y ceremonias claramente definidos, que facilita su implementación.
+La mayoría de los encuestados son programadores y prefieren Scrum.
+XP es una metodología orientada solo a grandes empresas.
+
+Según el informe, ¿cuál es uno de los principales desafíos para las empresas al aplicar prácticas ágiles?
+3
+Realizar planificaciones detalladas.
+Aumentar la cantidad de entregas al cliente.
+Lograr realizar entregas continuas de software.
+Aumentar la satisfacción de los desarrolladores.
+
+¿Qué problema puede surgir cuando el equipo maximiza el número de historias entregadas sin considerar otros factores?
+2
+Mejora la satisfacción del cliente.
+Se puede perder el enfoque en el valor real entregado al cliente.
+Aumenta la velocidad de desarrollo.
+Incrementa la cohesión del equipo.
+
+¿Qué práctica de Scrum se centra en analizar y reflexionar sobre el rendimiento del equipo?
+4
+Daily standup.
+Revisión del sprint.
+Planificación del sprint.
+Retrospectiva.
+
+¿Qué problema puede surgir al medir el rendimiento del equipo únicamente por la cantidad de pull requests exitosos?
+3
+Aumenta la cantidad de defectos en producción.
+Mejora la calidad del software.
+Puede ignorarse si el software realmente satisface las necesidades del cliente.
+Reduce la complejidad del código.
+
+¿Qué valor resalta el manifiesto ágil respecto a los individuos?
+1
+Las interacciones entre personas están por encima de los procesos.
+La velocidad de trabajo es más importante que la interacción.
+Los procesos rígidos optimizan las interacciones.
+La cantidad de historias entregadas es clave.
+
+¿Qué significa el término “WIP” en el contexto de Agile?
+2
+Un método para organizar sprints.
+Trabajo en proceso.
+Un indicador de la velocidad del equipo.
+Un tipo de retrospectiva.
+
+¿Cuál es una diferencia clave entre Kanban y Scrum según la sesión?
+1
+Kanban se enfoca en limitar el WIP, mientras que Scrum organiza el trabajo en sprints.
+Kanban tiene roles fijos, mientras que Scrum es más flexible.
+Scrum es más popular que Kanban en grandes empresas.
+Kanban es exclusivo para equipos pequeños.
+
+¿Qué práctica es fundamental en Scrum para ajustar el trabajo en curso y las prioridades del sprint?
+3
+TDD.
+Planificación continua.
+Backlog grooming o refinamiento del backlog.
+Certificaciones Scrum.
+
+¿Por qué es relevante la frase “Si no cambias, no estás aprendiendo” en Agile?
+4
+Define la cantidad de iteraciones que un equipo debe realizar.
+Enfatiza la necesidad de realizar retrospectivas.
+Muestra la importancia de los procesos.
+Refuerza la idea de mejora continua y adaptación.
+
+¿Qué práctica de ingeniería ágil es usada en un 67% de las empresas según el informe?
+3
+Refactorización.
+Pair programming.
+Unit testing.
+Continuous deployment.
+
+¿Qué puede indicar la baja adopción de prácticas como continuous delivery y continuous deployment?
+2
+La falta de equipos ágiles en el proyecto.
+Dificultad para mantener una entrega frecuente y continua en la práctica.
+La ausencia de certificaciones en el equipo.
+Poco interés en las metodologías ágiles.
+
+¿Cuál es una característica única de XP en comparación con Scrum?
+1
+Énfasis en prácticas de desarrollo técnico, como el pair programming y TDD.
+Mayor flexibilidad en roles y ceremonias.
+Estructura rígida en sprints.
+Uso de OKRs para medir el progreso.
+
+Según la sesión, ¿cuál es un beneficio de definir OKRs en un equipo ágil?
+3
+Aumentan la velocidad de desarrollo.
+Facilitan la planificación del sprint.
+Permiten establecer objetivos claros y resultados medibles.
+Aseguran el cumplimiento estricto de los plazos.
+
+¿Qué indicador ayuda a medir la calidad del software desde un enfoque técnico?
+4
+Satisfacción del cliente.
+Cantidad de standups realizados.
+Número de historias entregadas.
+Porcentaje de cobertura de tests y cantidad de code smells.
+
+¿Por qué el Fake Scrum puede ser perjudicial para un equipo?
+1
+Porque aparenta usar Scrum sin aplicar los principios ágiles, lo que genera expectativas erróneas.
+Porque es una práctica exclusiva para equipos pequeños.
+Porque impide realizar entregas frecuentes.
+Porque aumenta la deuda técnica.
+
+¿Qué objetivo principal del Manifiesto Ágil se enfatiza en el uso de métricas orientadas al cliente?
+3
+Mejorar la planificación de sprints.
+Aumentar la cantidad de entregas en cada sprint.
+Entregar valor real al cliente de forma continua.
+Reducir el tiempo de cada iteración.
+
+¿Cuál es una práctica común en equipos ágiles para asegurar que todos estén alineados al inicio de cada día?
+2
+Pair programming.
+Daily standup.
+Retrospectiva.
+Continuous deployment.
+
+¿Qué importancia tiene la retrospectiva en un equipo ágil?
+3
+Medir la velocidad de las iteraciones.
+Planificar las próximas tareas.
+Reflexionar sobre los aspectos positivos y negativos del sprint para mejorar en el futuro.
+Analizar el cumplimiento de métricas.
+
+¿Qué métrica de soporte es útil para evaluar la estabilidad de un sistema en producción?
+4
+Número de historias completadas.
+Número de daily standups realizados.
+Cantidad de code reviews.
+Tiempo medio entre fallos (MTBF).
+
+¿Qué relación tiene la satisfacción del cliente con el valor entregado en Agile?
+3
+Son métricas totalmente independientes.
+La satisfacción del cliente se mide principalmente en retrospectivas.
+El valor entregado es crucial para asegurar la satisfacción del cliente.
+Solo afecta en sprints largos.
+
+¿Qué tipo de cultura laboral promueve Agile en oposición al Taylorismo?
+2
+Una cultura de procesos rígidos.
+Una cultura de autonomía y auto-organización.
+Una cultura de revisión exhaustiva de procesos.
+Una cultura de supervisión constante.
+
+¿Qué técnica de Agile permite ajustar la estructura del sprint según las necesidades cambiantes?
+1
+Refinamiento del backlog.
+Pair programming.
+Continuous delivery.
+Unit testing.
+
+¿Qué crítica se hace a las métricas relacionadas con el número de horas trabajadas por iteración?
+3
+Ayudan a mejorar la entrega de valor.
+Son útiles para medir la satisfacción del cliente.
+No reflejan adecuadamente el valor entregado y pueden promover prácticas de trabajo poco ágiles.
+Facilitan la planificación del sprint.
+
+¿Cuál es una de las razones por las que el daily standup es la práctica ágil más popular?
+3
+Es una práctica compleja que requiere mucha planificación.
+Requiere ser implementada solo por el Scrum Master.
+Es una práctica simple de implementar y ayuda a mantener la comunicación diaria.
+Permite revisar las métricas de calidad del sprint.
+
+Según la sesión, ¿qué aspecto de Scrum ha impulsado la creación del Agile Industrial Complex?
+4
+La velocidad de desarrollo que promueve Scrum.
+El uso de sprints en el marco de Scrum.
+La popularidad de los daily standups y retrospectivas.
+La comercialización de certificaciones y formación para Scrum.
+
+¿Cuál de los siguientes elementos es una métrica de calidad que se utiliza para evaluar el rendimiento técnico en Agile?
+1
+Número de code smells.
+Cantidad de reuniones.
+Horas trabajadas por iteración.
+Satisfacción del cliente.
+
+¿Por qué es importante evitar una obsesión por los procesos en Agile?
+3
+Porque ayuda a reducir la cantidad de sprints.
+Porque mejora la satisfacción del cliente.
+Porque los valores ágiles enfatizan la flexibilidad y la importancia de las personas.
+Porque agiliza la entrega de software.
+
+¿Qué problema puede surgir si una empresa hace demasiados overfitting en sus indicadores de éxito?
+1
+Puede perderse el enfoque en el valor real y priorizar métricas superficiales.
+Aumenta la calidad de las métricas.
+Mejora la satisfacción del cliente.
+Facilita la planificación de los próximos sprints.
+
+¿Qué es una característica común de los equipos que practican correctamente el "Kaizen"?
+4
+Reducir el tiempo de entrega a cualquier costo.
+Aumentar la cantidad de historias en cada iteración.
+Eliminar retrospectivas en cada sprint.
+Mejorar continuamente sus procesos y prácticas.
+
+¿Cuál es el principal beneficio de medir el valor entregado en lugar de solo medir la velocidad de desarrollo?
+2
+Facilita la planificación de sprints.
+Asegura que el software satisface las necesidades del cliente.
+Reduce la cantidad de iteraciones.
+Elimina la necesidad de reuniones.
+
+¿Qué implica la baja adopción de iteraciones cortas en empresas que dicen practicar Agile?
+1
+Que algunas empresas pueden no estar aplicando correctamente los principios ágiles.
+Que las empresas solo siguen Lean.
+Que la mayoría de las empresas utilizan XP.
+Que se prioriza el pair programming.
+
+¿Qué técnica permite evaluar cómo se está aplicando Agile en un equipo desde una perspectiva más amplia?
+3
+Revisión de código.
+Planificación de sprints.
+Definición y evaluación de OKRs.
+Uso de daily standups.
+
+¿Qué desafío común enfrentan las empresas en cuanto a la entrega continua de software?
+3
+Aumentar el número de roles en el equipo.
+Reducir la cantidad de bugs en producción.
+Mantener la consistencia en las entregas frecuentes y reaccionar ante cambios.
+Optimizar la cantidad de reuniones.
+
+¿Qué crítica hace Kent Beck a las certificaciones ágiles en su entrevista “Leaving Facebook”?
+4
+Que certifican solo a los líderes de equipo.
+Que promueven roles rígidos en Agile.
+Que no son reconocidas fuera de EE.UU.
+Que tras un curso breve no es posible dominar Agile, y el título de "Master" es engañoso.
+
+¿Por qué es relevante la satisfacción del cliente en el contexto de Agile?
+1
+Es un indicador clave del valor del software entregado.
+Ayuda a aumentar la velocidad de entrega.
+Facilita la evaluación técnica del código.
+Optimiza el tiempo de los daily standups.
+
+¿Qué relación tiene la entrega continua con la flexibilidad en Agile?
+4
+Permite cumplir mejor con el plan original.
+Mejora la cantidad de líneas de código producidas.
+Aumenta la cantidad de retrospectivas.
+Facilita la adaptación rápida a nuevas necesidades del cliente.
+
+¿Cuál es un objetivo fundamental de realizar retrospectivas periódicas en equipos ágiles?
+2
+Analizar el número de commits realizados.
+Reflexionar sobre el desempeño y buscar mejoras continuas.
+Reducir el tamaño de los sprints.
+Aumentar el número de roles en el equipo.
+
+¿Qué implica el concepto de “Agile es un viaje” en el desarrollo de software?
+3
+Que se debe seguir un conjunto rígido de prácticas.
+Que Agile se implementa en fases lineales.
+Que Agile requiere una mejora constante y una adaptación continua.
+Que Agile se enfoca en un destino único final.
+
+¿Qué sugiere el uso de métricas de soporte, como el tiempo medio de recuperación (MTTR), en Agile?
+1
+Medir la capacidad del equipo para resolver problemas en producción rápidamente.
+Evaluar el número de iteraciones completadas.
+Planificar el próximo sprint.
+Reducir el tiempo de las reuniones diarias.
+
+¿Qué diferencia clave menciona la sesión entre ser ágil y ser rápido?
+2
+La velocidad se mide en el número de iteraciones.
+Ser ágil implica poder adaptarse a cambios, no solo acelerar la entrega.
+La rapidez garantiza la satisfacción del cliente.
+La velocidad elimina la necesidad de retroalimentación.
+
+¿Cuál es un desafío del Fake Scrum en las organizaciones?
+4
+Facilita la adopción de sprints largos.
+Aumenta la entrega de historias por sprint.
+Mejora la satisfacción del cliente.
+Puede resultar en prácticas superficiales que no siguen los valores ágiles.
+
+¿Cuál es el propósito principal de las métricas de integración continua en Agile?
+3
+Reducir la cantidad de bugs en producción.
+Aumentar la cantidad de líneas de código.
+Monitorear la calidad y consistencia del desarrollo a medida que se avanza en el proyecto.
+Mejorar la velocidad de planificación.
+
+¿Qué refleja la frase “abraza el cambio” en la metodología ágil?
+2
+Evitar cualquier cambio en el proyecto.
+Aceptar cambios en los requisitos para asegurar que el software cumpla con las necesidades del cliente.
+Realizar entregas finales rápidas.
+Reducir la cantidad de retrospectivas.
+
+¿Qué ventaja ofrece el feedback del cliente en cada iteración de Agile?
+1
+Permite realizar ajustes que aseguren que el producto final cumpla con sus expectativas y necesidades.
+Mejora el código base desde una perspectiva técnica.
+Reduce la cantidad de historias en cada sprint.
+Facilita la planificación de las reuniones diarias.
+
+¿Qué se espera de un equipo verdaderamente ágil en cuanto a los valores del manifiesto?
+4
+Cumplir todas las fases de planificación.
+Mejorar la velocidad de desarrollo.
+Aumentar el número de roles en el equipo.
+Dar prioridad a las personas y las interacciones sobre los procesos y herramientas.
+
+¿Qué puede indicar la adopción de continuous delivery y continuous deployment en una empresa ágil?
+2
+Un enfoque en el desarrollo a largo plazo.
+Capacidad técnica para realizar entregas frecuentes y adaptarse rápidamente.
+Un interés en aumentar las reuniones diarias.
+La adopción de roles adicionales en el equipo.
+
+¿Cuál es uno de los objetivos principales de medir el tiempo medio entre fallos (MTBF) en Agile?
+3
+Reducir el número de retrospectivas.
+Optimizar las iteraciones.
+Evaluar la estabilidad y resiliencia del sistema en producción.
+Mejorar la cantidad de daily standups.
+
+¿Qué menciona Martin Fowler sobre el "Agile Industrial Complex"?
+3
+Promueve la colaboración entre equipos ágiles en diferentes empresas.
+Aumenta el uso de métricas de planificación en Agile.
+Refleja una preocupación por la comercialización excesiva de Agile a través de certificaciones y cursos.
+Reduce la dependencia de Scrum en equipos ágiles.
+
+¿Cuál de los siguientes es un ejemplo de KPI que podría usarse en un equipo ágil?
+1
+Porcentaje de historias completadas por iteración.
+Número de code reviews.
+Tiempo total de programación en pares.
+Cantidad de líneas de código producidas.
+
+¿Qué objetivo principal busca medir el uso de OKRs en equipos ágiles?
+2
+Mejorar la cantidad de bugs corregidos en cada iteración.
+Establecer objetivos claros y específicos con resultados clave para medir el progreso.
+Aumentar el número de historias entregadas por sprint.
+Facilitar la implementación de certificaciones.
+
+¿Qué indica la baja adopción de técnicas como pair programming en el informe?
+4
+Que se necesitan más roles en los equipos.
+Que XP no se usa en entornos ágiles.
+Que pair programming es una técnica poco efectiva.
+Que prácticas colaborativas técnicas avanzadas son menos comunes en las empresas.
+
+¿Por qué es relevante para Agile que un equipo tenga "propiedad colectiva del código"?
+3
+Facilita la eliminación de bugs.
+Incrementa la cantidad de sprints completados.
+Permite que cualquier miembro del equipo pueda modificar y mejorar el código, fomentando la colaboración.
+Optimiza el uso de herramientas de integración continua.
+
+¿Qué riesgo puede surgir de evaluar únicamente el número de historias completadas en cada iteración?
+4
+Se maximiza la deuda técnica del equipo.
+Se pierde el enfoque en la calidad del código.
+Se incrementa la cantidad de bugs.
+Puede ignorarse si el software cumple con las necesidades y expectativas del cliente.
+
+¿Qué problema podría surgir con el enfoque de métricas de sobreajuste (overfitting) en Agile?
+1
+El equipo podría optimizar indicadores específicos en detrimento de otros aspectos fundamentales, como la satisfacción del cliente.
+Aumenta la velocidad de desarrollo.
+Facilita la implementación de daily standups.
+Mejora la relación con el cliente.
+
+¿Cuál es uno de los beneficios de medir la "calidad del software" más allá de la velocidad de entrega?
+2
+Incrementa el número de daily standups.
+Ayuda a asegurar que el software sea mantenible y libre de defectos críticos.
+Facilita el uso de roles ágiles.
+Elimina la necesidad de retrospectivas.
+
+¿Qué relación tiene el Manifiesto Ágil con los KPIs en el contexto empresarial?
+3
+Promueve los KPIs como métricas fundamentales en Agile.
+Reduce la dependencia de los KPIs en entornos ágiles.
+Puede incluir KPIs, pero siempre que estos reflejen el valor entregado y la satisfacción del cliente.
+Limita el uso de métricas de rendimiento.
+
+¿Qué importancia tiene el concepto de "entrega continua" en Agile según el informe?
+4
+Reducir el número de retros.
+Aumentar el número de daily standups.
+Mejorar el uso de KPIs en las métricas del equipo.
+Asegurar que el software se pueda adaptar y ajustar constantemente a las necesidades del cliente.
+
+¿Cuál es una posible desventaja del Fake Scrum en las organizaciones?
+3
+Aumenta el número de roles en el equipo.
+Incrementa la velocidad del desarrollo.
+Puede crear una falsa impresión de agilidad sin seguir los valores fundamentales de Agile.
+Reduce el número de métricas usadas.
+
+Según la sesión, ¿qué tipo de metodología se buscó evitar con el nacimiento del movimiento ágil?
+1
+Los métodos de desarrollo rígidos e inflexibles.
+Los métodos de desarrollo rápidos.
+Los métodos con entrega continua.
+Los métodos con alta colaboración en equipos.
+
+¿Qué tipo de métricas puede ser útil para evaluar la "excelencia técnica" en Agile?
+2
+Cantidad de user stories.
+Cobertura de pruebas y refactorización constante.
+Número de daily standups.
+Cantidad de horas trabajadas por semana.
+
+¿Qué representa el "Kaizen" dentro de la filosofía ágil?
+3
+Aumentar la rapidez en los sprints.
+Mejorar la cantidad de código producido.
+Fomentar la mejora continua de procesos y prácticas.
+Reducir la deuda técnica.
+
+¿Qué beneficio aporta el refinamiento del backlog en un equipo ágil?
+4
+Aumenta la cantidad de retrospectivas.
+Facilita la planificación de la próxima iteración.
+Optimiza el número de daily standups.
+Ayuda a priorizar y ajustar el trabajo en curso según las necesidades del cliente.
+
+¿Cuál es el propósito de las prácticas avanzadas de ingeniería como el continuous delivery en Agile?
+1
+Asegurar que los cambios en el código se puedan implementar rápidamente y sin problemas en producción.
+Incrementar el número de historias por sprint.
+Facilitar la entrega final del software al cliente.
+Optimizar la velocidad de los daily standups.
+
+¿Cuál es una característica de un equipo que se organiza de acuerdo con los valores ágiles?
+2
+La dependencia en roles de supervisión.
+La auto-organización y capacidad para decidir cómo trabajar.
+La planificación a largo plazo sin flexibilidad.
+El enfoque en mantener un backlog inmutable.
+
+¿Qué tipo de métricas ayudan a monitorizar la estabilidad y resiliencia de un sistema en producción?
+3
+Velocidad de las iteraciones.
+Cantidad de daily standups.
+Métricas de soporte, como MTBF y MTTR.
+Número de pull requests realizados.
+
+¿Cuál es el papel de un Agile Coach en los equipos ágiles?
+4
+Liderar el desarrollo de código.
+Gestionar el backlog de producto.
+Controlar las métricas del sprint.
+Guiar al equipo en la adopción y mejora continua de prácticas ágiles.
+
+¿Qué importancia tiene el concepto de "prácticas de desarrollo" en el informe?
+3
+Facilita el incremento de roles en el equipo.
+Permite eliminar el uso de user stories.
+Asegura que el equipo implemente prácticas que mejoren la calidad técnica del software.
+Mejora la velocidad de las reuniones diarias.
+
+¿Por qué es importante para un equipo ágil medir el tiempo de commit a despliegue en integración continua?
+2
+Aumenta el número de iteraciones.
+Permite evaluar la rapidez con la que los cambios pueden pasar a producción, clave para una entrega continua.
+Optimiza el número de historias por sprint.
+Facilita la planificación del próximo sprint.
+
+¿Qué documento se considera fundacional para las metodologías ágiles?
+1
+El Manifiesto Ágil
+El libro The Pragmatic Programmer
+A Spiral Model of Software Development
+Software Engineering with Ada
+
+¿Cuál era el enfoque de desarrollo de software más común antes de las metodologías ágiles?
+4
+Desarrollo iterativo
+Programación orientada a objetos
+Metodologías ligeras
+Modelo de cascada
+
+¿Qué característica principal distingue a la Programación Orientada a Objetos en comparación con el modelo de cascada?
+2
+La documentación exhaustiva
+La flexibilidad y modularidad en el diseño
+La codificación sin pruebas unitarias
+El desarrollo en fases secuenciales
+
+¿Quién propuso por primera vez el desarrollo iterativo en software en los años 70?
+3
+Kent Beck
+Martin Fowler
+Tom Gilb
+Barry Boehm
+
+¿Cuál es una característica fundamental de las metodologías ligeras previas al manifiesto?
+2
+Énfasis en el seguimiento estricto de procesos
+Reducción de la documentación y adaptabilidad
+Desarrollo en fases secuenciales
+Fuerte dependencia en herramientas de gestión
+
+¿En qué año se creó el Manifiesto Ágil?
+1
+2001
+1999
+1996
+2003
+
+¿Dónde tuvo lugar la reunión en la que se desarrolló el Manifiesto Ágil?
+4
+Silicon Valley
+Nueva York
+Washington, D.C.
+Snowbird, Utah
+
+¿Cuál fue uno de los términos alternativos considerados antes de decidir "Ágil"?
+3
+Flexible
+Adaptativo
+Ligero
+Modular
+
+¿Cuál de estos NO es uno de los valores del Manifiesto Ágil?
+4
+Individuos e interacciones sobre procesos y herramientas
+Software en funcionamiento sobre documentación exhaustiva
+Colaboración con el cliente sobre negociación de contratos
+Seguimiento de un plan sobre responder al cambio
+
+¿Qué diferencia existe entre valores, principios y prácticas en el contexto ágil?
+2
+Los valores son específicos y aplicables a un solo contexto
+Los valores son más abstractos y generales, mientras que las prácticas son acciones específicas
+Los principios son los más abstractos y los valores son los más concretos
+Las prácticas son ideas generales que guían todas las acciones
+
+¿Qué principio ágil enfatiza la entrega frecuente de software?
+3
+Adaptarse a los cambios
+Mantener una buena documentación
+Entregar software que funcione frecuentemente
+Aumentar la velocidad de desarrollo
+
+¿Cuál de estos es un valor fundamental del Manifiesto Ágil?
+1
+Individuos e interacciones sobre procesos y herramientas
+Documentación exhaustiva sobre software en funcionamiento
+Seguimiento de un plan sobre responder al cambio
+Negociación de contratos sobre colaboración con el cliente
+
+¿Por qué el Manifiesto Ágil prefiere "software en funcionamiento" sobre "documentación exhaustiva"?
+3
+Porque reduce la carga de trabajo
+Porque la documentación es innecesaria
+Porque el software funcional proporciona valor real al cliente
+Porque la documentación ralentiza el desarrollo
+
+¿Qué es una "retrospectiva" en el contexto ágil?
+4
+Una fase de documentación exhaustiva
+Un informe de planificación para la siguiente fase
+Una revisión técnica del código
+Una reunión para reflexionar sobre cómo mejorar continuamente
+
+Según el Manifiesto Ágil, ¿cómo deben enfrentarse los equipos ágiles a los cambios en los requisitos?
+1
+Aceptándolos como oportunidades para mejorar el producto
+Rechazándolos para mantener la planificación inicial
+Documentándolos exhaustivamente antes de aplicarlos
+Considerándolos únicamente al inicio del proyecto
+
+¿Quiénes son los firmantes principales del Manifiesto Ágil relacionados con Extreme Programming (XP)?
+2
+Jeff Sutherland y Mike Beedle
+Kent Beck, Ward Cunningham y Martin Fowler
+Arie van Bennekum y Ken Schwaber
+Steve Mellor y Jon Kern
+
+¿Qué objetivo tiene el valor de "Colaboración con el cliente sobre negociación de contratos"?
+4
+Evitar cualquier tipo de contrato formal
+Aumentar la cantidad de reuniones con el cliente
+Establecer términos legales detallados
+Asegurar que el cliente participe activamente y sus necesidades sean comprendidas durante todo el proyecto
+
+¿Qué significa el valor de "Responder al cambio sobre seguir un plan"?
+3
+Crear un plan detallado antes de iniciar
+Hacer cambios solo al inicio del proyecto
+Adaptarse rápidamente a cambios en los requisitos del cliente
+Evitar cambios en la medida de lo posible
+
+¿Cuál es la medida principal de progreso en un proyecto ágil según el manifiesto?
+2
+La cantidad de documentación generada
+El software en funcionamiento
+La cantidad de reuniones realizadas
+La velocidad de los desarrolladores
+
+¿Qué principio ágil enfatiza la importancia de un "desarrollo sostenible"?
+3
+La entrega frecuente de software
+La simplicidad en el desarrollo
+Mantener un ritmo constante en el equipo a largo plazo
+La colaboración con el cliente
+
+¿Cuál de las siguientes afirmaciones sobre el modelo de cascada es correcta?
+1
+Es un enfoque secuencial en el que cada fase debe completarse antes de pasar a la siguiente.
+Está basado en el desarrollo incremental y la adaptación continua.
+Es el modelo de desarrollo recomendado en el Manifiesto Ágil.
+Fue creado en los años 90 como respuesta a los métodos ágiles.
+
+¿Qué características tenía el modelo de cascada en el desarrollo de software?
+3
+Enfoque en el trabajo en equipo y adaptabilidad.
+Desarrollo en fases iterativas e incrementales.
+Procesos secuenciales con poca adaptabilidad al cambio.
+Colaboración continua con el cliente en cada fase.
+
+¿Por qué se originaron metodologías ligeras en los años 90?
+2
+Para crear un modelo de desarrollo más burocrático.
+Para contrarrestar las metodologías pesadas y rígidas del modelo de cascada.
+Porque las empresas buscaban hacer más documentación en sus procesos.
+Para desarrollar software exclusivamente orientado a objetos.
+
+¿Quién de los siguientes fue uno de los principales impulsores de Extreme Programming (XP)?
+4
+Jeff Sutherland
+Alistair Cockburn
+Ken Schwaber
+Kent Beck
+
+¿Qué valor enfatiza el Manifiesto Ágil en relación a la entrega de software?
+2
+Cumplir con la documentación del proyecto
+Entregar software funcional con frecuencia
+Finalizar todos los requisitos antes de entregar
+Documentar cada entrega realizada
+
+¿Cuál es una ventaja principal del desarrollo iterativo en comparación con el modelo de cascada?
+3
+Menor cantidad de comunicación entre equipos
+Eliminación de las fases de prueba en el desarrollo
+Permite realizar adaptaciones durante el desarrollo
+Evita los ciclos de retroalimentación con el cliente
+
+¿Qué evento impulsó el nacimiento de nuevas formas de desarrollo de software en los 90?
+3
+La aparición de metodologías pesadas
+La necesidad de evitar los cambios en el software
+La llegada de la Web y la explosión de empresas punto-com
+La demanda de mayor documentación en proyectos
+
+¿Cuál de los siguientes principios ágiles fomenta la autonomía del equipo?
+4
+"Respetar la documentación sobre la interacción con el cliente."
+"Crear software que minimice el contacto con el cliente."
+"Incrementar la documentación del proyecto."
+"Construir proyectos alrededor de individuos motivados y confiar en ellos."
+
+¿Por qué el Manifiesto Ágil prioriza la “colaboración con el cliente”?
+2
+Para establecer claramente el contrato de trabajo
+Porque permite adaptar mejor el producto a las necesidades del cliente
+Porque reduce el tiempo de desarrollo
+Para garantizar que los desarrolladores decidan todas las funcionalidades
+
+¿Qué se entiende por "simplicidad" en el contexto del Manifiesto Ágil?
+3
+Reducir la cantidad de pruebas necesarias en el desarrollo
+Crear un diseño complejo y completo al inicio del proyecto
+Maximizar la cantidad de trabajo no realizado
+Desarrollar toda la funcionalidad en una sola fase
+
+¿Cuál es el enfoque en el Manifiesto Ágil respecto a los contratos en proyectos?
+1
+Valora la colaboración y flexibilidad en lugar de la negociación contractual rígida.
+Exige la definición exhaustiva de los contratos antes de comenzar.
+Evita cualquier tipo de contacto o colaboración directa con el cliente.
+No permite cambios en los contratos una vez establecidos.
+
+¿Qué implica el valor “individuos e interacciones sobre procesos y herramientas” en el contexto ágil?
+4
+Poner énfasis en la formalización de procesos de comunicación
+Valorar más las herramientas tecnológicas que los equipos humanos
+Mantener un enfoque rígido en los procesos
+Priorizar la comunicación y el trabajo en equipo por encima de los procesos estructurados
+
+¿Cómo el principio de “entrega frecuente de software que funcione” ayuda a los proyectos ágiles?
+2
+Evita el contacto frecuente con el cliente
+Proporciona retroalimentación constante y permite ajustes
+Aumenta la documentación exhaustiva de los entregables
+Permite cumplir con el plan inicial sin cambios
+
+¿Por qué el Manifiesto Ágil promueve “responder al cambio” sobre “seguir un plan”?
+3
+Para garantizar una planificación detallada en fases iniciales
+Para reducir la cantidad de entregas al cliente
+Porque reconoce que las necesidades del cliente pueden evolucionar
+Para minimizar la colaboración con el cliente
+
+¿Cuál fue una de las principales críticas al modelo de desarrollo en cascada?
+1
+La dificultad de adaptarse a cambios en los requisitos
+La falta de documentación detallada en el proceso
+La integración del cliente en cada fase del desarrollo
+La flexibilidad en la implementación de nuevas características
+
+¿Cuál de los siguientes no fue un antecedente directo del Manifiesto Ágil?
+4
+Programación orientada a objetos
+Desarrollo iterativo
+Metodologías ligeras
+Modelo de código cerrado
+
+¿Cuál es el principio ágil que se centra en crear un ritmo sostenible para los desarrolladores?
+3
+Colaboración con el cliente
+Documentación continua
+Desarrollo sostenible para mantener un ritmo constante
+Entrega de valor sin descanso
+
+¿Quiénes participaron en la reunión de Snowbird que dio origen al Manifiesto Ágil?
+2
+Exclusivamente los fundadores de Scrum
+Representantes de varias metodologías ligeras
+Solamente desarrolladores independientes
+Empresarios interesados en reducir costes
+
+¿Qué significa el término "deuda técnica" en el contexto ágil?
+4
+Es una deuda financiera del equipo de desarrollo
+Una metodología para minimizar el código escrito
+Una medida para aumentar la cantidad de trabajo en un proyecto
+La acumulación de problemas técnicos que pueden afectar la flexibilidad del código
+
+¿Cómo el Manifiesto Ágil describe la “mejor forma de compartir información en un equipo de desarrollo”?
+1
+A través de conversaciones cara-a-cara
+Mediante documentación exhaustiva
+A través de reuniones semanales detalladas
+Con un sistema complejo de tickets y reportes
+
+¿Cuál es una característica del enfoque ágil que lo diferencia del modelo en cascada?
+2
+Enfoque en la documentación exhaustiva de cada fase.
+Adaptación constante a los cambios en los requisitos del cliente.
+División del proyecto en fases secuenciales con revisiones rígidas.
+Menor comunicación con el cliente durante el desarrollo.
+
+¿Qué papel desempeña el product owner en un equipo ágil?
+4
+Garantizar que todo el equipo siga el plan inicial sin cambios.
+Liderar las reuniones de retrospectiva y planificación.
+Definir las prácticas de desarrollo utilizadas por el equipo.
+Actuar como intermediario con el cliente y priorizar los requisitos.
+
+¿Qué promueve el Manifiesto Ágil en términos de "responder al cambio"?
+1
+Ver el cambio como una oportunidad para mejorar el valor del producto.
+Evitar cambios a menos que sean estrictamente necesarios.
+Cumplir con el plan original para mantener el cronograma.
+Minimizar las modificaciones en el código después de cada iteración.
+
+¿Cómo ayuda la retrospectiva al final de cada iteración en el contexto ágil?
+3
+Aumenta la cantidad de trabajo planificado en el equipo.
+Facilita la creación de nueva documentación sobre el proyecto.
+Permite identificar áreas de mejora para el equipo y el proceso.
+Asegura que todos los miembros del equipo completen sus tareas.
+
+¿Cuál de los siguientes no es un valor fundamental del Manifiesto Ágil?
+4
+Colaboración con el cliente
+Software en funcionamiento
+Individuos e interacciones
+Planificación exhaustiva y rígida
+
+¿Qué fue uno de los objetivos clave de las metodologías ligeras antes del Manifiesto Ágil?
+1
+Reducir la burocracia y los procesos rígidos en el desarrollo de software.
+Establecer una documentación exhaustiva en cada fase de desarrollo.
+Aumentar el control gerencial sobre el equipo de desarrollo.
+Incrementar la complejidad en el proceso de desarrollo.
+
+¿Qué significa “maximizar la cantidad de trabajo no hecho” en el contexto ágil?
+3
+Evitar la programación de nuevas características.
+Maximizar la cantidad de tareas de cada iteración.
+Simplificar el producto eliminando trabajo innecesario.
+Aumentar la cantidad de documentación técnica del proyecto.
+
+¿Qué enfoque tiene un equipo ágil para definir cuándo una característica está "terminada"?
+2
+Basarse únicamente en la documentación técnica.
+Definir claramente los criterios de aceptación que debe cumplir.
+Completar el trabajo sin retroalimentación del cliente.
+Mantener el enfoque en la cantidad de código escrito.
+
+¿Por qué se considera importante la “entrega temprana y continua de software de valor”?
+1
+Permite al cliente visualizar y evaluar el producto en una fase temprana.
+Reduce la necesidad de pruebas y revisiones en el desarrollo.
+Facilita una documentación exhaustiva desde el principio.
+Minimiza la interacción con el cliente.
+
+¿Cuál de los siguientes principios no pertenece al Manifiesto Ágil?
+4
+Los mejores arquitecturas emergen de equipos auto-organizados.
+Entregar software funcional frecuentemente.
+Promover un ritmo de trabajo sostenible.
+Minimizar la interacción del equipo con el cliente.
+
+¿Qué afirma el principio de “la mejor forma de compartir información es cara-a-cara”?
+2
+Reduce la necesidad de usar herramientas de colaboración.
+Las conversaciones directas facilitan la comprensión y resolución de problemas.
+Evita la creación de documentación durante el desarrollo.
+Elimina la necesidad de reuniones periódicas.
+
+¿Cuál de las siguientes opciones es una práctica común en equipos ágiles para medir su rendimiento?
+3
+Incrementar la cantidad de horas de trabajo diarias.
+Evaluar el progreso según la documentación creada.
+Medir el software funcional entregado en cada iteración.
+Aumentar el número de cambios en los requisitos del cliente.
+
+¿Cómo el manifiesto ágil define el éxito en el desarrollo de software?
+1
+Satisfacer al cliente mediante la entrega temprana y continua de valor.
+Cumplir con los plazos establecidos en el cronograma inicial.
+Completar todas las tareas documentadas en cada fase.
+Minimizar la cantidad de cambios realizados en el proyecto.
+
+¿Cuál de los siguientes describe mejor la “gente de negocio” en el contexto ágil?
+4
+Aquellos responsables de la documentación técnica del producto.
+Miembros del equipo de desarrollo con conocimientos de negocio.
+Consultores externos que supervisan el proyecto.
+Clientes o stakeholders que definen las necesidades del producto.
+
+¿Qué representa el "valor de simplicidad" en el Manifiesto Ágil?
+3
+Reducir el número de iteraciones en cada proyecto.
+Completar tareas complejas para aumentar el valor del producto.
+Optimizar el producto evitando el trabajo innecesario.
+Crear documentación detallada para cada fase de desarrollo.
+
+¿Cuál es una de las razones principales para realizar retrospectivas al final de cada iteración?
+4
+Incrementar la cantidad de tareas completadas.
+Reducir el tiempo de cada iteración.
+Evitar la colaboración excesiva con el cliente.
+Identificar áreas de mejora en el proceso y el equipo.
+
+¿Cuál de los siguientes elementos es más valorado en un enfoque ágil?
+2
+Cumplir con el cronograma establecido sin cambios.
+La colaboración directa y continua con el cliente.
+Mantener un plan inicial sin modificaciones.
+Reducir el tiempo de desarrollo eliminando fases.
+
+¿Qué aspecto clave diferencia a los equipos ágiles de los equipos que siguen el modelo de cascada?
+3
+La dependencia en herramientas específicas de comunicación.
+La creación de documentación exhaustiva antes de la implementación.
+La capacidad de adaptación continua a nuevos requisitos.
+La separación estricta de cada fase del proyecto.
+
+¿Cuál es uno de los objetivos fundamentales al promover la "entrega continua de software" en Agile?
+1
+Aumentar la retroalimentación del cliente sobre el producto en cada iteración.
+Minimizar la cantidad de pruebas de integración.
+Evitar cambios en el software hasta la entrega final.
+Reducir la interacción con el cliente para ahorrar tiempo.
+
+¿Por qué es importante la “autoorganización” en equipos ágiles?
+4
+Permite reducir la cantidad de reuniones de retrospectiva.
+Facilita la planificación detallada a largo plazo.
+Asegura que cada miembro se concentre en su rol específico.
+Fomenta la responsabilidad y flexibilidad para mejorar el producto.
+
+¿Qué significa “entregar valor de forma continua al cliente” en el contexto ágil?
+2
+Solo entregar el producto final una vez que esté completo.
+Realizar entregas periódicas de software que el cliente pueda usar.
+Incrementar la documentación técnica en cada entrega.
+Aumentar la cantidad de reuniones con el cliente.
+
+¿Por qué el manifiesto ágil considera importante responder al cambio?
+3
+Facilita la planificación a largo plazo del proyecto.
+Permite reducir la colaboración con los clientes.
+Mejora la capacidad del equipo para entregar un producto útil.
+Disminuye el tiempo necesario para cada iteración.
+
+¿Qué propósito tiene el principio de "trabajo sostenible" en el Manifiesto Ágil?
+1
+Mantener un ritmo de trabajo constante que se pueda prolongar en el tiempo.
+Asegurar que todas las iteraciones se completen en menos de un mes.
+Reducir el número de entregas de software al cliente.
+Minimizar la interacción entre los desarrolladores y el product owner.
+
+¿Cuál es una consecuencia de no gestionar correctamente el “cambio” en proyectos ágiles?
+3
+Mejor rendimiento y productividad del equipo.
+Incremento en la satisfacción del cliente.
+Mayor dificultad para adaptar el software a las necesidades del cliente.
+Reducción en la cantidad de documentación producida.
+
+¿Qué se espera de un buen líder de equipo en un entorno ágil?
+2
+Dirigir y planificar todas las actividades del equipo de manera unilateral.
+Facilitar el conflicto positivo y la comunicación abierta en el equipo.
+Minimizar las reuniones para aumentar la eficiencia.
+Concentrarse únicamente en la entrega del producto final.
+
+¿Qué se prioriza en el principio ágil “software en funcionamiento sobre documentación exhaustiva”?
+1
+Crear un producto útil y funcional para el cliente.
+Aumentar la cantidad de documentos técnicos del proyecto.
+Implementar fases de prueba exhaustivas antes de cada iteración.
+Documentar todos los cambios realizados en cada entrega.
+
+¿Qué representa el valor de “individuos e interacciones sobre procesos y herramientas”?
+4
+Valorar la planificación exhaustiva y detallada del proyecto.
+Mantener el uso exclusivo de herramientas para la comunicación del equipo.
+Implementar protocolos estrictos para cada fase de desarrollo.
+Fomentar la comunicación directa y flexible entre los miembros del equipo.
+
+¿Qué práctica busca evitar el problema del “sobreajuste” en equipos ágiles?
+3
+Mantener la cantidad de tareas invariable a lo largo de las iteraciones.
+Eliminar todas las reuniones de retrospectiva para ganar tiempo.
+Enfocar los indicadores en objetivos de valor y no solo en métricas de rendimiento.
+Incrementar el trabajo en una sola característica por iteración.
+
+¿Cuál es la ventaja de un “entorno de trabajo colaborativo” en el contexto ágil?
+2
+Permite que cada miembro siga únicamente sus tareas asignadas.
+Facilita la comunicación y solución de problemas en equipo.
+Reduce la cantidad de interacciones con el cliente.
+Incrementa el control gerencial sobre el proyecto.
+
+¿Cuál era el propósito principal del modelo de desarrollo de software en cascada?
+2
+Permitir cambios en cualquier fase del proyecto.
+Definir una secuencia rígida de fases desde el análisis hasta el mantenimiento.
+Facilitar la entrega rápida del software al cliente.
+Evitar la creación de documentación exhaustiva en el desarrollo.
+
+¿Cuál es una de las desventajas del modelo en cascada según las metodologías ágiles?
+1
+Su rigidez frente a cambios en etapas avanzadas del proyecto.
+La falta de verificación en cada fase del desarrollo.
+La escasa documentación generada en cada fase.
+Su dependencia en herramientas de desarrollo específicas.
+
+¿Qué efecto tuvo la programación orientada a objetos en el desarrollo de software?
+4
+Aumentó el número de fases de desarrollo requeridas en cada proyecto.
+Redujo la importancia de la colaboración con el cliente en el proceso.
+Aumentó la necesidad de documentación exhaustiva en cada etapa.
+Facilitó un desarrollo más modular y flexible, promoviendo el diseño iterativo.
+
+¿Cuál fue una de las primeras metodologías ligeras que se popularizó en los años 90?
+3
+Scrum
+Crystal Methods
+Extreme Programming (XP)
+Model Driven Development
+
+¿Qué evento impulsó la creación del Manifiesto Ágil en 2001?
+2
+La publicación de la primera versión de Scrum.
+Una reunión de representantes de metodologías ligeras en Snowbird, Utah.
+La creación de metodologías tradicionales de desarrollo en los 80.
+La adopción de metodologías iterativas en proyectos militares.
+
+¿Cuál fue una de las razones para elegir la palabra "Agile" como nombre para el movimiento en lugar de "Lightweight"?
+4
+Porque reflejaba la rigidez necesaria en los procesos.
+Porque ya existían metodologías previas con ese nombre.
+Porque capturaba la rapidez que caracteriza al desarrollo ágil.
+Porque representaba mejor la adaptabilidad y la respuesta al cambio.
+
+¿Qué representa el valor “individuos e interacciones sobre procesos y herramientas” en el Manifiesto Ágil?
+3
+La necesidad de centrarse en el producto final.
+La importancia de evitar los cambios durante el desarrollo.
+La prioridad de las relaciones y la comunicación dentro del equipo.
+La necesidad de formalizar la documentación en cada fase del proyecto.
+
+¿Cuál es el objetivo de definir valores, principios y prácticas en el desarrollo ágil?
+1
+Adaptar el enfoque ágil a distintos contextos y necesidades del proyecto.
+Reducir la cantidad de entregas parciales de software.
+Incrementar la planificación detallada antes de cada fase del proyecto.
+Formalizar todas las fases del desarrollo en un solo documento.
+
+Según el Manifiesto Ágil, ¿cómo se debería medir el progreso de un proyecto?
+4
+A través de la cantidad de documentación generada.
+Mediante el cumplimiento del plan inicial.
+A través del número de reuniones de retrospectiva realizadas.
+Evaluando el software en funcionamiento entregado al cliente.
+
+¿Qué ventaja ofrece la “colaboración con el cliente” sobre la “negociación de contratos” según el Manifiesto Ágil?
+1
+Permite ajustar el producto de acuerdo a los cambios en las necesidades del cliente.
+Facilita una mejor planificación a largo plazo.
+Reduce la cantidad de interacciones necesarias con el cliente.
+Incrementa la documentación en cada entrega.
+
+¿Cuál de los siguientes principios NO forma parte de los valores del Manifiesto Ágil?
+2
+Colaboración con el cliente.
+Seguir un plan definido sin cambios.
+Entrega continua de software funcional.
+Responder a los cambios en el proyecto.
+
+¿Qué propósito tienen las retrospectivas en el contexto de Agile?
+3
+Reducir el tiempo de cada iteración del proyecto.
+Minimizar los errores técnicos durante el desarrollo.
+Identificar mejoras para el equipo y el proceso.
+Aumentar la cantidad de documentación en cada entrega.
+
+¿Cuál de los siguientes valores del Manifiesto Ágil promueve la adaptabilidad del equipo?
+4
+Documentación exhaustiva.
+Negociación de contratos.
+Cumplimiento del plan inicial.
+Responder al cambio.
+
+¿Qué motivó a los firmantes del Manifiesto Ágil a desarrollar este documento en 2001?
+2
+La necesidad de una metodología predictiva y detallada para el software.
+La búsqueda de alternativas al modelo rígido de desarrollo de software.
+La adopción de Scrum como la metodología estándar.
+La creación de prácticas avanzadas de documentación.
+
+¿Cuál es el beneficio de aplicar la "entrega continua de software funcional" para el cliente?
+3
+Incrementa el número de cambios necesarios en el producto.
+Facilita una planificación rígida a largo plazo.
+Permite al cliente evaluar el valor del producto de forma incremental.
+Reduce la colaboración necesaria con el equipo de desarrollo.
+
+¿En qué proyecto se popularizó inicialmente la metodología de Extreme Programming (XP)?
+2
+En el proyecto de creación de Smalltalk.
+En el proyecto Chrysler Comprehensive Compensation System (C3).
+En el desarrollo del primer libro de XP.
+En la creación de la wiki de XP.
+
+¿Qué característica NO es propia de la programación en parejas en XP?
+3
+Permite revisar el código de forma constante.
+Facilita la detección de errores y bloqueos en el desarrollo.
+Incrementa la velocidad de escritura de código de forma significativa.
+Requiere un espacio de trabajo adecuado y cómodo para dos personas.
+
+¿Cuál de los siguientes valores NO forma parte de los valores fundamentales de XP?
+1
+Productividad.
+Simplicidad.
+Comunicación.
+Respeto.
+
+¿Qué significa “diseño incremental” en XP?
+4
+Diseñar todo el sistema al principio para evitar cambios.
+Crear una arquitectura avanzada desde el inicio.
+Integrar todos los cambios al final del desarrollo.
+Hacer crecer el diseño y arquitectura del software de manera gradual, ajustándose al tamaño actual del sistema.
+
+¿Cuál es la principal diferencia entre la primera y la segunda edición del libro "Extreme Programming Explained"?
+2
+La primera edición contiene menos prácticas y es más ligera.
+La segunda edición incluye valores humanos y de dinámica de equipo, además de prácticas técnicas.
+La primera edición está orientada a equipos grandes, mientras que la segunda es para equipos pequeños.
+La segunda edición se centra exclusivamente en TDD y refactorización.
+
+¿Qué práctica de XP se refiere a la automatización de la construcción del sistema y la ejecución de todos los tests en menos de diez minutos?
+1
+Ten-Minute Build.
+Weekly Cycle.
+Continuous Integration.
+Test-First Programming.
+
+¿Cuál es el objetivo de la práctica de "Slack" en XP?
+4
+Aumentar la carga de trabajo del equipo para cumplir deadlines.
+Implementar historias adicionales al final del proyecto.
+Incluir siempre historias de mayor complejidad en la planificación.
+Incluir tareas menores que puedan ser abandonadas si es necesario para cumplir con la fecha de entrega.
+
+¿Qué enfoque utiliza la práctica de “Test-First Programming”?
+3
+Escribir el código antes y después crear los tests.
+Definir todos los tests al inicio del proyecto.
+Escribir primero un test que falle, luego implementar el código para que pase el test.
+Usar mocks para probar el código antes de escribir los tests.
+
+¿Cuál es una de las prácticas de planificación en XP que se realiza trimestralmente?
+2
+Weekly Cycle
+Quarterly Cycle
+Yearly Cycle
+Monthly Cycle
+
+¿Cuál es el propósito de la práctica de "Whole Team" en XP?
+4
+Dividir el equipo en grupos especializados por rol.
+Asegurar que cada miembro tenga una tarea específica asignada.
+Mantener a los programadores trabajando en diferentes proyectos a la vez.
+Formar un equipo multifuncional con todas las habilidades necesarias para el éxito del proyecto.
+
+¿Qué técnica se asocia comúnmente con XP para promover una mayor concentración y gestión del tiempo en los desarrolladores?
+3
+Programación en parejas
+TDD (Test Driven Development)
+Técnica del Pomodoro
+Diseño Incremental
+
+¿Cuál de los siguientes principios de XP promueve resolver conflictos de manera productiva y valora la variedad de perspectivas?
+2
+Calidad
+Diversidad
+Oportunidad
+Pequeños pasos
+
+¿Qué práctica secundaria de XP implica que el código sea responsabilidad de todos y no de un individuo específico?
+1
+Shared Code
+Code and Test
+Team Continuity
+Real Customer Involvement
+
+¿En qué consiste la práctica de “Real Customer Involvement”?
+3
+Delegar la responsabilidad del cliente al equipo de ventas.
+Recibir feedback del cliente al final de cada trimestre.
+Integrar al cliente dentro del equipo de desarrollo para una colaboración continua.
+Asegurar que los clientes envíen requisitos de manera estructurada.
+
+¿Cuál es el beneficio principal de la práctica de “Daily Deployment” en XP?
+4
+Facilita la integración en grandes lanzamientos.
+Reduce la necesidad de pruebas exhaustivas.
+Evita el despliegue incremental.
+Permite detectar problemas de producción rápidamente y recibir retroalimentación inmediata.
+
+¿Qué representa el ciclo de desarrollo semanal en XP?
+2
+El ciclo de desarrollo en el que se revisa el progreso del proyecto cada trimestre.
+Un periodo de trabajo en el que se define y completa un conjunto de historias de usuario.
+Un proceso de revisión diario de la productividad de cada desarrollador.
+La integración de nuevos miembros en el equipo cada semana.
+
+¿Cuál es el objetivo de la práctica “Informative Workspace”?
+3
+Proporcionar un espacio individual para que cada desarrollador trabaje.
+Mantener la oficina organizada y libre de documentos.
+Crear un entorno donde el progreso del proyecto sea visible y comprensible a simple vista.
+Fomentar la documentación exhaustiva del proyecto en informes semanales.
+
+¿Qué valores de XP ayuda a prevenir el fenómeno conocido como “cargo-cult”?
+4
+La simplicidad y la retroalimentación.
+La comunicación y la valentía.
+La valentía y el respeto.
+Los valores en general, que guían el porqué de las prácticas y evitan su ejecución sin entenderlas.
+
+¿Cuál es la principal ventaja de aplicar la práctica de “Pair Programming”?
+2
+Aumenta el rendimiento del equipo al duplicar el código producido.
+Facilita la detección de errores en tiempo real y refuerza la revisión continua del código.
+Permite que los desarrolladores trabajen en solitario y reduzcan conflictos.
+Minimiza la necesidad de realizar integraciones frecuentes en el sistema.
+
+¿Qué elemento diferencia principalmente a XP de otras metodologías ágiles como Scrum?
+3
+XP se enfoca en el cliente y sus necesidades.
+XP aplica ciclos iterativos de desarrollo.
+XP establece prácticas específicas orientadas al desarrollo de software.
+XP divide el equipo en roles muy específicos y ceremonias formales.
+
+¿En qué consiste la práctica de “Test-First Programming” en XP?
+1
+Escribir primero los tests y luego implementar el código para que estos pasen.
+Implementar el código y realizar las pruebas una vez completado.
+Desarrollar un código sin tests y posteriormente añadir los tests.
+Usar pruebas manuales después de que el código esté listo.
+
+¿Qué significa “Whole Team” en el contexto de XP?
+4
+Todo el equipo debe trabajar en el mismo espacio físico.
+El equipo debe estar compuesto solo por programadores.
+Los desarrolladores deben trabajar de manera individual para evitar conflictos.
+Todos los miembros necesarios para completar el proyecto forman parte del equipo.
+
+¿Cuál es el propósito de la práctica “Slack” en la planificación de XP?
+3
+Incluir tareas adicionales en el desarrollo para aumentar el rendimiento.
+Aumentar la carga de trabajo semanal del equipo.
+Incluir tareas no esenciales que puedan eliminarse si es necesario para cumplir con los deadlines.
+Integrar descansos regulares en el trabajo diario del equipo.
+
+¿Cuál de los siguientes NO es un valor fundamental en XP?
+2
+Comunicación
+Integridad
+Respeto
+Simplicidad
+
+¿Qué se busca lograr con el uso de la técnica de “Pomodoro” en el desarrollo de XP?
+4
+Aumentar la cantidad de líneas de código producidas.
+Evitar la retroalimentación constante.
+Permitir trabajar sin interrupciones durante un ciclo trimestral.
+Mantener una alta concentración en bloques de tiempo estructurados.
+
+¿Cuál es el propósito de una “delivery pipeline” en el desarrollo de software con XP?
+1
+Automatizar y facilitar el proceso de integración, construcción y despliegue de código.
+Incrementar la documentación de cada etapa del desarrollo.
+Dividir el proyecto en varias ramas de desarrollo.
+Asegurar que cada etapa del proceso se realice manualmente.
+
+¿Cuál es una de las ventajas de “Pair Programming” respecto a la propiedad del código?
+2
+Permite a los desarrolladores ser dueños individuales del código.
+Asegura que el código es revisado y compartido entre varios miembros del equipo.
+Permite realizar cambios de código sin aprobación.
+Requiere que solo una persona revise el código al final.
+
+¿Qué función cumple la “Quarterly Cycle” en XP?
+3
+Realizar entregas de software cada trimestre.
+Cambiar a los miembros del equipo cada trimestre.
+Revisar y planificar el progreso del proyecto a largo plazo cada trimestre.
+Dividir las historias de usuario en tareas trimestrales.
+
+¿Qué aspecto aborda el valor de “Valentía” en XP?
+4
+Mantener el código complejo para evitar errores.
+Priorizar la cantidad de funcionalidades implementadas.
+Trabajar sin realizar revisiones continuas.
+Enfrentar problemas, proponer soluciones y mejorar el diseño del sistema sin temor a errores.
+
+¿Cuál es el principal objetivo de la práctica de “Continuous Integration” en XP?
+1
+Integrar y probar frecuentemente los cambios en el código para detectar problemas temprano.
+Dividir el desarrollo en ciclos semanales.
+Hacer una revisión completa del código cada trimestre.
+Trabajar en diferentes ramas de desarrollo al mismo tiempo.
+
+¿Qué valor de XP enfatiza la creación de un entorno donde todos los miembros del equipo puedan contribuir libremente y sentirse valorados?
+3
+Simplicidad
+Valentía
+Respeto
+Retroalimentación
+
+¿Qué concepto en XP hace referencia a un sistema de trabajo que avanza mediante pequeños incrementos para facilitar el flujo continuo de desarrollo?
+4
+Entrega semanal
+Diseño incremental
+Despliegue continuo
+Flujo
+
+¿Qué práctica de XP se centra en realizar una revisión y planificación global del proyecto cada trimestre?
+2
+Weekly Cycle
+Quarterly Cycle
+Whole Team
+Test-First Programming
+
+¿Qué ventaja se obtiene al aplicar la práctica de "Real Customer Involvement"?
+3
+Aumenta la velocidad del desarrollo mediante la reducción de requisitos
+Permite al equipo trabajar con menor supervisión
+Facilita el ajuste del producto a las necesidades reales del cliente en cada iteración
+Aumenta el número de entregas de software al cliente
+
+¿Qué práctica de XP asegura que el equipo se sienta completo y que cada miembro contribuya desde sus habilidades específicas?
+1
+Whole Team
+Slack
+Pair Programming
+Weekly Cycle
+
+En el contexto de XP, ¿a qué se refiere "Single Code Base"?
+3
+Tener varias bases de código para diferentes versiones del proyecto
+Desarrollar en varias ramas simultáneamente para agilizar el desarrollo
+Usar una única rama de código base para el proyecto, facilitando la integración continua
+Utilizar varias bases de datos para cada entorno de desarrollo
+
+¿Qué ventaja proporciona el uso de “Slack” dentro de la planificación de XP?
+2
+Permite acumular tareas complejas a lo largo del proyecto
+Da flexibilidad al equipo para gestionar tareas no esenciales que pueden posponerse si es necesario
+Obliga al equipo a trabajar a un ritmo más rápido
+Facilita la documentación exhaustiva de todas las tareas del proyecto
+
+¿Por qué es importante el principio de “Small Steps” en XP?
+1
+Facilita el cambio gradual y continuo sin riesgos elevados en el proyecto
+Permite trabajar en grandes módulos del software a la vez
+Asegura que cada cambio sea visible para el cliente final
+Proporciona un incremento significativo de productividad a corto plazo
+
+¿Cómo contribuye el valor de “Comunicación” en XP al desarrollo ágil?
+4
+Facilita el trabajo en solitario de cada desarrollador
+Permite que el equipo evite la documentación de cada etapa
+Optimiza el uso de herramientas y procesos de comunicación formal
+Promueve la transparencia y asegura que todo el equipo esté al tanto de decisiones y objetivos
+
+¿Cuál es el propósito del “Minimum Viable Product” (MVP) en el contexto de XP?
+2
+Completar todo el producto en la primera iteración
+Crear una versión funcional con el mínimo de funcionalidades necesarias para entregar valor al cliente
+Definir todas las funcionalidades del producto antes de comenzar el desarrollo
+Crear un prototipo para pruebas internas, sin enfoque en el cliente final
+
+¿Qué valor de XP busca minimizar la complejidad innecesaria y promover la claridad en el código?
+1
+Simplicidad
+Retroalimentación
+Comunicación
+Respeto
+
+¿Qué es lo más importante a la hora de aplicar TDD (Test Driven Development) en XP?
+3
+Aumentar el número de líneas de código escritas cada día
+Hacer pruebas solo al final del desarrollo
+Escribir el test antes del código y programar solo lo necesario para que el test pase
+Documentar exhaustivamente cada prueba antes de implementarla
+
+¿Qué representa la práctica “Ten-Minute Build” en XP?
+4
+Un sprint de 10 minutos para realizar cambios en el proyecto
+La revisión de código realizada cada 10 minutos
+Un tiempo de espera de 10 minutos para el despliegue en producción
+La construcción completa y automatizada del sistema y ejecución de tests en un máximo de 10 minutos
+
+¿Cómo apoya el valor de “Retroalimentación” la adaptabilidad del equipo en XP?
+2
+Permite planificar con detalle todos los cambios de cada trimestre
+Proporciona información continua y rápida que guía las decisiones y ajustes necesarios en el proyecto
+Permite que el cliente solo participe al final de cada trimestre
+Facilita la documentación exhaustiva de cada ciclo
+
+¿Cuál de los siguientes es un principio fundamental en XP que enfatiza la mejora constante de las prácticas y procesos?
+4
+Respeto
+Valentía
+Responsabilidad compartida
+Mejora
+
+¿Cuál fue el proyecto en el que Kent Beck implementó por primera vez las prácticas de XP, aunque este no tuvo éxito?
+2
+Proyecto X15
+Proyecto C3 de Chrysler
+Proyecto Mercury
+Proyecto Spiral
+
+¿Qué valor en XP ayuda a mantener un entorno donde los miembros del equipo pueden expresar preocupaciones y buscar soluciones sin temor?
+1
+Valentía
+Simplicidad
+Retroalimentación
+Respeto
+
+¿Por qué la práctica de Pair Programming se considera beneficiosa en XP?
+3
+Permite duplicar la velocidad de desarrollo
+Reduce el número de líneas de código requeridas
+Mejora la calidad del código mediante la revisión constante entre compañeros
+Permite que el equipo tenga roles de desarrollo más específicos
+
+¿Cuál es el propósito de la práctica "Real Customer Involvement" en XP?
+2
+Evitar el feedback del cliente en cada iteración
+Asegurar que las funcionalidades desarrolladas se ajustan mejor a las necesidades del cliente
+Incrementar la cantidad de documentación requerida por el cliente
+Promover la programación en parejas en cada interacción con el cliente
+
+¿Qué principio XP se refiere a resolver problemas difíciles desde diferentes perspectivas y con múltiples enfoques?
+4
+Pequeños pasos
+Mejora
+Reflexión
+Redundancia
+
+¿Qué significa en XP la práctica “Informative Workspace”?
+3
+Un espacio de trabajo que permita a los desarrolladores trabajar en silencio
+Un entorno de trabajo virtual con herramientas colaborativas
+Un espacio en el que cualquier miembro del equipo pueda ver el estado del proyecto mediante elementos visuales
+Una oficina donde se agrupa a cada desarrollador en un cubículo separado
+
+¿Cuál de los siguientes es un beneficio principal del Test-First Programming en XP?
+2
+Reduce el número de iteraciones necesarias para el desarrollo
+Facilita la detección temprana de errores y asegura que el código cumpla con los requisitos desde el principio
+Permite que los desarrolladores trabajen sin necesidad de validar con el equipo
+Proporciona al cliente un prototipo final sin necesidad de feedback intermedio
+
+¿Qué objetivo se busca con la práctica de "Continuous Integration" en XP?
+4
+Evitar el uso de pruebas unitarias en el desarrollo
+Realizar una integración del sistema cada mes
+Mantener una única versión del código en entornos separados
+Asegurar que los cambios de código se integran regularmente para evitar problemas acumulados en el proyecto
+
+¿Qué valor subyacente permite al equipo XP aprender de los errores y tratar los problemas como oportunidades de mejora?
+3
+Simplicidad
+Valentía
+Retroalimentación
+Resiliencia
+
+¿Por qué es esencial el principio de "Flujo" en XP?
+4
+Aumenta el ritmo de trabajo mediante múltiples entregas diarias
+Optimiza los cambios estructurales grandes en el código
+Promueve el uso de varias versiones de código en paralelo
+Facilita la entrega continua de valor al cliente mediante el avance incremental en el desarrollo
+
+En la práctica de "Incremental Deployment", ¿cuál es la ventaja de ir desplegando poco a poco el sistema?
+2
+Evita la participación del cliente hasta la entrega final
+Reduce el riesgo al evitar grandes cambios de una sola vez
+Aumenta el número de funcionalidades en cada iteración
+Permite que el equipo trabaje en aislamiento de otros departamentos
+
+¿Cuál de los siguientes principios XP establece que es más efectivo adoptar prácticas que den beneficios inmediatos al equipo?
+3
+Flujo
+Mejora
+Beneficio mutuo
+Redundancia
+
+¿Qué ciclo en XP permite al equipo hacer revisiones periódicas y ajustes en la dirección general del proyecto?
+2
+Weekly Cycle
+Quarterly Cycle
+Slack Cycle
+Daily Integration
+
+¿Cuál de los siguientes describe mejor la técnica del "ping-pong" en Pair Programming dentro de XP?
+4
+Un miembro del equipo programa mientras el otro revisa
+Un desarrollador escribe la mayor parte del código mientras el otro asiste
+Se escriben todos los tests primero antes de iniciar el desarrollo del código
+Un desarrollador escribe el test y el otro el código necesario para pasarlo, alternándose en cada iteración
+
+¿Qué papel tiene el cliente en el ciclo de trabajo semanal de XP?
+1
+Seleccionar historias de usuario para el ciclo semanal y participar en la validación de las mismas
+Supervisar las pruebas finales de cada historia de usuario
+Realizar revisiones de código y planificar la arquitectura
+Integrar todos los cambios en el sistema
+
+¿Qué técnica originada en la comunidad Smalltalk utilizan Kent Beck y Ward Cunningham en XP para definir las responsabilidades de las clases?
+2
+Diagramas de flujo
+Tarjetas CRC
+Pruebas unitarias
+Historias de usuario
+
+¿Qué edición del libro "Extreme Programming Explained" introduce prácticas más orientadas a la dinámica del equipo que a la programación?
+3
+La primera edición
+La tercera edición
+La segunda edición
+La edición de 2019
+
+¿Cuál de estos fue un factor importante para la evolución de XP y la inclusión de prácticas humanas y de equipo en su segunda edición?
+1
+La influencia del Manifiesto Ágil
+El éxito del proyecto C3
+La adopción masiva de Scrum
+El avance en pruebas automatizadas
+
+En XP, ¿qué se entiende por "Whole Team"?
+3
+Un equipo de programadores con habilidades similares
+Un equipo enfocado en entregar el proyecto rápidamente
+Un equipo con todos los roles necesarios para completar el proyecto
+Un equipo dividido en subgrupos de especialistas
+
+¿Qué característica define el principio de "Self-Similarity" en XP?
+4
+Reducir los ciclos de desarrollo
+Utilizar siempre el mismo tipo de herramientas
+Trabajar en pares de manera constante
+Aplicar patrones conocidos a problemas similares en diferentes contextos
+
+¿Qué práctica XP implementada en el desarrollo de Eclipse permite recibir retroalimentación rápida de la comunidad de usuarios?
+3
+TDD
+Refactorización
+Despliegue diario
+Programación en parejas
+
+¿Por qué es importante la práctica de "Slack" en la planificación XP?
+2
+Para evitar que el equipo se agote en las tareas
+Para tener flexibilidad en la planificación si surgen retrasos
+Para incluir más tareas en la semana de desarrollo
+Para aumentar el número de historias a completar
+
+En la práctica de "Test-First Programming" de XP, ¿cuál es el primer paso a seguir en el ciclo de desarrollo?
+4
+Escribir el código principal para la funcionalidad
+Realizar una revisión en pares
+Ejecutar todos los tests
+Escribir un test específico para la funcionalidad a desarrollar
+
+¿Cuál es el propósito de la práctica "Ten-Minute Build" en XP?
+1
+Asegurar una retroalimentación rápida de los cambios en el sistema
+Integrar el código en el sistema cada noche
+Compilar sólo el módulo específico en desarrollo
+Minimizar los tiempos de programación en parejas
+
+¿En qué consiste la práctica "Real Customer Involvement"?
+3
+Que el cliente defina el diseño y arquitectura del proyecto
+Que el cliente esté disponible sólo al inicio y al final del proyecto
+Que el cliente forme parte activa del equipo de desarrollo y proporcione feedback continuo
+Que el cliente revise el producto terminado sin participar en el proceso
+
+¿Qué propone XP al hablar del "Minimum Viable Product" (MVP) en el contexto del diseño incremental?
+1
+Crear un producto con funcionalidades mínimas que ofrezca valor al cliente desde el inicio
+Desarrollar un prototipo con todas las funcionalidades del sistema
+Producir un diseño detallado al inicio del proyecto
+Completar todas las características requeridas antes de la entrega
+
+¿Qué beneficio proporciona la técnica del "pomodoro" en el contexto de "Energized Work" en XP?
+3
+Aumenta la cantidad de horas trabajadas en el día
+Reduce el número de tareas pendientes
+Mejora la concentración en períodos cortos y aumenta la productividad
+Facilita la comunicación constante en el equipo
+
+¿Cómo apoya la práctica de "Single Code Base" en XP el flujo de trabajo del equipo?
+2
+Facilita la separación de equipos en múltiples ramas de desarrollo
+Mantiene a todos los desarrolladores trabajando sobre una única versión del código
+Permite a cada desarrollador usar su propia versión de código
+Evita la integración continua en el sistema común
+
+¿Qué tipo de problemas ayuda a reducir la práctica de "Mob Programming"?
+4
+Problemas de integración nocturna
+Falta de especialización en el equipo
+Número excesivo de historias en curso
+Falta de colaboración y revisión en el equipo
+
+¿En qué consiste el principio de "Opportunity" en XP?
+1
+Tratar los problemas como oportunidades de aprendizaje y mejora
+Optimizar el rendimiento del equipo en grandes entregas
+Aislar las tareas complejas del flujo de trabajo general
+Aumentar el tamaño de los equipos para resolver problemas
+
+¿Cuál es el objetivo principal de la práctica de "Continuous Integration" en XP?
+3
+Reducir el tiempo de desarrollo en general
+Evitar la creación de ramas de código
+Integrar cambios frecuentemente para detectar problemas lo antes posible
+Limitar el uso de pruebas automatizadas
+
+En XP, ¿qué importancia tiene el principio de "Benefit to the Team"?
+1
+Que todas las prácticas deben beneficiar al equipo en el momento actual
+Que el equipo debe enfocarse en el beneficio del cliente
+Que el equipo no necesita realizar reuniones de revisión
+Que el equipo debe trabajar por separado para cumplir los objetivos
+
+¿Qué se entiende por "Energized Work" en la filosofía de XP?
+4
+Trabajar el mayor número de horas posible sin descanso
+Programar en pares durante todo el tiempo de trabajo
+Evitar los descansos para maximizar la productividad
+Mantener un ritmo de trabajo que permita a los desarrolladores ser productivos y sostenibles
+
+¿Cuál de los siguientes principios de XP promueve la adaptación del equipo al error como una forma de aprendizaje?
+2
+Simplicidad
+Fallo
+Reflexión
+Flujo
+
+¿Por qué XP promueve la práctica de "Real Customer Involvement"?
+3
+Para que el cliente entregue la documentación completa
+Para realizar entregas al cliente al final del proyecto
+Para asegurar que el cliente esté involucrado activamente y ofrezca retroalimentación continua
+Para que el cliente tenga control sobre el código fuente
+
+¿Qué papel juega el principio de "Diversity" en la metodología XP?
+2
+Homogeneizar las habilidades del equipo
+Fomentar la variedad de habilidades y perspectivas para enriquecer las soluciones
+Limitar el número de ideas sobre un diseño
+Promover un solo estilo de programación
+
+¿En qué se diferencia XP de otras metodologías ágiles como Scrum?
+4
+XP tiene un enfoque más detallado en la gestión del proyecto
+XP es más aplicable a proyectos no relacionados con el software
+XP asigna roles específicos como Scrum Master
+XP está especialmente orientado al desarrollo de software y prácticas de programación
+
+¿Cuál es el enfoque de XP sobre los contratos de trabajo en desarrollo de software, como se refleja en la práctica "Negotiated Scope Contract"?
+1
+Fijar tiempo, costo y calidad, dejando el alcance negociable
+Fijar todas las variables del proyecto al inicio
+Priorizar el contrato por sobre las necesidades del cliente
+Modificar el contrato solo en circunstancias excepcionales
+
+¿Qué significa "Incremental Deployment" en el contexto de XP?
+4
+Implementar todas las funcionalidades a la vez
+Realizar pruebas de integración cada tres meses
+Separar el código en módulos no relacionados
+Implementar el sistema en pequeñas partes progresivamente para minimizar riesgos
+
+¿Cómo contribuye la práctica de "Shared Code" a la colaboración en equipo en XP?
+2
+Asignando un propietario principal para cada módulo de código
+Permitiendo que todos los desarrolladores tengan acceso y puedan modificar cualquier parte del código
+Limitando las modificaciones del código a un solo miembro del equipo
+Delegando la responsabilidad de revisión de código a una sola persona
+
+En el principio de "Quality" en XP, ¿por qué es importante mantener un alto estándar de calidad en el producto?
+3
+Para cumplir con los requisitos legales
+Para evitar refactorizaciones frecuentes
+Porque la calidad mejora otras propiedades deseables, como la productividad
+Porque reduce el número de líneas de código
+
+¿Cuál es el propósito de la práctica "Informative Workspace"?
+1
+Mantener al equipo informado sobre el estado del proyecto y su evolución a través de recursos visuales
+Dividir el espacio en secciones individuales para cada miembro del equipo
+Controlar el uso de herramientas para el desarrollo
+Evitar la creación de gráficos y tarjetas en el entorno de trabajo
+
+¿Qué enfoque sugiere XP con la práctica de "Daily Deployment"?
+4
+Realizar despliegues cada semana
+Realizar despliegues solo cuando el cliente lo solicite
+Evitar el despliegue hasta que el sistema esté completo
+Poner el software en producción diariamente, subiendo cambios gradualmente
+
+¿Cuál es la principal diferencia entre la primera y la segunda edición del libro "Extreme Programming Explained"?
+3
+La primera edición elimina la programación en parejas
+La segunda edición fue escrita antes del Manifiesto Ágil
+La segunda edición incluye más énfasis en el equipo y en las dinámicas humanas
+La primera edición no menciona las prácticas de diseño incremental
+
+¿Qué importancia tiene la práctica de "Stories" en el diseño de XP?
+2
+Limitar el número de funcionalidades solicitadas por el cliente
+Definir funcionalidades pequeñas y específicas que se pueden organizar y priorizar
+Crear documentación exhaustiva para todas las funcionalidades
+Definir todas las características técnicas del sistema en una única tarjeta
+
+¿Cuál es el propósito principal de una historia de usuario en metodologías ágiles?
+2
+Definir el diseño técnico del sistema
+Proporcionar una base para la comunicación entre cliente y equipo de desarrollo
+Establecer un contrato obligatorio entre cliente y desarrolladores
+Organizar las tareas internas del equipo
+
+¿Por qué se prefiere el término "historia de usuario" sobre "requisito" en el contexto ágil?
+1
+Porque "historia" implica flexibilidad y colaboración
+Porque es una palabra más breve
+Porque las historias son más fáciles de dividir en tareas pequeñas
+Porque los requisitos no tienen que ser mutables
+
+¿Cuál es el formato más común para escribir una historia de usuario?
+1
+"Como (rol), quiero (acción) para lograr (objetivo)"
+"Para lograr (objetivo), el usuario debe (acción)"
+"Hacer que (rol) logre (acción) sin obstáculos"
+"El usuario realizará (acción) en el sistema para cumplir (objetivo)"
+
+¿Qué significa que una historia de usuario debe ser negociable según el modelo INVEST?
+1
+Que puede ser modificada o discutida con el cliente
+Que el cliente debe aceptar cualquier cambio
+Que no se debe modificar bajo ningún concepto
+Que debe ser estimada rápidamente
+
+¿Qué representa la característica de valiosa en el modelo INVEST?
+3
+Que la historia es relevante solo para el equipo técnico
+Que la historia es valiosa exclusivamente para el cliente
+Que la historia debe aportar valor para los que pagan el software
+Que la historia debe completarse en el menor tiempo posible
+
+¿Por qué es importante que una historia de usuario sea pequeña (Small) en el modelo INVEST?
+1
+Para facilitar su estimación y ejecución en un ciclo de desarrollo
+Para reducir su valor en el producto final
+Para evitar depender de otras historias
+Para evitar la duplicación de esfuerzos
+
+¿Cuál es el objetivo de los criterios de aceptación en una historia de usuario?
+3
+Definir los pasos de implementación
+Especificar detalles técnicos del código
+Verificar cuándo la historia está completa y cumple con lo acordado
+Calcular el tiempo estimado de desarrollo
+
+¿Qué significa el concepto de conversación dentro de las tres Cs de las historias de usuario?
+2
+Tener discusiones extensas sobre cada detalle técnico de la historia
+Facilitar la comunicación y comprensión entre cliente y desarrolladores
+Confirmar la historia con pruebas automatizadas
+Asegurar que el cliente esté presente en cada reunión del equipo
+
+¿Cuál de las siguientes opciones NO es una de las tres Cs de una historia de usuario?
+3
+Card
+Confirmation
+Creation
+Conversation
+
+En el modelo INVEST, ¿qué representa el criterio testable?
+2
+Que la historia se puede completar en una semana
+Que la historia debe ser probada y verificable con tests
+Que el equipo de desarrollo puede modificar la historia
+Que la historia se debe probar de manera manual
+
+¿Qué aporta el uso de un lenguaje del dominio en las historias de usuario?
+3
+Evita el uso de términos técnicos complejos
+Asegura que el software use un lenguaje técnico específico
+Promueve la precisión en los términos del negocio y facilita la comunicación con el cliente
+Hace que el código sea menos complejo
+
+¿Cuál de las siguientes NO es una ventaja de usar historias de usuario en lugar de requisitos tradicionales?
+3
+Fomentar la flexibilidad y adaptación al cambio
+Facilitar la priorización y agrupación en un tablero Kanban
+Establecer especificaciones detalladas desde el inicio
+Promover la colaboración continua con el cliente
+
+¿Qué representa el eje horizontal en el Mapa de Historias de Usuario propuesto por Jeff Patton?
+3
+La prioridad de cada historia en el proyecto
+La importancia del equipo de desarrollo
+La secuencia temporal de las actividades del usuario
+La cantidad de pruebas necesarias
+
+En un Mapa de Historias de Usuario, ¿qué se ubica en la parte superior, cerca de las actividades?
+2
+Las historias menos importantes
+Las historias con mayor prioridad y valor para el usuario
+Las pruebas de cada historia
+Las historias complejas y detalladas
+
+En el modelo INVEST, el criterio de estimable implica:
+2
+Que el cliente debe aprobar el esfuerzo estimado
+Que cada historia de usuario debe poder estimarse en términos de esfuerzo o tiempo
+Que las historias no pueden cambiarse de tamaño
+Que cada historia debe completarse en un plazo específico
+
+En el ejemplo del proyecto de control de una flota de vehículos, ¿cómo se utiliza el tablero Kanban?
+2
+Para seguir los detalles técnicos de cada vehículo
+Para rastrear el estado de cada historia en columnas de progreso
+Para estimar el costo de cada tarea
+Para almacenar las especificaciones finales del proyecto
+
+¿Qué simboliza el término backbone en el Mapa de Historias de Usuario?
+1
+Las actividades esenciales que soportan la funcionalidad principal de la aplicación
+La estructura física del software
+La lista de pruebas unitarias que pasaron
+La relación entre desarrolladores y clientes
+
+¿Cuál es el objetivo de identificar un esqueleto andante (walking skeleton) en el Mapa de Historias de Usuario?
+1
+Tener una versión mínima y funcional de la aplicación
+Establecer un estándar de calidad de las pruebas
+Establecer una lista de mejoras futuras
+Crear una historia principal que englobe todas las funcionalidades
+
+¿En qué momento se recomienda detallar completamente las historias de usuario en el contexto de XP?
+2
+Al inicio del proyecto
+Justo antes de su implementación, en el último momento responsable
+Durante la revisión de final de sprint
+Al finalizar la etapa de diseño del sistema
+
+¿Qué representa el uso de tarjetas físicas para historias de usuario en un equipo ágil?
+1
+Un recordatorio tangible y visual de las funcionalidades a implementar
+Una práctica innecesaria en proyectos digitales
+Una forma de almacenar datos de usuario
+Una manera de documentar el progreso semanal
+
+¿Cuál es la diferencia clave entre actividades y tareas en el Mapa de Historias de Usuario?
+1
+Las actividades son acciones generales, y las tareas son detalles específicos necesarios para cumplirlas
+Las actividades son tareas menores que deben completarse semanalmente
+Las tareas son acciones generales, y las actividades son detalles específicos
+No hay diferencia significativa entre actividades y tareas
+
+En el contexto de XP, ¿qué significa trabajar bajo el principio del último momento responsable?
+2
+Definir todos los requisitos al inicio del proyecto
+Detallar las historias solo cuando se va a comenzar su implementación
+Evitar hacer cambios en las historias de usuario
+Confirmar la historia con el cliente al final del proyecto
+
+¿Qué función cumplen los criterios de aceptación en una historia de usuario?
+3
+Sirven como documentación técnica del sistema
+Son una guía para descomponer la historia en tareas
+Especifican las condiciones que debe cumplir la historia para ser aceptada por el cliente
+Establecen el valor económico de la historia
+
+¿Cuál de las siguientes características es necesaria para que una historia sea considerada testable en el modelo INVEST?
+1
+Debe ser posible validar su implementación con pruebas automatizadas
+Debe poder completarse en un día
+Debe ser compleja y específica
+Debe ser independiente de otras historias
+
+En el Mapa de Historias de Usuario, ¿qué eje indica la importancia o necesidad de cada historia?
+1
+El eje vertical
+El eje horizontal
+El eje diagonal
+El eje de confirmación
+
+¿Por qué se utiliza un lenguaje de dominio al escribir historias de usuario?
+4
+Para garantizar que todos los desarrolladores comprendan el sistema
+Para incluir términos técnicos en la historia
+Para asegurar una documentación clara y detallada
+Para que el cliente y el equipo compartan un vocabulario común y preciso
+
+¿Qué representa el criterio de negociable en el modelo INVEST para historias de usuario?
+3
+Que la historia debe completarse en el plazo acordado
+Que la historia debe ser flexible en cuanto a su valor
+Que la historia no debe ser considerada un contrato rígido y cerrado
+Que la historia debe negociarse exclusivamente con el equipo técnico
+
+¿Cuál es el propósito de la técnica de User Story Mapping?
+2
+Documentar exhaustivamente cada requisito del proyecto
+Organizar historias de usuario en función de importancia y secuencia para mejorar la comprensión
+Reducir el número de historias en un proyecto
+Establecer un plan a largo plazo sin requerir iteraciones
+
+En el modelo INVEST, una historia estimable significa que:
+4
+Debe tener un valor económico específico
+Debe ser revisada por el cliente
+Debe requerir confirmación del equipo técnico
+Debe poder estimarse en términos de tiempo o esfuerzo necesario
+
+¿Qué beneficio aporta el concepto de independencia en una historia de usuario según INVEST?
+1
+Permite priorizar las historias sin dependencias complicadas
+Facilita la asignación de tareas de manera simultánea
+Reduce la necesidad de conversaciones entre el cliente y el equipo
+Evita la necesidad de criterios de aceptación
+
+¿Qué significa tener un backbone en un Mapa de Historias de Usuario?
+2
+Una estructura visual para almacenar información de pruebas
+Una estructura central de actividades esenciales de la aplicación
+Una lista de tareas pendientes
+Una jerarquía de dependencias entre historias
+
+¿Qué se recomienda hacer cuando una historia de usuario es demasiado grande?
+3
+Dejarla para una iteración posterior
+Implementarla en varias fases
+Dividirla en historias más pequeñas
+Incluirla directamente en la planificación del sprint
+
+¿Cuál de las siguientes NO es una de las tres Cs de una historia de usuario?
+3
+Confirmation
+Conversation
+Correction
+Card
+
+¿Cómo se determina si una historia es valiosa en el modelo INVEST?
+4
+Si requiere pocos recursos para completarse
+Si tiene un impacto mínimo en el sistema
+Si genera ingresos inmediatos
+Si proporciona un beneficio significativo para el cliente o el negocio
+
+¿Cuál es el objetivo de una tarjeta física para representar historias de usuario?
+1
+Funcionar como recordatorio visual para todo el equipo
+Ser un documento de referencia legal
+Establecer un contrato entre cliente y desarrollador
+Almacenar detalles técnicos de la implementación
+
+En el ejemplo del punto de información en una tienda, ¿cómo se utilizan las actividades y tareas en el Mapa de Historias de Usuario?
+3
+Las tareas se agrupan como actividades generales
+Las actividades no requieren tareas adicionales
+Las tareas detallan pasos específicos para cumplir con la actividad principal
+Las actividades se completan después de realizar todas las tareas
+
+¿Qué permite a los equipos XP organizar historias de usuario de manera efectiva?
+2
+Priorizar siempre las historias más pequeñas
+Dividir las historias en un tablero Kanban y un Mapa de Historias de Usuario
+Trabajar solo en una historia de usuario por ciclo
+Aplicar el modelo INVEST para priorizar
+
+¿Qué implica que una historia de usuario sea pequeña (Small) en el modelo INVEST?
+3
+Que debe contener la menor cantidad de detalles posible
+Que puede incluir varias tareas para el equipo
+Que es fácil de gestionar en un solo ciclo de desarrollo
+Que debe implementarse en el menor tiempo posible
+
+¿Cuál es el objetivo de utilizar historias de usuario en lugar de requisitos tradicionales?
+1
+Promover la colaboración y la adaptación al cambio en el equipo
+Documentar los requisitos exhaustivamente
+Establecer requisitos detallados sin intervención del cliente
+Aumentar el tiempo de implementación
+
+¿Qué significa el concepto de walking skeleton en el Mapa de Historias de Usuario?
+4
+Es un sistema de pruebas unitarias
+Una historia base sin funcionalidades
+Un sistema de medición de progreso
+Una versión mínima y funcional de la aplicación que puede usarse
+
+¿Cuál de las siguientes características hace que una historia de usuario sea negociable en el contexto de XP?
+2
+Que el cliente no puede realizar cambios en la historia
+Que la historia se pueda discutir y ajustar según las necesidades del cliente
+Que los desarrolladores decidan completamente el contenido de la historia
+Que las historias sean aprobadas por todos los miembros del equipo
+
+En un Mapa de Historias de Usuario, ¿qué permite visualizar el eje horizontal?
+3
+La prioridad de cada historia
+El tamaño de cada historia
+La secuencia temporal de las tareas o actividades
+El nivel de detalle de cada historia
+
+¿Cuál es el propósito de utilizar historias de usuario con un lenguaje de dominio específico?
+4
+Facilitar la documentación técnica del proyecto
+Evitar el uso de términos técnicos
+Definir el código fuente del proyecto
+Permitir que el equipo y el cliente hablen en términos del negocio o dominio
+
+¿Qué característica del modelo INVEST garantiza que una historia sea útil para el cliente?
+1
+Valiosa
+Pequeña
+Independiente
+Negociable
+
+¿Qué beneficio aporta que una historia sea pequeña (Small) en el modelo INVEST?
+3
+Facilita la división en ciclos más largos
+Permite añadir múltiples dependencias
+Hace más sencilla su implementación y estimación
+Evita la necesidad de pruebas adicionales
+
+¿Por qué se recomienda que las historias de usuario sean independientes entre sí?
+1
+Para facilitar su planificación y priorización
+Para asegurar que cada historia requiera varias tareas
+Para reducir la cantidad de criterios de aceptación
+Para facilitar la asignación de un único desarrollador
+
+En el contexto de XP, ¿qué significa tener historias valiosas?
+4
+Que proporcionen beneficios al equipo de desarrollo
+Que sean rápidas de implementar
+Que generen documentación adicional
+Que ofrezcan un beneficio claro para el cliente o negocio
+
+¿Qué implica el uso de la técnica de User Story Mapping?
+2
+Un diseño detallado de los requisitos técnicos
+Un taller con el cliente para organizar las historias de usuario
+Eliminación de historias duplicadas
+Definir criterios de aceptación para cada historia
+
+¿Qué permite que las historias en un Mapa de Historias de Usuario estén organizadas en niveles?
+2
+Definir historias con alta complejidad
+Priorizar visualmente las historias más importantes en la parte superior
+Evitar el uso de tarjetas físicas
+Asignar historias solo a un equipo específico
+
+¿Qué ventaja ofrece el concepto de backbone en el Mapa de Historias de Usuario?
+1
+Define las historias fundamentales de la aplicación
+Agrupa todas las historias en una sola fila
+Permite organizar las historias por tamaño
+Indica historias que no requieren pruebas
+
+¿Cuál es el propósito de los criterios de aceptación en las historias de usuario?
+3
+Ofrecer una descripción breve de la historia
+Confirmar el tamaño de la historia
+Definir condiciones específicas que debe cumplir la historia para ser aceptada
+Identificar a los miembros del equipo responsables
+
+¿Por qué se considera que una historia de usuario es testable en el modelo INVEST?
+4
+Porque incluye múltiples dependencias
+Porque es rápida de completar
+Porque define claramente los objetivos del equipo
+Porque permite crear pruebas para validar su cumplimiento
+
+¿Qué representa una actividad en el Mapa de Historias de Usuario?
+2
+Una tarea pequeña que puede completarse en un ciclo
+Un conjunto de acciones generales que cumplen con un objetivo específico
+Un conjunto de criterios de aceptación
+Una lista detallada de tareas específicas
+
+¿Cuál es la ventaja principal de las historias de usuario sobre los requisitos tradicionales en XP?
+1
+Facilitan la adaptación a cambios y la colaboración con el cliente
+Permiten definir todos los aspectos técnicos al inicio del proyecto
+Reducen el tiempo de implementación a la mitad
+Eliminan la necesidad de reuniones con el cliente
+
+¿Qué implica el principio de conversación en las historias de usuario?
+3
+Documentar de forma detallada cada historia
+Escribir las historias con un lenguaje técnico
+Fomentar la comunicación continua entre el equipo y el cliente para clarificar la historia
+Reducir el número de revisiones de cada historia
+
+¿Cuál de las siguientes opciones describe mejor el uso de una tarjeta física en historias de usuario?
+1
+Funciona como recordatorio visual para las conversaciones y criterios de aceptación
+Es un documento formal que detalla los requisitos
+Es un contrato entre el cliente y el equipo
+Sirve como documento técnico del proyecto
+
+¿Por qué es importante que una historia sea estimable en el modelo INVEST?
+4
+Para identificar quién la completará
+Para crear documentación exhaustiva
+Para evitar criterios de aceptación
+Para calcular el tiempo o esfuerzo que requiere
+
+En un Mapa de Historias de Usuario, ¿cómo se define el walking skeleton?
+3
+Una estructura temporal para completar historias
+Una herramienta para eliminar tareas innecesarias
+Una versión mínima y funcional que permite a los usuarios comenzar a usar el sistema
+Una lista de tareas en segundo plano
+
+¿Qué permite la organización visual de historias en un tablero Kanban?
+2
+Definir los requisitos completos de una historia
+Visualizar el progreso de cada historia en distintas columnas de estado
+Reducir la cantidad de historias necesarias
+Definir el valor económico de cada historia
+
+¿Cómo contribuyen los criterios de aceptación al éxito de una historia de usuario?
+1
+Definen de forma concreta las condiciones para que la historia sea considerada completa
+Reducen la necesidad de interacción con el cliente
+Eliminan la necesidad de pruebas automatizadas
+Permiten al equipo realizar estimaciones detalladas sin consultarlo con el cliente
+
+¿Cuál de las siguientes ventajas ofrece el uso del lenguaje del dominio en las historias de usuario?
+2
+Facilita la organización de las historias en un tablero
+Permite que el equipo y el cliente compartan una terminología precisa y sin ambigüedades
+Reduce el número de historias necesarias para el proyecto
+Evita la necesidad de reuniones de seguimiento
+
+¿Qué objetivo persigue el principio de conversation en el marco de las historias de usuario?
+3
+Definir las tareas técnicas en una conversación
+Especificar el código que debe implementarse
+Promover un intercambio continuo entre el cliente y el equipo sobre la historia
+Evitar cambios en la historia una vez acordada
+
+En el contexto de User Story Mapping, ¿qué representa el concepto de "esqueleto andante" (walking skeleton)?
+4
+Una lista de historias secundarias
+Un conjunto de tareas para el siguiente ciclo
+Un borrador del producto sin funcionalidades principales
+Una versión mínima y funcional del producto que abarca las características básicas
+
+¿Por qué las historias de usuario deben ser negociables en el marco del modelo INVEST?
+3
+Para evitar cambios en la historia
+Para reducir el tiempo de desarrollo
+Para que el equipo y el cliente puedan ajustar detalles según las necesidades
+Para que el cliente decida todas las especificaciones
+
+¿Cuál de las siguientes características hace que una historia de usuario sea considerada independiente?
+1
+Que pueda desarrollarse sin necesidad de depender de otras historias
+Que incluya varias funcionalidades a la vez
+Que sea fácilmente desestimada
+Que pueda completarse sin ser probada
+
+¿Qué propósito tiene el uso de tarjetas físicas para las historias de usuario?
+4
+Aumentar la complejidad del proyecto
+Registrar todas las especificaciones técnicas
+Documentar los criterios de aceptación
+Servir como recordatorio visual y flexible para el equipo y el cliente
+
+¿Cuál es la función principal de los criterios de aceptación en una historia de usuario?
+2
+Establecer el diseño gráfico del proyecto
+Definir claramente las condiciones para que la historia sea considerada completa
+Determinar los plazos de entrega
+Indicar la importancia de cada historia
+
+¿Por qué es recomendable que una historia de usuario sea pequeña en el modelo INVEST?
+3
+Para que pueda tener varios criterios de aceptación
+Para facilitar la creación de requisitos detallados
+Para mejorar la precisión de las estimaciones y facilitar la implementación
+Para reducir el número de historias en el proyecto
+
+¿Cuál es el beneficio de organizar historias en un Mapa de Historias de Usuario?
+2
+Elimina la necesidad de definir criterios de aceptación
+Permite visualizar la secuencia temporal y la importancia de cada historia
+Facilita la creación de documentación detallada
+Reduce el número de historias necesarias
+
+¿En qué momento se especifican en detalle las historias de usuario según el enfoque de XP?
+4
+Al inicio del proyecto
+Antes de su creación
+Durante las reuniones trimestrales
+En el "último momento responsable", justo antes de su implementación
+
+¿Qué permite el eje vertical en un Mapa de Historias de Usuario?
+3
+Definir el tiempo necesario para cada historia
+Mostrar la secuencia temporal de las actividades
+Organizar las historias según su nivel de importancia
+Distribuir las historias en grupos de trabajo
+
+¿Qué caracteriza a una historia de usuario que cumple con el principio de valiosa en el modelo INVEST?
+1
+Ofrece un valor claro y directo para el cliente o negocio
+Permite cambiar fácilmente sus criterios de aceptación
+Incluye varios criterios de aceptación
+Es fácil de programar
+
+¿Cuál de los siguientes es un ejemplo de historia de usuario en formato rol-acción-objetivo?
+2
+Quiero una funcionalidad para ver los datos
+Como usuario, deseo acceder al historial para ver transacciones pasadas
+La transacción debe guardarse en el sistema
+Hacer un seguimiento de todas las actividades
+
+En la técnica de User Story Mapping, ¿cómo se determinan los niveles de importancia de las historias?
+3
+A partir de las decisiones técnicas
+Siguiendo un orden alfabético
+Organizándolas verticalmente, de las más importantes en la parte superior a las menos importantes en la parte inferior
+Según el coste estimado para cada historia
+
+¿Qué característica distingue a una actividad de una tarea en el Mapa de Historias de Usuario?
+2
+Las actividades son menos importantes que las tareas
+Las actividades son de nivel general y agrupan tareas específicas relacionadas
+Las tareas incluyen menos criterios de aceptación
+Las tareas se completan antes que las actividades
+
+¿Cuál es el objetivo de utilizar conversaciones en torno a las historias de usuario?
+3
+Reducir el tiempo de desarrollo
+Definir todas las especificaciones de la historia
+Permitir al equipo y al cliente aclarar y ajustar las funcionalidades de la historia
+Establecer contratos entre el equipo y el cliente
+
+¿Qué ventaja ofrece el formato "Como (rol), quiero (acción) para (objetivo)" para escribir historias de usuario?
+2
+Evita la necesidad de criterios de aceptación
+Facilita la comprensión de la historia desde el punto de vista del usuario
+Reduce la cantidad de historias en el proyecto
+Permite que el equipo técnico determine las funcionalidades
+
+¿Por qué se recomienda que una historia de usuario sea testable en el modelo INVEST?
+4
+Para definir más criterios de aceptación
+Para identificar dependencias
+Para evitar la creación de requisitos
+Para permitir la validación de su cumplimiento mediante pruebas
+
+¿Qué función cumple el lenguaje del dominio en las historias de usuario?
+3
+Facilitar la creación de pruebas
+Aumentar la precisión técnica de las historias
+Promover un lenguaje compartido que permita al equipo y al cliente entender claramente el negocio
+Definir los criterios de aceptación de cada historia
+
+¿Cuál es el propósito de agrupar historias en un Mapa de Historias de Usuario?
+1
+Organizar las historias en función de la importancia y secuencia temporal
+Dividir las historias en módulos de desarrollo
+Eliminar historias redundantes
+Definir el valor de negocio de cada historia
+
+¿Cuál de los siguientes es un propósito de las historias de usuario en el desarrollo ágil?
+3
+Documentar exhaustivamente todos los requisitos del sistema
+Definir tareas internas del equipo técnico
+Servir como base de comunicación efectiva entre el cliente y el equipo
+Organizar los tiempos de desarrollo de cada funcionalidad
+
+¿Qué significa el principio Confirmation en las historias de usuario?
+2
+Especificar el tiempo necesario para cada historia
+Definir claramente los criterios de aceptación que validan la historia
+Incluir todos los requisitos detallados en la tarjeta
+Establecer un contrato con el cliente para la implementación
+
+¿En qué se diferencia una épica de una historia de usuario típica?
+4
+La épica es una tarea técnica y la historia es funcional
+La épica no tiene criterios de aceptación
+La historia es más pequeña y puede dividirse en varias épicas
+La épica es una historia grande que debe dividirse en historias más pequeñas
+
+¿Qué característica de las historias de usuario permite que sean testables según el modelo INVEST?
+1
+Definir criterios de aceptación claros para validar cada historia
+Ser pequeñas y manejables
+Permitir negociaciones con el cliente
+Ser independientes de otras historias
+
+¿Cuál de los siguientes es un ejemplo de una historia valiosa para el cliente?
+2
+Definir los criterios de aceptación de la aplicación
+Permitir al usuario acceder rápidamente a sus datos de perfil
+Registrar todas las interacciones en un log interno
+Reducir el tiempo de desarrollo en tareas técnicas
+
+¿Por qué es importante que las historias de usuario sean estimables?
+3
+Para evitar la dependencia entre historias
+Para facilitar la organización en el tablero
+Para permitir al equipo realizar una planificación realista y ajustada
+Para crear una lista de tareas de menor tamaño
+
+En un Mapa de Historias de Usuario, ¿qué representa el eje horizontal?
+4
+El nivel de importancia de cada historia
+Las funcionalidades menos necesarias del sistema
+La agrupación de historias por tipo
+La secuencia temporal que sigue el usuario al utilizar la aplicación
+
+¿Cuál es la diferencia principal entre una historia y un requisito en el enfoque ágil?
+3
+Los requisitos son opcionales y las historias no
+Las historias son inmutables y los requisitos pueden cambiar
+Las historias son flexibles y adaptables, mientras que los requisitos suelen ser obligatorios
+Los requisitos incluyen especificaciones técnicas detalladas
+
+¿Qué aporta la técnica de User Story Mapping al proceso de desarrollo ágil?
+1
+Facilita la organización de las historias de usuario en un flujo secuencial y priorizado
+Elimina la necesidad de criterios de aceptación
+Reduce el número de historias necesarias
+Aumenta la cantidad de funcionalidades en el proyecto
+
+¿Cómo ayuda el uso de tarjetas físicas en la práctica de historias de usuario?
+2
+Permite crear historias de usuario inmutables
+Fomenta la flexibilidad y facilita el ajuste de las historias durante el desarrollo
+Hace que la historia sea un contrato formal
+Elimina la necesidad de conversaciones con el cliente
+
+¿Qué objetivo tiene la práctica de dividir las historias de usuario en tareas y actividades?
+1
+Organizar el trabajo de manera que las actividades abarquen varias tareas específicas
+Asegurar que todas las historias tengan el mismo tamaño
+Evitar la creación de criterios de aceptación
+Crear un contrato de desarrollo con el cliente
+
+¿Qué se busca al priorizar las historias de usuario en un Mapa de Historias de Usuario?
+2
+Definir la arquitectura del sistema
+Alinear las funcionalidades con los objetivos más importantes del cliente
+Crear una lista exhaustiva de todos los requisitos
+Definir las especificaciones técnicas de cada historia
+
+¿Qué permite el principio de slack en la planificación de historias de usuario?
+4
+Definir tareas críticas con plazos estrictos
+Evitar los criterios de aceptación
+Incluir historias de usuario inmutables
+Contar con tareas flexibles que puedan posponerse en caso de necesidad
+
+¿Cómo se diferencia una historia de usuario grande (épica) de una historia pequeña?
+3
+No tiene criterios de aceptación
+Incluye todos los requisitos detallados
+Debe dividirse en historias más pequeñas y manejables
+Es menos valiosa para el cliente
+
+¿Cuál es una de las razones principales para realizar un Mapa de Historias de Usuario?
+2
+Documentar todas las funcionalidades técnicas
+Organizar visualmente el flujo de trabajo del usuario y priorizar las historias
+Definir los criterios de aceptación de cada historia
+Evitar la creación de nuevas historias durante el proyecto
+
+¿Por qué se recomienda que las historias de usuario sean independientes?
+1
+Para que cada historia pueda desarrollarse sin depender de otras
+Para reducir la cantidad de funcionalidades en el proyecto
+Para que todas las historias tengan el mismo valor
+Para hacer que el proyecto avance más rápidamente
+
+¿Qué papel juega el lenguaje del dominio en la redacción de historias de usuario?
+4
+Facilitar la creación de tests automáticos
+Reducir la necesidad de criterios de aceptación
+Definir plazos de entrega específicos
+Alinear el vocabulario entre el equipo y el cliente para facilitar la comprensión
+
+¿Qué beneficios aporta el uso de criterios de aceptación en las historias de usuario?
+2
+Permite crear historias inmutables
+Define claramente cuándo una historia se considera completada y correcta
+Facilita la documentación del proyecto
+Elimina la necesidad de descomponer la historia en tareas
+
+¿Cuál es el propósito de las conversaciones continuas sobre historias de usuario en XP?
+3
+Crear una lista exhaustiva de especificaciones
+Evitar el cambio en las historias
+Mantener la comunicación abierta entre el cliente y el equipo para ajustar las expectativas
+Definir los detalles técnicos de cada funcionalidad
+
+¿Cómo se utiliza el eje vertical en un Mapa de Historias de Usuario?
+4
+Para definir la secuencia temporal de las historias
+Para organizar las historias por áreas técnicas
+Para agrupar historias con criterios de aceptación similares
+Para ordenar las historias según su importancia o prioridad
+
+¿Cuál es el primer paso en el ciclo de TDD?
+2
+Escribir el código necesario para pasar el test
+Escribir un test que describa el comportamiento deseado del código
+Refactorizar el código para mejorar su diseño
+Hacer que el test anterior pase exitosamente
+
+¿Qué objetivo tiene el paso de "refactorización" en el ciclo de TDD?
+3
+Aumentar la velocidad del código
+Añadir nuevas funcionalidades
+Mejorar el diseño del código sin cambiar su comportamiento
+Eliminar todos los tests anteriores
+
+¿Cuál es una ventaja principal de realizar cambios en pequeños pasos en TDD?
+2
+Permite hacer grandes cambios rápidamente
+Reduce el riesgo de introducir errores
+Elimina la necesidad de hacer tests
+Permite implementar cambios sin pensar en el diseño
+
+En el enfoque TDD, ¿en qué orden se suelen implementar los elementos de un algoritmo?
+3
+Cálculos, bucles, manejo de errores, interfaz
+Interfaz, manejo de errores, condicionales, bucles
+Interfaz, cálculos y condicionales, bucles, casos especiales y manejo de errores
+Casos especiales, interfaz, condicionales, bucles
+
+¿Cuál es el propósito de un test en el contexto de TDD?
+1
+Proporcionar una hipótesis o predicción sobre el comportamiento del código
+Validar la implementación técnica del código
+Identificar errores en la interfaz de usuario
+Documentar todos los requisitos del cliente
+
+¿Qué se entiende por el término "triangulación" en TDD?
+4
+Definir el algoritmo principal antes de escribir tests
+Hacer una refactorización completa del código
+Escribir un test para todo el sistema antes de empezar a programar
+Añadir más ejemplos en los tests para obligar a generalizar el código
+
+¿Qué significa el concepto "Make the change easy and then make the easy change"?
+2
+Escribir primero el cambio y después refactorizarlo
+Refactorizar el código para facilitar un cambio antes de implementarlo
+Crear cambios complejos que sean fáciles de probar
+Realizar un único cambio grande en el código
+
+¿En qué consiste la técnica TCR (Test && Commit || Revert)?
+3
+Permite realizar grandes cambios sin tests
+Hace commits automáticamente sin pruebas previas
+Si el test pasa, hace un commit; si falla, revierte al último commit
+Permite omitir tests de funcionalidad en ciertos momentos
+
+¿Qué indica si es difícil escribir un test en TDD?
+1
+El diseño del código podría necesitar mejoras
+El test no está correctamente definido
+El código es demasiado simple
+No es necesario realizar cambios en el test
+
+¿Cuál de las siguientes es una crítica común al uso de TDD?
+2
+Fomenta una sobrecarga de pruebas automatizadas
+Puede hacer que el desarrollo inicial parezca más lento
+Obliga a realizar cambios muy rápidos en el código
+Elimina la necesidad de diseñar interfaces
+
+¿Qué se espera de un buen test en TDD?
+3
+Debe probar varias funcionalidades complejas
+Debe validar todo el sistema a la vez
+Debe enfocarse en un pequeño incremento de funcionalidad
+Debe ejecutarse al final de la implementación
+
+¿Qué diferencia principal hay entre TDD y "test de caja negra"?
+2
+TDD no necesita ejecución de tests
+TDD se basa en tests que guían el desarrollo desde dentro del código
+Los tests de caja negra son siempre internos
+TDD solo se aplica en proyectos ágiles
+
+¿Qué representa la metáfora de la "cebolla" en el enfoque TDD?
+1
+La construcción de funcionalidades desde las capas internas hacia las externas
+Dividir el código en módulos internos y externos
+Realizar todos los tests al mismo tiempo
+Diseñar el sistema desde la interfaz hasta los detalles internos
+
+En TDD, ¿qué se suele hacer si un test falla tras una refactorización?
+3
+Ignorar el test fallido y continuar
+Eliminar el test fallido
+Revisar y ajustar el código para que el test pase
+Escribir un nuevo test
+
+¿Cuál de las siguientes es una ventaja de TDD mencionada en la sesión?
+1
+Permite tener una especificación clara de lo que el código debe hacer en todo momento
+Reduce el número de funcionalidades del proyecto
+Evita el uso de pruebas automatizadas
+Hace innecesaria la refactorización
+
+¿Por qué es útil el patrón "value object" en el contexto de TDD?
+4
+Permite hacer que el código pase sin cambios
+Evita la creación de nuevos objetos en el sistema
+Simplifica la estructura de las clases en general
+Asegura que los objetos se comparen por valor en lugar de por identidad
+
+¿Cómo se aplicó el patrón "value object" en el ejemplo de las monedas en TDD?
+2
+Al hacer que todos los métodos devolvieran el mismo valor
+Al crear nuevas instancias para cada operación en lugar de cambiar la instancia original
+Al implementar un único método para modificar el valor de la moneda
+Al permitir cambiar el valor de una moneda sin crear nuevos objetos
+
+¿Cuál es una diferencia entre TDD y TCR?
+1
+En TCR, si el test falla, el código se revierte automáticamente
+En TCR, los tests se omiten en la primera ejecución
+TDD no incluye tests continuos
+TDD permite grandes cambios sin tests previos
+
+¿En qué se basa el concepto de "sorpresas continuas" en TDD?
+3
+En la idea de que los cambios en el código son predecibles
+En que el código siempre funciona como se espera
+En que el desarrollo iterativo muestra errores en etapas tempranas
+En que solo los tests importantes deben pasar
+
+¿Qué hace el enfoque "bottom-up" en TDD?
+2
+Crea el código de las interfaces externas primero
+Permite construir el sistema desde funcionalidades básicas hasta las de mayor nivel
+Facilita la ejecución de todos los tests al mismo tiempo
+Reduce la necesidad de hacer pruebas detalladas
+
+¿Cuál es el paso inicial en el ciclo de TDD?
+3
+Escribir el test mínimo que debe pasar la funcionalidad
+Implementar el código completo de la funcionalidad
+Refactorizar todo el código escrito
+Ejecutar todos los tests para verificar errores
+
+En TDD, ¿qué se hace una vez que un test ha sido implementado y falla?
+2
+Volver a escribir el test de nuevo
+Escribir el código mínimo para que el test pase
+Eliminar el test y comenzar otro ciclo
+Cambiar el código de otro módulo
+
+¿Qué es el principio del "último momento responsable" en XP?
+1
+Aplazar la especificación completa de las historias hasta antes de su implementación
+Especificar todas las historias de usuario en una fase temprana del proyecto
+Iniciar la implementación de una historia al comienzo de la semana
+Hacer pruebas al inicio de cada ciclo de desarrollo
+
+¿Qué representa el color rojo en el ciclo de TDD?
+1
+Que el test ha fallado y el código aún no cumple la funcionalidad
+Que el código ha pasado todas las pruebas
+Que se ha completado la fase de refactorización
+Que el código está listo para producción
+
+¿Por qué es recomendable que los incrementos en TDD sean pequeños?
+2
+Porque permite hacer tests unitarios más complejos
+Porque disminuye la probabilidad de introducir errores
+Porque ayuda a realizar cambios grandes en poco tiempo
+Porque hace más rápida la implementación final
+
+¿Qué se busca en la fase de refactorización del ciclo TDD?
+4
+Implementar funcionalidades nuevas
+Escribir más pruebas unitarias
+Eliminar todos los comentarios del código
+Detectar duplicidades y mejorar el diseño del código
+
+¿En qué consiste la técnica TCR (Test && Commit || Revert)?
+3
+En hacer commits cada vez que se finaliza una función
+En probar la funcionalidad al inicio del desarrollo
+En revertir el código si un test falla
+En ejecutar todos los tests de una vez y evaluar los resultados
+
+¿Cuál es una de las principales ventajas de TDD?
+1
+Ofrece especificaciones claras de lo que el código debe hacer en cada momento
+Permite hacer pruebas directamente en producción
+Elimina completamente la necesidad de refactorización
+Aumenta la velocidad de desarrollo en la fase inicial
+
+Según Kent Beck, ¿cuál es el propósito del principio "Make the change easy and then make the easy change"?
+3
+Hacer los cambios más complejos desde el principio
+Evitar los cambios de última hora en el diseño
+Simplificar el código para facilitar futuras modificaciones
+Implementar todas las funciones de una vez
+
+En TDD, ¿por qué se hace énfasis en escribir el test antes del código?
+4
+Para evitar errores en el código
+Porque es más fácil hacer pruebas de este modo
+Para agilizar el proceso de desarrollo
+Para formular las hipótesis y validar que el código cumple los requisitos
+
+¿Qué tipo de arquitectura suele seguirse en TDD, en referencia a la metáfora de la cebolla?
+1
+Un enfoque "bottom-up" en el que se implementan primero las capas internas
+Un enfoque "top-down" en el que se crean las interfaces primero
+Un enfoque de integración continua en el que se combinan todas las capas
+Un enfoque de desarrollo centrado en el cliente
+
+¿Qué se recomienda hacer cuando en TDD resulta difícil escribir un test?
+3
+Abandonar el test y escribir uno más sencillo
+Cambiar de módulo de programación
+Analizar y mejorar el diseño del código
+Crear un test más generalizado para la funcionalidad
+
+¿Cuál es la utilidad del enfoque de triangulación en TDD?
+2
+Ayuda a reducir el número de pruebas en una aplicación
+Obliga a eliminar la dependencia entre el test y el código
+Facilita el uso de mocks en pruebas complejas
+Establece la integración continua en la aplicación
+
+¿Qué efecto tiene el enfoque de TDD sobre el ritmo de desarrollo?
+1
+Hace que el ritmo sea más constante y sin altibajos
+Aumenta la velocidad de desarrollo en el inicio del proyecto
+Reduce la productividad debido a la necesidad de refactorización
+Agiliza la integración final del código
+
+¿Qué afirma David Heinemeir Hanson en su crítica a TDD?
+2
+Que TDD facilita la creación de código complejo y de difícil mantenimiento
+Que TDD ha llevado a una complejidad excesiva en la arquitectura
+Que TDD mejora la gestión de la base de datos
+Que TDD solo es útil en equipos de desarrollo grandes
+
+¿Qué utilidad tienen los métodos factoría en el ejemplo de cambio de monedas?
+3
+Permiten realizar cálculos complejos entre monedas
+Facilitan la integración de datos externos al sistema
+Desacoplan el uso de clases concretas de la lógica de negocio
+Reducen la necesidad de crear clases de objetos
+
+¿Cómo puede TDD facilitar el manejo de dependencias en un código?
+1
+Evitando duplicación de lógica, lo que reduce la dependencia
+Alentando el uso de interfaces en cada clase
+Implementando un control de versiones automático
+Realizando pruebas en clases externas únicamente
+
+En el ciclo de TDD, ¿qué sigue después de que todos los tests pasan tras una refactorización?
+3
+Implementar un nuevo ciclo de refactorización
+Añadir nuevas funcionalidades al código
+Añadir un nuevo test o funcionalidad
+Especificar el diseño final de la aplicación
+
+¿Qué ventaja ofrece TDD cuando hay dependencias en el sistema?
+4
+Evita tener que usar patrones de diseño específicos
+Reduce la importancia del testing en el sistema
+Alienta el uso de dependencias externas
+Facilita la separación entre elementos acoplados
+
+¿Qué problema podría surgir si se escriben tests demasiado grandes en TDD?
+1
+Que los errores sean más difíciles de localizar
+Que los tests sean más precisos y den resultados exactos
+Que el código no requiera refactorización
+Que el proceso de desarrollo sea menos eficiente
+
+¿Qué busca conseguir el primer test que se escribe en el ciclo TDD?
+2
+Verificar la refactorización completa del código
+Especificar el incremento mínimo de funcionalidad
+Asegurar que el sistema es compatible con otros módulos
+Documentar todo el proceso de desarrollo
+
+¿Cuál es el beneficio de realizar pequeños incrementos en TDD?
+4
+Evita tener que realizar refactorizaciones
+Permite cambiar de objetivo rápidamente
+Mejora la documentación general del proyecto
+Minimiza el riesgo de introducir errores grandes
+
+En TDD, ¿qué significa "hacer explícitas las hipótesis"?
+3
+Asegurarse de que los tests son minuciosos
+Escribir los tests después de la implementación
+Escribir las pruebas antes de codificar para verificar resultados esperados
+Incluir toda la funcionalidad en los primeros tests
+
+¿Qué debe hacerse cuando un test no expresa correctamente el propósito del código?
+2
+Ignorar el test y seguir adelante
+Corregir el test para que refleje la funcionalidad deseada
+Hacer una refactorización completa del código
+Añadir un nuevo test que corrija el error
+
+¿Cuál es una ventaja clave de aplicar TDD en el desarrollo?
+3
+Hace que la integración sea opcional
+Elimina la necesidad de realizar pruebas manuales
+Facilita una documentación clara y específica del código
+Reduce el tiempo de desarrollo total
+
+¿Por qué puede ser útil la técnica de TCR en el desarrollo?
+1
+Porque obliga a hacer incrementos pequeños y continuos
+Porque elimina la necesidad de escribir tests complejos
+Porque permite avanzar con mayor rapidez en la implementación
+Porque permite realizar cambios grandes sin perder información
+
+En TDD, ¿cuál es la relación entre refactorización y duplicación?
+4
+La duplicación elimina la necesidad de refactorización
+La duplicación incrementa la velocidad de desarrollo
+La duplicación reduce la claridad del código
+La refactorización busca eliminar la duplicación para mejorar el diseño
+
+¿Qué podría indicar la dificultad de escribir un test en TDD?
+2
+Que el equipo necesita añadir más dependencias
+Que el diseño del código es mejorable
+Que es preferible no usar mocks
+Que los incrementos de funcionalidad son muy pequeños
+
+¿Cuál es una crítica común a TDD por parte de algunos programadores?
+4
+Los tests no cubren todas las funcionalidades
+Obliga a realizar refactorizaciones complejas
+Es difícil mantener una base de tests actualizada
+Reduce la velocidad de desarrollo inicial
+
+En el ciclo de TDD, ¿cuándo es recomendable escribir los tests para los casos especiales?
+1
+Después de escribir los cálculos y condicionales principales
+Antes de escribir la interfaz del sistema
+Antes de implementar la funcionalidad completa
+En la fase de refactorización
+
+¿Qué ventaja tiene el uso de mocks en algunos casos de TDD?
+3
+Hace que el código sea más genérico
+Reduce la necesidad de hacer tests unitarios
+Aumenta la eficiencia de los tests, sobre todo de integración
+Facilita la creación de tests independientes
+
+¿Cuál es el orden típico de implementación de tests en TDD para un algoritmo?
+2
+Bucles y generalizaciones primero
+Interfaz central, cálculos, bucles y casos especiales
+Casos especiales y condicionales primero
+Generalizaciones, cálculos y bucles
+
+¿Qué permite detectar el uso de pequeños pasos en TDD?
+3
+Que los tests se puedan realizar en paralelo
+La necesidad de cambiar los patrones de diseño
+La localización más sencilla de errores
+La eliminación completa de la duplicación
+
+¿Cómo se usa la metáfora de la cebolla en TDD?
+2
+Se desarrollan todas las capas al mismo tiempo
+Primero se implementan las capas internas y luego las externas
+Las capas de la cebolla representan los diferentes equipos de desarrollo
+Primero se implementan las interfaces de usuario y luego las internas
+
+¿Cuál es el propósito de la técnica de triangulación en TDD?
+4
+Identificar la estructura de datos más eficiente
+Probar las funcionalidades externas primero
+Facilitar la conexión con la base de datos
+Obligar a generalizar el código para eliminar dependencias
+
+En TDD, ¿qué significa tener una especificación clara del código?
+1
+Que se han escrito pruebas para definir el comportamiento esperado
+Que el código sigue un solo estilo de escritura
+Que todo el equipo comprende el lenguaje de programación
+Que las interfaces están listas para usarse
+
+¿Cuál es una ventaja del enfoque de test-first en el ritmo de desarrollo?
+3
+Reduce el tiempo de codificación inicial
+Disminuye el número de pruebas necesarias
+Facilita un ritmo de trabajo sostenido y constante
+Aumenta la velocidad de desarrollo en la fase de pruebas
+
+¿Qué afirmación es cierta respecto al diseño en TDD?
+2
+Se prioriza el diseño sobre la implementación de los tests
+La prueba de errores ayuda a detectar problemas de diseño
+Los cambios de diseño se eliminan automáticamente
+Las pruebas son opcionales en el diseño
+
+¿Qué permite la técnica TCR respecto al código?
+3
+Realizar cambios grandes en un solo ciclo
+Aumentar la velocidad de ejecución
+Recuperar automáticamente el código si el test falla
+Evitar la necesidad de hacer refactorización
+
+¿Por qué se recomienda usar el mismo vocabulario en TDD que los clientes?
+1
+Para evitar ambigüedades y entender el modelo de negocio
+Para facilitar la traducción del código a otro lenguaje
+Para reducir el número de cambios necesarios en el diseño
+Para simplificar el desarrollo técnico
+
+¿Qué significa la técnica de Test && Commit || Revert (TCR) introducida por Kent Beck?
+2
+Se hace commit solo al finalizar todas las pruebas
+Se hace commit si el test pasa, y si falla, se revierte el cambio
+Se escriben todos los tests al final del desarrollo
+Se realizan cambios grandes antes de escribir los tests
+
+¿Cuál es el propósito de anotar elementos en una lista durante el ciclo de TDD?
+3
+Evitar que el equipo olvide tareas triviales
+Facilitar la documentación del proyecto
+Mantener el enfoque en los objetivos y pasos pendientes
+Reducir el tiempo necesario para refactorizar
+
+¿Qué método se utiliza en TDD para definir la interfaz central de un algoritmo?
+1
+Se define en los primeros tests que indican nombres de métodos, parámetros, etc.
+Se especifica al final del proceso de implementación
+Se basa en el código heredado de otras funciones
+Se ignora la interfaz en favor de la funcionalidad
+
+¿Qué refleja el concepto de "pensar" en el ciclo TDD según James Shore?
+4
+Crear el diseño de clases completo antes de programar
+Documentar la hipótesis de trabajo en el código
+Realizar los tests finales antes de pasar a producción
+Definir el próximo pequeño paso en la funcionalidad
+
+¿En qué consiste el principio de "make the change easy and then make the easy change"?
+2
+Cambiar de herramientas frecuentemente
+Refactorizar antes de implementar cambios para simplificar la modificación
+Evitar los cambios en el diseño al final del proyecto
+Implementar los cambios sin realizar pruebas adicionales
+
+¿Qué representa el "rojo" en el ciclo de TDD?
+1
+Que el test falla y el código no cumple la funcionalidad esperada
+Que el test ha superado todas las pruebas
+Que el código necesita refactorización inmediata
+Que la funcionalidad ha sido implementada correctamente
+
+¿Por qué es útil el enfoque bottom-up en TDD?
+3
+Permite crear la interfaz de usuario primero
+Ayuda a centrar el trabajo en el desarrollo visual
+Facilita la construcción de funcionalidades avanzadas a partir de elementos básicos
+Permite identificar problemas en el sistema desde el principio
+
+¿Cuál es la utilidad del ciclo de test, code, refactor en TDD?
+2
+Generar tests para todas las funcionalidades antes de codificar
+Crear un flujo de trabajo eficiente con incrementos pequeños
+Facilitar la eliminación de todas las duplicaciones de código
+Asegurar que se puede cambiar de tarea rápidamente
+
+¿Qué debe hacer un desarrollador cuando un test no se pasa en TCR?
+4
+Documentar el error en un informe de pruebas
+Continuar codificando hasta completar la funcionalidad
+Realizar los cambios en una rama separada
+Eliminar los cambios recientes y volver al último estado estable
+
+¿Qué aporta la técnica de triangulación en la fase de tests en TDD?
+3
+Mayor rapidez en la creación de tests finales
+Eliminación de toda duplicación en el código
+Facilita la generalización de los métodos y elimina dependencias del test
+Simplificación de la implementación de grandes cambios
+
+¿En qué consiste la práctica de eliminar duplicación durante la refactorización en TDD?
+2
+Consolidar código en un solo archivo para cada función
+Identificar y eliminar dependencias repetitivas en el código
+Crear un conjunto de clases independientes para los métodos
+Mantener todos los incrementos de código en un solo módulo
+
+¿Qué se considera en TDD como un signo de diseño débil?
+4
+Poca claridad en el propósito del código
+Interfaz complicada de mantener
+Muchas dependencias entre los módulos
+Dificultad en la creación de tests
+
+¿En TDD, qué se recomienda hacer antes de pasar a una nueva funcionalidad?
+1
+Refactorizar el código para asegurar su eficiencia
+Crear la interfaz de usuario completa
+Documentar todos los cambios realizados
+Realizar pruebas manuales exhaustivas
+
+¿Cómo define James Shore el uso de hipótesis en TDD?
+2
+Identificar posibles fallos en los sistemas de producción
+Crear predicciones sobre el comportamiento del código antes de implementarlo
+Definir la estructura del proyecto en el test
+Evitar errores al comparar el código final
+
+¿Cuál es la función de los mocks en pruebas de integración en TDD?
+3
+Aumentar la cobertura de los tests unitarios
+Crear una capa adicional de abstracción
+Mejorar la eficiencia de los tests al reducir la dependencia de sistemas externos
+Simplificar el diseño del sistema
+
+¿En qué etapa del ciclo TDD se suele realizar la refactorización?
+1
+Después de que todos los tests hayan pasado correctamente
+Antes de escribir el primer test
+Durante la implementación de la funcionalidad principal
+En la última fase del desarrollo
+
+¿Cómo permite TDD una especificación clara del sistema?
+4
+Evitando la duplicación en el código
+Al incorporar funciones básicas y avanzadas
+Manteniendo la misma estructura en todos los módulos
+A través de los tests que definen el comportamiento esperado
+
+¿Qué se pretende al utilizar la metáfora de la cebolla en TDD?
+1
+Construir el sistema desde el núcleo hasta las capas más externas
+Implementar el sistema con una sola capa y ampliar luego
+Crear todas las funcionalidades a la vez
+Programar desde la interfaz hasta el núcleo
+
+¿Qué objetivo se busca con la técnica de TCR respecto a los incrementos de código?
+4
+Mejorar la cobertura de pruebas en sistemas complejos
+Hacer cambios grandes antes de hacer commit
+Evitar el uso de tests adicionales en TDD
+Reducir los incrementos de código a cambios pequeños y verificables
+
+¿Por qué se considera beneficioso usar el mismo vocabulario en los tests que el cliente?
+2
+Facilita el uso de herramientas de terceros
+Evita confusiones y ayuda a entender el dominio del negocio
+Incrementa la claridad en la documentación técnica
+Permite una mayor integración con la base de datos
+
+¿Cuál es el primer paso en el ciclo de TDD?
+3
+Refactorizar el código existente
+Implementar el código de la funcionalidad completa
+Escribir un test para la funcionalidad que se quiere implementar
+Crear toda la documentación necesaria
+
+¿Por qué se dice que TDD ayuda a "hacer explícitas las hipótesis"?
+2
+Porque permite documentar suposiciones previas a la implementación
+Porque convierte las predicciones sobre el código en tests que validan el comportamiento esperado
+Porque reduce la necesidad de comentarios en el código
+Porque facilita la refactorización del código duplicado
+
+¿Qué se busca al realizar pequeños incrementos en TDD?
+1
+Minimizar los errores y hacer más fácil encontrar su origen
+Aumentar la cobertura de pruebas rápidamente
+Facilitar la implementación de funcionalidades complejas
+Reducir el tiempo total de desarrollo
+
+¿Qué representa el color verde en el ciclo de TDD?
+4
+El inicio de la etapa de refactorización
+Que el diseño del código es correcto
+Que todos los incrementos de código se completaron
+Que el test ha pasado exitosamente
+
+¿Cuál es el propósito de usar un enfoque "de dentro a afuera" en TDD?
+2
+Comenzar por las interfaces y luego los detalles
+Empezar por implementar funcionalidades básicas y luego las más avanzadas
+Crear los componentes visuales antes del código
+Evitar implementar pruebas para elementos sencillos
+
+¿En qué se diferencia el TCR de TDD?
+3
+TCR requiere escribir toda la funcionalidad antes de probarla
+TDD evita revertir cambios, mientras que TCR no lo hace
+TCR revierte cambios si un test falla, mientras que TDD no
+TCR permite ignorar algunos tests
+
+¿Cuál es el beneficio de refactorizar continuamente en el ciclo de TDD?
+1
+Eliminar duplicaciones y mejorar el diseño del código
+Añadir más funcionalidades en menos tiempo
+Reducir la cantidad de tests necesarios
+Facilitar la integración de nuevas tecnologías
+
+¿Cuál de las siguientes es una crítica común al uso de TDD?
+2
+No permite crear tests en fases tempranas
+Puede ralentizar el desarrollo inicialmente
+Evita la programación orientada a objetos
+Limita el uso de bases de datos
+
+¿Por qué el método "equals" es fundamental en la implementación de TDD?
+4
+Porque simplifica el diseño del sistema
+Porque permite comparar directamente con mocks
+Porque facilita la creación de tests unitarios
+Porque permite validar la igualdad de objetos en tests
+
+¿Cuál es el propósito de los métodos factoría en TDD?
+2
+Evitar el uso de funciones adicionales
+Simplificar la creación de objetos específicos para los tests
+Incrementar el tiempo de desarrollo
+Facilitar la creación de interfaces
+
+¿Qué significa que los tests "especifican" el sistema en TDD?
+3
+Que los tests solo se usan para verificación
+Que los tests permiten implementar la interfaz gráfica
+Que los tests definen el comportamiento y los requisitos esperados
+Que los tests crean documentación adicional
+
+¿Cuál es el objetivo de los pequeños pasos en la implementación de algoritmos en TDD?
+2
+Crear una batería de tests más extensa
+Incrementar la funcionalidad sin realizar cambios drásticos
+Evitar la creación de tests complejos
+Incrementar el uso de bucles y condiciones
+
+¿Qué permiten los tests en la implementación de TDD según Kent Beck?
+1
+Validar el funcionamiento del código desde el inicio
+Simplificar la interfaz gráfica de usuario
+Implementar funcionalidades grandes de inmediato
+Evitar la necesidad de refactorización
+
+¿En qué se diferencia el ciclo de TCR al de TDD en cuanto a los commits?
+4
+TCR obliga a realizar commits al finalizar cada fase
+TDD permite reversiones en el código de pruebas
+TDD se enfoca en commits grandes y completos
+TCR realiza un commit solo si el test pasa
+
+¿Qué representa el concepto de "esqueleto andante" en los mapas de historias de usuario?
+3
+La estructura física del software
+La capa externa del sistema
+Un primer nivel de funcionalidades básicas en el sistema
+La planificación de todas las etapas del desarrollo
+
+¿Qué significa la fase de "confirmación" en el enfoque de las tres C de las historias de usuario?
+4
+El cliente aprueba el diseño de los tests
+El equipo de desarrollo inicia la implementación
+La historia es revisada por un analista de sistemas
+Los criterios de aceptación para la historia son definidos y detallados
+
+¿Qué importancia tiene la refactorización en la técnica TDD de Beck?
+1
+Permite mejorar el diseño sin añadir funcionalidades
+Aumenta la cobertura de pruebas de integración
+Facilita la automatización de tareas repetitivas
+Permite usar mejor la interfaz de usuario
+
+¿Qué proporciona el uso de mapas de historias de usuario en el desarrollo ágil?
+2
+Permite agrupar tareas del sistema sin necesidad de secuencia
+Facilita organizar historias en función de su prioridad y tiempo
+Hace innecesario el contacto con el cliente
+Aumenta la autonomía del equipo en los cambios de funcionalidades
+
+¿Cuál es el enfoque de Kent Beck sobre la velocidad en TDD?
+3
+Hacer todo el código de una vez y luego los tests
+Implementar grandes cambios de inmediato
+Mantener un ritmo de desarrollo constante y sostenible
+Realizar pequeños cambios sin documentación
+
+¿Cuál de los siguientes es un aspecto crítico de la etapa de refactorización en TDD?
+2
+Cambiar los tests para adaptarse al nuevo código
+Eliminar duplicidades y mejorar el código sin alterar funcionalidad
+Crear nuevas funcionalidades según los requerimientos del cliente
+Descartar cualquier test fallido y continuar
+
+¿Cuál es el objetivo principal de la refactorización en el desarrollo de software?
+2
+Modificar la estructura interna del código sin cambiar su comportamiento
+Limitar la funcionalidad del código sin modificar su estructura
+Eliminar funcionalidades obsoletas del programa
+Añadir nuevas funciones al programa sin cambiar su estructura
+
+¿Por qué es importante tener una batería de tests antes de realizar una refactorización?
+1
+Para asegurar que el programa sigue funcionando después de los cambios estructurales
+Porque los tests identifican los cambios estructurales necesarios
+Para medir la eficiencia del código antes de refactorizarlo
+Para identificar las dependencias del código
+
+Según Michael Feathers, ¿cuál es el propósito de realizar refactorizaciones en el código?
+2
+Simplificar el código para futuros desarrolladores
+Mantener la conducta del código mientras mejora su diseño y mantenibilidad
+Minimizar la cantidad de líneas de código en el programa
+Aumentar la eficiencia del programa en términos de rendimiento
+
+¿Cuál de las siguientes afirmaciones describe correctamente la técnica de "Extract Method"?
+2
+Crear una nueva función para reemplazar una variable global
+Agrupar un bloque de código en una función y llamarlo desde el método original
+Separar un método en múltiples funciones pequeñas
+Mover una función de una clase a otra
+
+¿Cuál es la ventaja principal de la técnica de "Replace Temp with Query"?
+2
+Permite reducir la cantidad de llamadas a funciones en el código
+Facilita la comprensión y la refactorización al evitar variables temporales
+Mejora la eficiencia del código al reducir el uso de memoria
+Permite simplificar las consultas SQL en el código
+
+¿Cuál de los siguientes code smells indica que se deben realizar refactorizaciones en el código?
+3
+Código comentado en exceso
+Código altamente optimizado
+Funciones largas o repetidas
+Nombres de variables muy descriptivos
+
+¿Qué refactorización se recomienda cuando se encuentra código duplicado en varias clases relacionadas?
+3
+Rename Method
+Replace Variable with Query
+Pull Up Method
+Move Method
+
+¿En qué caso es útil la refactorización "Move Method"?
+4
+Cuando el método contiene variables innecesarias
+Cuando el método se usa sólo en la clase actual
+Cuando el método no tiene dependencias externas
+Cuando el método tiene más relación con otra clase
+
+¿Qué indica un nombre misterioso (Mysterious Name) en un código?
+1
+Que el nombre de la variable o método no refleja claramente su propósito
+Que el nombre es demasiado largo y necesita abreviarse
+Que la variable no se utiliza en el código
+Que la función es demasiado pequeña y necesita expansión
+
+¿Qué implica la refactorización "Parameterize Function"?
+3
+Reemplazar una función por una consulta
+Crear nuevas variables locales dentro de la función
+Unificar funciones similares mediante un parámetro
+Reducir la cantidad de parámetros de la función
+
+¿Cuál es una de las ventajas de realizar refactorizaciones en pequeños pasos?
+1
+Reduce las posibilidades de introducir errores en el código
+Permite realizar cambios estructurales grandes y rápidos
+Mejora el rendimiento del programa inmediatamente
+Aumenta la eficiencia de los compiladores
+
+¿Cuál es el propósito de la refactorización "Move Method"?
+3
+Dividir un método en varias partes más pequeñas
+Eliminar métodos redundantes
+Mover un método a una clase que esté más relacionada con su función
+Simplificar la lógica de un método complejo
+
+¿Qué code smell sugiere que una función debería dividirse en funciones más pequeñas?
+4
+Código duplicado
+Nombres misteriosos
+Variables globales
+Función larga
+
+¿Qué herramienta de refactorización suele ser utilizada en los IDEs para renombrar variables, métodos o clases?
+2
+Extract Method
+Rename
+Replace Temp with Query
+Parameterize Function
+
+¿En qué situación es adecuada la refactorización "Replace Temp with Query"?
+1
+Cuando una variable temporal puede ser reemplazada por una llamada a un método
+Cuando una función requiere múltiples parámetros
+Cuando el código tiene muchos bucles anidados
+Cuando es necesario agregar lógica condicional
+
+¿Cuál de las siguientes es una razón para utilizar "Extract Method"?
+3
+Simplificar los bucles anidados en el código
+Aumentar la eficiencia del programa
+Mejorar la legibilidad al agrupar líneas de código en un método separado
+Optimizar el rendimiento al reducir el uso de funciones
+
+¿Qué técnica de refactorización ayuda a evitar la duplicación de código mediante el uso de clases superiores?
+4
+Rename Field
+Move Method
+Replace Temp with Query
+Pull Up Method
+
+¿Qué técnica es adecuada para simplificar una función que tiene múltiples parámetros de entrada?
+2
+Replace Variable with Query
+Parameterize Function
+Move Method
+Inline Function
+
+¿Cuál es el objetivo principal de la técnica "Extract Method"?
+2
+Mejorar la eficiencia del código
+Dividir un bloque de código en métodos más pequeños y reutilizables
+Eliminar código redundante
+Optimizar el tiempo de ejecución
+
+¿Qué code smell indica que un método o función tiene un nombre poco claro o engañoso?
+3
+Código duplicado
+Funciones largas
+Nombre misterioso
+Parámetros excesivos
+
+¿Qué significa el concepto de refactoring en el desarrollo de software?
+2
+Añadir nuevas funcionalidades a un programa
+Modificar la estructura del código sin cambiar su comportamiento
+Optimizar el rendimiento del programa
+Eliminar errores en el código
+
+¿Cuál es el propósito de la técnica "Extract Method"?
+3
+Simplificar estructuras de control complejas
+Mejorar el rendimiento del código
+Extraer código en métodos separados para mejorar la claridad y reutilización
+Eliminar funciones redundantes
+
+¿Cuál es una indicación de que deberíamos aplicar la refactorización "Rename Variable"?
+1
+La variable tiene un nombre poco claro o confuso
+La variable tiene un valor constante
+La variable no se utiliza en ningún lugar
+La variable almacena un valor numérico
+
+¿Qué objetivo tiene la refactorización "Move Method"?
+4
+Eliminar métodos innecesarios
+Dividir métodos complejos en otros más pequeños
+Mejorar la eficiencia del código
+Ubicar un método en una clase con la que esté más relacionado
+
+¿Qué se logra al aplicar la refactorización "Replace Temp with Query"?
+1
+Reemplazar una variable auxiliar por una llamada a un método
+Eliminar duplicación de código
+Mejorar la documentación de la función
+Optimizar el tiempo de ejecución
+
+¿Qué refactorización ayuda a reducir código duplicado subiendo métodos a una clase superior?
+3
+Extract Method
+Rename Method
+Pull Up Method
+Replace Temp with Query
+
+¿Cuándo es adecuado utilizar "Parameterize Function"?
+2
+Cuando queremos dividir una función en varias más pequeñas
+Cuando tenemos varias funciones similares que podrían unificarse con un parámetro
+Cuando necesitamos aumentar la eficiencia de una función
+Cuando el código tiene muchos comentarios
+
+¿Qué hace la refactorización "Inline Method"?
+3
+Convierte una función en un comentario
+Simplifica los bucles de código
+Elimina un método reemplazando sus invocaciones por el propio código del método
+Añade parámetros adicionales a un método
+
+¿Qué propósito tienen los tests durante una refactorización?
+1
+Garantizar que el código no cambia su comportamiento tras la refactorización
+Verificar la eficiencia del programa
+Eliminar errores en el código
+Reducir el tiempo de desarrollo
+
+¿Qué técnica de refactorización puede aplicarse cuando encontramos un nombre de método ambiguo?
+4
+Inline Method
+Pull Up Method
+Extract Method
+Change Function Declaration
+
+¿Cuál de estos code smells indica que una función es demasiado larga?
+2
+Nombre misterioso
+Función larga
+Código duplicado
+Parámetros excesivos
+
+¿Cuál es una razón importante para realizar refactorización?
+1
+Mejorar la claridad y mantenibilidad del código
+Incrementar la velocidad de ejecución del programa
+Disminuir el tamaño del código fuente
+Aumentar el número de funcionalidades
+
+¿Qué se logra con la refactorización "Extract Class"?
+3
+Dividir una clase que tiene demasiadas responsabilidades
+Eliminar métodos redundantes
+Crear una nueva clase para encapsular atributos y métodos relacionados
+Simplificar el flujo de control en una clase
+
+¿Cuándo se recomienda utilizar la refactorización "Move Field"?
+2
+Cuando una clase tiene muchos atributos públicos
+Cuando un campo es más útil en otra clase
+Cuando una función tiene demasiados parámetros
+Cuando se necesita una nueva variable
+
+¿Qué tipo de cambio NO debería introducir la refactorización en un programa?
+4
+Cambio en la estructura del código
+Mejora en la claridad del código
+Reducción de duplicación de código
+Cambio en el comportamiento del programa
+
+¿Qué se suele buscar con la refactorización "Extract Superclass"?
+2
+Simplificar los métodos de una clase
+Crear una clase superior para agrupar métodos o atributos comunes de varias clases
+Dividir una clase compleja en varias más simples
+Mejorar la eficiencia del código
+
+¿Cuál de los siguientes code smells podría solucionarse con "Extract Method"?
+1
+Función larga
+Código duplicado
+Nombre misterioso
+Parámetros excesivos
+
+¿Cuál es una ventaja de los pasos pequeños en la refactorización?
+2
+Permite refactorizar más rápido
+Minimiza el riesgo de introducir errores
+Aumenta el rendimiento del código
+Reduce el número de líneas de código
+
+¿Qué permite identificar el uso de code smells en un proyecto?
+1
+Posibles problemas de diseño en el código
+Áreas del código que necesitan optimización
+Errores de sintaxis
+Variables no inicializadas
+
+¿Qué es el principio DRY en la refactorización?
+3
+Realizar cambios en una clase de forma repetitiva
+Mantener el código altamente optimizado
+Evitar duplicación de código innecesaria
+Escribir funciones con un número limitado de parámetros
+
+¿Qué es un bad code smell o "mal olor en el código"?
+3
+Un error de sintaxis en el código
+Una funcionalidad que no está implementada
+Una indicación de que el código tiene un problema de diseño
+Una refactorización innecesaria
+
+¿Qué code smell se asocia a nombres de métodos o variables poco claros?
+1
+Mysterious Name (Nombre misterioso)
+Duplicate Code (Código duplicado)
+Long Function (Función larga)
+Dead Code (Código muerto)
+
+¿Cuál es el objetivo de la refactorización "Extract Interface"?
+2
+Dividir una clase compleja en dos
+Crear una interfaz con métodos comunes que puede ser implementada por varias clases
+Eliminar métodos duplicados
+Reducir el número de líneas de código en una clase
+
+¿Cuál de las siguientes refactorizaciones ayuda a evitar la duplicación de código en subclases?
+4
+Rename Field
+Replace Method
+Move Field
+Pull Up Method
+
+¿Qué tipo de refactorización se aplica cuando se quiere modificar un nombre confuso de una variable o función?
+1
+Rename Variable
+Move Method
+Pull Up Field
+Extract Class
+
+¿Cuándo es útil utilizar la refactorización "Extract Superclass"?
+3
+Cuando queremos reducir el número de métodos en una clase
+Cuando necesitamos optimizar el rendimiento de una función
+Cuando varias clases comparten métodos o atributos comunes
+Cuando una clase tiene demasiados métodos estáticos
+
+¿Cuál de los siguientes es un ejemplo de code smell que puede resolverse con "Inline Method"?
+4
+Código duplicado
+Función larga
+Mala elección de nombres
+Método que solo devuelve un valor constante
+
+¿Por qué es recomendable realizar cambios en pasos pequeños durante una refactorización?
+2
+Para reducir el tiempo de desarrollo
+Para minimizar los riesgos de errores
+Para mejorar la velocidad del código
+Para documentar los cambios más fácilmente
+
+¿Qué es el principio DRY en el contexto de refactorización?
+3
+Duplicar funciones para reducir errores
+Documentación de todos los cambios en el código
+Evitar duplicación de código innecesario
+Optimizar el rendimiento del código
+
+¿Cuál es la refactorización más adecuada cuando varios métodos en una clase utilizan un campo o variable de otra clase?
+1
+Move Field
+Extract Function
+Rename Variable
+Push Down Method
+
+¿Qué refactorización ayuda a mejorar la comprensión del código sin modificar su funcionamiento?
+4
+Move Method
+Push Down Method
+Extract Superclass
+Rename Method
+
+¿Qué tipo de refactorización aplicarías si una función tiene muchas líneas de código y varias responsabilidades?
+3
+Move Method
+Inline Method
+Extract Method
+Replace Variable with Method
+
+¿Cuál es un ejemplo de un bad code smell relacionado con la longitud del código?
+2
+Dead Code
+Long Function
+Duplicate Code
+Switch Statement
+
+¿Qué es "Replace Magic Number with Constant"?
+3
+Sustituir variables globales por locales
+Eliminar números no utilizados
+Reemplazar números específicos por constantes con nombres descriptivos
+Evitar el uso de números en funciones
+
+¿Cuándo se debería aplicar la refactorización "Introduce Parameter Object"?
+1
+Cuando una función tiene demasiados parámetros que se pueden agrupar en un objeto
+Cuando la función tiene solo un parámetro
+Cuando los parámetros se repiten en varias funciones
+Cuando la función no utiliza parámetros
+
+¿Qué refactorización permite eliminar duplicación de lógica en varias clases relacionadas?
+2
+Move Method
+Extract Superclass
+Push Down Method
+Rename Field
+
+¿Qué es un código "acoplado"?
+3
+Código que está mal indentado
+Código que tiene demasiadas variables
+Código que depende demasiado de otros elementos del sistema
+Código que se ejecuta de forma lenta
+
+¿Cuándo se utiliza la refactorización "Push Down Method"?
+1
+Cuando un método en una clase padre es específico de algunas subclases
+Cuando un método no está relacionado con ninguna clase
+Cuando una clase tiene demasiados atributos
+Cuando un método necesita ser dividido en varios más pequeños
+
+¿Qué significa "Replace Loop with Pipeline"?
+3
+Convertir un bucle en una función
+Eliminar un bucle
+Reemplazar un bucle por una serie de operaciones encadenadas
+Simplificar un bucle anidado
+
+¿Qué problema intenta resolver "Replace Conditional with Polymorphism"?
+2
+Duplicación de código en varias funciones
+El uso excesivo de estructuras condicionales basadas en tipos
+Bajo rendimiento en funciones con muchos parámetros
+Funciones demasiado cortas
+
+¿Qué es la refactorización?
+4
+Modificar la funcionalidad de un programa para añadir características
+Mejorar la eficiencia del código mediante optimizaciones
+Cambiar el diseño de un programa sin modificar su estructura
+Transformar el código fuente sin cambiar el comportamiento del programa
+
+¿Cuál es el objetivo principal de la refactorización según Martin Fowler?
+3
+Aumentar la velocidad de ejecución del código
+Reducir el tamaño del código
+Mejorar la estructura interna del código sin cambiar su comportamiento externo
+Eliminar errores de sintaxis
+
+¿Por qué es importante tener una batería de tests antes de hacer una refactorización?
+1
+Para garantizar que el código sigue funcionando igual después de los cambios
+Para identificar variables y métodos duplicados
+Para mejorar la eficiencia del código
+Para asegurar que el diseño cumple con los estándares
+
+¿Qué beneficio aporta realizar refactorizaciones en "pequeños pasos"?
+2
+Permite optimizar el rendimiento del programa
+Reduce el riesgo de introducir errores y facilita el seguimiento de cambios
+Aumenta la comprensión del código por parte del equipo
+Facilita la integración con bibliotecas externas
+
+¿Cuál es el propósito de la técnica "Extract Method"?
+3
+Eliminar métodos innecesarios
+Mover un método a una clase diferente
+Encapsular un conjunto de código en una función separada
+Convertir una variable local en un parámetro
+
+¿Qué indica un "code smell" de tipo "Long Function"?
+1
+Que la función tiene demasiadas responsabilidades y es difícil de entender
+Que la función no está relacionada con el resto del código
+Que la función utiliza variables globales
+Que el código está mal organizado
+
+¿En qué consiste la técnica "Replace Temp with Query"?
+4
+Sustituir una variable por una constante
+Eliminar variables locales
+Reemplazar variables globales por locales
+Sustituir una variable auxiliar por una llamada a un método
+
+¿Por qué es conveniente evitar variables temporales en ciertos casos?
+2
+Porque reducen la velocidad de ejecución
+Porque pueden hacer que el código sea menos claro y menos reutilizable
+Porque aumentan el tamaño del programa
+Porque complican la depuración
+
+¿Cuándo es útil la refactorización "Move Method"?
+1
+Cuando un método está más relacionado con otra clase
+Cuando un método tiene más de tres parámetros
+Cuando un método tiene una complejidad alta
+Cuando un método utiliza variables globales
+
+¿Qué refactorización es útil cuando se tiene código repetido en distintas subclases?
+3
+Replace Function
+Push Down Method
+Pull Up Method
+Encapsulate Variable
+
+¿Cuál es un ejemplo de refactorización que ayuda a mejorar la modularidad del código?
+4
+Inline Variable
+Extract Function
+Replace Method
+Move Method
+
+¿Qué es "Change Function Declaration" en el contexto de refactorización?
+2
+Eliminar una función que no se utiliza
+Cambiar el nombre o los parámetros de una función
+Convertir una función en un método
+Reemplazar una función por un constructor
+
+¿Qué problema intenta resolver la técnica "Introduce Parameter Object"?
+3
+Aumentar la eficiencia de funciones con muchos parámetros
+Reducir el tamaño del código
+Evitar el uso de muchos parámetros en una función, agrupándolos en un objeto
+Dividir una función larga en varias funciones
+
+¿Cuándo se debería aplicar "Replace Conditional with Polymorphism"?
+1
+Cuando se tienen múltiples condicionales que dependen de un tipo o valor
+Cuando un método no está relacionado con una clase
+Cuando se necesita incrementar la eficiencia de un bucle
+Cuando se trabaja con funciones que no devuelven un valor
+
+¿Qué permite la refactorización "Extract Class"?
+3
+Simplificar la lógica de un bucle
+Eliminar variables locales
+Dividir una clase grande en varias más pequeñas y específicas
+Reorganizar las clases en un nuevo paquete
+
+¿Cuál es el propósito de la refactorización "Inline Method"?
+2
+Reemplazar un bucle por una consulta
+Eliminar un método innecesario haciendo que el código lo llame directamente
+Agrupar métodos similares en una clase
+Hacer que los métodos sean más eficientes
+
+¿Cuál es un síntoma de mal diseño relacionado con el uso de nombres poco descriptivos?
+4
+Long Function
+Duplicate Code
+Inline Variable
+Mysterious Name
+
+¿Qué técnica es útil para mejorar la modularidad al mover métodos o atributos a una clase superior en la jerarquía?
+3
+Replace Function
+Move Field
+Push Up Method
+Pull Down Method
+
+¿Cuál es una ventaja de evitar condicionales extensos en el código?
+2
+Incrementa el número de líneas de código
+Hace el código más legible y reduce errores
+Reduce el uso de memoria en el programa
+Optimiza las llamadas a métodos
+
+¿Qué se busca con la refactorización "Replace Method with Method Object"?
+1
+Convertir un método complejo en un objeto que encapsule toda la lógica
+Eliminar métodos que no tienen implementación
+Hacer que el código sea compatible con otros lenguajes
+Reemplazar un método por una constante
+
+¿Qué se entiende por refactorización "Extract Class"?
+3
+Agrupar múltiples clases en una sola para simplificar el código
+Reemplazar clases complejas por funciones
+Dividir una clase grande en varias más pequeñas y enfocadas
+Convertir una función en un método de clase
+
+¿Cuál de las siguientes es una técnica común para mejorar la claridad del código en una función larga?
+2
+Push Up Method
+Extract Method
+Inline Variable
+Move Field
+
+¿Qué refactorización se aplica cuando varios métodos de diferentes clases hacen lo mismo?
+4
+Replace Conditional with Polymorphism
+Encapsulate Field
+Extract Superclass
+Pull Up Method
+
+¿Cuál es un beneficio principal de evitar nombres "misteriosos" en variables y funciones?
+1
+Mejor comprensión del código y sus intenciones
+Mayor eficiencia en la ejecución del programa
+Menor consumo de memoria
+Mayor seguridad en el acceso a datos
+
+¿Qué técnica puede ayudar a reducir el acoplamiento en una clase que tiene muchos atributos compartidos con otra?
+2
+Replace Function
+Extract Class
+Push Down Field
+Inline Method
+
+¿Qué se logra aplicando "Replace Type Code with Subclasses"?
+4
+Eliminar atributos duplicados
+Evitar errores de compilación
+Optimizar el código
+Sustituir código condicional basado en tipos por subclases
+
+¿Qué ventaja ofrece la refactorización "Introduce Null Object"?
+3
+Evitar errores de punteros nulos
+Optimizar el consumo de memoria
+Simplificar la gestión de valores nulos evitando verificaciones condicionales
+Hacer el código compatible con otros entornos
+
+¿Por qué se considera un "code smell" la duplicación de código?
+1
+Aumenta las posibilidades de errores y dificulta el mantenimiento
+Optimiza el rendimiento general del programa
+Incrementa la modularidad del sistema
+Facilita la comprensión del flujo del programa
+
+¿Cuál es un ejemplo de "bad smell" que indica una mala organización de clases?
+4
+Mysterious Name
+Inline Method
+Push Down Method
+Divergent Change
+
+¿Qué refactorización es útil para reducir el uso excesivo de parámetros en una función?
+2
+Push Up Method
+Introduce Parameter Object
+Pull Down Field
+Replace Type Code
+
+¿Cuándo se recomienda aplicar "Replace Array with Object"?
+1
+Cuando los elementos de un array representan atributos distintos
+Cuando se necesita un array de valores constantes
+Cuando se quiere optimizar el acceso a elementos
+Cuando se trabaja con arrays de gran tamaño
+
+¿Cuál es la técnica más adecuada para consolidar funciones que ejecutan la misma lógica en subclases diferentes?
+3
+Replace Method with Method Object
+Extract Variable
+Pull Up Method
+Push Down Field
+
+¿Qué significa "Push Down Method" en refactorización?
+2
+Subir un método a una clase superior en la jerarquía
+Mover un método de una clase superior a una subclase
+Eliminar un método que no se utiliza
+Convertir un método en una función
+
+¿Cuál es un síntoma de diseño deficiente al encontrar una función que se utiliza en muchas subclases pero no en la clase padre?
+4
+Long Method
+Switch Statement
+Inline Class
+Feature Envy
+
+¿Cuál de las siguientes técnicas elimina dependencias de tipo específico en el código?
+1
+Replace Conditional with Polymorphism
+Extract Variable
+Move Method
+Pull Up Method
+
+¿Qué problema soluciona la refactorización "Introduce Explaining Variable"?
+2
+El código complejo que requiere comentarios adicionales
+El código difícil de leer y entender
+Las variables que no son reutilizables
+La presencia de variables globales
+
+¿Por qué es útil "Inline Class" en ciertos contextos?
+3
+Para dividir el código en más clases
+Para reducir el número de métodos en una clase
+Para eliminar clases innecesarias y simplificar la estructura
+Para optimizar el rendimiento en operaciones de clase
+
+¿Qué tipo de código se considera "Feature Envy"?
+4
+Código que tiene múltiples parámetros
+Código que está altamente acoplado
+Código que contiene muchos condicionales
+Código que accede a datos de otra clase en exceso
+
+¿Cuál es una característica común de una clase que se considera un "code smell" de tipo "God Class"?
+2
+Tiene muy pocos métodos y atributos
+Tiene demasiadas responsabilidades y es compleja de entender
+Es una clase que no se utiliza
+Contiene funciones innecesariamente cortas
+
+¿Qué refactorización es útil cuando se identifican valores que representan categorías o tipos de datos?
+3
+Move Method
+Extract Class
+Replace Magic Number with Symbolic Constant
+Pull Up Field

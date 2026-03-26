@@ -1,0 +1,1560 @@
+Seleccionar la única respuesta correcta a la siguiente pregunta sobre el denominado 'Espacio Ubicuo' (US):
+3
+La proactividad de los dispositivos solo significa la capacidad iniciar flujos de datos hacia los usuarios del sistema ubicuo
+El espacio ubicuo (US) principalmente está lleno de teléfonos inteligentes
+Un dispositivo pervasivo debe estar centrado en el ser humano (no solo que funcione sin la intervención humana) ya que se desarrollan para establecer una interacción directa con sus usuarios
+Los dispositivos no saben nada sobre los dispositivos pervasivos ubicados en el espacio ubicuo cercano
+La actividad de desarrollo de software se puede realizar según los estándares SOA solo asegurando que se satisfacen los requisitos de sistemas ubícuos
+
+Seleccionar la única respuesta correcta a la siguiente pregunta sobre Computación Ubicua (UC):
+1
+Sin los principios de la UC, la convergencia de las tecnologías actuales para hacer realidad IoT y M2M sería muy difícil
+Actualmente existe un estándar mundialmente aceptado para sistemas UC
+Cualquier sistema de teléfono móvil podría integrarse en un sistema informático con ubicuidad y colaborativo
+Internet de las cosas (IoT) es básicamente lo que ya tenemos actualmente con todas las computadoras, teléfonos inteligentes, relojes, etc. interconectados a escala planetaria
+Computación generalizada, computación ubicua (UC), inteligencia ambiental (AI) y tecnología móvil 5G son términos equivalentes en la práctica
+
+Seleccionar la única respuesta correcta a la siguiente pregunta sobre Computación Sensible al Contexto ('context aware computing'):
+1
+Los usuarios no tienen necesariamente un papel directo en una aplicación clasificada como de CAC, pero se ven influenciados por los programas que obtienen la solución de problemas que resuelve este tipo de computación
+El desarrollo de software para aplicaciones móviles no tiene que estar relacionado con este tipo de informática, que se centra más en la informática emocional o afectiva
+Este tipo de computación está dirigido principalmente al desarrollo de aplicaciones domóticas
+Los conceptos de computación ubícua y computación sensible al contexto no tienen, en principio, ninguna relación entre sí
+En realidad, solo hay un contexto para este tipo de computación: el del 'espacio ubicuo' (US) conformado por los dispositivos colaborativos
+
+Seleccionar la única respuesta correcta a la siguiente pregunta sobre axiomas de cubrimiento ('covering axioms'):
+2
+Las clases de cobertura deben ser subclases disjuntas de la clase "cubierta" predeterminada
+Un axioma de cobertura define la unión de las clases de cobertura como una clase, que es una superclase de la clase que está cubriendo
+Necesitamos crear una propiedad Datatype que tenga como rango definido el de la clase "Partición de Valores" (ValuePartition class), para poder usarlo
+Una clase de "partición de valores" ('ValuePartition class') solo es una sublista de posibles tipos de valores
+No todas las clases de particiones de valores necesitan agregar un axioma de cobertura a su sección de clase equivalente
+
+Seleccionar la única respuesta correcta a la siguiente pregunta sobre el desarrollo de software para entornos inteligentes (software con ‘inteligencia ambiental’):
+5
+Este tipo de aplicaciones de software debe estar diseñado para ser utilizado por miles de nodos con capacidad de procesamiento cada uno de ellos
+El grado de conocimiento del contexto de una aplicación depende mucho de sus usuarios y, por lo tanto, la forma de representarlo siempre dependerá de modelos lógicos difusos
+El desarrollo de este software es solo un problema de diseño que, además, ha de tener en cuenta el contexto formado por muchos dispositivos pervasivos heterogéneos
+La programación tradicional de aplicaciones con objetos es equivalente a la programación de aplicaciones para entornos ubicuos más un modelado ontológico del entorno
+Para desarrollar aplicaciones con Inteligencia Ambiental es obligatorio tener la definición de dominio de información semántica en el que se desplegarán dispositivos y servicios ubicuos
+
+En cuanto a la diferencia entre las actividades "receive" e "invoke" en BPEL 2.0, seleccione cuál de las siguientes es la alternativa correcta:
+1
+Los “PartnerLinks” de la actividad "invoke" y de la actividad "receive",implicados cuando se llama a la operación de un servicio, son los mismos
+La actividad "receive" no puede almacenar la respuesta del “callback”identificado en su "PortType" y, por lo tanto, esta actividad solo se puede programar para llamadas sincrónicas al servicio de cliente
+La actividad "invoke" sólo puede especificar operaciones "unidireccionales" en un servicio (el cliente no puede programarse para esperar una respuesta enviada a un puerto)
+No se pueden crear automáticamente variables en una actividad de"invocación"
+La actividad "receive" abre un puerto en el proceso BPEL para enviar y recibir datos
+
+Uno de los siguientes elementos no puede ser considerado un objetivo de la notación WS-BPEL:
+1
+La creación de un estándar privativo de cada empresa para orquestar SW de forma modular
+Permitir la definición de un modelo transaccional que admitaerrores/recuperación de algunas partes de las descripciones de procesos
+El utilizar una representación de los SW como modelo fundamental para describir la estructuración y la composición de procesos de negocio
+El motor de orquestación BPEL asume implícitamente la creación y terminación de instancias de un proceso de negocio; sin embargo, no se incluyen operaciones de "suspensión" o "reanudación" en la versión actual de BPEL
+Admitir un mecanismo de identificación ("partners") para la definición deidentificadores de instancias de proceso que pueden ser utilizados por los mensajes y que pueden ser cambiados durante la ejecución del proceso
+
+Seleccionar la única respuesta correcta a la siguiente pregunta sobre la especificación de una restricción universal para la propiedad de objeto ‘tieneCubierta’. La especificación en lenguaje natural sería: “Una pizza vegetariana solo tiene cubierta de queso y vegetales”:
+2
+Ninguna de las proposiciones anteriores describe exactamente la condición: “Una pizza vegetariana solo tiene cubierta de queso y vegetales”
+es una Pizza and tieneCubierta only (IngredienteQueso or IngredienteVegetal)
+tieneCubierta only (IngredienteQueso and IngredienteVegetal)
+tieneCubierta only (IngredienteQueso or IngredienteVegetal)
+(tieneCubierta only IngredienteQueso) and (tieneCubierta only IngredienteVegetal)
+
+Seleccionar cuál (sólo 1) de los siguientes elementos no se puede considerar como un objetivo de modelado de procesos de negocio alcanzable con WS-BPEL:
+1
+El definir una representación gráfica de los procesos de negocio y poder llevar a cabo una metodología de diseño particular de tales procesos
+La programación de procesos de negocio utilizando principalmente un lenguaje de programación basado en XML
+El definir un conjunto de conceptos y construcciones sintácticas para poder programar la orquestación de SW de tal forma que puedan ser utilizadas por vistas externas (“abstractas”) e internas (“ejecutables”) de un proceso de negocio
+El proporcionar funciones de manipulación de los datos necesarias para operar con los datos y con el flujo de control de los procesos
+Sólo permitir la descripción de las interacciones entre procesos de negocio basada en las construcciones “PortType” de WSDL (descripción “abstracta de tales interacciones) en lugar de “Ports” (descripción física)
+
+En cuanto a la actividad “reply”, seleccionar cuál de las siguientes afirmaciones es falsa:
+1
+El código necesario para programar actividades "reply" o "invoke" de“partners” en un proceso BPEL es equivalente, porque en ambos casos ejecutamos las mismas operaciones en una misma definición de proceso
+La actividad "reply" debe estar siempre asociada a una actividad "receive" para conformar una doble operación de solicitud/respuesta en el proceso
+Esta actividad permite enviar un mensaje en respuesta a un mensaje anterior recibido en el proceso
+Con el partner "invoke" podemos tener una sola actividad para manejarmúltiples operaciones y así, sólo actualizando los partners en el proceso, podemos actualizar el código del proceso BPEL más fácilmente
+En caso de que haya un cambio en el archivo WSDL concreto que incluya un par "receive"-"reply", es más fácil programar un "invoke" que un mensaje SOAP independiente de respuesta
+
+Seleccionar cuál de las siguientes acciones sería redundante para completar ladefinición de un proceso BPEL 2.0 suponiendo que anteriormente hemosprogramado el archivo con la definición WSDL de tal servicio: 
+5
+Definir las variables necesarias para contener los mensajes de entrada/salida necesarios para intercambiar información con los servicios asociados al mencionado proceso
+Añadir las definiciones de los “PartnerLinkTypes” además de las definiciones del servicio realizadas previamente en WSDL
+Crearse un “PartnerLink” para cada servicio asociado al proceso BPEL 2.0
+Definir los servicios asociados participantes (“partnerlinks”) y sus roles
+Crear los “PortTypes” que se han de abrir cuando se reciba una petición de servicio en cada servicio
+
+Seleccionar la única respuesta correcta a la siguiente pregunta sobre relaciones existenciales en OWL:
+2
+La restricción: "Pizza Margherita tieneCubierta only (IngredienteMozzarella or IngredienteTomate)" la puede cumplir una pizza individual que tenga solo "IngredienteTomate" y pueda ser considerada una instancia ("individual") de la clase Pizza Margherita.
+La restricción: "La pizza Margherita tieneCubierta some IngredienteMozzarella and tieneCubierta some IngredienteTomate" no impide que Margherita tenga otros ingredientes más, además del tomate y la mozzarella.
+A partir de la restricción "Pizza Margherita tieneCubierta IngredienteMozzarella and tieneCubierta CubiertaTomate" se puede inferir el axioma de cierre de la propiedad tieneCubierta para la clase de Pizza Margherita.
+Estas relaciones obligan a que la correspondencia de una determinada propiedad se lleve a cabo solo con los individuos de una clase de relleno ("filler").
+Las restricciones "Pizza Margherita tieneCubierta only IngredienteMozzarella or IngredienteTomate)" y "PizzaMargherita tieneCubierta only IngredienteMozzarella and Pizza Margherita tieneCubierta only IngredienteTomate" son equivalentes.
+
+¿Cuál de las siguientes afirmaciones sobre elementos de WSDL que se usan para descripción de SW es incorrecta?:
+4
+La definición concreta “Port” de WSDL sirve principalmente para representar la dirección a través de la cual otros procesos o “partners” pueden acceder al servicio
+WSDL es un lenguaje de definición de interfaces de servicios basado en XML que se utiliza principalmente para proporcionar una descripción de la funcionalidad ofrecida por un SW
+El constructo “operation” (incluido en la definición de un PortType) sirve para definir el conjunto de mensajes de entrada y salida del servicio que se describe
+La parte “binding” de la descripción de un servicio en WSDL es necesaria para establecer conexiones físicas de este servicio con otros procesos o servicios
+El constructo “PortType” de WSDL proporciona la definición el orden correcto de los mensajes que pueden ser procesados por un SW
+
+Seleccionar la única alternativa correcta entre las siguientes afirmaciones sobre WSBPEL:
+4
+WS-BPEL no es más que una notación para describir coreografías de SW
+Realmente, el lenguaje WS-BPEL está destinado solo para pequeños proyectos de desarrollo de software
+El código de los “programas” desarrollados con WS-BPEL no puede ser serializado en un archivo XML tal como hacemos cuando utilizamos la API de programación JAXB
+BPEL es una notación que extiende el modelo de interacción entre servicios Web (SW) y entonces añade soporte para representar transacciones entre procesos de negocio a la notación WSDL
+Los procesos de negocio que se pueden describir con WS-BPEL sólo han de pertenecer a una notación de modelado de procesos de negocio (WSDL; BPEL, BPMN, etc.)
+
+¿Cual es la diferencia entre patrones de diseño y frameworks?
+1
+Los frameworks se basan en uno o más patrones para resolver problemas específicos
+Ninguna, los frameworks se usan para el diseño detallado del sistema
+Los patrones usan frameworks para ofrecer soluciones reutilizables
+
+¿Cual de los siguientes tipos de acoplamiento es más débil?
+2
+Cuando hay una jerarquía de herencia
+Cuando una clase implementa una interfaz
+Cuando una clase recibe una lista de instancias de otra clase como parámetro en un método
+
+¿Qué patrón de mapeado objeto-relacional consiste en crear una tabla para cada clase en la jerarquía de herancia?
+1
+Class table inheritance
+Concrete table inheritance
+Single table inheritance
+
+En el patrón Model View ViewModel, ¿qué objeto es el encargo de comunicarse con la capa de lógica de negocio?
+3
+View
+Model
+ViewModel
+
+En una arquitectura de capas abierta...
+2
+Se permite que las capas inferiores se comuniquen con las superiores
+Las capas superiores pueden saltarse alguna de las capas inferiores
+Se define una capa de servicio que pueda ser usada opcionalmente por la capa de lógica de negocio
+
+¿Cual es el principal propósito de los sistemas de rejillas para el diseño responsive?
+2
+Favoreces el uso de etiquetas semánticas
+Facilitar el posicionamiento y organización del contenido de las páginas
+Evitar el uso de media queries para el posicionamiento de contenido
+
+Al implementar el patrón Observer, ¿qué clase es la encargada de notificar cuando hay novedades?
+3
+Observer
+Subscription
+Subject
+
+¿Cuando es preferible usar el patrón Domain Model?
+1
+Cuando la lógica de dominio es compleja
+Cuando la lógica de dominio es simple
+Cuando no vamos a reutilizar la lógica de dominio
+
+¿Qué patrón GOF permite limitar el número de instancias que se crear de una clase?
+3
+Factory Method
+Template Method
+Singleton
+
+¿Cual de los siguientes tipos de acoplamiento es más fuerte?
+1
+Cuando hay una jerarquía de herencia
+Cuando una clase recibe una lista de instancia de otra clase como parámetro en un método
+Cuando una clase implementa una interfaz
+
+¿Cual de las siguientes afirmaciones sobre las arquitectura en capas es FALSA?
+3
+La comunicación entre capas disminuye el rendimiento de la aplicación
+La separación en capas poco acopladas facilita el diseño de tests
+La separación en capas favorece un diseño en capas individuales con menor cohesión
+La separación en capas poco acopladas facilita el diseño de pruebas automatizadas
+
+En una arquitectura de capas ¿con qué capa no debería nunca comunicarse la capa de presentación?
+2
+Servicios
+Acceso a datos
+Lógica de negocio
+
+¿Qué patrón permite centralizar las comprobaciones común en una implementación MVC?
+1
+Front Controller
+Application Controller
+Page Controller
+
+¿En qué situación NO podemos reemplazar una jerarquía de herencia por una solución distinta basada en la composición?
+3
+Cuando las clases hijas sobreescriben métodos de la clase padre
+Cuando la herencia se usa únicamente para heredar un comportamiento
+Cuando necesitamos un polimorfismo
+
+¿Qué patrón junta en los mismo objetos la lógica de negocio con la de acceso a datos?
+3
+Domain Model
+Data Access Gateway
+Active Record
+
+¿Cual de las siguientes responsabilidades corresponde a una clase "Controlador" GRASP?
+1
+Manejar los evento que llegan de la interfaz
+Hacer de intermediario entre dos entidad de dominio
+Decodificar lo parámetros de una petición HTTP
+
+En una aplicación web, ¿en qué objetos de la capa de presentación se deben hacer transformaciones sobre los datos de entrada que afecten a varias funcionalidades (rutas) distintas?
+1
+Middleware
+Application Controller
+Router
+
+¿Qué patrón permite centralizar en una sola clase las comprobaciones comunes en una implementación del patrón MVC (seguridad, personalización, etc.)?
+1
+Front Controller
+Application Controller
+Page Controller
+
+¿Cuándo es necesario dividir una clase en dos o más clases distintas?
+2
+Cuando aplicamos el patrón "Experto en información" en cascada.
+Cuando la cohesión de la clase es demasiado baja.
+Cuando el acoplamiento de la clase es demasiado alto.
+
+¿Qué arquitectura divide los sistemas en pequeños componentes independientes para favorecer la escalabilidad?
+2
+Arquitectura en capas
+Microservicios
+Tuberías y filtros
+
+¿Con qué patrones GRASP está relacionado el patrón GOF Facade?
+1
+Controlador y bajo acoplamiento.
+Bajo acoplamiento y experto en información.
+Controlador y experto en información.
+
+¿En qué se basa el patrón GRASP Polimorfismo?
+3
+Las instancias de una clase padre se pueden comportar como si se tratase de una clase hija.
+La introducción de una jerarquía de herencia disminuye el acoplamiento.
+Las instancias de clases hijas se pueden comportar como si se tratase de la clase padre.
+
+¿Qué patrón de lógica de negocios permite implementar funcionalidades que involucran a varias entidades distintas (tablas en la base de datos) en los métodos de una misma clase?
+3
+Table Module
+Transaction Script
+Domain model
+
+Al implementar el patrón Composite, ¿en qué clase deben estar los métodos que permiten gestionar los componentes de los objetos compuestos para evitar un uso incorrecto de estos métodos?
+1
+Composite
+Leaf
+Component
+
+Según el principio de inversión de dependencias...
+2
+Los módulos de bajo nivel no deben depender nunca de abstracciones.
+Los módulos de alto y bajo nivel deben depender de abstracciones.
+Los módulos de alto nivel no deben depender nunca de abstracciones.
+
+¿Cuándo es preferible usar una clase Factoría en lugar de aplicar el patrón GRASP Creador?
+3
+Cuando el objeto creador debe almacenar los objetos creados.
+Cuando se debe inicializar el objeto en el momento de su creación.
+Cuando el tipo concreto del objeto a crear depende de un conjunto de condiciones.
+
+¿Qué técnica de diseño de interfaces consiste en realizar un diseño separado de un sitio web para dispositivos móviles?
+3
+Responsive web design
+Device-oriented web design
+Adaptive web design
+
+Al usar un objeto ServiceLocator para inyección de dependencias...
+2
+El cliente solicita las dependencias al objeto Assembler, que las inyecta al ServiceLocator.
+El cliente solicita directamente las dependencias al ServiceLocator.
+El ServiceLocator inyecta las dependencias en el cliente a través de su constructor.
+
+¿En qué se diferencian un modelo de dominio y un diagrama de diseño de clases?
+2
+El modelo de dominio asigna responsabilidades a las clases, mientras que el diagrama de diseño de clases únicamente identifica las relaciones entre clases.
+El diagrama de diseño de clases se deriva a partir del modelo de dominio.
+El modelo de dominio se deriva a partir del diagrama de diseño de clases.
+
+¿Cuál de las siguientes NO es una ventaja de usar un framework arquitectural?
+2
+Proporciona una infraestructura que podemos extender con comportamiento personalizado
+Podemos cambiar fácilmente la arquitectura del sistema.
+Establece las reglas mediante las que deben interactuar los componentes del sistema.
+
+¿Qué problema se puede derivar de un excesivo acoplamiento en el diseño de un sistema?
+2
+Cada clase asume demasiadas responsabilidades.
+Los cambios en una clase pueden afectar a un gran número de clases distintas.
+Ninguno, si el acoplamiento no es entre clases de distintas capas.
+
+¿Que patrón GOF nos permitiría saber cuántas veces hemos accedido a un objeto?
+2
+State
+Proxy
+Strategy
+
+¿Qué patron ORM para mapear la herencia implica que hay que realizar un join de varias tablas para recuperar todos los datos de un objeto?
+1
+Class table inheritance
+Concrete table inheritance
+Single table inheritance
+
+Queremos desarrollar una aplicación de escritorio para gestionar colecciones de música, con la posibilidad de que otras personas puedan extender sus funcionalidades una vez publicada (p.ej. añadiendo análisis del audio para agrupar canciones según distintos criterios). ¿Qué patrón arquitectural sería el más adecuado?
+1
+Microkernel
+Arquitectura orientada a eventos
+Tuberías y filtros
+
+¿Qué patron ORM sirve para evitar tener objetos duplicados en memoria al recuperar datos de la base de datos?
+1
+Identity map
+Unit of work
+Lazy load
+
+¿Qué patrón GOF permite implementar de forma sencilla la funcionalidad "deshacer"?
+1
+Command
+Proxy
+Strategy
+
+Cuando una clase necesita una instancia de otra, ¿qué nombre recibe la técnica que consiste en pasarle esa instancia desde fuera en lugar de crearla dentro de la clase?
+2
+Inversión de control
+Inyección de dependencias
+Inversión de dependencias
+
+¿Con qué patrón podemos reducir el acoplamiento entre dos partes de un sistema, cuando una parte usa un conjunto de clases de la otra?
+2
+Proxy
+Facade
+Composite
+
+¿Qué mecanismos de inyección de dependencias se pueden usar de forma conjunta?
+1
+Inyección en el constructor y con método setter
+Service Locator e inyección con método setter
+Service Locator e inyección en el constructor
+
+En una arquitectura en capas, ¿por qué la capa de lógica de negocio se sitúa por encima de la capa de acceso a datos?
+2
+Para evitar que la capa de acceso a datos acceda directamente a la capa de servicios.
+Para desacoplar a las capas superiores de los detalles de acceso a la base de datos.
+No es necesario, al ofrecer normalmente las mismas funcionalidades se puede intercambiar su orden.
+
+¿En qué consiste el patrón GRASP Indirección?
+2
+Invertir el flujo de llamadas entre dos clases, facilitando así la automatización de pruebas.
+Asignar una responsabilidad a una clase intermedia, desacoplando así dos clases del sistema.
+Separar un conjunto grande de responsabilidades en dos clases distintas, favoreciendo así la cohesión.
+
+Al usar el patrón State, ¿qué ventaja tiene asignar la responsabilidad de seleccionar el siguiente estado a las clases Concrete State?
+2
+Se reduce el número de estados posibles
+Se simplifica la implementación de la clase Context
+Ninguna, esa responsabilidad corresponde a la clase Context
+
+¿Cuándo es conveniente usar el patrón Data Mapper?
+1
+Cuando el modelo de dominio es complejo
+Cuando el modelo de dominio es sencillo
+Cuando se usa una base de datos orientada a objetos
+
+Al usar el patrón Table Module:
+3
+Una instancia de un objeto representa una fila o vista de la tabla de la base datos
+Es recomendable usarlo cuando la lógica de negocio es compleja
+Una única instancia de un objeto gestiona toda la tabla de la base de datos
+
+Las arquitecturas de microservicios:
+3
+Usan tuberías (pipes) para conectar los servicios entre sí
+Tienen un núcleo central que extiende sus funcionalidades con plugins
+Son adecuadas cuando se necesita una alta escalabilidad
+
+Una arquitectura en capas cerrada
+2
+Debe implementarse con el patrón MVC
+No permite hacer llamadas a capas inferiores saltando capas intermedias
+No permite añadir nuevas capas
+
+En el patrón GOF Factory Method, la clase Creator proporciona una funcionalidad genérica independientemente del tipo de producto que se quiera crear.
+3
+Falso, esa responsabilidad corresponde a la clase ConcreteCreator
+Falso, esa responsabilidad corresponde a la clase Concrete Product
+Verdadero
+
+En el patrón State, ¿qué clase es la encargada de decidir cuál es el siguiente estado cuando hay un cambio de estado?
+1
+Puede ser la clase Context o las clases ConcreteState
+Ninguna de las clases implicadas en el patrón deberían tomar esa decisión
+Solamente la clase Context puede tener esa información
+
+Las validaciones en los modelos anémicos se realiza en:
+3
+Las validaciones se realizan en las propias clases del modelo
+Se utilizan métodos Mutator para realizar validaciones
+Las validaciones se realizan fuera de las clase del modelo
+
+¿Qué patrón de lógica de negocio permite agrupar cada funcionalidad del sistema en un único método?
+3
+Domain Model
+Table Data Gateway
+Transaction Script
+
+¿Cuál es el patrón GOF que permite transformar métodos en objetos, haciendo más fácil llevar un registro de las acciones ejecutadas e incluso deshacerlas?
+1
+Command
+Factory Method
+Facade
+
+El patrón Experto en Información recomienda asignar responsabilidades al objeto que...
+3
+centraliza todas las peticiones que llegan
+actúa como clase padre para evitar duplicar código
+conoce la mayor parte de la información necesaria
+
+En la arquitectura orientada a eventos:
+1
+Cada componente necesita conocer a qué eventos debe responder
+Es complicado añadir nuevos componentes porque están muy acoplados entre sí
+Añadir una funcionalidad implica modificar todos los componentes del sistema 
+
+¿Qué patrón nos permite representar relaciones entre objetos?
+1
+Domain Model
+Table Module
+Transaction Script
+
+En el patrón MVP, los objetos Presenter:
+3
+Se enlazan a componentes del interfaz usando data-binding
+Seleccionan la vista que se debe mostrar
+Preparan los datos del modelo para ofrecerlos a las vistas
+
+¿Cuál de los siguientes patrones NO se aplica a la capa de dominio?
+3
+Table Module
+Transaction Script
+Table Data Gateway
+
+¿Dónde se implementa la lógica de negocio en los modelos ricos?
+2
+No se permite lógica de negocio en las clases
+Se implementa en las propias clases del modelo
+Se implementa en las clases del modelo siempre y cuando se complemente con el patrón Lazy Load
+
+En el patrón Proxy, ¿por qué la clase Cliente depende de un interfaz en lugar de usar directamente la clase que implementa la funcionalidad deseada?
+3
+Para respetar el principio de segregación de interfaces
+Para evitar una dependencia directa de la clase real al Proxy
+Para poder introducir una clase Proxy que simula ser la clase real
+
+El patrón GRASP Controlador...
+2
+asigna las mismas responsabilidades que el Controlador del patrón MVC
+actúa como una clase que representa el sistema
+usa el polimorfismo para responder a cada evento de forma distinta
+
+En una arquitectura en capas, ¿qué capas pueden verse afectadas por una nueva funcionalidad?
+3
+Solamente la capa de presentación
+Solamente la capa de dominio
+Puede haber varias capas afectadas
+
+En el patrón Builder, ¿qué clase conoce en qué orden hay que ejecutar los pasos del proceso de construcción del producto?
+3
+AbstractBuilder
+Concrete Builder
+Director
+
+En el patrón Command, ¿qué clase debería almacenar la información necesaria para poder deshacer una acción ejecutada?
+2
+Invoker
+Command
+Client
+
+Al mapear la herencia utilizando el patrón Concrete table inheritance:
+2
+Se utiliza una única tabla para todas las clases
+Se utiliza una única tabla para cada clase "hoja"
+Se utiliza una única tabla para cada clase en la jerarquía
+
+Según el patrón GRASP Creador, la clase B debe ser la encargada de crear una instancia de la clase A si:
+2
+B es la clase más cercana y la creación de A requiere seguir un algoritmo complejo
+B contiene o agrega objetos de tipo A
+Las dos son ciertas
+
+¿Cuál de las siguientes responsabilidades NO pertenece a la capa de presentación?
+1
+Comunicarse con capas superiores para ofrecer funcionalidades complejas
+Comunicarse con la capa lógica de dominio para notificar los cambios realizados por el usuario
+Gestionar la interacción del usuario y mos- trar información.
+
+La inyección de dependencias se usa para...
+3
+aumentar la cohesión de la clase inyectada
+evitar que la clase dependiente dependa de una abstracción
+evitar el acoplamiento directo con una clase que proporciona una funcionalidad concreta
+
+Al usar el patrón Front Controller, los objetos Middleware...
+1
+se pueden usar para realizar comprobaciones de seguridad
+se encargan de validar los datos de los formularios
+se encargan de seleccionar el controlador encargado de procesar la petición
+
+El acoplamiento entre clases es una medida de:
+2
+Cuántas funcionalidades se asigna a cada clase
+El grado de dependencia entre las clases del sistema
+Cuántas clases intermedias hay que recorrer para llegar de una clase A a otra B
+
+¿Qué información contiene un objeto Data Transfer Object?
+2
+Reglas para transformar un objeto del modelo de dominio a representación textual.
+Datos de uno o más objetos del modelo de dominio
+Con qué Fachada Remota debe comunicarse el cliente para recuperar los datos
+
+El uso del patrón GRASP Creador implica:
+2
+Aumenta el acoplamiento entre clases.
+Disminuye el acoplamiento entre clases.
+No afecta al acoplamiento entre clases.
+
+¿Qué patrón GOF permite crear estructuras jerárquicas de objetos, de forma que el cliente pueda manejar objetos simples o compuestos indistintamente?
+1
+Composite.
+Builder.
+Strategy.
+
+En patrón OBSERVER
+3
+La clase SUBJECT debe tener acceso de algún modo a los datos del OBSERVER.
+No existe ningún acoplamiento entre las clases SUBJECT Y OBSERVER.
+La clase OBSERVER debe tener acceso de algún modo a los datos del SUBJECT.
+
+En los patrones MV* la parte del Modelo se encarga de:
+4
+Gestionar las peticiones
+Verificar las peticiones
+Gestionar la comunicación con la BBDD
+Representar los objetos del modelo de dominio
+
+Cuando se usa el patrón Active Record, ¿dónde se sitúa el código de acceso a la BBDD?
+2
+En el controlador del sistema
+En los objetos del dominio
+El patrón elimina la necesidad de una BBDD
+En las clases especializadas en acceso a datos
+
+Cuál de los siguientes tipos de asociación implica un menor grado de acoplamiento
+2
+Uso.
+Implementación de interfaces.
+Herencia.
+
+Los objetos de transferencia de datos (DTO)…
+3
+Pueden contener tanto datos como métodos de lógica de negocio.
+Contienen los métodos CRUD que se comunican con la base de datos.
+Se usan para pasar información entre distintas capas.
+
+¿Qué inconveniente tiene el uso del patrón Abstract Factory?
+3
+Para el cliente no es fácil seleccionar la familia de productos a crear.
+Los productos de distintas familias comparten el mismo interfaz.
+No es fácil añadir nuevos productos.
+
+¿Qué mide el rendimiento (performance) de un sistema?
+2
+El tiempo que el sistema funciona sin fallos.
+El tiempo de respuesta.
+El tiempo que el sistema está funcionando.
+
+Con qué patrón podemos recibir notificaciones cuando cambia el estado de un objeto?
+1
+Observer.
+Adapter.
+Command.
+
+Al usar el patrón Transaction Script:
+2
+Cada procedimiento creado es independiente del resto de capas del sistema.
+Cada procedimiento representa una acción que el usuario puede ejecutar.
+Surgen dos tipos de procedimientos: los que acceden a la base de datos y los que se comunican con el resto de capas del sistema.
+
+¿Cuál es la principal motivación de los patrones GRASP?
+2
+Identificar las clases del modelo de dominio que se comunican con el resto del sistema
+Proteger al sistema frente a posibles variaciones.
+Crear modelos que no cambiarán a lo largo del proyecto.
+
+¿Cuál es la principal ventaja de usar patrones GOF a la hora de diseñar un sistema?
+3
+Permite disminuir el número de clases del sistema.
+Hace que el sistema sea más fácil de comprender, a cambio de disminuir las posibilidades de reutilización de código.
+Aumenta la flexibilidad del sistema frente a futuros cambios.
+
+Cuando se usa el patrón Data Mapper:
+4
+Desaparecen los problemas de transformación de la estructura de objetos a tablas relacionales
+Los objetos del modelo de dominio son los encargados de guardar sus datos en la BBDD
+El patrón elimina la necesidad de una BBDD
+Una capa de mapeadores se encarga de mover datos entre los objetos y la BBDD
+
+¿Qué patrón está pensado para poder intercambiar distintos comportamientos en tiempo de ejecución?
+2
+Proxy
+Strategy
+Builder.
+
+Asignar menos responsabilidades a las clases que hay en la frontera con otras capas.
+2
+Lo más alto posible.
+Lo más bajo posible.
+El acoplamiento no influye.
+
+¿Qué beneficio podemos obtener al usar el patrón Proxy?
+2
+Podemos deshacer acciones realizadas sobre un objeto.
+Podemos controlar el acceso a un objeto.
+Podemos recibir notificaciones sobre el estado de un objeto.
+
+En el patrón GOF “Builder”, ¿qué clases debe conocer la secuencia de pasos necesaria para construir un producto?
+2
+La clase Builder.
+La clase Director.
+La clase ConcreteBuilder.
+
+¿Cuáles son las capas típicas de un sistema de 3 capas?
+3
+Acceso a datos, servicio y lógica de dominio.
+Servicio, lógica de dominio y presentación.
+Acceso a datos, lógica de dominio y presentación.
+
+¿Qué beneficio obtenemos al usar patrones de software?
+1
+Se simplifica la introducción de nuevas funcionalidades en el futuro.
+Se reduce la cantidad de código que hay que crear.
+Disminuye la complejidad de los diseños.
+
+El patrón builder se utiliza para...
+1
+Todas son ciertas.
+Simplificar el código cliente que crea objetos complejos.
+Permitir la variación de la representación interna de un producto
+
+En una arquitectura de 3 capas, ¿cómo se relacionan las capas de dominio y presentación?
+3
+La capa de presentación nunca debe depender de la capa de dominio.
+Nunca deben estar relacionadas.
+La capa de dominio nunca debe depender de la capa de presentación.
+
+Los sistemas de mapeo objeto-relacional (ORM) se encargan de:
+2
+Distribuir la lógica de negocio de las clases
+Adaptar la estructura del modelo a la estructura de las BBDD
+Optimizar el SQL y mejorar el rendimiento de las BDD
+Crear la BBDD a partir de la estructura del modelo de dominio
+
+Con qué patrón GOF se relaciona el patrón GRASP controlador?
+1
+Fachada.
+Fabricación pura
+Factory Method.
+
+Los objetos Data Transfer Object:
+1
+Pueden contener datos de varios objetos de dominio para mejorar el rendimiento.
+No deben contener datos de los objetos de dominio para aumentar la cohesión.
+Solamente pueden contener datos de un objeto de dominio para garantizar la consistencia.
+
+Cuáles de estas clases es más probable que requieran la aplicación de un patrón singletón?
+2
+Los componentes de un patrón composite.
+Las factorías completas de un patrón abstract factory.
+Los comandos de un patrón command.
+
+Para implementar la autentificación de usuarios en nuestra práctica debemos...
+3
+Implementar en la clase User las funcionalidades que se usan para otorgar a cada tipo de usuario acceso a las pantallas
+Todas son falsas
+Utilizar clases Permisos y roles para administrar los permisos y tener mayor control sobre lo que pueden hacer los usuarios
+Utilizar herencia para identificar los tipos de usuario
+
+¿Qué tipo de interfaces son deseables para llamadas entre objetos distribuidos?
+2
+Interfaces de grano fino.
+Interfaces de grano grueso.
+Interfaces sin estado.
+
+¿Qué ventaja tiene el patrón Builder?
+2
+El director no necesita conocer los pasos del proceso de construcción.
+Permite crear distintos productos siguiendo el mismo proceso.
+Cada constructor tiene un interfaz distinto.
+
+Cuándo es necesario introducir una clase “Fabricación Pura”?
+2
+Cuando queremos una clase intermediaria para desacoplar dos clases ya existentes.
+Cuando el aumento de responsabilidades de una clase pone en peligro su cohesión.
+Cuando necesitamos aplicar el patrón “Experto en información” en cascada.
+
+Cuando se desea simplificar el acceso a un subsistema o capa, ¿qué patrón GOF es el más indicado?
+2
+Proxy
+Facade.
+Strategy.
+
+¿Qué ventaja NO podemos conseguir con el patrón GOF “Proxy”?
+2
+Controlar el acceso a un objeto.
+Proporcionar una implementación alternativa para un objeto.
+Simular un objeto remoto de forma local.
+
+¿A qué nos referimos normalmente cuando hablamos de la arquitectura de un sistema?
+2
+A la infraestructura de hardware que dará soporte al sistema.
+A los principales componentes del sistema y sus relaciones.
+A la estructura de bajo nivel de cada componente del sistema.
+
+Cuándo conviene aplicar el patrón GRASP “Experto en Información” en cascada?
+2
+Cuando queremos romper intencionadamente la encapsulación de información.
+Cuando queremos prevenir la aparición de nuevas dependencias entre clases
+Cuando queremos traspasar datos de la lógica de negocio a la capa de acceso a datos.
+
+En la arquitectura de microservicios, selecciona la INCORRECTA:
+1
+La naturaleza distribuida no puede presentar problemas de rendimiento
+Los servicios internamente pueden tener su propia arquitectura
+Escalabilidad alta, permite escalar los servicios por separado
+Los servicios se pueden implementar con distintas tecnologías
+
+Los enrutadores (Routers) se encargan de:
+3
+Chequear la seguridad de la web
+Especificar los puertos de acceso al servidor donde se aloja nuestra web
+Seleccionar el controlador apropiado para cada petición
+Crear rutas de acceso que los usuarios puedan interpretar
+
+¿Cuándo es recomendable utilizar el patrón Transaction Script?
+3
+Cuando tienes que representar las relaciones entre las clases
+Cuando tienes una clase por cada tabla de la base de datos
+En aplicaciones con poca lógica de negocios
+Cuando la lógica de negocios es compleja
+
+El patrón Model-View-ViewModel es recomendable cuando:
+3
+Las vistas están acopladas a los modelos
+La seguridad es crucial
+La aplicación tiene mucha interacción en el interfaz
+La ampliación tiene muchos modelos
+
+Qué problema pretende evitar el patrón Lazy Load?
+3
+Problemas por el uso excesivo de herencia en la lógica de dominio.
+Problemas de integridad referencial al cargar objetos relacionados
+Problemas de rendimiento al cargar objetos relacionados.
+
+¿Cuál de las siguientes afirmaciones relacionadas con la herencia es verdadera?
+1
+Siempre que tenemos una jerarquía de herencia, es posible sustituirla por una agregación o composición (delegación), lo cual aumenta la flexibilidad del sistema.
+La herencia escala bien cuando aumenta el número de variaciones del sistema.
+La herencia mejora el acoplamiento del sistema.
+
+El patrón Front Controller utiliza un controlador para cada página y el patrón Page Controller utiliza un controlador para gestionar todas las páginas del la web
+2
+Verdadero
+Falso
+
+Un lenguaje específico de dominio (DSL)…
+1
+Puede representar todo o una parte del dominio para el que está construido.
+Se construye a partir de un diagrama de clases UML.
+Es menos abstracto que un lenguaje de propósito general.
+
+Una aplicación con una arquitectura Microkernel:
+1
+Está abierta para extender la funcionalidad pero cerrada para modificar su funcionalidad principal
+Está cerrada para extender la funcionalidad pero abierta para modificar su funcionalidad principal
+Desarrolla Plugins para usarlos en otras aplicaciones
+Presenta complicaciones a la hora de añadir nuevos componentes
+
+En los modelos ricos...
+2
+No hace falta realizar validaciones de datos en modelos ricos
+Los métodos set (setters) implementan las reglas de validación
+La validación se haría en la capa de servicio
+La validación se haría en la capa de servicio
+Los modelos ricos no admiten la lógica de negocio
+
+¿Cuál de los siguientes patrones NO es de comportamiento?
+1
+Proxy
+Command
+Observer
+
+Quién debe ser el encargado de crear los objetos de transferencia de datos (DTO)?
+1
+Un objeto Assembler que tiene acceso a los objetos de dominio.
+Un objeto proxy que ocupa el lugar del DTO.
+El objeto de dominio que contiene los datos.
+
+Si en una arquitectura en capas cerrada se define una capa de servicios entre la capa de presentación y la capa de lógica de negocio...
+2
+Podemos prescindir de la capa de acceso a datos.
+La capa de presentación no debe comunicarse directamente con la capa de lógica de negocio. 
+La capa de presentación puede comunicarse con las dos capas inferiores (servicios y lógica de negocio).
+
+El patrón GRASP indirección implica:
+2
+Favorecer las relaciones directas entre clases.
+Relacionar dos clases mediante otra intermedia.
+Asignar menos responsabilidades a las clases que hay en la frontera con otras capas.
+
+¿Cuál de los siguientes efectos se puede deber al alto acoplamiento entre clases?
+3
+Mayor facilidad de reuso.
+Mayor cohesión de las clases fuertemente acopladas.
+Alta probabilidad de propagación inadvertida de errores ante modificaciones en el código.
+
+El patrón Abstract Factory contribuye a preservar el principio OPEN-CLOSED de Bertrant Merey (Diseños abiertos a la extensión y cerrados al cambio) cuando...
+1
+El punto más probable de variación supone la adición de nuevas factorías concretas
+Los puntos más probables de variación suponen (a) la adición de nuevas familias de producto y/o (b) la adición de nuevas factorías concretas.
+El punto más probable de variación supone la adición de nuevas familias de productos.
+
+Las clases de diseño que surgen como resultado del patrón Fabricación Pura suelen aparecer:
+2
+Para representar objetos de dominio.
+Por descomposición funcional, para dividir responsabilidades.
+Por la aparición de jerarquías de herencia.
+
+De qué se encarga la capa de presentación
+3
+Realiza la comunicación con las capas inferiores
+Muestra/actualiza la información resultante de las llamadas a la lógica de negocio
+Todas las anteriores son correctas
+Gestiona la interacción con los usuarios
+
+En el patrón Observer, ¿qué rol es el encargado de llevar un registro de los objetos que deben ser notificados cuando hay un cambio?
+3
+Observer
+Client
+Subject
+
+Para que un diseño de clases sea más fácil de entender y usar, la cohesión debe ser
+3
+Baja
+La cohesión no influye
+Alta
+
+¿Qué inconveniente tiene el uso del patrón Composite?
+2
+El cliente no distingue entre clases simples y compuesta.
+Resulta complicado imponer restricciones sobre la estructura de los objetos compuestos
+No permite añadir nuevas clases simples.
+
+GRASP es el acrónimo de patrones generales de software para la asignación de responsabilidades. Con respecto a dicha responsabilidades, ¿Cuáles de las siguientes afirmaciones es falsa?
+3
+Los métodos pueden colaborar con otros métodos u objetos para cubrir una determinada responsabilidad.
+Los métodos se implementan para cubrir responsabilidades.
+Cada responsabilidad se traduce en un método que se debe asignar alguna clase software.
+
+Los objetos Middleware se encargan de:
+2
+Seleccionar el controlador apropiado para cada petición
+Realizar verificaciones y comprobaciones antes de ejecutar el controlador
+Comprobar que se registra correctamente la información en la BBDD
+Filtrar el contenido que le envía el controlador al modelo
+
+Nos han pedido diseñar un sistema de aprendizaje... En el, vamos a tener distintos objetos de aprendizaje que se deben instanciar en función del nivel de experiencia del alumno (De momento tres: K12, Adulto, Profesional). ¿Qué patrón aplicarías para solucionar este problema de manera flexible y extensible a nuevos niveles de experiencia? (e.g alumnos universitarios).
+1
+Abstract Factory.
+Proxy.
+Builder.
+
+El patrón Single table inheritance...
+4
+Es el patrón que se suele usar para mapear la herencia
+Usa una única tabla para todas las clases
+Usa un campo tipo para identificar de qué tipo es la clase
+Todas son correctas
+
+En el patrón Domain Model, para transformar el modelo de dominio a una estructura de tablas relacional se usa:
+2
+Si utilizas el patrón Domain Model no tiene sentido utilizar los patrones Active Record y Data Mapper
+Active Record cuando primero se diseña el modelo de dominio y luego la BBDD y Data Mapper cuando se parte de una BBDD existente
+El patrón Domain Model no puede usarse con BBDD relacionales
+Active Record cuando se parte de una BBDD existente y Data Mapper cuando primero se diseña el modelo de dominio y luego la BBDD
+
+Con respecto al Patrón Data Transfer Object:
+2
+DTO no se despliega a ambos lados del sistema distribuido
+Una ventaja es la omisión de información que el usuario no requiera
+No debe ser serializable
+Es obligatoria la utilización de un objeto ensamblador
+
+Hemos implementado un sistema al que queremos añadir ahora la posibilidad de leer una serie de datos de configuración desde distintas fuentes, como por ejemplo ficheros XML, base de datos, etc. ¿Qué patrón GOFT se adapta mejora este problema?
+3
+Command.
+Facade
+Strategy.
+
+En las aplicaciones Single Page (SPA): SELECCIONA LA INCORRECTA
+1
+El servidor genera las vistas usando un patrón MV+
+El servidor tan solo se encarga de servir los datos en formato texto
+Nos se recargan las página completas, se recargan partes
+La aplicación se ejecuta en el lado del cliente
+
+¿Cuál de los siguientes patrones no se aplica a la capa de lógica de negocio?
+4
+Transaction Script
+Table Module
+Domain Model
+Table Data Gateway
+
+Qué patrón sería más adecuado para llevar un recuento del número de veces que se llama a cada método de un objeto?
+1
+Proxy.
+Observer
+Strategy.
+
+El patrón repositorio...
+3
+Se puede utilizar tanto para modelos anémicos como ricos
+Implementa el acceso a datos en una clase llamada Repositorio
+Todas son correctas
+Se introduce para evitar dependencias desde capas superiores a la tecnología usada para el acceso a datos
+
+Qué técnica podemos usar para evitar acoplar una clase con la implementación concreta de una funcionalidad?
+3
+Inversión de control.
+Inversión de dependencias.
+Inyección de dependencias.
+
+¿Qué problemas pretende solucionar el patrón MVP frente a MVC?
+1
+Todas son correctas
+Facilitar la reutilización de código
+Evitar que las vistas estén acopladas a los modelos
+Facilitar las pruebas sobre los controladores
+
+¿Qué patrón GOF se usa para añadir nuevas funcionalidades a una clase sin modificarla?
+3
+Strategy
+Composite
+Decorator
+
+¿Cuál es el principal problema del patrón “Class Table Inheritance”?
+1
+Las operaciones join necesarias pueden afectar al rendimiento.
+Las columnas que no usan todas la subclases desperdician espacio en la base de datos.
+Es difícil usar un campo identificador único para todas las subclases.
+
+Con respecto al patrón Remote Facade:
+4
+Las fachadas remotas contiene la lógica de negocio
+Los objetos de grano fino implementan interfaces remotas
+No se puede utilizar mas de una Fachada Remota para acceder a varios objetos de dominio
+Los objeto de grano grueso implementan interfaces remotas
+
+El patrón GOF Abstract Factory:
+1
+Provee un interfaz para crear familias de productos de forma consistente
+Disminuye notablemente el número de clases del sistema.
+Permite controlar el número de instancias de los objetos que se crearán.
+
+En el patrón Model-View-Controller, cuando hay una serie de operaciones comunes que se deben realizar para cada petición del usuario, es conveniente usar el patrón:
+1
+Front Controller.
+Application Controller.
+Page Controller.
+
+¿Con qué patrón de lógica de dominio se combina normalmente el patrón Row Data Gateway?
+3
+Table Data Gateway.
+Domain Model.
+Transaction Script.
+
+En el sistema de aprendizaje uno de los requisitos es la construcción de guías docentes. Estas guías están compuestas de un contexto, una serie de objetivos, contenidos, una descripción de la metodología docente, un cronograma, y unos criterios de evaluación. ¿Qué patrón GOFT es el más adecuado para diseñar esta construcción?
+1
+Builder.
+Factory method.
+Abstract factory.
+
+En la arquitectura orientada a eventos:
+2
+Síncrona, los eventos se envían y reciben en tiempo real
+El sistema se compone de pequeños componentes que responden a eventos, y de algún mecanismo para gestionar las colas de eventos que se reciben
+Hay un alto acoplamiento entre los componentes
+Todas son correctas
+
+¿Cuál de las siguientes afirmaciones es CIERTA? Para que un diseño sea fácil de mantener y usar:
+1
+Debemos mantener un bajo acoplamiento y una alta cohesión.
+Debemos mantener un bajo acoplamiento y una baja cohesión.
+Debemos mantener un alto acoplamiento y una baja cohesión.
+
+Qué patrón es más recomendable para añadir nuevas funcionalidades a un objeto?
+2
+Adapter
+Decorator
+Composite
+
+El uso de interfaces de grano fino mejora el rendimiento de los sistemas distribuidos
+3
+Verdadero.
+Sólo si el diseño es orientado a objetos.
+Falso.
+
+¿En qué técnica de programación orientada a objetos se basa el patrón GRASP Polimorfismo?
+2
+Composición
+Herencia
+Agregación
+
+¿En qué caso está más indicado aplicar el patrón GRASP “Creador”?
+2
+Cuando queremos limitar el número de instancias de la clase creada.
+Cuando queremos almacenar instancias del objeto creado.
+Cuando la creación de instancias sigue una lógica condicional.
+
+Al usar el patrón Active Record, ¿dónde debe situarse el código para acceder a la base de datos?
+3
+En clases especializadas para el acceso a datos.
+En el controlador del sistema.
+En las clases (objetos) de dominio.
+
+El patrón class table inheritance...
+2
+Usa una única tabla para todas las clases
+Usa una única tabla para cada clase en la jerarquía
+Usa una única tabla para cada clase "hoja"
+Elimina la necesidad de usar identificadores para los objetos
+
+Entre las características principales de la Arquitectura de Filtros, NO encontramos:
+1
+Alto acoplamiento entre componentes
+Facilidad para implementar pruebas unitarias
+Reusabilidad de componentes
+Los filtros actúan como cajas negras
+
+Qué objetos colaboran con el Front Controller para realizar comprobaciones de seguridad?
+1
+Middleware.
+Application Controller.
+Router.
+
+Para disminuir la dependencia entre clases y favorecer la reutilización de código el acoplamiento deber ser
+3
+Lo más alto posible.
+El acoplamiento no influye.
+Lo más bajo posible.
+
+¿En qué capa se deben situar las operaciones complejas?
+3
+En la capa de presentación.
+En la capa de dominio.
+En la capa de servicio.
+
+La clase fachada del patrón fachada.
+3
+Es una clase abstracta de la que heredan las fachadas concretas de cada componente internodel sistema.
+Realiza la adaptación entre su interfaz y la interfaz de los objetos del sistema que este oculta. 
+Se limita a transmitir invocaciones desde el exterior hacia los objectos del sistema que oculta,preservando la interfaz de estos últimos
+
+En el patron Observer... 
+2
+El sujeto puede ser que envie información necesaria al observador mediante el metodo update()
+Todas son ciertas
+La lista de observadores concretos pueden incluir objetos del mismo tipo
+
+¿Cuál de las siguientes sentencias describe mejor cuando utilizar el patrón state ?
+2
+El patrón puede ser utilizado cuando cada estado tiene atributos relevantes a un objeto de  contexto específico
+El patrón puede ser utilizado cuando un objeto parece cambiar de clase en tiempo de ejecución
+El patrón puede ser utilizado cuando una clase tiene muchos estados
+
+En el patrón Command, ¿qué información necesitan los comandos para ejecutarse?
+1
+Qué clase es la receptora de la acción.
+Qué clase ha invocado la acción.
+Qué clase ha instanciado la acción.
+
+¿Con qué otro patrón GRASP está relacionado el patrón “Creador”?
+1
+Bajo acoplamiento, ya que disminuye el número de dependencias del sistema.
+Alta cohesión, ya que aumenta la cohesión de la clase creadora.
+Controlador, ya que la clase creadora puede controlar a la clase creada.
+
+El objetivo del patrón fachada es…
+2
+Resolver los problemas de compatibilidad entre las interfaces
+Simplificar el acceso a la interfaz mediante funcionalidades
+Protegernos ante posibles variaciones en el sistema y obtener más acoplamiento
+
+¿Qué patrón permite reutilizar un mismo objeto de acceso a datos para distintas vistas?
+2
+Model View Controller.
+Model View Presenter.
+Code-behind.
+
+El patrón command permite:
+2
+Acoplar el emisor y receptor
+Manipular comandos como objetos
+Añadir nuevos comandos modificando a otras clases.
+Combinarse con el patrón bridge para obtener comandos compuestos
+
+Según UML, los casos de usos:
+2
+Están condicionados por la implementación del sistema
+Son independientes de la computación.
+Son independientes del sistema.
+Ninguna de las anteriores
+
+La arquitectura establece:
+3
+a. Division en capas del sistema en base a las necesidades de distribución
+b. Configuración de componentes proporcionando una vista estructural a grandes ragos de la aplicación así como de la ubicación de la funcionalidad.
+c. a y b son verdades.
+d. Ninguna de las anteriores
+
+Si necesitamos proporcionar una interfaz para crear familias de objetos relacionados dependientes, sin especificar sus clases concretas. ¿ Qué patrón debemos aplicar?
+4
+Patrón State
+Patrón Composite
+Patrón Bridge.
+Patrón Abstract Factory
+
+De los siguientes patrones, indica cuál de ellos es Creacional
+3
+El patrón state
+El patrón Bridge.
+El patrón Singleton
+El patrón Proxy
+
+¿Cuál de las siguientes afirmaciones es falsa?
+2
+Los patrones son mas abstractos y generales que los frameworks
+Un patrón puede incorporar un framework y un framework puede hacer uso de varios patrones
+un Patron es una descripción de cómo se puede resolver un problema, y un framework da soporte a una posible solución
+
+¿ Cual de los siguientes grupos de patrones incluye sólo patrones de comportamiento?
+3
+Command, Composite, Builder
+Command, Proxy, Strategy
+Strategy, Observer, Command
+
+Uno de los principales inconvenientes del patrón Builder es:
+1
+Aumenta excesivamente el número de clases del sistema
+No permite crear distintas variantes de un producto
+Existe un alto acoplamiento entre el cliente y el constructor del producto
+
+¿Cuál de los siguientes grupos de patrones incluye solo patrones estructurales?
+2
+Composite, Builder, Proxy
+Façade, Composite, Proxy
+Proxy, Factory Method, Command
+
+¿ Qué patrón permitiría crear colas de prioridad o delegar la ejecución de distintas operaciones?
+2
+Strategy
+Command
+Proxy
+
+El patrón Command hace uso, entre otros, de los siguientes patrones GRASP
+2
+Polimorfismo, protección de variaciones y creador
+Indirección, frabricación pura y polimorfismo
+Creador, Experto y delegación
+
+Cuando necesitamos trabajar con distintos tipos de recursos que dependen de la localización debemos pensar en la conveniencia de usar el patrón
+2
+Proxy
+Abstract Factory
+Composite
+
+¿Cuál es el principal inconveniente de la fabricación pura?
+1
+Si se abusa de ello, aparecen clases con un único método( clases “functoides”) dando lugar a un diseño centrado en funciones que se implementan sobre un diseño orientado a objetos
+El problema es que las clases ficticias (es decir, clases que no existen en el análisis original) añadidas en la fabricación pura solo pueden contener un método.
+Mejora la cohesión pero empeora el acoplamiento
+
+Hemos implementado un sistema para la agencia F de noticias de manera que la agencia puede informar inmediatamente, cuando ocurre cualquier evento, a cualquiera de sus clientes por Email, SMS, Twitter o cualquier otro canal que puedan requerir en un futuro ¿ Con qué patrón lo hemos implementado?
+2
+Strategy
+Obrserver
+Command
+
+En el patrón GOF Observer, ¿Cuál es la clase encargada de notificar un suceso en el sistema?
+3
+La clase que desempeña el rol Observer
+La clase que desempeña el rol Concrete Observer
+La clase que desempeña el rol Subject
+
+¿Qué beneficio obtenemos con el patrón GRASP creador?
+2
+Reducir cohesión
+Reducir acoplamiento
+Evitar la necesidad de inicializar la clase creada
+
+Hemos diseñado un sistema de venta de vehículos y para la representación de las empresas cliente (que pueden tener filiales, subfiliales, etc) hemos aplicado el patrón COMPOSITE. De este modo hemos permitido que el resto del sistema interaccione con las empresas sin tener que preocuparse de si es una empresa simple o si tiene filiales que hay que tener en cuenta para operaciones como realizar ofertas, calcular costes, etc. ¿Cuál de las siguientes afirmaciones NO es un inconveniente de la solución aportada?
+1
+Gestión de jerarquías ortogonales de herencia y agregación.
+Gestión de restricción de los tipos de hijos en las composiciones.
+Gestión de los tipos de operación permitidos en los objetos simples.
+
+En el patrón OBSERVER…
+3
+La lista de observadores concretos puede incluir objetos de distinto tipo
+El sujeto puede ser que envíe la información necesaria al observador mediante el método update()
+Todas son ciertas
+
+Una tienda de cosméticos nos ha pedido que le realicemos una web responsive para verder sus productos. Con el fin de dar un servicio añadido al cliente, cada producto tiene asociada tanto una descripción y una foto como un pequeño vídeo donde se muestra cómo se debe usar y algún consejo de belleza. Sin embargo, y debido a que muchos de sus clientes se conectan desde el móvil, quieren que el video se reproduzca sólo si el cliente hace click sobre la fotografía del producto. Para ello, hemos decidido aplicar el patrón PROXY ¿De que tipo de proxy estamos hablando? 
+1
+Proxy virtual
+Proxy de protección 
+Proxy remoto
+
+¿Con que patrón podemos mantener la consistencia cuando se modifican dos instancias de un mismo objeto desde distintas partes del sistema? 
+1
+Unit of Work 
+Identity Map 
+Lazy Load
+
+En el proceso RUP un ciclo es:
+3
+Un esfuerzo de trabajo en un proyecto que recorre varios flujos de trabajo, al final del cual se ha incrementado la infomación disponible sobre el sistema
+Un intervalo de tiempo entre dos hitos importantes del proceso.
+Cada uno de los recorridos a través de'todas las fases del proceso que produce como resultado una versión de la aplicación
+Ninguna de las anteriores
+
+EI hito de la fase de construcción en RUP es...
+3
+La visión del sistema
+La arquitectura básica del sistema
+La versión final del producto con una capacidad operacional parcial del producto
+La versión final del producto con una capacidad operacional completa
+
+Según UML, la descripción bajo la forma de acciones y reacciones del comportamiento del sistema desde eI punto de vista del usuario viene determinado
+1
+EI diagrama de casos de uso.
+EI diagrama de clases.
+EI diagrama de actividad.
+Ninguna de las anteriores.
+
+¿Qué mide la velocidad de un equipo?
+2
+EI número medio de iteraciones que tarda en terminar un proyecto
+EI número de puntos de historia que puede completar en una iteración
+EI número de tareas o historias de usuario que puede completar en una iteración
+
+¿Cuál de las siguientes historias es una mala historia de usuario?
+1
+El programa se conectará a la BD a través de un pool de conexiones
+La empresa debe poder anunciar puestos de trabajo
+Hacienda podrá consultar el IVA repercutido
+
+¿Qué patrón sería mejor aplicar cuando no sabemos la clase de los objetos que van a crear las subclases de una clase abstracta?
+1
+Factory Method
+Abstract Factory
+Builder
+
+¿Cuál es el principal objetivo de las reuniones diarias de Scrum?
+3
+Conseguir que todos los miembros del equipo asuman la misma carga de trabajo
+Hacer demostraciones del buen funcionamiento del proyecto
+Detectar impedimentos en el avance del equipo
+
+En Scrum, ¿cuál es el rol encargado de mantener las historias de usuario?
+3
+Stakeholder
+Scrum Master
+Product Owner
+
+¿Cuál de las siguientes afirmaciones es falsa? EI uso de una aproximación XP para el desarrollo software...
+3
+Normalmente requiere entornos de integración automática
+Normalmente requiere la existencia en el equipo de desarrolladores experimentados
+Normalmente requiere que los clientes tengan muy claros los requisitos
+
+En XP...
+1
+Al igual que en Scrum, los clientes ayudan a desarrollar las historias de usuario
+Al contrario que en Scrum, los clientes no desarrollan las historias de usuario pero sí los tests de aceptación
+Los clientes no desarrollan ni las historias de usuario ni los tests de aceptación (que requieren conocimientos técnicos), pero priorizan las características que se implementarán en cada release.
+
+Un componente de entidad de negocio:
+1
+Representa a las entidades de dominio localizadas en la capa de de negocio
+Representa a las entidades de dominio que pueden almacenarse y transitar por las diferentes capas
+Representa a las entidades de negocio pero conteniendo solamente estado
+
+Al implementar el patrón Composite hay que decidir a qué clase asignar los métodos que gestionan los componentes. ¿Qué opción es mejor para asegurar la transparencia de cara a la clase Client? (No seguro)
+1
+(a) Asignarlos a la clase Component
+(b) Asignarlos a la clase Composite
+(c) La mejor opción es no implementarlos
+
+Cuando en mi sistema voy a tener distintos tipos de usuarios, lo más recomendable sería: (No seguro)
+3
+(a) Utilizar una única clase usuario donde se implementen las funcionalidades de cada tipo de usuario
+(b) Utilizar herencia donde cada tipo de usuario gestione sus permisos
+(c) Utilizar una clase rol que gestione los permisos que tiene cada tipo de usuario
+
+Cuando la lógica de negocio es compleja y partimos de una base de datos existente, ¿qué patrón sería el más recomendable usar? (No seguro)
+1
+(a) Data Mapper
+(b) ActiveRecord
+(c) Table Module
+
+La arquitectura en capas: (No seguro)
+2
+(a) Define una serie de capas que siempre se tienen que utilizar
+(b) Cada capa se encarga de una tarea específica, abstrayendo los detalles a las demás capas
+(c) Cuando se añade una nueva funcionalidad solo puede verse afectada una capa
+
+El patrón Table Data Gateway: (No seguro)
+2
+(a) Se utiliza cuando tienes que diseñar la base de datos desde cero
+(b) Actúa como intermediario entre la lógica de negocio y la base de datos
+(c) Mapea bases de datos complejas para adaptarlas a la lógica de negocio
+
+Al usar el patrón Front Controller, los objetos Router... (No seguro)
+2
+(a) se pueden usar para realizar comprobaciones de seguridad
+(b) se encargan de seleccionar el controlador encargado de procesar la petición
+(c) se encargan de validar los datos de los formularios
+
+¿Qué inconvenientes presenta el patrón MVC? (No seguro)
+1
+(a) La vista está acoplada al modelo
+(b) Las vistas comparten
+(c) Los controladores están desacoplados de las vistas
+
+Sobre el diseño de software...
+1
+- Es el proceso de definición de la arquitectura, componentes, interfaces y otras características de un sistema
+- Todo el software tiene siempre un diseño, la forma en la que hayas creado las clases formará un diseño
+- Todas son correctas
+
+Al utilizar el patrón Lazy Load, ¿qué tipo de problemas pretendemos evitar?
+2
+- Problemas de integridad al cargar objetos relacionados
+- Problemas de rendimiento
+- Problemas de consistencia
+
+Al mapear la herencia utilizando el patrón Single table inheritance, ¿cuántas tablas necesitamos usar?
+1
+- Una tabla común para todas las clases
+- Una tabla para cada clase "hoja"
+- Una tabla para cada clase en la jerarquía
+
+En el patrón MVC, cuando usamos un Front controller:
+1
+- Hay un controlador diferente para cada vista del sitio web
+- Hay un controlador que centraliza la gestión de todas las peticiones del sitio web
+- Cuando se utiliza el patrón MVC es más recomendable utilizar el patrón Page controller
+
+¿Qué patrones de lógica de negocio necesitan combinarse normalmente con una capa de servicios para implementar funcionalidades complejas?
+1
+- Table Module y Domain Model
+- Transaction Script y Table Module
+- Transaction Script y Domain Model
+
+¿Cuál es la diferencia entre los patrones Table Module y Domain Model?
+2
+- Table Module pertenece a la capa de acceso a datos, y Domain Model a la capa de lógica de dominio.
+- Normalmente, con Table Module hay un objeto por cada tabla, mientras que con Domain Model hay un objeto por cada fila de la tabla.
+- Las dos son ciertas.
+
+¿Qué responsabilidad NO corresponde a la capa de presentación?
+3
+- Mostrar el resultado de ejecutar la lógica de negocio.
+- Activar funcionalidades de capas inferiores
+- Alojar funcionalidades de alto nivel que no encajan en ninguna clase del modelo de dominio.
+
+¿Cuál de las siguientes afirmaciones sobre el patrón Remote Façade es FALSA?
+3
+- Las fachadas remotas no deben contener lógica de dominio 
+- Las fachadas remotas no deben tener estado 
+- Las fachadas remotas deben ofrecer un único método para acceder a todas las propiedades de un objeto
+
+¿Qué tipo de acoplamiento debemos evitar para facilitar los cambios de tecnología en la capa de presentación?
+2
+- Que la capa de presentación tenga como dependencias clases de la capa de lógica de negocio.
+- Que la capa de lógica de negocio tenga como dependencias clases de la capa de presentación.
+- Que las clases de la capa de presentación tengan dependencias entre sí.
+
+En una arquitectura de tipo Microkernel…
+3
+- La escalabilidad es alta debido al pequeño tamaño del núcleo.
+- Cada plugin debe tener una interfaz independiente de las demás
+- Se pueden añadir nuevas funcionalidades en tiempo de ejecución
+
+¿Qué patrón de capa de presentación es más adecuado cuando una sola interfaz presenta información de muchos objetos distintos?
+3
+- Model View Controller.
+- Model View Presenter.
+- Model View ViewModel.
+
+Que patrón GOF se usa para definir familias de algoritmos intercambiables. 
+3
+- Factory method. 
+- Abastract Factory. 
+- Strategy. 
+
+Como afecta un numero de capas mayor al rendimiento del sistema. 
+1
+- Negativamente porque aumenta la comuncacion entre capas. 
+- Negativamente porque disminuyes la cohesion de cada capa. 
+- El numero de capas no afecta al rendimiento. 
+
+Que patrón GOF permite integrar clases que tienen una interfaz incompatible o que no coincide con el esperado? 
+3
+- Decorator 
+- Proxy 
+- Adapter.
+
+Que patrón GOF define una interfaz para crear objetos, pero delega en sus subclases la decisión sobre que clase crear? 
+1
+- Factory method 
+- Abstract Factory 
+- Builder.
+
+¿Qué dependencias deberían evitarse siempre en una arquitectura en capas? C3-2024
+1
+(a) La lógica de negocio depende de la capa de presentación
+(b) La lógica de negocio depende de la capa de acceso a datos
+(c) La capa de presentación depende de la lógica de negocio
+
+Sobre el patrón Creador, ¿cuál de las siguientes afirmaciones es CORRECTA? C3-2024
+2
+(a) Promueve la baja cohesión y por eso es tan importante en los procesos de creación de clases
+(b) Determina desde dónde instanciar otras clases
+(c) Se centra en la capa de persistencia y en la creación de los datos en las bases de datos, ficheros y consumo de servicios web
+
+¿Cómo se puede mejorar el rendimiento en la comunicación entre dos componentes (cliente/servidor) en un sistema distribuido? C3-2024
+1
+(a) Creando interfaces de grano grueso en el servidor
+(b) Creando interfaces de grano grueso en el cliente
+(c) No distribuyendo los componentes
+
+¿Qué patrón GOF permitiría añadir funcionalidades a un objeto sin modificarlo y de forma transparente? C3-2024
+1
+(a) Decorator
+(b) Adapter
+(c) Template Method
+
+Tenemos un software en el que es relativamente habitual realizar modificaciones funcionales, sin embargo cada vez que lo hacemos el número de clases a modificar es alto y desproporcionado con respecto a lo que se podría esperar inicialmente teniendo en cuenta la modificación funcional. Parece que estamos ante un síntoma de: C3-2024
+2
+(a) Código con bajo acoplamiento y baja cohesión
+(b) Código con bajo acoplamiento y alta cohesión
+(c) Código con alto acoplamiento y baja cohesión
+
+En una aplicación con una interfaz de usuario, queremos actualizar automáticamente algunos componentes del interfaz cuando se actualicen los datos del modelo, evitando dependencias innecesarias. ¿Qué patrón GOF sería más adecuado para esto? C3-2024
+1
+(a) Observer
+(b) Command
+(c) Facade
+
+Te incorporas a un proyecto nuevo para modificar un software, ampliamente extendido y con un gran número de funcionalidades, para que se vaya generando un log de todas las operaciones que los usuarios van realizando al trabajar con él, con el id del usuario, id de la operación, fecha y hora. Se pretende evaluar el rendimiento de cada uno de los empleados con el análisis de los datos obtenidos. ¿Cómo propondrías abordarlo? C3-2024
+1
+(a) Utilizando el patrón Proxy
+(b) Utilizando el patrón Command
+(c) Utilizando el patrón Adapter
+
+¿Qué beneficio NO se obtiene al usar inyección de dependencias? C3-2024
+1
+(a) Garantiza que se cumple el principio de responsabilidad única para la clase inyectada
+(b) Facilita la automatización de pruebas
+(c) Reduce el acoplamiento de la clase donde se inyectan las dependencias
+
+Los objetos Data Transfer Object (DTO)… C3-2024
+3
+(a) ...son réplicas de los modelos pero sin los métodos de lógica de negocio
+(b) ...se usan para comunicar la capa de lógica de negocio con la capa de acceso a datos
+(c) ...permiten agregar información de varios modelos en un único objeto
+
+¿Qué ventaja tiene el patrón MVP sobre el MVC? C3-2024
+1
+(a) Permite realizar pruebas unitarias sobre el Presenter
+(b) Permite filtrar las peticiones usando objetos Middleware
+(c) Permite usar data-binding
+
+Vas a desarrollar una solución para el preprocesamiento masivo de datos de diversos orígenes de datos en un proyecto de big data, ¿qué arquitectura utilizarás principalmente? C3-2024
+2
+(a) Arquitectura de microkernel
+(b) Arquitectura de tuberías y filtros
+(c) Arquitectura de microservicios
+
+"Ninguna clase debería depender de métodos que no usa" es la definición del: C3-2024
+2
+(a) Principio de responsabilidad única (Single-responsibility)
+(b) Principio de segregación de interfaces (Interface segregation)
+(c) Principio de inversión de dependencias (Dependency inversion)
+
+¿Qué patrón de lógica de negocio es más propenso a la duplicación de código? C3-2024
+1
+(a) Transaction Script
+(b) Table Module
+(c) Domain Model
+
+Al usar un modelo anémico, ¿dónde ubicarías un método que elimina un objeto de la base de datos dado su identificador? C3-2024
+3
+(a) En el modelo
+(b) En un controlador
+(c) En un repositorio
+
+Si queremos reducir el acoplamiento, ¿qué alternativa deberíamos usar en lugar de la herencia si es posible? C3-2024
+2
+(a) Polimorfismo
+(b) Implementación de interfaces
+(c) Todas las anteriores
+
+Desarrollo más rápido, menor coste de desarrollo, soporte de la comunidad. Son beneficios típicos de: C3-2024
+3
+(a) Utilizar una arquitectura de capas
+(b) Desarrollar usando metodologías ágiles
+(c) Utilizar frameworks
+
+¿Qué patrones podemos usar para mapear la herencia en una base de datos? C3-2024
+2
+(a) Class table Inheritance, Leaf table inheritance, Total table inheritance
+(b) Class table inheritance, Concrete table inheritance, Single table inheritance
+(c) Unique table inheritance, Leaf table inheritance, Full table inheritance
+
+¿Cuál de estas operaciones no sería adecuada en un objeto Middleware en la capa de presentación? C3-2024
+3
+(a) Realizar modificaciones en los datos de entrada de un formulario
+(b) Bloquear el acceso a una ruta según el tipo de usuario
+(c) Invocar a un servicio para que gestione la petición
+
+De las siguientes situaciones, cuáles son síntomas de que la herencia no es la solución más adecuada: C3-2024
+3
+(a) Demasiados métodos heredados que no se usan
+(b) Demasiados métodos sobrescritos
+(c) Todos los anteriores
+
+Las buenas prácticas de desarrollo nos indican que una arquitectura de capas debería de estar formada siempre por: C3-2024
+3
+(a) 5 capas
+(b) 4 ó 5 capas
+(c) Las que tengan sentido y justificación en nuestro desarrollo

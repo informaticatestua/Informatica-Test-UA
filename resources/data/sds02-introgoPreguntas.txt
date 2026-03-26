@@ -1,0 +1,420 @@
+¿Cuál es la extensión de los archivos fuente de Go?
+1
+.go
+.gol
+.goexe
+.g
+
+¿Cómo deben nombrarse, según convención, los ficheros Go?
+1
+En minúsculas
+En mayúsculas
+En CamelCase
+Con espacios
+
+¿Qué carácter se utiliza para separar palabras en los nombres de fichero Go?
+2
+Punto (.)
+Subrayado (_)
+Guión (-)
+Ninguno; se usa CamelCase
+
+¿Qué indica un fichero cuyo nombre termina en _test.go?
+1
+Contiene pruebas unitarias
+Es el fichero principal de ejecución
+Define el módulo de Go
+Debe ignorarse al compilar
+
+¿Cómo determina Go la visibilidad de paquetes y símbolos?
+1
+Primer letra mayúscula → público; minúscula → privado
+Prefijo export → público; internal → privado
+Sufijo _pub → público; _priv → privado
+Mediante etiquetas en comentarios
+
+¿Qué paquete y función se requieren para que un programa Go sea ejecutable?
+1
+package main y func main()
+package exec y func start()
+package app y func run()
+package go y func init()
+
+¿Con qué palabra clave se declaran funciones en Go?
+1
+func
+def
+fn
+function
+
+¿Qué requisito tiene Go con la llave de apertura { en la declaración de una función?
+2
+Debe ir en la misma línea que la cabecera func
+Debe ir siempre en la siguiente línea
+Es opcional si la función es corta
+Se omite si no hay parámetros
+
+¿Cómo se ejecuta un programa Go sin generar un binario permanente?
+1
+go run
+go exec
+go interp
+go shell
+
+¿Qué comando se utiliza para generar un ejecutable a partir del código Go?
+1
+go build
+go compile
+go make
+go install
+
+¿Cómo se declara una constante en Go?
+1
+const nombre = valor
+var nombre = valor
+let nombre = valor
+define nombre valor
+
+¿Qué permiten las constantes en Go en cuanto a operaciones aritméticas?
+1
+Realizar operaciones con precisión arbitraria
+Solo operaciones enteras
+Solo operaciones de punto flotante
+No permiten operaciones matemáticas
+
+¿Qué sintaxis permite declarar e inicializar una variable rápidamente con inferencia de tipo?
+1
+x := 42
+var x = 42
+let x := 42
+define x 42
+
+¿Qué valor inicial recibe una variable de tipo entero si no se le asigna explícitamente?
+1
+0
+1
+-1
+nil
+
+¿Cuál es la única sentencia de bucle en Go?
+1
+for
+while
+loop
+repeat
+
+¿Cómo se representa un bucle infinito en Go?
+1
+for { … }
+while true { … }
+for (;;) { … }
+loop { … }
+
+¿Por qué Go no incluye el operador ternario cond ? a : b?
+1
+Se reemplaza por if … else para mayor claridad
+Porque Go no admite condiciones
+Porque lo sustituye switch
+Para forzar el uso de for
+
+¿Qué ventaja ofrece el switch en Go respecto a otros lenguajes?
+1
+No requiere break al final de cada case
+Solo admite constantes enteras
+Solo permite un case por switch
+Obliga a usar default
+
+¿Cómo se define un array de enteros de longitud 5?
+1
+var a [5]int
+a := []int{5}
+array<int,5> a
+make([5]int)
+
+¿Cuál es la diferencia principal entre arrays y slices en Go?
+2
+El tamaño del array forma parte de su tipo; el slice es dinámico
+El array usa heap; el slice usa stack
+El slice es de solo lectura; el array es mutable
+El slice no necesita importe de librería; el array sí
+
+¿Qué función propia devuelve la longitud de un slice o array?
+1
+len()
+cap()
+size()
+length()
+
+¿Cómo se añade un elemento al final de un slice s?
+1
+s = append(s, valor)
+s.push(valor)
+s.add(valor)
+s += valor
+
+¿Cómo se crea un slice con longitud 3 y capacidad 5 de enteros?
+1
+make([]int, 3, 5)
+[]int{3,5}
+initSlice(3,5)
+newSlice(3,5)
+
+¿Cómo se obtiene, mediante reslicing, un slice con los elementos 2, 3 y 4 de s?
+1
+s[2:5]
+s[2..4]
+slice(s,2,4)
+s.slice(2,4)
+
+¿Cómo se crea un mapa vacío con claves string y valores int?
+1
+make(map[string]int)
+map[string]int{}
+newMap[string]int()
+map{}.make(string,int)
+
+¿Cómo se comprueba la existencia de la clave "k" en un mapa m?
+1
+v, ok := m["k"]
+exists := m.has("k")
+if m["k"] != nil
+_, ok := m.get("k")
+
+¿Qué forma de for permite iterar sobre un slice y obtener índice y valor?
+1
+for i, v := range s { … }
+foreach i, v in s { … }
+for idx, val := iter(s) { … }
+for (i,v) in s { … }
+
+¿Cómo se representan las cadenas en Go?
+1
+Como slices de bytes inmutables codificados en UTF-8
+Como arrays de rune mutables
+Como string con longitud fija
+Como listas enlazadas de caracteres
+
+¿Qué convención utiliza Go para devolver errores desde la mayoría de las funciones de librería estándar?
+1
+Dos valores, siendo el segundo de tipo error
+Un único valor nulo si no hay error
+Excepciones lanzadas al fallar
+Callbacks de error
+
+¿Cómo implementa Go las interfaces sin usar palabras clave como implements?
+1
+
+Con duck typing: un tipo satisface una interfaz si define sus métodos
+Con declaración type T implements I
+Con @implements encima de la estructura
+Mediante herencia de una clase base de interfaz
+
+¿Cuál es el patrón idiomático para manejar errores en Go?
+1
+Devolver el resultado y un valor error como segundo retorno
+Lanzar excepciones con throw y capturarlas con catch
+Retornar valores nulos en caso de error
+Usar un callback onError(err)
+
+¿Cómo defines una función anónima (closure) en Go?
+2
+def f(x int) int { return x*x }
+f := func(x int) int { return x*x }
+func f(int) int { return x*x }
+function(x int) int => x*x
+
+¿Qué palabra clave lanza una función como goroutine?
+1
+go
+goroutine
+spawn
+async
+
+¿Cuál es el tipo básico para comunicar goroutines en Go?
+1
+Canal (chan)
+Mutex (sync.Mutex)
+WaitGroup (sync.WaitGroup)
+Buffer (bufio.Reader)
+
+¿Cómo se declara un canal no bufferizado de enteros?
+1
+make(chan int)
+make(chan int, 1)
+chan int{}
+new(chan int)
+
+¿Qué sucede si envías un valor a un canal no bufferizado sin un receptor activo?
+1
+Produce un deadlock y panic
+El valor se descarta silenciosamente
+Se envía a un buffer interno
+El canal se cierra automáticamente
+
+¿Qué función de time devuelve la hora actual?
+1
+time.Now()
+time.Current()
+time.Now
+time.Get()
+
+¿Cómo pausas la ejecución durante 2 segundos?
+1
+time.Sleep(2 * time.Second)
+time.Wait(2)
+sleep(2)
+time.Delay(2000)
+
+¿Qué función lee todo el contenido de un archivo en memoria?
+1
+ioutil.ReadFile("file.go")
+os.Open("file.go")
+bufio.NewReader("file.go")
+io.Copy("file.go")
+
+¿Cómo realizas una petición HTTP GET a una URL?
+1
+http.Get("https://example.com")
+net.Get("https://example.com")
+http.Request("GET", url)
+http.Call("GET", url)
+
+¿Qué función codifica un valor Go a JSON?
+1
+json.Marshal(v)
+json.Encode(v)
+json.ToJSON(v)
+json.Print(v)
+
+¿Qué función decodifica datos JSON en una variable Go?
+1
+json.Unmarshal(data, &v)
+json.Decode(data, &v)
+json.Parse(data, &v)
+json.ToStruct(data, &v)
+
+¿Cómo etiquetas un campo Nombre para que en JSON aparezca como nombre?
+1
+`json:"nombre"`
+`field:"nombre"`
+`tag:"nombre"`
+`json="nombre"`
+
+¿Qué paquete estándar proporciona soporte para compresión gzip?
+1
+compress/gzip
+gzip
+archive/gzip
+compress
+
+¿Qué paquete estándar se utiliza para cifrado AES?
+1
+crypto/aes
+encoding/aes
+cipher/aes
+aes
+
+¿Cómo creas un valor error con un mensaje personalizado?
+1
+errors.New("mensaje")
+fmt.Error("mensaje")
+newError("mensaje")
+error("mensaje")
+
+¿Qué función genera un número aleatorio entero comprendido entre 0 y n-1?
+3
+rand.Int()
+math.Random()
+rand.Intn(n)
+rand.Float64()
+
+¿Cómo defines un closure que incrementa un contador y devuelve el nuevo valor?
+2
+inc := func() int { count++; return count }
+count := 0; inc := func() int { count++; return count }
+func inc() int { count++; return count }
+inc := closure() { count++; return count }
+
+¿Cuál es la ventaja principal de usar closures en Go?
+1
+Mantener estado interno sin variables globales
+Ejecutar código en paralelo
+Reemplazar la herencia clásica de objetos
+Forzar tipado dinámico
+
+¿Qué función de net/http se utiliza para iniciar un servidor web?
+1
+http.ListenAndServe(":8080", handler)
+http.ServeHTTP()
+http.HandleFunc()
+http.NewServer()
+
+¿Qué comando se utiliza para inicializar un nuevo módulo Go en un proyecto existente?
+1
+go mod init
+go mod tidy
+go mod vendor
+go mod download
+
+¿Qué hace el comando go mod tidy?
+1
+Elimina dependencias no usadas y añade las necesarias al go.mod
+Solo descarga dependencias sin modificar go.mod
+Actualiza las versiones de dependencias a la última
+Genera la carpeta vendor
+
+¿Cómo se crea una carpeta vendor con todas las dependencias locales?
+1
+go mod vendor
+go mod tidy
+go mod download
+go get vendor
+
+¿Cuál es la convención de nombres para los archivos de prueba unitaria en Go?
+1
+<nombre>_test.go
+<nombre>.test.go
+<nombre>_unit.go
+<nombre>_spec.go
+
+¿Cómo se ejecutan todas las pruebas unitarias de un paquete y sus subdirectorios?
+1
+go test ./...
+go test -run all
+go unit
+go run tests
+
+¿Qué comando muestra el porcentaje de cobertura de pruebas?
+1
+go test -cover
+go test -v
+go test -run coverage
+go test -coverprofile=coverage.out
+
+¿Qué formato de función se usa para benchmarks en Go?
+1
+func BenchmarkXxx(b *testing.B)
+func benchXxx(b *testing.B)
+func TestXxx(b *testing.B)
+func Benchmark(b *testing.B)
+
+¿Qué herramienta proporciona un servidor local para consultar documentación de Go?
+1
+godoc
+go doc
+go help
+go fmt
+
+¿Cómo se consulta la documentación de una función específica desde la línea de comandos?
+1
+go doc fmt.Println
+godoc fmt.Println
+go help fmt.Println
+go doc.Println
+
+¿Qué comando descarga todas las dependencias listadas en go.mod sin crear ni modificar carpetas vendor?
+1
+go mod download
+go get
+go mod tidy
+go mod init

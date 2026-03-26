@@ -1,0 +1,419 @@
+¿Searle demostró que se puede hacer cosas sin ser conscientes de ello?:
+1
+1. Correcto, además, para él la consciencia es fundamental al hablar de inteligencia.
+2. Incorrecto, él cree que la consciencia no es esencial para la inteligencia.
+3. Correcto, pero él no ve la consciencia como un factor clave.
+4. Incorrecto, él argumenta que la consciencia y la inteligencia son independientes.
+
+¿Según Howard Gardner existen distintos tipos de inteligencia?:
+1
+1. Cierto, entre ellas la inteligencia emocional, naturalista, cibernética, etc.
+2. Falso, él sostiene que solo existe un tipo de inteligencia.
+3. Cierto, pero él solo reconoce la inteligencia emocional y lógico-matemática.
+4. Falso, él argumenta que la inteligencia no se puede categorizar.
+
+¿Hofstadter postuló que una de las características de la inteligencia es responder de forma rápida a problemas o situaciones diferentes?:
+1
+1. No forma parte de las características que postuló.
+2. Sí, es una de las características esenciales.
+3. Solo en el contexto de la inteligencia artificial.
+4. No, pero sí enfatiza la adaptabilidad y el aprendizaje.
+
+¿Según Howard Gardner la inteligencia emocional es formada por?:
+1
+1. La inteligencia intrapersonal y la interpersonal.
+2. La inteligencia lógico-matemática y la naturalista.
+3. La inteligencia musical y la lingüística.
+4. La inteligencia kinestésica y la espacial.
+
+¿La inteligencia interpersonal según Howard Gardner es?:
+1
+1. La inteligencia que nos permite entender a los demás.
+2. La capacidad de manejar las propias emociones.
+3. La habilidad para resolver problemas matemáticos.
+4. La facultad de comprender y manipular objetos físicos.
+
+Según Howard Gardner, la inteligencia que consiste en formar un modelo mental del mundo en tres dimensiones es la definición de:
+1
+1. Inteligencia espacial.
+2. Inteligencia naturalista.
+3. Inteligencia lógico-matemática.
+4. Inteligencia lingüística.
+
+¿Según Howard Gardner la inteligencia espacial consiste en?:
+1
+1. Formar un modelo mental del mundo en tres dimensiones.
+2. La capacidad de entender y manipular números y lógica.
+3. La habilidad para comprender las emociones de uno mismo.
+4. El talento para el movimiento corporal y la manipulación de objetos.
+
+El experimento de la 'Sala china' de John Searle tiene relación con el test de Turing en:
+1
+1. Intentar demostrar que el test de Turing no es prueba suficiente de inteligencia.
+2. Confirmar la validez del test de Turing.
+3. Mostrar una variante del test de Turing.
+4. No tiene relación alguna con el test de Turing.
+
+¿Cuál de las siguientes afirmaciones acerca de la IA es incorrecta?:
+1
+1. La IA débil a un computador actuar con un comportamiento inteligente para resolver problemas complejos siendo consciente de las acciones y decisiones que toma.
+2. La IA fuerte busca imitar la conciencia y el razonamiento humano.
+3. La IA débil se enfoca en tareas específicas sin buscar emular la conciencia humana.
+4. La IA fuerte es un concepto aún no alcanzado completamente.
+
+¿La inteligencia intrapersonal según Howard Gardner es?:
+1
+1. La inteligencia que nos permite entendernos a nosotros mismos.
+2. La capacidad de relacionarnos efectivamente con los demás.
+3. La habilidad para resolver problemas matemáticos y lógicos.
+4. La aptitud para crear y comprender expresiones artísticas.
+
+Reflexionando sobre la historia de la IA, ¿Podemos afirmar que se ha conseguido alcanzar una inteligencia artificial fuerte?:
+1
+1. No, es un objetivo distante, solo se ha iniciado el camino.
+2. Sí, ya se han desarrollado sistemas con inteligencia comparable a la humana.
+3. Parcialmente, en algunos campos específicos pero no en general.
+4. Aún es un tema de debate y no hay consenso.
+
+El término Inteligencia Artificial se introdujo en:
+1
+1. La Conferencia de Dartmouth (1956).
+2. Los trabajos de Alan Turing en la década de 1940.
+3. La primera presentación pública de un robot.
+4. Un artículo científico de John McCarthy en 1960.
+
+¿Quién diferencia varios tipos de inteligencia?:
+1
+1. Howard Gardner.
+2. John Searle.
+3. Alan Turing.
+4. Daniel Goleman.
+
+¿De qué es capaz una IA débil?:
+1
+1. De resolver problemas complejos.
+2. De tener conciencia y emociones.
+3. De replicar completamente la inteligencia humana.
+4. De aprender y adaptarse de forma autónoma.
+
+¿Cuál fue el primer robot que venció a un campeón del mundo vigente de ajedrez?:
+1
+1. Deep Blue.
+2. AlphaGo.
+3. Watson.
+4. Kasparov.
+
+Según Howard Gardner, la inteligencia que utilizamos cuando observamos y estudiamos la naturaleza es:
+1
+1. Inteligencia naturalista.
+2. Inteligencia espacial.
+3. Inteligencia kinestésica.
+4. Inteligencia lógico-matemática.
+
+El futuro próximo de la IA está orientado a:
+1
+1. Crear robots capaces de abordar tareas complicadas o peligrosas para el ser humano.
+2. Desarrollar sistemas con conciencia propia.
+3. Replicar la inteligencia humana en todos los aspectos.
+4. Solucionar problemas ambientales globales.
+
+¿Cuál de las siguientes sería una definición de IA?:
+1
+1. Sistemas que piensan como humanos.
+2. Máquinas capaces de realizar tareas sin intervención humana.
+3. Robots con emociones y sentimientos.
+4. Sistemas que superan la inteligencia humana.
+
+En la actualidad, la IA que se emplea es:
+1
+1. La IA débil.
+2. La IA fuerte.
+3. IA con conciencia.
+4. IA con autoaprendizaje avanzado.
+
+Según Howard Gardner, la inteligencia intrapersonal y la interpersonal conforman la:
+1
+1. Inteligencia Emocional.
+2. Inteligencia Cognitiva.
+3. Inteligencia Espacial.
+4. Inteligencia Lógica.
+
+En el campo de la IA y poder dotar de consciencia a las máquinas es cierto que:
+1
+1. Aún no se puede dotar de consciencia a una máquina ni está previsto poder hacerlo hasta dentro de muchos años.
+2. Se ha logrado dotar de consciencia básica a algunas máquinas.
+3. La dotación de consciencia a máquinas es un objetivo a corto plazo.
+4. Las máquinas ya poseen formas primitivas de consciencia.
+
+¿Cuál es la principal diferencia entre Turing y Searle?:
+1
+1. Uno creó un test para ver si la máquina era inteligente y el otro creó su contraejemplo.
+2. Ambos tenían enfoques similares respecto a la inteligencia artificial.
+3. Searle se centró en la consciencia, mientras Turing en la inteligencia.
+4. Turing trabajó en la criptografía, Searle en la filosofía del lenguaje.
+
+No existe ninguna diferencia entre la IA fuerte y la débil:
+1
+1. Falso.
+2. Cierto.
+3. Las diferencias son mínimas y a menudo indistinguibles.
+4. La diferencia solo radica en la complejidad del algoritmo.
+
+En qué década se produjo la Etapa de Expansión de la IA:
+1
+1. En los 80.
+2. En los 70.
+3. En los 90.
+4. En los 60.
+
+¿En qué conferencia y en qué año se definió el campo de la inteligencia artificial?:
+1
+1. En la conferencia de Dartmouth en el año 1956.
+2. En una reunión en MIT en 1962.
+3. En una conferencia en Harvard en 1950.
+4. En un simposio en Stanford en 1965.
+
+Según Gardner, la inteligencia que nos permite entender a los demás es:
+1
+1. Inteligencia interpersonal.
+2. Inteligencia intrapersonal.
+3. Inteligencia emocional.
+4. Inteligencia lógica.
+
+Según Howard Gardner, la inteligencia emocional de qué otras inteligencias consta?:
+1
+1. Inteligencia intrapersonal e interpersonal.
+2. Inteligencia lógico-matemática y lingüística.
+3. Inteligencia musical y kinestésica.
+4. Inteligencia naturalista y espacial.
+
+En cuanto al futuro próximo de la IA, podemos concluir que se orienta hacia:
+1
+1. Abordar aquellas tareas que, ya sea por lo incómodo, peligroso o complicado, conviene delegarlas en sistemas inteligentes artificiales.
+2. Desarrollar máquinas con emociones y conciencia.
+3. Superar la inteligencia humana en todas las áreas.
+4. Resolver problemas ambientales y sociales globales.
+
+Según Howard Gardner, la inteligencia que está formada por la inteligencia intrapersonal y la interpersonal y juntas determinan nuestra capacidad de dirigir nuestra propia vida de manera satisfactoria, se denomina:
+1
+1. Ninguna de las anteriores.
+2. Inteligencia Emocional.
+3. Inteligencia Cognitiva.
+4. Inteligencia Social.
+
+La diferencia entre la IA débil y la IA fuerte es:
+1
+1. La IA fuerte es la creada para pensar y ser consciente, y la IA débil solamente se comporta de manera inteligente.
+2. No hay diferencia significativa entre ambas.
+3. La IA débil es más avanzada que la IA fuerte.
+4. La IA fuerte se enfoca en tareas específicas, mientras que la IA débil tiene aplicaciones más generales.
+
+¿En qué consistía el test de Alan Turing?:
+1
+1. Demuestra la existencia de inteligencia en una máquina.
+2. Determina si una máquina puede pensar como un humano.
+3. Evalúa la capacidad de una máquina para aprender.
+4. Mide la eficiencia de una máquina en tareas específicas.
+
+¿Superar el test de Turing es condición suficiente para determinar que una máquina es inteligente?:
+1
+1. No, ya que la máquina puede estar siguiendo reglas sin que haya inteligencia.
+2. Sí, porque demuestra la capacidad de imitar la inteligencia humana.
+3. Depende del contexto y la complejidad de las tareas realizadas.
+4. Sí, ya que es el estándar aceptado para medir la inteligencia de una máquina.
+
+Si un robot puede resolver ciertos problemas complejos, podemos afirmar con total seguridad que posee una Inteligencia...:
+1
+1. Débil, puesto que el ordenador no tiene consciencia como un ser humano, simplemente resuelve problemas modelando su inteligencia.
+2. Fuerte, ya que resolver problemas complejos requiere un alto nivel de inteligencia.
+3. Emocional, ya que la resolución de problemas implica cierto grado de empatía y comprensión.
+4. Espacial, ya que los problemas complejos a menudo involucran la manipulación de objetos en un entorno.
+
+El test de Searle en su contraejemplo del test de Turing nos sirve para apreciar:
+1
+1. La IA fuerte.
+2. La IA débil.
+3. La capacidad de las máquinas para tener conciencia.
+4. Los límites del test de Turing en medir la inteligencia.
+
+El término Inteligencia Artificial se introdujo en...:
+1
+1. La Conferencia de Dartmouth (1956).
+2. Los trabajos de Alan Turing en la década de 1940.
+3. Una publicación de John McCarthy en la década de 1960.
+4. Una conferencia en MIT en la década de 1950.
+
+Si una persona A le gana en una partida de ajedrez a otra persona B, ¿significa que la persona A es más inteligente que la persona B?:
+1
+1. No, aunque le ganes al ajedrez a otra persona no implica que seas más inteligente.
+2. Sí, ya que el ajedrez es un indicador claro de la inteligencia general.
+3. Depende de las circunstancias y habilidades específicas de cada jugador.
+4. Sí, pero solo en el contexto de la inteligencia espacial y lógica.
+
+¿Cómo se relacionan los siguientes términos? 'Pensar como', 'actuar como', 'IA fuerte', 'IA débil', 'tener consciencia' 'no tener consciencia' 'Test de Turing' y 'La sala china':
+1
+1. Hay dos grupos, el primero es: 'Pensar como', 'IA fuerte', 'tener consciencia', 'La sala china' y el segundo grupo es: 'actuar como', 'IA débil', 'no tener consciencia' 'Test de Turing'.
+2. Todos estos términos están directamente relacionados con la IA fuerte.
+3. Están divididos en términos que se refieren a capacidades humanas y capacidades de máquinas.
+4. No hay una relación clara entre estos términos.
+
+¿Cuál de las siguientes afirmaciones es correcta?:
+1
+1. Para Searle, la inteligencia artificial se basa en la capacidad de una máquina para ser consciente como un humano, característica principal de una IA fuerte.
+2. La inteligencia artificial no puede ser consciente bajo ninguna circunstancia.
+3. La IA fuerte y la IA débil son lo mismo en términos de conciencia.
+4. La consciencia no es un factor relevante en la inteligencia artificial.
+
+¿Qué definición de Inteligencia Artificial (IA) se adapta mejor al criterio de la asignatura?:
+1
+1. 'El arte de construir máquinas capaces de hacer cosas que requerirían inteligencia si las hicieran los seres humanos'. (Minsky, 1986).
+2. La IA es la simulación de procesos de inteligencia humana por parte de máquinas.
+3. La inteligencia artificial se refiere a cualquier inteligencia demostrada por máquinas.
+4. La IA es la capacidad de una máquina para aprender y adaptarse.
+
+La inteligencia Intrapersonal...:
+1
+1. Es la que nos permite entendernos a nosotros mismos.
+2. Es la capacidad de relacionarse con otros seres humanos.
+3. Es la habilidad para resolver problemas matemáticos.
+4. Se refiere a la capacidad de crear y comprender la música.
+
+Según los tipos de inteligencia de Howard Gardner, ¿cuál de ellos consiste en entendernos a nosotros mismos?:
+1
+1. Inteligencia intrapersonal.
+2. Inteligencia interpersonal.
+3. Inteligencia lógico-matemática.
+4. Inteligencia naturalista.
+
+¿Qué es la inteligencia?:
+1
+1. Es el conjunto de habilidades desarrolladas por el hombre para recibir información, analizarla, comprenderla, almacenarla y saberla aplicar en el futuro para la resolución de problemas.
+2. La inteligencia es la capacidad de memorizar y repetir información.
+3. Es la habilidad de una máquina para realizar tareas complejas.
+4. Se refiere únicamente a la capacidad de razonamiento lógico.
+
+Alcanzar la consciencia se plantea como un objetivo de:
+1
+1. IA Fuerte.
+2. IA Débil.
+3. IA General.
+4. IA Aplicada.
+
+¿Superar el test de Alan Turing nos garantiza que la máquina tendrá una IA fuerte?:
+1
+1. No, Searle con 'la sala china' demuestra que el test de Turing no es suficiente ya que una máquina puede realizar una acción sin saber que hace y por qué lo hace.
+2. Sí, porque demuestra que la máquina puede pensar y razonar.
+3. Sí, ya que el test evalúa la capacidad de la máquina de ser consciente.
+4. No, porque el test solo evalúa la capacidad de imitar respuestas humanas.
+
+Asistentes de voz como Siri (Apple) o Voz S (Samsung), que son capaces de responder a cualquier pregunta en nuestro lenguaje natural, concluimos que pasan correctamente el test de Turing:
+1
+1. Verdadero, ya que según dicho test no es posible distinguir entre máquina y ser humano.
+2. Falso, porque todavía no pueden imitar completamente la conversación humana.
+3. Verdadero, pero solo en tareas específicas de procesamiento del lenguaje.
+4. Falso, ya que no demuestran consciencia ni comprensión.
+
+¿Qué nos quiere dar a entender Searle con el experimento de la sala china?:
+1
+1. Que el Test de Turing no tenía razón, porque si un computador realiza un trabajo no significa que sea consciente de lo que hace.
+2. Que las máquinas pueden ser conscientes si pasan el test de Turing.
+3. Que la inteligencia artificial ya ha alcanzado el nivel de consciencia humana.
+4. Que los computadores pueden entender y procesar lenguaje como los humanos.
+
+La definición del campo de la I.A se fijó en:
+1
+1. La conferencia de Dartmouth (1956).
+2. Una reunión en MIT en la década de 1970.
+3. Un artículo de Alan Turing en 1950.
+4. La conferencia de Stanford en 1965.
+
+Según Howard Gardner la inteligencia corporal-kinestésica es la inteligencia de los:
+1
+1. Cirujanos, artesanos, deportistas y bailarines.
+2. Escritores, poetas y filósofos.
+3. Músicos, compositores y cantantes.
+4. Científicos, matemáticos y lógicos.
+
+¿Cuál de las siguientes listas representa aspectos de la inteligencia?:
+1
+1. La memoria, la resolución de problemas y la creatividad.
+2. La capacidad de calcular rápidamente, la precisión y la eficiencia.
+3. La habilidad para seguir instrucciones, la rapidez y la repetición.
+4. La capacidad de almacenar mucha información, la velocidad y el procesamiento.
+
+Si un robot es capaz de resolver problemas complejos y además posee inteligencia emocional. ¿Cuál de las siguientes afirmaciones es la más correcta?:
+1
+1. Pasaría el test de Turing.
+2. No puede tener inteligencia emocional, ya que es una máquina.
+3. Sería considerado como una IA fuerte, pero no superaría el test de Turing.
+4. Su inteligencia emocional no influye en su capacidad para resolver problemas.
+
+Sobre el comportamiento inteligente:
+1
+1. Las máquinas pueden manifestar un comportamiento inteligente para resolver un determinado problema.
+2. Solo los seres humanos pueden manifestar un comportamiento verdaderamente inteligente.
+3. El comportamiento inteligente implica tener conciencia.
+4. Un comportamiento inteligente siempre supera al test de Turing.
+
+Searle mediante el contraejemplo del test de Turing afirma que:
+1
+1. Actualmente, una máquina no puede ser del todo inteligente (no es suficiente el test de Turing).
+2. El test de Turing es un método infalible para medir la inteligencia.
+3. Todas las máquinas que pasan el test de Turing son conscientes.
+4. La inteligencia de una máquina se basa exclusivamente en su capacidad para procesar lenguaje.
+
+¿Cuál de las siguientes definiciones no se corresponde con la Inteligencia Intrapersonal?:
+1
+1. Aquella que nos permite entender a los demás.
+2. La capacidad de entenderse a uno mismo.
+3. La habilidad para reflexionar y autoevaluarse.
+4. El conocimiento de las propias emociones y motivaciones.
+
+¿Cómo podemos dotar a una máquina de una IA fuerte?:
+1
+1. Proporcionándole la capacidad de procesamiento e inteligencia necesarios hasta el punto de alcanzar el pensamiento consciente.
+2. No es posible dotar a una máquina de IA fuerte en el sentido humano de la palabra.
+3. A través del aprendizaje automático y la acumulación de datos.
+4. Mediante la programación de reglas y algoritmos complejos.
+
+En el famoso experimento mental de John Searle 'La habitación china', popularizado por Roger Penrose, una computadora:
+1
+1. Maneja información sintáctica; respuestas en base a una serie de reglas predefinidas sin consciencia alguna de la propia acción.
+2. Demuestra consciencia y comprensión del lenguaje.
+3. Es capaz de generar respuestas emocionales.
+4. Muestra una inteligencia comparable a la humana.
+
+Según Howard Gardner, la inteligencia cibernética es:
+1
+1. La que desarrollan las personas estudiando y aprovechando la ciencia que se ocupa de los sistemas de control y telecomunicaciones.
+2. La habilidad de interactuar y comprender los sistemas informáticos.
+3. La capacidad de crear y programar máquinas inteligentes.
+4. La inteligencia relacionada con el manejo de las redes sociales y la información digital.
+
+Según Howard Gardner, los que tienen Inteligencia Lingüística son:
+1
+1. Los escritores.
+2. Los matemáticos.
+3. Los músicos.
+4. Los deportistas.
+
+¿En qué estado se encuentra actualmente la IA?:
+1
+1. No disponemos de una IA completa, lo que nos obliga a afrontar problemas concretos.
+2. En un estado avanzado, con máquinas conscientes de sí mismas.
+3. En una etapa temprana, centrada principalmente en el aprendizaje automático.
+4. En un estado estacionario sin avances significativos en los últimos años.
+
+Según la clasificación de Howard Gardner cuántos tipos de inteligencia existen:
+1
+1. 8.
+2. 5.
+3. 10.
+4. 12.
+
+¿Es posible decidir si una persona es más inteligente que otra?:
+1
+1. Depende del tipo de inteligencia.
+2. Sí, siempre se puede medir y comparar la inteligencia.
+3. No, la inteligencia es un concepto subjetivo y no puede compararse.
+4. Solo en contextos académicos o de rendimiento específico.

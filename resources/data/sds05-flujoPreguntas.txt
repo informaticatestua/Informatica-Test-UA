@@ -1,0 +1,488 @@
+¿Cuál es la operación básica que define un cifrador en flujo?
+1
+XOR entre texto en claro y secuencia cifrante
+Suma modular entre bloques
+Permutación de bytes
+Sustitución por S-box
+
+En un cifrador en flujo síncrono, ¿qué sucede si se pierde un bit durante la transmisión?
+2
+Todo a partir de ese bit se descifra mal
+El receptor y emisor pierden sincronía
+Solo ese bit se corrige automáticamente
+No ocurre nada
+
+¿Qué característica distingue un cifrador en flujo autosincronizante de uno síncrono?
+3
+La secuencia depende del texto cifrado recibido
+Requiere una semilla más larga
+Usa operaciones no lineales
+Es siempre más rápido
+
+¿Por qué no se usa directamente un criptosistema seguro de Shannon en la práctica?
+4
+Porque la “clave” debe tener la longitud del mensaje
+Porque no es estadísticamente uniforme
+Porque no se puede descifrar dos veces
+Porque no permite autenticación
+
+¿Cuál de estos algoritmos NO es un cifrador en flujo?
+3
+RC4
+ChaCha20
+AES-CBC
+Salsa20
+
+¿En qué año se publicó anónimamente RC4 en la lista Cypherpunks?
+2
+1987
+1994
+2001
+2006
+
+¿Qué estructura interna utiliza RC4 para generar su secuencia?
+1
+Una S-box de 256 bytes
+Un registro de desplazamiento
+Una función hash iterada
+Un contador de 32 bits
+
+¿Cuál es el principal vector de ataque contra RC4?
+4
+Reiniciar la secuencia con la misma clave varias veces
+Atacar su función de permutación inicial
+Acceder al IV
+Falsificar el texto cifrado
+
+El ataque de Royal Holloway contra RC4 requiere aproximadamente ¿cuántas conexiones?
+3
+2²⁰
+2³²
+2²⁴
+2²⁸
+
+¿Qué motivo principal llevó a la deprecación de RC4 en TLS/SSL?
+2
+Sus sesgos iniciales en la salida
+Facilidad para reutilizar la misma secuencia
+Requiere clave demasiado larga
+No era compatible con hardware
+
+¿Qué combinación de operaciones define el núcleo de Salsa20?
+2
+Suma 32 bit + XOR + rotaciones
+Suma 64 bit + permutación + shift
+Multiplicación modular + XOR + AND
+SubBytes + ShiftRows + MixColumns
+
+¿Cuál es la longitud de nonce tradicional en ChaCha20?
+1
+12 bytes
+8 bytes
+16 bytes
+24 bytes
+
+¿Qué versión de ChaCha20 permite una reutilización segura del nonce más grande?
+4
+XChaCha20
+ChaCha12
+ChaCha8
+ChaCha20-IETF
+
+En eSTREAM, ¿por qué Salsa20 no llegó a la fase final?
+3
+No fue considerado rápido en hardware muy limitado
+Tenía vulnerabilidades estadísticas
+Era demasiado complejo de entender
+No obtuvo suficientes votos
+
+¿Cuál de estas afirmaciones sobre ChaCha20 es cierta?
+1
+No se conocen ataques prácticos contra ChaCha20/20
+Solo funciona en plataformas de 8 bit
+Requiere sincronía continua
+Es más lento que RC4 en software puro
+
+¿Qué algoritmo ganó la competencia NIST de cifrado ligero en 2023?
+1
+Ascon
+Phelix
+SEAL
+
+¿Cuál de estos cifradores en flujo SE UTILIZA en GSM 2G?
+1
+A5/1
+SEAL
+Phelix
+HC128
+
+¿Cuál es el propósito del parámetro “nonce” en un cifrador en flujo?
+3
+Garantizar que no se repita la secuencia cifrante
+Aumentar el tamaño de la clave
+Mejorar la difusión estadística
+Autenticar el mensaje
+
+En Go, ¿qué paquete se importa para usar ChaCha20?
+2
+crypto/rc4
+crypto/chacha20
+math/rand
+crypto/xor
+
+¿Qué sucede si cifras datos comprimidos con un cifrador en flujo y luego vuelves a comprimir?
+3
+No se obtiene compresión adicional
+Se comprimen de nuevo parcialmente
+Se introducen patrones repetidos
+El descifrado falla
+
+¿Qué cifrador en flujo combina LFSR con operaciones aritméticas y apareció en SNOW 3G?
+4
+Snow 3G
+Spritz
+HC128
+Snow 3G
+
+¿Cuál de estos NO es un generador pseudoaleatorio convertido en cifrador en flujo?
+3
+AES-CTR
+Hash-counter
+RSA-OFB
+ChaCha20
+
+En un cifrador en flujo síncrono, si un bit es alterado, ¿cómo afecta al resto de la secuencia?
+1
+Solo ese bit se descifra mal
+Todos los bits siguientes se descifran mal
+Sincroniza automáticamente
+Se detiene la comunicación
+
+¿Qué variante de RC4 fue propuesta por Rivest para corregir sus sesgos?
+2
+VMPC
+Spritz
+ARCFOUR
+RC4A
+
+¿Qué protocolo moderno de Internet suele usar ChaCha20 por defecto en vez de AES?
+1
+TLS 1.3
+SSH v1
+HTTPS antiguo
+FTP seguro
+
+¿Cuál de estos cifradores en flujo es más adecuado para cifrar discos con acceso aleatorio?
+4
+ChaCha20
+RC4
+AES-ECB
+ChaCha20 con random access
+
+¿Qué indicador en la práctica indica que un cifrador en flujo es inseguro?
+3
+Sesgos estadísticos al principio de la secuencia
+Poseer clave variable
+Reutilización accidental del nonce
+Uso de XOR en la cifra
+
+¿Qué operación en Salsa20 dificulta el análisis matemático al combinar dominios?
+2
+Sumas en diferente base y rotaciones
+XOR de 64 bit
+Shift unidireccional
+S-box fija
+
+¿Qué herramienta Go ofrece para evitar confusiones entre math/rand y crypto/rand al generar flujos cifrantes?
+1
+crypto/rand.Reader
+rand.Seed()
+chacha20.NewCipher()
+tls.Config
+
+¿En qué escenario sería más apropiado un cifrador en flujo autosincronizante?
+4
+Comunicaciones por radio muy ruidosas
+Conexiones HTTP over TLS
+Cifrar archivos en disco
+Transferencias TCP fiables
+
+¿Cuál es el tamaño del campo IV en el protocolo WEP?
+3
+8 bits
+16 bits
+24 bits
+32 bits
+
+¿Qué reemplazó a RC4 como cifrador en flujo en TLS 1.3?
+2
+AES-GCM
+ChaCha20-Poly1305
+AES-ECB
+3DES-CFB
+
+¿Qué error eliminó el hardening de semilla RNG en Debian OpenSSL, generando claves predecibles?
+1
+Comentario de líneas en RAND_poll
+Borrado de /dev/random
+Reemplazo de RC4 por LCG
+Sustitución de keylen variable
+
+¿Qué suite de tests estadísticos es conocida por su rapidez y salida progresiva (reportes rápidos parciales)?
+4
+TestU01
+Dieharder
+ENT
+PractRand
+
+¿Qué test de Dieharder se centra en la frecuencia de patrones de 8 y 16 bits, similar al “poker” estadístico?
+2
+diehard_birthdays
+diehard_poker
+diehard_runs
+diehard_rank
+
+¿Qué mecanismo de medición de rendimiento evalúa la latencia de generación del primer byte de un RNG?
+3
+Throughput
+Determinismo
+Latencia inicial
+Entropía por bit
+
+¿Qué extensión de CPU Intel acelera operaciones AES para cifradores en bloque y en flujo?
+1
+AES-NI
+SSE2
+AVX-512
+MMX
+
+¿Qué llamada al sistema Linux unifica el acceso a /dev/random y /dev/urandom sin bloqueo?
+1
+getrandom()
+syslog()
+open_random()
+
+En TLS, ¿qué modo AEAD sustituyó a AES-CBC en TLS 1.2?
+3
+AES-CTR
+ChaCha20
+AES-GCM
+RC4
+
+¿Qué librería de Python incluye el módulo “Crypto.Cipher.ChaCha20”?
+4
+hashlib
+ssl
+random
+PyCryptodome
+
+¿Qué biblioteca en JavaScript es conocida por exponer ChaCha20-Poly1305 y otros modernos cifradores?
+1
+libsodium.js
+jsencrypt
+crypto-js
+Forge.js
+
+¿Cuál es el principal riesgo de reutilizar un nonce en ChaCha20-Poly1305?
+4
+Incrementar latencia
+Mejorar la difusión
+Romper el XOR
+Revelar la clave de flujo
+
+¿Qué modo de cifrado de bloque proporciona funcionalidad equivalente a un stream cipher puro?
+2
+CBC
+CTR
+ECB
+CFB
+
+¿Qué característica principal diferencia Ascon de otros cifradores en flujo?
+1
+Diseñado para hardware y bajo consumo
+Usa S-box de 256 bytes
+Opera en bloques de 128 bits
+Incluye SHA-3 internamente
+
+¿Qué cerradura de Java ofrece soporte nativo para ChaCha20-Poly1305 en JDK 11+?
+3
+javax.crypto.Cipher("ChaCha20")
+java.security.SecureRandom
+javax.crypto.Cipher("ChaCha20-Poly1305")
+java.util.stream.ChaCha
+
+En comunicaciones IoT de baja potencia, ¿qué cifrador ligero recomendó NIST en 2023?
+3
+Phelix
+SNOW 3G
+Ascon
+RC4A
+
+¿Qué ataque de sincronización forzada puede romper un stream cipher síncrono?
+2
+Resync injection
+Packet deletion
+Replay attack
+Padding oracle
+
+¿Qué consecuencia tuvo forzar el reinit de la caché de primos en OpenSSL Debian?
+1
+Atraso en generación de nuevas claves
+Uniformidad extraída
+Claves predecibles
+Generación no determinista
+
+¿Qué factor de “jitter” se mide al benchmarkear un RNG en tiempo real?
+4
+Throughput promedio
+Tasa de colisiones
+Entropía nominal
+Desviación de latencia
+
+¿Para qué aplicación es más adecuado un stream cipher que un AES-CTR en disco?
+1
+Streaming en vivo (vídeo/audio)
+Almacenamiento de largo plazo
+Firmas digitales
+Control de acceso a archivos
+
+En TLS 1.3, ¿qué AEAD se recomienda por defecto para la mayoría de implementaciones?
+1
+ChaCha20-Poly1305
+AES-CBC
+RC4
+3DES-CFB
+
+¿Cuál de estos modos AEAD está bajo patente y no obtuvo adopción masiva?
+2
+OCB
+GCM
+CCM
+EAX
+
+¿Cuál es la longitud típica de la etiqueta (tag) en bytes en AES-GCM?
+1
+16
+12
+8
+4
+
+En JWE Compact Serialization, ¿qué orden siguen las partes separadas por puntos?
+3
+header.encryptedKey.iv.ciphertext.tag
+header.iv.encryptedKey.ciphertext.tag
+header.encryptedKey.ciphertext.iv.tag
+iv.header.encryptedKey.ciphertext
+
+En COSE, ¿en qué campo se incluye el algoritmo de cifrado?
+2
+protected header
+unprotected header
+payload
+footer
+
+¿Qué método de WebCrypto genera valores aleatorios seguros para un nonce?
+1
+crypto.getRandomValues()
+Math.random()
+window.btoa()
+fetch()
+
+En PyCryptodome, ¿qué parámetro se utiliza para pasar el nonce en modo CTR?
+3
+nonce
+iv
+initial_value
+counter_block
+
+En OpenSSL, ¿qué función inicia un contexto de cifrado AES-GCM?
+1
+EVP_EncryptInit_ex
+AES_set_encrypt_key
+AES_gcm_init
+EVP_CIPHER_CTX_new
+
+¿Qué prueba de Dieharder evalúa colisiones de patrones de bytes (overlapping pairs)?
+2
+diehard_birthdays
+diehard_opso
+diehard_runs
+diehard_rank
+
+¿Qué ataque clave ataca la KSA de RC4?
+1
+Fluhrer–Mantin–Shamir
+Differential Power Analysis
+Padding Oracle
+Man-in-the-Middle
+
+¿Qué cifra ligera utiliza bloques de 64 bits y S-box de 4 bits?
+1
+PRESENT
+Grain
+Ascon
+Trivium
+
+¿Qué técnica mitiga ataques por canal lateral de temporización en stream ciphers?
+1
+Implementación constant-time
+Uso de nonces fijos
+Rotación de filas
+Uso de S-boxes grandes
+
+¿Cuál es la complejidad de un ataque de correlación contra un LFSR combinado?
+4
+O(n)
+O(2ⁿ)
+O(n²)
+O(2^(n/2))
+
+¿Qué modo de AES utiliza OpenSSH por defecto para la transferencia de datos?
+2
+AES-CTR
+AES-CTR
+AES-CBC
+AES-GCM
+
+En el API WebCrypto, ¿qué opción define la longitud de la etiqueta en AES-GCM?
+1
+tagLength
+ivLength
+length
+tagBits
+
+¿Qué AEAD combina confidencialidad e integridad en un único paso?
+1
+AES-GCM
+CBC-MAC
+ECB-MAC
+RC4-HMAC
+
+¿Qué ataque de CBC padding no se aplica a stream ciphers?
+3
+Padding oracle
+POODLE
+BEAST
+Heartbleed
+
+¿Qué stream cipher ligero se basa en un NFSR de 288 bits de estado?
+4
+Rabbit
+Grain
+HC-128
+Trivium
+
+¿Qué modo de operación convierte un cifrador en bloque en un stream cipher?
+2
+CTR
+CTR
+ECB
+OFB
+
+¿Cuál es la longitud de IV recomendada en AES-GCM en TLS 1.3?
+2
+8 bytes
+12 bytes
+16 bytes
+24 bytes
+

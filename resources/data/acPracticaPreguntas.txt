@@ -1,0 +1,216 @@
+¿Que hace el siguiente fragmento de código? https://imgur.com/a/8HIMCAC 
+2
+Reserva memoria en el host (CPU) para las VECTOR_ELEMENTS componentes de cada vector A y B en punto flotante
+Reserva memoria en el dispositivo (GPU) para las VECTOR_ELEMENTS componentes de cada vector A y B en punto flotante
+Reserva memoria en el dispositivo (GPU) para las VECTOR_ELEMENTS componentes de cada vector A y B de enteros
+NO MARCAR
+
+¿Que hace el siguiente fragmento de código? https://imgur.com/XHhJ7q9
+1
+Define la estructura y dimensión de los bloques y del grid e invoca al kernel. La estructura definida para los bloques es de una dimensión.
+Define la estructura y dimensión de los bloques y del grid pero no se invoca ningún kernel. La estructura definida para los bloques es de una dimensión.
+Define la estructura y dimensión de los bloques y del grid e invoca al kernel. La estructura definida para los bloques es de dos dimensiones.
+NO MARCAR
+
+A la función que se ejecutará en los distintos hilos que se crearán en la tarjeta gráfica de forma paralela la llamamos...
+1
+Kernel
+Bloque
+Grid
+NO MARCAR
+
+Las siglas CUDA (Compute Unified Device Architecture) hacen referencia a:
+1
+Tanto a un compilador como a un conjunto de herramientas de desarrollo creadas por NVIDIA
+Tanto a un compilador como a un conjunto de herramientas de desarrollo creadas por INTEL
+Tanto a un compilador como a un conjunto de herramientas de desarrollo creadas por AMD
+NO MARCAR
+
+La invocación siguiente https://imgur.com/EargACP
+2
+512 ejecuciones de la función veccadd
+2048 ejecuciones de la función veccadd
+1024 ejecuciones de la función veccadd
+NO MARCAR
+
+En una invocación al kernel en un programa en CUDA, ¿Qué opción es correcta?
+2
+El programador ha de especificar el identificador del hilo dentro del bloque y el identificador del bloque dentro del grid al que se quiera invocar.
+El programador ha de especificar el número de hilos por bloque y el número de bloques que forman el grid.
+El programador ha de especificar el número de hilos por bloque. El tamaño del grid está fijado de antemano
+NO MARCAR
+
+La arquitectura CUDA se corresponde según la taxonomía de Flynn con el tipo
+1
+SIMD
+MISD
+MIMD
+NO MARCAR
+
+¿Qué realiza el siguiente código? https://imgur.com/kfpFHpy
+1
+Reserva memoria en la GPU de tamaño memSize y transfiere d_input desde CPU a GPU
+Reserva memoria en la CPU de tamaño memSize y transfiere d_input desde CPU a GPU
+Reserva memoria en la GPU de tamaño memSize y transfiere d_input desde GPU a CPU
+NO MARCAR
+
+En relación a como organiza CUDA los hilos ¿Cuál de las siguientes afirmaciones es cierta?
+3
+El grid es una estructura formada directamente por hilos
+El bloque es una estructura formada por grids dentro de los que se organizan los hilos
+El grid es una estructura formada por bloques dentro de los que se organizan los hilos
+NO MARCAR
+
+En cuanto a las diferencias entre la CPU y la GPU...
+1
+Los hilos de la GPU son más ligeros que la CPU, necesitando más hilos que esta última para ser eficiente
+Una CPU multinúcleo necesita unos pocos hilos más que la GPU para ser igual de eficiente
+Las latencias de memoria en la CPU son mayores que en la GPU
+NO MARCAR
+
+¿Que hace el siguiente fragmento de código? https://imgur.com/NrmBwbk
+1
+Copia VECTOR_ELEMENTS componentes en punto flotante de los vectores A y B desde la memoria de la GPU hasta la memoria de la CPU.
+Copia VECTOR_ELEMENTS componentes enteras de los vectores A y B desde la memoria de la CPU hasta la memoria de la GPU.
+Copia VECTOR_ELEMENTS componentes en punto flotante de los vectores A y B desde la memoria de la CPU hasta la memoria de la GPU.
+NO MARCAR
+
+Si tenemos la variable dimGrid definida como "dim3 dimGrid(4, 4, 1);" estamos especificando que...
+2
+Se crean 8 bloques organizados como una matriz 2D
+Se crean 16 bloques organizados como una matriz 2D
+Se crean 4 bloques organizados como una matriz 2D
+NO MARCAR
+
+En cuanto a la organización de los hilos:
+2
+Cada bloque de hilos se ejecuta sobre varios Streaming Multiprocessors
+Los bloques permiten estructurar los hilos en 1D, 2D ó 3D dimensiones
+Un Streaming Multiprocessor sólo tiene asignado un bloque de hilos
+NO MARCAR
+
+Una vez ejecutado el kernel, ¿qué es lo que distingue inequívocamente a cada hilo?
+2
+La combinación del índice de hilo y el número de hilos
+La combinación de los índices de bloque e hilo
+La combinación del índice de bloque y el número de bloques
+NO MARCAR
+
+¿Qué realiza el siguiente código? https://imgur.com/AzDBnB9
+1
+Reserva memoria en la GPU de tamaño memSize y transfiere d_input desde CPU a GPU
+Reserva memoria en la GPU de tamaño memSize y transfiere d_input desde GPU a CPU
+Reserva memoria en la CPU de tamaño memSize y transfiere d_input desde CPU a GPU
+NO MARCAR
+
+En cuanto a la organización de los hilos:
+1
+Los bloques permiten estructurar los hilos en 1D, 2D ó 3D dimensiones
+Cada bloque de hilos se ejecuta sobre varios Streaming Multiprocessors
+Un Streaming Multiprocessor sólo tiene asignado un bloque de hilos
+NO MARCAR
+
+Si tenemos la variable blockDim definida como "dim3 dimBlock(16, 64, 1)" estamos especificando que...
+3
+Se crean 16 hilos en cada bloque organizados como una matriz 2D
+Se crean 80 hilos en cada bloque organizados como una matriz 2D
+Se crean 1024 hilos en cada bloque organizados como una matriz 2D
+NO MARCAR
+
+La memoria de una GPU...
+1
+Tiene un ancho de banda mucho mayor que el de la memoria principal de una CPU
+Tiene un ancho de banda menor que el de la memoria principal de una CPU
+Tiene un ancho de banda similar a la memoria principal de una CPU
+NO MARCAR
+
+¿Qué realiza el siguiente código? https://imgur.com/qqE1Cdu
+3
+La función establece el hilo y el bloque donde se multiplican las posiciones correspondientes del vector y almacena el resultado
+La función establece el índice de cada hilo según el número de hilo y bloque, multiplica las posiciones correspondientes del vector y almacena el resultado
+La función calcula el índice para acceder a cada elemento dentro del hilo según el número de hilo y bloque, multiplica las posiciones correspondientes del vector y almacena el resultado
+NO MARCAR
+
+Señala la sentencia verdadera:
+3
+El tiempo de ejecución de la GPU siempre será mayor que en la CPU.
+El tiempo de ejecución en la GPU siempre será menor que en la CPU.
+Hay situaciones en las que el tiempo de ejecución en la GPU es mayor que en la CPU
+NO MARCAR
+
+Un programa en CUDA...
+3
+Se ejecuta completamente en la tarjeta gráfica
+Consta de 3 partes: parte Host, parte GPU y parte de Sistema Operativo
+Consta de 2 partes: parte Host y parte GPU
+NO MARCAR
+
+¿Qué especificador en la declaración nos permite definir la función vecadd para que se ejecute en la GPU?
+1
+__global__ void vecadd()
+__kernel__ void vecadd()
+__host__ void vecadd()
+NO MARCAR
+
+Dada la invocación siguiente, ¿Qué valor tomará la variable blockDim.x? https://imgur.com/HVziKDX
+3
+Tomará el valor 2048.
+Tomará el valor 4
+Tomará el valor 512
+NO MARCAR
+
+¿Qué significado tiene la siguiente declaración dentrol del kernel? https://imgur.com/TzEvpwX
+3
+La variable i es el valor máximo de hilos por bloque que puede haber.
+La variable i es el número total de hilos de la GPU en la dimensión x.
+La variable i identifica de forma unívoca cada hilo en tiempo de ejecución.
+NO MARCAR
+
+¿Qué es un kernel en la GPU?
+1
+Es la función que se ejecutará en los distintos hilos de la GPU de manera simultánea
+Es la función que se ejecutará en los distintos hilos de la GPU de manera secuencial
+Es la función que se ejecutará con un modelo MISD en los distintos hilos de la GPU
+NO MARCAR
+
+En un kernel en CUDA,
+1
+Todos los hilos agrupados en un grid ejecutan el mismo código.
+Cada hilo de un grid ejecuta un código distinto.
+Cada bloque de un grid ejecuta un código distinto.
+NO MARCAR
+
+En el nivel más alto encontramos un proceso sobre la CPU (Host) que realiza los siguientes pasos:
+1
+1. Inicializa GPU. 2. Reserva memoria en la parte host y device. 3 Copia datos desde el host hacia la memoria device. 4. Lanza la ejecución de múltiples copias del kernel. 5. Copia datos desde la memoria device al host. 6. Se repiten los pasos 3-5 tantas veces como sea necesario. 7. Libera memoria y finaliza la ejecución proceso maestro
+1. Inicializa GPU. 2. Copia datos desde el host hacia la memoria device. 3. Lanza la ejecución de múltiples copias del kernel. 4. Copia datos desde la memoria device al host. 5. Se repiten los pasos 3-5 tantas veces como sea necesario
+1. Inicializa GPU. 2. Reserva memoria en la parte host y device. 3 Copia datos desde la memoria device al host. 4. Lanza la ejecución de múltiples copias del kernel. 5. Copia datos desde el host hacia la memoria device. 6. Se repiten los pasos 3-5 tantas veces como sea necesario. 7. Libera memoria y finaliza la ejecución proceso maestro
+NO MARCAR
+
+Respecto a un programa en CUDA, señala la opción correcta:
+1
+Hay un código Host que se ejecuta sobre la CPU y un código Kernel que se ejecuta sobre la GPU.
+Todo el código se ejecuta sobre la GPU.
+Todo el código se ejecuta a la vez sobre la CPU y sobre la GPU.
+NO MARCAR
+
+¿Que hace la siguiente función?
+1
+Es el Kernel que se ejecuta en paralelo por cada hilo en la GPU para calcular la suma de las VECTOR_ELEMENTS componentes del vector. Cada hilo realiza la suma del número de componentes del vector indicado por COMPUTE_N_ELEMENTS_PER_THREAD.
+Es una función global que realiza la suma en el host de las VECTOR_ELEMENTS componentes del vector.
+Es el Kernel que se ejecuta en paralelo por cada hilo en la GPU para calcular la suma de las VECTOR_ELEMENTS componentes del vector. Cada hilo solo puede realizar una única suma.
+NO MARCAR
+
+¿Qué información es accesible desde cada hilo del kernel?
+3
+Variables pasadas como argumento, punteros a memoria de la CPU, constantes globales de GPU y variables especiales para trabajar de forma eficiente con el hilo
+Punteros a memoria de la GPU, constantes globales CPU y variables especiales para trabajar de forma eficiente con el hilo
+Variables pasadas como argumento, punteros a memoria de la GPU, constantes globales GPU y variables especiales para trabajar de forma eficiente con el hilo
+NO MARCAR
+
+Los hilos que maneja una GPU...
+1
+Son, en general, más numerosos que los que maneja una CPU
+Son, en general, igual de numerosos que los que maneja una CPU
+Son, en general, menos numerosos que los que maneja una CPU
+NO MARCAR

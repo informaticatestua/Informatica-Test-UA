@@ -1,0 +1,2566 @@
+Las Arquitecturas para implementar el ciclo Big Data, ¿Se pueden considerar adecuadas para aplicaciones estrictas de tiempo real?
+2
+- v
+- f
+
+Los usuarios de tipo administrador son los encargados de asignar permisos en el sistema
+2
+- f
+- v
+
+Sistema Operativo de Red es un Sistema Operativo orientado a compartir recursos a través de la red
+1
+- v
+- f
+
+Una dirección IP es una etiqueta numérica que identifica, de manera lógica y jerárquica, a un interfaz de un dispositivo dentro de una red que utilice el protocolo IP, que corresponde al nivel de aplicación del protocolo TCP/IP
+2
+- v
+- f
+
+Las direcciones IPv4 se expresan por un número binario de 128 bits
+2
+- v
+- f
+
+La capa de red es la cuarta capa del modelo OSI (No seguro)
+2
+- v
+- f
+
+La dirección IP 172.16.1.25 y máscara de subred 255.255.0.0 corresponde a una red clase C
+2
+- v
+- f
+
+La topología de una red consiste en un arreglo físico en el cual el dispositivo de red se conecta al medio
+2
+- f
+- v
+
+En una red de clase A, se asignan los tres primeros octetos para identificar la red, reservando el octeto final (8 bits) para que sea asignado a los hosts
+1
+- f
+- v
+
+En una red de clase B, se asignan los dos primeros octetos para identificar la red, reservando los dos octetos finales (16 bits) para que sean asignados a los hosts
+1
+- v
+- f
+
+Red clase C: 192.168.0.0 a 192.168.255.255 (16 bits red, 16 bits hosts)
+2
+- v
+- f
+
+En las redes de gran tamaño a menudo se usa el protocolo TCP/PI
+2
+- v
+- f
+
+El comando de Linux traceroute es la herramienta ideal para descubrir por dónde se envían los datos en una red (no seguro)
+1
+- f
+- v
+
+ping -c sirve para determinar la cantidad de paquetes que realizará el ping
+2
+- f
+- v
+
+ping -i sirve para establecer el intervalo de tiempo entre cada paquete, dicho intervalo que viene por defecto es de un segundo
+1
+- v
+- f
+
+Una FO PCS (núcleo de vidrio y manto de plástico) propaga mejor la luz infrarroja que una SCS (todo vidrio)
+1
+- f
+- v
+
+En un material de mayor índice de refracción disminuye la longitud de onda de la luz
+2
+- f
+- v
+
+La ruta que toman los paquetes en la conmutación de paquetes es probabilística
+2
+- f
+- v
+
+La dispersión modal de una FO es causada por la presencia de múltiples longitudes de onda en la fibra
+1
+- f
+- v
+
+Una FO G652A y B pueden trabajar en banda E
+2
+- v
+- f
+
+Las fibras G657A cumplen la norma G652
+1
+- v
+- f
+
+La FO con FWM (Four Wave Mixing) son recomendadas para trabajo en sistemas WDM (Wavelength Division Multiplexing)
+2
+- v
+- f
+
+Las fibras G657B soportan mayores curvatuas que las G657A
+1
+- v
+- f
+
+Si una WAN está trabajando de manera convergente es obligatorio que la WAN tenga QoS. (no seguro)
+1
+- v
+- f
+
+En una red ATM los circuitos virtuales se establecen a nivel de capa 2 (capa ATM)
+2
+- f
+- v
+
+Mientras menor es la apertura numérica de una fibra, menor es su ángulo de aceptación
+2
+- f
+- v
+
+Una FO MMSI podría tener ancho de banda de decenas de GHz Km (no seguro)
+1
+- f
+- v
+
+En una FO SSMF el diámetro del núcleo usualmente es 5 veces superior a la lambda de trabajo (no seguro)
+2
+- f
+- v
+
+El servicio de Carga Garantizada en RSVP proporciona al flujo de paquetes una calidad de servicio del tipos Soft QoS (no seguro)
+2
+- v
+- f
+
+UPS  es un dispositivo que gracias a sus baterías permite seguir proporcionando energía eléctrica a cualquier dispositivo que tenga conectado en el caso de que se produzca un apagón o una irrupción eléctrica
+1
+- v
+- f
+
+El mundo real está compuesto de variables discretas.
+1
+- f
+- v
+
+La comunicación analógica es aquella que ocurren cuando las magnitudes de la señal se representan mediante variables continuas.
+1
+- v
+- f
+
+La radio es un claro ejemplo del modo de transmisión Dúplex/Half Dúplex. (no seguro)
+1
+- f
+- v
+
+Una dirección IP es una etiqueta numérica que identifica, de manera lógica y jerárquica, a un interfaz de un dispositivo dentro de una red que utilice el protocolo IP, que corresponde al nivel de aplicación del protocolo TCP/IP
+2
+- v
+- f
+
+La capa de red es la cuarta capa del modelo OSI. (no seguro)
+1
+- f
+- v
+
+Cuando aumenta la sección de un conductor su resistencia es mas largo
+1
+- f
+- v
+
+Los receptores magnéticos producen efectos de Electromagnetismo
+1
+- v
+- f
+
+Tipos de UPS son Off line, línea interactiva y Off line doble conversión (no seguro)
+2
+- f
+- v
+
+El sistema de climatización es recomendado para centros de datos es el de confort
+2
+- v
+- f
+
+En el condensador el refrigerante cambia de estado Gaseoso a Líquido
+1
+- v
+- f
+
+Un presostato tipo pila y un termostato son elementos de Control
+1
+- v
+- f
+
+Los aires acondicionados de precisión controlan además la humedad relativa
+2
+- f
+- v
+
+Las baterías de los UPS se deben reemplazar como mínimo cada 10 años
+1
+- f
+- v
+
+Los generadores eléctricos solo se hace la transferencia manualmente
+2
+- v
+- f
+
+Los pararrayos son utilizados para evitar que un rayo ionizado del aire cause daños a las personas o construcciones atrayendo la descarga hacia tierra
+1
+- v
+- f
+
+En un sistema de comunicación punto a punto la frecuencia de transmisión es diferente que la de recepción. (no seguro)
+1
+- f
+- v
+
+En un sistema de comunicación punto a punto la frecuencia de transmisión es la misma que la de recepción (no seguro)
+1
+- v
+- f
+
+El espectro radioeléctrico es un recurso ilimitado perteneciente al dominio público del Estado
+1
+- f
+- v
+
+¿El sistema Operativo se debe encargar de comunicar a los dispositivos periférico, cuando el usuario así lo requiera?
+2
+- f
+- v
+
+¿Los ficheros son un almacén de datos arbitrarios no volátil, no identificado por un nombre y unos atributos? (no seguro)
+2
+- f
+- v
+
+¿Los discos en RAID 0 divide cada disco en bandas de tamaño fijo?
+2
+- f
+- v
+
+La dirección IP 172.16.1.25 y máscara de subred 255.255.0.0 corresponde a una red clase C
+1
+- f
+- v
+
+Las redes LAN, suelen utilizar enlaces vía satélite y cables submarinos para su conexión.
+2
+- v
+- f
+
+El polvo en los componentes electrónicos ocasiona enfriamiento interno
+1
+- f
+- v
+
+Una dirección IPv6 está compuesta por 128 bits y se expresa en una notación hexadecimal de 24 dígitos.
+2
+- v
+- f
+
+¿Un administrador supervisa la operación de las redes basadas en servidor?
+2
+- f
+- v
+
+Los triggers se utiliza cuando el usuario realiza insert, update, ¿delete y drop? (no seguro)
+1
+- f
+- v
+
+La Auditoría de BD es importante porque los datos convertidos en información a través de bases de datos y procesos de negocios representan el negocio.atributos?
+2
+- f
+- v
+
+La Auditoría completa y extensiva permite cubrir gran cantidad de manejadores de bases de datos (no seguro)
+2
+- f
+- v
+
+Uno de los objetivos de la auditoria informática es verificar el cumplimiento de las normas de auditoría. Según ese objetivo, el nivel de la información que está de acuerdo con el mismo es el nivel ético y moral. (no seguro)
+1
+- v
+- f
+
+La auditoría en informática es la revisión y la evaluación de los controles, sistemas, procedimientos de informática
+2
+- f
+- v
+
+El área de AI depende del Director de Auditoría general o del Jefe del Director de Informática.
+1
+- v
+- f
+
+Los sistemas deben evaluarse de acuerdo con el ciclo de vida que normalmente siguen bajo requerimientos del usuario, estudio de factibilidad, diseño general, análisis, diseño lógico, desarrollo físico, pruebas, implementación, evaluación
+2
+- f
+- v
+
+Los puntos que se toman en cuenta para la prueba de un sistema son:  Prueba particular de cada programa - Prueba por fase validación, actualización - Prueba integral del paralelo - Prueba en paralelo sistema.
+2
+- f
+- v
+
+La mayoría de los delitos por computadora son cometidos por modificaciones de datos fuente al Suprimir u omitir datos - Adicionar y alterar datos - Duplicar procesos
+2
+- f
+- v
+
+Auditoria de Sistemas se define como el proceso que se sigue para la recolección y evaluación de la evidencia con el objetivo de determinar si los Sistemas de Información (SI) y los recursos que están relacionados cumplen con la función de proteger los activos e información
+1
+- v
+- f
+
+La auditoría en informática solo deberá comprender de la evaluación de los equipos de cómputo.
+1
+- f
+- v
+
+¿Instalar software únicamente de sitios web confiables es el mejor método para evitar el spyware en una máquina?
+2
+- f
+- v
+
+¿Un virus se centra en obtener acceso privilegiado a un dispositivo, mientras que un gusano no? (no seguro)
+1
+- f
+- v
+
+Una organización permite que los empleados trabajen desde su hogar, la tecnología que debería implementarse para garantizar la confidencialidad de los datos mientras estos se transmiten, ¿es mediante VLANS
+2
+- v
+- f
+
+¿El análisis de vulnerabilidades es sinónimo de prueba de penetración?
+1
+- f
+- v
+
+¿Un exploit permite la explotación de una vulnerabilidad descubierta?
+1
+- v
+- f
+
+¿Shodan y Robtex son herramientas de external footprint pasivo?
+1
+- v
+- f
+
+¿VPN y VLAN son métodos que se pueden utilizar para implementar la autenticación de varios factores
+2
+- v
+- f
+
+¿La Ingeniería social es el método no técnico que un delincuente cibernético usaría para recopilar información confidencial?.
+1
+- v
+- f
+
+¿Los protocolos STP y ARP presentan amenazas al switching?
+2
+- f
+- v
+
+¿Todos los controles del anexo A se deben implementar en un sistema de gestión de seguridad de la información?
+1
+- f
+- v
+
+Para auditores líderes de más de 3 años ejerciendo como auditor, es posible que por su experiencia no se hagan un plan de auditoría.
+2
+- v
+- f
+
+¿Es posible tener que crear una Política de control de acceso en el momento de aplicar controles de la Norma?
+1
+- v
+- f
+
+¿El tamaño de la organización y su tipo de actividades, procesos, productos y servicios pueden determinar el alcance de la información documentada en la ISO 27001?
+1
+- v
+- f
+
+Los procesos contratados externamente estén fuera del alcance de control siempre y cuando se documente esto dentro de las exclusiones del sistema de gestión
+1
+- f
+- v
+
+De acuerdo a la ISO 27001, basado en las tendencias actuales y manteniendo siempre en un enfoque proactivo no se debe excluir el control de Teletrabajo. (no seguro)
+2
+- v
+- f
+
+La organización debe determinar las cuestiones externas e internas que son pertinentes para su propósito y que afectan a su capacidad para lograr los resultados previstos de su sistema de gestión de seguridad de la información
+1
+- v
+- f
+
+La oficina de proyectos de TI debe establecer una política de seguridad de la Información que sea adecuada al propósito de la organización. (no seguro)
+1
+- f
+- v
+
+Las pistas de auditoria son elementos que permiten certificar la existencia de una operación, la validez de sus cifras, la identidad de los sujetos involucrados, el momento de su acaecimiento
+1
+- v
+- f
+
+¿Un documento XHTML necesariamente debe empezar por el prólogo?
+2
+- f
+- v
+
+Un Entity Framework es un Object-Relational Mapping
+1
+- v
+- f
+
+Para realizar consultas a una base de datos en Entity Framework se utiliza LINQ to SQL
+2
+- v
+- f
+
+Una función de ngFor en Angular es establecer la comunicación con un servidor backend
+1
+- f
+- v
+
+Property Binding es una forma correcta de separar datos en Angular
+2
+- v
+- f
+
+Index.js es una configuracion principal de una aplicación angular
+1
+- f
+- v
+
+DataSets y DataReaders se utiliza para interactuar con una base de datos utilizando ADO.NET
+2
+- f
+- v
+
+El patrón de diseño MVC se utiliza comunmente en ASP.NET MVC
+2
+- f
+- v
+
+Para realizar peticiones HTTP en angular se utiliza HttpService
+1
+- f
+- v
+
+Team Foundation Server se usa en desarrollo de sistemas electricos
+1
+- f
+- v
+
+Los servicios SOAP utilizan XML para el intercambio de información
+2
+- f
+- v
+
+Los servicios REST utilizan JSON para el intercambio de información
+1
+- v
+- f
+
+Diseñar interfaces de usuario no es una tarea común de un DBA en la administración de bases de datos?
+2
+- f
+- v
+
+Una directiva angular es una funcion de JavaScript
+2
+- v
+- f
+
+¿La metodología RUP es menos adaptable a proyectos?
+2
+- v
+- f
+
+La metodología XP es recomendable usarla en proyectos de corto plazo?
+1
+- v
+- f
+
+SCRUM es una metodología lenta para el desarrollo de software
+1
+- f
+- v
+
+la duración de la reunión de planificación del Sprint es de 8 horas para Sprint mensuales
+1
+- v
+- f
+
+En un enfoque de auditoria basado en el riesgo un Auditor de SI debería primero realizar una evaluación del riesgo inherente.
+1
+- v
+- f
+
+La mejor ubicación para un sitio de procesamiento alterno es a 45 km de distancia a pesar que su costo puede ser alto (no seguro)
+1
+- v
+- f
+
+ISO 27001 es un codigo de buenas practicas para la seguridad de la informacion? (no seguro)
+1
+- v
+- f
+
+¿ADO.NET se utiliza comunmente en ASP.NET para acceder y manipular bases de datos relacionales? (no seguro)
+2
+- v
+- f
+
+El Membership Provider se utiliza para gestionar la autenticación y autorización de usuarios en una aplicación web?
+1
+- v
+- f
+
+¿Un módulo de facturación corresponde a un entregable para un proyecto de desarrollo de software?
+2
+- f
+- v
+
+Las técnivas de auditoria basadas con computadoras consiste en: Un conjunto de técnicas y herramientas que emplea el auditor para recolectar información de los ambientes computarizados
+2
+- f
+- v
+
+El MODO IN especifica el parámentro de salida
+1
+- f
+- v
+
+Una dirección IP V4, se representa mediante numero binario 48 bits
+1
+- f
+- v
+
+Los diagramas Casos de uso, entidad relación, colaboración y estados pertenecen a UML (no seguro)
+2
+- v
+- f
+
+El cable de backcone es aquel que se origina en el punto de distribución principal e interconecta todos los armarios de telecomunicaciones del edificio (no seguro)
+2
+- v
+- f
+
+Los Triggers se usan para labores de rapidez
+2
+- v
+- f
+
+¿En los grupos de monitoreo y control de procesos de la gestión del proyecto se mide el rendimiento del proyecto?
+1
+- v
+- f
+
+La fibra óptica radia energía de radiofrecuencia, por lo que se debe usar manto
+1
+- f
+- v
+
+Los parámetros que definen una red son: protocolo, medio fisico y protocolo de acceso al medio (no seguro)
+1
+- f
+- v
+
+La Metodología RUP es mas adaptable a proyectos de Largo Plazo
+1
+- v
+- f
+
+La Gestión de Riesgos no corresponde al proceso de Gestión de Configuración Software? (no seguro)
+1
+- f
+- v
+
+La inteligencia artificial se refiere a la capacidad de las máquinas para imitar el pensamiento humano.
+2
+- f
+- v
+
+El modelo PROMPT proporcionar instrucciones explícitas sobre el tipo de respuesta que se espera del sistema. Estas instrucciones se denominan "pautas"
+2
+- f
+- v
+
+Al utilizar PROMPT, se espera que las respuestas generadas por el modelo estén más enfocadas y se ajusten mejor a la intención del usuario.
+2
+- f
+- v
+
+Puedo confiar en las respuestas generadas por el modelo con PROMPT.
+2
+- v
+- f
+
+Supongamos que tienes una tarea de clasificación de noticias. Quieres utilizar inteligencia artificial para que el sistema clasifique automáticamente las noticias en categorías como política, deportes, entretenimiento, etc. Para hacerlo, usarías el modelo PROMPT. (no seguro)
+2
+- f
+- v
+
+Deep Learning es una técnica más amplia y general dentro del campo del aprendizaje automático, mientras que PROMPT es un enfoque más específico para mejorar la generación de texto en modelos de lenguaje
+2
+- f
+- v
+
+Los sistemas de reconocimiento facial utilizan técnicas de inteligencia artificial para identificar y clasificar rostros humanos.
+1
+- v
+- f
+
+Los vehículos autónomos utilizan técnicas de inteligencia artificial para tomar decisiones de conducción.
+2
+- f
+- v
+
+Los algoritmos de inteligencia artificial siempre son imparciales y neutrales
+2
+- v
+- f
+
+La inteligencia artificial es capaz de crear obras de arte originales sin intervención humana. (no seguro)
+2
+- f
+- v
+
+Los sistemas de recomendación utilizan técnicas de inteligencia artificial para ofrecer productos o contenido relevante a los usuarios.
+2
+- f
+- v
+
+La inteligencia artificial ha tenido un impacto significativo en la atención médica, permitiendo diagnósticos más precisos.
+1
+- v
+- f
+
+Los asistentes virtuales como Siri, Alexa y Google Assistant utilizan técnicas de inteligencia artificial para comprender y responder a las preguntas de los usuarios.
+1
+- v
+- f
+
+La inteligencia artificial plantea preocupaciones éticas y sociales, como la privacidad y el desplazamiento laboral
+2
+- f
+- v
+
+La inteligencia artificial es capaz de simular la conciencia humana y tener un sentido de identidad propio.
+2
+- v
+- f
+
+El término "BIG DATA" se refiere exclusivamente al tamaño físico de los conjuntos de datos.
+2
+- v
+- f
+
+El BIG DATA se caracteriza por las 3 "V": volumen, velocidad y veracidad
+2
+- v
+- f
+
+El BIG DATA se utiliza en diversas industrias, como finanzas, salud y marketing.
+2
+- f
+- v
+
+El análisis de BIG DATA se limita al procesamiento de datos estructurados.
+2
+- v
+- f
+
+Los datos generados por las redes sociales pueden ser considerados como BIG DATA.
+2
+- f
+- v
+
+El BIG DATA se utiliza para recopilar y almacenar información personal de los usuarios. (no seguro)
+2
+- v
+- f
+
+El BIG DATA es una herramienta que ayuda a las organizaciones a tomar decisiones basadas en datos.
+2
+- f
+- v
+
+El análisis de BIG DATA solo es relevante para grandes empresas y organizaciones.
+2
+- v
+- f
+
+El BIG DATA puede utilizarse para predecir patrones y tendencias futuras.
+2
+- f
+- v
+
+El BIG DATA se refiere únicamente a datos numéricos y cuantitativos.
+1
+- f
+- v
+
+El análisis de BIG DATA se basa únicamente en técnicas estadísticas tradicionales
+2
+- v
+- f
+
+El BIG DATA ha tenido un impacto significativo en diversos aspectos de la sociedad y la economía.
+2
+- f
+- v
+
+La privacidad de los datos es un desafío importante en el manejo y análisis del BIG DATA..
+1
+- v
+- f
+
+El BIG DATA permite a las empresas comprender mejor a sus clientes y ofrecerles productos y servicios personalizados.
+1
+- v
+- f
+
+El BIG DATA se refiere únicamente a datos generados por máquinas y sensores.
+2
+- v
+- f
+
+Cuál es el comando Linux para ver la dirección IP actual
+1
+- Ifconfig
+- Ipretrieve
+- Ipconfig
+
+La DMZ es (no seguro)
+1
+- Una zona desmilitarizada es una red aislada que se encuentra dentro de la red interna de la organización
+- Una extensión segura de la red LAN sobre una red pública o no controlada como internet
+- Es una zona intermedia entre un ordenador conectado a internet y el sevidor que está accediendo
+
+Cuál de las siguientes no es una solución que ofrece la Cloud Computing
+2
+- PaaS
+- EaaS
+- IaaS
+
+El significado de SQL es
+1
+- Lenguaje estructurado de consultas
+- Lenguaje estructurado de datos
+- Lenguaje estructurado de información
+
+Cuál es aún un punto de preocupación en el despliegue de servicios en la Cloud Computing
+2
+- La replicación y disponibilidad de los datos
+- Seguridad de los datos
+- La calidad del servicio.
+
+El CPU tiene un reloj interno cuya velocidad se mide en "hertz" y determina la
+3
+- Velocidad de calentamiento
+- Velocidad de Resistencia
+- Velocidad de procesamiento
+
+Cuál de los siguientes servicios no funciona bajo el modelo cliente/servidor
+3
+- Servicio POP3
+- Servicio DNS
+- Compartición de archivos P2P
+
+Cuál de los siguientes no es una característica de la arquitectura kappa
+3
+- Procesamiento distribuido
+- Procesamiento incremental
+- Alta latencia
+
+Cuál es una de las ventajas de usar un protocolo de enrutamiento de estado de enlace en lugar de un de vector-distancia
+3
+- Los switch tienen conocimiento directo de todos los enlaces y la manera en que se conectan
+- La base de datos de topología elimina la necesidad de una tabla de enrutamiento.
+- Después de la inundación LSA inicial, generalmente requieren menos ancho de banda para comunicar cambios en una topología.
+
+Qué diseño de red contendría el alcance de las interrupciones en una red si ocurriera una falla
+1
+- El despliegue de switchs de la capa de distribución en pares y la división de las conexiones del switch de la capa de acceso entre ellos.
+- La instalación de solo equipos de clase empresarial en toda la red.
+- La reducción del número de dispositivos y conexiones redundantes en núcleo de la red.
+
+Cuál es el beneficio de implementar el marcado de QoS de capa 3 en una red empresarial
+1
+- EL marcado de capa 3 puede transportar la información de QoS de un extremo a otro.
+- El marcado de capa 3 puede transportar información de QoS en switches que no son compatibles con IP
+- EL marcado de capa 3 se puede utilizar para transportar tráfico que no sea IP
+
+Qué utiliza el router R1 como dirección MAC de destino al crear la trama que irá del R1 al servidor B
+3
+- El R1 utiliza la dirección MAC de destino del S1
+- El paquete se encapsula en una trama PPP, y R1 agrega la dirección de destino de PPP a la trama.
+- Si la dirección MAC de destino que corresponde a la dirección IPv4 no aparece en la caché ARP, R1 envía una solicitud de ARP.
+
+Qué diseño de red tendría el alcance de las interrupciones de una red en caso de falla
+2
+- La instalación solo de equipos empresariales en toda la red
+- La implementación de switches de capa de distribución en pares y la partición de conexiones de switches de capa de acceso entre ellos
+- La configuración de todos los dispositivos de la capa de acceso para compartir un solo Gateway
+
+Qué medida debería tomarse al planificar la redundancia en un diseño de red jerárquico
+2
+- Reemplazar de inmediato un módulo, un servicio o un dispositivo que no funcione en la red
+- Agregar rutas físicas alternativas para que los datos atraviesen la red
+- Adquirir continuamente equipos de respaldo para la red
+
+Cuál es la característica de diseño que limita el tamaño de un dominio de fallas en una red empresarial
+3
+- La instalación de fuentes de alimentación redundantes
+- El uso de un diseño de núcleo contraído
+- El uso del enfoque de bloque de switches de edificio
+
+Qué capacidad se proporciona mediante el uso de circuitos integrados para aplicaciones específicas en los switches de multicapa de Cisco
+3
+- Incorporación de puertos físicos en una interfaz lógica única
+- Protección del tráfico de datos en caso de falla del circuito
+- Envío de paquetes IP de manera independiente de la CPU
+
+Un ingeniero de red revisa un diseño de red que utiliza un router empresarial de configuración fija que admite conexiones LAN y WAN. Sin embargo, el ingeniero observa que el router no cuenta con suficientes interfaces para admitir el crecimiento y la expansión de la red. ¿Qué tipo de dispositivo se debe utilizar como reemplazo
+3
+- Un switch de capa 3
+- Un dispositivo PoE
+- Un router modular
+
+Cuál protocolo de capa 4 es utilizado para una conexión TELNET entre dos ruteadores
+2
+- IP
+- TCP
+- DNS
+
+Qué área de la red sería más probable que un personal universitario de TI tenga que rediseñar como resultado directo de que muchos estudiantes traigan sus propios tabletas y teléfonos inteligentes a la escuela para acceder a los recursos de la escuela
+3
+- Extranet
+- Intranet
+- LAN inalámbrico
+
+En referencia a la pérdida de propagación de una señal. ¿Cuál de las siguientes afirmaciones es correcta?
+2
+- La pérdida de propagación disminuye con el aumento de frecuencia de la señal y el aumento de la distancia entre trasmisor y receptor.
+- La pérdida de propagación aumenta cuando la frecuencia de la señal y la distancia entre transmisor y receptor aumentan.
+- La pérdida de propagación se mantiene constante con el incremento de frecuencia de la señal y el incremento de la distancia entre transmisor y receptor.
+
+¿Cuál no es un voltaje de distribución?
+2
+- 13.8 kV.
+- 3kV.
+- 22 kV.
+
+En un sistema trifásico, una carga tiene un valor de impedancia de 40 - 10j, la afirmación correcta sobre esta expresión es:
+1
+- 40 es la resistencia y 10 es una reactancia capacitiva
+- 40 es la reactancia capacitiva y 10 es la inductiva.
+- 40 es la reactancia capacitiva y 10 es la resistencia.
+
+¿Qué significa encriptar?
+1
+- Proteger archivos en el que su contenido se encuentra en lenguaje cifrado
+- Realizar una copia de seguridad y asignarle una clave
+- Guardar los archivos comprimidos para ocupar mayor espacio libre
+
+Los contactos eléctricos se pueden clasificar en
+2
+- Leves o graves
+- Directos e Indirectos
+- Superficiales o Internos
+
+Las fases a seguir ante un accidentado por riesgo eléctrico es:
+1
+- Protegerse, peticion  de ayuda y rescate
+- Correr a atender al acidentado
+- Rescate y aplicación de primeros auxilios
+
+En los accidentes eléctrico influyen
+2
+- Factores técnicos
+- Todas son ciertas
+- Factores humanos
+
+Cuáles de los enunciados no corresponde a los factores de riesgo eléctrico:
+3
+- Arco eléctrico
+- Equipo defectuoso
+- Ansiedad
+
+Cuando colocamos los elementos de un circuito en línea, uno a continuación de otro sobre el mismo cable, estamos realizando una conexión
+1
+- En serie
+- Mixta
+- En paralelo
+
+¿Qué componentes debe tener un circuito?
+2
+- Motor, bombilla, zumbador y cables
+- Receptores, generador, conductores y elementos de maniobra
+- Elementos de maniobra, conductores, receptores e interruptores.
+
+Se considera la ventaja más importante en la utilización de los PLC:
+1
+- Posibilidad de controlar varias máquinas con un solo autómata
+- Posibilidad de realizar maniobras manuales
+- Posibilidad de utilización de espacios amplios
+
+La luz se propaga por el núcleo de una fibra óptica por el
+1
+- Principio de reflexión interna total
+- Principio de retro esparcimiento de la luz
+- Principio de la retrodispersión.
+
+En un convertidor analógico a digital de 8 bits. ¿Cuántos niveles de voltaje pueden ser representados?
+1
+- 256 bits
+- 512 bits
+- 128 bits
+
+La Apertura Numérica es menor en las fibras ópticas:
+2
+- Multimodo perfil escalonado
+- Monomodo
+- Multimodo perfil gradual parabólico
+
+35. Los materiales dopantes que se utilizan para modificar el índice de refracción del vidrio son:
+3
+- Hidrógeno, Oxígeno, Flúor
+- Cobre, Hierro, Cobalto
+- Germanio, Fósforo, Boro, Flúor.
+
+36. ¿El volcado de memoria física se debe a daño en?
+3
+- Procesador
+- Mainboard
+- Disco duro o memoria RAM
+
+Es la memoria que se utiliza para acelerar el proceso, es de alta velocidad, permite queel procesador tenga más rápido acceso a los datos?
+2
+- ROM
+- RAM
+- CMOS
+
+Cuando un equipo carece de un dispositivo ¿Qué tipo de mantenimiento se necesita? (no seguro)
+2
+- Correctivo
+- Adaptativo
+- Preventivo
+
+Este es el que guarda la información cuando apagamos la computadora, además aquise guarda la mayoría de los programas y el sistema operativo.
+3
+- Memoria ROM
+- Memoria RAM
+- Disco Duro
+
+¿Cuál es el modo de inicio que permite el acceso a Windows con sólo los controladores de dispositivos más básicos?
+3
+- Iniciar en modo Depuración
+- Iniciar en modo normal
+- Iniciar en modo de prueba de fallos con F8
+
+La Efectividad es:
+3
+- Tiene que ver con la protección de información sensible contra revelación no autorizada.
+- Consiste en que la información sea generada optimizando los recursos (más productivo y económico)
+- Hace referencia a que la información sea relevante y acertada con los procesos del negocio, y sea entregada de manera oportuna, correcta, consistente y pueda ser utilizada
+
+La Confiabilidad es: (no seguro)
+2
+- Es básicamente el acatar aquellas leyes, reglamentos y acuerdos contractuales, es decir, criterios de negocios impuestos externamente, así como políticas internas.
+- Representa proveer la información adecuada para que la gerencia administre la entidad yejercite sus responsabilidades fiduciarias y de gobierno.
+- Se relaciona íntegramente con la precisión y completitud de la información
+
+A que se le considera Información:
+1
+- Se considera la información interna y externa como, gráficas, sonidos, documentos etc.
+- Es el hardware (equipos), sistemas operativos, sistemas de administración de bases de datos, de redes y de telecomunicaciones, multimedia, etc.
+- A los sistemas de información (aplicaciones) que están compuestos por procedimientos manuales y basados en tecnología que proporcionan soporte a los procesos del negocio.
+
+Los recursos de información requeridos en toda organización para conseguir las metas de tecnologías de la información son cuatro:
+1
+- Aplicaciones - Información - Infraestructura - Recurso humano
+- Aplicaciones - Equipos - Recurso Humano
+- Aplicaciones - Personal - Equipos.
+
+Como resultado de una auditoria informática deberán realizar:
+2
+- Un memo
+- Un Informe Técnico.
+- Un oficio
+
+La Auditoría Informática deberá comprender no sólo la evaluación de los equipos de cómputo, de un sistema o procedimiento específico, sino que además habrá de evaluar los
+3
+- Infraestructura y diseño
+- Equipos de comunicación
+- Procedimientos, controles, archivos de información.
+
+¿Cuál es el ataque de suplantación de identidad que aprovecha una relación de confianza entre dos sistemas?
+2
+- Análisis
+- Falsificación de identidad (spoofing)
+- Man-in-the-middle
+
+¿Qué algoritmo utilizará Windows por defecto cuando un usuario intente cifrar archivos y carpetas en un volumen NTFS?
+1
+- AES
+- RSA
+- 3DES
+
+¿Las contraseñas y los PIN son ejemplos de qué término de seguridad?
+1
+- Autenticación
+- Acceso
+- Identificacion
+
+¿Qué protocolo se utilizaría para proporcionar seguridad a los empleados que tienen acceso a los sistemas de manera remota desde el hogar?
+3
+- SCP
+- WPA
+- SSH
+
+¿Qué tecnología se puede utilizar para proteger VoIP ante las interceptaciones?
+2
+- Autenticación segura
+- Mensajes de vos cifrados
+- ARP
+
+¿Qué tipo de ataque puede evitar la autenticación mutua?
+2
+- Suplantación inalámbrica de direcciones IP
+- Man-in-the-middle
+- Envenenamiento inalámbrico
+
+Qué utilidad de Windows debe utilizarse para configurar las reglas de contraseña y las políticas de bloqueo de cuenta en un sistema que no es parte de un dominio?
+1
+- Herramienta de política de seguridad local
+- Registro de seguridad del visor de eventos
+- Administración de equipos
+
+El responsable de la seguridad de la información de la compañía de seguros desea establecer una lista de medidas de seguridad. ¿Qué tiene que hacer en primer lugar, antes de que se puedan seleccionar las medidas de seguridad?
+2
+- Establecer vigilancia
+- Llevar a cabo un análisis de riesgo
+- Llevar a cabo una evaluación
+
+Un posible riesgo para las compañías es un incendio. En este caso, si realmente hay un fuego, se puede producir un daño directo e indirecto. ¿Cuál es un ejemplo de daño directo?
+1
+- Se destruye una base de datos
+- Ya no se pueden satisfacer las obligaciones jurídicas
+- Perdida de imagen
+
+Hay un incendio en una sucursal de una compañía de seguros médicos. Se traslada al personal a una sucursal cercana para continuar su trabajo. ¿En qué momento del ciclo del incidente se encuentra la ejecución de este acuerdo en espera (stand-by)?
+1
+- Entre la recuperación y la amenaza
+- Entre el daño y la recuperación
+- Entre el incidente y el daño
+
+Según Magerit v3, quién NO es un participante en un proyecto de análisis y gestión de riesgos:
+1
+- Grupos de Interlocutores.
+- Comité de Seguimiento.
+- Comité de Gestión.
+
+En la metodología MAGERIT, la actividad "Interpretación del Riesgo" corresponde a la etapa de: (no seguro)
+1
+- Gestión de riesgos
+- Planificación
+- Análisis de riesgos
+
+La información tiene una serie de aspectos de fiabilidad. La fiabilidad está continuamente amenazada. Algunos ejemplos de amenazas son: un cable se suelta, alguien modifica accidentalmente información, uso de los datos con fines particulares o datos falsificados. ¿Cuál de los siguientes ejemplos constituye una amenaza para la confidencialidad?
+3
+- Falsificar datos
+- Un cable suelto
+- Usar datos con fines particulares
+
+Modelo de Negocio permite el alquiler de funcionalidades y servicios de software similares a diferentes clientes con una misma necesidad". Relacione la idea con el término más apropiado. (no seguro)
+1
+- IaaS
+- SaaS
+- PaaS
+
+Modelo de Negocio que permite el alquiler de aplicaciones de una aplicación de Software". Relacione la idea con el término más apropiado.
+2
+- IaaS
+- SaaS
+- Cloud
+
+Modelo de Negocio que permite el alquiler de recursos de hardware de acuerdo a las necesidades de cada cliente". Relacione la idea con el término más apropiado. (no seguro)
+3
+- IaaS
+- SaaS
+- Cloud
+
+Una aplicación que tiene la presentación en una misma estructura de programación y el manejo de reglas de negocio, persistencia y datos separada se la clasificaría como:manifiesta que la Policía Nacional esta legalmente constiuida.
+3
+- Monolitica
+- Cliente Servidor
+- N-capas
+
+Una aplicación genérica que proveo funcionalidades comunes a una aplicación con tan solo configurarla se la define como (no seguro)
+2
+- Framework Caja Blanca
+- Libreria
+- Patrón Diseño
+
+Una solución que puede ser aplicada a problemas de diseño y cuyo funcionamiento ha sido probado se la define como
+1
+- Patrón de Diseño
+- Framework Caja Blanca
+- Framework Caja Negra
+
+Qué patrón de diseño utilizaría para definir una clase que solo puede tener una instancia en tiempo de ejecución
+3
+- Abstract Factory
+- Builder
+- Singleton
+
+¿Cuál es la clasificación de los patrones de diseño de software?
+3
+- Patrones de Creación, Estructurales y Ejecución
+- Patrones de Creación, de Arquitectura y de Comportamiento
+- Patrones de Creación, Estructurales y de Comportamiento
+
+Los siguientes diagramas pertenecen a UML
+1
+- Casos de Uso, secuencia, colaboración y estados
+- Casos de uso, secuencia, colaboración y  DFDs
+- Casos de uso, entidad relación, colaboración y estados
+
+UML (Unified Modeling Language) es un(a)…
+3
+- Paradigma que permite modelar, construir y documentar los elementos que forman un sistema software.
+- Modelo que permite modelar, construir y documentar los elementos que forman un sistema
+- Lenguaje que permite modelar, construir y documentar los elementos que forman un sistema software
+
+¿Es SCRUM una metodología ágil para el desarrollo de software?
+2
+- NO
+- SI
+- Depende del tamaño del proyecto
+
+Es recomendable usar la Metodología XP en proyectos de:
+1
+- Corto Plazo
+- Mediano Plazo
+- Largo plazo
+
+¿Cuál de las siguientes NO es una fase de la Metodología RUP?
+3
+- Construcción
+- Transición
+- Potenciación
+
+Cuál de las siguientes no es una metodología de desarrollo de software
+2
+- XP
+- JAVA
+- SCRUM
+
+Cuál es la afirmación correcta: (no seguro)
+3
+- ISO 27001 provee Especificaciones para los Sistemas de Gestión de Calidad de la Continuidad.
+- ISO 27002 es un Código de Buenas Prácticas para la Seguridad de la Información.
+- ISO 27001 provee Especificaciones para los Sistemas de Gestión de Continuidad de la información.	
+
+Cuál sería la MEJOR ubicación para un sitio de procesamiento alterno:
+1
+- Ubicarlo a 45 km de distancia a pesar que su costo puede ser alto.
+- Ubicarlo a 1km de distancia para minimizar costos y rotar al personal entre ambas ubicaciones
+- Ubicarlo en el edificio de al frente a las oficinas principales para que el tiempo de respuesta sea mínimo. sea el menor.
+
+El phishing consiste en:
+2
+- Adquirir información de cualquier forma empleando ingeniería social.
+- Adquirir información confidencial de forma fraudulenta del mismo usuario.
+- Adquirir información interceptando llamadas sin que el usuario se entere
+
+En un documento HTML, ¿cuál es el elemento padre de <title>?
+2
+- Html
+- Head
+- Xmins
+
+Por qué debemos Modelar seleccione la respuesta correcta
+3
+- Utiliza bloques de construccion
+- Utiliza Clases
+- Ayuda a visualizar, modelar, documentar y construir un sistema
+
+Tipo de modelo del ciclo de vida que consta de requerimientos, diseño, implementación, pruebas y mantenimiento
+2
+- Modelo espiral
+- Modelo cascada
+- Modelo de prototipo
+
+¿Qué es el BIG DATA?
+1
+- Conjuntos de datos grandes y complejos que requieren métodos avanzados de procesamiento.
+- Un conjunto de algoritmos complejos para el análisis de datos.
+- Un término que se refiere al tamaño físico de los datos.
+
+¿Cuál de las siguientes características describe mejor el BIG DATA?
+1
+- Volumen, velocidad y variedad.
+- Volumen, velocidad y veracidad.
+- Tamaño, velocidad y validez.
+
+¿Cuál de las siguientes tecnologías se utiliza comúnmente en el análisis de BIG DATA?
+1
+- Procesamiento de texto natural (natural language processing).
+- Modelo Entidad - Relación
+- Diagramas de GANTT
+
+¿Qué es la inteligencia artificial?
+2
+- Un enfoque para el almacenamiento y análisis de grandes volúmenes de datos.
+- Una tecnología que permite a las máquinas imitar el pensamiento humano.
+- Un conjunto de reglas y algoritmos para el procesamiento de datos.
+
+¿Cuál de las siguientes opciones describe mejor el aprendizaje automático?
+1
+- La capacidad de las máquinas para aprender de forma autónoma sin ser programadas explícitamente.
+- Un método para el procesamiento y almacenamiento eficiente de grandes volúmenes de datos.
+- Un enfoque para el análisis de datos estructurados y no estructurados.
+
+¿Cuál de las siguientes técnicas es utilizada en el análisis de BIG DATA para descubrir patrones ocultos en los datos?
+3
+- Árboles de decisión de moda
+- Regresión logística angular media
+- Algoritmos de clasificación.
+
+¿Cuál de las siguientes opciones describe mejor el concepto de "veracidad" en el contexto del BIG DATA?
+1
+- La confiabilidad y precisión de los datos.
+- La cantidad de datos generados en un período de tiempo determinado.
+- La diversidad de tipos y fuentes de datos.
+
+¿Cuál de las siguientes aplicaciones utiliza técnicas de inteligencia artificial para comprender y responder a preguntas de los usuarios?
+2
+- Vehículos autónomos.
+- Asistentes virtuales.
+- Sistemas de audio y video
+
+¿Cuál de las siguientes opciones describe mejor el papel de la inteligencia artificial en los sistemas de recomendación?
+3
+- Generar algoritmos de clasificación para organizar los datos.
+- Procesar y almacenar grandes conjuntos de datos para su posterior análisis.
+- Analizar grandes volúmenes de datos y ofrecer productos o contenido relevante a los usuarios.
+
+¿Cuál de las siguientes opciones describe mejor la relación entre BIG DATA e inteligencia artificial?
+1
+- La inteligencia artificial es una técnica utilizada en el BIG DATA.
+- El BIG DATA y la inteligencia artificial son sinónimos.
+- El BIG DATA es una técnica utilizada en la inteligencia artificial.
+
+¿Cuál de las siguientes opciones describe mejor el propósito de la minería de datos en el contexto del BIG DATA?
+3
+- Utilizar algoritmos de compresión para reducir el tamaño de los datos.
+- Almacenar y organizar grandes volúmenes de datos.
+- Identificar patrones y relaciones ocultas en grandes conjuntos de datos.
+
+¿Cuál de las siguientes opciones describe mejor el impacto de la inteligencia artificial en la atención médica?
+2
+- Reducir la necesidad de médicos y profesionales de la salud.
+- Mejorar la precisión en el diagnóstico y tratamiento de enfermedades.
+- Eliminar la posibilidad de errores médicos.
+
+¿Cuál de las siguientes opciones describe mejor el desafío ético asociado con el uso de BIG DATA e inteligencia artificial?
+2
+- El uso inadecuado de grandes conjuntos de datos para el análisis.
+- La privacidad y seguridad de los datos personales
+- La falta de capacidad de almacenamiento para grandes volúmenes de datos.
+
+¿Cuál de las siguientes tecnologías ha permitido el almacenamiento y procesamiento eficiente de BIG DATA?
+3
+- Internet de las cosas.
+- Redes sociales.
+- Computación en la nube.
+
+¿Cuál de las siguientes opciones describe mejor el concepto de "velocidad" en el contexto del BIG DATA?
+2
+- La cantidad de datos generados en un período de tiempo determinado.
+- La capacidad de procesar grandes volúmenes de datos en tiempo real.
+- La diversidad de tipos y fuentes de datos
+
+¿Cuál de las siguientes opciones describe mejor el enfoque de "aprendizaje profundo" en el campo de la inteligencia artificial?
+1
+- Un enfoque que se basa en redes neuronales artificiales para aprender y extraer características de los datos.
+- Un enfoque que utiliza algoritmos complejos para imitar el pensamiento humano.
+- Un método para analizar grandes volúmenes de datos no estructurados.
+
+¿Cuál de las siguientes opciones describe mejor el propósito de los algoritmos de clustering en el análisis de BIG DATA?
+2
+- Predecir patrones y tendencias futuras en los datos.
+- Organizar los datos en categorías o grupos similares.
+- Encontrar relaciones ocultas y correlaciones entre diferentes variables
+
+¿Cuál de las siguientes opciones describe mejor el enfoque de "aprendizaje supervisado" en el campo de la inteligencia artificial?
+2
+- Un enfoque que utiliza algoritmos complejos para imitar el pensamiento humano.
+- Un enfoque en el que se proporcionan ejemplos etiquetados para entrenar un modelo.
+- Un método para el análisis de datos no estructurados.
+
+¿Cuál de las siguientes opciones describe mejor el impacto del BIG DATA en el campo del marketing?
+1
+- Permite a las empresas comprender mejor a sus clientes y personalizar sus estrategias.
+- Reduce la necesidad de técnicas de inteligencia artificial en el análisis de datos.
+- Elimina por completo la necesidad de realizar investigaciones de mercado tradicionales.
+
+Tipos de Servidores: Servidores de DNS:
+2
+- Sirve para ejecutar aplicaciones de forma remota, en lugar de que los equipos cliente lo hagan localmente.
+- Son servidores de aplicaciones que proporcionan funcionalidades de resolución de nombres a los equipos cliente.
+- Permiten la gestión y distribución de la funcionalidad de imprimir documentos. Para no tener  que conectar una impresora a cada estación de trabajo.
+
+Tipos de Servidores: Servidores de impresión:
+3
+- Sirve para ejecutar aplicaciones de forma remota, en lugar de que los equipos cliente lo hagan localmente.
+- Son servidores de aplicaciones que proporcionan funcionalidades de resolución de nombres a los equipos cliente.
+- Permiten la gestión y distribución de la funcionalidad de imprimir documentos. Para no tener  que conectar una impresora a cada estación de trabajo.
+
+Tipos de Servidores: Servidores de aplicaciones:
+1
+- Sirve para ejecutar aplicaciones de forma remota, en lugar de que los equipos cliente lo hagan localmente.
+- Son servidores de aplicaciones que proporcionan funcionalidades de resolución de nombres a los equipos cliente.
+- Permiten la gestión y distribución de la funcionalidad de imprimir documentos. Para no tener  que conectar una impresora a cada estación de trabajo.
+
+Tipos de redes informáticas: Red de área personal:
+2
+- Tipo de red muy común y muy usado que conecta un grupo de ordenadores o dispositivos ubicados en una misma estancia para compartir información y recursos.
+- Se compone de un módem, un ordenador o dos, teléfonos, impresoras, tablets, etc
+- Son redes más grandes y que abarcan más que las LAN y que las CAN. Este tipo de redes abarcan un área geográfica determinada, normalmente un pueblo o ciudad
+
+Tipos de redes informáticas: Red de área metropolitana (MAN):
+3
+- Tipo de red muy común y muy usado que conecta un grupo de ordenadores o dispositivos ubicados en una misma estancia para compartir información y recursos.
+- Se compone de un módem, un ordenador o dos, teléfonos, impresoras, tablets, etc
+- Son redes más grandes y que abarcan más que las LAN y que las CAN. Este tipo de redes abarcan un área geográfica determinada, normalmente un pueblo o ciudad
+
+Tipos de redes informáticas: Red de área local (LAN):
+1
+- Tipo de red muy común y muy usado que conecta un grupo de ordenadores o dispositivos ubicados en una misma estancia para compartir información y recursos.
+- Se compone de un módem, un ordenador o dos, teléfonos, impresoras, tablets, etc
+- Son redes más grandes y que abarcan más que las LAN y que las CAN. Este tipo de redes abarcan un área geográfica determinada, normalmente un pueblo o ciudad
+
+Capas del modelo OSI: Capa física:
+2
+- Administra las direcciones de datos y la transferencia entre redes.
+- Define las características del hardware de red.
+- Se compone de los servicios y aplicaciones de comunicación estándar que puede utilizar todo el mundo
+
+Capas del modelo OSI: Capa de aplicación:
+3
+- Administra las direcciones de datos y la transferencia entre redes.
+- Define las características del hardware de red.
+- Se compone de los servicios y aplicaciones de comunicación estándar que puede utilizar todo el mundo
+
+Capas del modelo OSI: Capa de red:
+1
+- Administra las direcciones de datos y la transferencia entre redes.
+- Define las características del hardware de red.
+- Se compone de los servicios y aplicaciones de comunicación estándar que puede utilizar todo el mundo
+
+Software de virtualización: VirtualBox:
+2
+- Está diseñado para una gestión eficiente de los servidores virtuales de Windows y Linux
+- Se caracteriza por ser muy fácil de usar gracias a su función "Guest Additions", disponible para Windows, Linux, Solaris y OS
+- Es un software de virtualización libre y de código abierto para Linux que se basa en las extensiones de virtualización de hardware
+
+Software de virtualización: Citrix XenServer:
+1
+- Está diseñado para una gestión eficiente de los servidores virtuales de Windows y Linux
+- Se caracteriza por ser muy fácil de usar gracias a su función "Guest Additions", disponible para Windows, Linux, Solaris y OS
+- Es un software de virtualización libre y de código abierto para Linux que se basa en las extensiones de virtualización de hardware
+
+Software de virtualización: KVM:
+3
+- Está diseñado para una gestión eficiente de los servidores virtuales de Windows y Linux
+- Se caracteriza por ser muy fácil de usar gracias a su función "Guest Additions", disponible para Windows, Linux, Solaris y OS
+- Es un software de virtualización libre y de código abierto para Linux que se basa en las extensiones de virtualización de hardware
+
+Funciones del servidor Proxy: Filtrado de contenido:
+2
+- El origen de las solicitudes está en Internet y busca acceder a un servidor dentro del entorno
+- Al estar en el medio del camino, el servidor también permite, o no, el acceso a ciertos sitios
+- Permite que ciertos usuarios tengan o no acceso a Internet a través de restricciones en su propio inicio de sesión o direcciones IP, proporcionando al entorno una capa adicional de protección
+
+Funciones del servidor Proxy: Control de acceso:
+3
+- El origen de las solicitudes está en Internet y busca acceder a un servidor dentro del entorno
+- Al estar en el medio del camino, el servidor también permite, o no, el acceso a ciertos sitios
+- Permite que ciertos usuarios tengan o no acceso a Internet a través de restricciones en su propio inicio de sesión o direcciones IP, proporcionando al entorno una capa adicional de protección
+
+Funciones del servidor Proxy: Proxy Inverso:
+1
+- El origen de las solicitudes está en Internet y busca acceder a un servidor dentro del entorno
+- Al estar en el medio del camino, el servidor también permite, o no, el acceso a ciertos sitios
+- Permite que ciertos usuarios tengan o no acceso a Internet a través de restricciones en su propio inicio de sesión o direcciones IP, proporcionando al entorno una capa adicional de protección
+
+Para garantizar la seguridad de los datos: Deben habilitarse todos los procedimientos de control y verificación automáticos de los sistemas: (no seguro)
+3
+- Los medios magnéticos que la contengan deben estar sin fallas físicas, lógicas o virus
+- Éste no debe ser removido, se debe imprimir el tipo de virus encontrado y devolverlo a la entidad que envió el archivo
+- Para evitar fallas físicas y lógicas
+
+Para garantizar la seguridad de los datos: Toda la información recibida debe ser revisada antes de ser procesada y almacenada:  (no seguro)
+1
+- Los medios magnéticos que la contengan deben estar sin fallas físicas, lógicas o virus
+- Éste no debe ser removido, se debe imprimir el tipo de virus encontrado y devolverlo a la entidad que envió el archivo
+- Para evitar fallas físicas y lógicas
+
+Para garantizar la seguridad de los datos: Si, por ejemplo un archivo llega con virus desde una entidad externa:
+2
+- Los medios magnéticos que la contengan deben estar sin fallas físicas, lógicas o virus
+- Éste no debe ser removido, se debe imprimir el tipo de virus encontrado y devolverlo a la entidad que envió el archivo
+- Para evitar fallas físicas y lógicas
+
+Procedimientos periódicos de backup: Medio Multi-respaldo: (no seguro)
+1
+- Es un medio físico en el cual se han almacenado varios archivos de respaldo, esto para aprovechar el espacio del medio con archivos de respaldo que son pequeños
+- Es la unidad lógica completa de un archivo de respaldo
+- Es una unidad física, un diskette, una cinta, un disco compacto, etcétera
+
+Procedimientos periódicos de backup: Medio: (no seguro)
+3
+- Es un medio físico en el cual se han almacenado varios archivos de respaldo, esto para aprovechar el espacio del medio con archivos de respaldo que son pequeños
+- Es la unidad lógica completa de un archivo de respaldo
+- Es una unidad física, un diskette, una cinta, un disco compacto, etcétera
+
+Procedimientos periódicos de backup: Volumen: (no seguro)
+2
+- Es un medio físico en el cual se han almacenado varios archivos de respaldo, esto para aprovechar el espacio del medio con archivos de respaldo que son pequeños
+- Es la unidad lógica completa de un archivo de respaldo
+- Es una unidad física, un diskette, una cinta, un disco compacto, etcétera
+
+Las tareas de un administrador de sistemas informáticos: Es el responsable de la instalación del equipamiento, tanto de hardware como de software:
+1
+- Soluciona incidencias tanto de hardware como de software
+- Si es necesario, se encarga de la compra de equipos y de paquetes informáticos; estudia la oferta del mercado, y analiza costes y ventajas de cada proveedor
+- Idea y desarrolla programas informáticos para mejorar la eficiencia del sistema
+
+Las tareas de un administrador de sistemas informáticos: El administrador de sistemas tiene responsabilidades en el diseño de proyectos
+3
+- Soluciona incidencias tanto de hardware como de software
+- Si es necesario, se encarga de la compra de equipos y de paquetes informáticos; estudia la oferta del mercado, y analiza costes y ventajas de cada proveedor
+- Idea y desarrolla programas informáticos para mejorar la eficiencia del sistema
+
+Las tareas de un administrador de sistemas informáticos: Se encarga de que el conjunto de sistemas funcione correctamente: (no seguro)
+2
+- Soluciona incidencias tanto de hardware como de software
+- Si es necesario, se encarga de la compra de equipos y de paquetes informáticos; estudia la oferta del mercado, y analiza costes y ventajas de cada proveedor
+- Idea y desarrolla programas informáticos para mejorar la eficiencia del sistema
+
+Existen 3 clases de redes, denominadas A, B y C: CLASE A: (no seguro)
+3
+- El primer byte es un número del 128 al 191. El segundo bytes es parte de la dirección de red. El 3 y 4 bytes solo identifican host en la red. Mascara de subred: 255.255.0.0
+- El primer byte es un número del 192 al 254. El segundo y tercer byte son parte de la dirección de red, el 4 byte solo identifica hasta 255 host. Mascara de subred 255.255.255.0
+- El primer byte es un número del 0 al 127. Mascara de subred: 255.0.0.0
+
+Existen 3 clases de redes, denominadas A, B y C: CLASE B: (no seguro)
+1
+- El primer byte es un número del 128 al 191. El segundo bytes es parte de la dirección de red. El 3 y 4 bytes solo identifican host en la red. Mascara de subred: 255.255.0.0
+- El primer byte es un número del 192 al 254. El segundo y tercer byte son parte de la dirección de red, el 4 byte solo identifica hasta 255 host. Mascara de subred 255.255.255.0
+- El primer byte es un número del 0 al 127. Mascara de subred: 255.0.0.0
+
+Existen 3 clases de redes, denominadas A, B y C: CLASE C: (no seguro)
+2
+- El primer byte es un número del 128 al 191. El segundo bytes es parte de la dirección de red. El 3 y 4 bytes solo identifican host en la red. Mascara de subred: 255.255.0.0
+- El primer byte es un número del 192 al 254. El segundo y tercer byte son parte de la dirección de red, el 4 byte solo identifica hasta 255 host. Mascara de subred 255.255.255.0
+- El primer byte es un número del 0 al 127. Mascara de subred: 255.0.0.0
+
+Entre Elementos de cableado estructurado, tenemos: Cableado vertical:
+1
+- También conocido como backbone o cableado troncal, proporciona las interconexiones entre de entrada y servicios del edificio, cuartos de equipos y cuartos de telecomunicaciones
+- Se conoce así a la sala en la que se alojan y centralizan todos los elementos que componen el sistema de telecomunicaciones
+- Se refiere al cableado o sistema de distribución que corre horizontalmente entre el techo y el suelo, de ahí su nombre
+
+Entre Elementos de cableado estructurado, tenemos: Cableado horizontal:
+3
+- También conocido como backbone o cableado troncal, proporciona las interconexiones entre de entrada y servicios del edificio, cuartos de equipos y cuartos de telecomunicaciones
+- Se conoce así a la sala en la que se alojan y centralizan todos los elementos que componen el sistema de telecomunicaciones
+- Se refiere al cableado o sistema de distribución que corre horizontalmente entre el techo y el suelo, de ahí su nombre
+
+Entre Elementos de cableado estructurado, tenemos: Cuarto de comunicaciones:
+2
+- También conocido como backbone o cableado troncal, proporciona las interconexiones entre de entrada y servicios del edificio, cuartos de equipos y cuartos de telecomunicaciones
+- Se conoce así a la sala en la que se alojan y centralizan todos los elementos que componen el sistema de telecomunicaciones
+- Se refiere al cableado o sistema de distribución que corre horizontalmente entre el techo y el suelo, de ahí su nombre
+
+SOFTWARE DE APLICACIÓN:
+3
+- Términos coloquiales, son programas que sirven para crear otros programas
+- Listas de instrucciones para resolver un problema abstracto, es decir, que un número finito de pasos convierten los datos de un problema (entrada) en una solución (salida)
+- Un conjunto de programas diferente al software del sistema, éstos se encargan de manipular la información que el usuario necesita procesar, son programas que desarrollan una tarea específica y cuya finalidad es permitirle al usuario realizar su trabajo con facilidad, rapidez, agilidad y precisión
+
+ALGORITMO:
+2
+- Términos coloquiales, son programas que sirven para crear otros programas
+- Listas de instrucciones para resolver un problema abstracto, es decir, que un número finito de pasos convierten los datos de un problema (entrada) en una solución (salida)
+- Un conjunto de programas diferente al software del sistema, éstos se encargan de manipular la información que el usuario necesita procesar, son programas que desarrollan una tarea específica y cuya finalidad es permitirle al usuario realizar su trabajo con facilidad, rapidez, agilidad y precisión
+
+Megahertzios:
+3
+- Es un múltiplo del byte, cuyo símbolo es GB, es la unidad de medida más utilizada en los discos duros, también es una unidad de almacenamiento
+- Es la unidad de medida de la capacidad de memoria y de dispositivos de almacenamiento informático (disquete, disco duro, CD-ROM, etc.)
+- Es una medida de frecuencia (número de veces que ocurre algo en un segundo). en el caso de los ordenadores
+
+Terabyte:
+2
+- Es un múltiplo del byte, cuyo símbolo es GB, es la unidad de medida más utilizada en los discos duros, también es una unidad de almacenamiento
+- Es la unidad de medida de la capacidad de memoria y de dispositivos de almacenamiento informático (disquete, disco duro, CD-ROM, etc.)
+- Es una medida de frecuencia (número de veces que ocurre algo en un segundo). en el caso de los ordenadores
+
+Gigabyte:
+1
+- Es un múltiplo del byte, cuyo símbolo es GB, es la unidad de medida más utilizada en los discos duros, también es una unidad de almacenamiento
+- Es la unidad de medida de la capacidad de memoria y de dispositivos de almacenamiento informático (disquete, disco duro, CD-ROM, etc.)
+- Es una medida de frecuencia (número de veces que ocurre algo en un segundo). en el caso de los ordenadores
+
+Baudio:
+3
+- Pequeño programa que coordina las actividades de los distintos componentes de un ordenador y comprueba su estado
+- Característica de cualquier red que permite la conexión de varias redes en un único cable. Para evitar las interferencias en la información manejada en cada red, se utilizan diferentes frecuencias para cada una de ellas
+- Unidad de medida utilizada en comunicaciones. Hace referencia al número de intervalos elementales por segundo que supone una señal
+
+Banda Ancha:
+2
+- Pequeño programa que coordina las actividades de los distintos componentes de un ordenador y comprueba su estado
+- Característica de cualquier red que permite la conexión de varias redes en un único cable. Para evitar las interferencias en la información manejada en cada red, se utilizan diferentes frecuencias para cada una de ellas
+- Unidad de medida utilizada en comunicaciones. Hace referencia al número de intervalos elementales por segundo que supone una señal
+
+BIOS:
+1
+- Pequeño programa que coordina las actividades de los distintos componentes de un ordenador y comprueba su estado
+- Característica de cualquier red que permite la conexión de varias redes en un único cable. Para evitar las interferencias en la información manejada en cada red, se utilizan diferentes frecuencias para cada una de ellas
+- Unidad de medida utilizada en comunicaciones. Hace referencia al número de intervalos elementales por segundo que supone una señal
+
+Bug:
+2
+- Razón a la cual pueden transmitirse datos por una red
+- Error en la codificación de un programa que provoca inconvenientes diversos al usuario
+- Para designar un dispositivo que conecta dos o más redes físicas que utilizan el mismo protocolo de comunicaciones y encamina paquetes de datos entre ambas
+
+Bridge:
+3
+- Razón a la cual pueden transmitirse datos por una red
+- Error en la codificación de un programa que provoca inconvenientes diversos al usuario
+- Para designar un dispositivo que conecta dos o más redes físicas que utilizan el mismo protocolo de comunicaciones y encamina paquetes de datos entre ambas
+
+Bit por segundo (bps):
+1
+- Razón a la cual pueden transmitirse datos por una red
+- Error en la codificación de un programa que provoca inconvenientes diversos al usuario
+- Para designar un dispositivo que conecta dos o más redes físicas que utilizan el mismo protocolo de comunicaciones y encamina paquetes de datos entre ambas
+
+Cable coaxial:
+1
+- Se usa normalmente en la conexión de redes con topología de Bus como Ethernet y ArcNet
+- Ocho bits que representan un carácter. Unidad básica de información con la que operan los ordenadores
+- Cada par va recubierto por una malla conductora que actúa de pantalla frente a interferencias y ruido eléctrico
+
+Byte:
+2
+- Se usa normalmente en la conexión de redes con topología de Bus como Ethernet y ArcNet
+- Ocho bits que representan un carácter. Unidad básica de información con la que operan los ordenadores
+- Cada par va recubierto por una malla conductora que actúa de pantalla frente a interferencias y ruido eléctrico
+
+Cable STP:
+3
+- Se usa normalmente en la conexión de redes con topología de Bus como Ethernet y ArcNet
+- Ocho bits que representan un carácter. Unidad básica de información con la que operan los ordenadores
+- Cada par va recubierto por una malla conductora que actúa de pantalla frente a interferencias y ruido eléctrico
+
+Cookie:
+2
+- Es el más simple y empleado, sin ningún tipo de pantalla adicional y con una impedancia característica de 100 Ohmios
+- Este es el nombre que se da a un pequeño archivo de texto, que queda almacenado en el disco duro del ordenador. Este archivo sirve para identificar al usuario cuando se conecta de nuevo a dicha página Web
+- Protocolo de configuración dinámica de host. Protocolo que usan los ordenadores para obtener información de configuración
+
+Cable UTP:
+1
+- Es el más simple y empleado, sin ningún tipo de pantalla adicional y con una impedancia característica de 100 Ohmios
+- Este es el nombre que se da a un pequeño archivo de texto, que queda almacenado en el disco duro del ordenador. Este archivo sirve para identificar al usuario cuando se conecta de nuevo a dicha página Web
+- Protocolo de configuración dinámica de host. Protocolo que usan los ordenadores para obtener información de configuración
+
+DHCP:
+3
+- Es el más simple y empleado, sin ningún tipo de pantalla adicional y con una impedancia característica de 100 Ohmios
+- Este es el nombre que se da a un pequeño archivo de texto, que queda almacenado en el disco duro del ordenador. Este archivo sirve para identificar al usuario cuando se conecta de nuevo a dicha página Web
+- Protocolo de configuración dinámica de host. Protocolo que usan los ordenadores para obtener información de configuración
+
+Para los siguientes criterios de servicio WAN, indique el método o técnica que permite su implementación: Integridad:
+1
+- Firma electrónica
+- Encriptación
+
+Para los siguientes criterios de servicio WAN, indique el método o técnica que permite su implementación: Confidencialidad:
+3
+- Firma electrónica
+- Integridad
+- Encriptación
+
+Relacione la IP con la descripción apropiada: 172.19.20.5
+2
+- Dirección de enlace local
+- Dirección privada
+- Dirección de loopback
+
+Relacione la IP con la descripción apropiada: 127.0.0.1
+3
+- Dirección de enlace local
+- Dirección privada
+- Dirección de loopback
+
+Relacione la IP con la descripción apropiada: 169.254.1.5
+1
+- Dirección de enlace local
+- Dirección privada
+- Dirección de loopback
+
+Ping:
+1
+- Envía mensajes de petición de eco
+- Reinicia el sistema
+- Borra las tablas de ruta
+
+Clear IP Route:
+3
+- Envía mensajes de petición de eco
+- Reinicia el sistema
+- Borra las tablas de ruta
+
+Reload:
+2
+- Envía mensajes de petición de eco
+- Reinicia el sistema
+- Borra las tablas de ruta
+
+Resistencia eléctrica:
+1
+- Dificultad que se ofrece al paso de la corriente
+- Cantidad de cargas que pasan por un punto en un segundo. Se mide en Amperios
+- Diferencial de potencial entre dos puntos
+
+Tensión eléctrica:
+3
+- Dificultad que se ofrece al paso de la corriente
+- Cantidad de cargas que pasan por un punto en un segundo. Se mide en Amperios
+- Diferencial de potencial entre dos puntos
+
+Intensidad:
+2
+- Dificultad que se ofrece al paso de la corriente
+- Cantidad de cargas que pasan por un punto en un segundo. Se mide en Amperios
+- Diferencial de potencial entre dos puntos
+
+Media tensión (MT):
+2
+- Tensiones mayor o igual a 25 v y menor a 1000 v
+- Tensiones superior a 1000 v e inferior a 57,5 kv
+- Tensiones superiores a 230 kv
+
+Baja tensión (BT):
+1
+- Tensiones mayor o igual a 25 v y menor a 1000 v
+- Tensiones superior a 1000 v e inferior a 57,5 kv
+- Tensiones superiores a 230 kv
+
+Extra alta tensión (EAT)
+3
+- Tensiones mayor o igual a 25 v y menor a 1000 v
+- Tensiones superior a 1000 v e inferior a 57,5 kv
+- Tensiones superiores a 230 kv
+
+Unidad de medida de Intensidad:
+3
+- Telurómetro
+- Para poder descifrar el error absoluto de otros aparatos de medidas
+- Amperios
+
+Aparato de medida que se usa para medir la toma de tierra:
+1
+- Telurómetro
+- Para poder descifrar el error absoluto de otros aparatos de medidas
+- Amperios
+
+Para qué se utiliza un aparato de medida patrón:
+2
+- Telurómetro
+- Para poder descifrar el error absoluto de otros aparatos de medidas
+- Amperios
+
+Intensidad:
+1
+- Cantidad de cargas que pasan por un punto en un segundo. Se mide en Amperios (A)
+- Potencia por unidad de tiempo
+- Número de ciclos por segundo de una onda sinusoidal de corriente alterna (CA)
+
+Energía eléctrica: (no seguro)
+2
+- Cantidad de cargas que pasan por un punto en un segundo. Se mide en Amperios (A)
+- Potencia por unidad de tiempo
+- Número de ciclos por segundo de una onda sinusoidal de corriente alterna (CA)
+
+Frecuencia: (no seguro)
+3
+- Cantidad de cargas que pasan por un punto en un segundo. Se mide en Amperios (A)
+- Potencia por unidad de tiempo
+- Número de ciclos por segundo de una onda sinusoidal de corriente alterna (CA)
+
+Sentido de la corriente eléctrica en un circuito:
+3
+- Conductores
+- Carga de 6,24 trillones de electrones
+- Contrario al flujo de electrones
+
+Un Culombio:
+3
+- Conductores
+- Carga de 6,24 trillones de electrones
+- Contrario al flujo de electrones
+
+Resistencia:
+1
+- Ohmio
+- E=P*T
+- Potencia Eléctrica
+
+kilovatio(kW):
+3
+- Ohmio
+- E=P*T
+- Potencia Eléctrica
+
+Calcular la energía eléctrica:
+2
+- Ohmio
+- E=P*T
+- Potencia Eléctrica
+
+El vatio, unidad de potencia equivale a:
+2
+- La intensidad de corriente aumenta
+- 1 julio/segundo
+- Corriente Alterna
+
+Los transformadores solo funcionan con:
+3
+- La intensidad de corriente aumenta
+- 1 julio/segundo
+- Corriente Alterna
+
+Al aumentar el voltaje proporcionado por una bateria:
+1
+- La intensidad de corriente aumenta
+- 1 julio/segundo
+- Corriente Alterna
+
+Efecto Joule:
+3
+- La intensidad de corriente eléctrica obtenida en un circuito es inversamente proporcional a la tensión aplicada, y directamente proporcional a la resistencia eléctrica del mismo
+- Aumenta la resistencia
+- Efecto mediante el cual al pasar una corriente por un material, éste se calienta, fruto de los choques entre partículas
+
+Ley de Ohm:
+1
+- La intensidad de corriente eléctrica obtenida en un circuito es inversamente proporcional a la tensión aplicada, y directamente proporcional a la resistencia eléctrica del mismo
+- Aumenta la resistencia
+- Efecto mediante el cual al pasar una corriente por un material, éste se calienta, fruto de los choques entre partículas
+
+Al disminuye la intensidad de corriente que circula a través de un circuito:
+2
+- La intensidad de corriente eléctrica obtenida en un circuito es inversamente proporcional a la tensión aplicada, y directamente proporcional a la resistencia eléctrica del mismo
+- Aumenta la resistencia
+- Efecto mediante el cual al pasar una corriente por un material, éste se calienta, fruto de los choques entre partículas
+
+ALU:
+2
+- Selector de datos
+- Realizar operaciones lógicas y aritméticas
+- Distribuidor de datos
+
+Demultiplexor:
+3
+- Selector de datos
+- Realizar operaciones lógicas y aritméticas
+- Distribuidor de datos
+
+Multiplexor:
+1
+- Selector de datos
+- Realizar operaciones lógicas y aritméticas
+- Distribuidor de datos
+
+Si FromDS=ToDS=0:
+1
+- Modo Ad Hoc
+- Para diferenciar entre: IEEE 802.11a/b/g
+- Sincronización y delimitador de inicio de trama
+
+Versión del protocolo:
+2
+- Modo Ad Hoc
+- Para diferenciar entre: IEEE 802.11a/b/g
+- Sincronización y delimitador de inicio de trama
+
+Preámbulo:
+3
+- Modo Ad Hoc
+- Para diferenciar entre: IEEE 802.11a/b/g
+- Sincronización y delimitador de inicio de trama
+
+¿Cuántos bits tiene una dirección IPv6?:
+1
+- 128 bits
+- Principio de reflexión interna total
+- Laser
+
+¿Qué fuente de luz ofrece el menor ancho espectral?:
+3
+- 128 bits
+- Principio de reflexión interna total
+- Laser
+
+La luz se propaga por el núcleo de una fibra óptica por el:
+2
+- 128 bits
+- Principio de reflexión interna total
+- Laser
+
+Broadcasting:
+3
+- Razón a la cual pueden transmitirse datos por una red
+- Para designar un dispositivo que conecta dos o más redes físicas que utilizan el mismo protocolo de comunicaciones y encamina paquetes de datos entre ambas
+- Existe un solo canal o medio de comunicación, que es compartido por todos los usuariosaumenta
+
+Bridge:
+2
+- Razón a la cual pueden transmitirse datos por una red
+- Para designar un dispositivo que conecta dos o más redes físicas que utilizan el mismo protocolo de comunicaciones y encamina paquetes de datos entre ambas
+- Existe un solo canal o medio de comunicación, que es compartido por todos los usuariosaumenta
+
+Bit por segundo (bps):
+1
+- Razón a la cual pueden transmitirse datos por una red
+- Para designar un dispositivo que conecta dos o más redes físicas que utilizan el mismo protocolo de comunicaciones y encamina paquetes de datos entre ambas
+- Existe un solo canal o medio de comunicación, que es compartido por todos los usuariosaumenta
+
+240.2.6.255:
+3
+- Dirección de loopback
+- Dirección de enlace local
+- Una dirección experimental
+
+127.0.0.1:
+1
+- Dirección de loopback
+- Dirección de enlace local
+- Una dirección experimental
+
+169.254.1.5:
+2
+- Dirección de loopback
+- Dirección de enlace local
+- Una dirección experimental
+
+Cable UTP: (no seguro)
+1
+- Máximo 100m (67MHz)
+- Máximo 100m (65MHz)
+- Máximo 2 km
+
+Cable STP: (no seguro)
+2
+- Máximo 100m (67MHz)
+- Máximo 100m (65MHz)
+- Máximo 2 km
+
+Fibra óptica:
+
+- Máximo 100m (67MHz)
+- Máximo 100m (65MHz)
+- Máximo 2 km
+
+En el contexto de seguridad: La información:
+1
+- Se considera como el oro de la seguridad informática ya que es lo que se desea protege
+- Son considerados como el eslabón más débil de la cadena, ya que a las personas es imposible de controla
+- Esté puede ser uno de los medios más controlados, pero eso no implica que sea el que corre menos riesgos
+
+En el contexto de seguridad: La infraestructura:
+3
+- Se considera como el oro de la seguridad informática ya que es lo que se desea protege
+- Son considerados como el eslabón más débil de la cadena, ya que a las personas es imposible de controla
+- Esté puede ser uno de los medios más controlados, pero eso no implica que sea el que corre menos riesgos
+
+En el contexto de seguridad: Los usuarios:
+2
+- Se considera como el oro de la seguridad informática ya que es lo que se desea protege
+- Son considerados como el eslabón más débil de la cadena, ya que a las personas es imposible de controla
+- Esté puede ser uno de los medios más controlados, pero eso no implica que sea el que corre menos riesgos
+
+Los elementos que se pueden aplicar en los mecanismos preventivos se pueden mencionar a: La comprensión de la información:
+2
+- Es uno de los Es uno de los procesos más comunes que se pueden realizar en las compañías
+- No toda la información se puede comprimir, pero existe alguna que, sí lo necesita, así que se deben hacer las valoraciones respectivas
+- Es común seleccionar las horas de menos tráfico
+
+Los elementos que se pueden aplicar en los mecanismos preventivos se pueden mencionar a: El respaldo de información:
+1
+- Es uno de los Es uno de los procesos más comunes que se pueden realizar en las compañías
+- No toda la información se puede comprimir, pero existe alguna que, sí lo necesita, así que se deben hacer las valoraciones respectivas
+- Es común seleccionar las horas de menos tráfico
+
+Los elementos que se pueden aplicar en los mecanismos preventivos se pueden mencionar a: Horario de respaldo:
+3
+- Es uno de los Es uno de los procesos más comunes que se pueden realizar en las compañías
+- No toda la información se puede comprimir, pero existe alguna que, sí lo necesita, así que se deben hacer las valoraciones respectivas
+- Es común seleccionar las horas de menos tráfico
+
+Mecanismos correctivos en seguridad informática: Análisis de la solución:
+3
+- En este paso es muy evidente que la actividad que se hace es analizar el problema que se ha presentado, en muchos casos esta parte se realiza por los expertos
+- En este paso se hace un catálogo de los problemas a los que se pueden enfrentar, detectar y clasificar
+- Antes de intentar solucionar el problema se debe de analizar la propuesta de la solución
+
+Mecanismos correctivos en seguridad informática: Análisis del problema:
+1
+- En este paso es muy evidente que la actividad que se hace es analizar el problema que se ha presentado, en muchos casos esta parte se realiza por los expertos
+- En este paso se hace un catálogo de los problemas a los que se pueden enfrentar, detectar y clasificar
+- Antes de intentar solucionar el problema se debe de analizar la propuesta de la solución
+
+Mecanismos correctivos en seguridad informática: Catalogación y asignación de problemas
+2
+- En este paso es muy evidente que la actividad que se hace es analizar el problema que se ha presentado, en muchos casos esta parte se realiza por los expertos
+- En este paso se hace un catálogo de los problemas a los que se pueden enfrentar, detectar y clasificar
+- Antes de intentar solucionar el problema se debe de analizar la propuesta de la solución
+
+Los métodos de encriptación disponibles actualmente y que son bastantes conocidos se puede mencionar a: Encriptación WPA:
+2
+- Tiene tres opciones, de 64 bits, de 128 bits y 256 bits
+- Aplicadas a las señales inalámbricas y están basados en protocolos de conexión Wifi
+- Usan una misma clave para cifrar y descifrar el mensaje
+
+Los métodos de encriptación disponibles actualmente y que son bastantes conocidos se puede mencionar a: Encriptación WEP:
+1
+- Tiene tres opciones, de 64 bits, de 128 bits y 256 bits
+- Aplicadas a las señales inalámbricas y están basados en protocolos de conexión Wifi
+- Usan una misma clave para cifrar y descifrar el mensaje
+
+Los métodos de encriptación disponibles actualmente y que son bastantes conocidos se puede mencionar a: Encriptación simétrica:
+3
+- Tiene tres opciones, de 64 bits, de 128 bits y 256 bits
+- Aplicadas a las señales inalámbricas y están basados en protocolos de conexión Wifi
+- Usan una misma clave para cifrar y descifrar el mensaje
+
+Tipos de Auditoría: Administrativa:
+2
+- Se refiere a la revisión del ejercicio de una empresa
+- Organización y eficiencia de la estructura del personal
+- Revisión del entorno general
+
+Tipos de Auditoría: Social:
+3
+- Se refiere a la revisión del ejercicio de una empresa
+- Organización y eficiencia de la estructura del personal
+- Revisión del entorno general
+
+Tipos de Auditoría: Auditoría Operacional:
+1
+- Se refiere a la revisión del ejercicio de una empresa
+- Organización y eficiencia de la estructura del personal
+- Revisión del entorno general
+
+Métodos de muestras utilizados en la auditoría: Estratificado:
+3
+- Es un método estadístico
+- Depende si la población es finita o infinita
+- Producirá resultados precisos
+
+Métodos de muestras utilizados en la auditoría: Atributos:
+1
+- Es un método estadístico
+- Depende si la población es finita o infinita
+- Producirá resultados precisos
+
+Métodos de muestras utilizados en la auditoría: Aleatorio: (no seguro)
+2
+- Es un método estadístico
+- Depende si la población es finita o infinita
+- Producirá resultados precisos
+
+En la Implantación de un sistema de controles internos informáticos, es necesario documentar los detalles de la red. así como los distintos niveles de control y elementos relacionados: Entorno de red:
+2
+- El cliente no prevenga ni corrija tales errores
+- Descripción de la configuración hardware de comunicaciones, descripción del software que se utiliza como acceso a las telecomunicaciones
+- Procesos de transacciones, sistemas de gestión de bases de datos y entornos de procesos distribuidos
+
+En la Implantación de un sistema de controles internos informáticos, es necesario documentar los detalles de la red. así como los distintos niveles de control y elementos relacionados: Configuración del computador base: (no seguro)
+3
+- El cliente no prevenga ni corrija tales errores
+- Descripción de la configuración hardware de comunicaciones, descripción del software que se utiliza como acceso a las telecomunicaciones
+- Procesos de transacciones, sistemas de gestión de bases de datos y entornos de procesos distribuidos
+
+En la Implantación de un sistema de controles internos informáticos, es necesario documentar los detalles de la red. así como los distintos niveles de control y elementos relacionados: Entorno de aplicaciones: (no seguro)
+1
+- El cliente no prevenga ni corrija tales errores
+- Descripción de la configuración hardware de comunicaciones, descripción del software que se utiliza como acceso a las telecomunicaciones
+- Procesos de transacciones, sistemas de gestión de bases de datos y entornos de procesos distribuidos
+
+Formas de generar y compartir la información en Internet: Información que se comparte por defecto: 
+1
+- Solamente los usuarios avanzados conocen que la mera interacción con diferentes dispositivos y plataformas y actividades sencillas como realizar búsquedas generan información que queda registrada
+- Va asociada generalmente con el contenido generado por el usuario (redes sociales, comentarios en foros, emails) como una muestra de expresión de sus opiniones
+- Todos los usuarios son conscientes de que es necesario introducir cierta información con la intención de acceder a los beneficios que ofrece la web
+
+Formas de generar y compartir la información en Internet: Información que se comparte de forma voluntaria: 
+2
+- Solamente los usuarios avanzados conocen que la mera interacción con diferentes dispositivos y plataformas y actividades sencillas como realizar búsquedas generan información que queda registrada
+- Va asociada generalmente con el contenido generado por el usuario (redes sociales, comentarios en foros, emails) como una muestra de expresión de sus opiniones
+- Todos los usuarios son conscientes de que es necesario introducir cierta información con la intención de acceder a los beneficios que ofrece la web
+
+Formas de generar y compartir la información en Internet: Información que se comparte de forma forzada: 
+3
+- Solamente los usuarios avanzados conocen que la mera interacción con diferentes dispositivos y plataformas y actividades sencillas como realizar búsquedas generan información que queda registrada
+- Va asociada generalmente con el contenido generado por el usuario (redes sociales, comentarios en foros, emails) como una muestra de expresión de sus opiniones
+- Todos los usuarios son conscientes de que es necesario introducir cierta información con la intención de acceder a los beneficios que ofrece la web
+
+Etapas en la gestión de la ciberseguridad: Prevención:
+3
+- Gestión de vulnerabilidades
+- Sistemas de recuperación
+- Control de accesos y gestión de identidades
+
+Etapas en la gestión de la ciberseguridad: Respuesta:
+2
+- Gestión de vulnerabilidades
+- Sistemas de recuperación
+- Control de accesos y gestión de identidades
+
+Etapas en la gestión de la ciberseguridad: Detección:
+1
+- Gestión de vulnerabilidades
+- Sistemas de recuperación
+- Control de accesos y gestión de identidades
+
+Componentes de una solución de gestión de identidades: El servicio de directorios:
+2
+- Son un servicio de directorio que posibilita recolectar y almacenar información de varios servidores de directorios
+- Se puede definir como un componente de la red que permite la administración de un directorio de forma centralizada, al mismo tiempo que provee información para las aplicaciones organizacionales que interactúan con él
+- Tienen funciones similares a las de los metadirectorios. Se encargan de crear una visión unificada de la información que procede de las diferentes fuentes con las que cuenta la organización
+
+Componentes de una solución de gestión de identidades: Metadirectorios:
+1
+- Son un servicio de directorio que posibilita recolectar y almacenar información de varios servidores de directorios
+- Se puede definir como un componente de la red que permite la administración de un directorio de forma centralizada, al mismo tiempo que provee información para las aplicaciones organizacionales que interactúan con él
+- Tienen funciones similares a las de los metadirectorios. Se encargan de crear una visión unificada de la información que procede de las diferentes fuentes con las que cuenta la organización
+
+Componentes de una solución de gestión de identidades: Directorios Virtuales:
+3
+- Son un servicio de directorio que posibilita recolectar y almacenar información de varios servidores de directorios
+- Se puede definir como un componente de la red que permite la administración de un directorio de forma centralizada, al mismo tiempo que provee información para las aplicaciones organizacionales que interactúan con él
+- Tienen funciones similares a las de los metadirectorios. Se encargan de crear una visión unificada de la información que procede de las diferentes fuentes con las que cuenta la organización
+
+Instalar un programa antivirus:
+3
+- Con la desconexión se podrá impedir que el virus que infectó el equipo continúe propagándose por la red y que se produzca una nueva infección después de la limpieza
+- Es muy importante analizar por completo todos los discos del equipo en busca de amenazas o daños
+- Es muy recomendable la utilización de herramientas proactivas mejor que reactivas, por 10 que es deseable instalar un software que incluya capacidades de detección proactiva de amenazas
+
+Desconectar el equipo de Internet:
+1
+- Con la desconexión se podrá impedir que el virus que infectó el equipo continúe propagándose por la red y que se produzca una nueva infección después de la limpieza
+- Es muy importante analizar por completo todos los discos del equipo en busca de amenazas o daños
+- Es muy recomendable la utilización de herramientas proactivas mejor que reactivas, por 10 que es deseable instalar un software que incluya capacidades de detección proactiva de amenazas
+
+Análisis completo del sistema:
+2
+- Con la desconexión se podrá impedir que el virus que infectó el equipo continúe propagándose por la red y que se produzca una nueva infección después de la limpieza
+- Es muy importante analizar por completo todos los discos del equipo en busca de amenazas o daños
+- Es muy recomendable la utilización de herramientas proactivas mejor que reactivas, por 10 que es deseable instalar un software que incluya capacidades de detección proactiva de amenazas
+
+Para que una evidencia digital sea válida debe cumplir con tres requisitos: Ser auténtica:
+1
+- Debe poder probarse que la evidencia es veraz, que no ha sido modificada
+- Es muy importante analizar por completo todos los discos del equipo en busca de amenazas o daños
+- Debe poder demostrarse su relación con el hecho de forma inequívoca
+
+Para que una evidencia digital sea válida debe cumplir con tres requisitos: Ser precisa:
+3
+- Debe poder probarse que la evidencia es veraz, que no ha sido modificada
+- Es muy importante analizar por completo todos los discos del equipo en busca de amenazas o daños
+- Debe poder demostrarse su relación con el hecho de forma inequívoca
+
+Para que una evidencia digital sea válida debe cumplir con tres requisitos: Ser suficiente: (no seguro)
+2
+- Debe poder probarse que la evidencia es veraz, que no ha sido modificada
+- Es muy importante analizar por completo todos los discos del equipo en busca de amenazas o daños
+- Debe poder demostrarse su relación con el hecho de forma inequívoca
+
+Fases de una Pruebas de Seguridad: Búsqueda de vulnerabilidades:
+3
+- Conocida como la fase de reconocimiento, lo ideal es identificar todo lo que podamos debido a que entre más información tengamos más fácil se nos harán los pasos posteriores
+- Es donde se consigue acceso a los sistemas de la organización
+- Es la encargada de analizar toda la información recolectada anteriormente, donde tendremos que identificar vulnerabilidades o posibles vectores de ataque de los sistemas
+
+Fases de una Pruebas de Seguridad: Explotación de vulnerabilidades:
+2
+- Conocida como la fase de reconocimiento, lo ideal es identificar todo lo que podamos debido a que entre más información tengamos más fácil se nos harán los pasos posteriores
+- Es donde se consigue acceso a los sistemas de la organización
+- Es la encargada de analizar toda la información recolectada anteriormente, donde tendremos que identificar vulnerabilidades o posibles vectores de ataque de los sistemas
+
+Fases de una Pruebas de Seguridad: Recolección de información:
+1
+- Conocida como la fase de reconocimiento, lo ideal es identificar todo lo que podamos debido a que entre más información tengamos más fácil se nos harán los pasos posteriores
+- Es donde se consigue acceso a los sistemas de la organización
+- Es la encargada de analizar toda la información recolectada anteriormente, donde tendremos que identificar vulnerabilidades o posibles vectores de ataque de los sistemas
+
+Al implementar un sistema de detección de intrusos (IDS), el gerente de seguridad de la información debe recomendar que se coloque:
+1
+- En una subred filtrada
+- Asegurarse de que el riesgo se gestiona correctamente
+- Redundancia, copias de seguridad y controles de acceso
+
+El gobierno corporativo tiene varios objetivos, entre ellos:
+2
+- En una subred filtrada
+- Asegurarse de que el riesgo se gestiona correctamente
+- Redundancia, copias de seguridad y controles de acceso
+
+Tres controles comunes que se utilizan para proteger la disponibilidad de la información son:
+3
+- En una subred filtrada
+- Asegurarse de que el riesgo se gestiona correctamente
+- Redundancia, copias de seguridad y controles de acceso
+
+¿Cuál es la definición de disponibilidad según la familia de normas ISO 27000?
+2
+- Preparar el plan de auditoría
+- Propiedad de ser accesible y estar listo para su uso o demanda de una entidad autorizada
+- Clasificar los sistemas según su importancia
+
+¿Basados en la ISO 19011, actividades dentro de la preparación de la auditoría incluyen?
+1
+- Preparar el plan de auditoría
+- Propiedad de ser accesible y estar listo para su uso o demanda de una entidad autorizada
+- Clasificar los sistemas según su importancia
+
+¿Qué auditor es encargado de liderar el equipo de auditoría?
+2
+- Observador
+- El auditor líder
+- Externalización del desarrollo de software
+
+¿Forma parte del equipo auditor, ¿pero no audita?
+1
+- Observador
+- El auditor líder
+- Externalización del desarrollo de software
+
+¿Conjunto de una o más auditorias planificadas en un periodo?
+2
+- El no cumplimiento de un requisito de la norma
+- Programa de auditoría
+- Debido cuidado profesional
+
+¿Qué es una no conformidad en una auditoría?
+1
+- El no cumplimiento de un requisito de la norma
+- Programa de auditoría
+- Debido cuidado profesional
+
+¿Son principios del auditor?
+3
+- El no cumplimiento de un requisito de la norma
+- Programa de auditoría
+- Debido cuidado profesional
+
+Durante una reunión de apertura de auditoría de tercera parte se debe:
+1
+- Revisar el alcance
+- Auditoría en sitio
+- Determinar la conformidad del sistema de gestión y determinar oportunidades de mejora
+
+¿Dentro de los métodos de auditoría existen?:
+2
+- Revisar el alcance
+- Auditoría en sitio
+- Determinar la conformidad del sistema de gestión y determinar oportunidades de mejora
+
+Las auditorías internas son realizadas al interior de una organización para:
+3
+- Revisar el alcance
+- Auditoría en sitio
+- Determinar la conformidad del sistema de gestión y determinar oportunidades de mejora
+
+¿Son parte del implementar el programa de auditoría?
+1
+- Seleccionar los miembros del equipo auditor
+- Explicar bajo la óptica del auditor líder por qué se incumplió el requisito
+- Las opiniones del auditor
+
+¿No son importantes en la redacción de no conformidades?
+3
+- Seleccionar los miembros del equipo auditor
+- Explicar bajo la óptica del auditor líder por qué se incumplió el requisito
+- Las opiniones del auditor
+
+¿Durante una reunión de cierre de una auditoría externa NO se debe?
+2
+- Seleccionar los miembros del equipo auditor
+- Explicar bajo la óptica del auditor líder por qué se incumplió el requisito
+- Las opiniones del auditor
+
+SOAP:
+2
+- Lenguaje que permite publicar, encontrar y usar los Servicios Web basados en XML. Es la 'Página Amarilla' de los servicios Web es decir un directorio para poder encontrarlos
+- Es un protocolo que permite mover los datos entre aplicaciones y sistemas. Es el mecanismo por medio del cual los servicios Web san invocados e interactúan
+- Es un formato universal para representar los datos
+
+XML:
+3
+- Lenguaje que permite publicar, encontrar y usar los Servicios Web basados en XML. Es la 'Página Amarilla' de los servicios Web es decir un directorio para poder encontrarlos
+- Es un protocolo que permite mover los datos entre aplicaciones y sistemas. Es el mecanismo por medio del cual los servicios Web san invocados e interactúan
+- Es un formato universal para representar los datos
+
+UDDI:
+1
+- Lenguaje que permite publicar, encontrar y usar los Servicios Web basados en XML. Es la 'Página Amarilla' de los servicios Web es decir un directorio para poder encontrarlos
+- Es un protocolo que permite mover los datos entre aplicaciones y sistemas. Es el mecanismo por medio del cual los servicios Web san invocados e interactúan
+- Es un formato universal para representar los datos
+
+Cloud computing:
+2
+- Equipos comparten recursos conectados en Internet
+- Ofrece servicios a través de Internet
+- Lenguaje por medio del cual un servicio Web describe entre otras cosas qué hace o qué funcionalidad implementa
+
+WSDL:
+3
+- Equipos comparten recursos conectados en Internet
+- Ofrece servicios a través de Internet
+- Lenguaje por medio del cual un servicio Web describe entre otras cosas qué hace o qué funcionalidad implementa
+
+Grid computing:
+1
+- Equipos comparten recursos conectados en Internet
+- Ofrece servicios a través de Internet
+- Lenguaje por medio del cual un servicio Web describe entre otras cosas qué hace o qué funcionalidad implementa
+
+Vista:
+1
+- Es cómo se muestra el objeto en la pantalla
+- Es lo que define el comportamiento del objeto
+- Un patrón de diseño de software
+
+Controlador:
+2
+- Es cómo se muestra el objeto en la pantalla
+- Es lo que define el comportamiento del objeto
+- Un patrón de diseño de software
+
+Modelo Vista Controlador, MVC:
+3
+- Es cómo se muestra el objeto en la pantalla
+- Es lo que define el comportamiento del objeto
+- Un patrón de diseño de software
+
+Duración de la reunión de planificación del Sprint:
+2
+- Hardware, software de aplicación y documentación
+- 8 horas para Sprint mensuales
+- Un marco en el que se desarrollan productos complejos en entornos complejos
+
+La interfaz de usuario de un producto de software comprende:
+1
+- Hardware, software de aplicación y documentación
+- 8 horas para Sprint mensuales
+- Un marco en el que se desarrollan productos complejos en entornos complejos
+
+Scrum:
+3
+- Hardware, software de aplicación y documentación
+- 8 horas para Sprint mensuales
+- Un marco en el que se desarrollan productos complejos en entornos complejos
+
+En un documento HTML:
+1
+- Head
+- Ayuda a visualizar, modelar, documentar y construir un sistema
+- Prólogo
+
+Modelar:
+2
+- Head
+- Ayuda a visualizar, modelar, documentar y construir un sistema
+- Prólogo
+
+XHTML necesariamente debe empezar por:
+3
+- Head
+- Ayuda a visualizar, modelar, documentar y construir un sistema
+- Prólogo
+
+La elicitación o educción de los requisitos es la fase inicial del proceso de ingeniería de requisitos. Consecuentemente, en esta fase:
+3
+- Para que un proyecto sea exitoso, basta proveer a los desarrolladores los mejores equipos y entregarles un manual con procedimientos
+- Operar en el hardware del equipo y proporcionar y mantener una plataforma para ejecutar software de aplicación. Incluye software que permite desarrollar software
+- Identifican el problema a resolver, los objetivos del sistema y a los involucrados
+
+Software de Sistemas se caracteriza por:
+2
+- Para que un proyecto sea exitoso, basta proveer a los desarrolladores los mejores equipos y entregarles un manual con procedimientos
+- Operar en el hardware del equipo y proporcionar y mantener una plataforma para ejecutar software de aplicación. Incluye software que permite desarrollar software
+- Identifican el problema a resolver, los objetivos del sistema y a los involucrados
+
+Mitos del software:
+1
+- Para que un proyecto sea exitoso, basta proveer a los desarrolladores los mejores equipos y entregarles un manual con procedimientos
+- Operar en el hardware del equipo y proporcionar y mantener una plataforma para ejecutar software de aplicación. Incluye software que permite desarrollar software
+- Identifican el problema a resolver, los objetivos del sistema y a los involucrados
+
+Los requisitos no funcionales:
+3
+- Completo, Correcto, Consistente, Trazable, Modificable, Verificable
+- Identificación, control de cambios, auditorias de configuraciones, generación de informes
+- El sistema deberá tener un tiempo de respuesta menor a un segundo
+
+Tareas de en proceso de desarrollo de software:
+2
+- Completo, Correcto, Consistente, Trazable, Modificable, Verificable
+- Identificación, control de cambios, auditorias de configuraciones, generación de informes
+- El sistema deberá tener un tiempo de respuesta menor a un segundo
+
+Un buen documento de Especificación de Requisitos debe ser:
+1
+- Completo, Correcto, Consistente, Trazable, Modificable, Verificable
+- Identificación, control de cambios, auditorias de configuraciones, generación de informes
+- El sistema deberá tener un tiempo de respuesta menor a un segundo
+
+En un enfoque de auditoria basado en el riesgo un Auditor de Si debería primero realizar:
+3
+- Ubicarlo a 45 km de distancia a pesar que su costo puede ser alto
+- Adquirir información confidencial de forma fraudulenta del mismo usuario
+- Una evaluación del riesgo inherente
+
+El phishing consiste en:
+2
+- Ubicarlo a 45 km de distancia a pesar que su costo puede ser alto
+- Adquirir información confidencial de forma fraudulenta del mismo usuario
+- Una evaluación del riesgo inherente
+
+Mejor ubicación para un sitio de procesamiento alterno:
+1
+- Ubicarlo a 45 km de distancia a pesar que su costo puede ser alto
+- Adquirir información confidencial de forma fraudulenta del mismo usuario
+- Una evaluación del riesgo inherente
+
+Procesamiento de texto natural (natural language processing):
+2
+- Utilizado en la clasificación de correos electrónicos como spam o no spam
+- Utilizado en la traducción automática de idiomas
+
+Aprendizaje automático (machine learning):
+1
+- Utilizado en la clasificación de correos electrónicos como spam o no spam
+- Utilizado en la traducción automática de idiomas
+
+Redes neuronales artificiales:
+1
+- Utilizado en el aprendizaje profundo para extraer características de los datos
+- Utilizado para el almacenamiento y procesamiento escalable de grandes volúmenes de datos
+
+Computación en la nube:
+2
+- Utilizado en el aprendizaje profundo para extraer características de los datos
+- Utilizado para el almacenamiento y procesamiento escalable de grandes volúmenes de datos
+
+Volumen en Inteligencia Artificial:
+1
+- Gran cantidad de datos generados
+- Procesamiento rápido de datos en tiempo real
+- Diversidad de tipos y fuentes de datos
+
+Variedad en Inteligencia Artificial:
+3
+- Gran cantidad de datos generados
+- Procesamiento rápido de datos en tiempo real
+- Diversidad de tipos y fuentes de datos
+
+Velocidad en Inteligencia Artificial:
+2
+- Gran cantidad de datos generados
+- Procesamiento rápido de datos en tiempo real
+- Diversidad de tipos y fuentes de datos
+
+Inteligencia artificial, sistemas de recomendación:
+2
+- Capacidad de operar sin intervención humana utilizando técnicas de inteligencia artificial
+- Sugerir productos o contenido relevante a los usuarios según sus preferencias
+
+Inteligencia artificial, vehículos autónomos:
+1
+- Capacidad de operar sin intervención humana utilizando técnicas de inteligencia artificial
+- Sugerir productos o contenido relevante a los usuarios según sus preferencias
+
+Inteligencia Artificial, aprendizaje no supervisado:
+1
+- Extracción de patrones y relaciones en los datos sin utilizar ejemplos etiquetados
+- Entrenamiento de un modelo utilizando ejemplos etiquetados para predecir valores futuros
+
+Inteligencia Artificial, aprendizaje supervisado:
+2
+- Extracción de patrones y relaciones en los datos sin utilizar ejemplos etiquetados
+- Entrenamiento de un modelo utilizando ejemplos etiquetados para predecir valores futuros
+
+Avances en el diagnóstico médico:
+1
+- Inteligencia artificial
+- BIG DATA
+
+Mejora en la toma de decisiones empresariales:
+2
+- Inteligencia artificial
+- BIG DATA
+
+Análisis de sentimientos en Inteligencia Artificial:
+2
+- Descubrir patrones ocultos y relaciones en grandes conjuntos de datos
+- Evaluar y clasificar las emociones expresadas en textos o comentarios
+
+Minería de datos:
+1
+- Descubrir patrones ocultos y relaciones en grandes conjuntos de datos
+- Evaluar y clasificar las emociones expresadas en textos o comentarios
+
+Técnicas con su aplicación correspondiente, Análisis de imagen:
+2
+- Convertir el habla en texto utilizando técnicas de procesamiento del lenguaje natural
+- Identificar y clasificar objetos o características en imágenes
+
+Técnicas con su aplicación correspondiente, reconocimiento de voz
+1
+- Convertir el habla en texto utilizando técnicas de procesamiento del lenguaje natural
+- Identificar y clasificar objetos o características en imágenes
+
+Privacidad y ética:
+1
+- Inteligencia artificial
+- BIG DATA
+
+Escalabilidad y procesamiento de datos:
+2
+- Inteligencia artificial
+- BIG DATA
+
+En Inteligencia Artificial el aprendizaje no supervisado:
+2
+- Aprender a través de interacciones y retroalimentación para maximizar una recompensa
+- Identificar patrones y relaciones en los datos sin utilizar ejemplos etiquetados
+
+En Inteligencia Artificial el Aprendizaje por refuerzo:
+1
+- Aprender a través de interacciones y retroalimentación para maximizar una recompensa
+- Identificar patrones y relaciones en los datos sin utilizar ejemplos etiquetados
+
+Computación distribuida:
+1
+- Permite el procesamiento de datos en paralelo a través de múltiples nodos o sistemas
+- Se utiliza en el aprendizaje profundo para extraer características y representaciones de los datos
+
+Redes neuronales profundas:
+2
+- Permite el procesamiento de datos en paralelo a través de múltiples nodos o sistemas
+- Se utiliza en el aprendizaje profundo para extraer características y representaciones de los datos
+
+Deep learning:
+2
+- Crear máquinas inteligentes capaces de realizar tareas e interacciones físicas
+- Entrenar redes neuronales con múltiples capara para reconocer patrones complejos
+
+Robótica:
+1
+- Crear máquinas inteligentes capaces de realizar tareas e interacciones físicas
+- Entrenar redes neuronales con múltiples capara para reconocer patrones complejos
+
+Tipos de datos en BIG DATA No estructurados:
+1
+- Videos, documentos
+- XML, JSON
+- Tablas
+
+Tipos de datos en BIG DATA estructurados:
+3
+- Videos, documentos
+- XML, JSON
+- Tablas
+
+Tipos de datos en BIG DATA semiestructurados:
+2
+- Videos, documentos
+- XML, JSON
+- Tablas
+
+En Python existe la librería Matplotlib:
+1
+- Permite la creación de figuras y gráficos de calidad mediante el uso de Python
+- Proporciona un alto rendimiento para manipular (Unir, dividir, modificar) grandes conjuntos de datos
+
+En Python existe la librería Pandas:
+2
+- Permite la creación de figuras y gráficos de calidad mediante el uso de Python
+- Proporciona un alto rendimiento para manipular (Unir, dividir, modificar) grandes conjuntos de datos
+
+Machine Learning:
+2
+- Es un subdominio del Machine Learning que resuelve el problema de las técnicas de representation Learning introduciendo representaciones que se expresan en términos de otras representaciones más simples
+- Es un subdominio de la IA que proporciona a los sistemas la capacidad de aprender y mejorar automáticamente a partir de la experiencia sin ser explícitamente programados para ello
+
+Deep Learning:
+1
+- Es un subdominio del Machine Learning que resuelve el problema de las técnicas de representation Learning introduciendo representaciones que se expresan en términos de otras representaciones más simples
+- Es un subdominio de la IA que proporciona a los sistemas la capacidad de aprender y mejorar automáticamente a partir de la experiencia sin ser explícitamente programados para ello
+
+Red Neuronal Perceptrón:
+1
+- Es un modelo básico de aprendizaje automático supervisado
+- Corresponde con la primera neurona artificial de la historia en 1943
+
+Red Neuronal de McCulloch y Pitts:
+2
+- Es un modelo básico de aprendizaje automático supervisado
+- Corresponde con la primera neurona artificial de la historia en 1943
+
+Red Neuronal Propagación hacia adelante (Forward Propagation):
+1
+- Los valores de salida se calculan a medida que los datos se propagan hacia adelante a través de la red hasta llegar a la capa de salida
+- Estructura de datos utilizada para representar y calcular el flujo de datos en un modelo de aprendizaje automático
+
+Red Neuronal Grafo computacional:
+2
+- Los valores de salida se calculan a medida que los datos se propagan hacia adelante a través de la red hasta llegar a la capa de salida
+- Estructura de datos utilizada para representar y calcular el flujo de datos en un modelo de aprendizaje automático

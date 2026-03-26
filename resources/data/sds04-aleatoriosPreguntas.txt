@@ -1,0 +1,476 @@
+¿Qué característica no es un requisito de un PRNG criptográfico?
+3
+Uniformidad en la distribución estadística
+Independencia entre valores consecutivos
+Predecibilidad del siguiente bit
+Impredecibilidad significativa
+
+¿Cuál es la diferencia fundamental entre un generador realmente aleatorio y un generador pseudoaleatorio?
+1
+Determinismo vs. no determinismo
+Costo de implementación
+Distribución uniforme
+Independencia de valores
+
+¿Cuántos valores consecutivos de salida de un generador congruencial lineal son suficientes para resolver sus parámetros mediante un sistema de ecuaciones lineal?
+4
+2
+3
+5
+4
+
+¿Qué condición deben cumplir los primos p y q en el generador Blum Blum Shub?
+2
+p ≡ q ≡ 1 mod 4
+p ≡ q ≡ 3 mod 4
+p = 2q + 1
+p y q deben ser consecutivos
+
+¿Para romper un LFSR de n bits usando el algoritmo de Berlekamp–Massey, cuántos bits de secuencia se necesitan como mínimo?
+3
+n bits
+2ⁿ bits
+2 n bits
+n² bits
+
+¿En qué modo de cifrado de bloque NO se suele basar un PRNG criptográfico?
+2
+CTR
+CBC
+OFB
+Ambos CTR y OFB
+
+¿Cuál es la principal desventaja práctica del criptosistema seguro de Shannon (one-time pad)?
+1
+Requiere una clave del mismo tamaño que el mensaje
+Es predecible
+No es estadísticamente uniforme
+No permite descifrar dos veces
+
+En Go, ¿qué paquete se debe usar para generar números aleatorios criptográficamente seguros?
+2
+math/rand
+crypto/rand
+crypto/math
+math/crypto
+
+¿Cuál de estas NO es una prueba estadística típica de aleatoriedad?
+4
+Test de frecuencia
+Test de runs
+Test de poker
+Algoritmo MD5
+
+¿Qué test mide la compresibilidad de una secuencia para evaluar su aleatoriedad?
+1
+Test de Maurer
+TestU01
+Contraste chi-cuadrado
+Test de Kolmogórov–Smirnov
+
+¿Cuál de los siguientes generadores es demostrablemente seguro bajo problemas de factorización?
+2
+Congruencial lineal
+Blum Blum Shub
+LFSR
+PCG
+
+¿Qué representa la semilla (seed) de un PRNG?
+1
+El valor inicial que determina la secuencia
+La longitud del periodo
+El resultado de los tests de uniformidad
+El tamaño del registro
+
+¿En cuál de estas aplicaciones NO es imprescindible usar un PRNG criptográfico?
+2
+Generación de tokens de sesión
+Simulaciones Monte Carlo
+Nombres de ficheros impredecibles
+Autenticación recíproca
+
+¿Cuál es la forma más sencilla de demostrar que una secuencia NO es aleatoria?
+1
+Comprimirla y ver si ocupa menos espacio
+Medir su frecuencia de unos y ceros
+Aplicar el test de runs
+Calcular su distribución de poker
+
+¿Qué característica distingue a un generador realmente aleatorio (TRNG) de un PRNG?
+2
+Requiere una semilla
+Se basa en fenómenos físicos no deterministas
+Su periodo es infinito
+Es siempre más rápido
+
+¿Qué propiedad NO es evaluada directamente por el test de runs?
+4
+Longitud de grupos de ceros y unos
+Agregación de bits en bloques de 8
+Uniformidad global
+Indistinguibilidad criptográfica
+
+¿Cuál de estos NO es un método típico de “destilar” entropía en un TRNG?
+3
+Filtrado por hashes iterados
+Medición de ruido térmico
+Multiplicación modular
+Posprocesado de ruido radioactivo
+
+¿Qué valor de semilla se considera especialmente problemático para la mayoría de PRNGs lineales?
+4
+1
+42
+m–1 (módulo menos uno)
+0
+
+En el generador congruencial lineal Xn+1 = (a·Xn + c) mod m, ¿qué parámetro suele fijarse en cero en muchas implementaciones optimizadas?
+2
+m
+c
+X0
+a
+
+¿Cuál de estos tests exige grandes volúmenes de datos y puede tardar días?
+3
+Test de frecuencia
+Test de poker
+TestU01
+Test de Maurer
+
+¿Qué PRNG es “demostrablemente seguro” bajo la conjetura de factorización?
+2
+Congruencial lineal
+Blum Blum Shub
+LFSR simple
+PCG
+
+¿Qué condición deben cumplir p y q en Blum Blum Shub?
+2
+p·q ≡ 1 mod 4
+p ≡ q ≡ 3 mod 4
+p y q primos consecutivos
+p = 2q + 1
+
+¿Cuántos valores consecutivos bastan para resolver los parámetros de un LCG clásico?
+4
+2
+3
+5
+4
+
+¿Cuál es el periodo máximo teórico de un LFSR de n celdas?
+1
+2ⁿ–1
+2ⁿ
+n·2ⁿ
+n²
+
+¿Qué algoritmo permite reconstruir la semilla de un LFSR con sólo 2·n bits de salida?
+3
+Algoritmo de Euclides
+TestU01
+Berlekamp–Massey
+Test de Maurer
+
+¿Cuál de estos modos de cifrado de bloque se emplea con más frecuencia como PRNG (modo contador)?
+1
+CTR
+CBC
+ECB
+GCM
+
+¿Qué estándar financiero define un PRNG basado en triple DES?
+2
+FIPS 140
+ANSI X9.17
+NIST 800-90A
+PKCS#11
+
+¿Por qué no sirve usar la hora del sistema como semilla para un PRNG criptográfico?
+3
+No cambia nunca
+No es entropía suficiente
+Es predecible por un atacante
+Rompe la uniformidad
+
+¿Cuál es la ventaja principal de un PRNG sobre un TRNG en aplicaciones de simulación?
+2
+Menor coste físico
+Repetibilidad de la secuencia
+Mayor impredecibilidad
+Período infinito
+
+¿Qué librería de Go genera números pseudoaleatorios NO seguros por defecto?
+1
+math/rand (v1)
+crypto/rand
+math/crypto
+rand/secure
+
+¿Cómo se llama el generador introducido en Go v2 que es más seguro para simulación pero sigue NO criptográfico?
+3
+Xorshift
+Blum Blum Shub
+PCG
+SHA-256 CTR
+
+¿Qué cifrador en flujo simplificado usa Go para math/rand v2?
+4
+Salsa20
+AES-CTR
+RC4
+ChaCha8
+
+¿Cuál de estos NO es un requisito de un PRNG criptográfico?
+3
+Uniformidad
+Impredecibilidad
+Predecibilidad del siguiente bit
+Periodo largo
+
+¿Qué propiedad describe que los bits generados no dependen de los anteriores?
+2
+Retroactividad
+Independencia
+Escalabilidad
+Uniformidad
+
+¿Qué PRNG basado en hash se obtiene encadenando H(0), H(1), H(2), … y concatenando salidas?
+1
+Hash-driven
+Blum Blum Shub
+LCG invertido
+LFSR combinado
+
+¿Qué prueba mide la compresibilidad de una secuencia como indicativo de aleatoriedad?
+1
+Test de Maurer
+Test de frecuencias
+Test de poker
+Test de runs
+
+¿Según Shannon, qué cifrado ofrece seguridad perfecta (one-time pad)?
+2
+Cifrado de bloque en CBC
+XOR con clave del tamaño del mensaje
+Cifrado RSA
+LCG como flujo
+
+¿Por qué un cifrador en flujo se equipara a un PRNG criptográfico?
+3
+Usa aritmética modular
+Genera claves primarias
+Genera un keystream como secuencia pseudoaleatoria
+Es determinista
+
+¿Qué ocurre si cifras datos comprimidos con AES-CTR y luego intentas comprimir de nuevo?
+1
+No se comprimen más
+Se comprimen un poco
+Se generan patrones repetidos
+Falla la descifrabilidad
+
+¿Cuál de estas fuentes de entropía usan los sistemas operativos modernos?
+4
+Hora del sistema
+Frecuencia de refresco de pantalla
+Números primos precalculados
+Pulsaciones de teclado y eventos de red
+
+En Debian, ¿qué generador defectuoso provocó claves RSA inseguras?
+2
+TRNG por ruido térmico
+LCG en vez de un TRNG real
+Blum Blum Shub mal parametrizado
+LFSR con semilla constante
+
+¿Qué aceleración de hardware permite que AES-CTR sea tan rápido como 8 GB/s?
+3
+UEFI Secure Boot
+FPU vectorial
+Instrucciones AES-NI
+Registro de desplazamiento
+
+¿Para qué aplicación NO es necesario un PRNG criptográfico?
+2
+Generar claves de sesión
+Simulaciones Monte Carlo
+Tokens de autenticación
+Identificadores impredecibles
+
+¿Cuál de estos archivos en Linux bloquea cuando el pool de entropía está bajo?
+2
+/dev/urandom
+/dev/random
+/dev/zero
+/dev/null
+
+¿Cuál de estos NO bloquea el proceso aunque el pool esté bajo?
+1
+/dev/urandom
+/dev/random
+/dev/tty
+/dev/full
+
+En Windows, ¿qué función de CryptoAPI se utiliza para generar aleatoriedad segura?
+2
+srand()
+CryptGenRandom()
+GenRandom()
+SecureRandom()
+
+En macOS, ¿qué API se emplea para obtener bytes aleatorios criptográficos?
+3
+arc4random()
+getrandom()
+SecRandomCopyBytes()
+random()
+
+¿Qué instrucción de CPU Intel ofrece acceso hardware a un generador de números aleatorios?
+4
+RDSEED
+CPUID
+RDTSC
+RDRAND
+
+¿Cuál es el riesgo de inicializar un PRNG con time.Now().UnixNano()?
+3
+Produce secuencias demasiado lentas
+Mejora la uniformidad estadística
+La semilla es fácilmente predecible
+Aumenta el periodo del PRNG
+
+¿Qué paquete de Go es más adecuado para simulaciones no criptográficas tras Go 1?
+1
+math/rand v2
+crypto/rand
+rand/safe
+math/crypto
+
+¿Cuál de estas bibliotecas se utiliza como suite rápida de tests estadísticos en lugar de TestU01?
+2
+Dieharder
+PractRand
+TestU01
+ENT
+
+¿Qué suite estadística es más antigua y rigurosa pero lenta?
+3
+PractRand
+Dieharder
+TestU01
+ACML
+
+¿Qué test mide patrones de bytes de 16 bits, similar a una mano de poker?
+2
+Test de runs
+Test de poker
+Test de frecuencia
+Test de Kolmogórov–Smirnov
+
+¿Qué ataque consistía en forzar la generación de claves RSA en Debian, reduciendo la caché de primos?
+3
+Heartbleed
+Shellshock
+Debian OpenSSL RNG Bug
+Meltdown
+
+¿Qué peligro ocurre si varias instancias comparten la misma semilla en un PRNG?
+4
+Acelera la aleatoriedad
+Disminuye la latencia
+Aumenta la uniformidad
+Generan secuencias idénticas
+
+¿Qué componente de los smartphones a veces actúa como TRNG al medir variaciones de tiempo?
+1
+Jitter del reloj de la CPU
+Sensor de huellas
+Módem GSM
+Pantalla táctil
+
+En un benchmark de throughput, ¿qué métrica NO se suele calcular?
+3
+Bytes por segundo
+Latencia de generación
+Entropía por bit
+Variación entre ejecuciones
+
+¿Qué ataque utiliza mediciones de tiempo para inferir bits de semilla de un PRNG?
+2
+Ataque de canal lateral en hardware
+Timing attack en generación de semilla
+SQL injection
+Buffer overflow
+
+¿Qué llamada del sistema en Linux ofrece una interfaz común a /dev/random y /dev/urandom?
+1
+syscall getrandom()
+open("/dev/grandom")
+ioctl RNDGETENTCNT
+/proc/sys/kernel/random
+
+En Go, ¿qué función evita confusión entre math/rand y crypto/rand?
+3
+rand.Read()
+rand.Uint64()
+crypto/rand.Read()
+fmt.Read()
+
+¿Qué sucede si intentas comprimir datos cifrados con un stream cipher?
+2
+Aumenta el tamaño
+No se consigue compresión
+Introduce sesgos
+Mejora la seguridad
+
+¿Cuál de estos factores NO influye directamente en la entropía de /dev/random?
+4
+Pulsaciones de teclado
+Movimiento del ratón
+Tiempo de paquetes de red
+Frecuencia de CPU
+
+¿Qué vector de ataque puede sesgar un TRNG basado en sensores físicos?
+3
+Inyección de fríos
+Inyección de metadatos
+Interferencia electromagnética
+Inyección de SQL
+
+¿Qué estándar financiero define un PRNG basado en triple DES?
+1
+ANSI X9.17
+NIST SP800-90A
+PKCS#11
+FIPS 140-2
+
+¿Qué extensión de RISC-V ofrece hardware RNG similar a RDRAND?
+2
+CSRNG
+Zkrng
+RNGx
+HWENTROPY
+
+¿Cuál es la gran diferencia entre RNG en microcontroladores IoT y en PCs?
+4
+Uso de código abierto
+Tamaño de semilla
+Lenguaje de implementación
+Disponibilidad de hardware TRNG
+
+¿Por qué los smart cards necesitan un PRNG criptográfico interno?
+2
+Para protocolos de autenticación seguros
+Para actualizar firmware
+Para interfaz de usuario
+Para compresión de datos
+
+¿Qué práctica de benchmark puede invalidar resultados debido a paralelismo y scheduling no controlado?
+1
+No fijar la afinidad de CPU y permitir el hyper-threading
+Ejecutar solo una iteración
+Usar /dev/random en lugar de /dev/urandom
+No habilitar AES-NI
+

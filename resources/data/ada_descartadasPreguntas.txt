@@ -1,0 +1,490 @@
+Dada la version restringida del problema del laberinto, ¿se podría modificar la solucion naive de divide y venceras para que obtenga el numero total de caminos diferentes, de cualquier longitud, que conducen a la salida desde el origen?
+2
+- No se puede, puesto que se trata de un nuevo problema que no cumple las condiciones de aplicacion de divide y venceras.
+- Sí, pero puesto que se trata de un nuevo problema, hay que cambiar la recurrencia matematica inicial.
+- No se puede, ya que no se trataría de un problema de optimizacion
+Dada la version general del problema del laberinto, se pretende resolver mediante vuelta atras haciendo uso de un mecanismo de poda basado en la mejor solucion encontrada hasta el momento. ¿Cuando se podaría un nodo?
+1
+- Cuando el valor de su cota optimista supere al valor de la mejor cota pesimistaencontrada hasta el momento.
+- Cuando el valor de su cota optimista supere al valor de su cota pesimista.
+- Cuando el valor de su cota pesimista supere al valor de su cota optimista.
+
+Dado el problema del laberinto con tres movimientos, se desea saber el numero de caminos distintos desde la casilla inicial (1,1) hasta la casilla (n,m) y para ello se aplica un esquema de programacion dinamica. En cuanto a la complejidad temporal, ¿cual es la mejora de la version recursiva con memoizacion frente a la recursiva ingenua que se obtiene a partir del esquema divide y venceras?
+1
+- de una complejidad exponencial que se obtendria con la ingenua se reduciria a polinomica con la de memoizacion
+- de una complejidad cuadratica que se obtendria con la ingenua se reduciria a lineal con la de memoizacion
+- la mejora no esta garantizada puesto que la version recursiva con memoizacion podria ser peor que la obtenida a partir del esquema divide y venceras
+
+Dado el problema del laberinto con tres movimientos, se desea saber el numero de caminos distintos desde la casilla incial (1,1) hasta la casilla (n,m) y para ello se aplica el esquema programacion dinamica para obtener un algoritmo lo mas eficiente posible en cuanto a complejidad temporal y espacial, ¿cuales serian ambas complejidades?
+2
+- temporal promedio[max(n,m)] y espacial promedio[max (n,m)]
+- temporal promedio(n x m) y espacial promedio[min (n,m)]
+- temporal promedio(n x m) y espacial promedio(n x m)
+
+Dada la version general del problema del laberinto, tratamos de completar un nodo cualquiera del arbol de busqueda con el camino que, en caso de existir, obtendríaamos asumiendo solo los tres movimientos de la version restringida. ¿Que obtendríamos en el caso de completar el nodo?
+2
+- Una cota optimista para ese nodo
+- Un nodo hoja del subarbol generado por aquel nodo
+- Nada de interes, puesto que el camino resultante no contemplaría todos los movimientos permitidos.
+
+Dada la version restringida del problema del laberinto, si solo se desea conocer la longitud del camino de salida mas corto, ¿cual es la mejor complejidad temporal y espacial que se puede conseguir si se aplica programacion dinamica? 
+1
+- Temporal Θ(nm) y espacial Θ(mín{n, m})
+- Ninguna de las otras dos opciones es cierta.
+- Temporal Θ(nm) y espacial Θ(nm)
+
+Dada la version general del problema del laberinto ¿Que ocurre si la cota optimista de un nodo resulta ser el valor que se obtiene de una solucion factible pero que no es la mejor en el subarbol generado por ese nodo?
+3
+- Nada especial, las cotas optimistas se corresponden con soluciones factibles que no tienen por que ser las mejores.
+- Que el algoritmo sería mas lento pues se explorarían mas nodos de los necesarios.
+- Que el algoritmo sería incorrecto pues podria descartarse el nodo que conduce a la solucion optima.
+
+Se pretende resolver la version general del problema del laberinto mediante ramificacion y poda. Para obtener la cota optimista de un nodo cualquiera procedemos así: calculamos el numero de casillas que quedan, por la diagonal derecha-abajo, hasta llegar a una pared del laberinto. A ese valor le sumamos el numero de casillas que podrían quedar desde esa pared hasta la salida utilizando unicamente movimientos del tipo abajo o derecha, segun corresponda. ¿Que podemos decir acerca de la cota optimista que se obtendría?
+1
+- Que es una cota optimista correcta y ademas puede obtenerse con complejidad temporal constante
+- Que no sería eficiente con respecto a otras cotas optimistas, ya que su calculo requiere una complejidad temporal que no es constante
+- Que no cumple la condicion para ser una cota optimista correcta. 
+
+Dada la version restringida del problema del laberinto, ¿cuál de las estrategias siguientes proveería de una cota optimista para ramificacion y poda?
+2
+- Suponer que en adelante todas las casillas del laberinto son accesibles
+- Las otras dos estrategias son ambas validas.
+- Suponer que ya no se van a realizar mas movimientos
+
+Dado el problema del laberinto con tres movimientos, se pretende conocer la longitud del camino de salida mas corto. Para ello se aplica el esquema voraz con un criterio de seleccion que consiste en elegir primero el movimiento Este siempre que la casilla sea accesible. Si no lo es se descarta ese movimiento y se prueba con Sureste y por ultimo, si este tampoco es posible, se escoge el movimiento Sur. ¿Que se puede decir del algoritmo obtenido?
+2
+- que en realidad no es un algoritmo voraz pues las decisiones que se toman no deberian reconsiderarse
+- que en realidad no es un algoritmo voraz pues el criterio de seleccion no lo e
+- que es un algoritmo voraz pero sin garantia de solucionar el problema
+
+Con respecto a la tecnica poda con memoria, solo una de las siguientes afirmaciones es cierta. ¿Cual es?
+3
+- No resulta eficaz para resolver la version general del problema del laberinto mediante ramificación y poda.
+- No se puede aplicar para resolver la version restringida del problema del laberinto
+- En una solucion de vuelta atras para la version general del problema del laberinto, sirve también para descartar ciclos.
+
+Estamos resolviendo la version restringida del problema del laberinto. Ya hemos obtenido el almacen de resultados parciales. ¿Con que complejidad temporal podemos obtener un camino de salida de longitud mínima si es que existe?
+2
+- Θ(mn)
+- Θ(m +n) 
+- Ω(mín(n, m)) y O(mn)
+
+Dada la version restringida del problema del laberinto, estamos interesados en obtener, para cada casilla accesible del laberinto, el camino mas corto entre el origen y esa casilla. ¿Que esquema es el mas apropiado en este caso? 
+1
+- La version iterativa de programacion dinamica.
+- Ambas tecnicas resultan equivalentes.
+- Memoizacion
+
+Dada la solución naive de la version restringida del problema del laberinto, en general, ¿cuantas veces se llega al caso base de la recursion?
+1
+- Un valor que puede crecer exponencialmente con el tamano del laberinto.
+- Un valor que a lo sumo es n x m.
+- Solo una
+
+Dado el problema del laberinto con tres movimientos, ¿cual de las estrategias siguientes proveeria de una cota optimista para ramificacion y poda?
+3
+- suponer que ya no se van a realizar mas movimientos
+- suponer que en adelante todas las casillas del laberinto son accesibles
+- las otras dos estrategias son ambas validas
+
+¿Cual es la característica principal de un algoritmo voraz aplicado al problema del laberinto?
+1
+- Toma decisiones locales optimas en cada paso sin considerar el panorama general.
+- Explora exhaustivamente todas las posibles soluciones del laberinto.
+- Utiliza una estrategia basada en estimaciones heurísticas para encontrar la solucion optima
+
+Para resolver la version general del problema de la mochila con n objetos y carga maxima W, hemos escrito un algoritmo de divide y venceras que, sucesivamente, divide el problema en dos subproblemas; cada uno de ellos toma la mitad de los objetos y la mitad de la carga maxima de la mochila. El caso base ocurre cuando solo hay un objeto que se añade a la solucion si cabe en la fraccion de carga maxima que corresponde a ese subproblema, y si no cabe se descarta. Asumiendo que n y W son potencias exactas de 2, ¿que podemos decir de esta solución? 
+3
+- Que, aunque con los resultados de los subproblemas se puede componer la solución del problema original, esta formulacion no mejora la solución estudiada en clase.
+- Que no cumple el teorema de reduccion
+- Que con los resultados de los subproblemas no siempre se puede componer la solucion del problema original
+
+Se pretende resolver la version general del problema del laberinto mediante ramificacion y poda y para ello se usa una estrategia que consiste en priorizar las expansiones de los nodos que contienen un camino explorado mas corto. ¿Que podemos decir del algoritmo resultante?
+3
+- Que la primera hoja a la que se llegue es la solucion del problema y por lo tanto, ya no sera necesario explorar mas nodos de la lista de nodos vivos, aunque no esté vacía.
+- Que el recorrido en el arbol de busqueda sera equivalente a un recorrido por niveles, por lo que no es necesario utilizar una cola de prioridad.
+- Las otras dos opciones son ambas ciertas.
+
+Dado el problema del laberinto con tres movimientos, se desea saber el numero de caminos distintos desde la casilla inicial (1,1) hasta la casilla (n,m) y para ello se aplica un esquema de divide y venceras, ¿Cual seria la recurrencia apropiada para el caso general?
+1
+- nc(n,m) = nc(n - 1,m) + nc(n,m - 1) + nc(n - 1,m - 1)
+- ninguna de las otras dos recurrencias se corresponde con un esquema de divide y venceras
+- nc(n,m) = nc(n - 1,m) * nc(n,m - 1) * nc(n - 1,m - 1)
+
+Dado el problema del laberinto con tres movimientos, ¿se puede aplicar un esquema de programacion dinamica para obtener un camino de salida?
+2
+- no, para garantizar que se encuentra un camino de salida hay que aplicar metodos de busqueda exhaustiva como vuelta atras o ramificacion y poda.
+- si, en caso de existir con este esquema siempre se puede encontrar un camino de salida
+- no, con este esquema se puede conocer el numero total de caminos distintos que conducen a la salida pero no se puede saber la composicion de ninguno de ellos.
+
+¿Cual de los siguientes enfoques es mas eficiente para resolver la version restringida del problema del laberinto?
+2
+- Enfoque voraz
+- Enfoque de programacion dinamica
+- Enfoque de vuelta atras
+
+Se pretende resolver la version general del problema del laberinto mediante un algoritmo de busqueda y enumeracion. Para reducir el numero de nodos explorados, ¿que mecanismo de los relacionados garantiza encontrar la solucion y resulta a priori mas eficaz?
+3
+- Usar una matriz de enteros donde se almacena la longitud del mejor camino encontrado hasta el momento que llega a cada casilla del laberinto. Cada casilla (i, j) de la matriz se inicializa con el valor infinito
+- Usar una matriz de booleanos para descartar caminos que llegan a una casilla ya visitada. Cada casilla (i, j) de la matriz se inicializa con el valor false.
+- Usar una matriz de enteros donde se almacena la longitud del mejor camino encontrado hasta el momento que llega a cada casilla del laberinto. Cada casilla (i, j) de la matriz se inicializa con la solucion de programacion dinamica para la version restringida del problema asumiendo que el destino es (i, j)
+
+¿Como se utiliza la cola de prioridad en el algoritmo de ramificacion y poda para resolver el problema del laberinto?
+2
+- Los nodos se extraen de la cola de prioridad segun se vayan obteniendo
+- Los nodos se agregan a la cola de prioridad segun una estimacion heurística para priorizar los caminos mas prometedores. 
+- Se agregan los nodos a la cola de prioridad en orden aleatorio para explorar todas las posibilidades
+
+Dado el problema del laberinto con tres movimientos, se desea saber el numero de caminos distintos desde la casilla inicial  (1, 1) hasta la casilla (n, m) y para ello se aplica un esquema de programacion dinamica. En cuanto a la complejidad temporal, ¿cual es la mejora de la version recursiva con memoizacion frente a la recursiva ingenua que se obtiene a partir del esquema divide y venceras? 
+2
+- De una complejidad cuadratica que se obtendría con la ingenuase reduciría a lineal con la de memoizacion
+- De una complejidad exponencial que se obtendría con la ingenuase reduciría a polinomica con la de memoizacion
+- La mejora no esta garantizada puesto que la version recursivacon memoizacion podría ser peor que la obtenida a partir delesquema divide y venceras.
+
+Dado el problema del laberinto con tres movimientos, ¿cual de las estrategias siguientes proveería de una cota optimista para ramificacion y poda?
+1
+- Suponer que en adelante todas las casillas del laberinto son accesibles
+- Las otras dos estrategias son ambas validas
+- Suponer que ya no se van a realizar mas movimientos
+
+Dado el problema del laberinto con tres movimientos, se desea saber el número de caminos distintos desde la casilla inicial (1, 1) hasta la casilla(n,m) y para ello se aplica el esquema de programación dinámica paraobtener un algoritmo lo más eficiente posible en cuanto a complejidad temporal y espacial. ¿Cuáles serían ambas complejidades?
+3
+- Temporal Θ(max{n, m}) y espacial Θ(max{n, m})
+- Temporal Θ(n · m) y espacial Θ(n · m)
+- Temporal Θ(n · m) y espacial Θ(min{n, m})
+
+Dado el problema del laberinto con tres movimientos, ¿se puede aplicar un esquema de programacion dinamica para obtener un camino de salida?
+2
+- No, con este esquema se puede conocer el numero total de caminos distintos que conducen a la salida pero no se puede saber la composicion de ninguno de ellos
+- No, para garantizar que se encuentra un camino de salida hay que aplicar metodos de busqueda exhaustiva como vuelta atras o ramificacion y poda
+- Sí, con este esquema siempre se puede encontrar un camino de salida si existe.
+
+Dado el problema del laberinto con tres movimientos, se desea saber el numero de caminos distintos desde la casilla inicial (1,1) hasta la casilla (n, m) y para ello se aplica un esquema de divide y venceras.¿Cual sería la recurrencia apropiada para el caso general?
+1
+- nc(n, m) = nc(n - 1, m) + nc(n, m - 1) + nc(n - 1, m - 1)
+- Ninguna de las otras dos recurrencias es valida.
+- nc(n, m) = nc(n - 1, m) * nc(n, m - 1) * nc(n - 1, m - 1)
+
+Dado el problema del laberinto con tres movimientos, se desea saber el numero de caminos distintos desde la casilla inicial (1,1) hasta la casilla (n,m) y para ello se aplica un esquema de programacion dinamica. En cuanto a la complejidad temporal, ¿cual es la mejora de la version recursiva con memoizacion frente a la recursiva ingenua que se obtiene a partir del esquema divide y venceras?
+2
+- la mejora no esta garantizada puesto que la version recursiva con memoizacion podria ser peor que la obtenida a partir del esquema divide y venceras
+- de una complejidad exponencial que se obtendria con la ingenua se reduciria a polinomica con la de memoizacion
+- de una complejidad cuadratica que se obtendria con la ingenua se reduciria a lineal con la de memoizacion
+
+Dado el problema del laberinto con tres movimientos, se pretende conocer la longitud del camino de salida mas corto. Para ello se aplica el esquema voraz con un criterio de seleccion que consiste en elegir primero el movimiento Este siempre que la casilla sea accesible. Si no lo es se descarta ese movimiento y se prueba con Sureste y por ultimo, si este tampoco es posible, se escoge el movimiento Sur. ¿Que se puede decir del algoritmo obtenido? 
+1
+- que en realidad no es un algoritmo voraz pues el criterio de seleccion no lo es
+- que en realidad no es un algoritmo voraz pues las decisiones que se toman no deberian reconsiderarse
+- que es un algoritmo voraz pero sin garantia de solucionar el problema
+
+Dado el problema del laberinto con tres movimientos, ¿se puede aplicar un esquema de programacion dinamica para obtener un camino de salida?
+2
+- no, para garantizar que se encuentra un camino de salida hay que aplicar metodos de busqueda exhaustiva como vuelta atras o ramificacion y poda.
+- si, en caso de existir con este esquema siempre se puede encontrar un camino de salida
+- no, con este esquema se puede  conocer el numero total de caminos distintos que conducen a la salida pero no se puede saber la composicion de ninguno de ellos.
+
+Dado el problema del laberinto con tres movimientos, se desea saber el numero de caminos distintos desde la casilla inicial (1,1) hasta la casilla (n,m) y para ello se aplica un esquema de divide y venceras, ¿Cual seria la recurrencia apropiada para el caso general?
+3
+- nc(n,m) = nc(n -1,m) * nc(n,m -1) * nc(n -1,m -1)
+- ninguna  de  las  otras  dos  recurrenciasse  corresponde  con  un  esquema  de  divide  y venceras
+- nc(n,m) = nc(n -1,m) + nc(n,m -1) + nc(n -1,m -1)
+
+Dado el problema dellaberinto con tres movimientos, se desea saber el numero de caminos distintos desde la casilla incial (1,1) hasta la casilla (n,m) y para ello se aplica el  esquema  programacion  dinamica  para  obtener  un  algoritmo  lo  mas  eficiente posible  en  cuanto  a  complejidad  temporal  y  espacial,  ¿cuales  serian  ambas complejidades?
+1
+- temporal promedio(n x m) y espacial promedio[min (n,m)]
+- temporal promedio(n x m) y espacial promedio(n x m)
+- temporal promedio[max(n,m)] y espacial promedio[max (n,m)]
+
+Dado  el  problema  del  laberinto  con  tres  movimientos,  ¿cual  de  las  estrategias siguientes proveeria de una cota optimista para ramificacion y poda?
+1
+- las otras dos estrategias son ambas valida
+- suponer que ya no se van a realizar mas movimientos
+- suponer que en adelante todas las casillas del laberinto son accesibles
+
+Se pretende resolver la versión general del problema del laberinto mediante ramificacióny poda y para ello se usa una estrategia que consiste en priorizar las expansiones de losnodos que contienen un camino explorado más corto. ¿Qué podemos decir del algoritmoresultante?
+1
+- Las otras dos opciones son ambas ciertas.
+- Que la primera hoja a la que se llegue es la solución del problema y por lo tanto,ya no será necesario explorar más nodos de la lista de nodos vivos, aunque no esté vacía.
+- Que el recorrido en el árbol de búsqueda será equivalente a un recorrido por niveles,por lo que no es necesario utilizar una cola de prioridad.
+
+Se pretende resolver la versión general del problema del laberinto mediante un algoritmode búsqueda y enumeración. Para reducir el número de nodos explorados, ¿qué mecanismode los relacionados garantiza encontrar la solución y resulta a priori más eficaz?
+2
+- Usar una matriz de enteros donde se almacena la longitud del mejor camino encon-trado hasta el momento que llega a cada casilla del laberinto. Cada casilla (i, j) dela matriz se inicializa con el valor infinito.
+- Usar una matriz de enteros donde se almacena la longitud del mejor camino en-contrado hasta el momento que llega a cada casilla del laberinto. Cada casilla (i, j)de la matriz se inicializa con la solución de programación dinámica para la versiónrestringida del problema asumiendo que el destino es (i, j).
+- Usar una matriz de booleanos para descartar caminos que llegan a una casilla yavisitada. Cada casilla (i, j) de la matriz se inicializa con el valor false.
+
+Dada la versión general del problema del laberinto, se pretende resolver mediante vueltaatrás haciendo uso de un mecanismo de poda basado en la mejor solución encontrada hastael momento. ¿Cuándo se podaría un nodo?
+1
+- Cuando el valor de su cota optimista supere al valor de la mejor cota pesimistaencontrada hasta el momento.
+- Cuando el valor de su cota pesimista supere al valor de su cota optimista.
+- Cuando el valor de su cota optimista supere al valor de su cota pesimista.
+
+Dada la versión restringida del problema del laberinto, estamos interesados en obtener, paracada casilla accesible del laberinto, el camino más corto entre el origen y esa casilla. ¿Quéesquema es el más apropiado en este caso?
+1
+- La versión iterativa de programación dinámica.
+- Memoización.
+- Ambas técnicas resultan equivalentes.
+
+Dada la versión general del problema del laberinto, tratamos de completar un nodo cual-quiera del árbol de búsqueda con el camino que, en caso de existir, obtendríamos asumiendosolo los tres movimientos de la versión restringida. ¿Qué obtendríamos en el caso de completar el nodo?
+1
+- Un nodo hoja del subárbol generado por aquel nodo.
+- Nada de interés, puesto que el camino resultante no contemplaría todos los movi-mientos permitidos.
+- Una cota optimista para ese nodo.
+
+Dada la versión restringida del problema del laberinto, ¿cuál de las estrategias siguientesproveería de una cota optimista para ramificación y poda?
+3
+- Suponer que ya no se van a realizar más movimientos.
+- Suponer que en adelante todas las casillas del laberinto son accesibles.
+- Las otras dos estrategias son ambas válidas.
+
+Con respecto a la técnica poda con memoria, solo una de las siguientes afirmaciones es cierta.¿Cuál es?
+1
+- En una solución de vuelta atrás para la versión general del problema del laberinto,sirve también para descartar ciclos.
+- No resulta eficaz para resolver la versión general del problema del laberinto me-diante ramificación y poda.
+- No se puede aplicar para resolver la versión restringida del problema del laberinto.
+
+Dada la versión general del problema del laberinto ¿Qué ocurre si la cota optimista de unnodo resulta ser el valor que se obtiene de una solución factible pero que no es la mejor enel subárbol generado por ese nodo?
+3
+- Que el algoritmo sería más lento pues se explorarían más nodos de los necesarios.
+- Nada especial, las cotas optimistas se corresponden con soluciones factibles que notienen por qué ser las mejores.
+- Que el algoritmo sería incorrecto pues podría descartarse el nodo que conduce a lasolución óptima.
+
+Dada la solución naive de la versión restringida del problema del laberinto, en general,¿cuántas veces se llega al caso base de la recursión?
+3
+- Un valor que a lo sumo es n · m.
+- Solo una.
+- Un valor que puede crecer exponencialmente con el tamaño del laberinto.
+
+Dada la versión restringida del problema del laberinto, si solo se desea conocer la longituddel camino de salida más corto, ¿cuál es la mejor complejidad temporal y espacial que sepuede conseguir si se aplica programación dinámica?
+1
+- Temporal Θ(nm) y espacial Θ(mín{n,m})
+- Temporal Θ(nm) y espacial Θ(nm)
+- Ninguna de las otras dos opciones es cierta.
+
+¿Cómo se utiliza la cola de prioridad en el algoritmo de ramificación y poda para resolverel problema del laberinto?
+1
+- Los nodos se agregan a la cola de prioridad según una estimación heurística parapriorizar los caminos más prometedores.
+- Se agregan los nodos a la cola de prioridad en orden aleatorio para explorar todaslas posibilidades.
+- Los nodos se extraen de la cola de prioridad según se vayan obteniendo.
+
+Estamos resolviendo la versión restringida del problema del laberinto. Ya hemos obtenidoel almacén de resultados parciales. ¿Con qué complejidad temporal podemos obtener uncamino de salida de longitud mínima si es que existe?
+3
+- Θ(mn)
+- Ω(mín(n, m)) y O(mn)
+- Θ(m+n)
+
+Se pretende resolver la versión general del problema del laberinto mediante ramificacióny poda. Para obtener la cota optimista de un nodo cualquiera procedemos así: calculamosel número de casillas que quedan, por la diagonal derecha–abajo, hasta llegar a una pareddel laberinto. A ese valor le sumamos el número de casillas que podrían quedar desde esapared hasta la salida utilizando únicamente movimientos del tipo abajo o derecha, segúncorresponda. ¿Que podemos decir acerca de la cota optimista que se obtendría?
+2
+- Que no cumple la condición para ser una cota optimista correcta.
+- Que es una cota optimista correcta y además puede obtenerse con complejidad tem-poral constante.
+- Que no sería eficiente con respecto a otras cotas optimistas, ya que su cálculo re-quiere una complejidad temporal que no es constante.
+
+Dada la versión restringida del problema del laberinto, ¿se podría modificar la solución nai-ve de divide y vencerás para que obtenga el número total de caminos diferentes, de cualquierlongitud, que conducen a la salida desde el origen?
+2
+- No se puede, puesto que se trata de un nuevo problema que no cumple las condi-ciones de aplicación de divide y vencerás.
+- Sí, pero puesto que se trata de un nuevo problema, hay que cambiar la recurrenciamatemática inicial.
+- No se puede, ya que no se trataría de un problema de optimización.
+
+¿Cuál de los siguientes enfoques es más eficiente para resolver la versión restringida del problema del laberinto?
+1
+- Enfoque de programación dinámica.
+- Enfoque voraz.
+- Enfoque de vuelta atrás.
+
+¿Cuál es la característica principal de un algoritmo voraz aplicado al problema del laberin-to?
+3
+- Explora exhaustivamente todas las posibles soluciones del laberinto.
+- Utiliza una estrategia basada en estimaciones heurísticas para encontrar la soluciónóptima.
+- Toma decisiones locales óptimas en cada paso sin considerar el panorama general.
+
+¿Que inconveniente presenta la siguiente funcion?```void maze(const Maze &maze, vector< vector< bool > > &visited, Point &currentPoint,size_t currentLength, size_t &currentBestLength) {\n\tif (currentPoint == maze.exit()) {\n\t\tcurrentBestLength = min(currentBestLength, currentLength);\n\t\treturn;\n\t}\n\tfor (auto step : allSteps) {\n\t\tPoint next = currentPoint.next(step);\n\t\tif (maze.is_valid(next) && !visited[next.x()][next.y()] && currentLength <  currentBestLength) {\n\t\t\tvisited[next.x()][next.y()] = true;\n\t\t\tmaze(maze, visited, next, currentLength + 1, bestLength);\n\t\t\tvisited[next.x()][next.y()] = false;\n\t\t}\n\t}\n\treturn;\n}```
+3
+- Que no detecta todos los subproblemas repetidos que pueden aparecer
+- Que la poda basada en la mejor solucion hasta el momento se puede mejorar facilmente
+- Las otras dos opciones son ambas ciertas
+
+La distancia de Manhattan (d) entre dos puntos (x1, y1) y (x2, y2) viene dada por la expresión d = |x1 - x2| + |y1 - y2|. ¿Podría utilizarse como cota optimista para resolver la versión general de problema del laberinto?
+1
+- No, puesto que incumple la condición para ser una cota optimista correcta.
+- Sí, pero hay otros estimadores que se suelen comportar mejor ante este problema.
+- Sí, y además tiene la ventaja de que se puede calcular con complejidad temporal constante.
+
+Dada la versión general del problema del laberinto, se pretende resolver mediante vuelta atrás haciendo uso de un mecanismo de poda basado en la mejor solución encontrada hasta el momento. ¿Cuándo se podaría un nodo?
+1
+- Cuando el valor de su cota optimista supere al valor de la mejor cota pesimista encontrada hasta el momento.
+- Cuando el valor de su cota pesimista supere al valor de su cota optimista.
+- Cuando el valor de su cota optimista supere al valor de su cota pesimista.
+
+Con respecto a la técnica poda con memoria, solo una de las siguientes afirmaciones es cierta. ¿Cuál es?
+3
+- No resulta eficaz para resolver la versión general del problema del laberinto mediante ramificación y poda.
+- No se puede aplicar para resolver la versión restringida del problema del laberinto.
+- En una solución de vuelta atrás para la versión general del problema del laberinto, sirve también para descartar ciclos.
+
+Se pretende resolver la versión general del problema del laberinto mediante ramificación y poda. Para obtener la cota optimista de un nodo cualquiera procedemos así: calculamos el número de casillas que quedan, por la diagonal derecha-abajo, hasta llegar a una pared del laberinto. A ese valor le sumamos el número de casillas que podrían quedar desde esa pared hasta la salida utilizando únicamente movimientos del tipo abajo o derecha, según corresponda. ¿Qué podemos decir acerca de la cota optimista que se obtendría?
+3
+- Que no cumple la condición para ser una cota optimista correcta.
+- Que no sería eficiente con respecto a otras cotas optimistas, ya que su cálculo requiere una complejidad temporal que no es constante.
+- Que es una cota optimista correcta y además puede obtenerse con complejidad temporal constante.
+
+¿Qué inconveniente presenta la siguiente función?```void maze(const Maze &maze, vector<vector<bool>> &visited, Point &currentPoint, size_t currentLength, size_t &currentBestLength) { \n\tif (currentPoint == maze.exit()) { \n\t\tcurrentBestLength = min(currentBestLength, currentLength); \n\t\treturn; \n\t} \n \n\tfor (auto step : allSteps) { \n\t\tPoint next = currentPoint.next(step); \n\t\tif (maze.is_valid(next) && !visited[next.x()][next.y()] && currentLength < currentBestLength) { \n\t\t\tvisited[next.x()][next.y()] = true; \n\t\t\tmaze(maze, visited, next, currentLength + 1, bestLength); \n\t\t\tvisited[next.x()][next.y()] = false; \n\t\t} \n\t} \n\treturn; \n}```
+3
+- Que no detecta todos los subproblemas repetidos que pueden aparecer.
+- Que la poda basada en la mejor solución hasta el momento se puede mejorar fácilmente.
+- Las otras dos opciones son ambas ciertas.
+
+Se pretende resolver la versión general del problema del laberinto mediante ramificación y poda y para ello se usa una estrategia que consiste en priorizar las expansiones de los nodos que contienen un camino explorado más corto. ¿Qué podemos decir del algoritmo resultante?
+3
+- Que la primera hoja a la que se llegue es la solución del problema y por lo tanto, ya no será necesario explorar más nodos de la lista de nodos vivos, aunque no esté vacía.
+- Que el recorrido en el árbol de búsqueda será equivalente a un recorrido por niveles, por lo que no es necesario utilizar una cola de prioridad.
+- Las otras dos opciones son ambas ciertas.
+
+Dada la versión restringida del problema del laberinto, estamos interesados en obtener, para cada casilla accesible del laberinto, el camino más corto entre el origen y esa casilla. ¿Qué esquema es el más apropiado en este caso?
+1
+- La versión iterativa de programación dinámica.
+- Memoización.
+- Ambas técnicas resultan equivalentes.
+
+Dada la versión general del problema del laberinto ¿Qué ocurre si la cota optimista de un nodo resulta ser el valor que se obtiene de una solución factible pero que no es la mejor en el subárbol generado por ese nodo?
+2
+- Nada especial, las cotas optimistas se corresponden con soluciones factibles que no tienen por qué ser las mejores.
+- Que el algoritmo sería incorrecto pues podría descartarse el nodo que conduce a la solución óptima.
+- Que el algoritmo sería más lento pues se explorarían más nodos de los necesarios.
+
+Dada la versión restringida del problema del laberinto, si solo se desea conocer la longitud del camino de salida más corto, ¿cuál es la mejor complejidad temporal y espacial que se puede conseguir si se aplica programación dinámica?
+1
+- Temporal Θ(nm) y espacial Θ(min{n, m})
+- Ninguna de las otras opciones es cierta.
+- Temporal Θ(nm) y espacial Θ(nm)
+
+Dada la versión general del problema del laberinto, tratamos de completar un nodo cualquiera del árbol de búsqueda con el camino que, en caso de existir, obtendríamos asumiendo solo los tres movimientos de la versión restringida. ¿Qué obtendríamos en el caso de completar el nodo?
+2
+- Una cota optimista para ese nodo.
+- Un nodo hoja del subárbol generado por aquel nodo.
+- Nada de interés, puesto que el camino resultante no contemplaría todos los movimientos permitidos.
+
+Dada la versión restringida del problema del laberinto, ¿se podría modificar la solución naive de divide y vencerás para que obtenga el número total de caminos diferentes, de cualquier longitud, que conducen a la salida desde el origen?
+3
+- No se puede, ya que no se trataría de un problema de optimización.
+- No se puede, puesto que se trata de un nuevo problema que no cumple las condiciones de aplicación de divide y vencerás.
+- Sí, pero puesto que se trata de un nuevo problema, hay que cambiar la recurrencia matemática inicial.
+
+Estamos resolviendo la versión restringida del problema del laberinto. Ya hemos obtenido el almacén de resultados parciales. ¿Con qué complejidad temporal podemos obtener un camino de salida de longitud mínima si es que existe?
+1
+- Θ(m + n)
+- Ω(min(n, m)) y O(mn)
+- Θ(mn)
+
+Se pretende resolver la versión general del problema del laberinto mediante un algoritmo de búsqueda y enumeración. Para reducir el número de nodos explorados, ¿qué mecanismo de los relacionados garantiza encontrar la solución y resulta a priori más eficaz?
+3
+- Usar una matriz de booleanos para descartar caminos que llegan a una casilla ya visitada. Cada casilla (i, j) de la matriz se inicializa con el valor false.
+- Usar una matriz de enteros donde se almacena la longitud del mejor camino encontrado hasta el momento que llega a cada casilla del laberinto. Cada casilla (i, j) de la matriz se inicializa con el valor infinito.
+- Usar una matriz de enteros donde se almacena la longitud del mejor camino encontrado hasta el momento que llega a cada casilla del laberinto. Cada casilla (i, j) de la matriz se inicializa con la solución de programación dinámica para la versión restringida del problema asumiendo que el destino es (i, j).
+
+¿Cuál es la característica principal de un algoritmo voraz aplicado al problema del laberinto?
+2
+- Explora exhaustivamente todas las posibles soluciones del laberinto.
+- Toma decisiones locales óptimas en cada paso sin considerar el panorama general.
+- Utiliza una estrategia basada en estimaciones heurísticas para encontrar la solución óptima.
+
+Dada la versión restringida del problema del laberinto, ¿cuál de las estrategias siguientes proveería de una cota optimista para ramificación y poda?
+2
+- Suponer que en adelante todas las casillas del laberinto son accesibles.
+- Las otras dos estrategias son ambas válidas.
+- Suponer que ya no se van a realizar más movimientos.
+
+¿Cuál de los siguientes enfoques es más eficiente para resolver la versión restringida del problema del laberinto?
+2
+- Enfoque voraz.
+- Enfoque de programación dinámica.
+- Enfoque de vuelta atrás.
+
+¿Cómo se utiliza la cola de prioridad en el algoritmo de ramificación y poda para resolver el problema del laberinto?
+2
+- Se agregan los nodos a la cola de prioridad en orden aleatorio para explorar todas las posibilidades.
+- Los nodos se agregan a la cola de prioridad según una estimación heurística para priorizar los caminos más prometedores.
+- Los nodos se extraen de la cola de prioridad según se vayan obteniendo.
+
+Dada la solución naive de la versión restringida del problema del laberinto, en general, ¿cuántas veces se llega al caso base de la recursión?
+2
+- Solo una.
+- Un valor que puede crecer exponencialmente con el tamaño del laberinto.
+- Un valor que a lo sumo es n · m.
+
+Para resolver la versión simplificada del problema del encaminamiento óptimo, se ha diseñado la función met(m, n), que obtiene el mínimo tráfico de la red entre el servidor 0 y el n - 1 colocando, en el sitio más adecuado, m puertas de enlace. Para acelerarla, aplicamos la técnica de memoización. ¿Qué estructura del almacén será la más adecuada?
+1
+- una tabla (dos índices)
+- un vector (un índice)
+- una constante (ningún índice)
+
+Se pretende resolver el problema del encaminamiento óptimo (versión general) mediante ramificación y poda y para ello se hace uso de una cota que consiste en asumir que, independientemente de las puertas ya colocadas, los restantes nodos aún no tratados no van a ser puerta de enlace. ¿Qué podemos decir de esta cota?
+1
+- Que no es cota, ni optimista ni pesimista.
+- Que es una cota optimista.
+- Que es una cota pesimista.
+
+A partir del problema del encaminamiento óptimo (versión simplificada), modificamos la expresión que obtiene el tráfico estimado de la red; ahora es $$ \sum_{i=0}^{n-1} c_i (d_i - d_{p_i})^2 $$ (d_i es la distancia de i al primer servidor del bus; p_i es la puerta de acceso más cercana a i). Disponemos de la nueva función ogw(k, n) que obtiene el mínimo tráfico de la subred colocando solo una puerta de enlace en el lugar apropiado entre el servidor k y el n − 1 (ambos incluidos). Estamos interesados en una función met(m, n) que calcule el mínimo tráfico de la red colocando, en las mejores ubicaciones, m puertas de enlace. Sabiendo que met(1, n) = ogw(0, n), ¿cómo se podría calcular ahora, de forma recursiva, met(m, n), con 1 ≤ m ≤ n?
+1
+- De la misma manera que en el problema original que se ha trabajado en las sesiones de prácticas.
+- No se puede pues, con la modificación planteada, no se cumple la propiedad de subestructura óptima.
+- Como la distancia está elevada al cuadrado, esta función no se puede calcular recursivamente.
+
+Se pretende resolver el problema del encaminamiento óptimo mediante ramificación y poda (versión general) y para ello se implementa la lista de nodos vivos con una pila. ¿qué podemos decir del algoritmo resultante frente a una solución de vuelta atrás?
+3
+- Que para mejorar la solución de vuelta atrás será necesario hacer uso de las cotas pesimistas de los nodos intermedios.
+- Que será más eficiente que la solución de vuelta atrás, tanto en tiempo como en espacio requerido.
+- Que ambos, el de vuelta atrás y el de ramificación y poda, estarían utilizando la misma estrategia de búsqueda.
+
+Se quiere resolver el problema del encaminamiento óptimo (versión simplificada) mediante un algoritmo voraz que sigue la siguiente estrategia: \n\na) suponer que no hay puertas de acceso. \nb) buscar cual es el servidor (que aún no es puerta de acceso) que al hacerlo puerta de acceso produce un tráfico menor. \nc) marcar el servidor encontrado como puerta de acceso. \nd) repetir los dos últimos pasos hasta que se tenga m puertas de acceso.
+1
+- El algoritmo no devuelve en general la solución óptima del problema.
+- El algoritmo no es voraz.
+- El algoritmo siempre devuelve la solución óptima del problema.
+
+Para un problema concreto, ¿puede ser que la técnica de ramificación y poda pode más que la de vuelta atrás pero al final sea más lenta?
+1
+- Sí, puede pasar incluso con implementaciones muy eficientes.
+- No, la que poda más es siempre más rápida.
+- No, a menos que la implementación sea muy ineficiente.
+
+Se quiere resolver el problema del encaminamiento óptimo (versión simplificada) mediante un algoritmo voraz que sigue la siguiente estrategia: \n\na) marcar todos los servidores como puertas de acceso (por tanto, el tráfico será cero). \nb) buscar de qué nodo tenemos que quitar la puerta de acceso para que el aumento de tráfico sea mínimo. \nc) quitar la puerta de acceso encontrada. \nd) repetir los dos últimos pasos hasta que se tenga m puertas de acceso.
+3
+- El algoritmo no es voraz.
+- El algoritmo siempre devuelve la solución óptima del problema.
+- El algoritmo no devuelve en general la solución óptima del problema.
+
+Se pretende resolver la versión general del problema del encaminamiento óptimo mediante la técnica de programación dinámica. ¿Con qué inconveniente nos encontraríamos?
+3
+- Las otras dos opciones son ambas verdaderas.
+- Que el programa resultante solo sería capaz de resolver los casos sencillos.
+- Que no se cumple la propiedad de subestructura óptima.
+
+Dado el problema del encaminamiento óptimo (versión simplificada), la siguiente función pretende encontrar la mejor ubicación de las puertas de enlace haciendo uso del almacén M. ¿Es correcta? \n\nNota: la función pair<int, double> ogw(...) devuelve, respectivamente, la mejor ubicación de una puerta de enlace entre dos nodos; y el tráfico asociado a esa ubicación de la puerta de enlace)```double met_naive(vector<int>* M, const vector<double>* d, const vector<double>* c, int n, int m) \n{ \n\tdouble best_traffic; \n\tint best_gw; \n\tif (m == 1) { \n\t\ttie(best_gw, best_traffic) = ogw(d, c, 0, n); \n\t} else { \n\t\tbest_traffic = numeric_limits<double>::max(); \n\t\tfor (int node = m - 1; node < n; node++) { \n\t\t\tauto [candidate_gw, traffic] = ogw(d, c, node, n); \n\t\t\ttraffic += met_naive(M, d, c, node, m-1); \n\t\t\tif (traffic < best_traffic) { \n\t\t\t\tbest_traffic = traffic; \n\t\t\t\tbest_gw = candidate_gw; \n\t\t\t} \n\t\t} \n\t} \n\tM[n] = best_gw; \n\treturn best_traffic; \n}```
+3
+- Sí, aunque solo resolverá ejemplos sencillos.
+- No, ya que no resuelve todos los subproblemas necesarios.
+- No, puesto que no será posible extraer la mejor ubicación de las puertas a partir del almacén M.
+
+Dado el problema del encaminamiento óptimo (versión general), el valor que se obtiene con el método voraz es ...
+3
+- ... una cota superior para el valor óptimo, pero que nunca coincide con este.
+- ... una cota inferior para el valor óptimo.
+- ... una cota superior para el valor óptimo que a veces coincide con este.
+
+Hemos resuelto el problema del encaminamiento óptimo (versión simplificada) mediante un algoritmo de programación dinámica cuya complejidad espacial ha resultado ser O(n). ¿Qué podemos asegurar de esta solución?
+2
+- Que no es correcta si lo que se pretende es encontrar el valor del tráfico estimado para la mejor disposición de las puertas de enlace.
+- Que no podremos determinar dónde colocar las puertas de enlace.
+- Que no es la más eficiente si lo que se pretende es encontrar, utilizando las técnicas estudiadas durante el curso, el valor del tráfico estimado para la mejor disposición de las puertas de enlace.
+
+Se pretende resolver el problema del encaminamiento óptimo (versión general) mediante ramificación y poda. Si un nodo interno del árbol de búsqueda se completa colocando las restantes puertas de enlace en los servidores con más carga de entre los que quedan por analizar. ¿Qué obtenemos?
+2
+- las otras dos opciones son ambas falsas.
+- Una cota pesimista, es decir, una hoja del árbol de búsqueda situada más abajo que ese nodo interno, en la misma rama.
+- Una cota optimista, es decir, una hoja del árbol de búsqueda situada más abajo que ese nodo interno, en la misma rama.
+
+Teniendo en cuenta que ogw(k, n) obtiene el tráfico estimado si se coloca una sola puerta de enlace entre los nodos k y n - 1, ¿cuál de las siguientes recurrencias es la más apropiada para resolver la versión simplificada del problema del encaminamiento óptimo mediante divide y vencerás?
+1
+- $$ met(m, n) = \begin{cases} ogw(0, n) & \text{si } m = 1 \\ \min_{k \in [m-1,n-1]} (met(m - 1, k) + ogw(k, n)) & \text{si } m > 1 \end{cases}$$
+- $$ met(m, n) = \begin{cases} ogw(0, n) & \text{si } m = 1 \\ \min_{k \in [0,n-1]} (met(m - 1, k) + ogw(k, n)) & \text{si } m > 1 \end{cases}$$
+- $$ met(m, n) = \begin{cases} ogw(0, n) & \text{si } m = 1 \\ \min_{k \in [0,m-1]} (met(m - 1, k) + ogw(k, n)) & \text{si } m > 1 \end{cases}$$

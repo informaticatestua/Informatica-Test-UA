@@ -1,0 +1,244 @@
+Sobre el funcionamiento de una red de difusión es cierto que,
+3
+Los paquetes no precisan incorporar cabeceras de protocolos.
+El uso de la dirección de difusión permite enviar varios paquetes a un solo equipo de la red.
+Es necesario asignar una dirección única a cada equipo de la red.
+La transmisión de un paquete a todos los equipos de la red no necesita el empleo de una cabecera en el paquete.
+
+Si dos equipos (A y B) se encuentran dentro de la misma red de difusión inalámbrica, es cierto que:
+1
+Los equipos A y B pueden observar las transmisiones de los demás equipos de la red.
+Si el equipo A envía un paquete con dirección destino B, sólo el equipo B recibirá el paquete.
+Si el equipo A envía un paquete a una dirección de grupo al que no pertenece B, el equipo B no recibirá el paquete.
+Todas las respuestas anteriores son ciertas.
+
+Sobre el funcionamiento de una red de conmutación de paquetes basada en datagramas es cierto que:
+4
+Cada equipo determina la ruta que seguirán en la red los paquetes que transmita.
+El equipo destinatario de un paquete determina la ruta que seguirá el paquete en la red.
+Los routers de la red determinan el camino de los paquetes en función de la dirección de origen en el paquete.
+Es posible que un paquete pueda circular en un bucle en la red de comunicaciones.
+
+Las redes de conmutación de paquetes por datagramas y circuitos virtuales tienen en común que:
+3
+Ambos tipos de redes presentan el mismo nivel de congestión.
+Las redes de datagramas sufren congestión y las de circuitos virtuales sufren saturación.
+Ambos tipos de redes emplean routers para el encaminamiento de la información.
+Ambos tipos de redes determinan una ruta en la red antes del envío de los paquetes entre un origen y un destino.
+
+¿Qué topología de red precisa de tamaños de paquete mayores para la transmisión de información?
+4
+Malla.
+Árbol.
+Anillo.
+La topología de la red no afecta al tamaño de los paquetes.
+
+Sobre una arquitectura de red con N niveles, es cierto que:
+2
+La capa de nivel N siempre es la capa física.
+Las capas del mismo nivel de la arquitectura se denominan pares.
+Las capas del mismo nivel de la arquitectura se denominan adyacentes.
+Todas las capas de la arquitectura tienen solo una capa adyacente.
+
+Si la capa N de una arquitectura de red envía datos a su capa par, es cierto que:
+2
+Todos los paquetes que genera la capa N siempre incorporan la cabecera de la capa N-1.
+Todos los paquetes que genera la capa N siempre incorporan la cabecera de la capa N.
+Todos los paquetes que genera la capa N siempre incorporan la cabecera de la capa N+1.
+Todas las respuestas anteriores son falsas.
+
+Sobre el funcionamiento de los dispositivos de interconexión es FALSO que:
+4
+Todos tienen un número de capas inferior al número de capas de la arquitectura de red.
+Cada dispositivo emplea diferente número de capas de la arquitectura de red.
+Todos emplean la capa física de la arquitectura de red.
+Todos analizan la cabecera IP para el reenvío de paquetes.
+
+¿Cuántos eventos de entrada puede tener una transición en una máquina de estados finitos?
+2
+Siempre más de un evento de entrada.
+Al menos un evento de entrada.
+No es obligada la existencia de un evento de entrada.
+Un número de eventos de entrada igual al número de eventos de salida de la transición.
+
+Si una señal de pulsos tiene una frecuencia fundamental de 2000 Hz, las 3 primeras componentes frecuenciales tendrán valor:
+1
+2000 Hz, 4000 Hz y 6000 Hz.
+4000 Hz, 6000 Hz y 8000 Hz.
+2000 Hz, 3000 Hz y 4000 Hz.
+2000 Hz, 4000 Hz y 8000 Hz.
+
+Sobre el espectro de frecuencias de una señal de datos es cierto que:
+2
+Representa el conjunto de componentes frecuenciales que pasan por un medio físico.
+Representa la información de una señal en base a sus componentes frecuenciales.
+Las componentes frecuenciales de mayor frecuencia tienen un mayor valor de amplitud.
+Todas las señales de datos tienen la misma amplitud en la segunda componente frecuencial.
+
+Sobre el teorema de Nyquist para la velocidad máxima de transmisión de una señal de datos en un medio, es cierto que:
+4
+Todos los medios físicos presentan la misma velocidad máxima si emplean codificación de 2 niveles.
+Una señal no se propaga por un medio físico si emplea una velocidad superior al teorema de Nyquist.
+El aumento de la relación señal ruido en un medio físico aumenta el valor del teorema de Nyquist.
+Una señal sufre errores si emplea una velocidad superior al valor del teorema de Nyquist.
+
+¿En qué situación se podrá transmitir a mayor velocidad una señal de pulsos de 2 niveles sin que se produzcan errores?
+3
+Medio físico con ancho de banda de 1000 Hz y sin presencia de ruido.
+Medio físico con ancho de banda de 2000 Hz y relación S/N de 1.
+Medio físico con ancho de banda de 2000 Hz y sin presencia de ruido.
+Medio físico con ancho de banda de 1000 Hz y relación S/N de 3.
+
+¿Qué tipo de ruido presente en un cable eléctrico es posible eliminar con un blindado?
+3
+Ruido cruzado.
+Ruido de retardo.
+Ruido de impulso.
+Ruido térmico.
+
+¿En qué tipo de señalización en banda base NO se emplean niveles de tensión para codificar bits?
+4
+Binaria con retorno a cero bipolar.
+Binaria sin retorno a cero unipolar.
+Binaria sin retorno a cero bipolar.
+Manchester.
+
+¿En qué tipo de modulación se consigue menor velocidad de transmisión empleando un mismo ancho de banda?
+3
+QPSK.
+PSK.
+FSK.
+ASK.
+
+¿A qué tipo de modulación le afecta más la presencia de ruido en el medio físico?
+2
+QPSK.
+QAM.
+ASK.
+FSK.
+
+La dispersión intermodal es un fenómeno propio de:
+1
+Las fibras multimodo de índice de salto e índice gradual.
+Las fibras multimodo de índice de salto y fibras monomodo.
+Las fibras monomodo.
+La dispersión intermodal está presente en todos los tipos de fibra óptica.
+
+Las fibras ópticas permiten velocidades de transmisión superiores a los cables eléctricos debido a que:
+2
+Emplean señales de pulsos con más niveles que en las señales eléctricas.
+Pueden combinar con WDM varios haces de luz en una sola fibra óptica.
+Emplean potencias de transmisión mayores que en las señales eléctricas.
+Las fibras ópticas tienen un ancho de banda similar a los cables eléctricos.
+
+Sobre el funcionamiento de la comunicación satelital es cierto que,
+2
+Se emplean APs en los satélites para gestionar el acceso desde tierra.
+Los satélites actúan como repetidores de señales.
+Emplean siempre las mismas frecuencias que las redes Wi-Fi.
+La cobertura de un satélite es la misma en cualquier órbita terrestre.
+
+Sobre el funcionamiento de un protocolo de ventana deslizante con repetición NO selectiva es cierto que:
+4
+Nunca se producen errores en la transmisión de paquetes.
+El tamaño de la ventana del emisor siempre es 1.
+El tamaño de la ventana del receptor siempre es igual a la del emisor.
+A mayor tamaño de la ventana del emisor hay más rechazos de paquetes en el receptor en caso de error.
+
+¿Qué red local del IEEE NO precisa del protocolo LLC para su funcionamiento?
+4
+IEEE 802.3.
+IEEE 802.5.
+IEEE 802.11.
+Todas las redes locales del IEEE emplean el protocolo LLC.
+
+Las redes Ethernet 10BaseT basadas en concentradores se caracterizan por:
+2
+Su extensión está limitada a un solo concentrador donde se conectan todos los equipos.
+Presentan un alto nivel de colisiones cuando aumenta el número de equipos en la red.
+Emplear un solo par de hilos trenzados para transmitir y recibir paquetes.
+Permitir el modo de funcionamiento half-duplex y full-duplex.
+
+El proceso de aprendizaje de la tabla de reenvío en los puentes Ethernet se caracteriza por:
+1
+Emplear la dirección MAC origen en los paquetes Ethernet para construir la tabla de reenvío.
+Emplear la dirección MAC destino en los paquetes Ethernet para construir la tabla de reenvío.
+Un puente sólo dispone en su tabla de reenvío de las direcciones MAC de los segmentos a los que está conectado directamente.
+No es posible reenviar paquetes entre segmentos Ethernet hasta que se completa la tabla de reenvío con todas las direcciones MAC.
+
+Sobre el funcionamiento de los conmutadores Ethernet 100BaseTX es cierto que:
+2
+Un conmutador NO dispone de tabla de reenvío para su funcionamiento.
+Los puertos de un conmutador pueden tener conectado un equipo u otro conmutador.
+Los puertos half-duplex permiten transmitir y recibir paquetes simultáneamente empleando los buffers.
+La transmisión de paquetes Ethernet de difusión provoca colisiones en los puertos full- duplex.
+
+Sobre la tecnología Ethernet 100BaseFX es cierto que:
+3
+Emplea la codificación 8B/10B para la sincronización de señales.
+Emplea la señalización 4D-PAM5 para la transmisión de pulsos de luz.
+Emplea la señalización NRZI para la transmisión de pulsos de luz.
+Emplea la señalización MLT-3 para la transmisión de pulsos de luz.
+
+Las redes Ethernet 40GBase-XX se caracterizan por:
+2
+Transmitir un pulso de luz en una fibra óptica a una velocidad de 40 Gbps.
+Combinar varios pulsos de luz a 10 Gbps en una sola fibra óptica.
+Emplear formatos de paquete Ethernet diferentes del resto de tecnologías Ethernet.
+Emplear conmutadores que permiten puertos en modo half-duplex.
+
+Sobre el funcionamiento de los conmutadores Ethernet VLAN es cierto que:
+4
+Permiten definir diferentes dominios de colisión con direcciones de red IP diferentes.
+Un puerto de acceso permite conectividad con diferentes VLAN.
+Los paquetes de difusión de una VLAN siempre son reenviados a todos los puertos del conmutador.
+El conocimiento de las VLAN existentes en diferentes conmutadores se realiza con el protocolo GVRP.
+
+Sobre el funcionamiento de las redes inalámbricas Wi-Fi es cierto que:
+2
+Las colisiones entre equipos se eliminan con el mecanismo RTS/CTS.
+El mecanismo RTS/CTS reduce las colisiones en las redes con APs.
+Cada tecnología Wi-Fi (4,5,6…) emplea frecuencias de transmisión diferentes.
+El aumento de la velocidad de transmisión aumenta la probabilidad de colisiones.
+
+Sobre el mecanismo WPA2-PSK es cierto que:
+2
+Crea una clave de autenticación diferente en cada conexión a la red Wi-Fi.
+Emplea la misma clave de autenticación para todos los usuarios de la red Wi-Fi.
+Emplea exclusivamente el algoritmo de cifrado TKIP.
+Emplea longitudes de clave de cifrado de 256 bits.
+
+Sobre los mecanismos de autenticación WPA2-Enterprise es cierto que:
+3
+El mecanismo EAP/TLS emplea la misma clave de autenticación para todos los usuarios.
+El mecanismo PEAP no emplea certificados de seguridad en el proceso de autenticación.
+Proporciona a cada usuario una clave primaria (MK) de cifrado diferente.
+El mecanismo AES oculta la clave de acceso en el proceso de autenticación.
+
+Sobre la congestión de los routers de Internet es cierto que:
+1
+El uso de CPUs más potentes permite reducir la congestión.
+Paquetes de mayor tamaño sufren más congestión que los de menor tamaño.
+El protocolo UDP permite reducir la congestión en Internet.
+La reducción de la congestión sólo es posible reiniciando los routers.
+
+Sobre los AS (Sistemás Autónomos) en Internet, es cierto que:
+3
+El organismo IAB asigna los identificadores de AS en Europa.
+Los AS emplean el protocolo RIP para conocer el conjunto de redes existentes en Internet.
+Los AS emplean el protocolo OSPF para determinar las rutas óptimas en los routers dentro del AS.
+El router frontera de un AS siempre establece una conexión BGP al router frontera más cercano geográficamente.
+
+¿Qué algoritmo de encaminamiento NO emplea un procedimiento matemático para determinar las rutas?
+1
+BGP.
+RIPv1.
+RIPv2.
+OSPF.
+
+Sobre el funcionamiento del protocolo IPv6 es cierto que,
+4
+Las direcciones IP origen y destino se incluyen en una cabecera de extensión.
+En un paquete IPv6 todas las cabeceras de extensión tienen que estar presentes.
+La cabecera IPv6 tiene el mismo tamaño que la cabecera IPv4.
+El protocolo IPv6 permite definir direcciones IP de multidifusión.

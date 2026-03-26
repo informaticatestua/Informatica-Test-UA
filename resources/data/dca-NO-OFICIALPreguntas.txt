@@ -1,0 +1,3030 @@
+¿Qué define a un equipo de desarrollo eficiente?
+3
+- Cada miembro conoce sus tareas y se evita la sensación de interferencias.
+- La carga de trabajo está repartida equitativamente.
+- Hay una mínima interferencia entre tareas y los roles están bien definidos.
+- Los equipos están jerarquizados según su capacidad.
+
+¿Qué factor reduce la ortogonalidad de un sistema?
+1
+- Un mayor número de programadores implicados en cada cambio.
+- Un diseño modular y bien definido.
+- Una correcta separación entre infraestructura y aplicación.
+- La guía del programador pragmático.
+
+¿Qué tarea realiza un bibliotecario de software en un equipo quirúrgico?
+2
+- Coordina las actividades de análisis y desarrollo.
+- Cataloga e indexa módulos u objetos reutilizables.
+- Reemplaza al ingeniero en jefe en caso necesario.
+- Proporciona soporte técnico a los programadores.
+
+¿Cuál es una característica clave de la estructura descentralizada democrática (DD)?
+3
+- Hay un jefe definido con responsabilidades específicas.
+- La comunicación es mayormente vertical.
+- Las decisiones se toman por consenso.
+- Tiene jerarquías claras entre los miembros.
+
+En la estructura centralizada controlada (CC), ¿quién se encarga de la solución de problemas a alto nivel?
+2
+- Los subgrupos de trabajo.
+- El jefe de equipo.
+- Los ingenieros técnicos.
+- El equipo en pleno a través de consenso.
+
+¿Qué caracteriza al paradigma cerrado en la organización de equipos?
+4
+- Permite innovación, pero tiene problemas con el rendimiento ordenado.
+- Se estructura libremente según la iniciativa de los miembros.
+- Mezcla controles jerárquicos con innovación individual.
+- Posee una jerarquía de autoridad similar al equipo centralizado controlado.
+
+¿Qué paradigma es más adecuado para problemas complejos pero puede no ser tan eficiente?
+3
+- Paradigma cerrado.
+- Paradigma sincronizado.
+- Paradigma abierto.
+- Paradigma aleatorio.
+
+¿Cuál es un punto débil del paradigma sincronizado?
+2
+- La poca modularidad permitida por el problema.
+- La escasa comunicación entre los miembros del equipo.
+- La falta de innovación en los enfoques.
+- La estructura jerárquica rígida.
+
+¿Qué factor es importante considerar al estructurar un equipo de desarrollo?
+1
+- Grado de dificultad del problema.
+- Experiencia del programador principal.
+- Autonomía de los integrantes.
+- Velocidad de entrega del prototipo inicial.
+
+¿Qué nivel de modularidad es preferible al estructurar un equipo?
+3
+- Baja, para permitir una integración constante.
+- Media, para equilibrar comunicación y autonomía.
+- Alta, para dividir tareas de forma eficiente.
+- No es relevante en la mayoría de los casos.
+
+¿Qué característica es esencial en un Dictador Benevolente de Por Vida (BDFL)?
+4
+- Liderar múltiples proyectos simultáneamente.
+- Tener experiencia en la gestión empresarial.
+- Ser conocido en la comunidad de software propietario.
+- Ser el originador del proyecto software.
+
+¿Qué decisión puede tomar un BDFL?
+1
+- Delegar funciones y tomar decisiones finales cuando sea necesario.
+- Abandonar el proyecto sin notificación previa.
+- Asumir el control total del proyecto sin delegar tareas.
+- Redefinir los principios del proyecto en cada iteración.
+
+¿Quién es el creador del núcleo Linux y un ejemplo de BDFL?
+3
+- Guido van Rossum.
+- Mark Shuttleworth.
+- Linus Torvalds.
+- Larry Wall.
+
+¿Qué paradigma puede presentar problemas cuando se requiere un rendimiento ordenado?
+2
+- Paradigma sincronizado.
+- Paradigma aleatorio.
+- Paradigma cerrado.
+- Paradigma abierto.
+
+¿Qué tipo de comunicación es clave en el paradigma abierto?
+1
+- Muy buena comunicación entre los miembros del equipo.
+- Comunicación mínima entre subgrupos.
+- Comunicación vertical definida por jerarquías.
+- Comunicación sólo en las etapas iniciales del proyecto.
+
+¿Qué factor influye en la calidad y fiabilidad de un proyecto?
+4
+- La cantidad de líneas de código.
+- La estructura del equipo de desarrollo.
+- La modularidad del problema.
+- Todos los anteriores.
+
+¿Qué determina el grado de comunicación requerido en un proyecto?
+2
+- La experiencia del jefe de equipo.
+- La naturaleza del problema a resolver.
+- El número de subgrupos involucrados.
+- La fecha de entrega del proyecto.
+
+¿Cuál es un desafío al trabajar en un equipo grande con muchos integrantes?
+3
+- Aumenta la velocidad de desarrollo.
+- Reduce la necesidad de modularidad.
+- Complica la coordinación y comunicación entre miembros.
+- Hace que los plazos de entrega sean más flexibles.
+
+¿Qué es fundamental para estructurar un equipo según el ámbito de vida del proyecto?
+1
+- La duración estimada del equipo en relación al proyecto.
+- El tamaño del equipo asignado.
+- La cantidad de tareas simultáneas.
+- La modularidad del problema.
+
+¿Qué ocurre si el problema permite un bajo nivel de modularidad?
+2
+- Es más fácil dividir las tareas entre los miembros.
+- La solución requiere más comunicación y coordinación.
+- Los equipos pequeños son más efectivos.
+- Se puede evitar la necesidad de subgrupos.
+
+¿Qué aspecto puede influir en la elección de un BDFL?
+3
+- Su historial académico.
+- La cantidad de proyectos en los que ha trabajado.
+- Su personalidad y relación con el equipo.
+- El tamaño del equipo que lidera.
+
+¿Qué BDFL es conocido por crear Python?
+2
+- Mark Shuttleworth.
+- Guido van Rossum.
+- Linus Torvalds.
+- Jeremy Soller.
+
+¿Qué distingue al BDFL de Mark Shuttleworth?
+1
+- Se autodenomina "dictador benevolente de por vida".
+- Es el creador de Linux.
+- Lidera exclusivamente proyectos de código abierto.
+- Se centra en software propietario.
+
+¿Qué rol puede desempeñar un BDFL en un proyecto?
+4
+- Garantizar la innovación en el equipo.
+- Delegar todas las responsabilidades técnicas.
+- Supervisar solo la logística del proyecto.
+- Asegurar que se sigan los principios del proyecto.
+
+¿Qué característica de un BDFL puede variar según el proyecto?
+1
+- Su nivel de implicación en las decisiones diarias.
+- Su habilidad técnica en todos los aspectos del proyecto.
+- Su experiencia previa en proyectos similares.
+- Su capacidad para delegar funciones.
+
+¿Qué se requiere antes de instalar una aplicación?
+3
+- Identificar sus dependencias principales.
+- Generar un entorno virtual para su despliegue.
+- Desarrollarla en un estado instalable y usable.
+- Revisar las herramientas de compilación.
+
+¿Qué es necesario para trabajar en equipo de forma eficiente?
+2
+- Crear ramas independientes por desarrollador.
+- Seguir normas comunes conocidas por todos.
+- Mantener comunicación externa limitada.
+- Evitar la automatización de tareas repetitivas.
+
+¿Qué problema puede surgir si una parte del equipo no funciona bien?
+1
+- El rendimiento de todo el equipo puede verse afectado.
+- Se incrementa la duplicación de tareas.
+- Los subequipos tienden a trabajar de forma aislada.
+- Se reducen los errores en el código.
+
+¿Qué beneficio tiene automatizar acciones en un equipo de desarrollo?
+4
+- Reduce la comunicación necesaria entre subgrupos.
+- Facilita la creación de nuevas ramas de desarrollo.
+- Evita la necesidad de análisis inicial.
+- Asegura la consistencia del trabajo desarrollado.
+
+¿Qué deben evitar los equipos de desarrollo para trabajar eficientemente?
+3
+- Revisar el código de manera simultánea.
+- Usar etiquetas de versión basadas en números.
+- Repeticiones o duplicados de documentación, código y fallos.
+- Desarrollar subproyectos independientes.
+
+¿Qué representa la rama master en un proyecto de software?
+2
+- Un entorno seguro para probar nuevas características.
+- La línea principal de desarrollo antes de ser distribuida.
+- Un registro de cambios realizados en subproyectos.
+- Un área de pruebas para usuarios finales.
+
+¿Qué responsabilidad tiene el gestor de la rama master?
+1
+- Decidir qué elementos se aceptan en ella.
+- Realizar depuraciones y optimizaciones de código.
+- Desarrollar exclusivamente nuevas características.
+- Asegurar que todas las versiones sean estables.
+
+¿Qué puede contener la rama master en un momento dado?
+4
+- Solo código estable y funcional.
+- Versiones finales listas para usuarios.
+- Modificaciones solo revisadas previamente.
+- Código que no funciona del todo bien o contiene errores.
+
+¿Cómo actúa el gestor de la rama master según Linus Torvalds?
+2
+- Desarrolla nuevas funcionalidades.
+- Se comporta más como un integrador que como un desarrollador.
+- Supervisa únicamente las versiones estables.
+- Define las fechas de lanzamiento de nuevas versiones.
+
+¿Qué sucede tras publicar una nueva versión estable (p.e. v1.0.0)?
+3
+- La rama estable se congela y no se realizan cambios.
+- La rama master se elimina para comenzar de nuevo.
+- Se crean nuevas propuestas y se corrigen fallos en ambas ramas.
+- Se fusionan las ramas estable y master automáticamente.
+
+¿Qué utilidad tienen las etiquetas de versión para los usuarios?
+1
+- Identificar qué versión exacta están utilizando.
+- Determinar el estado de la rama master.
+- Conocer qué desarrollador trabajó en el proyecto.
+- Revisar los cambios internos del código.
+
+¿Qué representa el número menor (B) en una etiqueta A.B.C?
+4
+- Cambios importantes en la estructura del código.
+- Un incremento en el número de compilación.
+- La inclusión de correcciones de fallos menores.
+- Si es par, indica una versión estable; si es impar, una versión inestable.
+
+¿Qué indica un incremento en el número mayor (A) de una versión?
+1
+- Cambios significativos en el software.
+- Correcciones menores en el código.
+- Optimización en el rendimiento del sistema.
+- Inclusión de nuevas etiquetas de desarrollo.
+
+¿Qué sucede si el número micro (C) aumenta en una rama estable?
+2
+- Se agregan nuevas funcionalidades experimentales.
+- Representa correcciones de fallos.
+- Indica el inicio de una nueva rama de desarrollo.
+- Cambia la jerarquía de las etiquetas de versión.
+
+¿Qué proyecto se caracteriza por usar 3 dígitos en sus etiquetas de versión?
+3
+- LibrePCB.
+- Firefox.
+- Núcleo Linux.
+- Rust.
+
+¿Qué cambio realizó Linus Torvalds en el número mayor del núcleo Linux en 2015?
+2
+- Cambió de "1.x.y" a "2.x.y".
+- Cambió de "3.x.y" a "4.x.y".
+- Introdujo el concepto de números micro (C).
+- Eliminó el uso de números menores (B).
+
+¿Qué ocurre durante la "ventana temporal" en el desarrollo del núcleo Linux?
+3
+- Se lanza una nueva versión estable del código.
+- Se corrigen los errores detectados en las versiones RC.
+- Se añaden nuevas características al código.
+- Se detiene el desarrollo de nuevas funcionalidades.
+
+¿Cuántas versiones "Release Candidate" (RC) suelen publicarse en el núcleo Linux?
+4
+- 3
+- 5
+- 6
+- 7
+
+¿Qué características comparten Firefox y Rust en sus modelos de versiones?
+1
+- Publican nuevas versiones estables cada pocas semanas.
+- No incluyen versiones beta ni nightly.
+- Solo trabajan con ramas estables.
+- Siguen un modelo de etiquetas de 4 dígitos.
+
+¿Qué ofrece Rustup en el contexto del lenguaje Rust?
+2
+- Una herramienta de depuración avanzada.
+- La posibilidad de elegir la versión de Rust a usar.
+- La gestión de ramas estables en proyectos grandes.
+- Un entorno gráfico para edición de código.
+
+¿Qué es normal durante la fase de desarrollo de un proyecto?
+4
+- Realizar pruebas exclusivamente sobre el código final.
+- Publicar una versión estable antes de la depuración.
+- Optimizar el código para el menor uso de memoria.
+- Encontrar fallos y llevar a cabo procesos de depuración.
+
+¿Qué se busca al compilar y enlazar un proyecto para su distribución final?
+2
+- Hacerlo compatible con múltiples lenguajes de programación.
+- Mejorar la velocidad y/o reducir el consumo de memoria.
+- Añadir soporte para depuración avanzada.
+- Optimizar exclusivamente el diseño del código fuente.
+
+¿Qué requieren los depuradores para funcionar a nivel de código fuente?
+3
+- Una estructura modular en el proyecto.
+- Que el proyecto esté completamente terminado.
+- Opciones especiales de compilación y enlace.
+- Acceso a las versiones nightly del proyecto.
+
+¿Qué herramienta se menciona para simplificar configuraciones en proyectos?
+4
+- Rustup.
+- Git.
+- LibrePCB.
+- CMake.
+
+¿Qué diferencia una versión de depuración de una versión release?
+1
+- La versión de depuración está diseñada para detectar y corregir errores.
+- La versión release consume más memoria pero es más rápida.
+- Las versiones release incluyen herramientas avanzadas de desarrollo.
+- Las versiones de depuración no requieren compilación previa.
+
+¿Qué recomienda el temario sobre los equipos de desarrollo prácticos?
+2
+- Dejar los detalles menores para una etapa posterior.
+- Evitar repeticiones y duplicaciones de código o fallos.
+- Trabajar de manera independiente para mayor eficiencia.
+- Usar etiquetas de versión con números par para todos los proyectos.
+
+¿Qué sucede si la comunicación entre subequipos no es fluida?
+1
+- Afecta negativamente al funcionamiento general del equipo.
+- Mejora la independencia de los desarrolladores.
+- Aumenta la velocidad de implementación.
+- Reduce la duplicación de tareas.
+
+¿Por qué es importante seguir normas comunes dentro del equipo?
+4
+- Para mantener jerarquías claras.
+- Para reducir la cantidad de ramas en el proyecto.
+- Para limitar las discusiones durante el desarrollo.
+- Para facilitar la colaboración y asegurar consistencia.
+
+¿Qué tipo de comunicación debe tener un equipo hacia el exterior?
+3
+- Totalmente abierta y sin restricciones.
+- Limitada a los subequipos responsables.
+- Unificada en términos, formatos y documentos.
+- Exclusiva para la gestión de fallos detectados.
+
+¿Cómo se puede simular el avance de ramas en una práctica individual?
+2
+- Con software de modelado de flujos de trabajo.
+- Creando subdirectorios que contengan el código de cada versión.
+- Generando reportes manuales de los cambios realizados.
+- Fusionando ramas automáticamente al final de la práctica.
+
+¿Qué es un sistema de Bugtracking?
+3
+- Una herramienta para automatizar la codificación de proyectos.
+- Un sistema de control de versiones integrado en el desarrollo.
+- Una aplicación para registrar y gestionar fallos, mejoras y añadidos.
+- Una base de datos que almacena solo errores críticos.
+
+¿Qué componente clave utiliza un sistema de Bugtracking para registrar la información?
+2
+- Un archivo de texto con anotaciones manuales.
+- Una base de datos que guarda toda la información relacionada con los fallos.
+- Un gestor de tareas basado en inteligencia artificial.
+- Un sistema de logs conectado al servidor principal.
+
+¿Qué pueden incluir los avisos de fallo registrados en un sistema de Bugtracking?
+4
+- Solo los detalles sobre cómo reproducir el fallo.
+- La descripción del problema y el responsable del error.
+- Únicamente la gravedad y el estado del fallo.
+- La gravedad, pasos para reproducirlo, usuarios y estado actual del fallo.
+
+¿Qué ventaja tiene un sistema de Bugtracking integrado con el control de versiones?
+1
+- Facilita la conexión entre errores y cambios en el código fuente.
+- Reduce la cantidad de fallos reportados por los usuarios.
+- Elimina la necesidad de etiquetar versiones.
+- Permite evitar errores en tiempo de ejecución.
+
+¿Por qué es importante automatizar el tratamiento de avisos de fallos?
+3
+- Para mantener el control de las versiones estables del software.
+- Para evitar errores relacionados con cambios en el código fuente.
+- Para evitar que los avisos se pierdan, ignoren o queden sin atender.
+- Para integrar los informes de fallos con los sistemas de análisis estático.
+
+¿Qué tipo de error es "minor" según el sistema Debian?
+2
+- Un fallo que afecta a todo el sistema operativo.
+- Un problema trivial que no afecta a la utilidad del paquete.
+- Un fallo severo que requiere atención inmediata.
+- Un error de diseño mayor que es difícil de solucionar.
+
+¿Qué tipo de error incluye peticiones de características nuevas en el sistema Debian?
+3
+- Critical.
+- Grave.
+- Wishlist.
+- Normal.
+
+¿Qué define un error "critical" en el sistema Debian?
+4
+- Un problema menor en la usabilidad del paquete.
+- Una violación de la política interna de desarrollo.
+- Un fallo que afecta a la estabilidad de un módulo del sistema.
+- Un error que causa fallos graves en software no relacionado o pérdida de datos.
+
+¿Qué es un error "serious" según Debian?
+3
+- Un problema que causa agujeros de seguridad críticos.
+- Un fallo que solo afecta al usuario que lo reporta.
+- Una violación severa de la política que impide la publicación del paquete.
+- Un error menor que no requiere atención inmediata.
+
+¿Por qué es importante limitar la cantidad de tipos de errores para los usuarios?
+1
+- Para facilitar la elección al reportar fallos y evitar confusión.
+- Para reducir la cantidad de errores reportados.
+- Para mejorar la comunicación interna en el equipo de desarrollo.
+- Para aumentar la velocidad de resolución de problemas.
+
+¿Cuál es uno de los principales usos de las aplicaciones de Bugtracking?
+3
+- Optimizar el rendimiento del código fuente.
+- Fusionar ramas de desarrollo de manera automática.
+- Almacenar y gestionar los avisos de error de los usuarios.
+- Facilitar la creación de nuevas etiquetas de versión.
+
+¿Qué sucede si un error se cierra con "WONTFIX"?
+4
+- Se corrige automáticamente en la próxima versión.
+- Se convierte en un nuevo tipo de error "grave".
+- Se prioriza para su análisis en el futuro.
+- Puede generar insatisfacción en los usuarios que lo reportaron.
+
+¿Qué permite conocer el estado de tratamiento de un error en un sistema de Bugtracking?
+2
+- La cantidad de usuarios afectados por el problema.
+- El progreso en la resolución de errores en un instante dado.
+- Los cambios realizados en la rama master.
+- La eficiencia de los desarrolladores en el último ciclo.
+
+¿Qué ventaja tienen los sistemas de Bugtracking integrados en plataformas como GitHub o GitLab?
+1
+- Combinan la gestión de bugs con el control de código fuente en un solo flujo.
+- Aumentan la cantidad de errores reportados.
+- Evitan la necesidad de etiquetar versiones.
+- Reducen la comunicación entre desarrolladores y usuarios.
+
+¿Qué se debe evitar al usar un sistema de Bugtracking?
+3
+- Reportar errores que no sean críticos.
+- Asignar un solo tipo de error a todos los problemas.
+- Dejar sin atender o cerrar fallos sin explicación adecuada.
+- Documentar errores menores en versiones estables.
+
+¿Qué herramienta de Bugtracking fue desarrollada originalmente por Mozilla?
+2
+- Jira.
+- Bugzilla.
+- Trac.
+- Redmine.
+
+¿Qué característica destaca de Trac como sistema de Bugtracking?
+4
+- Es exclusivo para proyectos comerciales.
+- Funciona únicamente en sistemas Linux.
+- Carece de integración con el control de versiones.
+- Es utilizado por proyectos como el sistema operativo Haiku.
+
+¿Qué herramienta de Bugtracking permite una personalización avanzada y es ampliamente utilizada en empresas?
+3
+- Bugzilla.
+- Redmine.
+- Jira.
+- Trac.
+
+¿Qué relación tienen los repositorios como GitHub con los sistemas de Bugtracking?
+2
+- Separan completamente la gestión de errores del control de código.
+- Integran la gestión de bugs directamente como "issues".
+- Eliminan la necesidad de bases de datos para fallos.
+- No permiten registrar mejoras o solicitudes de características.
+
+¿Qué sistemas de Bugtracking destacan por ser integrados en repositorios modernos?
+3
+- Bugzilla y Jira.
+- Trac y Redmine.
+- GitHub y GitLab.
+- Haiku y BeOS.
+
+¿Qué es una ventaja destacada de Bugzilla?
+3
+- Es una herramienta comercial ampliamente utilizada.
+- Ofrece una interfaz simplificada para usuarios no técnicos.
+- Es utilizada en proyectos de código abierto como Linux Kernel, Gnome y KDE.
+- Se integra exclusivamente con plataformas de pago.
+
+¿Qué proyecto ha utilizado Trac como su sistema de gestión de fallos?
+4
+- Mozilla Firefox.
+- Linux Kernel.
+- LibrePCB.
+- Haiku, el sucesor de BeOS.
+
+¿Qué diferencia notable tiene Trac frente a Jira?
+1
+- Trac es más popular entre proyectos de código abierto.
+- Trac está diseñado exclusivamente para grandes empresas.
+- Jira no permite la gestión de bugs en paralelo con el desarrollo.
+- Jira carece de integración con sistemas de control de versiones.
+
+¿Qué herramienta de Bugtracking es conocida por su flexibilidad y facilidad de uso en equipos grandes?
+2
+- Bugzilla.
+- Jira.
+- Redmine.
+- Trac.
+
+¿Qué se menciona como una desventaja potencial de Bugzilla?
+3
+- No permite la integración con control de versiones.
+- Es exclusivamente para desarrolladores avanzados.
+- Puede ser complicado de instalar y configurar.
+- No admite múltiples tipos de errores en un mismo proyecto.
+
+¿Qué beneficio tiene integrar el Bugtracking con repositorios como GitHub?
+2
+- Facilita la creación de ramas estables directamente desde los errores reportados.
+- Permite gestionar bugs y código fuente en el mismo flujo de trabajo.
+- Reduce los errores reportados por usuarios externos.
+- Automatiza completamente la resolución de fallos en el código.
+
+¿Qué nombre reciben los bugs en sistemas como GitHub y GitLab?
+3
+- Issues críticos.
+- Tareas pendientes.
+- Issues.
+- Reportes abiertos.
+
+¿Qué herramienta de Bugtracking tiene una base de usuarios más enfocada en proyectos corporativos?
+4
+- Trac.
+- Redmine.
+- Bugzilla.
+- Jira.
+
+¿Qué aspecto facilita el uso de plataformas como GitHub en la gestión de errores?
+1
+- Los bugs se registran directamente como "issues" en el mismo repositorio.
+- Los errores se corrigen automáticamente al detectar duplicados.
+- Las versiones de desarrollo y estable se sincronizan automáticamente.
+- No requiere la participación de usuarios externos en el proceso de pruebas.
+
+¿Qué característica tienen los sistemas integrados como GitLab?
+2
+- Carecen de herramientas para gestionar "issues".
+- Permiten vincular errores con commits específicos.
+- Se limitan a reportar errores críticos.
+- No admiten solicitudes de características o mejoras.
+
+¿Qué se propone en una práctica grupal relacionada con Bugzilla?
+4
+- Diseñar un nuevo sistema de seguimiento de fallos.
+- Comparar Bugzilla con GitHub.
+- Simular errores en proyectos basados en Trac.
+- Resumir los trucos publicados por Andre Klapper.
+
+¿Qué aspecto se debe comparar entre GitHub y GitLab en una práctica grupal?
+3
+- La cantidad de usuarios soportados por cada sistema.
+- Los lenguajes de programación compatibles.
+- Las ventajas e inconvenientes de la gestión de bugs en cada plataforma.
+- La complejidad de instalación en entornos locales.
+
+¿Qué funcionalidad debe tener un Local Bug Tracker (LBT) creado en una práctica individual?
+1
+- Permitir crear, seguir, cerrar y reabrir avisos de fallos.
+- Ofrecer una base de datos persistente en disco.
+- Integrarse directamente con GitHub o GitLab.
+- Reportar errores automáticamente en sistemas remotos.
+
+¿Qué característica adicional se sugiere añadir a un LBT desarrollado en prácticas?
+4
+- Permitir análisis de código estático integrado.
+- Soporte para la asignación automática de errores.
+- Integración completa con sistemas de control de versiones.
+- Algo inspirado en las funcionalidades de GitHub o GitLab.
+
+¿Qué tipo de usuarios se sugiere implementar en un LBT?
+2
+- Solo usuarios normales con acceso limitado.
+- Usuarios normales y administradores con diferentes permisos.
+- Exclusivamente administradores con control total.
+- Usuarios externos con acceso a configuraciones avanzadas.
+
+¿Por qué es importante facilitar la instalación del software a los usuarios?
+3
+- Para reducir los costos de desarrollo.
+- Para evitar errores de implementación.
+- Para aumentar la probabilidad de uso del software.
+- Para garantizar compatibilidad con sistemas antiguos.
+
+¿Qué problema pueden presentar los instaladores tradicionales de Windows?
+4
+- Son exclusivos para aplicaciones de 32 bits.
+- No permiten la instalación de múltiples programas a la vez.
+- Restringen la instalación en sistemas basados en Unix.
+- No gestionan dependencias ni evitan la sobreescritura de archivos.
+
+¿Qué es el formato TAR y para qué fue diseñado originalmente?
+1
+- Un formato para empaquetar archivos en cintas magnéticas.
+- Un sistema para comprimir datos en sistemas Unix.
+- Una herramienta para gestionar dependencias en software.
+- Un estándar para compilar aplicaciones en Linux.
+
+¿Qué extensión utiliza un archivo TAR comprimido con gzip?
+2
+- .tar.bz
+- .tar.gz o .tgz
+- .tar.xz o .txz
+- .tar
+
+¿Qué limitación tiene el formato TAR para la distribución eficiente de software?
+3
+- Solo es compatible con sistemas Unix.
+- No admite compresión de datos.
+- No gestiona dependencias ni acciones de instalación.
+- Requiere herramientas externas para empaquetar múltiples archivos.
+
+¿Qué estructura interna tiene un archivo en formato DEB?
+3
+- Contiene un único archivo comprimido.
+- Incluye exclusivamente los binarios del programa.
+- Contiene "debian-binary", "control.tar.gz" y "data.tar".
+- Solo almacena metainformación del paquete.
+
+¿Qué información incluye el archivo "control.tar.gz" dentro de un paquete DEB?
+2
+- Los binarios necesarios para ejecutar el programa.
+- La metainformación del paquete.
+- Las dependencias de software externo.
+- Las instrucciones para compilar el código fuente.
+
+¿Qué herramienta se utiliza para construir un archivo DEB a partir de un proyecto?
+4
+- tar
+- alien
+- apt-get
+- dpkg
+
+¿Qué utilidad tiene la aplicación dh_make en el empaquetado DEB?
+1
+- Prepara el empaquetado para un archivo de origen.
+- Realiza automáticamente las dependencias del paquete.
+- Genera las claves de firma del paquete.
+- Convierte archivos .rpm a .deb.
+
+¿Qué archivo dentro del directorio "debian" contiene el historial de cambios del paquete?
+3
+- control
+- rules
+- changelog
+- copyright
+
+¿Qué distribuciones suelen utilizar el formato RPM?
+2
+- Debian y Ubuntu.
+- Red Hat, Fedora y SuSE.
+- Arch Linux y Manjaro.
+- Gentoo y Slackware.
+
+¿Qué herramienta permite convertir entre formatos de paquetes como DEB y RPM?
+1
+- alien
+- dpkg
+- apt
+- tar
+
+¿Qué comando convierte un archivo .deb a .rpm utilizando alien?
+3
+- alien -t
+- alien -d
+- alien -r
+- alien -x
+
+¿Qué opción de alien intenta convertir los scripts de instalación/desinstalación?
+2
+- -r
+- -c
+- -d
+- -t
+
+¿Qué ventaja ofrece alien en la distribución de software?
+4
+- Genera paquetes .deb automáticamente.
+- Permite gestionar dependencias de manera nativa.
+- Simplifica el desarrollo de binarios multiplataforma.
+- Facilita la conversión de paquetes entre formatos como DEB, RPM y TGZ.
+
+¿Qué pasos básicos se realizan al "debianizar" un proyecto?
+2
+- Crear un archivo TAR y compilarlo directamente.
+- Preparar un archivo DEB con dh_make, añadir scripts y convertir a otros formatos.
+- Generar un archivo RPM y convertirlo a TGZ con alien.
+- Diseñar un script Makefile e integrarlo con dpkg.
+
+¿Qué se busca al añadir scripts pre|post al empaquetado de un proyecto?
+3
+- Reducir el tamaño del paquete generado.
+- Aumentar la compatibilidad con sistemas antiguos.
+- Ejecutar acciones específicas durante la instalación/desinstalación.
+- Crear versiones alternativas del mismo paquete.
+
+¿Qué sistemas modernos de paquetería se mencionan como alternativas a DEB y RPM?
+4
+- Snap y Alien.
+- AppImage y dpkg.
+- Flatpak y dh_make.
+- Flatpak, Snap, AppImage y Nix.
+
+¿Qué ventaja ofrece Flatpak respecto a sistemas tradicionales como DEB?
+1
+- Permite ejecutar aplicaciones en entornos aislados (sandboxing).
+- Optimiza la velocidad de instalación en sistemas Unix.
+- Reduce el uso de dependencias externas.
+- Es compatible exclusivamente con sistemas Red Hat.
+
+¿Qué característica destaca de AppImage como formato de distribución?
+2
+- Solo es compatible con sistemas Debian.
+- No requiere instalación, las aplicaciones son portátiles.
+- Facilita la integración con sistemas de control de versiones.
+- Automatiza la gestión de dependencias.
+
+¿Qué se recomienda hacer en el trabajo en grupo relacionado con sistemas de paquetes?
+3
+- Crear un archivo TGZ a partir de un proyecto en C++.
+- Desarrollar scripts para convertir paquetes RPM a DEB.
+- Descargar código fuente, generar un DEB y convertirlo a RPM y TGZ.
+- Diseñar un entorno virtual para probar paquetes convertidos.
+
+¿Qué herramienta se utiliza en las prácticas para instalar un paquete DEB generado?
+4
+- alien
+- dpkg-buildpackage
+- dh_make
+- dpkg
+
+¿Qué contenido debe incluir un archivo tgz para entregar una práctica?
+1
+- El archivo DEB generado y otros relacionados con el proyecto.
+- Solo el changelog del proyecto.
+- El código fuente en formato TAR sin compilar.
+- Una descripción del sistema de paquetería utilizado.
+
+¿Qué actividad opcional se sugiere en las prácticas individuales?
+2
+- Crear una herramienta de conversión de formatos DEB a RPM.
+- Utilizar scripts pre|post incluidos en el directorio debian.
+- Convertir automáticamente un paquete Flatpak a Snap.
+- Generar binarios compatibles con múltiples arquitecturas.
+
+¿Qué herramienta facilita la creación de una nueva entrada en el archivo changelog?
+4
+- dpkg
+- alien
+- apt-get
+- dch
+
+¿Qué tipo de archivo es data.tar dentro de un paquete DEB?
+2
+- Un archivo que contiene solo los scripts de instalación.
+- Un archivo que contiene los binarios y archivos a instalar.
+- Un archivo con la descripción detallada del paquete.
+- Un archivo comprimido con las dependencias externas del software.
+
+¿Qué indica la opción -p al usar el comando mkdir en la creación de paquetes?
+3
+- Asigna permisos a los directorios creados.
+- Crea múltiples archivos comprimidos en paralelo.
+- Crea directorios intermedios si no existen.
+- Prepara el directorio para empaquetar directamente.
+
+¿Qué propósito tiene el archivo rules dentro del directorio debian?
+1
+- Contiene las instrucciones para construir el paquete DEB.
+- Guarda información sobre las dependencias del paquete.
+- Sirve para documentar las modificaciones realizadas.
+- Especifica los scripts de instalación/desinstalación.
+
+¿Qué comando se utiliza para compilar un paquete DEB sin firmar los cambios?
+4
+- alien -c
+- fakeroot tar
+- dpkg -i
+- dpkg-buildpackage -rfakeroot -us -uc
+
+¿Qué archivo dentro del directorio debian se utiliza para declarar dependencias del paquete?
+3
+- changelog
+- rules
+- control
+- copyright
+
+¿Cuál es una diferencia principal entre DEB y RPM?
+2
+- DEB no admite scripts de instalación/desinstalación.
+- RPM es utilizado principalmente en distribuciones como Red Hat y Fedora.
+- DEB requiere conversiones adicionales para sistemas basados en Ubuntu.
+- RPM permite ejecutar aplicaciones sin instalación previa.
+
+¿Qué aspecto destaca de Snap frente a DEB y RPM?
+1
+- Proporciona un entorno de ejecución aislado (sandbox).
+- Optimiza el uso de memoria en aplicaciones grandes.
+- Está diseñado exclusivamente para servidores.
+- Reduce el tiempo de compilación del software.
+
+¿Qué diferencia tiene Flatpak respecto a sistemas como AppImage?
+4
+- Flatpak es exclusivo para sistemas Debian.
+- AppImage gestiona automáticamente las dependencias.
+- Flatpak no admite aplicaciones portátiles.
+- Flatpak utiliza un entorno aislado y centralizado para aplicaciones.
+
+¿Qué ventaja aporta Nix Package Manager en comparación con sistemas tradicionales?
+3
+- Simplifica la creación de paquetes para distribuciones basadas en RPM.
+- Integra la gestión de bugs con el empaquetado de software.
+- Permite gestionar versiones y configuraciones aisladas del sistema.
+- Facilita la conversión de paquetes entre formatos.
+
+¿Qué característica de AppImage lo hace único entre los sistemas de paquetería?
+2
+- Automatiza la creación de paquetes multiplataforma.
+- No requiere instalación, las aplicaciones son portátiles.
+- Es compatible exclusivamente con sistemas Linux basados en RPM.
+- Proporciona un entorno de ejecución seguro para cada aplicación.
+
+¿Qué se debe hacer al modificar archivos en el directorio debian de un paquete?
+4
+- Instalar directamente el paquete con dpkg -i.
+- Comprimir los archivos en un nuevo TGZ.
+- Generar un changelog automático con alien.
+- Crear una nueva entrada en el archivo changelog y regenerar el paquete.
+
+¿Qué herramienta se menciona como clave para convertir paquetes en las prácticas grupales?
+3
+- dpkg-buildpackage
+- dh_make
+- alien
+- fakeroot
+
+¿Qué se debe incluir en un archivo postinst en un paquete DEB?
+2
+- La configuración inicial del paquete antes de la instalación.
+- Acciones a realizar después de instalar el paquete.
+- Dependencias necesarias para ejecutar el software.
+- Información sobre los archivos binarios del paquete.
+
+¿Qué sistema de paquetería es adecuado para probar aplicaciones portátiles sin instalación?
+1
+- AppImage
+- RPM
+- DEB
+- Flatpak
+
+¿Qué ventaja tiene convertir un paquete DEB a RPM usando alien?
+3
+- Se eliminan automáticamente dependencias innecesarias.
+- Se optimiza la estructura del paquete para sistemas Debian.
+- Se facilita el uso del software en distribuciones basadas en Red Hat.
+- El paquete generado se integra automáticamente con apt-get.
+
+¿Qué opción debe usarse con alien para convertir un archivo .deb a .tgz?
+1
+- -t
+- -r
+- -d
+- -c
+
+¿Qué información se puede obtener con el comando dpkg -I sobre un paquete DEB?
+2
+- Permisos y propietario del archivo.
+- Detalles del paquete, como descripción, versión y dependencias.
+- Historial de cambios realizados en el paquete.
+- El tiempo estimado de instalación.
+
+¿Qué archivo dentro de un paquete DEB almacena las instrucciones para la desinstalación del software?
+4
+- control
+- rules
+- changelog
+- postrm
+
+¿Qué comando se utiliza para instalar un paquete DEB generado manualmente?
+3
+- alien -d
+- fakeroot dpkg -b
+- dpkg -i
+- apt-get install
+
+¿Qué se debe hacer si se modifica el contenido del archivo control dentro del directorio debian?
+4
+- Ejecutar directamente el paquete con dpkg -i.
+- Comprimir los archivos modificados en un nuevo TAR.
+- Convertir el paquete a formato RPM con alien.
+- Regenerar el archivo DEB con dpkg-buildpackage.
+
+¿Qué utilidad tiene la herramienta fakeroot al generar un paquete DEB?
+2
+- Evita la necesidad de compilar el código fuente.
+- Simula permisos de superusuario para empaquetar el software.
+- Genera scripts de instalación y desinstalación automáticamente.
+- Configura dependencias necesarias para el paquete.
+
+¿Qué herramienta permite automatizar la creación de una nueva entrada en el changelog?
+3
+- alien
+- dpkg
+- dch
+- apt-get
+
+¿Qué opción de dpkg-buildpackage evita la firma del paquete generado?
+4
+- -rfakeroot
+- -d
+- -uc
+- -us
+
+¿Qué indica la extensión .ex en los archivos del directorio debian generados por dh_make?
+1
+- Que son ejemplos que deben ser adaptados antes de usarse.
+- Que contienen las dependencias externas del paquete.
+- Que son binarios generados durante la compilación.
+- Que representan archivos listos para la instalación.
+
+¿Qué archivo generado por dh_make contiene la licencia del software empaquetado?
+2
+- control
+- copyright
+- rules
+- postinst
+
+¿Qué comando convierte un archivo .rpm a .deb utilizando alien?
+3
+- alien -t
+- alien -c
+- alien -d
+- alien -r
+
+¿Qué característica hace destacar a Flatpak frente a otros sistemas de paquetería?
+2
+- Su enfoque en aplicaciones corporativas.
+- El aislamiento (sandbox) de las aplicaciones.
+- La portabilidad sin necesidad de instalación.
+- La optimización para sistemas basados en Ubuntu.
+
+¿Qué sistema de paquetería permite ejecutar aplicaciones sin necesidad de instalación?
+3
+- Snap
+- Flatpak
+- AppImage
+- RPM
+
+¿Qué tipo de dependencias maneja Nix Package Manager para evitar conflictos?
+4
+- Dependencias generales.
+- Dependencias solo para sistemas Debian.
+- Dependencias externas a los binarios.
+- Dependencias aisladas para cada configuración.
+
+¿Qué característica destaca de Snap como sistema de paquetería?
+1
+- Permite actualizaciones automáticas en segundo plano.
+- Elimina la necesidad de scripts pre/post.
+- Facilita la conversión de formatos de paquetes.
+- Es compatible con distribuciones basadas en Red Hat.
+
+¿Qué se recomienda hacer con los archivos de scripts pre/post generados por dh_make?
+4
+- Eliminarlos para evitar conflictos.
+- Usarlos sin modificaciones en el paquete final.
+- Comprimirlos directamente en el paquete TGZ.
+- Modificarlos según las necesidades específicas del proyecto.
+
+¿Qué sistema de paquetería se menciona como especialmente útil para aplicaciones portátiles?
+3
+- RPM
+- Snap
+- AppImage
+- DEB
+
+¿Qué práctica opcional se sugiere al trabajar con sistemas de paquetes?
+2
+- Automatizar la conversión de paquetes DEB a Snap.
+- Usar scripts pre/postinst en el empaquetado.
+- Implementar Nix Package Manager en un proyecto.
+- Desarrollar una aplicación Flatpak desde cero.
+
+¿Qué ventaja tiene convertir un paquete a TGZ después de empaquetarlo en DEB?
+1
+- Permite usar el software en sistemas más antiguos.
+- Optimiza el tamaño del paquete para servidores.
+- Asegura compatibilidad con Snap y Flatpak.
+- Automatiza la creación de versiones adicionales.
+
+¿Qué sistema de paquetería es conocido por su enfoque en la portabilidad y simplicidad?
+3
+- DEB
+- Flatpak
+- AppImage
+- RPM
+
+¿Qué herramienta simplifica el proceso de compilación en proyectos grandes teniendo en cuenta las marcas de tiempo?
+3
+- Ccache
+- Distcc
+- Make
+- Sccache
+
+¿Qué sucede si se usa la opción -k al ejecutar Make?
+2
+- Finaliza inmediatamente ante cualquier error.
+- Continúa la ejecución incluso si hay errores.
+- Genera un archivo de log con los errores detectados.
+- Limpia los archivos intermedios antes de compilar.
+
+¿Qué representa el objetivo clean en un Makefile?
+4
+- Compila los archivos fuente en paralelo.
+- Instala los binarios generados por la compilación.
+- Ejecuta el programa principal del proyecto.
+- Borra los archivos intermedios generados en la compilación.
+
+¿Qué extensión debe tener un archivo que contiene un Makefile?
+3
+- .mk
+- .make
+- No tiene una extensión obligatoria.
+- .conf
+
+¿Qué significa el símbolo # en un Makefile?
+1
+- Indica el comienzo de un comentario.
+- Define una dependencia no satisfecha.
+- Separa objetivos de sus dependencias.
+- Marca una línea de error en el archivo.
+
+¿Qué representa la variable $@ en un Makefile?
+4
+- La lista de dependencias más recientes.
+- La ruta al directorio principal del proyecto.
+- Todas las dependencias del objetivo actual.
+- El nombre del objetivo actual.
+
+¿Qué representa la variable especial $^ en un Makefile?
+3
+- El último objetivo ejecutado.
+- La lista de ficheros limpios.
+- La lista completa de dependencias.
+- Las dependencias más jóvenes que el objetivo actual.
+
+¿Cómo se define un objetivo que no genera un archivo (p.ej., clean) en un Makefile?
+2
+- Usando el prefijo special:
+- Declarando el objetivo como .PHONY.
+- Añadiendo una línea vacía al final.
+- Usando el prefijo virtual:
+
+¿Qué opción de Make permite ejecutar compilaciones en paralelo?
+1
+- -j
+- -k
+- -c
+- -f
+
+¿Cuál es el propósito del objetivo install en un Makefile estándar?
+4
+- Compilar todos los archivos del proyecto.
+- Eliminar archivos intermedios generados.
+- Crear un archivo comprimido con la distribución.
+- Instalar el resultado del proyecto en el sistema.
+
+¿Qué tarea realiza ccache en el proceso de compilación?
+1
+- Cachea los resultados de compilaciones previas para evitar recompilaciones innecesarias.
+- Divide la compilación en módulos ejecutados en paralelo.
+- Transfiere los archivos fuente a un servidor remoto.
+- Reduce el tamaño de los binarios generados.
+
+¿Dónde guarda ccache los resultados de las compilaciones previas?
+3
+- En el directorio de compilación actual.
+- En la carpeta del proyecto principal.
+- En el directorio ~/.ccache/.
+- En un archivo temporal en /tmp.
+
+¿Qué lenguajes de programación soporta ccache actualmente?
+4
+- Solo C y C++.
+- C, Python y Go.
+- C++ y Rust.
+- C, C++, Objective-C y Objective-C++.
+
+¿Qué comando permite borrar toda la caché de ccache?
+2
+- ccache -p
+- ccache -C
+- ccache -s
+- ccache -d
+
+¿Qué ventaja tiene el modo directo de ccache sobre otros modos?
+3
+- Permite compilar proyectos en paralelo.
+- Reduce las dependencias del compilador.
+- Es el más rápido porque no ejecuta el preprocesador.
+- Soporta múltiples compiladores simultáneamente.
+
+¿Qué permite hacer distcc en proyectos de gran volumen?
+3
+- Crear un solo binario optimizado para múltiples arquitecturas.
+- Dividir el código en varios módulos independientes.
+- Distribuir la compilación entre varias máquinas conectadas en red.
+- Reducir el tamaño de los binarios generados.
+
+¿Qué comando inicia el servidor de distcc en un equipo remoto?
+4
+- distcc --client
+- distcc start
+- distcc -p
+- distccd --daemon
+
+¿Qué variable de entorno se utiliza para indicar los servidores disponibles en distcc?
+2
+- DISTCC_NODES
+- DISTCC_HOSTS
+- CCACHE_SERVERS
+- MAKE_HOSTS
+
+¿Qué diferencia hay entre los modos sencillo y bombeo de distcc?
+1
+- En el modo bombeo, el preprocesador se ejecuta de forma remota.
+- En el modo sencillo, se excluyen las cabeceras estándar.
+- El modo sencillo es más rápido que el bombeo.
+- El modo bombeo no soporta archivos #include.
+
+¿Qué herramienta puede usarse junto con distcc para optimizar aún más el tiempo de compilación?
+4
+- Make con la opción -k.
+- Mold para enlazar archivos en paralelo.
+- GNU Parallel.
+- Ccache.
+
+¿Qué problema principal busca resolver mold durante el proceso de enlace?
+2
+- Reducir el tamaño del binario final.
+- Paralelizar el proceso de enlace.
+- Aumentar la velocidad de compilación.
+- Comprimir los binarios generados.
+
+¿Qué comando permite compilar usando distcc y ccache al mismo tiempo?
+4
+- make -j CC=distcc ccache
+- ccache distcc
+- distcc ccache gcc
+- export CCACHE_PREFIX="distcc"
+
+¿Qué función tiene GNU Parallel en el contexto de compilaciones?
+3
+- Gestionar dependencias de los archivos fuente.
+- Cachear compilaciones intermedias.
+- Ejecutar múltiples tareas en paralelo.
+- Distribuir la compilación entre varios servidores.
+
+¿Qué herramienta permite compilar proyectos escritos en múltiples lenguajes como Rust y C++?
+2
+- Ccache.
+- Sccache.
+- Distcc.
+- Mold.
+
+¿Qué tecnología de Clang permite optimizar el enlace en grandes proyectos?
+1
+- ThinLTO.
+- GNU Parallel.
+- Multimake.
+- Prelinked Caches.
+
+¿Qué problema podría surgir al usar Make con la opción -j para ejecutar trabajos en paralelo?
+3
+- Se reducen los tiempos de compilación totales.
+- Las dependencias no se satisfacen correctamente en paralelo.
+- Se producen fallos de compilación si las dependencias no están bien especificadas.
+- Los archivos generados se sobrescriben en directorios distintos.
+
+¿Qué variable en distcc define el orden de preferencia de los servidores?
+4
+- DISTCC_ORDER
+- DISTCC_PRIORITY
+- HOSTS_DISTCC
+- DISTCC_HOSTS
+
+¿Qué efecto tiene aumentar los valores de -jN en Make?
+2
+- Incrementa la calidad de los binarios generados.
+- Permite que más trabajos se ejecuten en paralelo, reduciendo tiempos.
+- Genera múltiples versiones del mismo binario en distintos directorios.
+- Altera las dependencias entre los módulos.
+
+¿Qué comando de ccache permite consultar las estadísticas de la caché?
+3
+- ccache -C
+- ccache -p
+- ccache -s
+- ccache -v
+
+¿Qué archivo en distcc almacena la configuración local del cliente?
+1
+- $HOME/.distcc/hosts
+- /etc/default/distcc
+- $HOME/.ccache/config
+- /usr/local/distcc/settings
+
+¿Qué ventaja tiene Sccache frente a Ccache?
+4
+- Es más rápida en el modo directo.
+- Cachea exclusivamente compilaciones en C y C++.
+- Reduce los tiempos de enlace de los binarios.
+- Soporta múltiples lenguajes y compiladores además de C/C++.
+
+¿Qué diferencia principal existe entre mold y ld como enlazadores?
+3
+- Mold genera binarios más pequeños.
+- Ld soporta más lenguajes de programación.
+- Mold permite paralelizar el proceso de enlace.
+- Ld incluye soporte integrado para distcc.
+
+¿Qué herramienta se utiliza para compilar código distribuido en múltiples máquinas?
+2
+- Sccache.
+- Distcc.
+- GNU Parallel.
+- Mold.
+
+¿Qué optimización clave aporta ThinLTO en Clang?
+4
+- Genera binarios más pequeños al omitir depuradores.
+- Cachea compilaciones previas para evitar redundancias.
+- Divide el código en módulos optimizados para enlace rápido.
+- Permite optimizaciones entre módulos en tiempo de enlace.
+
+¿Qué herramienta combina características de ccache y distcc para la compilación distribuida?
+1
+- Distcc con ccache como prefijo.
+- Mold con opciones de caching.
+- Sccache en modo preprocesador.
+- Make con distcc integrado.
+
+¿Qué ventaja tiene GNU Parallel al ejecutarse con proyectos grandes?
+3
+- Reduce el tiempo de compilación en máquinas individuales.
+- Gestiona dependencias automáticamente.
+- Ejecuta múltiples trabajos en paralelo distribuidos en varias máquinas.
+- Permite compilar binarios en sistemas basados en ARM.
+
+¿Qué herramienta podría usarse como alternativa a distcc para compilación distribuida?
+2
+- Mold.
+- IceCream.
+- ThinLTO.
+- Sccache.
+
+¿Qué tecnología de Clang es adecuada para reducir los tiempos de enlace en proyectos modulares?
+1
+- ThinLTO.
+- GNU Parallel.
+- Multithreaded Linking.
+- Preprocessed Caches.
+
+¿Qué característica destaca de mold frente a otros enlazadores?
+4
+- Genera binarios más pequeños.
+- Es compatible exclusivamente con sistemas Unix.
+- Soporta más lenguajes de programación.
+- Permite paralelizar el proceso de enlace.
+
+¿Qué combinación permite aprovechar tanto la cache de compilaciones como la distribución entre servidores?
+1
+- Usar ccache como prefijo para distcc.
+- Compilar con mold y GNU Parallel.
+- Ejecutar distcc en modo bombeo.
+- Configurar ThinLTO junto con Sccache.
+
+¿Qué se sugiere hacer con Make en las prácticas individuales?
+2
+- Convertir un proyecto en un paquete DEB.
+- Probar con diferentes valores de -jN para observar mejoras de rendimiento.
+- Utilizar Mold para enlazar módulos en paralelo.
+- Cachear compilaciones previas con distcc.
+
+¿Qué herramienta se recomienda configurar en las prácticas para distribuir compilaciones entre dos máquinas?
+3
+- GNU Parallel.
+- Sccache.
+- Distcc.
+- Mold.
+
+¿Qué archivo debe generarse y entregarse en las prácticas del tema 5?
+4
+- Un paquete binario compilado.
+- Un Makefile con varias dependencias.
+- Un archivo comprimido con los binarios generados.
+- Un archivo TGZ con un reporte detallado de tiempos y resultados.
+
+¿Qué configuración debe evitarse al combinar distcc con ccache?
+2
+- Definir ccache como prefijo para distcc.
+- Usar el modo bombeo de distcc.
+- Ejecutar distcc con configuraciones manuales.
+- Cachear compilaciones previas con warnings.
+
+¿Qué práctica opcional se menciona para probar mold como enlazador?
+1
+- Probar tiempos de enlace con mold en comparación con ld o gold.
+- Configurar mold junto con distcc para proyectos distribuidos.
+- Utilizar mold exclusivamente con proyectos en C++.
+- Comparar mold con ThinLTO en Clang.
+
+¿Qué limitación tiene ccache respecto a las opciones de compilación?
+3
+- No soporta proyectos escritos en múltiples lenguajes.
+- Sólo funciona en sistemas basados en Unix.
+- No cachea compilaciones con opciones específicas no soportadas.
+- No permite integrarse con distcc o sccache.
+
+¿Qué problema puede surgir al usar distcc con compiladores diferentes en los servidores?
+2
+- Los archivos fuente se sobrescriben en los servidores más rápidos.
+- Se pueden generar errores debido a diferencias en el ABI entre versiones de compiladores.
+- La configuración de los servidores se sobrescribe al compilar en paralelo.
+- Distcc se bloquea al manejar múltiples solicitudes.
+
+¿Por qué no es recomendable usar el modo bombeo de distcc junto con ccache?
+4
+- Reduce la compatibilidad con sistemas distribuidos.
+- Incrementa los tiempos de preprocesamiento.
+- No permite aprovechar las ventajas del modo directo.
+- Duplica el trabajo del preprocesador, afectando la eficiencia.
+
+¿Qué sucede si las dependencias no están correctamente definidas en un Makefile?
+3
+- La compilación genera errores críticos.
+- Los binarios se generan pero con errores de enlace.
+- Se producen fallos al compilar en paralelo con -j.
+- Los tiempos de compilación se incrementan de forma lineal.
+
+¿Qué herramienta podría dar problemas si no se configura correctamente en sistemas heterogéneos?
+1
+- Distcc.
+- Mold.
+- Ccache.
+- Sccache.
+
+¿Qué combinación de herramientas permite reducir tiempos tanto de compilación como de enlace?
+3
+- Ccache y ThinLTO.
+- Sccache y GNU Parallel.
+- Mold y distcc.
+- Distcc y ld.
+
+¿Qué comando exporta ccache como prefijo para distcc?
+2
+- distcc-prefix=ccache
+- export CCACHE_PREFIX="distcc"
+- ccache-distcc export
+- export DISTCC_PREFIX="ccache"
+
+¿Qué opción de distcc permite especificar los servidores de compilación disponibles?
+4
+- -p
+- -C
+- --hosts
+- Configurar la variable DISTCC_HOSTS.
+
+¿Qué tecnología combina el uso de múltiples compiladores y herramientas de enlace como mold?
+3
+- Sccache.
+- Distcc.
+- GNU Parallel.
+- ThinLTO.
+
+¿Qué problema resuelve mold que no puede ser abordado por ccache?
+2
+- Cachear compilaciones intermedias.
+- Reducir los tiempos de enlace en proyectos grandes.
+- Dividir la compilación en múltiples nodos.
+- Ejecutar procesos de preprocesamiento más rápidos.
+
+¿Cómo se configura el número de trabajos paralelos en distcc al usar Make?
+3
+- A través de la variable DISTCC_WORKERS.
+- Usando la opción -k en Make.
+- Con la opción -jN, donde N es el doble de núcleos disponibles en la red.
+- Configurando los hosts en $HOME/.distcc/settings.
+
+¿Qué comando limpia completamente la caché de compilaciones de ccache?
+2
+- ccache -s
+- ccache -C
+- distcc clean-cache
+- ccache --reset
+
+¿Qué archivo es importante actualizar al cambiar configuraciones de distcc?
+4
+- /etc/distcc/daemon.conf
+- /usr/local/distcc/hosts
+- /etc/default/make.conf
+- $HOME/.distcc/hosts
+
+¿Qué ventaja tiene usar sccache en proyectos con múltiples lenguajes?
+1
+- Soporta más lenguajes y compiladores que ccache.
+- Permite optimizaciones exclusivas para C y C++.
+- Es compatible solo con proyectos distribuidos.
+- Integra enlaces rápidos con mold y ThinLTO.
+
+¿Qué parámetro de Make permite comprobar si las dependencias están correctamente configuradas antes de compilar?
+3
+- -jN
+- -C
+- -n
+- -k
+
+¿Qué sucede si se utilizan servidores con distintas versiones de compilador en distcc?
+3
+- El rendimiento de distcc mejora por la diversidad de versiones.
+- Los binarios generados son incompatibles con el sistema local.
+- Puede haber problemas de ABI, especialmente en C++.
+- La caché de compilaciones se corrompe.
+
+¿Qué configuración mejora el rendimiento al usar distcc con ccache?
+1
+- Usar ccache como prefijo para distcc.
+- Configurar el modo bombeo en distcc.
+- Evitar el uso de archivos #include en el proyecto.
+- Ejecutar ccache y distcc como procesos independientes.
+
+¿Qué herramienta permite verificar las estadísticas de compilaciones distribuidas en distcc?
+2
+- ccache -s
+- distccmon-text
+- distcc -C
+- distcc-stats
+
+¿Qué problema resuelve GNU Parallel en el contexto de compilaciones grandes?
+4
+- Cachea compilaciones para evitar redundancias.
+- Gestiona dependencias de manera automática.
+- Ejecuta múltiples compiladores distribuidos en red.
+- Permite ejecutar tareas independientes en paralelo.
+
+¿Qué tecnología reduce drásticamente los tiempos de enlace en grandes proyectos?
+3
+- Distcc.
+- Ccache.
+- Mold.
+- ThinLTO.
+
+¿Qué se recomienda probar al usar Make con la opción -jN?
+4
+- Ajustar N al número de dependencias definidas.
+- Configurar N como el triple de los núcleos disponibles.
+- Usar N como la suma de CPUs locales y remotas.
+- Incrementar N hasta observar un punto sin mejora sustancial.
+
+¿Qué práctica individual se sugiere para ccache?
+2
+- Probar con proyectos escritos en múltiples lenguajes.
+- Comparar tiempos de compilación con y sin ccache.
+- Usar ccache para cachear procesos de enlace.
+- Configurar ccache con servidores remotos.
+
+¿Qué ajuste es esencial al configurar distcc con múltiples servidores?
+1
+- Ordenar los servidores en DISTCC_HOSTS por velocidad o cercanía.
+- Limitar el número de CPUs usadas por cada servidor.
+- Usar exclusivamente compiladores distintos en cada servidor.
+- Configurar un solo servidor como principal para todas las tareas.
+
+¿Qué archivo debe entregarse al finalizar las prácticas individuales del tema?
+3
+- Un paquete .deb con los resultados generados.
+- Un archivo comprimido con los binarios finales.
+- Un TGZ con un reporte detallado de tiempos y configuraciones.
+- Un archivo PDF con capturas de pantalla del proceso.
+
+¿Qué parámetro se recomienda ajustar al observar fallos al compilar en paralelo con Make?
+2
+- Incrementar N en -jN.
+- Revisar las dependencias en el Makefile.
+- Reducir los núcleos asignados en distcc.
+- Cachear dependencias no resueltas con ccache.
+
+¿Qué modo de ccache es el más rápido en términos de rendimiento?
+3
+- Modo preprocesador.
+- Modo dependencias.
+- Modo directo.
+- Modo caché distribuida.
+
+¿Qué comando de distcc permite iniciar el servidor para aceptar compilaciones?
+2
+- distcc start
+- distccd --daemon
+- distcc-server enable
+- distcc init
+
+¿Qué diferencia principal tiene ThinLTO frente a GNU Parallel?
+4
+- ThinLTO cachea compilaciones previas para reutilizarlas.
+- GNU Parallel distribuye tareas entre servidores remotos.
+- ThinLTO permite trabajar con múltiples lenguajes de programación.
+- ThinLTO optimiza el enlace entre módulos.
+
+¿Qué se debe incluir en la variable DISTCC_HOSTS al configurarla?
+1
+- Las IPs o nombres de los servidores en orden de preferencia.
+- Las rutas absolutas a los compiladores remotos.
+- Los nombres de los binarios generados en el servidor.
+- Los lenguajes soportados por cada servidor.
+
+¿Qué problema puede resolverse al usar mold como enlazador?
+2
+- Reducir el tamaño de los binarios.
+- Disminuir drásticamente los tiempos de enlace.
+- Facilitar la distribución de compilaciones en red.
+- Cachear los binarios para proyectos grandes.
+
+¿Qué herramienta desarrollada por Mozilla es una alternativa a ccache?
+4
+- Distcc.
+- Mold.
+- GNU Parallel.
+- Sccache.
+
+¿Qué comando permite listar los servidores configurados para distcc?
+3
+- distcc -list
+- distcc config
+- distccmon-text
+- ccache -s
+
+¿Qué problema puede surgir al usar distcc con diferentes configuraciones de compilador?
+2
+- Los binarios generados son más grandes de lo esperado.
+- El ABI puede no ser compatible entre máquinas.
+- Distcc no puede distribuir los archivos correctamente.
+- El preprocesador se ejecuta de forma redundante.
+
+¿Qué ventaja aporta mold frente a enlazadores tradicionales como ld?
+4
+- Reduce el tamaño de los binarios generados.
+- Es compatible con proyectos basados en C y Rust.
+- Facilita la cache distribuida entre servidores.
+- Paraleliza el proceso de enlace.
+
+¿Qué archivo permite configurar distcc para ser ejecutado automáticamente en el inicio del sistema?
+3
+- $HOME/.distcc/config
+- /usr/local/bin/distcc-init.conf
+- /etc/default/distcc
+- /var/log/distcc/startup.conf
+
+¿Qué características debe tener un sistema de configuración automática de proyectos?
+4
+- Generar binarios directamente sin dependencias.
+- Permitir configuraciones exclusivas para un sistema operativo.
+- Requerir siempre la instalación de Autotools en el sistema objetivo.
+- Adaptar el proceso de compilación según los resultados de tests previos.
+
+¿Qué ventaja aporta la portabilidad en un proyecto de software?
+3
+- Facilita el uso de recursos de hardware avanzado.
+- Incrementa la velocidad de compilación en paralelo.
+- Permite construir el proyecto en distintos sistemas operativos.
+- Optimiza el tamaño de los binarios generados.
+
+¿Qué herramientas principales componen Autotools?
+2
+- Autoconf y Ninja.
+- Autoconf, Automake y Libtool.
+- Make y CPack.
+- CMake, Autoconf y Meson.
+
+¿Qué herramienta permite generar proyectos/soluciones compatibles con Visual Studio y XCode?
+4
+- Autotools.
+- Automake.
+- Libtool.
+- CMake.
+
+¿Qué backend utiliza Meson por defecto para construir proyectos?
+3
+- CMake.
+- Make.
+- Ninja.
+- Autotools.
+
+¿Qué archivo sirve como entrada para generar el script configure en Autoconf?
+2
+- Makefile.am
+- configure.ac
+- Makefile.in
+- config.h
+
+¿Qué formato tienen los comentarios en un archivo configure.ac?
+1
+- # o dnl.
+- //.
+- /* */.
+- Solo #.
+
+¿Qué macro de Autoconf define el compilador de C++ que se usará en el proyecto?
+3
+- AC_DEFINE.
+- AC_CONFIG_FILES.
+- AC_PROG_CXX.
+- AC_PROG_CC.
+
+¿Qué hace la macro AC_CHECK_FILE(file, act-found, act-not-found) en Autoconf?
+4
+- Define variables de salida basadas en un archivo específico.
+- Verifica si un archivo es ejecutable.
+- Genera el archivo de configuración del proyecto.
+- Comprueba si un archivo existe y ejecuta acciones según el resultado.
+
+¿Qué genera Autoconf al ejecutar la macro AC_OUTPUT?
+2
+- Archivos binarios del proyecto.
+- Los ficheros definidos en AC_CONFIG_FILES.
+- Los ficheros Makefile.am.
+- Configuraciones para Visual Studio.
+
+¿Qué archivo utiliza Automake como entrada para generar Makefile.in?
+3
+- Makefile.
+- Makefile.conf.
+- Makefile.am.
+- config.h.
+
+¿Qué archivo debe crearse obligatoriamente en un proyecto gestionado con Automake al estilo GNU?
+4
+- Makefile.am.
+- configure.ac.
+- config.h.
+- NEWS, README, AUTHORS y ChangeLog.
+
+¿Qué macro permite activar Automake desde un archivo configure.ac?
+1
+- AM_INIT_AUTOMAKE.
+- AC_CONFIG_AUTOMAKE.
+- AUTOMAKE_INIT.
+- AM_CONFIG_FILES.
+
+¿Qué hace el objetivo distcheck generado por Automake?
+3
+- Limpia todos los archivos intermedios del proyecto.
+- Genera binarios optimizados para distribución.
+- Comprueba que el proyecto puede distribuirse y compilarse correctamente.
+- Exporta las dependencias de la configuración.
+
+¿Qué formato puede tener un archivo Makefile.am con múltiples subdirectorios?
+4
+- dirs_SOURCE = src app gui.
+- SUBDIR_OBJECTS = src gui.
+- src_PROGRAMS = [archivos fuente].
+- SUBDIRS = src app gui.
+
+¿Qué archivo principal define la configuración de un proyecto en CMake?
+3
+- Makefile.in.
+- CMakeFile.am.
+- CMakeLists.txt.
+- configure.ac.
+
+¿Qué comando permite generar los Makefiles en un proyecto basado en CMake?
+4
+- cmake-run.
+- autoconf.
+- configure.
+- cmake ..
+
+¿Qué ventaja tiene un "out-source build" en CMake?
+2
+- Permite cachear configuraciones previas.
+- Evita modificar los directorios de código fuente durante la compilación.
+- Genera binarios optimizados por defecto.
+- Simplifica la distribución del proyecto en plataformas embebidas.
+
+¿Qué comando de CMake permite crear un gráfico de dependencias en formato Graphviz?
+1
+- cmake --graphviz.
+- cmake --depgraph.
+- cmake-graph.
+- cmake-dependencies.
+
+¿Qué opción de CMake permite seleccionar el generador que se usará para construir el proyecto?
+3
+- -C.
+- -S.
+- -G.
+- --generator.
+
+¿Qué archivo principal configura un proyecto en Meson?
+2
+- Makefile.am.
+- meson.build.
+- configure.ac.
+- CMakeLists.txt.
+
+¿Qué comando compila un proyecto en Meson usando Ninja?
+4
+- meson build && make.
+- ninja run.
+- meson compile.
+- ninja -C build.
+
+¿Qué característica hace destacar a Meson frente a otras herramientas como Autotools?
+2
+- Su integración con Libtool.
+- Su simplicidad y rapidez en la construcción.
+- La capacidad de trabajar solo con Makefiles.
+- Su exclusividad para sistemas basados en Unix.
+
+¿Qué tarea se solicita en las prácticas individuales sobre CMake y Autotools?
+3
+- Crear un proyecto solo con Makefiles manuales.
+- Configurar Ninja para proyectos multiplataforma.
+- Configurar una práctica con versiones recursivas y no recursivas.
+- Comparar el rendimiento de Meson y Autotools.
+
+¿Qué comando permite añadir un objetivo de distribución en un proyecto con CMake?
+1
+- add_custom_target.
+- add_dist_target.
+- add_distribution.
+- add_package.
+
+¿Qué macro de Autoconf permite comprobar si un compilador soporta una característica específica?
+4
+- AC_CONFIG_HEADER.
+- AC_DEFINE.
+- AC_CHECK_FILE.
+- AC_TRY_COMPILE.
+
+¿Qué hace la macro AC_CHECK_LIB(lib, func, act-found, act-not-found)?
+3
+- Busca un archivo específico dentro de una biblioteca.
+- Define automáticamente una variable de entorno.
+- Verifica si una biblioteca contiene una función específica.
+- Genera un archivo Makefile con la función detectada.
+
+¿Qué archivos genera Automake para cada subdirectorio de un proyecto?
+2
+- Makefile.am.
+- Makefile.in.
+- configure.ac.
+- Makefile.
+
+¿Qué objetivo en Automake genera un archivo comprimido con el código fuente para distribución?
+4
+- distclean.
+- package.
+- clean.
+- dist.
+
+¿Qué herramienta de Autotools permite actualizar automáticamente un configure.ac a la última versión de Autoconf?
+3
+- autoscan.
+- autoreconf.
+- autoupdate.
+- aclocal.
+
+¿Qué archivo genera CMake para definir configuraciones específicas del proyecto?
+4
+- Makefile.in.
+- meson.build.
+- CMakeConfig.txt.
+- config.h.
+
+¿Qué comando permite realizar compilaciones "out-of-source" con CMake?
+2
+- cmake-build.
+- cmake ...
+- cmake-out.
+- cmake-o.
+
+¿Qué variable en CMake controla si el proyecto se compila en modo Debug o Release?
+3
+- CMAKE_DEBUG_MODE.
+- CMAKE_VAR_DEBUG.
+- CMAKE_BUILD_TYPE.
+- CMAKE_RELEASE_MODE.
+
+¿Qué ventaja tiene el uso de la opción find_package en CMake?
+1
+- Permite localizar automáticamente bibliotecas y sus dependencias.
+- Define configuraciones de compilación cruzada.
+- Genera proyectos compatibles con IDEs como Eclipse.
+- Integra herramientas externas como Ninja.
+
+¿Qué permite la macro add_subdirectory(dirname) en CMake?
+3
+- Dividir un proyecto en múltiples configuraciones.
+- Generar un gráfico de dependencias en el subdirectorio.
+- Construir proyectos con múltiples CMakeLists.txt en subdirectorios.
+- Configurar objetivos de instalación específicos.
+
+¿Qué característica hace que CMake sea más sencillo que Autotools para configurar proyectos?
+2
+- Su integración con Ninja.
+- Usa un solo archivo (CMakeLists.txt) en lugar de múltiples archivos.
+- Genera scripts de configuración sin dependencias externas.
+- Es compatible exclusivamente con sistemas modernos.
+
+¿Qué formato tienen las plantillas de configuración de Automake?
+3
+- Makefile.am.
+- Makefile.
+- Makefile.in.
+- CMakeLists.txt.
+
+¿Qué herramienta es más adecuada para proyectos modernos multiplataforma?
+1
+- CMake.
+- Autotools.
+- Meson.
+- Make.
+
+¿Qué hace más eficiente a Ninja frente a Make?
+4
+- Su soporte para configuraciones dinámicas.
+- Genera objetivos con menos pasos intermedios.
+- Su capacidad para trabajar con múltiples lenguajes.
+- Maneja dependencias de manera más rápida y eficiente.
+
+¿Qué diferencia clave tiene Meson frente a CMake?
+2
+- Permite configuraciones in-source por defecto.
+- Detecta automáticamente cambios en los archivos de configuración.
+- Soporta un número mayor de lenguajes de programación.
+- Usa configuraciones recursivas exclusivamente.
+
+¿Qué comando de CMake permite crear un archivo distribuible como .tgz?
+3
+- cmake-dist.
+- cmake-distribution.
+- cpack.
+- add_custom_target.
+
+¿Qué archivo no debe incluirse en la entrega de las prácticas individuales?
+2
+- CMakeLists.txt.
+- Archivos de compilación intermedia (.o, ejecutables).
+- configure.ac.
+- Archivos comprimidos .tgz.
+
+¿Qué se solicita en las prácticas individuales sobre Automake y CMake?
+4
+- Configurar proyectos con CMake y Ninja.
+- Comparar Autotools con Meson en tiempos de configuración.
+- Crear proyectos recursivos con Ninja y Autotools.
+- Crear versiones recursivas y no recursivas para ambos sistemas.
+
+¿Qué herramienta debe usarse para crear una distribución de código en un proyecto con Automake?
+4
+- make-distribution.
+- autoreconf.
+- aclocal-dist.
+- make dist.
+
+¿Qué backend puede usarse en Meson además de Ninja?
+3
+- Autotools.
+- Libtool.
+- Visual Studio.
+- Eclipse CDT.
+
+¿Qué comando de Autotools ejecuta todas las herramientas necesarias en el orden correcto?
+3
+- autoupdate.
+- autoscan.
+- autoreconf.
+- aclocal.
+
+¿Qué función tiene la opción -E en CMake?
+4
+- Optimiza las configuraciones de compilación cruzada.
+- Genera gráficos de dependencias más detallados.
+- Define configuraciones específicas para Debug y Release.
+- Ejecuta comandos en el "modo comando" de CMake.
+
+¿Qué objetivo se debe usar para limpiar un proyecto en Automake?
+2
+- distclean.
+- clean.
+- autoclean.
+- autoreconf-clean.
+
+¿Qué característica hace destacar a CPack en comparación con otras herramientas de distribución?
+1
+- Permite empaquetar proyectos multiplataforma con múltiples formatos.
+- Es compatible exclusivamente con Make.
+- Genera configuraciones automáticas para IDEs.
+- Integra herramientas como Ninja y Autotools.
+
+¿Qué problema podría surgir al usar un Automake recursivo en proyectos grandes?
+3
+- Los Makefiles se vuelven incompatibles entre subdirectorios.
+- Los tiempos de enlace se incrementan.
+- El proceso es más lento debido a llamadas redundantes en subdirectorios.
+- No permite la integración con configuraciones previas.
+
+¿Qué objetivo principal tiene el proceso de testing en software?
+2
+- Garantizar que el software no tiene errores.
+- Demostrar la existencia de fallos en el software.
+- Asegurar que el código es eficiente.
+- Verificar que el software cumple los requisitos de usuario.
+
+¿Qué significa "Test early. Test often. Test automatically"?
+4
+- Realizar tests exhaustivos solo al finalizar el proyecto.
+- Testear manualmente las partes críticas del software.
+- Evitar automatizar el proceso de testing para mantener control humano.
+- Integrar tests en cada fase del desarrollo y automatizarlos para garantizar su efectividad.
+
+¿Qué es un "Test Suite"?
+1
+- Conjunto de entradas diseñadas para testear el software.
+- Herramienta de testeo que asegura la cobertura total de código.
+- Un plan que define los objetivos de los tests.
+- Un conjunto de informes generados por los tests.
+
+¿Qué se entiende por "BlackBox Testing"?
+3
+- Acceso al código fuente para identificar fallos.
+- Crear tests basados en la estructura interna del código.
+- Tests creados basándose en la especificación del software sin acceso al código.
+- Medir la cobertura de las instrucciones del software.
+
+¿Qué tipo de test evalúa la interacción entre diferentes módulos de software?
+2
+- Tests unitarios.
+- Tests de integración.
+- Tests de sistema.
+- Tests de regresión.
+
+¿Qué característica define un test de regresión?
+3
+- Detectar errores en el diseño de interfaces de usuario.
+- Evaluar el rendimiento del software en condiciones extremas.
+- Verificar que los cambios no afectan negativamente al código existente.
+- Analizar el comportamiento del software con datos aleatorios.
+
+¿Cuándo se recomienda realizar tests en un proyecto de software?
+2
+- Al finalizar el desarrollo del software.
+- De manera automática y continua durante el desarrollo.
+- Antes de la entrega final al cliente.
+- Solo cuando se detecten errores en producción.
+
+¿Qué mide la "Instruction Coverage" en un test?
+1
+- El porcentaje de instrucciones ejecutadas durante el test.
+- La eficiencia de los algoritmos probados.
+- El tiempo necesario para ejecutar un test suite.
+- El porcentaje de especificaciones testeadas.
+
+¿Qué tipo de tests se centran en probar todo el sistema en su conjunto?
+4
+- Tests unitarios.
+- Tests de integración.
+- Tests de interfaz de usuario.
+- Tests de sistema.
+
+¿Qué significa "Use saboteurs to Test Your Testing"?
+4
+- Incorporar fallos intencionales en el software para probar la capacidad de recuperación.
+- Usar herramientas externas para evaluar los tests.
+- Crear tests redundantes para asegurar la estabilidad.
+- Diseñar tests para detectar fallos en los propios tests.
+
+¿Qué es un "Test Driver"?
+3
+- Una herramienta para medir la cobertura de tests.
+- Una biblioteca que facilita el diseño de tests.
+- Un programa que automatiza la ejecución y validación de tests.
+- Un método para integrar herramientas de testing con CMake.
+
+¿Qué se entiende por "Test Fixture"?
+4
+- Un conjunto de datos de prueba para tests.
+- Un reporte generado por los tests automáticos.
+- El entorno de ejecución de los tests.
+- El contexto necesario para ejecutar un test y restaurar el estado original tras su ejecución.
+
+¿Cuál es la función principal del "Test Runner" en xUnit?
+2
+- Garantizar la cobertura total del código testeado.
+- Ejecutar los tests y proporcionar los resultados.
+- Generar casos de prueba automáticos.
+- Integrar diferentes frameworks de testing.
+
+¿Qué herramienta de testing tiene su origen en SUnit de Smalltalk?
+3
+- Boost.Test.
+- Catch2.
+- JUnit.
+- GLib.Test.
+
+¿Qué herramienta de testing se distribuye como una única cabecera en C++?
+4
+- Boost.Test.
+- JUnit.
+- GLib.Test.
+- Catch2.
+
+¿Qué característica tiene Catch2 que lo hace fácil de integrar en proyectos?
+3
+- Su capacidad para generar informes detallados.
+- Su compatibilidad con múltiples lenguajes de programación.
+- No requiere enlazar con bibliotecas externas.
+- Proporciona soporte para pruebas de integración.
+
+¿Qué comando se utiliza para ejecutar un test creado con Boost.Test?
+4
+- boost-test.
+- test-run.
+- catch2-run.
+- El nombre del ejecutable del test, p.ej., ./test-suite.
+
+¿Qué marco de testing incorpora GLib para proyectos en C?
+1
+- GLib.Test.
+- Catch2.
+- Boost.Test.
+- cppunit.
+
+¿Cómo se integran los tests en CMake?
+4
+- Con un módulo adicional llamado GLib.Test.
+- Usando un archivo Makefile personalizado.
+- Creando test suites manualmente en el código.
+- Usando enable_testing() y definiendo tests con add_test(...).
+
+¿Qué marco de testing en C++ es parte de las bibliotecas Boost?
+2
+- Catch2.
+- Boost.Test.
+- JUnit.
+- cppunit.
+
+¿Qué se mide al usar fuzz testing en software?
+4
+- Cobertura de especificaciones.
+- Resistencia frente a cambios en el código fuente.
+- Eficiencia de los algoritmos de testeo.
+- Comportamiento del software ante entradas inesperadas o aleatorias.
+
+¿Qué herramienta se usa con CMake para gestionar tests automáticamente?
+3
+- JUnit.
+- Boost.Test.
+- CTest.
+- cppunit.
+
+¿Qué opción de Autotools permite definir programas de testeo?
+2
+- test_PROGRAMS.
+- check_PROGRAMS.
+- test_AUTO.
+- check_AUTO.
+
+¿Qué lenguaje incorpora pruebas de integración sin necesidad de bibliotecas externas?
+3
+- C.
+- C++.
+- Rust.
+- Java.
+
+¿Qué herramienta de testing es compatible con libgit2 para pruebas?
+1
+- clar.
+- cppunit.
+- GLib.Test.
+- Boost.Test.
+
+¿Qué herramienta adicional de CMake permite integrar el paso de tests en el flujo de trabajo?
+3
+- Autotools.
+- Meson.
+- CTest.
+- GLib.Test.
+
+¿Qué función en CMakeLists.txt habilita la ejecución de tests?
+2
+- add_test().
+- enable_testing().
+- configure_tests().
+- run_tests().
+
+¿Qué variable en Automake se utiliza para definir los ejecutables de test?
+3
+- test_PROGRAMS.
+- run_PROGRAMS.
+- check_PROGRAMS.
+- exec_TESTS.
+
+¿Qué ventaja tiene convertir los tests en un objetivo de make?
+4
+- Mejora la cobertura del código testeado.
+- Permite integrar múltiples herramientas de testeo.
+- Facilita la creación de reportes detallados.
+- Automatiza el proceso de ejecutar tests con un simple comando.
+
+¿Qué marco de testeo tiene ejemplos de integración con herramientas como clar y Yarn?
+1
+- C++.
+- Python.
+- Smalltalk.
+- Rust.
+
+¿Qué marco de testing es adecuado para trabajar con fuzz testing?
+4
+- Catch2.
+- Boost.Test.
+- cppunit.
+- libFuzzer.
+
+¿Qué lenguaje moderno incorpora tests unitarios directamente en su sintaxis?
+3
+- C.
+- JavaScript.
+- Zig.
+- C++.
+
+¿Qué herramienta permite usar las funcionalidades de git en aplicaciones y soporta un marco de tests llamado clar?
+2
+- Yarn.
+- libgit2.
+- GLib.Test.
+- cppunit.
+
+¿Qué mide el "Branch Coverage" en los tests?
+3
+- El porcentaje de errores detectados en un programa.
+- La cobertura de las especificaciones iniciales del proyecto.
+- El porcentaje de caminos condicionales ejecutados en el código.
+- La cantidad de recursos utilizados por los tests.
+
+¿Qué marco de testing basado en Boost incluye herramientas para integración y pruebas unitarias?
+2
+- Catch2.
+- Boost.Test.
+- GLib.Test.
+- CTest.
+
+¿Qué framework de tests se usa en C++ y se distribuye como una única cabecera?
+1
+- Catch2.
+- Boost.Test.
+- JUnit.
+- cppunit.
+
+¿Qué comando en CMake permite ejecutar los tests definidos en un proyecto?
+3
+- run_tests.
+- add_tests.
+- make test.
+- enable_testing.
+
+¿Qué herramienta permite crear casos de prueba y suites con Autotools?
+4
+- Ninja.
+- Catch2.
+- GLib.Test.
+- Automake.
+
+¿Qué medida garantiza que las pruebas cubran todas las instrucciones del código?
+2
+- Test Suite Analysis.
+- Instruction Coverage.
+- Regression Testing.
+- Specification Coverage.
+
+¿Qué lenguaje incluye tests unitarios y de integración como funcionalidad estándar?
+3
+- C.
+- Java.
+- Rust.
+- Zig.
+
+¿Qué marco de testeo para C++ se integra fácilmente con CMake mediante add_test?
+2
+- cppunit.
+- Catch2.
+- GLib.Test.
+- Boost.Test.
+
+¿Qué comando en GLib.Test permite añadir funciones de prueba?
+4
+- create_test.
+- add_case.
+- configure_test.
+- Test.add_func().
+
+¿Qué significa "Fixture" en el contexto de los tests?
+3
+- Un test diseñado para medir la cobertura del código.
+- Una herramienta para ejecutar pruebas en paralelo.
+- El contexto necesario para ejecutar y restaurar el estado original tras los tests.
+- Una biblioteca externa para pruebas de integración.
+
+¿Qué marco de testeo incluye soporte para BDD en C++?
+1
+- Catch2.
+- Boost.Test.
+- cppunit.
+- GLib.Test.
+
+¿Qué objetivo tiene el fuzz testing en el desarrollo de software?
+4
+- Identificar cuellos de botella en el rendimiento del código.
+- Asegurar la cobertura de todas las instrucciones del código.
+- Analizar el comportamiento del software frente a entradas esperadas.
+- Evaluar cómo responde el software ante entradas inesperadas o aleatorias.
+
+¿Qué herramienta permite gestionar el proceso de testing en un flujo CI/CD junto con CTest?
+2
+- Yarn.
+- CDash.
+- Catch2.
+- GLib.Test.
+
+¿Qué framework de testing es ampliamente utilizado en el ecosistema Java?
+3
+- Catch2.
+- Boost.Test.
+- JUnit.
+- GLib.Test.
+
+¿Qué marco de pruebas en C puede integrarse directamente con Autotools y CMake?
+4
+- Boost.Test.
+- cppunit.
+- Catch2.
+- GLib.Test.
+
+¿Qué función específica de Boost.Test facilita el uso de fixtures en pruebas?
+2
+- BOOST_AUTO_TEST_CASE.
+- BOOST_FIXTURE_TEST_CASE.
+- BOOST_AUTO_FIXTURE.
+- BOOST_SETUP_TEST.
+
+¿Qué marco de testing en C++ es compatible con herramientas externas como fuzz testing?
+1
+- Catch2.
+- GLib.Test.
+- JUnit.
+- cppunit.
+
+¿Qué es el Diseño por Contrato (DbC)?
+3
+- Una metodología para diseñar interfaces gráficas.
+- Un sistema para validar entradas y salidas de programas.
+- Una metodología de diseño de software que aplica conceptos de contratos de negocios.
+- Un enfoque orientado exclusivamente a depurar errores en tiempo de ejecución.
+
+¿Qué elementos forman parte de un contrato en DbC?
+4
+- Precondiciones y excepciones.
+- Postcondiciones e invariantes de bucles.
+- Invariantes de bucles y estados finales.
+- Precondiciones, postcondiciones e invariantes.
+
+¿Quién debe garantizar que las precondiciones de un método se cumplen?
+2
+- El método que las define.
+- El cliente que llama al método.
+- El compilador del lenguaje usado.
+- Ninguno, son automáticas.
+
+¿Qué ocurre si una postcondición no se cumple?
+3
+- El fallo es del cliente que llamó al método.
+- El error debe corregirse en tiempo de compilación.
+- Es responsabilidad del método que la definió.
+- No se genera ningún error, ya que es opcional.
+
+¿Qué son las invariantes de clase?
+4
+- Condiciones que se cumplen antes de ejecutar un método específico.
+- Condiciones que deben cumplir los datos de entrada de un método.
+- Propiedades asociadas a variables estáticas de una clase.
+- Propiedades lógicas que deben cumplirse antes y después de ejecutar cualquier método de una clase.
+
+¿Qué lenguaje introdujo el término Diseño por Contrato?
+1
+- Eiffel.
+- D.
+- Vala.
+- Spark.
+
+¿Qué constructos ofrece Eiffel para implementar contratos?
+4
+- requires, assert, loop.
+- check, assume, prove.
+- validate, confirm, state.
+- require, ensure, invariant.
+
+¿Qué soporte para DbC ofrece el Lenguaje D?
+2
+- Exclusivamente precondiciones.
+- Precondiciones, postcondiciones e invariantes.
+- Solo invariantes.
+- Solo contratos en métodos abstractos.
+
+¿Qué funcionalidad no está disponible en Vala para DbC?
+3
+- Precondiciones.
+- Postcondiciones.
+- Invariantes de clase.
+- Asserts en métodos.
+
+¿Cómo se define una precondición en el Lenguaje D usando la sintaxis nueva?
+2
+- assert(condition)
+- in (condition)
+- requires (condition)
+- precondition (condition)
+
+¿Qué verifica una precondición en un método?
+1
+- Que las condiciones de entrada sean válidas.
+- Que el resultado final sea correcto.
+- Que las invariantes de clase se cumplan.
+- Que se gestione correctamente una excepción.
+
+¿Qué asegura una postcondición?
+4
+- Que los parámetros de entrada cumplan ciertos valores.
+- Que se invoquen otros métodos auxiliares.
+- Que el cliente valide los resultados.
+- Que los resultados de un método cumplan ciertas propiedades.
+
+¿Qué característica distingue a las invariantes de clase de otros elementos del contrato?
+3
+- Solo se evalúan al terminar la ejecución de un método.
+- Son aplicables únicamente a métodos estáticos.
+- Se evalúan antes y después de ejecutar cualquier método de la clase.
+- No dependen de las precondiciones definidas.
+
+¿Qué función tiene el constructo requires en Vala?
+1
+- Define una precondición.
+- Define una postcondición.
+- Lanza una excepción.
+- Valida una invariante.
+
+¿Qué variable especial se usa en las postcondiciones de Vala para referirse al resultado del método?
+4
+- value.
+- assert.
+- post.
+- result.
+
+¿Qué ocurre si se viola una precondición durante la ejecución?
+2
+- Se ignora automáticamente.
+- Se lanza una excepción o error en tiempo de ejecución.
+- El compilador lo detecta en tiempo de compilación.
+- Se corrige automáticamente si es posible.
+
+¿Qué constructo en C puede usarse para emular DbC?
+3
+- ensure.
+- requires.
+- assert.
+- validate.
+
+¿Cómo puede un programador verificar invariantes en un lenguaje que no soporta DbC?
+1
+- Llamando a un método privado de la clase antes y después de ejecutar métodos públicos.
+- Usando excepciones para capturar errores en tiempo de ejecución.
+- Definiendo un método global que valide todas las clases.
+- Solo es posible en lenguajes con soporte nativo para DbC.
+
+¿Qué tipo de condición valida el siguiente código en Eiffel?```invariant \n\tvalid_day: 1 <= day and day <= 31```
+4
+- Una precondición.
+- Una postcondición.
+- Una excepción personalizada.
+- Una invariante de clase.
+
+¿Qué utilidad tienen las precondiciones en la depuración?
+2
+- Facilitan el manejo de excepciones.
+- Ayudan a identificar errores en el cliente que llama al método.
+- Garantizan que el programa siempre finaliza correctamente.
+- Mejoran la cobertura de las pruebas unitarias.
+
+¿Qué compilador de D está basado en LLVM?
+3
+- DMD.
+- GDC.
+- LDC.
+- CLangD.
+
+¿Qué herramienta se usa para compilar código en Vala?
+4
+- gcc.
+- clang.
+- vala-compile.
+- valac.
+
+¿Qué constructo en D permite validar invariantes de clase?
+2
+- require.
+- invariant.
+- assert.
+- check.
+
+¿Cómo se define una invariante en un lenguaje sin soporte nativo para DbC?
+3
+- Usando macros predefinidas.
+- Dependiendo del lenguaje, es imposible.
+- Mediante un método privado que valide los atributos de clase.
+- Solo en métodos públicos.
+
+¿Qué acción debería tomar un programador si encuentra una violación de postcondición?
+4
+- Revisar las entradas del cliente que llamó al método.
+- Ignorar el error si no afecta a otros métodos.
+- Deshabilitar temporalmente las postcondiciones.
+- Corregir el método que definió la postcondición.
+
+¿Qué es un "locale"?
+2
+- Un archivo binario que define configuraciones regionales.
+- Una serie de parámetros culturales sobre idioma, moneda, formato de fecha, etc.
+- Una herramienta que permite traducciones en tiempo de ejecución.
+- Un conjunto de bibliotecas para configurar cadenas internacionales.
+
+¿Qué diferencia principal existe entre internacionalización (I18N) y localización (L10N)?
+3
+- I18N es la traducción de cadenas de texto, mientras que L10N es su validación.
+- I18N solo afecta a idiomas, y L10N a configuraciones de moneda.
+- I18N es preparar un proyecto para soportar múltiples idiomas, y L10N adaptarlo a un idioma específico.
+- I18N incluye la validación de configuraciones regionales.
+
+¿Qué estándar se utiliza para codificar el idioma en un locale?
+1
+- ISO-639.
+- ISO-3166.
+- ISO-15924.
+- UTF-8.
+
+¿Cuál es el locale por defecto en los sistemas GNU/Linux?
+4
+- en_US.utf8.
+- C.UTF-8.
+- POSIX.UTF-8.
+- C.
+
+¿Qué comando muestra los locales disponibles en el sistema?
+3
+- localectl.
+- locale-gen.
+- locale -a.
+- gettext-locale.
+
+¿Qué herramienta se utiliza para extraer cadenas traducibles de un proyecto?
+2
+- msgfmt.
+- xgettext.
+- locale-gen.
+- poedit.
+
+¿Qué extensión tiene un archivo de plantilla para traducciones con Gettext?
+3
+- .po.
+- .mo.
+- .pot.
+- .potx.
+
+¿Qué comando permite inicializar un archivo de traducción basado en una plantilla?
+1
+- msginit.
+- msgfmt.
+- gettext-init.
+- po-create.
+
+¿Qué extensión tiene el archivo compilado que almacena las traducciones?
+4
+- .po.
+- .pot.
+- .potx.
+- .mo.
+
+¿Qué comando compila los archivos de traducción a un formato más eficiente para el sistema?
+3
+- xgettext.
+- msgmerge.
+- msgfmt.
+- gettext-compile.
+
+¿Dónde se deben instalar los archivos .mo para que sean accesibles por el sistema?
+2
+- /etc/locale.d/idioma/.
+- /usr/share/locale/idioma/LC_MESSAGES/.
+- /usr/local/share/locale/idioma/.
+- /var/lib/locale/idioma/.
+
+¿Qué constante de configuración en Vala define el directorio de locales en modo desarrollo?
+1
+- Config.DEVELOPMENT_MODE.
+- Config.LOCALE_DEV_DIR.
+- Config.LANG_DIR.
+- Config.I18N_DEV.
+
+¿Qué función inicializa Gettext en código Vala?
+4
+- Intl.gettext_init.
+- Intl.locale_config.
+- Intl.load_locale.
+- Intl.bindtextdomain.
+
+¿Qué macro se usa habitualmente para marcar cadenas traducibles?
+2
+- gettext(x).
+- _x.
+- _.
+- translate(x).
+
+¿Qué comando actualiza un archivo .po con cambios en una plantilla .pot?
+3
+- msgfmt.
+- msginit.
+- msgmerge.
+- gettext-update.
+
+¿Qué es un archivo .po?
+3
+- Un archivo binario de traducciones.
+- Un script de configuración para locales.
+- Un archivo de texto con cadenas traducibles.
+- Un contenedor de configuraciones de locales.
+
+¿Cuál de las siguientes es una herramienta especializada para editar archivos .po?
+4
+- vim.
+- emacs.
+- notepad++.
+- poedit.
+
+¿Qué significa "POT-Creation-Date" en un archivo .po?
+1
+- La fecha en que se generó el archivo de plantilla.
+- La última fecha de traducción realizada.
+- El identificador de la versión del proyecto.
+- El formato MIME del archivo.
+
+¿Qué herramienta permite editar traducciones en línea?
+2
+- poedit-cli.
+- Virtaal.
+- gettext-web.
+- msgfmt-online.
+
+¿Qué comando extrae todas las cadenas, incluso no marcadas como traducibles?
+3
+- msgfmt -c.
+- msgmerge -s.
+- xgettext -a.
+- gettext --all.
+
+¿Qué hace la función bind_textdomain_codeset?
+4
+- Vincula el locale con la configuración regional.
+- Define el directorio donde se encuentran los archivos .po.
+- Configura las variables de entorno para el idioma.
+- Establece la codificación de los mensajes traducidos.
+
+¿Qué idioma es representado por el locale es_MX?
+1
+- Español de México.
+- Español de España.
+- Catalán de Valencia.
+- Castellano genérico.
+
+¿Qué sucede si falta un archivo .mo para un idioma?
+2
+- La aplicación lanza una excepción y detiene su ejecución.
+- Se usan las cadenas del idioma original (fallback).
+- Se generan automáticamente cadenas vacías.
+- La aplicación falla al inicializar gettext.
+
+¿Qué archivo debe editarse en un sistema GNU/Linux para añadir nuevos locales?
+1
+- /etc/locale.gen.
+- /etc/locale.conf.
+- /etc/locale.d/.
+- /etc/default/locale.
+
+¿Qué archivo almacena los locales disponibles en una sesión de usuario?
+3
+- /var/lib/locale.db.
+- /usr/share/locale.conf.
+- ~/.bashrc (o archivo equivalente).
+- /etc/environment.
+
+¿Qué es un Sistema de Control de Versiones (SCV)?
+4
+- Un software que permite conocer las modificaciones hechas a un proyecto.
+- Un sistema para mantener únicamente las últimas versiones de los archivos.
+- Una herramienta exclusiva para revertir cambios recientes.
+- Ninguna de las anteriores.
+
+¿Cuál es una función principal de un SCV?
+3
+- Restringir los cambios en un proyecto a un único desarrollador.
+- Mantener siempre la última versión disponible sin posibilidad de revertir cambios.
+- Gestionar automáticamente los cambios realizados en uno o varios ficheros de un proyecto.
+- Sustituir las copias de seguridad en proyectos colaborativos.
+
+¿Qué nos permite hacer un SCV además de gestionar cambios?
+2
+- Limitar el acceso al histórico del proyecto.
+- Restaurar cualquier archivo del proyecto a un estado anterior, no necesariamente el último.
+- Evitar que múltiples programadores trabajen en un mismo proyecto.
+- Aislar cambios sin compartirlos con otros desarrolladores.
+
+¿Qué es un repositorio en un SCV?
+1
+- La copia maestra donde se guardan todas las versiones de los archivos de un proyecto.
+- Un directorio local que contiene solo las copias de trabajo.
+- Una copia remota de los archivos modificados que aún no se han comprometido.
+- Un sistema exclusivo para archivos ejecutables en proyectos de software.
+
+¿Qué diferencia a un SCV centralizado de uno distribuido?
+2
+- Los SCV centralizados permiten que todos los usuarios tengan su propio repositorio.
+- En un SCV distribuido, cada usuario tiene su propio repositorio local que puede sincronizar con un repositorio central.
+- Los SCV centralizados funcionan solo con un equipo administrativo que maneja las copias de trabajo.
+- Ninguna de las anteriores.
+
+¿Qué es un “Commit” en un SCV?
+4
+- Una acción que actualiza automáticamente todos los archivos locales con los cambios remotos.
+- El proceso de clonar un repositorio central en la máquina local.
+- Un registro automático de los cambios realizado sin intervención del programador.
+- La acción de guardar cambios en la copia local del repositorio junto con un mensaje descriptivo.
+
+¿Qué acción permite trasladar los contenidos de la copia local de un repositorio al repositorio maestro?
+3
+- Clone
+- Commit
+- Push
+- Fetch
+
+¿Qué se entiende por conflicto en un SCV?
+2
+- La situación en la que un archivo no se encuentra bajo control de versiones.
+- La situación en la que dos desarrolladores realizan cambios en la misma región de un fichero, generando discrepancias.
+- Un error del sistema al realizar un commit simultáneo desde varios usuarios.
+- Una falla en el repositorio remoto durante una operación de pull.
+
+¿Qué es una rama en un SCV?
+3
+- Un método para guardar copias de seguridad de los archivos.
+- Un conjunto de cambios descartados de un proyecto.
+- Una línea de evolución del software que puede incluir desarrollos paralelos.
+- Un repositorio separado para almacenar versiones estables del proyecto.
+
+¿Qué representa el término master o main en un SCV?
+1
+- Una rama principal donde se suelen mantener las versiones estables del software.
+- Un repositorio local exclusivo de un usuario.
+- Un archivo de configuración general de un proyecto.
+- Una rama de corto recorrido creada para probar características experimentales.
+
+¿Qué tipo de ramas se suelen emplear para trabajar en una característica o corregir un fallo específico?
+4
+- Ramas de largo recorrido.
+- Ramas principales como trunk o master.
+- Ramas para mantener versiones propuestas (next, proposed).
+- Ramas puntuales o Topic Branches.
+
+¿Qué herramienta de integración produce una historia más lineal en Git?
+3
+- Merge
+- Cherry-pick
+- Rebase
+- Bisect
+
+¿Qué comando permite clonar un repositorio en Git?
+2
+- git init
+- git clone
+- git pull
+- git branch
+
+¿Dónde se guarda la configuración global de Git para un usuario?
+3
+- En .git/config.
+- En el directorio de trabajo del proyecto.
+- En el archivo ~/.gitconfig o ~/.config/git/config.
+- En el archivo README.md del proyecto.
+
+¿Qué hace el comando git stash?
+4
+- Crea una copia de seguridad del repositorio remoto.
+- Deshace los cambios realizados en la copia local de trabajo.
+- Realiza un commit de los archivos seleccionados.
+- Guarda temporalmente los cambios en la copia de trabajo para permitir operaciones como un pull.
+
+¿Qué acción se realiza con git bisect?
+1
+- Localizar el commit que introdujo un error mediante búsqueda binaria.
+- Fusionar dos ramas manteniendo los cambios de ambas.
+- Crear una rama a partir de un commit específico.
+- Volver a una versión anterior del proyecto.
+
+¿Qué permite hacer el comando git cherry-pick?
+3
+- Aplicar múltiples commits de una rama en otra.
+- Restaurar un archivo eliminado en la copia de trabajo.
+- Aplicar un commit específico de una rama en otra rama.
+- Volver a un estado anterior del proyecto sin modificar el historial.
+
+¿Qué son los “hooks” en Git?
+4
+- Archivos que almacenan la configuración global del repositorio.
+- Copias de seguridad automáticas generadas por Git.
+- Historias alternativas creadas durante un proceso de merge.
+- Guiones que se ejecutan antes o después de acciones como commit o push.
+
+¿Qué comando se emplea para eliminar archivos no versionados en Git?
+2
+- git reset
+- git clean
+- git stash
+- git rm
+
+¿Qué acción realiza el comando git gc?
+4
+- Limpia los archivos temporales creados por el sistema operativo.
+- Elimina archivos no rastreados de la copia de trabajo.
+- Restaura la configuración predeterminada del repositorio.
+- Optimiza y realiza tareas de mantenimiento en el repositorio.
+
+¿Qué es un “bare repository” en Git?
+2
+- Un repositorio que almacena solo las versiones más recientes de los archivos.
+- Un repositorio sin copia de trabajo, que contiene únicamente metadatos.
+- Una rama principal utilizada para fusiones complejas.
+- Un repositorio remoto sincronizado con varios desarrolladores.
+
+¿Qué herramienta gráfica NO pertenece a Git por defecto?
+4
+- gitk
+- git gui
+- tig
+- mercurial-gui
+
+¿Qué subdirectorio contiene la información de control de versiones en Mercurial?
+3
+- .git
+- .svn
+- .hg
+- .bzr
+
+¿Dónde se guarda la configuración global de usuario en Mercurial?
+2
+- En el archivo .hg/config dentro del proyecto.
+- En el archivo ~/.hgrc.
+- En el archivo ~/.config/hg/config.
+- En el archivo README.md.
+
+¿Qué comando en Mercurial permite clonar un repositorio?
+1
+- hg clone
+- hg pull
+- hg branch
+- hg commit
+
+¿Qué diferencia a Mercurial de Git respecto a la gestión de cambios?
+4
+- Mercurial usa blobs y trees en lugar de files y manifests.
+- Git no permite manejar varias ramas simultáneamente, pero Mercurial sí.
+- Mercurial no genera claves SHA-1 para los cambios realizados en un proyecto.
+- Mercurial no necesita usar un índice (stage) para registrar los cambios.
+
+¿Cómo se añaden extensiones en Mercurial?
+3
+- Usando el comando hg install.
+- Copiando los archivos de extensión al subdirectorio .hg/extensions.
+- Editando el archivo de configuración y añadiendo la ruta de la extensión.
+- Con el comando hg addextension.
+
+¿Qué comando permite ver las extensiones disponibles en Mercurial?
+2
+- hg extensions
+- hg help extensions
+- hg config extensions
+- hg list extensions
+
+¿Qué archivo se edita para añadir un nuevo repositorio remoto en Mercurial?
+4
+- .hg/extensions
+- .hgrc/config
+- .hg/hooks
+- .hg/hgrc
+
+¿Qué herramienta gráfica es recomendada para trabajar con Mercurial?
+3
+- gitk
+- bazaar explorer
+- tortoisehg
+- mercurial-viewer
+
+¿Qué sistema de control de versiones es el predecesor de Bazaar?
+2
+- CVS
+- GNU Arch
+- Subversion
+- Mercurial
+
+¿Qué directorio contiene la información de control de versiones en un proyecto gestionado por Bazaar?
+4
+- .git
+- .hg
+- .svn
+- .bzr
+
+¿Qué herramienta gráfica es recomendada para trabajar con Bazaar?
+3
+- git gui
+- tortoisebzr
+- bazaar explorer
+- mercurial-viewer
+
+¿Qué comando permite inicializar un repositorio en Bazaar?
+1
+- bzr init
+- bzr branch
+- bzr commit
+- bzr create
+
+¿Qué comando permite ver el historial de cambios en Bazaar?
+2
+- bzr history
+- bzr log
+- bzr changes
+- bzr list
+
+¿Qué característica especial permite a Bazaar trabajar con Unity3D?
+4
+- Es compatible con archivos binarios del motor Unity3D.
+- Proporciona un plugin específico para Unity3D.
+- Automatiza la integración con los entornos de Unity3D.
+- Permite configurar Bazaar como herramienta de control de versiones en Unity3D.
+
+¿Qué ventaja destaca de Bazaar frente a otros SCV?
+3
+- Usa SHA-256 para identificar cambios.
+- Ofrece un sistema de ramas único y simplificado.
+- Es fácil de usar y tiene un flujo de trabajo intuitivo.
+- Solo permite trabajar en repositorios locales, evitando conflictos.
+
+¿Qué archivo se utiliza para modificar la configuración global en Bazaar?
+2
+- .bzr/extensions
+- bazaar.conf en $HOME/.bazaar
+- .bzr/hooks
+- global-config.bzr
+
+¿Qué comando en Bazaar permite fusionar cambios de una rama en otra?
+4
+- bzr combine
+- bzr push
+- bzr apply
+- bzr merge
+
+¿Qué similitudes comparten Git, Mercurial y Bazaar?
+1
+- Los tres son sistemas de control de versiones distribuidos.
+- Los tres usan índices para registrar los cambios antes de un commit.
+- Los tres dependen de un repositorio centralizado para funcionar.
+- Ninguno de ellos soporta la creación de ramas.
+
+¿Qué diferencia clave hay entre Git y Mercurial en cuanto a la gestión de cambios?
+4
+- Mercurial usa SHA-256, mientras que Git usa SHA-1.
+- Git no soporta extensiones, pero Mercurial sí.
+- Git organiza el historial como un árbol, mientras que Mercurial lo trata como un grafo.
+- Mercurial no requiere usar un índice (stage) antes de un commit, mientras que Git sí.
+
+¿Qué característica especial destaca de Bazaar frente a Git y Mercurial?
+3
+- Es más rápido que Git y Mercurial.
+- Ofrece compatibilidad total con proyectos gestionados por Mercurial.
+- Es más fácil de usar y tiene un flujo de trabajo más sencillo.
+- Implementa un sistema híbrido centralizado y distribuido.
+
+¿Qué característica define a CVS?
+2
+- Es un sistema de control de versiones distribuido.
+- Es un sistema de control de versiones centralizado.
+- Fue diseñado para reemplazar a Git.
+- Usa SHA-256 como método de identificación.
+
+¿Qué SCV es el sucesor de Arch?
+3
+- Subversion
+- Darcs
+- Bazaar
+- Monotone
+
+¿Cuál de las siguientes opciones es un SCV centralizado?
+1
+- Subversion
+- Git
+- Mercurial
+- Monotone
+
+¿Qué es una “topic branch”?
+3
+- Una rama que contiene las versiones estables de un proyecto.
+- Una rama que incluye todas las propuestas de cambios realizadas por varios desarrolladores.
+- Una rama puntual creada para trabajar en un único aspecto, como una característica o corrección específica.
+- Una rama experimental para probar integraciones avanzadas.
+
+¿Qué prefijo suelen usar los desarrolladores para indicar que una rama es de trabajo en progreso (Work in Progress)?
+4
+- tip/
+- iss/
+- hotfix/
+- wip/
+
+¿Qué diferencia clave hay entre merge y rebase en Git?
+1
+- El merge combina los cambios de dos ramas y preserva el historial completo, mientras que el rebase reescribe el historial para obtener una línea más lineal.
+- El rebase es más rápido que el merge, pero no permite resolver conflictos.
+- El merge descarta los commits antiguos, mientras que el rebase los mantiene en paralelo.
+- El rebase solo funciona en repositorios centralizados.
+
+¿Qué son los submódulos en Git?
+2
+- Una característica para trabajar con múltiples ramas en paralelo.
+- Una forma de incluir otro repositorio Git como parte de un proyecto actual.
+- Una alternativa a las herramientas gráficas para manejar ramas.
+- Un método para restaurar archivos borrados accidentalmente.
+
+¿Qué herramienta complementa a Git ofreciendo una forma más sencilla de manejar comandos complejos?
+4
+- TortoiseGit
+- Git GUI
+- Gitk
+- Git-Town
+
+¿Qué diferencia clave tiene Breezy con otros SCV?
+3
+- Es un SCV centralizado exclusivo para sistemas Unix.
+- No soporta operaciones de merge o rebase.
+- Es una reimplementación de Bazaar con soporte adicional para funcionalidades modernas.
+- Funciona exclusivamente como cliente de Git.
+
+¿Qué es Tailor en el contexto de los SCV?
+4
+- Un comando avanzado de Git para ajustar ramas.
+- Un sistema de control de versiones distribuido diseñado para proyectos pequeños.
+- Una extensión de Mercurial para manejar submódulos.
+- Una herramienta que permite migrar proyectos entre diferentes sistemas de control de versiones.
+
+¿Qué permite hacer git-annex?
+2
+- Sincronizar ramas locales con remotas automáticamente.
+- Almacenar grandes archivos en repositorios Git sin comprometer el rendimiento.
+- Gestionar extensiones de terceros en Git.
+- Realizar operaciones avanzadas con submódulos.

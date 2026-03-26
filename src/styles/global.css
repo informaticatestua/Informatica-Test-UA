@@ -1,46 +1,86 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@theme {
-  --color-primary: #256af4;
-  --color-primary-glow: rgba(37, 106, 244, 0.15);
-  --color-background-light: #f5f6f8;
-  --color-background-dark: #0a0c10;
-  --color-glass-bg: rgba(255, 255, 255, 0.03);
-  --color-glass-border: rgba(255, 255, 255, 0.1);
+@layer base {
+  :root {
+    /* Light Theme (Slate/Minimalist) */
+    --bg-base: 248 250 252;
+    --bg-surface: 255 255 255;
+    --bg-surface-hover: 241 245 249;
+    
+    --primary: 15 23 42;
+    --primary-hover: 30 41 59;
+    
+    --text-main: 15 23 42;
+    --text-muted: 100 116 139;
+    
+    --border-subtle: 226 232 240;
+  }
+
+  .dark {
+    /* Dark Theme */
+    --bg-base: 2 6 23;
+    --bg-surface: 15 23 42;
+    --bg-surface-hover: 30 41 59;
+    
+    --primary: 248 250 252;
+    --primary-hover: 226 232 240;
+    
+    --text-main: 248 250 252;
+    --text-muted: 148 163 184;
+    
+    --border-subtle: 30 41 59;
+  }
+
+  html {
+    @apply bg-background text-textMain antialiased scroll-smooth transition-colors duration-300;
+  }
+
+  body {
+    /* To prevent scrollbar jump on Windows when navigating between pages */
+    overflow-y: scroll;
+  }
 }
 
-/* KaTeX support */
-@import "katex/dist/katex.min.css";
-
-:root {
-  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
 }
 
-body {
-  font-family: var(--font-sans);
-  @apply bg-background-dark text-slate-100 antialiased min-h-screen selection:bg-primary/30;
-}
+/* Custom Utilities for micro-interactions */
+@layer components {
+  /* Generous layout helpers */
+  .layout-container {
+    @apply w-full max-w-4xl mx-auto px-6 py-12 md:py-20;
+  }
+  
+  /* Modern Button / Card Styles */
+  .ui-button {
+    @apply relative overflow-hidden flex items-center justify-center 
+           bg-surface hover:bg-surfaceHover text-textMain 
+           border border-borderSubtle rounded-xl 
+           py-4 px-6 font-medium text-sm sm:text-base
+           shadow-subtle hover:shadow-glass hover:-translate-y-0.5
+           transition-all duration-300 ease-out focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background;
+  }
 
-.glass {
-  background: var(--color-glass-bg);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid var(--color-glass-border);
-}
+  .ui-button-primary {
+    @apply relative overflow-hidden flex items-center justify-center 
+           bg-primary text-background hover:bg-primaryHover
+           rounded-xl py-4 px-6 font-medium text-sm sm:text-base
+           shadow-md hover:shadow-lg hover:-translate-y-0.5
+           transition-all duration-300 ease-out focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background;
+  }
 
-.hero-glow {
-  background: radial-gradient(circle at center, var(--color-primary-glow) 0%, transparent 70%);
-}
+  /* Section Titles */
+  .section-title {
+    @apply font-heading text-2xl md:text-3xl font-semibold mb-6 tracking-tight text-textMain;
+  }
 
-.card-hover {
-  @apply transition-all duration-300;
-}
-
-.card-hover:hover {
-  border-color: rgba(37, 106, 244, 0.5);
-  box-shadow: 0 0 20px var(--color-primary-glow);
-}
-
-.katex {
-  font-size: 1.1em;
+  /* Separator */
+  .ui-separator {
+    @apply w-full h-px bg-borderSubtle my-8;
+  }
 }

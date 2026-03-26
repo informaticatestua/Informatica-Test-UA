@@ -1,0 +1,41 @@
+¿Qué enfoque se utiliza en la simulación para predecir las interacciones de los usuarios?
+4
+- Evaluaciones subjetivas
+- Observación directa de usuarios
+- Análisis de tareas no estructuradas
+- Teorías formales y componentes matemáticos
+
+¿Qué representa el "Operadores" en el método GOMS?
+2
+- Métodos de interacción
+- Acciones del usuario
+- Reglas de decisión
+- Objetivos del usuario
+
+¿Qué principio es un fundamento de la Evaluación Heurística según Nielsen?
+1
+- Visibilidad del estado del sistema
+- Inmersión
+- Eficiencia de uso
+- Adaptabilidad
+
+¿Cuál es el propósito de los métodos de testeo de usabilidad sin usuarios?
+4
+- Reducir los costos de desarrollo de software
+- Aumentar la participación del usuario en el diseño
+- Sustituir completamente las pruebas con usuarios reales
+- Identificar problemas de usabilidad antes de las pruebas con usuarios
+
+¿En qué se diferencia la Simulación del Paseo Cognitivo?
+3
+- En su enfoque en la eficiencia del usuario
+- En su enfoque en los principios de diseño
+- En la utilización de modelos matemáticos
+- En la necesidad de prototipos avanzados
+
+¿Cuál es una ventaja del paseo cognitivo?
+1
+- No requiere tener acceso a usuarios finales
+- Permite un análisis detallado de la interfaz
+- No requiere experiencia del usuario
+- Facilita la comparación de diseños alternativos

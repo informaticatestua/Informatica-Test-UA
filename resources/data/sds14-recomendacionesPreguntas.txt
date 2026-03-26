@@ -1,0 +1,440 @@
+¿Qué ventaja ofrecen los gestores de contraseñas frente al almacenamiento de contraseñas en el navegador?
+1
+- Utilizan cifrado avanzado y requieren una contraseña maestra para acceder
+- Solo sincronizan contraseñas dentro del ecosistema del navegador
+- No generan contraseñas fuertes de forma automática
+- Pueden ser accesibles si el dispositivo está comprometido
+
+¿Cuál es la principal limitación de los gestores de contraseñas integrados en navegadores web?
+2
+- Cifran las contraseñas con AES-256
+- Se limitan a sincronizar solo dentro del ecosistema del navegador
+- Generan contraseñas seguras automáticamente
+- Ofrecen sincronización multiplataforma segura
+
+¿Qué tipo de segundo factor de autenticación (2FA) proporciona la mayor protección contra ataques de phishing?
+3
+- SMS enviado al móvil
+- Códigos generados por aplicaciones móviles (TOTP)
+- Llaves de seguridad físicas como YubiKey
+- Notificaciones push a la aplicación
+
+¿Cuál de las siguientes es una desventaja de la autenticación biométrica?
+2
+- Es completamente infalible y único para cada individuo
+- Puede plantear riesgos de privacidad al almacenar datos biométricos
+- No requiere voluntariedad para su uso
+- Ofrece tasas de falsos positivos inferiores a 1 en 10,000
+
+En Windows, ¿qué componente de hardware se requiere generalmente para habilitar BitLocker sin necesidad de introducir una contraseña al arrancar?
+1
+- Módulo TPM (Trusted Platform Module)
+- Unidad SSD NVMe
+- Cuenta de Microsoft
+- Firewall de Windows
+
+¿Cuál de las siguientes herramientas de cifrado de disco es multiplataforma?
+4
+- BitLocker
+- FileVault
+- LUKS
+- VeraCrypt
+
+¿En qué consiste la estrategia 3-2-1 de backups?
+1
+- Mantener tres copias de los datos, en dos medios diferentes y una copia fuera del sitio
+- Realizar backups completos, diferenciales e incrementales
+- Guardar datos en tres dispositivos NAS distintos
+- Usar tres proveedores de almacenamiento en la nube
+
+¿Cuál es la principal ventaja de un backup incremental frente a uno completo?
+1
+- Solo copia los datos modificados desde el último backup, siendo más eficiente en tiempo y espacio
+- Crea una copia completa de todos los datos cada vez
+- Requiere más espacio de almacenamiento
+- Es el método más seguro pero más exigente
+
+¿Por qué es importante cifrar las copias de seguridad?
+2
+- Facilita la restauración de datos en caso de corrupción
+- Previene la manipulación de los datos y garantiza su integridad
+- Reduce el espacio ocupado por los backups
+- Evita la necesidad de gestionar políticas de retención
+
+¿Qué consecuencia directa tuvo el gusano de Morris en 1988?
+1
+- Provocó una denegación de servicio en aproximadamente el 10% de Internet y motivó la creación del CERT
+- Robó datos de usuarios de computadoras universitarias
+- Desplegó una botnet que envió spam masivo
+- Infectó dispositivos IoT y routers domésticos
+
+¿Qué característica distinguió al malware Stuxnet?
+2
+- Se propagaba exclusivamente por correo electrónico
+- Atacaba sistemas SCADA para causar daño físico a equipos de centrifugado nuclear
+- Robaba contraseñas de gestores de contraseñas
+- Generaba ataques DDoS contra sitios web gubernamentales
+
+¿Cuál fue la principal forma de propagación del ataque DDoS contra Dyn en 2016?
+1
+- Botnet de dispositivos IoT comprometidos
+- Vulnerabilidad en Windows sin parchear
+- Ingeniería social a empleados de Dyn
+- Malware adjunto en correos electrónicos
+
+¿Qué brecha de seguridad comprometió datos de 3.000 millones de cuentas de usuario?
+2
+- Equifax (2017)
+- Yahoo (2013-2014)
+- Sony Pictures (2014)
+- Marriott (2018)
+
+¿Qué vulnerabilidad aprovechó WannaCry para propagarse rápidamente?
+3
+- Fuerza bruta de contraseñas
+- Phishing masivo
+- Vulnerabilidad en SMB/EternalBlue en Windows sin parchear
+- Desbordamiento de búfer en navegadores web
+
+¿Cuál es la principal ventaja del cifrado de disco completo (FDE) frente al cifrado a nivel de archivo o carpeta?
+1
+- Protege todos los datos del disco sin necesidad de seleccionar archivos específicos
+- Requiere menos recursos y permite una gestión más granular
+- Solo cifra los archivos de usuario
+- Es independiente del sistema operativo
+
+¿Qué ventaja ofrecen los gestores de contraseñas frente al almacenamiento de contraseñas en el navegador?
+1
+- Utilizan cifrado avanzado y requieren una contraseña maestra para acceder
+- Solo sincronizan contraseñas dentro del ecosistema del navegador
+- No generan contraseñas fuertes de forma automática
+- Pueden ser accesibles si el dispositivo está comprometido
+
+¿Cuál es la principal limitación de los gestores de contraseñas integrados en navegadores web?
+2
+- Ofrecen cifrado avanzado para las contraseñas
+- Se limitan a sincronizar solo dentro del ecosistema del navegador
+- Generan contraseñas seguras de forma automática
+- Permiten sincronización multiplataforma con cualquier aplicación
+
+¿Por qué el profesor sugiere usar un gestor de contraseñas local y sincronizar el archivo cifrado con servicios como Dropbox en lugar de usar la versión en la nube del gestor?
+3
+- Porque la versión local no permite sincronización alguna
+- Porque la versión en la nube no cifra las contraseñas
+- Porque el fichero local cifrado mantiene la seguridad incluso al sincronizarse
+- Porque la versión local sincroniza en claro con el navegador
+
+Según la clase, ¿qué enfoque de generación de contraseñas ofrece mayor seguridad?
+1
+- Usar cadenas aleatorias largas (por ejemplo, 32 caracteres) de solo letras minúsculas
+- Combinación de 16 caracteres con mayúsculas, minúsculas, números y símbolos
+- Cuatro palabras de diccionario comunes unidas sin espacios
+- Ocho caracteres con un mínimo de un símbolo, un número, una minúscula y una mayúscula
+
+¿Cuál es la entropía aproximada de una contraseña formada por cuatro palabras de diccionario unidas, según lo explicado en clase?
+2
+- 28 bits
+- 44 bits
+- 64 bits
+- 16 bits
+
+¿Cuál es la principal desventaja de apuntar contraseñas en un cuaderno físico?
+2
+- Las contraseñas se cifran automáticamente
+- Cualquier persona que tenga acceso al cuaderno puede leerlas en texto claro
+- Es más difícil realizar copias de seguridad
+- No se puede usar en máquinas diferentes
+
+¿Qué permite configurar un perfil de contraseñas en los gestores automatizados?
+2
+- El número de dispositivos en los que sincronizar
+- La longitud y el tipo de caracteres según preferencias de uso
+- La velocidad a la que cambian las contraseñas
+- El número de intentos fallidos antes de bloquear la cuenta
+
+¿Qué problema de portabilidad resuelven los gestores de contraseñas?
+1
+- Facilitan migrar contraseñas entre máquinas y navegadores sin copiar y pegar manualmente
+- Impiden que otras personas usen tus contraseñas
+- Garantizan el cambio automático de contraseñas cada mes
+- Limitar la longitud máxima de las contraseñas
+
+¿Qué gestor local y solo para Windows mencionó el profesor que usa desde hace más de 30 años?
+4
+- KeePass
+- LastPass
+- 1Password
+- Password Safe
+
+¿Cuál es un inconveniente de usar navegadores web para gestionar contraseñas, además de la sincronización limitada?
+3
+- Generan contraseñas demasiado largas
+- Cifran las contraseñas con algoritmos débiles
+- No ofrecen herramientas para generar contraseñas fuertes automáticamente
+- No guardan nunca las contraseñas que creas
+
+¿Qué tipo de segundo factor de autenticación es especialmente vulnerable a ataques de SIM swapping?
+1
+- SMS enviado al móvil
+- Códigos TOTP generados por apps de autenticación
+- Llaves de seguridad físicas como YubiKey
+- Notificaciones push a aplicaciones móviles
+
+¿Cuál es la principal ventaja de usar aplicaciones de autenticación (TOTP) frente a SMS para 2FA?
+2
+- No requieren actualización de sistema operativo
+- Son resistentes al robo de SIM y al phishing
+- No generan códigos temporales
+- Solo funcionan en un dispositivo
+
+¿Qué ventaja ofrecen las llaves de seguridad físicas (por ejemplo, YubiKey) como segundo factor frente a las apps TOTP?
+3
+- No requieren conexión USB
+- Generan códigos automáticamente
+- Proporcionan protección adicional contra ataques de phishing y malware
+- Son gratuitas y de código abierto
+
+¿Cuál es una ventaja de la autenticación biométrica respecto a otros factores?
+4
+- No requiere voluntariedad para su uso
+- Tiene una tasa de falsos positivos de 1 en 10,000
+- Protege completamente contra suplantaciones
+- Es rápida y conveniente para el usuario
+
+¿Cuál es aproximadamente la tasa de incidencia de error (falsos positivos) del Face ID de Apple?
+1
+- 1 entre 1000
+- 1 entre 1,000,000
+- 1 entre 10,000
+- 1 entre 100
+
+¿Por qué la clase afirma que la autenticación biométrica no es completamente voluntaria?
+2
+- Porque siempre requiere PIN adicional
+- Porque los datos biométricos pueden tomarse sin consentimiento y usar tu huella sin querer
+- Porque caduca cada mes
+- Porque solo funciona si estás conectado a Internet
+
+¿Quién inventó el protocolo TOTP según lo mencionado en la clase?
+2
+- Martin Hellman
+- Leslie Lamport
+- Whitfield Diffie
+- Ronald Rivest
+
+¿Cuál de estos métodos es un ejemplo de aplicación de autenticación TOTP?
+3
+- SMS al correo electrónico
+- Llavero de seguridad físico
+- Google Authenticator
+- WhatsApp Business
+
+¿Qué diferencia principal existe entre el cifrado de disco completo (FDE) y el cifrado a nivel de archivo o carpeta?
+1
+- El FDE protege toda la unidad sin necesidad de seleccionar archivos específicos
+- El cifrado de archivo usa AES-512 mientras que el FDE usa AES-256
+- El FDE solo cifra el sistema operativo
+- El cifrado a nivel de archivo ofrece protección contra malware
+
+¿Qué solución de cifrado de disco completo es nativa de macOS?
+2
+- BitLocker
+- FileVault
+- LUKS
+- VeraCrypt
+
+¿Qué componente de hardware suele requerir Windows BitLocker para desencriptar automáticamente al arrancar sin pedir un PIN?
+1
+- TPM (Trusted Platform Module)
+- SSD NVMe
+- Cuenta de Microsoft
+- DirectX
+
+¿Qué herramienta multiplataforma de cifrado de disco mencionada se desarrolló como sucesora comunitaria de TrueCrypt?
+3
+- FileVault
+- BitLocker
+- VeraCrypt
+- LUKS
+
+¿Cuál es una ventaja del cifrado de disco frente a ataques de arranque en frío (cold boot attacks)?
+3
+- Mejora el rendimiento del sistema
+- Elimina la necesidad de contraseñas
+- Protege los datos en memoria volátil impidiendo extraer claves de RAM
+- Solo cifra archivos temporales
+
+¿Por qué el cifrado de discos SSD NVMe modernos suele tener un impacto despreciable en el rendimiento?
+4
+- Porque los SSD NVMe no pueden cifrar en hardware
+- Porque usan algoritmos de cifrado obsoletos
+- Porque solo cifran datos específicos
+- Porque la controladora del SSD realiza el cifrado de forma transparente en hardware
+
+¿Qué nombre recibe generalmente la implementación de cifrado de disco completo en Linux?
+1
+- LUKS
+- BitLocker
+- FileVault
+- eCryptFS
+
+¿Cuál es un riesgo de permitir que Windows o macOS guarden la clave de cifrado del disco en servicios como iCloud o Microsoft?
+2
+- Reduce la velocidad de arranque
+- Puede exponer la clave de recuperación a terceros a través de la nube
+- Impide cambiar el sistema operativo
+- Aumenta el espacio ocupado en disco
+
+¿Qué describe correctamente la estrategia 3-2-1 de copias de seguridad?
+1
+- Tres copias de los datos, en dos medios diferentes y una ubicada fuera del sitio
+- Tres medios de almacenamiento idénticos en la misma ubicación
+- Copia completa, incremental y diferencial cada vez
+- Tres respaldos locales en el mismo servidor
+
+¿Cuál de estas opciones describe correctamente un backup incremental?
+4
+- Genera una copia completa de todos los datos cada vez que se ejecuta
+- Copia todos los datos que han cambiado desde el primer backup
+- Es el backup más lento y exige más espacio
+- Solo copia los datos modificados desde el último backup, ya sea completo o incremental
+
+¿Qué backup es el más rápido de restaurar pero también requiere más almacenamiento?
+1
+- Backup completo
+- Backup diferencial
+- Backup incremental
+- Espejo (mirroring)
+
+¿Por qué las cintas de backup siguen usándose en grandes empresas?
+2
+- Porque permiten accesos aleatorios muy rápidos
+- Porque ofrecen alta capacidad de almacenamiento a bajo coste y gran longevidad
+- Porque no necesitan software especializado
+- Porque se pueden leer directamente en cualquier lector de DVD
+
+¿Por qué RAID no se considera una estrategia de backup?
+2
+- Porque RAID solo realiza snapshots automáticos
+- Porque no protege contra eliminación accidental de datos ni robo físico del disco
+- Porque solo funciona con discos SSD
+- Porque requiere internet para sincronizar
+
+¿Cuál es la principal razón para automatizar los backups?
+2
+- Reducir la velocidad de transferencia
+- Garantizar que se realicen sin intervención manual y evitar olvidos
+- Aumentar la compresión de los datos
+- Permitir restauraciones sin cifrado
+
+¿Qué ganancia aportan las pruebas de restauración periódicas de copias de seguridad?
+1
+- Verificar que los datos puedan recuperarse correctamente y que no estén corruptos
+- Reducir el espacio utilizado por los backups
+- Acelerar la creación de backups
+- Sustituir el cifrado por validación de datos
+
+¿Por qué es importante cifrar las copias de seguridad?
+2
+- Para acelerar la recuperación de datos
+- Para proteger la privacidad y prevenir la manipulación de los backups
+- Para aumentar la capacidad de almacenamiento
+- Para permitir la compresión sin pérdida
+
+¿Qué ventaja aporta un NAS doméstico en la estrategia de backup personal?
+3
+- No necesita energía eléctrica
+- Ofrece acceso remoto gratuito
+- Centraliza los datos y permite automatizar copias en varios dispositivos
+- Elimina la necesidad de usar discos duros
+
+¿Qué servicio de almacenamiento en la nube se recomienda para backups de “almacenamiento en frío” con bajo coste?
+4
+- Google Drive
+- Dropbox
+- OneDrive
+- Amazon S3 Glacier
+
+¿Qué consecuencia tuvo el gusano de Morris en 1988?
+1
+- Provocó una denegación de servicio en aproximadamente el 10% de las máquinas conectadas a Internet y motivó la creación del CERT
+- Robó credenciales de acceso de usuarios universitarios
+- Realizó ataques de phishing masivo
+- Generó una botnet de dispositivos IoT
+
+¿Qué empresas de alta tecnología fueron atacadas durante la Operación Aurora (2009/10)?
+2
+- Microsoft y Facebook
+- Google y Adobe
+- Apple y Amazon
+- IBM y Intel
+
+¿Qué resaltó el gusano Conficker (2008) respecto a la seguridad de los sistemas?
+2
+- La necesidad de usar contraseñas complejas
+- La importancia de mantener los sistemas operativos actualizados con los últimos parches
+- La eficacia de los antivirus gratuitos
+- La superioridad de los sistemas macOS
+
+¿Qué infraestructura crítica atacó el malware Stuxnet en 2010?
+4
+- Centrales hidroeléctricas de Brasil
+- Redes eléctricas de Rusia
+- Sistemas de transporte público en Japón
+- Planta nuclear iraní, dañando centrifugadoras de enriquecimiento de uranio
+
+¿Qué característica definió al malware CryptoLocker descubierto en 2013?
+3
+- Infectaba routers domésticos
+- Robaba credenciales de navegadores
+- Cifraba archivos locales y solicitaba rescate en Bitcoin
+- Actuaba como spyware para redes sociales
+
+¿Qué vulnerabilidad explotó el ransomware WannaCry en 2017?
+4
+- Fallo en el protocolo FTP
+- Vulnerabilidad en JavaScript
+- Puerta trasera en navegadores web
+- Vulnerabilidad SMB/EternalBlue de Windows sin parchear
+
+¿A qué país se atribuyó el ataque contra Sony Pictures en 2014, según las investigaciones oficiales?
+2
+- Rusia
+- Corea del Norte
+- China
+- Irán
+
+¿Cuántas cuentas de usuario se vieron afectadas en la brecha de seguridad de Yahoo entre 2013 y 2014?
+3
+- 3 millones
+- 300 millones
+- 3.000 millones
+- 30.000 millones
+
+¿Qué tipo de datos fueron robados en la brecha de seguridad de empleados federales de EE. UU. en 2015?
+1
+- Huellas dactilares y números de la Seguridad Social
+- Contraseñas de correo electrónico
+- Direcciones IP internas
+- Información prevista para licitaciones gubernamentales
+
+¿Qué característica tuvo la botnet usada en el ataque DDoS a Dyn en 2016?
+4
+- Estaba compuesta por miles de servidores de Google
+- Utilizaba vulnerabilidades de Java
+- Provenía de ataques de phishing
+- Estaba formada principalmente por dispositivos IoT comprometidos
+
+¿Qué información sensible expuso el ataque a Equifax en 2017?
+2
+- Fotografías y mensajes de texto
+- Números de la Seguridad Social, fechas de nacimiento y direcciones
+- Contraseñas de redes sociales
+- Historial de navegación web
+
+¿Qué gusano informático fue el primero en crear una botnet de millones de equipos en 2008?
+2
+- Gusano de Morris
+- Conficker
+- Stuxnet
+- Operation Aurora

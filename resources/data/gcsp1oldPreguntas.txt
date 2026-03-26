@@ -1,0 +1,139 @@
+¿Cuál es el objetivo principal de utilizar el Diferencial Semántico en los cuestionarios?
+3
+- Medir la consistencia interna
+- Determinar la facilidad de aprendizaje
+- Calificar actitudes hacia objetos
+- Evaluar la carga cognitiva
+
+¿Cuál es la principal razón para utilizar cuestionarios estandarizados en lugar de inventar uno propio?
+1
+- Han sido validados mediante métodos psicométricos
+- Ofrecen resultados instantáneos
+- Son más fáciles de crear
+- Requieren menos participantes
+
+¿Cuál es una limitación de los cuestionarios post-test y post-task?
+1
+- No proporcionan datos sobre el rendimiento objetivo
+- No miden la percepción subjetiva
+- Siempre requieren validación externa
+- Solo evalúan la estética visual
+
+¿Qué cuestionario se basa en la ISO 9241 para sus ítems?
+1
+- ISOMETRICS
+- WISAWI
+- SUS
+- SUMI
+
+¿Qué indica un número más alto en una escala Likert?
+3
+- Actitudes más negativas
+- Que se trata de una escala aditiva
+- Actitudes más positivas
+- Menor usabilidad
+
+¿Cuál no es un método válido para crear cuestionarios según el documento?
+4
+- Modelos teóricos de psicología
+- Estándares ISO
+- Metodología 'grounded theory'
+- Teorías de diseño gráfico
+
+¿Cuál de estos es un motivo válido para utilizar cuestionarios de UX?
+1
+- Comparar con versiones anteriores del producto
+- Ignorar las opiniones de los usuarios
+- Sustituir las pruebas de usabilidad
+- Determinar el precio adecuado al que debe lanzarse un producto
+
+¿Qué escala NO es mencionada como un tipo de escala para la creación de ítems de cuestionarios?
+1
+- Escala de Maslow
+- Likert
+- Diferencial semántico
+- Guttman
+
+¿Qué propiedades tienen las actitudes que se miden en los cuestionarios de UX?
+4
+- Objetivas y subjetivas
+- Positivas y negativas
+- Duración y frecuencia
+- Dirección e intensidad
+
+¿Qué aspecto no es evaluable mediante el Net Promoter Score según el documento?
+3
+- Lealtad del usuario
+- Satisfacción del cliente
+- Usabilidad
+- Impacto en las ventas
+
+¿Qué es el coeficiente Alpha de Cronbach?
+1
+- Una medida de fiabilidad
+- Una medida de validez de constructo
+- Una medida de causalidad
+- Una medida de validez de contenido
+
+¿Qué no se menciona como una limitación de los cuestionarios post-test y post-task?
+3
+- Son subjetivos y pueden no ser completamente fiables
+- No proporcionan indicaciones específicas sobre cómo mejorar
+- No son útiles para comparar distintas versiones de un producto
+- No recogen datos objetivos de rendimiento
+
+¿Qué cuestionario proporciona una medida global de la usabilidad del sitio o aplicación?
+1
+- SUS
+- CSUQ
+- SUMI
+- UMUX
+
+¿Cuál es la recomendación general sobre el valor objetivo de SUS para indicar una experiencia de usuario por encima de la media?
+3
+- Al menos 95
+- Al menos 65
+- Al menos 80
+- Al menos 50
+
+¿Cuál de las siguientes no es una dimensión de calidad de un cuestionario mencionada en el documento?
+3
+- Validez de constructo
+- Validez de contenido
+- Validez de causalidad
+- Validez de criterio
+
+El documento señala que la sensibilidad del SUS se ve afectada por varios factores. ¿Cuál de los siguientes NO es uno de ellos?
+2
+- Tipo de producto evaluado
+- Color del interfaz
+- Edad del usuario
+- Género del usuario
+
+¿Qué cuestionario está diseñado para medir la apariencia visual de sitios web?
+2
+- UMUX
+- WISAWI
+- ACSI
+- SUS
+
+¿Qué propósito principal tiene el SUS (System Usability Scale) según el documento?
+2
+- Proveer una medida específica de la eficiencia del sistema
+- Entregar una medida global de la usabilidad del sitio o aplicación
+- Comparar la facilidad de uso entre diferentes sistemas
+- Evaluar la estética visual de la aplicación
+
+¿Qué escala utiliza el Net Promoter Score (NPS) para evaluar la lealtad del usuario?
+4
+- 1 a 7
+- 0 a 5
+- 1 a 10
+- 0 a 10
+
+¿Cuál de las siguientes afirmaciones es correcta con respecto a la sensibilidad del SUS?
+3
+- La sensibilidad del SUS al tipo de plataforma (móvil, tablet, PC) es baja, mostrando puntuaciones uniformes a través de diferentes dispositivos.
+- El SUS es especialmente insensible al tipo de producto evaluado, lo que indica que las puntuaciones son consistentes a través de diferentes categorías de productos.
+- Aunque el SUS es sensible a la edad, no muestra una sensibilidad significativa al género de los participantes.
+- El SUS muestra una sensibilidad alta tanto a la edad como al género de los participantes, indicando diferencias significativas en las puntuaciones basadas en estos factores.

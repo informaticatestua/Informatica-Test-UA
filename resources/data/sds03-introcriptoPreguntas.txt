@@ -1,0 +1,419 @@
+¿Qué antigüedad aproximada tiene el primer ejemplo de cifrado conocido (la escítala espartana)?
+1
+Siglo V a. C.
+Siglo I a. C.
+Siglo I d. C.
+Siglo XVI d. C.
+
+¿En qué consiste el cifrado escítala espartana?
+3
+Sustitución monoalfabética
+Sustitución polialfabética
+Transposición sobre una vara enrollando un pergamino
+Cifrado por flujo de claves
+
+¿Cuál sería la “clave” en el cifrado escítala espartana?
+2
+El diámetro/longitud de la vara
+El orden en que se enrolla el pergamino
+El alfabeto desplazado
+El número de vueltas al pergamino
+
+El cifrado del César se basa en:
+2
+Transposición de bloques de letras
+Sustitución con desplazamiento fijo en el alfabeto
+Mezcla de transposición y sustitución
+Cifrado por flujo de clave aleatoria
+
+¿Qué operación matemática subyace al cifrado del César?
+1
+Aritmética modular sobre el tamaño del alfabeto
+Producto de matrices de sustitución
+Permutación de filas y columnas
+Operaciones lógicas bit a bit
+
+Si en un alfabeto de 27 letras aplicamos César con desplazamiento +3, ¿qué letra sustituye a la ‘Z’?
+3
+X
+A
+C
+D
+
+¿Cómo se denomina a un cifrado que utiliza múltiples alfabetos de sustitución alternando entre ellos?
+1
+Polialfabético
+Monoalfabético
+Transpositivo
+Híbrido
+
+El cifrado de Alberti introdujo:
+2
+Uso de una clave secreta en la posición de discos giratorios
+Rotación fija de 3 posiciones en el alfabeto
+Transposición de pares de letras
+Cifrado por flujo de clave pseudoaleatoria
+
+¿Qué combinación de técnicas se empleaba en las máquinas de la época de Wheatstone y Bazeries?
+4
+Sustitución polialfabética + transposición mecánica
+Sustitución monoalfabética + reemplazo manual
+Transposición de bloques + sustitución fija
+Transposición mecánica + sustitución variable por rotores
+
+¿Cuál fue el principal motivo de la gran revolución criptológica en el siglo XX antes del ordenador?
+3
+Necesidad de cifrar comunicaciones en las Guerras Mundiales
+Invención de la imprenta
+Aparición de códigos Morse
+Descubrimiento de la teoría de números
+
+¿Qué dos máquinas de cifrado de la Segunda Guerra Mundial destacaron por su complejidad y misterio?
+1
+Enigma y Hagelin
+Scytale y César
+Alberti y Vigenère
+Pállares y Jefferson
+
+¿Por qué quedaron obsoletos los métodos clásicos tras la llegada de los ordenadores?
+2
+Los ordenadores pueden probar exhaustivamente todos los espacios de clave
+Los algoritmos clásicos no permiten operaciones bit a bit
+No existía hardware para implementar sustituciones
+Los alfabetos clásicos se volvieron ilegibles
+
+¿Cómo se clasifica un sistema de cifrado en función de su resistencia a ataques asistidos por ordenador?
+1
+Computacionalmente seguro / Computacionalmente inseguro
+Simétrico / Asimétrico
+Stream / Block
+Monoalfabético / Polialfabético
+
+¿Quién es considerado el padre de la Teoría de la Información moderna?
+2
+Claude Shannon
+Alan Turing
+Whitfield Diffie
+Auguste Kerckhoffs
+
+¿Qué año marcó la publicación del Data Encryption Standard (DES)?
+1
+1974
+1948
+1976
+2001
+
+El concepto de cifrado de clave pública fue formalizado primero en un artículo de:
+3
+Diffie y Hellman
+Shannon y Weaver
+Rivest, Shamir y Adleman
+Diffie, Hellman y Merkle
+
+¿Qué algoritmo de clave pública se comercializó y patentó originalmente?
+2
+RSA
+Diffie-Hellman
+ECC
+ElGamal
+
+En criptología, ¿qué estudia el criptoanálisis?
+1
+Cómo romper criptosistemas y recuperar mensajes sin la clave
+Cómo diseñar nuevos criptosistemas seguros
+Cómo generar números aleatorios verdaderos
+Cómo implementar cifrado en hardware
+
+Según los elementos de seguridad informática, ¿qué garantiza la disponibilidad?
+4
+Que el servicio o recurso esté accesible cuando se necesite
+Que el mensaje permanezca secreto
+Que el mensaje no sea modificado
+Que el origen del mensaje sea auténtico
+
+¿Cuál de estos no es un elemento de seguridad informática según la diapositiva?
+3
+Autorización
+Disponibilidad
+Rendimiento
+Integridad
+
+¿Qué término en español corresponde a “plaintext”?
+1
+Texto en claro
+Texto plano
+Texto cifrado
+Criptograma
+
+En la terminología correcta, un “cifrador” es:
+3
+Un algoritmo de cifrado junto a sus parámetros de uso (criptosistema)
+Solo la clave secreta
+El componente que realiza la transformación de entradas en salidas cifradas
+El programa que genera claves
+
+¿Cómo se define el “espacio de claves”?
+2
+El número total de claves posibles de un criptosistema
+La longitud en bits de la clave
+El algoritmo de generación de claves
+El conjunto de claves utilizadas en una comunicación
+
+¿Qué diferencia hay entre contraseña y clave en criptografía?
+1
+La contraseña la introduce el usuario; la clave es la forma binaria que usa el cifrador
+La contraseña no se almacena; la clave siempre se almacena en texto claro
+No hay diferencia: son sinónimos
+La clave es más corta que la contraseña
+
+¿Cuál de estas es una primitiva criptográfica auxiliar y no un cifrador?
+2
+PRNG (generador pseudoaleatorio)
+AES (cifrado en bloque)
+RSA (cifrado asimétrico)
+DES (cifrado en bloque)
+
+¿Qué propiedad no ofrece una función hash criptográfica?
+3
+Reversibilidad (descifrado hacia el mensaje original)
+Compresión de entradas de tamaño arbitrario
+Detección de cambios en datos (integridad)
+Salida de longitud fija
+
+¿Para qué sirve un MAC (Message Authentication Code)?
+2
+Autenticar y verificar la integridad con una clave secreta
+Generar números aleatorios verdaderos
+Cifrar grandes volúmenes de datos rápidamente
+Comprimir datos sin pérdida
+
+Un PBKDF está diseñado para:
+1
+Derivar claves seguras a partir de contraseñas usando iteraciones y memoria
+Cifrar contraseñas en tránsito
+Generar números aleatorios criptográficos
+Calcular sumas de verificación rápidas
+
+¿Qué primitiva es la más adecuada para cifrar grandes volúmenes de datos de forma rápida y segura?
+4
+Criptografía simétrica (AES, etc.)
+RSA
+SHA-256
+DES3
+
+¿Cuál es la función principal de la criptografía asimétrica en las comunicaciones seguras?
+3
+Intercambio de claves y firma digital
+Cifrado de flujo de datos en tiempo real
+Generación de números aleatorios
+Hashing de contraseñas
+
+¿Por qué no se recomienda cifrar directamente con RSA un fichero grande?
+2
+Porque RSA opera sobre bloques menores que el tamaño de la clave (~clave modulus)
+Porque es demasiado lento y limitado al tamaño del módulo
+Porque no hay librerías para ello
+Porque no garantiza integridad
+
+¿Qué ventaja tienen los sistemas de clave pública sobre los clásicos simétricos?
+1
+No requieren intercambio previo de clave segura por un canal protegido
+Son más rápidos en cifrado de datos masivos
+Utilizan menos infraestructura criptográfica
+Siempre usan claves más cortas
+
+En la práctica de películas, ¿por qué es erróneo fijar dígitos de un código uno a uno?
+4
+Porque las posiciones no son independientes; cada combinación es única
+Porque los candados modernos usan códigos aleatorios
+Porque el código cambia automáticamente tras cada intento
+Porque un intento bloquea el candado
+
+Ganar el Euromillones es más probable que adivinar una clave de 128 bits porque…
+2
+El espacio de claves (2¹²⁸) es muchísimo mayor que las combinaciones de Euromillones (~1/140 M)
+Las probabilidades son equivalentes
+El Euromillones tiene más números
+128 bits = 128 intentos
+
+¿Qué sistema clásico citó el profesor como antecedente de la votación delegada en democracia?
+1
+Lentitud de la mensajería a caballo
+Fiabilidad del correo por palomas mensajeras
+Seguridad por cifrado de pergaminos
+Votaciones cribadas manualmente
+
+¿A qué corresponde la “hypótesis de Kerckhoffs”?
+3
+La seguridad debe residir en la clave, no en el algoritmo, que debe ser público
+El cifrado más seguro es el polialfabético
+Las máquinas Enigma no se debían compartir con aliados
+Los algoritmos deben patentar­se para asegurar su calidad
+
+¿Qué describe la propiedad de “confusión” según Shannon?
+2
+Relación compleja entre clave y salida cifrada
+Sustitución de símbolos
+Transposición de caracteres
+Uso de álgebra de sustitución
+
+¿Qué cifra simétrica histórica sigue usándose en la banca bajo triple aplicación?
+4
+DES3 (triple DES)
+AES
+Twofish
+DES
+
+¿Qué primitiva emplea Bitcoin para la prueba de trabajo (minería)?
+1
+Hash SHA-256
+AES en modo CTR
+RSA-2048
+HMAC-SHA1
+
+En términos de seguridad, ¿por qué es crítico usar un PRNG criptográfico en lugar de uno convencional?
+1
+Para que las salidas sean impredecibles incluso conociendo el estado interno
+Porque los PRNG convencionales no generan números binarios
+Porque los PRNG convencionales no funcionan en Go
+Porque los criptográficos son más rápidos
+
+¿Qué paquete de la biblioteca estándar de Go proporciona implementaciones de cifrado AES por bloque?
+1
+crypto/aes
+crypto/cipher
+crypto/rand
+encoding/hex
+
+Para cifrar en modo GCM (Galois/Counter Mode) con AES, ¿qué función crea la instancia AEAD?
+2
+cipher.NewCBCEncrypter
+cipher.NewGCM
+aes.NewCipher
+aes.GCM
+
+¿Qué modo de cifrado de AES ofrece autentificación integrada y es recomendado por su eficiencia y seguridad?
+2
+CBC
+GCM
+ECB
+CFB
+
+Para generar números aleatorios criptográficamente seguros, ¿qué fuente debe usarse en Go?
+1
+crypto/rand.Reader
+math/rand.Seed
+crypto/rand.Rand
+rand.Reader
+
+¿Qué paquete se utiliza para crear códigos de autentificación de mensajes (MAC) con HMAC?
+1
+crypto/hmac
+crypto/sha256
+encoding/base64
+crypto/rand
+
+Para comparar de forma segura dos HMAC y evitar ataques de temporización, ¿qué función se utiliza?
+3
+bytes.Equal
+reflect.DeepEqual
+hmac.Equal
+eqTimingSafe
+
+¿Qué paquete de Go maneja certificados X.509 y la configuración TLS?
+1
+crypto/x509
+crypto/tls
+net/http
+encoding/pem
+
+Para iniciar un servidor HTTPS en Go usando un certificado y clave en PEM, ¿qué función de net/http se emplea?
+1
+http.ListenAndServeTLS
+http.ListenAndServe
+tls.Listen
+http.ServeTLS
+
+¿Cómo se crea un bloque cifrador AES con una clave de 32 bytes (256 bits) en Go?
+1
+aes.NewCipher(key)
+cipher.NewGCM(key)
+aes.NewBlockCipher(key)
+cipher.Block(key)
+
+¿Qué paquete proporciona funciones de hashing de contraseñas seguras como bcrypt?
+2
+crypto/md5
+golang.org/x/crypto/bcrypt
+encoding/bcrypt
+crypto/bcrypt
+
+¿Cuál es la función para generar un hash bcrypt a partir de una contraseña?
+1
+bcrypt.GenerateFromPassword
+bcrypt.New
+bcrypt.Hash
+bcrypt.Encrypt
+
+Para verificar una contraseña contra un hash bcrypt, ¿qué función se utiliza?
+1
+bcrypt.CompareHashAndPassword
+bcrypt.CheckPassword
+bcrypt.ValidateHash
+bcrypt.Compare
+
+¿Qué paquete proporciona la implementación de Argon2 para hashing de contraseñas?
+2
+crypto/argon2
+golang.org/x/crypto/argon2
+encoding/argon2
+code.google.com/crypto/argon2
+
+Para cifrar datos en bloque con CBC, ¿qué longitud debe tener el IV para AES?
+1
+16 bytes
+8 bytes
+24 bytes
+32 bytes
+
+Después de cifrar con CBC es necesario usar padding. ¿Cuál de estos no es un esquema de padding común?
+4
+PKCS#7
+Zero padding
+ANSI X.923
+MD5 padding
+
+¿Qué función se usa para cifrar o descifrar flujos de datos con cifrado por bloque en modo CBC?
+2
+cipher.NewCBCEncrypter / cipher.NewCBCDecrypter
+cipher.NewGCM
+aes.NewStream
+aes.NewCBCMode
+
+Para leer datos aleatorios seguros en Go, ¿qué método convención debes usar?
+1
+io.ReadFull(crypto/rand.Reader, buf)
+rand.Read(buf)
+ioutil.ReadAll(crypto/rand)
+bufio.NewReader(crypto/rand)
+
+¿En Go, qué paquete ofrece utilidades para comparar de forma segura contraseñas y hashes de HMAC?
+3
+encoding/hex
+crypto/sha256
+crypto/subtle
+bytes
+
+¿Qué método del paquete crypto/tls se configura para verificar certificados de cliente?
+1
+Config.ClientAuth = tls.RequireAndVerifyClientCert
+Config.RootCAs.AddCert
+Config.PreferServerCipherSuites
+Config.InsecureSkipVerify = true
+
+¿Cómo se desactiva la comprobación de nombre de servidor en una conexión TLS (no recomendado)?
+4
+Config.InsecureSkipVerify = true
+Config.VerifyPeerCertificate = nil
+Config.Certificates = nil
+Config.MinVersion = tls.VersionTLS12

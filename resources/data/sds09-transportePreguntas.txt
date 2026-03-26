@@ -1,0 +1,1191 @@
+¿Cómo se denominan los datos cuando están siendo transmitidos por la red?
+2
+Datos en descanso
+Datos en tránsito
+Datos en reposo
+Datos en capa
+
+¿Cuál fue el nombre original del protocolo que hoy conocemos como TLS?
+1
+SSL
+SSH
+IPSec
+DTLS
+
+¿Qué versión de TLS es actualmente la más segura y rápida?
+3
+TLS 1.0
+TLS 1.2
+TLS 1.3
+TLS 1.1
+
+¿En qué consiste principalmente el «handshake» de TLS?
+2
+Cifrado simétrico de todos los datos
+Negociación de algoritmos, validación de certificados y generación de claves simétricas
+Compresión de las cabeceras HTTP
+Multiplexación de conexiones TCP
+
+¿Qué mecanismo de integridad utiliza TLS durante la transmisión?
+4
+CRC32
+SHA-1 puro
+MD5
+HMAC
+
+¿Qué protocolo emplea TLS para asegurar el tráfico HTTP?
+1
+HTTPS
+HTTP/2
+QUIC
+STARTTLS
+
+¿Qué tipo de validación de certificados muestra el nombre legal de la empresa en el navegador?
+3
+Domain Validation (DV)
+Organization Validation (OV)
+Extended Validation (EV)
+Basic Validation (BV)
+
+¿Qué protocolo creó Google originalmente para acelerar la web y sirvió de base a HTTP/2?
+1
+SPDY
+QUIC
+HTTP/1.1
+DTLS
+
+¿Cuál de estas características es propia de HTTP/2 frente a HTTP/1.1?
+2
+Usa UDP en lugar de TCP
+Multiplexación en una sola conexión y Server Push
+Cifrado obligatorio sin excepción
+Validación de certificados de cliente
+
+¿Qué elemento de seguridad obliga HTTP/2 a usar por defecto?
+3
+Compresión de datos
+Handshake rápido de TLS
+TLS (HTTPS)
+Autenticación mutua (mTLS)
+
+¿Sobre qué protocolo de transporte se construye QUIC (y por tanto HTTP/3)?
+2
+TCP
+UDP
+SCTP
+ICMP
+
+¿Qué ventaja aporta el «0-RTT» de QUIC/HTTP3?
+1
+Reducir latencia en visitas frecuentes
+Multiplexar varias conexiones TCP
+Comprimir cabeceras HTTP
+Validar dominios más rápido
+
+¿Qué protocolo sustituyó a Telnet para ofrecer acceso remoto seguro?
+4
+FTP
+HTTP
+IPSec
+SSH
+
+¿Cuál de estos métodos de autenticación en SSH evita ataques de fuerza bruta?
+2
+Autenticación por contraseña
+Autenticación por clave pública
+Autenticación por Kerberos
+Autenticación por OTP
+
+¿Qué comando o protocolo de SSH se usa para transferir archivos de forma segura?
+3
+HTTP
+HTTPS
+SFTP/SCP
+FTP
+
+En IPSec, ¿qué modo protege únicamente la carga útil del paquete IP?
+1
+Modo transporte
+Modo túnel
+Modo mixto
+Modo seguro
+
+¿Qué componente de IPSec proporciona confidencialidad, autenticidad e integridad?
+2
+AH (Authentication Header)
+ESP (Encapsulating Security Payload)
+IKE (Internet Key Exchange)
+HMAC
+
+¿Cuál de estos protocolos VPN es moderno, eficiente y muy fácil de configurar?
+4
+L2TP/IPSec
+PPTP
+OpenVPN
+WireGuard
+
+¿Qué extensión añade TLS de forma negociada a protocolos como SMTP o IMAP?
+3
+DTLS
+mTLS
+STARTTLS
+QUIC
+
+¿En qué situación es especialmente útil mTLS (mutual TLS)?
+2
+Para comprimir datos en tránsito
+Cuando cliente y servidor deben autenticarse mutuamente (p. ej. APIs internas)
+Para tunelizar puertos TCP
+Para acelerar conexiones web públicas
+
+¿Cuál es la principal diferencia entre datos “en tránsito” y “en reposo”?
+2
+Se cifran mediante hardware vs. software
+En tránsito se refiere a transmisión; en reposo a almacenamiento
+En tránsito se almacenan en memoria; en reposo en disco
+En reposo se cifran; en tránsito no
+
+¿TLS puede asegurar cualquier conexión TCP o solo HTTPS?
+2
+Solo conexiones HTTP
+Cualquier conexión TCP
+Solo conexiones FTP
+Solo conexiones SSH
+
+¿Qué protocolo cifra automáticamente las consultas DNS?
+3
+HTTPS
+TLS
+DNS over HTTPS (DoH)
+SSH
+
+¿Cuál es una ventaja de usar Cloudflare DNS 1.1.1.1?
+4
+Mayor ancho de banda
+Cifrado extremo a extremo
+Funciona sin Internet
+Privacidad y rapidez en resolución DNS
+
+¿Qué parte del tráfico web NO está protegida por HTTPS?
+2
+URL completa
+Consulta DNS
+Cuerpo de la respuesta HTTP
+Cabeceras HTTP
+
+Según GDPR, ¿qué tipo de cifrado es obligatorio?
+1
+Cifrado en tránsito y en reposo
+Solo cifrado en reposo
+Solo cifrado simétrico
+Ninguno
+
+¿Por qué no se emiten certificados TLS válidos para localhost?
+3
+Porque localhost no es un dominio público
+Porque TLS no soporta IP
+Porque no hay autoridad que valide IP loopback
+Porque no existe el protocolo
+
+¿Qué servicio permite ocultar los datos de registro WHOIS de un dominio?
+2
+DNSSEC
+Privacidad de WHOIS
+SPF
+CDN
+
+¿Cómo era el HTTP original de 1992?
+2
+Multiplexado y binario
+Texto plano y sin estado
+Basado en UDP
+Con cifrado integrado
+
+¿Por qué HTTP/1.1 era ineficiente para recursos múltiples?
+4
+No soportaba GET
+No soportaba cifrado
+No podía enviar imágenes
+Requería handshake y conexión para cada recurso
+
+¿Qué técnica de SPDY reducía el número de conexiones simultáneas?
+1
+Multiplexación en una sola conexión
+Compresión de imagen
+Validación de certificados
+Autenticación mutua
+
+¿Qué funcionalidad de HTTP/2 permite enviar recursos antes de que el cliente los solicite?
+2
+TLS 1.3
+Server Push
+DNS prefetch
+Header Compression
+
+¿Cuál es una mejora de control de flujo en HTTP/2?
+3
+Eliminación de TLS
+Compresión de datos
+Priorización de streams
+Encapsulación de paquetes
+
+¿Qué característica de HTTP/2 ayuda a mitigar ataques DDoS basados en múltiples handshakes?
+2
+Cifrado simétrico
+Conexión única multiplexada
+Uso de UDP
+Validación de cliente
+
+¿Qué es QUIC?
+2
+Una implementación de TLS sobre TCP
+Un protocolo de transporte sobre UDP integrado con TLS 1.3
+Un protocolo de enlace de datos
+Un estándar de WHOIS
+
+¿Cuál es la ventaja de QUIC respecto a TCP en cuanto al bloqueo de cabecera?
+1
+Elimina head-of-line blocking
+Elimina cifrado
+Aumenta la latencia
+Reduce cabeceras HTTP
+
+¿Qué permite la característica 0-RTT de QUIC?
+3
+Autenticación mutua
+Compresión de TLS
+Reanudar sesiones sin handshake completo
+Priorizar streams
+
+¿Qué protocolo remoto inseguro fue reemplazado por SSH?
+2
+HTTP
+Telnet
+FTP
+SMTP
+
+¿Qué algoritmo simétrico suele usar SSH para proteger datos en sesión?
+2
+RSA
+AES
+HMAC
+SHA-256
+
+En SSH, ¿qué garantiza la integridad de los mensajes?
+3
+AES
+RSA
+HMAC
+UDP
+
+¿Qué opción de SSH permite redirigir el puerto local a un puerto remoto de forma segura?
+1
+Túnel de puertos
+SCP
+SFTP
+FTP
+
+¿Cuál de estos NO es un modo de funcionamiento de IPSec?
+4
+Transporte
+Túnel
+Modo mixto
+Estático
+
+¿Qué componente de IPSec NO ofrece confidencialidad?
+2
+ESP
+AH
+HMAC
+IKE
+
+¿Cuál es una característica clave de WireGuard frente a OpenVPN?
+3
+Usa PPTP
+Requiere Java
+Configuración más sencilla y ligero
+Opera en modo túnel
+
+¿Cuál de estos se define como DTLS?
+3
+TLS sobre TCP
+HTTP seguro
+TLS adaptado para UDP
+SSH alternativo
+
+¿Para qué se usa STARTTLS?
+4
+Cifrar UDP
+Sustituir SSH
+Protocolo VPN
+Añadir TLS a SMTP/IMAP/POP3
+
+¿Qué riesgo existe al usar STARTTLS sin configuración estricta?
+2
+Demora alta
+Ataque de degradación (downgrade)
+Pérdida de datos
+Bloqueo de DNS
+
+¿Qué autenticación requiere mTLS que no exige TLS tradicional?
+1
+Certificado del cliente
+Cifrado simétrico
+Compresión de datos
+Multiplexación
+
+¿Qué biblioteca de Go incluye soporte experimental para HTTP/3 (QUIC)?
+4
+net/http estándar
+crypto/tls
+ssh
+quic-go
+
+¿Qué tipo de sistemas heredados suelen impedir actualizar protocolos de seguridad en empresas?
+3
+Sistemas Linux modernos
+Navegadores Chrome
+Máquinas virtuales con Windows 7 y Java antiguo
+Smartphones iOS
+
+¿Cuál de las siguientes fases NO forma parte del handshake inicial de TLS?
+4
+Negociación de algoritmos criptográficos
+Intercambio y validación de certificados
+Generación de clave simétrica
+Compresión de cabeceras HTTP
+
+¿Qué propiedad garantiza que una sesión TLS pasada no pueda comprometerse si la clave privada del servidor se expone posteriormente?
+3
+Reanudación de sesión
+HMAC
+Perfect Forward Secrecy
+Renegociación
+
+¿Qué mecanismo de reanudación de sesión TLS permite evitar un handshake completo?
+2
+Renegociación
+Session ID o Session Ticket
+Cipher Suite
+OCSP stapling
+
+¿Qué algoritmo asimétrico se usa comúnmente en el handshake TLS para intercambiar la clave premaster?
+1
+RSA
+AES
+HMAC
+ChaCha20
+
+¿Cuál de estas curvas elípticas es frecuentemente utilizada en TLS?
+2
+secp256k1
+X25519
+Curve25519
+P-521
+
+¿Qué header de seguridad obliga al navegador a usar siempre HTTPS tras la primera visita?
+3
+X-Frame-Options
+Content-Security-Policy
+Strict-Transport-Security
+X-XSS-Protection
+
+¿Qué protocolo sustituyó oficialmente a SSL 3.0?
+1
+TLS 1.0
+TLS 1.2
+TLS 1.3
+DTLS
+
+¿Qué ataque explota la compresión en TLS para filtrar datos sensibles?
+2
+Heartbleed
+CRIME
+BEAST
+POODLE
+
+¿Cuál es la finalidad principal de HTTPS?
+1
+Asegurar la comunicación HTTP mediante TLS
+Acelerar la descarga de recursos
+Autenticar clientes
+Comprimir respuestas
+
+¿Qué validación de certificado muestra solo el candado sin detalles de empresa?
+1
+Domain Validation (DV)
+Organization Validation (OV)
+Extended Validation (EV)
+Certificate Transparency
+
+¿Qué característica de HSTS mejora la seguridad de HTTPS?
+2
+Permite downgrade attacks
+Fuerza HTTPS durante un periodo definido
+Comprime cabeceras HTTP
+Multiplexa conexiones
+
+¿Qué protocolo ayuda a comprobar la revocación de certificados en tiempo real?
+3
+CRL
+DNSSEC
+OCSP
+HTTP/2
+
+¿Qué header se usa para especificar un pinning de certificado?
+2
+X-Content-Type-Options
+Public-Key-Pins
+X-Powered-By
+X-Frame-Options
+
+¿Qué estándar recomienda evitar HPKP debido a riesgos de bloqueo accidental?
+1
+RFC 9239
+RFC 5246
+RFC 2818
+RFC 7540
+
+¿Qué cabecera CSP sirve para mitigar ataques de inyección de scripts?
+1
+Content-Security-Policy
+X-Content-Type-Options
+HSTS
+HPKP
+
+¿Qué flag de cookie refuerza la seguridad en HTTPS?
+2
+Secure flag
+HttpOnly
+SameSite
+Path
+
+¿Qué archivo contiene la petición para emitir un certificado TLS?
+1
+CSR (Certificate Signing Request)
+CRT
+PEM
+PFX
+
+¿Qué mecanismo permite comprobar si un certificado ha sido revocado sin descargar toda la lista?
+3
+CRL
+HSTS
+OCSP
+HPKP
+
+¿Qué nivel de autoridad emite certificados intermedios en una PKI?
+2
+Intermediate CA
+Root CA
+End-entity
+OCSP responder
+
+¿Qué técnica aumenta la seguridad haciendo coincidir el certificado esperado con uno presentado?
+4
+Certificate pinning
+DNSSEC
+OCSP stapling
+Certificate revocation
+
+¿Cuál es la función de un CRL?
+3
+Listar certificados revocados
+Confirmar validez de dominios
+Comprimir certificados
+Intercambiar claves simétricas
+
+¿Qué formato binario se usa comúnmente para almacenar certificados y claves?
+1
+DER
+PKCS#12
+PEM
+CSR
+
+¿Cuál es el periodo máximo recomendado para la vigencia de un certificado DV en navegadores modernos?
+1
+398 días
+2 años
+5 años
+10 años
+
+¿Qué foro define directrices para algoritmos en certificados TLS?
+3
+CA/B Forum
+Mozilla
+IETF
+Cloudflare
+
+¿Qué técnica comprime cabeceras HTTP en HTTP/2?
+2
+HPACK
+GZIP de cuerpo
+Brotli
+Deflate de SSL
+
+¿Qué funcionalidad permite a HTTP/2 priorizar recursos según necesidad?
+1
+Priorización de streams
+DNS prefetch
+OCSP Stapling
+Public Key Pinning
+
+¿Cuál es un beneficio de Server Push en HTTP/2?
+4
+Envía recursos sin solicitud explícita
+Elimina TLS
+Evita handshake
+Acelera DNS
+
+¿Cómo llama HTTP/2 a la apertura de nuevos canales de datos dentro de una conexión?
+1
+Streams
+Channels
+Threads
+Multiplex
+
+¿Qué puerto estándar usa HTTP/2 con cifrado?
+1
+443
+80
+8080
+8443
+
+¿Qué ataque explota cabeceras comprimidas en HTTP/2?
+1
+BREACH
+BEAST
+POODLE
+Heartbleed
+
+¿Qué mecanismo permite la multiplexación de peticiones HTTP/2?
+2
+Una única conexión TCP multiplexada por streams
+Múltiples conexiones TCP
+UDP
+SCTP
+
+¿HTTP/2 obliga a usar TLS en todas las implementaciones?
+3
+Recomendado pero no obligado por especificación
+Sí, siempre
+No, nunca
+Solo en servidores Google
+QUIC y HTTP/3 (8 preguntas)
+
+¿Qué transporte usa QUIC para enviar datagramas?
+1
+UDP
+TCP
+SCTP
+ICMP
+
+¿Qué versión de TLS usa QUIC de forma nativa?
+2
+TLS 1.3
+TLS 1.2
+SSL 3.0
+DTLS
+
+¿Qué beneficio aporta el 0-RTT en QUIC/HTTP 3?
+3
+Inicio rápido sin handshake completo
+Compresión de cabeceras
+Multiplexación
+Validación OCSP
+
+¿Cuál es un riesgo asociado al uso de 0-RTT?
+2
+Ataques replay
+Falta de integridad
+Latencia alta
+DDoS
+
+¿Qué funcionalidad de QUIC mejora el cambio entre Wi-Fi y datos móviles?
+4
+Roaming sin perder conexión
+Compresión de SSL
+Multiplex en TCP
+Mantenimiento de conexión con cambio de IP
+
+¿Qué problema de TCP intenta resolver QUIC?
+1
+Head-of-Line blocking
+Ataques DDoS
+Revocación de certificados
+Pérdida de DNS
+
+¿Qué RFC define QUIC?
+1
+RFC 9000
+RFC 7540
+RFC 5246
+RFC 3962
+
+¿Qué servidor web requiere módulo adicional para HTTP 3?
+3
+NGINX/opcional módulo
+IIS
+Lighttpd
+Caddy
+
+¿Qué puerto estándar utiliza SSH?
+2
+22
+21
+23
+80
+
+¿Qué protocolo inseguro reemplazó SSH por seguridad?
+1
+Telnet
+FTP
+HTTP
+POP3
+
+¿Cuál de estos métodos de autenticación SSH es más seguro?
+4
+Clave pública
+Challenge-response
+Kerberos
+Usuario/contraseña
+
+¿Qué comando SSH copia archivos de forma segura?
+1
+scp
+ftp
+sftp
+rsync
+
+¿Qué característica de SSH permite redirigir puertos locales a remotos?
+1
+Túneles SSH
+Agent forwarding
+X11 forwarding
+Multiplex
+
+¿Qué versión de SSH es la recomendada?
+2
+SSH-2
+SSH-1
+SSH-1.99
+SSH-3
+
+¿Qué cifrado simétrico puede usar SSH para proteger datos?
+1
+AES
+RSA
+MD5
+SHA-1
+
+¿Qué función permite usar la autenticación de agente en SSH (ssh-agent)?
+3
+Agent forwarding
+Port forwarding
+X11 forwarding
+Host-based authentication
+
+¿Qué componente de IPSec proporciona autenticación e integridad sin confidencialidad?
+1
+AH
+ESP
+IKE
+NAT-T
+
+¿Qué modo de IPSec encapsula todo el paquete IP dentro de otro?
+1
+Modo túnel
+Modo transporte
+Modo mixto
+Modo fragmentado
+
+¿Qué protocolo se encarga del intercambio de claves en IPSec?
+1
+IKE
+HMAC
+ESP
+OSPF
+
+¿Qué puerto UDP usa IKEv2 por defecto?
+1
+500
+137
+1701
+4500
+
+¿Qué algoritmo de cifrado es típico en ESP?
+3
+AES
+MD5
+HMAC
+RSA
+
+¿Cuál es una aplicación común de IPSec?
+1
+VPN site-to-site
+Control de acceso Wi-Fi
+Cifrado de correo electrónico
+Multiplexación HTTP
+
+¿Qué entidad representa una Security Association en IPSec?
+4
+SA
+CA
+OCSP
+CRL
+
+¿Qué RFC define AH y ESP?
+2
+RFC 4301
+RFC 2401
+RFC 7540
+RFC 9000
+
+¿Qué protocolo VPN moderno se basa en UDP y es fácil de configurar?
+3
+WireGuard
+OpenVPN
+IPSec
+L2TP
+
+¿Cuál de estos no es prevalente en VPN actuales?
+4
+Telnet
+IPSec
+OpenVPN
+WireGuard
+
+¿Qué tecnología VPN ofrece roaming sin abrir puertos?
+4
+Tailscale
+L2TP/IPSec
+PPTP
+SSTP
+
+¿Qué servicio VPN basado en WireGuard suelen bloquear algunas universidades?
+4
+Tailscale
+OpenVPN
+IPSec
+PPTP
+
+¿Qué característica es clave en redes Zero Trust?
+2
+Acceso sin privilegios predeterminados
+Autenticación continua de cada conexión
+Uso de PPTP
+Uso de HTTP
+
+¿Qué protocolo VPN obsoleto es fácil de romper?
+3
+PPTP
+IKEv2
+SSTP
+WireGuard
+
+¿Qué factor geográfico puede engañar la localización de una VPN?
+1
+El ISP asignado IP
+El certificado TLS
+El encryption cipher
+La compresión HTTP
+
+¿Cuál es un beneficio de usar un VPN en Wi-Fi pública?
+3
+Proteger tráfico DNS y TCP
+Acelerar HTTP/2
+Multiplexar conexiones
+Validar certificados
+
+¿Qué variante de TLS funciona sobre UDP?
+1
+DTLS
+SSL
+HTTPS
+QUIC
+
+¿Para qué se usa principalmente DTLS?
+2
+Aplicaciones en tiempo real (VoIP, WebRTC)
+Conexiones HTTP seguras
+Transferir archivos grandes
+Gestión de certificados
+
+¿Qué característica de DTLS ayuda con la pérdida de paquetes?
+3
+Tolerancia al desorden
+Multiplexación
+Retransmisión implícita
+Cifrado simétrico
+
+¿Qué protocolo de videoconferencia utiliza DTLS?
+2
+WebRTC
+SIP
+FTP
+HTTP/3
+
+¿Cómo maneja DTLS la falta de conexión orientada?
+1
+Incluye secuencias y retransmisiones
+Usa TCP internamente
+Multiplexa streams
+Usa Wireshark
+
+¿DTLS puede implementar renegociación como TLS?
+4
+No, tiene limitaciones
+Sí, de la misma forma
+Solo con TCP
+Nunca
+
+¿Qué header HTTP es irrelevante para DTLS?
+3
+Strict-Transport-Security
+Content-Type
+Transfer-Encoding
+Cache-Control
+
+¿Qué vulnerabilidad de TLS también puede afectar a DTLS?
+2
+CRIME
+BEAST
+POODLE
+DDoS
+
+¿Qué extensión añade TLS a protocolos de correo como SMTP?
+1
+STARTTLS
+SMTPS
+DTLS
+HTTPS
+
+¿Qué peligro conlleva usar STARTTLS mal configurado?
+1
+Ataque de degradación (downgrade)
+Replay attack
+CRIME
+HSTS mal configurado
+
+¿Cómo inicia un cliente la negociación STARTTLS?
+3
+Enviando comando STARTTLS
+Conectando al puerto 465 seguro
+Comando EHLO
+Descargando CRL
+
+¿Qué puerto estándar usa SMTP con STARTTLS?
+2
+587
+25
+465
+110
+
+¿Por qué STARTTLS se considera menos seguro que TLS implícito?
+1
+Permite ataque de degradación
+Usa UDP
+No cifra cabeceras
+No comprime datos
+
+¿Qué protocolo NO soporta STARTTLS?
+3
+FTP
+DNS
+POP3
+IMAP
+
+¿Qué mecanismo mitiga el downgrade en STARTTLS?
+4
+MTA-STS
+OCSP stapling
+DNSSEC
+HSTS for SMTP
+
+¿Qué puerto usa POP3 con STARTTLS?
+3
+143
+993
+110
+21
+
+¿Qué diferencia principal tiene mTLS respecto a TLS habitual?
+3
+Autenticación mutua de cliente y servidor
+Usa UDP
+Comprime datos mutuamente
+No usa certificados
+
+¿Para qué se emplea mTLS en microservicios?
+1
+Asegurar comunicación bidireccional
+Acelerar HTTP
+Evitar CRL
+Renegociación
+
+¿Qué implicación tiene mTLS en gestión de certificados?
+2
+Requiere emitir certificados para clientes
+Debe revocar automáticamente
+Elimina OCSP
+Usa solo DV
+
+¿En qué capa opera mTLS?
+3
+Capa de transporte
+Capa de aplicación
+Capa de red
+Capa física
+
+¿Cuál es un uso típico de mTLS?
+4
+APIs internas seguras
+Streaming multimedia
+DNS recursivo
+Compresión de cabeceras
+
+¿Qué header HTTP es innecesario en mTLS?
+2
+WWW-Authenticate
+Public-Key-Pins
+Strict-Transport-Security
+Content-Security-Policy
+
+¿Un cliente sin certificado válido en mTLS puede…?
+1
+Ser denegado acceso
+Leer datos
+Renegociar handshake
+Iniciar sesión
+
+¿Qué protocolo se combina con mTLS en arquitecturas Zero Trust?
+3
+gRPC mutual TLS
+SSH
+STARTTLS
+IPSec
+
+¿Qué extensión asegura la integridad de las respuestas DNS?
+1
+DNSSEC
+DoH
+DoT
+STARTTLS
+
+¿Qué puerto usa DoH normalmente?
+1
+443
+53
+853
+80
+
+¿Qué ventaja tiene DoT sobre DNS tradicional?
+3
+Cifrado de consultas DNS
+Mayor compatibilidad
+Opera en UDP
+Requiere certificados DV
+
+¿Qué protocolo DNS usa HTTP para transportar consultas?
+2
+DoH
+DNSSEC
+QUIC
+SPDY
+
+¿Qué aspecto NO cubre DNSSEC?
+4
+Cifrado de datos
+Integridad
+Autenticidad
+Latencia
+
+¿Qué servidor DNS gratuito implementa DoH?
+2
+1.1.1.1
+8.8.8.8
+9.9.9.9
+208.67.222.222
+
+¿Qué ataque falsifica respuestas DNS?
+1
+DNS spoofing
+CRIME
+BEAST
+XSS
+
+¿Qué beneficio aporta combinar DoH y HTTPS?
+3
+Privacidad completa en navegación
+Multiplexación
+Reducción de latencia
+Evita CRL
+
+¿Qué vulnerabilidad afectó a OpenSSL en 2014?
+3
+Heartbleed
+POODLE
+BEAST
+CRIME
+
+¿Qué ataque explota el fallback forzado a SSL 3.0?
+1
+POODLE
+BREACH
+BEAST
+CRIME
+
+¿Qué mitigación aplica TLS para proteger contra BEAST?
+2
+Uso de GCM
+Eliminación de CBC
+RC4 como fallback
+DES
+
+¿Qué mejora de protocolo reduce la vulnerabilidad a DoS por handshakes?
+2
+HTTP/2
+SSH
+DTLS
+QUIC
+
+¿Qué ataque explota compresión TLS y HTTP/1.1?
+1
+BREACH
+CRIME
+POODLE
+Heartbleed
+
+¿Qué característica de HTTP/3 dificulta inyección de paquetes?
+4
+Cifrado integrado y conexión única
+Compresión HPACK
+Dial UDP
+Uso de HTTP textual
+
+¿Contra qué vulnerabilidad TLS se introdujo encrypt-then-MAC?
+2
+BEAST
+CRIME
+Heartbleed
+STARTTLS downgrade
+
+¿Qué herramienta permite analizar handshakes TLS?
+1
+Wireshark
+curl
+openssl s_client
+dig
+
+En NGINX, ¿qué directiva define el archivo de certificado TLS?
+1
+ssl_certificate
+ssl_protocols
+ssl_ciphers
+ssl_prefer_server_ciphers
+
+En Apache, ¿qué módulo se habilita para HTTP/2?
+2
+mod_http2
+mod_ssl
+mod_gnutls
+mod_rewrite
+
+¿Qué comando permite probar la conexión TLS a un servidor?
+3
+openssl s_client
+ping
+telnet
+ssh
+
+¿Qué opción de openssl muestra la cadena de certificados?
+1
+-showcerts
+-verify
+-issuer
+-certinfo
+
+¿Qué herramienta automatiza certificados Let’s Encrypt?
+1
+Certbot
+Wireshark
+OpenSSL
+Acme.sh
+
+Para habilitar OCSP stapling en NGINX, ¿qué directiva se usa?
+1
+ssl_stapling
+ssl_ocsp
+ssl_handshake_timeout
+ssl_session_cache
+
+¿Qué registro DNS se usa en el desafío DNS-01 de Let’s Encrypt?
+3
+TXT
+CNAME
+A
+MX
+
+¿Qué cabecera de seguridad se configura en Apache con Header always set?
+2
+Strict-Transport-Security
+Content-Security-Policy
+Public-Key-Pins
+X-Frame-Options
+
+¿Qué paquete de Go implementa TLS en la biblioteca estándar?
+1
+crypto/tls
+net/http
+net
+encoding/pem
+
+¿Qué paquete externo ofrece soporte para HTTP/3 en Go?
+4
+github.com/lucas-clemente/quic-go
+http3
+tls3
+quic-go
+
+¿Cómo crea un cliente HTTP con TLS personalizado en Go?
+2
+&http.Client{Transport: &http.Transport{TLSClientConfig: cfg}}
+http.Client{TLSConfig: cfg}
+tls.Dial
+net.DialTLS
+
+¿Qué paquete de Go provee funcionalidades SSH?
+3
+golang.org/x/crypto/ssh
+net/ssh
+crypto/ssh
+ssh
+
+¿Qué función Go carga un par de certificado y clave del disco?
+1
+tls.LoadX509KeyPair
+tls.Config{}
+os.Open
+pem.Decode
+
+¿Qué método añade certificados CA a un pool en Go?
+2
+certPool.AppendCertsFromPEM
+x509.NewCertPool
+tls.GenerateCA
+net.Listen
+
+¿Qué función Go lee y decodifica un PEM del disco?
+3
+ioutil.ReadFile + pem.Decode
+tls.DecodePEM
+os.ReadPEM
+ioutil.ReadFile + tls.X509KeyPair
+
+¿Qué import no estándar añade HTTP/2 en Go?
+1
+_ "golang.org/x/net/http2"
+_ "crypto/http2"
+_ "net/http2"
+_ "http2"
+

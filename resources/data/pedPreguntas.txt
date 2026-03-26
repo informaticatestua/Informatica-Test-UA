@@ -1,0 +1,3282 @@
+Las operaciones constructoras modificadoras permiten generar, por aplicaciones sucesivas, todos los valores del TAD a especificar.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Dada la sintaxis de la función IC(lista,item) → lista, que inserta un elemento a la cabeza de la lista pasada como parámetro y crear() → lista, que crea una lista vacía. La siguiente secuencia: IC(IC(IC (crear(),a),b),c), daría como resultado una lista con los elementos en este orden: a→b→c (siendo a el primer elemento de la lista).
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+La complejidad temporal (en su caso promedio) del siguiente fragmento de código es Θ(n^2): int i, length, n, i1, i2, k; n=20; for (i = 0, length = 1; i < n-1; i++) { for (i1 = i2 = k = i; k < n-1 && a[k] < a[k+1]; k++, i2++); if (length < i2 - i1 + 1) length = i2 - i1 + 1; }
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Paso de programa es una secuencia de operaciones con contenido semántico cuyo coste es dependiente de la talla del problema.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+La semántica de la operación base (vista en clase) que actúa sobre una pila y devuelve el primer elemento apilado es la siguiente (p: pila, x: ítem): base(crear())=error_item() base(apilar(crear(),x))=x base(apilar(p,x))=base(p)
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Las colas también se conocen como listas FIFO.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Existe un único árbol binario completo que se puede construir a partir del recorrido en postorden.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+La profundidad de un subárbol es la longitud del único camino desde la raíz a dicho subárbol.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Cuando realizamos un recorrido por niveles en un árbol binario de búsqueda las etiquetas aparecen ordenadas de menor a mayor.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Suponiendo que tenemos un árbol binario de búsqueda lleno con n elementos (siendo n impar), la búsqueda del elemento que ocupa la posición n/2(parte entera)+1 según la relación de orden, se realiza en tiempo logarítmico.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Según la especificación algebraica del ABB vista en clase, esta ecuación que forma parte del borrado de un elemento es correcta: si ( y==x ) y no esvacio( d ) y no esvacio( i ) entonces borrar( enraizar( i, x, d ), y ) = enraizar(borrar(i, max(i)) , max(i) , d ) fsi Siendo max(i) una operación que se aplica sobre un ABB y devuelve el ítem mayor de dicho ABB.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Un árbol binario de búsqueda con 3 elementos siempre será un árbol completo.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+En el vector de dimensión n (siendo el número de elementos del árbol) que representa de forma secuencial un árbol binario completo pueden existir posiciones vacías.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+La semántica de la operación multiplicación de números naturales vista en clase es la siguiente: mult(cero, x) = cero; mult(x, cero) = cero; mult(suc(y), x) = suma(mult(y, x), x)
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+En C++, el constructor de copia se puede invocar: (1) de forma explícita en la declaración de una variable; (2) en el paso por valor de un objeto en una función; (3) en la devolución de un objeto por valor en una función.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+El resultado del cálculo de la complejidad temporal en el mejor caso de un algoritmo X, da como resultado log n + n*log n. Por lo tanto, diremos que la complejidad del algoritmo X cuando n → ∞ pertenece a Ω (n*log n).
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Sea el conjunto de los números naturales definidos en clase. La sintaxis y la semántica de la operación factorial de un número natural es la siguiente: factorial: natural → natural Var x: natural; factorial (cero) = suc(cero) factorial (suc(x))= suc(multiplicacion(x, factorial (x))
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Sea la operación mismalongitud que actúa sobre dos instancias del TAD pila definido en clase. Dicha operación determina si las dos instancias contienen el mismo número de elementos. La especificación algebraica para mismalongitud es la siguiente: mismalongitud: pila, pila → booleano Var p1,p2: pila, x, y:item mismalongitud(crear_pila, crear_pila) = VERDADEROmismalongitud(apilar(p1,x), crear_pila) = FALSO mismalongitud(crear_pila, apilar(p1,y)) = FALSO mismalongitud(apilar(p1,x), apilar(p2,y)) = mismalongitud(p1,p2)
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Sea el Vector de números naturales definido en clase. La operación EliminaImpares, que borra las posiciones impares del vector marcándolas con “0”, se define así: (Nota: se asume que existen las operaciones básicas de los números naturales incluida MOD) EliminaImpares: vector → vector Var v: vector; i: entero; x: natural; EliminaImpares (crear_vector()) = crear_vector() si (i MOD 2) == 1 entonces EliminaImpares (asig(v,i,x)) = asig(EliminaImpares (v),i,0) si no EliminaImpares (asig(v,i,x)) = asig(EliminaImpares (v),i,x)
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Las operaciones constructoras generadoras de un TAD permiten obtener, por aplicaciones sucesivas, cualquier valor de dicho TAD.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+La complejidad temporal (en su caso promedio) del siguiente fragmento de código es Θ(n^2) (La variable a representa un vector de enteros de tamaño n) int i, length, n, i1, i2, k; n=20; for (i = 0, length = 1; i < n-1; i++) { for (i1 = i2 = k = i; k < n-1 && a[k] < a[k+1]; k++, i2++); if (length < i2 - i1 + 1) length = i2 - i1 + 1; }
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+En una cola circular enlazada, el elemento apuntado por fondo es el primero a desencolar.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+El subárbol que representa la raíz de un árbol binario tiene un ascendiente propio.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+El grado de un árbol es el grado mínimo de todos los nodos de ese árbol.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+El nivel de un nodo en un árbol coincide con la longitud del camino desde la raíz a dicho nodo.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+El máximo número de nodos en un nivel i-1 de un árbol binario es 2^{i-2}, i ≥ 2 .
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Es posible reconstruir un único árbol binario de búsqueda con altura 5 y 30 nodos teniendo su recorrido en preorden.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+La especificación algebraica vista en clase para el recorrido preorden, pero visitando primero la derecha y después la izquierda (RDI) es la siguiente: preorden( arbin ) -> lista; VAR i, d: arbin; x: item; preorden( crea_arbin( ) ) = crea_lista( ); preorden( enraizar( i, x, d ) ) = concatenar( insiz( x, preorden( i ) ), preorden( d ) )
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Siempre es posible reconstruir un único árbol binario teniendo sus recorridos en preorden, postorden y niveles.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+A los árboles multicamino de búsqueda también se les llama árboles generales.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Se puede reconstruir un único árbol binario de búsqueda teniendo sus recorridos en preorden y postorden.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+En C++, el puntero this se tiene que declarar en todos los constructores de la clase. 
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Para el siguiente fragmento de código C++ de un posible método perteneciente a la conocida clase TCoordenada, la línea “delete [ ] b;" liberaría correctamente la memoria dinámica de b. void TCoordenada::Funcion(void) {  TCoordenada *a =new TCoordenada;  TCoordenada *b = new TCoordenada[5]; (. . . . . . .)  delete [ ] b; }
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+En la especificación algebraica de los números naturales vista en clase, la sintaxis y la semántica de la operación de multiplicación (mult) es la siguiente: mult : natural natural --> natural; VAR x, y: natural; mult(cero, x) = cero; mult(x, cero) = cero; mult(suc(y), x) = suma(mult(y, x), x)
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+La complejidad temporal en su peor caso de la operación apilar en una pila utilizando una representación enlazada siempre es lineal.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+El resultado del cálculo de la complejidad temporal en el mejor caso de un algoritmo X, da como resultado n + n*log(n). Por lo tanto, diremos que la complejidad del algoritmo X cuando n -> ∞ pertenece a Ω (n).
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+La operación Examen que se aplica sobre cualquier pila y devuelve el segundo elemento que fue apilado en la pila es la siguiente: Examen(pila) -> item; VAR p: pila, e,x: item; examen( crear( ) ) = error_item( ); examen( apilar(crear( ), x )) = error_item( ); examen( apilar( apilar (p,e ), x) ) = e
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+El grado de un árbol es el máximo nivel que pueden tener sus subárboles. 
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+La especificación algebraica vista en clase para el recorrido preorden, pero visitando primero la derecha y después la izquierda (RDI) es la siguiente: preorden( arbin ) -> lista; VAR i, d: arbin; x: item; preorden( crea_arbin( ) ) = crea_lista( ); preorden( enraizar( i, x, d ) ) = concatenar( insiz( x, preorden( d ) ), preorden( i ) )
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Existe un único árbol binario de búsqueda que se puede construir a partir del recorrido en inorden.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+La operación de buscar un elemento en un árbol binario de búsqueda tiene una complejidad temporal lineal en el mejor caso.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Sea un árbol binario lleno cuyo recorrido en Inorden es: 10,15,17,20,21,28,35. La secuencia de árboles cuyas etiquetas son 35,28,20 es un CAMINO en el mencionado árbol.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Todo árbol completo cumple las condiciones para ser un árbol AVL.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Las rotaciones que hay que realizar en los árboles AVL para mantenerlos balanceados tienen un coste temporal (en su peor caso) lineal con respecto al número de items del árbol
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+El número de nodos en un árbol AVL siempre es menor o igual que (2^h - 1) siendo h la altura del árbol.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Cuando se realiza una inserción en un árbol AVL, en el camino de vuelta atrás para actualizar los factores de equilibrio, como máximo solo se va a efectuar 1 rotación.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+En la especificación algebraica, una operación es una función que toma como parámetros (entrada) uno o más valores de diversos tipos, y produce como resultado un solo valor de otro tipo.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Las ecuaciones (vistas en clase) que permiten realizar la multiplicación de números naturales son las siguientes: VAR x, y: natural; mult(cero, x) = cero; mult(x, cero) = cero; mult(suc(y), x) = suma(mult(y, x), x);
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+En la especificación algebraica, para el tratamiento de errores se añade una constate a la signatura que modeliza un valor de error, por ejemplo errornat → natural.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+En C++, si se declara un objeto a (p. ej. TPoro a;) cuando la variable a se sale de ámbito entonces se invoca automáticamente al destructor de ese objeto.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Las ecuaciones (vistas en clase) para la operación recu de un vector son las siguientes: recu( crear( ), i ) = error( ); recu( asig(v, i, x ), j ); si ( i == j ) entonces j; si no recu( v, j ) fsi
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+La complejidad temporal de la operación desapilar (vista en clase) utilizando vectores (con un índice que indica la cima de la pila) o utilizando listas enlazadas es la misma.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+La complejidad temporal del siguiente fragmento de código es O(n^2): int i, j, n, sum; for (i = 4; i < n; i++) {  for (j = i-3, sum = a[i-4]; j <= i; j++) sum += a[j]; cout << “La suma del subarray “ << i-4 << “ es “ << sum << endl; }
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+En las colas circulares enlazadas vistas en clase, las operaciones encolar y desencolar tienen complejidad temporal Θ(1).
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Las ecuaciones (vistas en clase) para la operación desencolar son las siguientes: desencolar( crear( ) ) = crear( ); si esvacia( c ) entonces;desencolar( encolar( c, x ) ) = crear ( ) ;si no desencolar( encolar( c, x ) ) = ;encolar( desencolar ( c ), x );
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Es posible reconstruir un único árbol binario de búsqueda a partir de un recorrido en preorden
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Un camino en un árbol es una secuencia a_1, ..., a_s de árboles tal que para todo i ∈ {1, ..., s-1}, a_i es subárbol de a_{i+1}.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+A los árboles generales también se les llama árboles multicamino de búsqueda
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+La semántica de la operación quita_hojas que actúa sobre un árbol binario y devuelve el árbol binario original sin sus hojas es la siguiente: VAR i, d: arbin; x: item; quita_hojas(crea_arbin( )) = crea_arbin( ); quita_hojas(enraizar(crea_arbin(), x, crea_arbin()) = enraizar(crea_arbin(), x, crea_arbin(); quita_hojas(enraizar(i, x, d)) = enraizar(quita_hojas(i), x, quita_hojas(d))
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+En la especificación algebraica, las operaciones constructoras se clasifican en generadoras y modificadoras
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Las ecuaciones (vistas en clase) que permiten realizar la suma de números naturales son las siguientes: VAR x, y: natural; suma(x, cero) = x; suma(cero, x) = x; suma(x, suc(y)) = suma(x, y)
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Dentro de la especificación algebraica de los números naturales, definimos la sintaxis de la función F como: F: natural→BOOL, y su semántica como: F(cero)=TRUE, F(suc(cero))=FALSE, F(suc(suc(x)))=F(x). Para el número natural x=35, la función F devolvería FALSE. Nota: se asume que x=35 es la forma simplificada de indicar x=suc(suc(suc(……..suc(cero)…….))). 
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Todo árbol binario de altura 9 y 511 nodos es un árbol binario lleno y además es árbol binario de búsqueda
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Sea el método Primera perteneciente a la clase TLista que devuelve la primera posición de la lista que lo invoca: https://i.imgur.com/ac8k5K5.png En el método Primera, se invoca de forma implícita a los constructores de TPosicion y TLista 
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+En C++, si la variable p es un puntero a un objeto, entonces la expresión p.f() es sintácticamente correcta
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+La complejidad temporal del siguiente fragmento de código es O(n): int i, j, n, sum; for (i = 4; i < n; i++) { for (j = i-3, sum = a[i-4]; j <= i; j++) sum += a[j]; cout << “La suma del subarray “ << i-4 << “ es “ << sum << endl; }
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Es posible reconstruir un único árbol binario de búsqueda a partir de su recorrido en postorden
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+El grado de un árbol es el máximo nivel que pueden tener sus subárboles.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+La operación desencolar vista en clase es la siguiente: VAR c: cola, x: item; desencolar( crear( ) ) = crear( ); si esvacia( c ) entonces desencolar( encolar( c, x ) ) = crear ( ); si no desencolar( encolar( c, x ) ) = encolar( desencolar ( c ), x );
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+El ítem medio (según la relación de orden en la búsqueda) almacenado en un árbol binario de búsqueda siempre se encuentra en la raíz.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+La operación palindromo (sobre un vector) vista en clase es la siguiente: Var v: vector; i,x: natural; palindromo(crear_vector()) = VERDADERO; palindromo(asig(v,i,x)) = si i<= 50; entonces si recu(v,100-i+1) == x; entonces palindromo(asig(v,i,x)); sino FALSO; sino VERDADERO
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Una operación del TAD X que tenga la sintaxis Crear() → X es una operación constructora generadora.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+En C++, al hacer layering los métodos de la clase derivada pueden acceder a la parte pública y privada de la clase base
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+En C++, si un objeto se sale de ámbito entonces se invoca automáticamente al destructor de ese objeto.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+El algoritmo de intercambio directo o burbuja estudiado en clase (ordenación de los elementos de un vector) tiene una complejidad promedio de Θ(n^2), siendo n el número de elementos del vector.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+La complejidad espacial es la cantidad de recursos espaciales que un algoritmo consume o necesita para su ejecución
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+La complejidad temporal en el peor caso para la inserción de un elemento en una lista ordenada y en otra no ordenada, que no permiten elementos repetidos, siempre es lineal con el número de elementos en ambos casos.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+El tipo de datos vector (visto en clase) se define como un conjunto en el que sus componentes ocupan posiciones consecutivas de memoria
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Sea el TIPO arbin definido en clase. La semántica de la operación nodos es la siguiente: Var i,d:arbin; x:item; nodos(crear_arbin())=0; nodos(enraizar(i,x,d))=nodos(i)+nodos(d)
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Es posible reconstruir un único árbol binario de altura 6 a partir de un recorrido en postorden con 63 etiquetas.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+El ítem medio (según la relación de orden) almacenado en un árbol binario de búsqueda lleno siempre se encuentra en la raíz
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+El grado de los árboles AVL puede ser +1, 0 ó -1. 
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+En general, las operaciones modificadoras y consultoras se especifican en términos de las generadoras. En ocasiones, una operación modificadora puede especificarse en términos de otras modificadoras o consultoras. Diremos que se trata de una operación derivada. 
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Sea un vector de números naturales. La operación eliminar que borra las posiciones pares del vector marcándolas con “0”, vista en clase, se define así: eliminar: vector -> vector; Var v:vector; i: entero; x:natural; eliminar(crear()) = crear(); si (i MOD 2) == 0; entonces eliminar(asignar(v,i,x)) = asignar(eliminar(v),i,x); si no eliminar(asignar(v,i,x)) = asignar(eliminar(v),i,0)
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+En C++, el puntero this sólo se puede usar dentro de los métodos de la clase. 
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+En C++, después de invocar el destructor (~NombreClase) de un objeto, no se puede acceder a los miembros (propiedades y métodos) de dicho objeto. 
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+El algoritmo de búsqueda binaria estudiado en clase (búsqueda de un elemento en un vector ordenado) tiene una complejidad de Ω(1). 
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+La operación BorrarItem tiene la siguiente sintaxis y semántica: BorrarItem: LISTA, ITEM -> LISTA; BorrarItem( Crear, i) = Crear; BorrarItem( IC(L1,j), i) = si ( i == j ) entonces L1; sino IC ( BorrarItem (L1, i ), j ); Esta operación borra la primera ocurrencia del item que se encuentra en la lista. 
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+La operación base, vista en clase, que actúa sobre una pila y devuelve la base de la pila (el primer elemento que se ha apilado) es la siguiente: base(pila) -> item; Var p: pila; x: item; base(crear()) = error(); base(apilar(crear(),x)) = x; base(apilar(p,x)) = base(desapilar(p)) 
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Dado un único recorrido de un árbol binario, es posible reconstruir dicho árbol. 
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+El grado de un nodo es el número máximo de items asociados a dicho nodo. 
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+El coste temporal (en su peor caso) de insertar una etiqueta en un árbol binario de búsqueda es lineal respecto al número de nodos del árbol. 
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Cuando se realiza un borrado en un árbol AVL, en el camino de vuelta atrás para actualizar los factores de equilibrio, como mucho sólo se va a efectuar una rotación. 
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+El número mínimo de nodos que tiene un árbol AVL de altura 4 es 7
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+En C++, el valor de la variable q al finalizar este fragmento de código es 11: int q = 0; int k = 5; do { q += k; k++; } while(q < 7);
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+La complejidad temporal (en su caso mejor) del siguiente fragmento de código es Ω(n): int i, length, n, i1, i2, k; for (i = 0, length = 1; i < n-1; i++) { for (i1 = i2 = k = i; k < n-1 && a[k] < a[k+1]; k++, i2++); if (length < i2 - i1 + 1) length = i2 - i1 + 1; }
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+La semántica de la operación insertar del tipo lista vista en clase es la siguiente: VAR L1: lista; x,y: item; p: posicion; insertar( crear( ), p, x ) = crear( ); si p == primera( inscabeza( L1, x ) ) entonces; insertar( inscabeza( L1, x ), p, y ) = inscabeza( inscabeza( L1, x ), y ); si no insertar( inscabeza( L1, x ), p, y ) = inscabeza( insertar( L1, p, y ), x )
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+El siguiente árbol es binario de búsqueda https://i.imgur.com/3USyR1i.png
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Dada la siguiente representación secuencial del árbol binario A, el elemento 5 es el hijo izquierda del elemento 8 { 14 8 19 5 }
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+En el algoritmo de borrado de un elemento de un árbol AVL, tenemos que actualizar los factores de equilibrio de todos los nodos que han intervenido en la búsqueda del elemento a borrar 
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+En el algoritmo del borrado de un elemento en un árbol 2-3-4 siempre que q sea 2-nodo hay que hacer una reestructuración. 
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+El árbol 2-3-4 no vacío tiene como mínimo dos claves en cada nodo
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+La operación BorrarItem, que borra todas las ocurrencias del item i que se encuentren en la lista, tiene la siguiente sintaxis y semántica: BorrarItem: LISTA, ITEM -> LISTA; BorrarItem( Crear, i) = Crear; BorrarItem( IC(L1,j), i) = si ( i == j ) entonces BorrarItem (L1, i ); sino IC ( BorrarItem (L1, i ), j ) 
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+En C++, al declarar una clase "A" como AMIGA de otra clase "B" , todas las funciones miembro de "B" automáticamente pasan a ser funciones AMIGAS de "A" 
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+En C++, si una clase "B" se construye por composición (layering) , a partir de otra clase "A" , definiendo un objeto miembro de la clase "A" en su parte privada, al invocar al constructor de "B" se invoca antes al constructor de "A" y luego al de "B"
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Las funciones y clases amigas se tienen que declarar en la parte pública de la clase. 
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Para el siguiente algoritmo, la complejidad temporal en su peor caso sería O(1): for (i=0; i<100; i++); for (j=0; j<100; j++); if (v[i]<v[j]) v[i]=v[j]; else v[j]=v[i]; 
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+La complejidad temporal en su peor caso del siguiente fragmento de código es O(n); int i, j, n, sum; for (i = 4; i < n; i++) { for (j = i-3, sum = a[i-4]; j <= i; j++) sum += a[j]; cout << “La suma del subarray “ << i-4 << “ es “ << sum << endl; } 
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+La semántica de la operación esvaciapos del tipo vector vista en clase es la siguiente: VAR v: vector; i, j: int; x: item; esvaciapos( crear( ), i ) = CIERTO; esvaciapos( asig( v, i, x ), j ); si ( i == j ) entonces FALSO; si no esvaciapos( v, j ) fsi 
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+La semántica de la operación anterior vista en clase es la siguiente: VAR L1: lista; x: item; p: posicion; anterior( L1, primera( L1 ) ) = error_posicion( ); si p != ultima( L1 ) entonces anterior( L1, siguiente( L1, p ) ) = p; anterior( inscabeza( L1, x ), primera( L1 ) ) = L1;
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+La sintaxis y semántica de la operación simétricos, que comprueba que 2 árboles binarios son simétricos, es la siguiente: simétricos(arbin, arbin) → bool; VAR i1, d1, i2, d2: arbin; x, y: item; simétricos(enraizar(i1, x, d1), crea_arbin( )) = FALSO; simétricos(crea_arbin( ), enraizar(i1, x, d1)) = FALSO; simétricos(enraizar(i1, x, d1), enraizar(i2, y, d2)) = si (x == y) entonces (simétricos(i1, d2) & simétricos (d1, i2)); sino FALSO
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Un árbol binario completo es un AVL
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+La complejidad logarítmica aparece en algoritmos que descartan muchos valores (generalmente la mitad) en un único paso
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Dada la sintaxis de la función IC(lista,item) Æ lista, que inserta un elemento a la cabeza de la lista pasada como parámetro y crear()Æ lista, que crea una lista vacía. La siguiente secuencia: IC(IC(IC (crear(),a),b),c), daría como resultado una lista con los elementos en este orden: a→b→c, donde a es el primer elemento de la lista
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Dentro de la especificación algebraica de los números naturales definimos la sintaxis de la función F como: F: naturalÆBOOL, y su semántica como: F(cero)=TRUE, F(suc(cero))=FALSE, F(suc(suc(x)))=F(x). Para el número natural x=35, la función F devolvería TRUE
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+En C++, el constructor de copia recibe como argumento un objeto del mismo tipo pasado por referencia o por valor. 
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+El algoritmo de búsqueda binaria estudiado en clase (búsqueda de un elemento en un vector ordenado) tiene una complejidad de Ω(1)
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+La complejidad espacial es la cantidad de recursos espaciales que un algoritmo consume o necesita para su ejecución 
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+La semántica de la operación obtener en una lista con acceso por posición es la siguiente (IC=InsertarCabeza(Lista, Ítem), p: posición, l1: lista, x: ítem): obtener(crear(),p)=error_item(); si p = = primera(IC(l1,x)) entonces obtener(IC(l1,x),p)=x; sino obtener(IC(l1,x),p)=IC(obtener(l1,p),x);
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+El coste temporal en su peor caso de insertar una etiqueta en un árbol binario de búsqueda es lineal con la altura del árbol 
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Se puede obtener un único árbol 2-3-4 a partir de su recorrido por niveles
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+En C++ y cuando se emplea composición (layering), los métodos de la clase derivada pueden acceder a la parte pública de la clase base.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+En C++, el puntero this no se puede emplear para modificar el objeto al que apunta
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+En C++, los constructores se pueden invocar explícitamente cuando el programador lo desee (por ejemplo: TLista a; a.TLista();). 
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+En C++, la siguiente declaración es incorrecta: int& a = 1;
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+En la escala de complejidades se cumple que O(log n) ⊂ O(log log n). 
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+El algoritmo de búsqueda binaria estudiado en clase (búsqueda de un elemento en un vector ordenado) tiene una complejidad de Ω(1)
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Para un vector de naturales, se define la operación eliminar que borra las posiciones pares del vector marcándolas con “0” (para calcular el resto de una división, se puede utilizar la operación MOD). La sintaxis y la semántica de la operación eliminar es la siguiente: eliminar: vector → vector; Var v:vector; i: entero; x:natural; eliminar(crear_vector()) = crear_vector(); si (i MOD 2) == 0; entonces eliminar(asignar(v,i,x)) = asignar(eliminar(v),i,0); si no eliminar(asignar(v,i,x)) = asignar(eliminar(v),i,x);
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+La semántica de la operación ultima vista en clase es la siguiente: VAR L1: lista; x: item; si esvacia( L1 ) entonces; ultima( inscabeza( L1, x ) = primera( L1 ); si no ultima( inscabeza( L1, x ) = ultima( L1 ); 
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Es posible reconstruir un único árbol binario de altura 6 a partir de un recorrido en preorden con 62 etiquetas. 
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+La sintaxis y semántica de la operación quita_hojas, que actúa sobre un árbol binario y devuelve el árbol binario original sin sus hojas, es la siguiente: quita_hojas(arbin) → arbin; VAR i, d: arbin; x: item; quita_hojas(crea_arbin( )) = crea_arbin( ); quita_hojas(enraizar(crea_arbin(), x, crea_arbin()) = crea_arbin( ); quita_hojas(enraizar(i, x, d)) = enraizar(quita_hojas(i), x, quita_hojas(d))
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Dados los recorridos de preorden, postorden y niveles de un árbol binario de altura 2 y 1 hoja es posible reconstruir 2 árboles binarios
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Todo árbol AVL es un árbol 2-3-4
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+La operación (DIVIDEHIJODE2 (p, q)) en la inserción de un elemento en un árbol 2-3-4 puede aumentar la altura del árbol original
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+En el algoritmo del borrado de un elemento en un árbol 2-3-4 si q es 2-nodo y r es 3-nodo hay que hacer una ROTACIÓN
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+En la especificación de un TAD, las operaciones auxiliares son visibles para los usuarios.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Una operación del TAD X que tenga la sintaxis Crear() →X es una operación constructora generadora.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+En C++, los miembros protected son privados para el exterior, pero permiten el acceso a las clases derivadas. 
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Dadas las clases TDir y TVectorDir: https://i.imgur.com/yz9VnwY.png ¿Es correcta la implementación del destructor de TVectorDir? 
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+El nivel de un nodo en un árbol coincide con la longitud del camino desde la raíz a dicho nodo
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Dado un único recorrido de un árbol binario lleno es posible reconstruir dicho árbol
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+A los árboles generales también se les llama árboles multicamino de búsqueda
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+El ítem medio (según la relación de orden) almacenado en un árbol binario de búsqueda lleno siempre se encuentra en la raíz. 
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Un árbol completo siempre está balanceado respecto a la altura
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+En un árbol AVL siempre que se inserte una etiqueta hay que realizar una rotación
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+El coste temporal en el peor caso de la operación de inserción en un árbol 2-3-4 es log_2(n+1)≈ log_2(n) siendo “n” el número total de items 
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+La semántica de la operación anterior vista en clase es la siguiente: VAR L1: lista; x: item; p: posicion; anterior( L1, primera( L1 ) ) = error_posicion( ); si p != ultima( L1 ) entonces anterior( L1, siguiente( L1, p ) ) = p; anterior( inscabeza( L1, x ), primera( L1 ) ) = primera( inscabeza( L1, x ) ); 
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Sea el tipo vector definido en clase. La semántica de la operación recu es la siguiente: Var v:vector; i,j:int; x:item; recu(crear_vector(),i)=error_item(); si i<>j entonces recu(asig(v,i,x),j)=recu(v,j); sino recu(asig(v,i,x),j)=TRUE;
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Todo árbol binario de búsqueda es un árbol 2-3-4 
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+La semántica de la operación Base que actúa sobre una pila y devuelve el primer elemento apilado es la siguiente: Base(crear_pila ()) = crear_pila (); Base(apilar(crear_pila (), x)) = x; Base(apilar(p, x)) = Base(p);
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Cuando se realiza un borrado en un árbol AVL, en el camino de vuelta atrás para actualizar los factores de equilibrio, como mucho sólo se va a efectuar una rotación
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Los árboles AVL son aquellos en los que el número de elementos en los subárboles izquierdo y derecho difieren como mucho en 1
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+La complejidad temporal en el peor caso y en el mejor caso de la operación inserción en un AVL son lineal y logarítmica respecto al número de nodos en el árbol
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Un árbol binario de búsqueda completo es un AVL
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+El número mínimo de nodos que tiene un árbol AVL de altura 5 es 12.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Todo árbol completo es un árbol completamente equilibrado
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+El borrado en un árbol AVL puede requerir una rotación en todos los nodos del camino de búsqueda.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+El número de rotaciones que se nos pueden dar en un borrado de un elemento en un AVL son como máximo 3 menos que la altura del árbol
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+El factor de equilibrio en los nodos de un árbol AVL tiene que ser cero para que no haya que reequilibrar el árbol en una operación de inserción o borrado
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Un árbol AVL es un árbol binario de búsqueda en el que la diferencia de nodos entre el subárbol izquierdo y derecho es como máximo uno.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Los árboles AVL son árboles balanceados con respecto a la altura de los subárboles
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+El número mínimo de nodos que tiene un árbol AVL de altura 4 es 7
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Cuando se realiza una inserción en un AVL, en el camino de vuelta atrás para actualizar los factores de equilibrio, como mucho solo se va a efectuar una rotación
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+En un árbol AVL cuyo nodo raíz tiene un factor de equilibrio +1 siempre que se inserte un nuevo elemento hay que realizar una rotación
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Dado un árbol 2-3 con n items con todos sus nodos del tipo 2-Nodo. La complejidad de la operación de búsqueda de un ítem es O(log_2 n)
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Dado un árbol 2-3 de altura h con n items: 2^h - 1 <= n <= 3^ha
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+El grado del árbol 2-3 es 2
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+El mínimo número de elementos que se puede almacenar en un árbol 2-3 de altura h coincide con el número de elementos que hay en un árbol binario lleno de altura h
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+El número mínimo de elementos que se pueden almacenar en un árbol 2-3 de altura h es 3^h -1
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+El número mínimo de elementos que se pueden almacenar en un árbol 2-3 de altura h es 2^h -1
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+En un árbol 2-3 la altura del árbol sólo aumenta cuando todas las hojas del árbol son de grado tres
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+En un árbol 2-3, la altura siempre disminuye si la raíz es de tipo 2-nodo y al efectuar el borrado de un elemento es necesario realizar una combinación con el nodo raíz
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Existe un único árbol 2-3 de altura 3 que representa a las etiquetas del 1 al 9.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Los nodos de grado 0 de un árbol 2-3 pueden estar en distintos niveles del árbol
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Los nodos hoja de un árbol 2-3 han de estar en el mismo nivel del árbol
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Un árbol 2-3 es un árbol 2-camino de búsqueda
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Un árbol 2-3-4 es un árbol 4-camino de búsqueda
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+El árbol 2-3-4 no vacío tiene como mínimo una clave en cada nodo
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Para que decrezca la altura de un árbol 2-3-4 en una operación de borrado, el nodo raíz y sus hijos tienen que ser 2-nodo
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Un árbol 2-3-4 es un árbol binario completo
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+La complejidad temporal en el peor caso de la operación inserción en un árbol 2-3-4 es log_2 (n+1)
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+En un árbol 2-3-4 los nodos pueden tener 1, 2, 3 ó 4 hijos
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Dado un único recorrido de cualquier árbol, siempre es posible reconstruir dicho árbol
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Dado un único recorrido de un árbol binario lleno, es posible reconstruir dicho árbol
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+El grado de un árbol es el máximo nivel que pueden tener sus subárboles
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+El máximo número de nodos en un nivel i-1 de un árbol binario es 2^{i-2} , i >= 2
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Existe al menos un árbol, que representa los siguientes recorridos: inorden = YXZT, niveles = XTYZ
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+La estructura de datos árbol aparece porque los elementos que lo constituyen mantienen una estructura jerárquica, obtenida a partir de estructuras lineales, al eliminar el requisito de que cada elemento tiene como máximo un sucesor y un predecesor.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Si en un árbol binario representado secuencialmente tenemos el nodo padre en la posición 5, sus hijos izquierdo y derecho se encuentran, respectivamente, en las posiciones 6 y 7
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+UN ÁRBOL CON UN ÚNICO NODO ES UN ÁRBOL COMPLETO
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Un camino en un árbol es una secuencia a_1 , ..., a_s de árboles tal que para todo i ∈ (1, ..., s-1) , a_{i+1} es subárbol de a_i.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Dado un único recorrido de un árbol binario, es posible reconstruir dicho árbol
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+El grado de un árbol es el grado mínimo de todos los nodos de ese árbol
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+El nivel de un nodo en un árbol coincide con la longitud del camino desde la raíz a dicho nodo
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Es posible reconstruir un único árbol binario de altura 6 a partir de un recorrido en postorden con 63 etiquetas.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+La complejidad temporal del recorrido por niveles en un árbol binario es la misma que las de los recorridos in-pre-post orden
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Un árbol binario completo con n nodos y altura k es un árbol binario lleno para esa misma altura
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+A los árboles generales también se les llama árboles multicamino de búsqueda
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Cuando realizamos un recorrido en preorden en un árbol binario de búsqueda las etiquetas aparecen ordenadas de menor a mayor
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+El coste temporal (en su peor caso) de insertar una etiqueta en un árbol binario de búsqueda es lineal con la altura del árbol
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+El ítem medio (según la relación de orden) almacenado en un árbol binario de búsqueda lleno siempre se encuentra en la raíz.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+El mayor elemento en un árbol binario de búsqueda siempre se encuentra en un nodo hoja
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+En el borrado de un elemento que se encuentre en un nodo con dos hijos no vacíos en un árbol binario de búsqueda, tenemos que intercambiar el elemento a borrar por el menor del subárbol de la izquierda o por el mayor del subarbol de la derecha
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+SEA A UN ÁRBOL BINARIO DE BÚSQUEDA LLENO, CUYO RECORRIDO POR NIVELES ES 8,5,10,3,6,9,12. LA PROFUNDIDAD DEL SUBÁRBOL DE A CUYA RAÍZ ES 10 ES 1
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+A partir del recorrido por niveles de un árbol binario completo se puede obtener el árbol al que representa.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+El coste temporal (en su peor caso) de insertar una etiqueta en un árbol binario de búsqueda es lineal respecto al número de nodos del árbol
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+El coste temporal en su peor caso de insertar una etiqueta en un árbol binario de búsqueda es logarítmica respecto a la altura del árbol
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+El ítem medio (según la relación de orden en la búsqueda) almacenado en un árbol binario de búsqueda siempre se encuentra en la raíz
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+El menor elemento en un árbol binario de búsqueda siempre se encuentra en un nodo hoja
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+En el borrado de un elemento que se encuentre en un nodo con dos hijos no vacíos en un árbol binario de búsqueda, tenemos que intercambiar el elemento a borrar por el mayor del subárbol de la izquierda o por el menor del subarbol de la derecha
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+El valor de la variable b al ejecutar las siguientes instrucciones de C++ es 12: a = 2; b = 0; for(i = 1; i <= 3; i++) {b += a++;}
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+En C++, después de invocar el destructor (~NombreClase) de un objeto, no se puede acceder a los miembros (propiedades y métodos) de dicho objeto
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+En C++, los miembros protected son privados para el exterior, pero permiten el acceso a las clases derivadas.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+En C++, si una clase "B" se construye por composición (layering) , a partir de otra clase "A" , definiendo un objeto miembro de la clase "A" en su parte privada, al invocar al constructor de "B" se invoca antes al constructor de "A" y luego al de "B"
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+En layering los métodos de la clase derivada pueden acceder a la parte pública y privada de la clase base
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Sea el método Primera perteneciente a la clase TLista que devuelve la primera posición de la lista que lo invoca: TPosicion TLista::Primera(){ TPosicion p; p.pos = primero; return p;} class TLista{ public: ... private: TNodo * primero;} En el método Primera, se invoca de forma implícita a los constructores de TPosicion y TLista.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+En C++, al hacer layering los métodos de la clase derivada pueden acceder a la parte pública de la clase base.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+En C++, el puntero this sólo se puede usar dentro de los métodos de la clase.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+En herencia pública, la parte privada de la clase base es accesible desde los métodos de la clase derivada
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+La sobrecarga del operador corchete tiene que definirse de la siguiente forma para que pueda aparecer a ambos lados de una asignación: Titem operator[] (int i);
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Sea el método Primera perteneciente a la clase TLista que devuelve la primera posición de la lista que lo invoca: TPosicion TLista::Primera() { TPosicion p; p.pos = lis; return p;} class TLista { public: ... private: TNodo *lis;} En el método Primera, se invoca a la sobrecarga del operador asignación entre objetos del tipo TPosicion.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Sea el método Primera perteneciente a la clase Tlista que devuelve la primera posición de la lista que lo invoca: TPosicion Tlista::Primera() { TPosicion p; p.pos = lis; return p; } class Tlista { public: ... private: Tnodo *lis; } En el método Primera se invoca al constructor y destructor para el objeto TPosicion p.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+El algoritmo de búsqueda binaria estudiado en clase (búsqueda de un elemento en un vector ordenado) tiene una complejidad de O(log n).
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+El algoritmo de intercambio directo o burbuja estudiado en clase (ordenación de los elementos de un vector) tiene una complejidad de Ω(n ), siendo n el número de elementos del vector
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+El resultado del cálculo de la complejidad temporal en el mejor caso de un algoritmo X, da como resultado n + n*log(n). Por lo tanto, diremos que la complejidad del algoritmo X cuando n → ∞ pertenece a Ω (n).
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+En la escala de complejidades se cumple que O(log n) ⊂ O(log log n).
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+La complejidad espacial es la cantidad de recursos espaciales que un algoritmo consume o necesita para su ejecución
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+La complejidad temporal del siguiente fragmento de código es O(n) int i, j, n, sum; for (i = 4; i < n; i++){ for (j = i-3, sum = a[i-4]; j <= i; j++) sum += a[j]; cout << “La suma del subarray “ << i-4 << “ es “ << sum << endl;}
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+La complejidad temporal (en su caso peor) del siguiente fragmento de código es O(n^2): int i, j, n, sum; for (i = 4; i < n; i++){ for (j = i-3, sum = a[i-4]; j <= i; j++) sum += a[j]; cout << “La suma del subarray “ << i-4 << “ es “ << sum << endl;}
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+LA COTA PROMEDIO DE COMPLEJIDAD ES EL RESULTADO DE HACER LA MEDIA ENTRE LA COTA SUPERIOR Y LA COTA INFERIOR.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Si la complejidad temporal de un algoritmo en el mejor caso es lineal y en el peor caso es lineal, podemos decir que la complejidad promedio es lineal
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+El algoritmo de búsqueda binaria estudiado en clase (búsqueda de un elemento en un vector ordenado) tiene una complejidad de Ω(1).
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+El algoritmo de intercambio directo o burbuja estudiado en clase (ordenación de los elementos de un vector) tiene una complejidad promedio de Θ(n^2), siendo n el número de elementos del vector.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+En la escala de complejidades, la mejor complejidad temporal que se puede conseguir en un algoritmo es O(n), siendo “n” la talla del problema
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+En la escala de complejidades se cumple que O(n log n) ⊂ O(n^2).
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+La complejidad temporal de un algoritmo depende de la complejidad espacial del mismo
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+La complejidad temporal (en su caso mejor) del siguiente fragmento de código es Ω(n): int i, length, n, i1, i2, k; for (i = 0, length = 1; i < n-1; i++){ for (i1 = i2 = k = i; k < n-1 && a[k] < a[k+1]; k++, i2++); if (length < i2 – i1 + 1) length = i2 – i1 + 1;}
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+La complejidad temporal en su caso promedio del algoritmo de ordenación de intercambio directo (burbuja) visto en clase es Θ(n^2)
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+La representación de conjuntos mediante vectores de bits tiene una complejidad espacial proporcional al tamaño del conjunto universal.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+La siguiente especificación corresponde a la operación unión de conjuntos: VAR A, B: Conjuntos; x:item; Union(crear(), A) = A; Union(Insertar(A,x),B)= si (Pertenece(B,x)) entonces Union(A, B); sino Insertar(Union(A, B), x)
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+La especificación algebraica de la siguiente operación indica que se devolverá el número de elementos del conjunto multiplicado por 3 (Operación(Conjunto) -->Natural; Var: C: Conjunto; x: Ítem): Operación(Crear) --> 1; Operación (Insertar(C, x)) --> 3 + Operación(C)
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+En la representación de conjuntos mediante las listas el espacio es proporcional al tamaño del conjunto universal.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+En los conjuntos representados como listas no ordenadas, la complejidad temporal de la operación “diferencia de conjuntos” es O(n), siendo n el número de elementos de cada conjunto.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+La especificación algebraica de la siguiente operación eliminaría todas las claves repetidas de un determinado ítem C: ConjuntoConClavesRepetidas; x, y: Ítem): Eliminar(Crear, x) --> Crear Eliminar(Insertar(C, x), y) --> si (x == y) entonces C sino Insertar(Eliminar(C, y), x) 
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+La complejidad en su caso peor, de la unión de dos conjuntos implementados como listas no ordenadas de tamaño “n” y “m” respectivamente es de O(n*m).
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+La especificación algebraica de la siguiente operación indica que se devolverá el número de elementos del conjunto (C: Conjunto; x: Ítem): Operación(Crear) --> 0 Operación (Insertar(C, x)) --> 2 + Operación(C)
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+En la representación de conjuntos mediante listas, el espacio es proporcional al tamaño del conjunto representado
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+La mejor representación de los conjuntos siempre es el vector de bits porque es la más eficiente espacialmente.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+En el TAD Diccionario con dispersión abierta, para evitar el problema del amontonamiento secundario es aconsejable que el tamaño de la tabla sea un número primo o que no tenga factores primos menores que 20.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+El montículo o HEAP mínimo es un árbol binario lleno que además es árbol mínimo.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+El siguiente vector representa un montículo máximo: 10 5 3 1 2
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+El TAD Cola de Prioridad representado por un montículo, tendrá las siguientes complejidades: O(1) para el borrado, y O(log2 n) para la inserción, siendo n el número de elementos.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+En un montículo doble todas las claves del montículo máximo son mayores que las del montículo mínimo
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+En una tabla de dispersión cerrada con la siguiente función de redispersión para la clave 14: h (14)=(28 + 7*i) MOD 2000, se recorrerán todas las posiciones de la tabla buscando una posición libre.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Cuando implementamos un TAD Tabla de dispersión cerrada se usa una función de dispersión H tal que H(x) devolverá un valor comprendido entre 0 y B, siendo B el número finito de clases en las que dividimos el conjunto.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+El TAD Cola de Prioridad representado por una lista ordenada, tendrá las siguientes complejidades: O(1) para el borrado, y O(n) para la inserción, siendo n el número de elementos.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+En un montículo el número de claves en el hijo izquierda de la raíz es mayor o igual que en su hijo derecha
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+En el TAD Diccionario con dispersión cerrada, los elementos se almacenan en una tabla de tamaño fijo.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+En el TAD Diccionario con dispersión cerrada, con función de redispersión “h_i (x)=(H(x) + C*i) MOD B”, “B” y “C” han de tener factores primos comunes mayores que uno, para que se busque una casilla libre por toda la tabla.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Sea una tabla de dispersión cerrada con estrategia de redispersión h_i (x)=(H(x) + C*i) MOD B, con B=1000 y C=74. Para cualquier clave “x” que se desee insertar, se recorrerán todas las posiciones de la tabla buscando una posición libre.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+El montículo mínimo o HEAP mínimo es un árbol binario completo que además es árbol mínimo
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+EN LA DISPERSIÓN CERRADA PUEDE HABER COLISIONES ENTRE CLAVES SINÓNIMAS Y NO SINÓNIMAS
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+En el TAD Diccionario con dispersión cerrada, cualquier estrategia de redispersión cuyo siguiente intento esté sólo en función del anterior, producirá amontonamiento.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+En el TAD Diccionario con dispersión abierta, la operación de búsqueda de una clave tiene una complejidad O(L), con L=longitud de la lista de claves sinónimas colisionadas
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Un bosque extendido en profundidad de un grafo dirigido al que se le añaden los arcos de retroceso es un grafo acíclico dirigido.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+En un grafo dirigido pueden existir infinitas aristas para un número “n” de vértices.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Al representar un grafo no ponderado de N vértices y K aristas con una matriz de adyacencia, la operación de búsqueda de una arista tiene una complejidad de O(N).
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Al representar un grafo de N vértices y K aristas con una matriz de adyacencia, la operación de calcular la adyacencia de salida de un vértice, tiene una complejidad de O(N).
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+En un multigrafo pueden existir infinitas aristas para un número “n” de vértices.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+En un grafo, ciclo es cualquier camino en el que el vértice primero y último coinciden.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Los arcos de retroceso de un recorrido en profundidad de un grafo dirigido, nos indican la presencia de un ciclo.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Sea G un grafo no dirigido de n vértices. Si G tiene “n-1” aristas, entonces nunca podría tener un ciclo.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+En un grafo no dirigido de “n” vértices pueden existir infinitas aristas
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+La siguiente secuencia de nodos de un grafo es un ciclo: 1,2,3,2,1
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Dado un grafo dirigido, siempre se cumple que Adyacencia_de_Salida(x) ∩ Adyacencia_de_Entrada(x) = Ø, donde x es un vértice del grafo.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Un grafo no dirigido de n vértices es un árbol si está libre de ciclos y tiene “n-1” aristas
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Al representar un grafo dirigido de N vértices y K aristas con una matriz de adyacencia, la matriz será simétrica respecto la diagonal principal.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+En un grafo dirigido con K aristas y N vértices, una complejidad de O(K) es equivalente a la complejidad de O(N^2).
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Altura: Árbol --> Natural; Si A Árbol, b Ítem, entonces b=Altura (A) es un uso sintácticamente correcto de la operación
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+El tiempo requerido por un algoritmo expresado en función de la talla del problema se llama complejidad espacial del algoritmo
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+En la especificación algebraica, para definir la semántica de una operación de un tipo de datos sólo se pueden utilizar las operaciones generadoras constructoras
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+EsVacia: PILA -> BOOLEAN; Si P y Q son pilas: Q = EsVacia ( P ), es un uso sintácticamente correcto de la operación
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Las operaciones generadoras son aquellas que permiten generar todos los valores del TAD a especificar
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Longitud: LISTA -> NATURAL; Si L es una lista, a es un item de la lista: a = Longitud ( L ) es un uso sintácticamente incorrecto de la operación
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Los enriquecimientos no forman parte de la definición de un TAD
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Sea el siguiente TAD: MÓDULO NATURALEXAMEN; TIPO natural; OPERACIONES; uno: --> natural; siguiente: natural --> natural; sumar: natural natural --> natural; FMÓDULO; Si N es un natural: N = sumar(uno,siguiente(uno)) es un uso sintácticamente incorrecto de la operación sumar
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Una operación del TAD X que tenga la sintaxis Crear() -->X es una operación constructora generadora.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Dentro de la especificación algebraica de los números naturales definimos la sintaxis de la función F como:F: natural-->BOOL, y su semántica como: F(cero)=TRUE, F(suc(cero))=FALSE, F(suc(suc(x)))=F(x). Para el número natural x=35, la función F devolvería FALSE. Nota: se asume que x=35 es la forma simplificada de indicar x=suc(suc(suc(……..suc(cero)…….)))
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+En la escala de complejidades, la complejidad logarítmica es menor que la lineal.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+En la especificación de un TAD, una operación consultora devuelve un valor del tipo definido.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Las operaciones modificadoras de un TAD permiten generar, por aplicaciones sucesivas, todos los valores del TAD a especificar.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Longitud: LISTA -> NATURAL; Si L es una lista, a es un ítem de la lista: a = Longitud ( L ) es un uso sintácticamente correcto de la operación Longitud
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Para el tratamiento de errores en la especificación algebraica, se añaden funciones constantes que devuelven un valor del tipo que causa el error
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Una expresión está en forma reducida si contiene operaciones que pertenecen sólo al conjunto de los constructores
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+El TAD vector visto en clase se define como un conjunto ordenado de pares <índice, valor>. Para cada índice definido dentro de un rango finito existe asociado un valor.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+En cualquier tipo de datos lineal cada elemento tiene como máximo un único sucesor y un único predecesor
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+En la lista de acceso por posición (vista en clase) se establece un orden secuencial estricto a partir de las posiciones que ocupan sus elementos
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+LA COMPLEJIDAD TEMPORAL DE LA OPERACIÓN APILAR EN UNA PILA SIEMPRE ES O(1)
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+La complejidad temporal de obtener un elemento en un vector ordenado mediante búsqueda binaria o en una lista ordenada es la misma
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+LA COMPLEJIDAD TEMPORAL (EN SU PEOR CASO) DE LA OPERACIÓN DE INSERTAR UN ELEMENTO EN UNA COLA CIRCULAR ENLAZADA QUE NO ADMITE ELEMENTOS REPETIDOS ES O(N), SIENDO N EL NÚMERO DE ELEMENTOS DE LA COLA.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+La operación BorrarItem tiene la siguiente sintaxis y semántica: BorrarItem: LISTA, ITEM -> LISTA; BorrarItem( Crear, i) = Crear; BorrarItem( IC(L1,j), i) = si ( i == j ) entonces L1; sino IC ( BorrarItem (L1, i ), j ); Esta operación borra todas las ocurrencias del item que se encuentra en la lista
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+La operación de lista: Longitud: (LISTA) --> NATURAL es una operación consultora
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+El tipo de datos vector (visto en clase) se define como un conjunto en el que sus componentes ocupan posiciones consecutivas de memoria
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+En cualquier tipo de datos lineal cada elemento tiene un único sucesor y varios predecesor
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Es posible obtener una representación enlazada de una cola utilizando un único puntero que apuntará al fondo de la cola
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+La complejidad temporal de la operación desapilar vista en clase utilizando vectores ( con un indice que indica la cima ) o listas es la misma
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+La complejidad temporal en el peor caso para la inserción de un elemento en una lista ordenada y en otra no ordenada, que no permiten elementos repetidos, siempre es lineal con el número de elementos en ambos casos
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+La semántica de la operación cima del tipo pila vista en clase es la siguiente: VAR p: pila, e: item; cima( crear() ) = error(); cima( apilar( p, e ) ) = cima( p )
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+La siguiente especificación corresponde a la operación de borrar una arista en un multigrafo: VAR G: Grafo; a, b, z, t: Vértice; p: Ítem; BorrarArista( CrearGrafo(), z, t ) = CrearGrafo(); BorrarArista( InsertarArista(G,a,b,p), z, t ) = si ( a == z ) y ( b == t ) entonces BorrarArista( G, z, t ) sino InsertarArista( BorrarArista( G, z, t ), a, b, p )
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Los árboles extendidos en anchura de un grafo dirigido tienen que ser necesariamente árboles binarios.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Dado un digrafo implementado mediante lista de adyacencia en el que sabemos que nunca habrá más de 2n arcos (siendo n el número de vértices), el cálculo de la adyacencia de entrada de un vértice tiene una cota de complejidad temporal O(n).
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+La siguiente especificación corresponde a la operación unión de conjuntos: VAR A, B: Conjuntos; x:item; Union(crear(), A) = A; Union(Insertar(A,x),B)= si (Pertenece(B,x)) entonces Union(A, B); sino Insertar(Union(A, B), x)
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+La función de redispersión en una tabla de dispersión abierta (hash abierto), para que se recorran todas las posiciones del vector, tiene que cumplir que el valor de B sea primo.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+En una tabla de dispersión cerrada (hash cerrado), al insertar un elemento, se pueden producir colisiones con claves sinónimas y con claves no sinónimas.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+En un montículo doble todas las claves del montículo máximo son mayores que las del montículo mínimo.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Para todos los nodos de un montículo simple, se cumple que el número de nodos de su subárbol derecho es menor o igual que el número de nodos de su subárbol izquierdo.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Según el algoritmo de borrado de un árbol 2-3-4 visto en clase, la altura de un árbol 2-3-4 sólo decrece cuando al borrar un ítem, los punteros p, q y r son 2-nodo.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Según el algoritmo de inserción de un árbol 2-3-4 visto en clase, la altura de un árbol 2-3-4 sólo crece cuando al insertar un ítem, todos los nodos del camino de búsqueda desde la raíz hasta la hoja donde se inserta el ítem son 4-nodo.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Existe un único árbol 2-3 de altura 3 que representa a las etiquetas del 1 al 9.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+El número mínimo de nodos que tiene un árbol AVL de altura 4 es 7.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Siempre es posible reconstruir un único árbol AVL teniendo su recorrido en postorden.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+La función de búsqueda BINARIA de un elemento en una lista ordenada podría alcanzar una complejidad temporal O(log2 n).
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+El algoritmo de intercambio directo o burbuja estudiado en clase (ordenación de los elementos de un vector) tiene una complejidad promedio de θ(n^2), siendo n el número de elementos del vector.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Las ecuaciones (vistas en clase) que permiten realizar la multiplicación de números naturales son las siguientes: VAR x, y: natural; mult(x, cero) = cero; mult(suc(y), x) = suma(mult(y, x), x)
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Para el siguiente fragmento de código C++ de un posible método perteneciente a la conocida clase TCoordenada, “delete [] a;" liberaría correctamente la memoria dinámica de a. void Funcion(void){ TCoordenada *a = new TCoordenada; TCoordenada *b = new TCoordenada[5]; (. . . . . . .)}
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+La complejidad temporal del siguiente fragmento de código es O(n+p). int i, j, n, p, sum; for (i = 1; i < n; i++); for (j = 1, sum = a[i-4]; j <= p; j++) sum += a[j]; cout << “La suma del subarray “ << i-4 << “ es “ << sum << endl;
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+La función de búsqueda BINARIA de un elemento en una lista ordenada con acceso por posición (utilizando una representación enlazada) que tiene “n” elementos tiene una complejidad temporal en su mejor caso de Ω(1).
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Sea un árbol binario lleno cuyo recorrido en inorden es: 10,15,17,20,21,28,35. La representación secuencial de dicho árbol sería un vector de tamaño 8, en el que la posición 3 quedaría vacía.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+En los árboles binarios de búsqueda, en el borrado de un elemento que tiene dos hijos, la siguiente ecuación de su especificación algebraica indica que dicho elemento se sustituye por el menor del subárbol izquierdo: si ( y==x ) y no esvacio( d ) y no esvacio( i ) entonces borrar( enraizar( i, x, d ), y ) = enraizar( i, min( d ), borrar( d, min( d ) ) ) fsi
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+El número mínimo de nodos que tiene un árbol AVL de altura 4 es 7.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Dado un árbol 2-3 de altura 4, el menor elemento almacenado siempre estará en un nodo hoja. 
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Si h es la altura de un árbol 2-3-4 con n elementos se cumple que: log2 (n+1) ≤ h ≤ log4 (n+1). 
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+La especificación algebraica de la inserción de un elemento en un conjunto sin claves repetidas sería la siguiente (C: Conjunto; x, y: Ítem): Insertar(Insertar(C, x), y) ⇿ Insertar(Insertar(C,y), x)
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+La dispersión abierta es más eficiente en cuanto al espacio en comparación con la dispersión cerrada, para el caso de almacenar 5 elementos y un tamaño de la tabla de B=10.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+La raíz de un Heap máximo de n elementos representado como un vector de n posiciones (numeradas de 1 a n) estará en la posición número 1 del vector.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+El número máximo de arcos que pueden existir en un grafo dirigido de n vértices son:n (n-1) + n.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Un bosque extendido en profundidad de un grafo dirigido al que se le añaden los arcos de avance es un grafo acíclico dirigido
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+El algoritmo de intercambio directo o burbuja estudiado en clase (ordenación de los elementos de un vector) tiene una complejidad de Ω(n^2), siendo n el número de elementos del vector.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+La cota promedio de complejidad es el resultado de hacer la media entre la cota superior y la cota inferior.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Se puede reconstruir un único árbol binario de búsqueda teniendo su recorrido en postorden.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Existe un único árbol AVL que se puede reconstruir a partir de su recorrido en inorden. 
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+La especificación algebraica vista en clase para el recorrido preorden, pero visitando primero la derecha y después la izquierda (RDI) es la siguiente: preorden( arbin ) -> lista; VAR i, d: arbin; x: item; preorden(crea_arbin()) = crea_lista(); preorden( enraizar( i, x, d ) ) = concatenar(insiz(x,preorden(d)), preorden(i))
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+La sintaxis y la semántica de la operación exactos que actúa sobre dos árboles binarios de números naturales e indica si los dos árboles tienen la misma estructura y las etiquetas iguales es la siguiente: exactos(arbin, arbin) -> bool; Var i, d, iz, der: arbin; x, y: item; [enraizar(i,x,d) ➞ E(i,x,d)]; exactos(crear_arbin(), crear_arbin()) = TRUE; exactos(E(crear_arbin(), x, crear_arbin()), E(crear_arbin(), y, crear_arbin())) = si (x==y) entonces TRUE; exactos(E(i, x, d), crear_arbin()) = FALSE; exactos(crear_arbin(), E(i, x, d)) = FALSE; exactos(E(i, x, d), E(iz, y, der)) = exactos(i, iz) & exactos(d, der);
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+La siguiente operación insertar definida para listas inserta el nuevo elemento a la derecha de la posicion p: insertar( lista, posicion, item ) -> lista; VAR L1, L2: lista; x, y: item; p: posicion; insertar( crear( ), p, x ) = crear( ); si p == primera( inscabeza( L1, x ) ) entonces insertar( inscabeza( L1, x ), p, y ) = inscabeza( inscabeza( L1, y ), x ) si no insertar( inscabeza( L1, x ), p, y ) = inscabeza( insertar( L1, p, y ), x )
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+La definición de un Heap Mínimo indica que ha de ser un árbol binario que además es árbol mínimo.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Los árboles extendidos en profundidad de un grafo dirigido tienen que ser necesariamente árboles binarios.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Un multigrafo es un grafo que no tiene ninguna restricción: pueden existir arcos reflexivos y múltiples ocurrencias del mismo arco.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+En la dispersión abierta sólo se producen colisiones entre claves sinónimas.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+En el TAD Diccionario con dispersión cerrada, con función de redispersión “hi(x)=(H(x) + k(x)*i) MOD B”, “B=10” y “k(x)=(x MOD B-1)+1”, para la clave x=2 se recorrerán todas las posiciones de la tabla buscando una posición libre.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+En la inserción de un árbol 2-3-4 sólo crece la altura del árbol cuando se realiza una operación de DIVIDERAIZ.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+El borrado de un elemento en un árbol 2-3 se realiza en las hojas. Se pueden producir reestructuraciones del árbol aplicando el algoritmo descendente que empieza en la raíz del árbol y finaliza en las hojas.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Dado un árbol 2-3 de altura h con n items con todos sus nodos del tipo 3-Nodo: la complejidad de la operación de búsqueda de un ítem es O(log3 (h+1))
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+En C++, el puntero this se tiene que declarar en todos los constructores de la clase. 
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Para el siguiente fragmento de código para C++ de un posible método perteneciente a la conocida clase TCalendario, la línea “delete [] a;" es la instruccción más adecuada para liberar correctamente la memoria dinámica de a. void Funcion(void) { TCalendario *a =new TCalendario; TCalendario *b =new TCalendario [5]; (. . . . . . .); delete [] a;}
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+La cota promedio de complejidad es el resultado de hacer la media entre la cota superior y la cota inferior.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+concatenar(lista,lista), inscabeza(lista,item) y crear_lista( ) son operaciones constructoras modificadoras del tipo lista.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Existe un único árbol binario completo que se puede construir a partir del recorrido en postorden.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+La complejidad temporal, en su peor caso, del recorrido por niveles en un árbol binario es la misma que las de los recorridos in-pre-post orden.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+El número máximo de nodos en un árbol AVL de altura 10 sería de 1023.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+El número mínimo de nodos que tiene un árbol AVL de altura 4 es 7.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+La estructura de un árbol 2-3-4 con 2^{h-1} elementos, donde “h” es la altura del árbol, se corresponde con la estructura de un árbol binario de búsqueda lleno.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Tras la inserción en un árbol 2-3, la altura del árbol sólo aumenta cuando todos los nodos del árbol tienen dos hijos.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Dado un árbol 2-3, si la clave a borrar “x” está en un nodo hoja, “x” se tendría que sustituir por la clave siguiente a “x” en el recorrido en inorden del árbol.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+La operación de borrar un elemento en un árbol 2-3-4 finaliza cuando el nodo “p” es el nodo que contiene al elemento que se desea borrar.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+El menor elemento de un Heap máximo siempre estará en el nivel de las hojas.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Al representar un grafo dirigido de N vértices y K aristas con una lista de adyacencia, la operación de hallar la adyacencia de entrada de un vértice, tiene una complejidad de O(N^2).
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+La complejidad temporal del caso peor de la inserción en un Heap de altura h será de O(h).
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+En C++, la forma canónica de una clase debe contener al operador “= =”. 
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+La complejidad temporal (en su caso peor) del siguiente fragmento de código es O(n^2): int i, j, n, sum; for (i = 4; i < n; i++) { for (j = i–3, sum = a[i-4]; j <= i; j++) sum += a[j]; cout << “La suma del subarray “ << i-4 << “ es “ << sum << endl;}
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+crear_pila(), cima(pila), apilar(pila,item) y desapilar(pila) son operaciones constructoras del tipo pila.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Se puede reconstruir un único árbol binario de búsqueda teniendo su recorrido por niveles. 
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+La siguiente operación borrar definida para listas borra el elemento que está a la derecha del elemento apuntado por la posicion p: borrar( lista, posicion) -> lista; VAR L1, L2: lista; x: item; p: posicion; borrar(crear(),p) = crear(); si p == primera( inscabeza( L1, x ) ) entonces borrar( inscabeza( L1, x ), p ) = inscabeza( L1, x ) si no borrar( inscabeza( L1, x ), p ) = inscabeza( borrar( L1, p ), x)
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+En C++, cuando se sobrecarga un operador que modifica al operando izquierdo (por ejemplo, el operador asignación), no se debe crear un objeto temporal que luego el método devuelva por valor.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+El ítem medio (según la relación de orden de los elementos) almacenado en un árbol binario de búsqueda lleno siempre se encuentra en la raíz.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+En un árbol AVL cuya raíz tiene un factor de equilibrio de +1, al insertar un elemento en el subárbol izquierdo de la raíz, el árbol siempre vuelve al estado de equilibrio (FE == 0).
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Un árbol AVL completo es un árbol completamente equilibrado.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+En el algoritmo del borrado de un elemento en un árbol 2-3-4 siempre que “p” sea 2-nodo hay que hacer una reestructuración.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+La complejidad temporal en el peor caso de la operación inserción en un árbol 2-3-4 es log2(n+1).
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+El TAD Cola de Prioridad en el que no se permiten elementos repetidos, representado por una lista desordenada, tendrá coste O(n) para la inserción, con n el número de elementos del TAD.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Sea una tabla de dispersión cerrada con estrategia de redispersión hi(x)=(H(x) + C*i) MOD B, con B=1000 y C=74. Para cualquier clave “x” que se desee insertar, se recorrerán todas las posiciones de la tabla buscando una posición libre.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+La representación de un grafo mediante una lista de adyacencia siempre va a ser mejor tanto espacial como temporalmente que la representación mediante una matriz de adyacencia.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Un árbol binario de búsqueda completo con 4 elementos también es un montículo o HEAP mínimo.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Un árbol extendido en anchura de un grafo dirigido tiene el mismo número de vértices que el grafo original.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Un bosque extendido en profundidad de un grafo no dirigido es un grafo acíclico. 
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+En general, las operaciones modificadoras y consultoras se especifican en términos de las generadoras. En ocasiones, una operación modificadora puede especificarse en términos de otras modificadoras o consultoras.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+La operación base, vista en clase, que actúa sobre una pila y devuelve la base de la pila (el primer elemento que se ha apilado) es la siguiente: base(pila) -> item; Var p: pila; x: item; base(crear()) = error_item(); base(apilar(crear(),x)) = x; base(apilar(p,x)) = base(desapilar(p));
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+La función de búsqueda BINARIA de un elemento en una lista ordenada enlazada tiene una complejidad temporal O(log2 n).
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+crear_pila(), apilar(pila,item) y desapilar(pila) son operaciones constructoras del tipo pila.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+El mínimo número de nodos que ha de tener un árbol binario de altura 4 para ser equilibrado respecto a la altura es 7
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+En los árboles binarios de búsqueda, en el borrado de un elemento que tiene dos hijos, la siguiente ecuación de la especificación algebraica vista en clase indica que dicho elemento se sustituye por el menor del subárbol derecho: si ( y==x ) y no esvacio( d ) y no esvacio( i ) entonces borrar( enraizar( i, x, d ), y ) = enraizar( i, min( d ), borrar( d, min( d ) ) ) fsi; min( crea_arbin( ) ) = error_item(); si esvacio( i ) entonces min( enraizar( i, x, d ) ) = x; si no min( enraizar( i, x, d ) ) = min( i ) fsi;
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Dados los recorridos de preorden, postorden y niveles de un árbol binario de altura 7 y 64 hojas es posible reconstruir un único árbol binario.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Dado cualquier ítem de un árbol AVL, el mayor del subárbol izquierdo de ese ítem siempre será un nodo hoja.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Dado cualquier ítem de un árbol 2-3, el mayor del subárbol izquierdo de ese ítem siempre será el ítem anterior en el recorrido en inorden de dicho árbol.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Dado un árbol 2-3 de altura h con n items con todos sus nodos del tipo 2-Nodo: la complejidad temporal de la operación de búsqueda de un ítem es O(log3 n).
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Si h es la altura de un árbol 2-3-4 con n elementos se cumple que: log4 (n+1) ≤ h ≤ log2 (n+1). 
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+En un árbol 2-3-4 todos los nodos no hoja, tienen al menos dos hijos.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+En los conjuntos representados como listas ordenadas, la complejidad temporal de la operación “diferencia de conjuntos” de cardinalidad “n” es de O(n).
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+La complejidad temporal de la búsqueda de un elemento en un conjunto de cardinalidad “n”, representado como una lista, es O(n).
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+El factor de carga de la dispersión abierta siempre está entre 0 y 1. 
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+En la dispersión cerrada sólo se producen colisiones entre claves sinónimas. 
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+El máximo de un Deap de n nodos representado como un vector de n posiciones (numeradas de 1 a n) estará siempre en la casilla número 1.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+La complejidad temporal de la inserción de un elemento en un Heap de altura h será de O(h)
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+El resultado del recorrido DFS (en profundidad) sobre un digrafo siempre es un camino.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Al representar un grafo dirigido de N vértices y K aristas con una lista de adyacencia, la operación que halla la adyacencia de salida de un vértice, tiene una complejidad temporal de O(N).
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+La especificación algebraica (ecuacional) establece las propiedades de un TAD mediante ecuaciones con variables cuantificadas universalmente, de manera que las propiedades dadas se cumplen para cualquier valor que tomen las variables.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Dada una especificación de un TAD, sólo existe una implementación posible.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+En C++, el constructor de copia crea un objeto de una clase determinada a partir de un puntero a un objeto de la misma clase.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+La complejidad espacial del algoritmo de ordenación de vectores de tamaño n visto en clase como “intercambio directo (burbuja)” es de O(n).
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+La semántica de la operación concatena del tipo cola vista en clase es la siguiente: VAR c, q: cola; x: item; concatena( c, crear_cola ( ) ) = c; concatena(crear_cola ( ), c ) = c; concatena( c, encolar( q, x ) ) = encolar( concatena( c, q ), x );
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Grado de un árbol es el número máximo de hijos que pueden tener sus subárboles (si el árbol es n-ario, el grado es n).
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+La sintaxis y la semántica de la operación quita_hojas que actúa sobre un árbol binario y devuelve el árbol binario original sin sus hojas se definen del siguiente modo: quita_hojas(arbin) --> arbin; VAR i, d: arbin; x: item; quita_hojas(crea_arbin( )) = crea_arbin(); quita_hojas(enraizar(i, x, d)) = enraizar(quita_hojas(i), x, quita_hojas(d))
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Se puede reconstruir un árbol binario cualquiera teniendo sus recorridos en preorden e inorden.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Todo árbol binario mínimo es un árbol binario de búsqueda.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+En un árbol AVL, al realizar una inserción de una sola clave se puede producir como máximo una rotación.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Un árbol AVL es un árbol balanceado (equilibrado) con respecto al número de nodos de los subárboles.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Dado cualquier ítem en un nodo que no es de tipo hoja de un árbol 2-3, el ítem menor del subárbol derecho de ese ítem estará siempre en un nodo hoja.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+La operación de Rotación en un árbol 2-3 se da cuando el hermano adyacente que hay que consultar (según el criterio especificado) del nodo que se ha quedado sin elementos es del tipo 3-Nodo.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Tras el borrado de un elemento que está en una hoja de un árbol 2-3-4, la raíz nunca puede ser un 2-nodo.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+En un árbol 2-3-4 de altura h, el máximo número de nodos se da cuando todos los nodos son de tipo 2-nodo.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Sea la dispersión cerrada con la siguiente función de redispersión: h_i(x)=(h_i-1(x) + C) MOD B. Dos claves sinónimas x, y tendrán la misma secuencia de intentos, es decir, h_i(x) = h_i(y).
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Un Heap de n elementos representado como un vector de n posiciones no tendrá ninguna casilla del vector vacía (sin elementos).
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Utilizando la especificación algebraica de los números naturales vista en clase, la sintaxis y la semántica de la operación de división que calcula el cociente de dos números naturales es la siguiente (Nota: se asume que para resta y división el primer argumento es mayor que el segundo y que el cociente de la división es entero y exacto): resta, division: natural , natural → natural; VAR x, y: natural; resta(x, cero) = x; resta(suc(x),suc(y)) = resta(x,y); division(x,cero)=error_natural; division(x,x)=suc(cero); division(x,y)=division(resta(x,y),y); 
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+En C++, un destructor devuelve 0 si el objeto se destruye correctamente y un valor distinto de 0 en caso contrario.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+La función de búsqueda BINARIA de un elemento en un vector desordenado tiene una complejidad temporal O(log2 n).
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+La operación subconjunto_impares que se aplica sobre un conjunto de números naturales, definida a continuación, devuelve el subconjunto formado por los números impares que existen en el conjunto original (Nota: Se asume que está definida la operación MOD para calcular el resto de la división entera): subconjunto_impares: conjunto → conjunto; Var C: conjunto; x: natural; subconjunto_impares(crear_conjunto()) = crear_conjunto(); subconjunto_impares(Insertar(C,x))= si (x MOD 2 ==suc(cero)) entonces Insertar(subconjunto_impares(C),x) si no subconjunto_impares(C)
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Se puede reconstruir un único árbol binario de búsqueda teniendo su recorrido en preorden.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Un árbol binario de búsqueda con 3 elementos siempre será un árbol completo. 
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Un árbol binario de búsqueda equilibrado respecto a la altura tiene una complejidad temporal en su peor caso en la operación de búsqueda de O(log2(n)), con n el número de elementos del árbol.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+En la operación de borrado de un elemento en un árbol AVL, si se realiza una rotación doble siempre decrece la altura del subárbol sobre el que se ha realizado la rotación.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+La altura de un árbol 2-3 únicamente crece cuando se inserta un elemento y todos los nodos del árbol son 3-nodo.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+La altura de un árbol 2-3 únicamente crece cuando se inserta un elemento y todos los nodos del árbol son 3-nodo.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Dado un árbol 2-3 con n items con todos sus nodos del tipo 3-nodo: la complejidad temporal en su peor caso de la operación de búsqueda de un ítem es O(log3 (n+1)).
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Todo árbol binario completo es un árbol 2-3-4 donde todos sus nodos son 2-nodo. 
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+En el borrado de un elemento en un árbol 2-3-4 sólo se reduce la altura del árbol cuando p, q y r son 2-nodo.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+La complejidad temporal en su peor caso de la diferencia de dos conjuntos de cardinalidad “n”, representados como listas ordenadas, es de O(n).
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+La dispersión abierta elimina el problema del clustering secundario.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Cuando utilizamos una tabla de dispersión abierta de tamaño B, el número máximo de elementos que se pueden almacenar está limitado a B elementos.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+La definición de un Heap Mínimo indica que ha de ser un árbol binario que además es árbol mínimo.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Una aplicación de los Grafos Acíclicos Dirigidos es la representación de órdenes parciales.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+La operación crear_pila() es una operación constructora modificadora. 
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+La semántica de la operación recu sobre el TIPO vector vista en clase es la siguiente: VAR v: vector; i, j: int; x: item; recu( crear_vector( ), i ) = error_item(); recu( asig(v, i, x ), j ) si ( i == j ) entonces CIERTO sino FALSO fsi
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+La función POT_2 descrita a continuación presenta una complejidad temporal O(2^n) función POT_2 (n: natural): natural; opción n = 1: devuelve 2; n > 1: devuelve 2 * POT_2(n-1); fopción; ffunción
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Las pilas también se conocen como listas LIFO. 
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+La sintaxis y semántica de la operación nodosHoja, que devuelve el número de nodos hoja de un árbol binario, es la siguiente: nodosHoja(arbin) → natural; VAR i, d: arbin; x: item; nodosHoja(crea_arbin( )) = 0; nodosHoja(enraizar(i, x, d)) = si esvacio(i) & esvacio(d) entonces 1 sino nodosHoja(i) + nodosHoja(d)
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Es posible reconstruir un único árbol binario de búsqueda completo a partir de su recorrido en inorden.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+En el borrado de un elemento en un árbol AVL, la altura del árbol decrece siempre tras realizar una rotación simple.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+El grado de un árbol 2-3 es 3.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Dado un árbol 2-3 de altura h con n items con todos sus nodos del tipo 3-Nodo: la complejidad de la operación de búsqueda de un item es O(log2 n).
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+En la operación de inserción de un elemento en un árbol 2-3-4 sólo se divide la raíz si ésta es un 3-nodo.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+En la representación de conjuntos mediante los vectores de bits, la complejidad espacial es proporcional al tamaño del conjunto representado.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+En la dispersión cerrada se pueden producir colisiones entre claves sinónimas y no sinónimas. 
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+En un montículo doble, un elemento “i” del montículo mínimo tiene como máximo un elemento simétrico “j” del montículo máximo.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Los árboles extendidos de un grafo dirigido tienen que ser necesariamente árboles binarios. 
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Un bosque extendido en profundidad de un grafo dirigido también es un grafo acíclico dirigido. 
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+En la definición de Tipo Abstracto de Datos: "La manipulación de los datos sólo depende del comportamiento descrito en su especificación (qué hace) y es independiente de su implementación (cómo se hace)".
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+En una cola representada a partir de una lista enlazada simple con un único puntero al principio de la lista (cabeza de la cola), todas las operaciones de la cola (Cabeza, Encolar, Desencolar y EsVacía) tienen una complejidad de O(1).
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+El máximo número de nodos en un árbol binario de altura k-1 es 2^k - 1, k ≥ 1. 
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Dado el recorrido por niveles de un árbol binario de altura 7 y 64 hojas es posible reconstruir un único árbol binario.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Un árbol está equilibrado respecto a la altura si y solo si para cada uno de sus nodos ocurre que las alturas de los dos subárboles difieren como mucho en 1.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Dado un árbol 2-3 de altura h con n items se cumple que: 3^{h}-1 < n < 2^{h}-1
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+En el algoritmo de borrado en un árbol 2-3-4 siempre que q sea 2-nodo hay que hacer una COMBINACIÓN o una ROTACIÓN.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Utilizando la representación de conjuntos mediante vectores de bits, la operación de búsqueda de un elemento tiene una complejidad espacial equivalente al tamaño del conjunto universal.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+La especificación algebraica de la siguiente operación eliminaría todas las ocurrencias de un determinado ítem (C: ConjuntoConClavesRepetidas; x, y: Ítem):  Eliminar(Crear, x) ↔ Crear; Eliminar(Insertar(C, x), y)  ↔ si (x == y) entonces Eliminar(C, y) sino Insertar(Eliminar(C, y), x)
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Sea una tabla de dispersión cerrada con función de dispersión H(x)=x MOD B, con B=100 y “x” un número natural entre 1 y 2000. Sólo hay un valor de “x” que haga H(x)=4.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+En la dispersión abierta sólo se producen colisiones entre claves sinónimas.
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+El TAD Cola de Prioridad representado por una lista desordenada, tendrá coste O(1) para la operación de borrado de un elemento.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+En un montículo de altura k el número total de elementos es 2^{k}-1.
+2
+V
+F
+NO MARCAR
+NO MARCAR
+
+Al representar un grafo de N vértices y K aristas con una lista de adyacencia, la operación de hallar la adyacencia de entrada de un vértice tiene una complejidad de O(K).
+1
+V
+F
+NO MARCAR
+NO MARCAR
+
+Un bosque extendido en profundidad de un grafo no dirigido es un grafo acíclico.
+1
+V
+F
+NO MARCAR
+NO MARCAR

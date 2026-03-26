@@ -1,0 +1,2206 @@
+¿Cuál es la importancia de entender cómo interactúan los usuarios específicos con el producto en el diseño de interfaces?  
+3  
+- Reinventar métodos ya existentes  
+- Desarrollar soluciones desde cero sin apoyarse en experiencias previas  
+- Aprovechar principios ya establecidos para no perder tiempo testando soluciones comprobadas  
+- Centrarse únicamente en la tecnología  
+
+¿Cuál de las siguientes técnicas corresponde al principio Visual para optimizar la comprensión de la interfaz?  
+1  
+- Hacer coincidir el flujo de pantallas con el flujo de tarea  
+- Proporcionar previews y salidas fáciles  
+- Diseñar para el reconocimiento en lugar del recuerdo  
+- Usar pequeñas distancias y objetivos grandes  
+
+¿Cuál de las siguientes acciones NO corresponde al principio Intelectual en el diseño de interfaces?  
+4  
+- Proporcionar previews y salidas fáciles  
+- Usar controles consistentemente  
+- Proporcionar un buen feedback de sistema  
+- Usar pequeñas distancias y objetivos grandes  
+
+Según el principio Memorística, ¿cuál de las siguientes estrategias minimiza la carga memorística en la interfaz?  
+1  
+- Diseñar para el reconocimiento en lugar del recuerdo  
+- Agrupar y etiquetar elementos  
+- Reducir ventanas y pasos  
+- Optimizar según el dispositivo de entrada  
+
+¿Qué técnica se emplea en el principio Motora para minimizar el tiempo de movimiento e interacción?  
+3  
+- Hacer opciones visibles  
+- Reducir la carga cognitiva mediante previews  
+- Usar pequeñas distancias y objetivos grandes  
+- Proporcionar defaults en las opciones  
+
+Las ventanas complejas suelen ser completamente keyboard-oriented o ratón-oriented. ¿Qué aspecto del diseño se está optimizando con este enfoque?  
+4  
+- Visual  
+- Intelectual  
+- Memorística  
+- Motora  
+
+Según el principio "Reconocer antes que recordar", ¿qué estrategia se recomienda para facilitar la selección en un editor de textos?  
+2  
+- Obligar al usuario a memorizar cada nombre de fuente  
+- Mostrar una previsualización de la fuente  
+- Listar todas las fuentes en un menú oculto  
+- Requerir la memorización de atajos para cada función
+
+¿Cuál es el significado de la frase "no reinventar la rueda" en el contexto del diseño de interfaces?  
+3  
+- Buscar siempre soluciones completamente nuevas sin basarse en lo ya probado  
+- Ignorar el comportamiento general de los usuarios  
+- Utilizar principios y técnicas ya comprobadas para optimizar el diseño  
+- Obligar al usuario a adaptarse a nuevas convenciones  
+
+Según el sistema VIMM, ¿cuál es el objetivo principal del principio Visual?  
+1  
+- Optimizar la comprensión visual mediante el alineamiento del flujo de pantallas con el flujo de tarea  
+- Simplificar la toma de decisiones del usuario  
+- Minimizar la carga memorística  
+- Reducir la cantidad de movimientos y clics en la interfaz  
+
+¿Qué estrategia se recomienda dentro del principio Intelectual para facilitar la toma de decisiones?  
+2  
+- Hacer coincidir el flujo de pantallas con la tarea  
+- Proporcionar previews y salidas fáciles  
+- Diseñar para el reconocimiento en lugar del recuerdo  
+- Usar pequeñas distancias y objetivos grandes  
+
+¿Cuál es el beneficio principal de diseñar para el reconocimiento en lugar de para el recuerdo?  
+2  
+- Facilitar la memorización de comandos  
+- Minimizar la carga memorística haciendo las opciones visibles  
+- Aumentar la velocidad de interacción motora  
+- Mejorar el etiquetado y agrupamiento visual  
+
+¿Qué recomendación se asocia al principio Motora para optimizar la interacción del usuario?  
+3  
+- Usar controles consistentemente  
+- Proporcionar feedback visual inmediato  
+- Usar pequeñas distancias y objetivos grandes  
+- Ofrecer previsualizaciones de acciones  
+
+¿Cuál es el papel de la LOCALIZACIÓN DE RESPONSABILIDADES (Function Allocation) en el diseño de interfaces?  
+4  
+- Permitir que el usuario memorice todas las acciones necesarias  
+- Asignar funciones de forma arbitraria entre hardware y software  
+- Optimizar el uso del color para mejorar la experiencia visual  
+- Distribuir de forma adecuada las tareas entre el usuario y el sistema
+
+¿Cuál es el enfoque principal del User Centered Design?  
+1  
+- Centrarse en las necesidades y comportamientos de los usuarios  
+- Basarse exclusivamente en las últimas tendencias tecnológicas  
+- Priorizar únicamente la estética visual  
+- Diseñar sin considerar el uso real del producto  
+
+¿Por qué es importante entender cómo interactúan las personas en general con la tecnología?  
+2  
+- Para innovar sin apoyarse en experiencias previas  
+- Para aplicar principios conocidos y evitar perder tiempo en pruebas innecesarias  
+- Para centrarse solo en usuarios expertos  
+- Para limitar la experimentación en el diseño  
+
+Dentro del sistema VIMM, ¿cuál principio se encarga de minimizar el tiempo de movimiento e interacción?  
+4  
+- Visual  
+- Intelectual  
+- Memorística  
+- Motora  
+
+¿Qué estrategia se sugiere para minimizar la carga memorística en una interfaz?  
+1  
+- Hacer opciones visibles y accesibles  
+- Optimizar el flujo de pantallas según la tarea  
+- Reducir el tiempo de movimiento en la interfaz  
+- Proporcionar feedback constante  
+
+¿Cómo contribuye la LOCALIZACIÓN DE RESPONSABILIDADES (Function Allocation) en el diseño de interfaces?  
+2  
+- Obliga al usuario a memorizar todas las acciones  
+- Asigna de manera adecuada las tareas entre el usuario y el sistema  
+- Incrementa la complejidad de las ventanas  
+- Requiere el uso exclusivo de atajos de teclado  
+
+¿Qué se busca optimizar al hacer coincidir el flujo de pantallas con el flujo de tarea?  
+2  
+- Motora  
+- Visual  
+- Intelectual  
+- Memorística  
+
+Según el principio "Reconocer antes que recordar", ¿cuál es la estrategia recomendada para facilitar la selección de fuentes en un editor de textos?  
+2  
+- Memorizar todos los nombres de las fuentes instaladas  
+- Mostrar una previsualización de la fuente para facilitar el reconocimiento  
+- Listar las fuentes en un menú sin previsualización  
+- Requerir que el usuario escriba el nombre exacto de la fuente
+
+¿Cuál es la importancia de analizar tanto cómo interactúan tus usuarios específicos con tu producto como cómo interactúan las personas en general con la tecnología?  
+3  
+- Para diseñar interfaces complejas sin basarse en experiencias previas  
+- Porque se puede centrar el diseño únicamente en tendencias tecnológicas  
+- Para integrar las necesidades particulares con comportamientos generales y evitar reinventar la rueda  
+- Porque permite enfocarse exclusivamente en soluciones estéticas
+
+¿Cuál es la principal ventaja de conocer los principios del diseño VIMM en la creación de interfaces de usuario?  
+3  
+- Permite inventar métodos completamente nuevos sin apoyo de soluciones previas  
+- Facilita la creación de interfaces sin necesidad de realizar pruebas  
+- Ayuda a no perder tiempo probando soluciones que ya se han comprobado  
+- Obliga a utilizar únicamente técnicas tradicionales sin innovar
+
+¿Qué función tiene el UCA en el contexto del diseño de interfaces según el temario?  
+3  
+- Analizar cómo interactúan las personas en general con la tecnología  
+- Desarrollar soluciones sin considerar la experiencia específica del usuario  
+- Investigar cómo interactúan los usuarios específicos con el producto  
+- Fomentar la innovación a costa de probar métodos ya establecidos
+
+Dentro del principio Motora, ¿qué ventaja ofrece reducir ventanas y pasos en la interfaz?  
+2  
+- Aumenta la complejidad visual  
+- Minimiza el tiempo de movimiento e interacción  
+- Facilita la memorización de funciones  
+- Incrementa la consistencia en el uso de controles
+
+¿Por qué es importante el buen agrupamiento y etiquetado de elementos en el principio Visual?  
+1  
+- Facilita la navegación y mejora la comprensión del contenido  
+- Aumenta la carga memorística del usuario  
+- Simplifica la toma de decisiones mediante un feedback inmediato  
+- Optimiza la interacción motora reduciendo el número de clics
+
+Dentro del principio Visual, ¿qué elemento contribuye significativamente a optimizar la comprensión visual de la interfaz?  
+1  
+- Uso cuidadoso del color  
+- Proporcionar defaults  
+- Reducir ventanas y pasos  
+- Proporcionar feedback de sistema
+
+¿Qué función cumple el buen feedback de sistema en el principio Intelectual?  
+1  
+- Permite al usuario comprender de inmediato las consecuencias de sus acciones  
+- Reduce el tiempo de movimiento en la interfaz  
+- Facilita el agrupamiento visual de elementos  
+- Incrementa la carga en la toma de decisiones
+
+¿Por qué es importante usar controles de manera consistente en el diseño de interfaces?  
+1  
+- Para evitar confusiones y simplificar la toma de decisiones  
+- Para aumentar la carga intelectual del usuario  
+- Para variar la experiencia en cada pantalla  
+- Para reducir la memorización de comandos
+
+¿Cómo ayuda la opción de proporcionar defaults a minimizar la carga memorística en una interfaz?  
+1  
+- Permite al usuario seleccionar rápidamente opciones preestablecidas sin tener que recordar todas las posibilidades  
+- Obliga al usuario a memorizar cada una de las opciones disponibles  
+- Incrementa la complejidad del menú de opciones  
+- Desactiva el mecanismo de reconocimiento de elementos
+
+Dentro del principio Motora, ¿por qué es crucial optimizar el diseño según el dispositivo de entrada?  
+1  
+- Porque cada dispositivo tiene características específicas que afectan la interacción, permitiendo reducir el tiempo de movimiento  
+- Porque elimina la necesidad de feedback en la interfaz  
+- Porque incrementa la carga intelectual del usuario  
+- Porque simplifica el agrupamiento de elementos en pantalla
+
+Según los principios de VIMM, ¿cómo se debe distribuir la carga de responsabilidades entre el usuario y el sistema?  
+3  
+- El sistema realiza todas las tareas sin intervención del usuario  
+- El usuario se encarga de todas las acciones para aprender el sistema  
+- Ambas partes colaboran para minimizar la carga de memoria y movimiento  
+- Las responsabilidades se asignan de forma aleatoria
+
+¿Cuál de las siguientes opciones optimiza la comprensión visual según el modelo VIMM?  
+1  
+- Hacer coincidir flujo de pantallas con flujo de tarea  
+- Proporcionar previews y salidas fáciles  
+- Hacer opciones visibles  
+- Usar pequeñas distancias y objetivos grandes
+
+¿Cuál de los siguientes principios facilita la toma de decisiones en el modelo VIMM?  
+2  
+- Hacer coincidir flujo de pantallas con flujo de tarea  
+- Proporcionar previews y salidas fáciles  
+- Hacer opciones visibles  
+- Usar pequeñas distancias y objetivos grandes
+
+¿Cómo se minimiza la carga memorística en el modelo VIMM?  
+3  
+- Hacer coincidir flujo de pantallas con flujo de tarea  
+- Proporcionar previews y salidas fáciles  
+- Diseñar para reconocimiento en lugar de recuerdo  
+- Optimizar según el dispositivo de entrada
+
+¿Cuál es una estrategia motora para minimizar el tiempo de movimiento e interacción según el modelo VIMM?  
+1  
+- Usar pequeñas distancias y objetivos grandes  
+- Proporcionar previews y salidas fáciles  
+- Hacer opciones visibles  
+- Buen agrupamiento y etiquetado
+
+¿Qué proceso permite que nuestro cerebro interprete y transforme la información visual que reciben nuestros ojos?  
+1  
+- Percepción  
+- Atención  
+- Visión periférica  
+- Reconocimiento facial
+
+¿Qué sugiere el Lyer effect (1889) en el diseño de interfaces?  
+2  
+- Los usuarios perciben siempre los elementos tal como están físicamente.  
+- El contexto y la presentación pueden persuadir a los usuarios a ver los elementos de manera diferente.  
+- La atención visual se distribuye uniformemente en la pantalla.  
+- La consistencia en el diseño es irrelevante.
+
+¿Qué principio de Gestalt ayuda a reducir la sobrecarga visual al agrupar información?  
+2  
+- Usar bordes para separar todos los elementos  
+- Utilizar el espacio en blanco (white space) en lugar de bordes  
+- Colocar elementos al azar para estimular la exploración  
+- Emplear animaciones continuas para resaltar grupos
+
+¿Por qué es recomendable dibujar íconos desde una perspectiva canónica?  
+1  
+- Porque mejora la velocidad de reconocimiento y memorización  
+- Porque permite más variedad en el diseño  
+- Porque reduce la carga de procesamiento visual  
+- Porque facilita la navegación por el sitio
+
+¿Qué práctica se debe evitar en la zona de visión periférica para no distraer al usuario?  
+1  
+- Colocar animaciones o elementos parpadeantes  
+- Usar fuentes grandes  
+- Aplicar un buen feedback visual  
+- Utilizar esquemas de color consistentes
+
+¿Cómo se puede garantizar que los usuarios noten un cambio en la pantalla?  
+2  
+- Realizar cambios sutiles para no molestar al usuario  
+- Utilizar señales visuales o auditivas adicionales para resaltar el cambio  
+- Hacer que el cambio se integre de forma natural sin destacarse  
+- Depender únicamente del enfoque central del usuario
+
+¿Qué precaución se debe tomar al seleccionar esquemas de color para audiencias multiculturales?  
+2  
+- Utilizar siempre colores brillantes sin importar la cultura  
+- Verificar las connotaciones culturales de los colores  
+- Seleccionar colores al azar para evitar estereotipos  
+- Usar únicamente combinaciones de rojo y verde
+
+¿Qué indica el efecto Stroop en el contexto del diseño de interfaces?  
+3  
+- Aumenta la facilidad de reconocimiento  
+- Genera claridad en la presentación  
+- Complica la tarea por contradicción de señales  
+- Mejora la velocidad de respuesta
+
+¿Qué es la ceguera por falta de atención en el ámbito visual?  
+3  
+- La capacidad de ver todos los elementos de la pantalla  
+- La tendencia a fijarse únicamente en el centro  
+- La incapacidad de notar cambios importantes en el campo visual  
+- La distracción causada por colores brillantes
+
+¿Cuál es la principal ventaja de usar espacio en blanco según los principios Gestalt?  
+2  
+- Incrementa la cantidad de información en pantalla  
+- Reduce la sobrecarga visual facilitando la agrupación de información  
+- Dispersa los elementos de forma caótica  
+- Obliga al usuario a concentrarse en cada detalle
+
+¿Qué característica es esencial para diseñar íconos efectivos según el temario?  
+2  
+- Incluir múltiples detalles complejos  
+- Utilizar dibujos geométricos simples  
+- Aplicar animaciones continuas  
+- Emplear una gran variedad de colores sin cohesión
+
+¿Qué elemento se destaca como clave para establecer una jerarquía visual efectiva en una interfaz?  
+2  
+- La ubicación en la periferia  
+- El tamaño de los elementos  
+- La tipografía decorativa  
+- El número total de elementos en pantalla
+
+¿Qué recomendación se hace respecto al uso de animaciones en la visión periférica?  
+3  
+- Colocar animaciones para atraer la atención  
+- Incrementar el movimiento para dinamizar la interfaz  
+- No colocar animaciones o elementos parpadeantes  
+- Usar animaciones para mejorar la estética general
+
+¿Qué se sugiere sobre el patrón F en diseños con abundante contenido textual?  
+3  
+- Colocar elementos importantes en los bordes  
+- Aplicar el patrón F sin modificaciones  
+- Evitar ubicar elementos clave en los bordes  
+- Utilizar únicamente imágenes en lugar de texto
+
+¿Cómo se deben abordar las señales de affordance en dispositivos táctiles?  
+2  
+- Incrementar el tamaño de los botones  
+- Replantear el uso de señales de hover  
+- Eliminar todas las señales visuales  
+- Utilizar exclusivamente señales auditivas
+
+¿Qué porcentaje de daltónicos se menciona en el temario para hombres y mujeres, respectivamente?  
+2  
+- 5% de hombres y 2% de mujeres  
+- 9% de hombres y 0.5% de mujeres  
+- 1% de hombres y 1% de mujeres  
+- 10% de hombres y 5% de mujeres
+
+¿Qué layout se recomienda para diseños simples con pocos elementos clave?  
+3  
+- F-pattern layout  
+- Gutenberg Diagram  
+- Z-pattern layout  
+- Transaccional pattern
+
+¿Qué layout enfatiza colocar la información más importante dentro del "triángulo dorado"?  
+3  
+- Z-pattern layout  
+- F-pattern layout  
+- Golden Triangle layout  
+- Escaneo transaccional
+
+¿Qué efecto visual se conoce como Chromostereopsis?  
+3  
+- El aumento de la legibilidad mediante contraste  
+- La agrupación natural de elementos similares  
+- El efecto de vibración o flotamiento al ver extremos opuestos del espectro de color  
+- La rápida identificación de patrones geométricos
+
+¿Qué estrategia se recomienda para resaltar la selección en una interfaz?  
+3  
+- Usar únicamente color sin apoyo adicional  
+- Aplicar animaciones continuas sin modificar el color  
+- Utilizar color acompañado de otro mecanismo indicativo  
+- Evitar el uso de color para no saturar la vista
+
+¿Qué factores se consideran en la atención según el temario?  
+3  
+- Solo la complejidad de la tarea  
+- Únicamente la similaridad de la tarea  
+- La complejidad y similaridad de la tarea  
+- Solamente el color del fondo
+
+¿Qué función cumple la visión periférica al escanear una pantalla?  
+1  
+- Decide el tema general de la página a partir de una vista rápida  
+- Garantiza la concentración exclusiva en el centro  
+- Incrementa el detalle en la lectura de textos  
+- Reduce la capacidad de procesar imágenes
+
+¿Qué efecto tiene el uso de animaciones o elementos parpadeantes en la visión periférica?  
+1  
+- Distracción que puede hacer omitir información importante  
+- Mejora la visibilidad de elementos secundarios  
+- Aumenta el enfoque en la zona central  
+- No genera ningún efecto en la atención
+
+¿Dónde se recomienda ubicar la información para la recuperación de un error?  
+1  
+- Cerca del área donde se produjo el error  
+- En la cabecera de la pantalla  
+- En un menú lateral  
+- En una ventana emergente separada
+
+¿Qué estrategia se recomienda para lograr una imagen corporativa consistente en una interfaz?  
+2  
+- Cambiar frecuentemente el diseño para mayor dinamismo  
+- Uso consistente de colores, grids y elementos de fondo  
+- Variar la paleta de colores en cada página  
+- Emplear iconos sin conexión temática
+
+¿Qué beneficio aporta el uso de agrupación (grouping) y espacio en blanco (white space) según los principios Gestalt?  
+1  
+- Facilita la identificación de patrones y reduce la sobrecarga visual  
+- Aumenta el número de elementos visibles en la pantalla  
+- Distrae al usuario de la información principal  
+- Obliga al usuario a concentrarse en cada detalle
+
+¿Cómo se deben abordar las affordance cues en dispositivos táctiles según el temario?  
+2  
+- Incrementar únicamente el tamaño de los elementos interactivos  
+- Replantear el uso de señales de hover, ya que no funcionan en pantallas táctiles  
+- Eliminar todas las señales visuales  
+- Utilizar exclusivamente indicaciones sonoras
+
+Según el temario, ¿qué efecto tiene el uso excesivo de colores en interfaces con tareas intelectuales demandantes?  
+1  
+- Genera fatiga visual y dificulta el escaneo e interpretación de datos  
+- Mejora la atención y concentración  
+- Aumenta la velocidad de respuesta  
+- No tiene ningún efecto relevante
+
+¿Qué indican las estadísticas presentadas sobre la incidencia del daltonismo?  
+2  
+- 5% de hombres y 2% de mujeres  
+- 9% de hombres y 0.5% de mujeres  
+- 1% de hombres y 1% de mujeres  
+- 10% de hombres y 5% de mujeres
+
+¿Cuál es la recomendación para facilitar el reconocimiento en lugar del recuerdo en la interfaz?  
+3  
+- Ocultar opciones para simplificar la interfaz  
+- Utilizar animaciones para llamar la atención  
+- Hacer las opciones visibles y proporcionar defaults  
+- Limitar el uso de iconos y gráficos
+
+¿Cómo influye la proximidad entre elementos en el principio de “things together belong together”?  
+1  
+- Elementos ubicados próximos se perciben como relacionados  
+- Elementos lejanos se agrupan mejor visualmente  
+- La proximidad no afecta la percepción de agrupación  
+- La proximidad aumenta la confusión en el usuario
+
+¿Qué se recomienda respecto al patrón de lectura en diseños con contenido textual abundante?  
+3  
+- Colocar elementos clave únicamente en la periferia  
+- Distribuir uniformemente todos los elementos sin jerarquía  
+- Evitar ubicar elementos críticos en los bordes, siguiendo el patrón F  
+- Utilizar el patrón Z para contenidos textuales largos
+
+¿Cuál es la función de la redundancia (mediante señales visuales o auditivas) en el diseño de interfaces?  
+2  
+- Confundir al usuario con información duplicada  
+- Asegurar que los usuarios noten los cambios en la pantalla  
+- Es prescindible si se usa un color brillante  
+- Solo afecta negativamente la velocidad de respuesta
+
+¿Qué diferencia se destaca entre patrones de lectura en usuarios estadounidenses y asiáticos?  
+2  
+- Ambos presentan patrones idénticos sin diferencias culturales  
+- Los estadounidenses tienden a ser secuenciales, mientras que los asiáticos muestran un escaneo más holístico y circular  
+- Los asiáticos se centran únicamente en el centro de la pantalla  
+- No existen diferencias en el patrón de lectura entre culturas
+
+¿Por qué es importante utilizar iconos que sean familiares para el público general?  
+1  
+- Facilitan el reconocimiento rápido y reducen la carga cognitiva  
+- Incrementan la ambigüedad en la interpretación  
+- No influyen en la experiencia del usuario  
+- Aumentan la complejidad de la interfaz
+
+¿Qué se destaca sobre la dedicación del cerebro en relación a la visión?  
+1  
+- La mitad de nuestro cerebro está dedicada a ver e interpretar lo que vemos  
+- Todo el cerebro se utiliza para la visión  
+- La visión no requiere procesamiento cerebral  
+- El cerebro ignora la información visual
+
+¿Por qué lo que vemos no es solamente lo que perciben nuestros ojos?  
+1  
+- Porque nuestro cerebro interpreta y transforma la información visual  
+- Porque los ojos filtran la información de forma exacta  
+- Porque la retina añade detalles adicionales  
+- Porque la percepción visual es un proceso mecánico
+
+¿Qué sugiere el efecto Kantzsa triangle/rectangle (1955) en el diseño de páginas web?  
+1  
+- Que lo que se espera ver puede diferir de lo que realmente se percibe  
+- Que la disposición de elementos no influye en la percepción  
+- Que el color es irrelevante para la interpretación visual  
+- Que las expectativas del usuario no afectan la percepción
+
+¿Por qué es preferible usar espacio en blanco en lugar de bordes según los principios Gestalt?  
+1  
+- Porque reduce la sobrecarga visual  
+- Porque aumenta la cantidad de información en pantalla  
+- Porque crea un ambiente visual más recargado  
+- Porque complica la agrupación de información
+
+¿Qué ventaja ofrece el uso de dibujos geométricos simples en el diseño de iconos según Biederman (1985)?  
+1  
+- Facilita el reconocimiento rápido del objeto  
+- Permite diseños más elaborados  
+- Aumenta el nivel de detalle visual  
+- Retrasa el proceso de reconocimiento
+
+¿Por qué se recomienda utilizar elementos 2D en lugar de 3D en interfaces?  
+1  
+- Porque el cerebro procesa mejor las imágenes en 2D  
+- Porque el 3D es siempre más costoso de implementar  
+- Porque los elementos 2D son más modernos  
+- Porque el 3D aumenta la interactividad
+
+¿Qué parte del rostro tiene mayor impacto en la respuesta emocional de una página web?  
+1  
+- Los ojos  
+- La sonrisa  
+- La forma de la cara  
+- El peinado
+
+¿En qué situación se recomienda utilizar un layout en Z-pattern?  
+1  
+- Cuando el diseño es simple y tiene pocos elementos clave  
+- Cuando hay abundante contenido textual  
+- Cuando se requiere un diseño complejo con múltiples secciones  
+- Cuando se necesita resaltar información en los bordes
+
+¿Qué se debe tener en cuenta respecto a los patrones de lectura en una interfaz?  
+2  
+- Que son fijos e inmutables  
+- Que pueden variar según las metas y expectativas del usuario  
+- Que dependen exclusivamente de la disposición de elementos  
+- Que no influyen en la experiencia de usuario
+
+¿Por qué es recomendable utilizar un esquema de codificación redundante al usar colores para indicar significado?  
+1  
+- Para reforzar el mensaje y compensar problemas como el daltonismo  
+- Para aumentar la saturación visual  
+- Para simplificar el diseño eliminando otros indicadores  
+- Para hacer el diseño más complejo
+
+¿Qué elementos ayudan a transmitir que todas las páginas de un portal están basadas en un estándar consistente?  
+1  
+- Uso consistente de colores, grids y elementos de fondo  
+- Variación constante de tipografías y estilos  
+- Inclusión de múltiples logotipos en cada página  
+- Disposición aleatoria de elementos visuales
+
+¿Cuál de los siguientes factores NO se menciona como influencia sobre la atención?  
+4  
+- La complejidad de la tarea  
+- La similaridad de la tarea  
+- La práctica y el procesamiento automático  
+- La iluminación ambiental
+
+¿Qué fenómeno se relaciona con la tendencia de los usuarios a ignorar anuncios o elementos con formato promocional?  
+3  
+- Efecto Stroop  
+- Ceguera por falta de atención  
+- Banner blindness  
+- Chromostereopsis
+
+¿Qué tipo de test podría ser interesante realizar para elegir entre tres esquemas de color en una interfaz?  
+1  
+- Test A/B de usabilidad  
+- Test de velocidad de conexión  
+- Evaluación del rendimiento del sistema  
+- Prueba de carga del servidor
+
+¿Qué se debe evitar al diseñar señales de affordance para dispositivos táctiles?  
+1  
+- Replantear el uso de señales de hover  
+- Aumentar el tamaño de los elementos interactivos  
+- Incluir feedback auditivo en exceso  
+- Utilizar iconos demasiado detallados
+
+¿Cuál es el significado de “percepción” en el contexto de los factores humanos?  
+1  
+- Es la conciencia e interpretación de la información recibida por nuestros sentidos  
+- Es la capacidad de memorizar datos  
+- Es el proceso de atención exclusiva a un estímulo  
+- Es la acción de recordar detalles específicos
+
+¿Qué estrategia recomienda el modelo VIMM para minimizar la carga memorística?  
+1  
+- Hacer las opciones visibles y diseñar para el reconocimiento en lugar del recuerdo  
+- Ocultar opciones para simplificar la interfaz  
+- Utilizar animaciones para recordar las opciones  
+- Proporcionar defaults sin mostrar todas las alternativas
+
+Según los principios Gestalt, ¿cuál es una forma efectiva de agrupar elementos en una interfaz?  
+1  
+- Colocar elementos similares cerca unos de otros  
+- Separar todos los elementos con líneas gruesas  
+- Ubicar elementos de diferentes categorías juntos  
+- Distribuir los elementos de forma aleatoria
+
+¿Qué sugiere el efecto Lyer (1889) en el diseño de interfaces?  
+1  
+- La forma en que se presenta la información puede influir en la percepción del usuario  
+- Los usuarios siempre interpretan de forma literal lo que ven  
+- La consistencia visual es irrelevante para la percepción  
+- Las expectativas del usuario no afectan la interpretación
+
+¿Qué demuestran las muestras de los 24 geons de Biederman (1985) en el diseño de iconos?  
+1  
+- Que un dibujo geométrico simple facilita el reconocimiento del objeto  
+- Que los íconos deben contener muchos detalles para ser efectivos  
+- Que el uso de geons complica la identificación de objetos  
+- Que los íconos complejos siempre son preferibles
+
+¿Cuál es la ventaja de utilizar imágenes en lugar de texto en una interfaz, según el temario?  
+1  
+- Las imágenes se procesan más rápidamente por el cerebro, facilitando el reconocimiento  
+- El texto siempre es más informativo y rápido de procesar  
+- Las imágenes no afectan la velocidad de interpretación  
+- El uso de imágenes retrasa la toma de decisiones
+
+¿Qué recomendación se hace para minimizar el tiempo de movimiento e interacción en el diseño de interfaces?  
+1  
+- Reducir el número de ventanas y pasos, utilizando distancias cortas y objetivos grandes  
+- Aumentar el número de pasos para confirmar cada acción  
+- Ubicar elementos interactivos en zonas poco accesibles  
+- Ampliar las distancias entre elementos para evitar errores
+
+¿Cuál es el impacto de las señales de affordance en la usabilidad de una interfaz?  
+1  
+- Facilitan que el usuario entienda qué acciones puede realizar con cada objeto  
+- Incrementan la complejidad visual sin aportar claridad  
+- No influyen en el comportamiento del usuario  
+- Son útiles únicamente en dispositivos con ratón
+
+¿Qué aspecto se destaca sobre la atención en el diseño de interfaces?  
+1  
+- Requiere un esfuerzo mental y se ve afectada por la complejidad y similaridad de la tarea  
+- Es un proceso completamente automático sin influencia del contexto  
+- Se centra únicamente en los estímulos de color  
+- Depende exclusivamente de la posición de los elementos en pantalla
+
+¿Qué estrategia se recomienda para asegurarse de que los usuarios noten cambios en la pantalla?  
+1  
+- Incorporar señales adicionales, como parpadeos o sonidos, para reforzar el cambio  
+- Hacer que el cambio sea sutil para no interrumpir al usuario  
+- Confiar en que el usuario lo notará sin ayuda adicional  
+- Utilizar únicamente cambios en el texto sin apoyo visual
+
+¿Qué efecto puede tener el uso excesivo de colores en una interfaz con tareas intelectualmente demandantes?  
+1  
+- Puede causar fatiga visual y dificultar el escaneo e interpretación de datos  
+- Siempre mejora la experiencia del usuario  
+- Incrementa la velocidad en la toma de decisiones  
+- No tiene impacto en la carga cognitiva
+
+¿Cuál es la recomendación respecto a la elección de colores para asegurar accesibilidad, considerando el daltonismo?  
+1  
+- Seleccionar esquemas de color que no dependan únicamente de combinaciones de rojo, verde o azul  
+- Utilizar exclusivamente colores brillantes sin restricciones  
+- Priorizar combinaciones con alto contraste sin tener en cuenta el daltonismo  
+- Usar colores al azar para diversificar la apariencia
+
+¿Qué importancia tiene la perspectiva canónica en el diseño de íconos?  
+1  
+- Dibujar íconos desde una perspectiva canónica mejora su reconocimiento rápido  
+- La perspectiva canónica solo es relevante para objetos tridimensionales  
+- No afecta la velocidad de reconocimiento  
+- Se debe evitar para mantener variedad en el diseño
+
+¿Cómo influyen los atajos cerebrales (brain shortcuts) en la percepción visual?  
+1  
+- Los colores y las formas pueden influir en lo que percibimos  
+- La atención se dirige siempre al centro de la pantalla  
+- El cerebro ignora los detalles cuando hay muchos elementos  
+- La experiencia previa no afecta la interpretación visual
+
+¿Qué ocurre cuando una cara en una página web dirige la mirada hacia otro elemento?  
+1  
+- Los usuarios tienden a dirigir su mirada hacia ese elemento  
+- La atención se dispersa por toda la pantalla  
+- Se genera confusión y se ignora el elemento señalado  
+- El elemento mirado pierde relevancia visual
+
+¿Qué se debe evitar para prevenir el efecto de “bouncing” en el escaneo de pantallas?  
+1  
+- Evitar patrones que obliguen al usuario a rebotar de un lado a otro para completar una tarea  
+- Ubicar elementos importantes únicamente en la periferia  
+- Utilizar demasiadas animaciones en el centro  
+- Agrupar todos los elementos en un solo bloque sin jerarquía
+
+¿Qué implica el “modelo mental” de los usuarios respecto a la disposición de elementos en una interfaz?  
+1  
+- Los usuarios esperan encontrar elementos clave (por ejemplo, la barra de búsqueda) en ubicaciones predecibles  
+- Los usuarios confían en diseños completamente innovadores sin patrones establecidos  
+- La ubicación de los elementos es irrelevante si el contenido es de calidad  
+- Se debe cambiar constantemente la posición de los elementos para mantener la atención
+
+¿Qué recomendación se sugiere para interfaces que deben ser utilizadas por usuarios frecuentes en tareas intelectualmente demandantes?  
+1  
+- Emplear un contraste elevado (por ejemplo, texto negro sobre fondo gris claro al 95%) para reducir la fatiga visual  
+- Utilizar esquemas de color muy saturados para resaltar información  
+- Disminuir el contraste para suavizar la apariencia  
+- Alternar colores brillantes y oscuros de forma aleatoria
+
+¿Cuál es el objetivo principal de la dimensión Visual en el sistema VIMM?  
+1  
+- Hacer coincidir el flujo de pantallas con el flujo de tarea  
+- Proporcionar previews y salidas fáciles  
+- Hacer opciones visibles  
+- Usar pequeñas distancias y objetivos grandes
+
+¿Cuál es el objetivo de la dimensión Intelectual en el sistema VIMM?  
+2  
+- Hacer coincidir el flujo de pantallas con el flujo de tarea  
+- Proporcionar previews, usar controles consistentes y ofrecer buen feedback  
+- Hacer opciones visibles  
+- Usar pequeñas distancias y objetivos grandes
+
+¿Qué estrategia utiliza la dimensión Memorística en el sistema VIMM para minimizar la carga de memoria?  
+3  
+- Proporcionar previews y salidas fáciles  
+- Hacer coincidir el flujo de pantallas con el flujo de tarea  
+- Diseñar para el reconocimiento en lugar de para el recuerdo  
+- Usar controles consistentes
+
+¿Cuál de las siguientes no corresponde a una estrategia de la dimensión Motora en el sistema VIMM?  
+4  
+- Usar pequeñas distancias y objetivos grandes  
+- Reducir ventanas y pasos  
+- Optimizar según el dispositivo de entrada  
+- Proporcionar defaults
+
+¿Por qué se recomienda evitar el uso excesivo de mayúsculas según el material?  
+2  
+- Porque son más lentas de leer  
+- Porque se perciben como gritos y no se acostumbra su lectura  
+- Porque dificultan el flujo de la lectura  
+- Porque interfieren con la capacidad de reconocer patrones
+
+Según el material, ¿cuántas letras se captan durante un salto (saccade) al leer?  
+1  
+- Entre 7 y 9 letras  
+- Entre 15 y 20 letras  
+- Exactamente 10 letras  
+- Más de 20 letras
+
+¿Qué recomendación se hace respecto al tamaño de fuente para la lectura en pantalla?  
+1  
+- Utilizar al menos 12 puntos para minimizar la fatiga ocular  
+- Usar siempre el mismo tamaño de fuente en todos los dispositivos  
+- Elegir fuentes con x-height baja para ahorrar espacio  
+- Seleccionar fuentes decorativas para atraer la atención
+
+¿Cuál de las siguientes afirmaciones sobre las preferencias tipográficas es correcta?  
+3  
+- Los seniors prefieren fuentes pequeñas y con serif  
+- Los niños prefieren Comic Sans y Arial a 14 puntos únicamente  
+- Las fuentes Verdana, Georgia o Arial son las preferidas para textos extensos  
+- Times es la fuente más utilizada en entornos educativos
+
+¿Cuál es el principio clave del "Progressive Disclosure" según el material?  
+2  
+- Mostrar toda la información desde el inicio  
+- Proveer la información en el momento en que el usuario la necesita  
+- Aumentar la cantidad de clics en cada interacción  
+- Incluir toda la información en una sola página
+
+Según el material, ¿cuál es la carga que requiere más recursos mentales?  
+1  
+- Carga cognitiva  
+- Carga visual  
+- Carga motora  
+- Carga perceptual
+
+Según el experimento de "How People Read - Comprehension", ¿qué elemento es esencial para que podamos leer palabras con letras mezcladas?  
+1  
+- Que la primera y la última letra se mantengan en su posición  
+- Que todas las letras estén en mayúscula  
+- Que se use una fuente con serif  
+- Que se lea en un entorno silencioso
+
+¿Qué característica se debe priorizar en el diseño de interfaces para reducir la carga intelectual?  
+2  
+- Hacer coincidir el flujo de pantallas con el flujo de tarea  
+- Proporcionar previews, controles consistentes y un buen feedback  
+- Aumentar el número de clics para confirmar acciones  
+- Reducir el tamaño de la fuente en textos largos
+
+¿Cuál es la ventaja principal de utilizar la técnica de "Progressive Disclosure" en el diseño de interfaces?  
+3  
+- Mostrar toda la información de forma simultánea  
+- Utilizar tipografías decorativas para resaltar información  
+- Revelar la información en el momento preciso en que el usuario la necesita  
+- Disminuir la cantidad de pasos para llegar a una función
+
+En el análisis de la "Pattern Recognition", ¿qué afirmación es correcta según el material?  
+1  
+- Las fuentes con y sin serif son equivalentes en términos de legibilidad  
+- Las fuentes sin serif siempre son preferidas en todos los contextos  
+- Los espaciados monoespaciados son ideales para textos largos  
+- Las fuentes decorativas facilitan el reconocimiento de patrones
+
+¿Qué recomienda el material respecto al interlineado y el uso de cursiva en grandes porciones de texto?  
+2  
+- Se debe usar interlineado reducido y cursiva para resaltar información  
+- Se aconseja evitar grandes bloques de cursiva y cuidar el interlineado para una lectura cómoda  
+- Se recomienda interlineado variable y uso extensivo de cursiva  
+- Se sugiere interlineado fijo y cambiar constantemente entre cursiva y normal
+
+Según el temario, ¿qué grupo tiende a preferir fuentes más grandes y sin serif para facilitar la lectura?  
+4  
+- Los diseñadores gráficos  
+- Los jóvenes en entornos digitales  
+- Los usuarios de dispositivos móviles exclusivamente  
+- Los seniors y niños
+
+En cuanto a la "Carga Mental" de un usuario, ¿cuál de las siguientes cargas es considerada la más costosa?  
+1  
+- La carga cognitiva  
+- La carga visual  
+- La carga motora  
+- La carga emocional
+
+¿Qué estrategia se sugiere para minimizar la percepción del tiempo durante procesos largos?  
+2  
+- Reducir el número de pasos, sin importar el feedback  
+- Dividir el proceso en etapas con indicadores de progreso  
+- Utilizar fuentes decorativas para distraer al usuario  
+- Aumentar el contenido visual en cada pantalla
+
+¿Cómo se aborda la "Incertidumbre" en el comportamiento del usuario según el material?  
+3  
+- Ofreciendo múltiples opciones sin compromiso  
+- Respondiendo de inmediato a todas las dudas del usuario  
+- Evitando argumentos que refuercen creencias preconcebidas y fomentando compromisos pequeños  
+- Incrementando la carga visual para retener la atención
+
+Respecto al "Modelo Mental" en el diseño de experiencias de usuario, ¿cuál es la recomendación clave?  
+4  
+- Diseñar sin tener en cuenta las experiencias previas del usuario  
+- Basarse únicamente en estudios de tendencias tecnológicas  
+- Crear un modelo conceptual que se aleje de los modelos mentales existentes  
+- Alinear el modelo conceptual del producto con los modelos mentales de la audiencia
+
+¿Cuál es la importancia de proporcionar un título o headline en el diseño de interfaces?  
+3  
+- Ayuda a mejorar la velocidad de lectura  
+- Incrementa la carga visual  
+- Atrae la atención y resume el contenido  
+- Facilita el uso de colores decorativos
+
+¿Qué herramienta se menciona en el material para calcular la legibilidad de un texto?  
+1  
+- La fórmula de Flesh-Kincaid  
+- La ley de Fitts  
+- Los previews y salidas fáciles  
+- El uso de controles consistentes
+
+¿Qué se recomienda hacer para que un texto sea accesible a una audiencia amplia?  
+4  
+- Emplear fuentes decorativas para captar la atención  
+- Utilizar únicamente letras mayúsculas para mayor impacto  
+- Usar espaciados monoespaciados para uniformidad  
+- Adaptar el nivel de lectura y utilizar palabras simples
+
+¿Cómo se puede reducir la percepción del tiempo durante procesos largos?  
+2  
+- Incrementando la carga cognitiva del usuario  
+- Dividiendo el proceso en etapas con indicadores de progreso  
+- Utilizando fuentes de mayor tamaño  
+- Eliminando el feedback visual en cada paso
+
+¿Qué diferencia se destaca entre la lectura en pantalla y en papel?  
+4  
+- La lectura en pantalla siempre es más rápida  
+- No existe diferencia en la percepción visual  
+- La pantalla favorece la utilización de fuentes decorativas  
+- La distancia visual es mayor en pantalla, lo que puede afectar la comodidad
+
+¿Cuál es la estrategia principal para optimizar la interacción motora según el sistema VIMM?  
+1  
+- Usar pequeñas distancias y objetivos grandes  
+- Aumentar el número de pasos para confirmar acciones  
+- Emplear controles visuales decorativos  
+- Incrementar la cantidad de ventanas y pasos
+
+¿Qué implica el concepto de “carga cognitiva” en el diseño de interfaces?  
+3  
+- Es la cantidad de movimiento que requiere el usuario  
+- Se refiere a la información visual presente en la pantalla  
+- Es el esfuerzo mental necesario para procesar la información  
+- Corresponde a la cantidad de clics que se deben realizar
+
+¿Por qué se menciona el “mind wandering” en el material?  
+4  
+- Para justificar el uso de fuentes decorativas  
+- Para incrementar la carga motora en el usuario  
+- Porque se relaciona con la velocidad de lectura  
+- Porque el divagar puede hacer que el usuario pierda información importante
+
+¿Cuál es el propósito principal de utilizar ejemplos prácticos en el diseño de interfaces?  
+2  
+- Incrementar la carga visual para enfatizar la información  
+- Mostrar a los usuarios cómo realizar una tarea de forma efectiva  
+- Aumentar el número de clics necesarios para una acción  
+- Distrer al usuario de la información principal
+
+¿Qué recomendación se ofrece para la alineación del texto en culturas que leen de izquierda a derecha?  
+1  
+- Utilizar alineación a la izquierda  
+- Centrar el texto para mejorar la estética  
+- Alinear el texto a la derecha para favorecer la intuición  
+- Justificar el texto para una distribución uniforme
+
+¿Cuál es la característica fundamental del modelo mental que facilita una experiencia de usuario intuitiva?  
+3  
+- Que el diseño sea completamente innovador  
+- Que se base únicamente en tendencias actuales  
+- Que se alinee con los modelos mentales y experiencias previas del usuario  
+- Que minimice la carga visual
+
+¿Cuál es el principal objetivo de utilizar "User Stories" en el diseño de interfaces?  
+2  
+- Aumentar la complejidad del sistema  
+- Proveer ejemplos prácticos que faciliten la comprensión y memorización  
+- Incrementar la carga cognitiva para retar al usuario  
+- Introducir narrativas irrelevantes para diversificar el contenido
+
+¿Qué efecto tiene el uso excesivo de fuentes decorativas en la lectura, según el temario?  
+3  
+- Mejora la estética sin afectar la legibilidad  
+- Acelera el reconocimiento de patrones  
+- Dificulta el reconocimiento de patrones y ralentiza la lectura  
+- Incrementa la preferencia del usuario por el contenido
+
+¿Qué criterio se recomienda tener en cuenta al seleccionar el tamaño de fuente para interfaces digitales?  
+2  
+- Usar el tamaño mínimo para ahorrar espacio visual  
+- Elegir un tamaño de fuente suficientemente grande (al menos 12 puntos) para minimizar la fatiga ocular  
+- Utilizar siempre el mismo tamaño que en documentos impresos  
+- Depender exclusivamente del tipo de dispositivo sin considerar el usuario
+
+Según el material, ¿cómo influye el número de caracteres por línea en la velocidad de lectura?  
+3  
+- Menos de 30 caracteres por línea es lo ideal para la rapidez  
+- Entre 45 y 72 caracteres por línea es óptimo para la preferencia visual, pero no para la velocidad  
+- Textos con alrededor de 100 caracteres por línea se leen más rápido, aunque se prefieran líneas más cortas  
+- El número de caracteres por línea no afecta la velocidad de lectura
+
+¿Qué recomendación se destaca para mejorar la legibilidad en pantallas de ordenador?  
+2  
+- Emplear fuentes decorativas para captar la atención  
+- Aumentar el contraste entre el texto y el fondo  
+- Reducir el tamaño de la fuente para incluir más contenido  
+- Utilizar múltiples columnas en el diseño del texto
+
+¿Qué estrategia se sugiere para mitigar la "carga motora" en el uso de interfaces?  
+2  
+- Incrementar el número de pasos para confirmar acciones  
+- Optimizar el diseño con movimientos cortos, objetivos grandes y reduciendo ventanas y pasos  
+- Variar de forma inconsistente los controles de interacción  
+- Ampliar la distancia entre los objetivos para aumentar la precisión
+
+¿Cuál es la función del feedback en el diseño de interfaces, según el temario?  
+3  
+- Aumentar la complejidad visual sin aportar información  
+- Ser utilizado únicamente con fines decorativos  
+- Facilitar la toma de decisiones al informar al usuario sobre el resultado de sus acciones  
+- Incrementar la carga cognitiva del usuario
+
+¿Cómo afecta una alta carga cognitiva a la capacidad de multitasking en el usuario?  
+3  
+- No tiene relación con la capacidad de multitarea  
+- La alta carga cognitiva mejora la multitarea al mantener al usuario alerta  
+- Limita la capacidad del usuario para realizar multitareas  
+- Siempre favorece el rendimiento en tareas simultáneas
+
+¿Qué factor es clave para adaptar el nivel de lectura de un texto, según el material?  
+3  
+- La estética y el diseño gráfico exclusivamente  
+- La cantidad de elementos visuales presentes en el contenido  
+- El nivel de conocimiento y la experiencia previa del público  
+- El tamaño del dispositivo en que se visualiza el texto
+
+¿Cuál de las siguientes estrategias corresponde a la dimensión Intelectual del sistema VIMM para simplificar la toma de decisiones?  
+1  
+- Proporcionar previews y salidas fáciles  
+- Diseñar para el reconocimiento en lugar de para el recuerdo  
+- Utilizar controles inconsistentes  
+- Minimizar el tiempo de movimiento
+
+¿Por qué se recomienda evitar el uso excesivo de mayúsculas en textos, según el material?  
+2  
+- Porque dificultan el reconocimiento de letras  
+- Porque se perciben como gritos y ralentizan la lectura  
+- Porque son más propensas a errores tipográficos  
+- Porque mejoran la legibilidad en títulos
+
+¿Qué factor se debe cuidar para no interferir con la capacidad del cerebro para reconocer patrones en la tipografía?  
+1  
+- Evitar fuentes excesivamente decorativas  
+- Aumentar el tamaño de la fuente  
+- Ajustar el interlineado  
+- Utilizar mayúsculas en exceso
+
+¿Cuál es la importancia del x-height en la legibilidad de las fuentes, según el material?  
+2  
+- Determina el número de caracteres por línea  
+- Afecta la apariencia y legibilidad en pantalla  
+- No tiene impacto significativo  
+- Solo es relevante en documentos impresos
+
+Según el material, ¿cómo debe alinearse el texto en culturas de lectura de izquierda a derecha?  
+1  
+- A la izquierda  
+- A la derecha  
+- Centrado  
+- Justificado
+
+¿Qué efecto tiene el "mind wandering" en el rendimiento de tareas, según el temario?  
+2  
+- Mejora la memoria a largo plazo  
+- Puede hacer que se pierda información importante y afectar la tarea  
+- Aumenta la velocidad de lectura  
+- Facilita la multitarea
+
+¿Qué rol cumple el feedback en la experiencia de usuario, según el material?  
+3  
+- Incrementa la carga cognitiva  
+- Aumenta la complejidad de la interfaz  
+- Facilita la toma de decisiones informando sobre el resultado de las acciones  
+- Interfiere con el proceso de reconocimiento visual
+
+En el contexto de las cargas en el diseño de interfaces, ¿qué estrategia se sugiere para compensar una mayor carga cognitiva?  
+1  
+- Reducir el número de opciones y aumentar el feedback  
+- Incrementar la carga motora  
+- Aumentar la complejidad visual  
+- Minimizar el uso de interacciones
+
+¿Qué ventaja se menciona sobre el uso de ejemplos y tutoriales visuales en el diseño de interfaces?  
+2  
+- Incrementan la carga visual para mantener la atención  
+- Permiten a los usuarios ver de forma práctica cómo realizar tareas  
+- Reducen la necesidad de feedback  
+- Aumentan el tiempo percibido de la tarea
+
+Según el material, ¿cómo se debe adaptar el diseño de interfaces a las preferencias culturales?  
+2  
+- Utilizando un único diseño universal para todos  
+- Ajustando el diseño según diferencias en lectura, alineación y otros aspectos culturales  
+- Empleando únicamente fuentes sin serif  
+- Rediseñando la interfaz cada año
+
+¿Cuál es la ventaja del espaciado proporcional frente al monoespaciado en tipografía?  
+1  
+- El espaciado proporcional se lee mejor y es más agradable a la vista  
+- El espaciado proporcional permite mostrar más información en pantalla  
+- El espaciado proporcional es más fácil de implementar  
+- El espaciado proporcional reduce el consumo de recursos gráficos
+
+¿Qué se recomienda evitar en grandes bloques de texto para mejorar la legibilidad?  
+2  
+- Utilizar fuentes sin serif  
+- Usar cursiva en grandes porciones de texto  
+- Emplear interlineado amplio  
+- Aplicar mayúsculas de forma excesiva
+
+¿Cuál es el principio clave del "Progressive Disclosure" en el diseño de interfaces?  
+3  
+- Mostrar toda la información de forma simultánea  
+- Incrementar la cantidad de clics en cada interacción  
+- Revelar la información solo en el momento en que el usuario la necesita  
+- Utilizar efectos visuales para distraer al usuario
+
+¿Cómo se define la carga motora en el contexto del diseño de interfaces?  
+1  
+- Es el esfuerzo físico y el tiempo invertido en la interacción (movimientos y clics)  
+- Es la dificultad para recordar información  
+- Se refiere al procesamiento de información visual  
+- Es el impacto emocional al interactuar con el sistema
+
+¿Cuál es el propósito de utilizar "User Stories" en el diseño de experiencias de usuario?  
+2  
+- Incrementar la complejidad del sistema  
+- Hacer la información comprensible, interesante y memorable  
+- Reducir la cantidad de feedback visual  
+- Aumentar la carga cognitiva para retar al usuario
+
+¿Qué se entiende por modelo conceptual en el diseño de experiencias de usuario?  
+4  
+- Una herramienta para medir la eficiencia del sistema  
+- Un conjunto de reglas para la elección de tipografías  
+- Un modelo que se centra en la carga motora únicamente  
+- El diseño intencional del producto que se alinea con el modelo mental del usuario
+
+¿Qué estrategia se sugiere para disminuir la percepción del tiempo durante una tarea larga?  
+3  
+- Reducir el tamaño de la fuente  
+- Eliminar cualquier tipo de feedback  
+- Dividir el proceso en etapas con indicadores de progreso y feedback constante  
+- Aumentar la cantidad de información en cada pantalla
+
+¿Cuál es la función principal del feedback en una interfaz de usuario?  
+1  
+- Informar al usuario sobre el resultado de sus acciones y facilitar la toma de decisiones  
+- Aumentar la carga visual para mantener la atención  
+- Incrementar el número de clics requeridos  
+- Distrer al usuario para evitar la fatiga
+
+En culturas que leen de izquierda a derecha, ¿cómo se recomienda alinear el texto?  
+1  
+- Alinear el texto a la izquierda  
+- Alinear el texto a la derecha  
+- Centrar el texto  
+- Justificar el texto
+
+¿Qué beneficio aporta el uso de ejemplos prácticos en el diseño de interfaces?  
+2  
+- Permite incrementar la carga cognitiva del usuario  
+- Ayuda a los usuarios a ver de forma concreta cómo realizar tareas y entender la funcionalidad  
+- Hace innecesario el uso de feedback visual  
+- Reduce la necesidad de un buen agrupamiento y etiquetado
+
+¿Cuál es el propósito de hacer coincidir el flujo de pantallas con el flujo de tarea en el diseño visual?  
+1  
+- Optimizar la comprensión visual  
+- Reducir la carga motora  
+- Minimizar la carga cognitiva  
+- Mejorar el reconocimiento de patrones
+
+¿Cuál es el objetivo de proporcionar previews y salidas fáciles en la dimensión Intelectual?  
+2  
+- Facilitar la memorización  
+- Simplificar la toma de decisiones  
+- Reducir la cantidad de texto  
+- Aumentar la interacción visual
+
+¿Qué estrategia se recomienda para minimizar la carga memorística en los usuarios?  
+3  
+- Hacer coincidir el flujo de pantallas con el flujo de tarea  
+- Proporcionar un buen feedback del sistema  
+- Diseñar para el reconocimiento en lugar del recuerdo  
+- Usar objetivos grandes en la interacción
+
+En el contexto de la dimensión Motora del sistema VIMM, ¿qué principio es fundamental para optimizar la interacción?  
+1  
+- Usar pequeñas distancias y objetivos grandes  
+- Incrementar el número de pasos en la interacción  
+- Utilizar fuentes decorativas  
+- Aplicar cursiva en elementos interactivos
+
+Según el material, ¿por qué es ventajoso utilizar fuentes con una mayor x-height para la lectura online?  
+2  
+- Porque permiten incluir más texto en pantalla  
+- Porque hacen que el tipo parezca más grande y legible  
+- Porque reducen el consumo de recursos gráficos  
+- Porque facilitan la alineación a la izquierda
+
+¿Qué establece la ley de Fitts en el diseño de interfaces?  
+1  
+- La relación entre el tamaño del objetivo y la distancia que se debe recorrer  
+- La cantidad de memoria necesaria para reconocer un objeto  
+- La velocidad de lectura en función de la fuente utilizada  
+- El número óptimo de caracteres por línea
+
+¿Qué recomendación se hace para minimizar la carga visual en la interfaz?  
+1  
+- Utilizar un contraste adecuado entre el texto y el fondo  
+- Aumentar el número de columnas en la presentación del texto  
+- Usar tipografías decorativas  
+- Emplear colores brillantes en exceso
+
+Según el temario, ¿cómo afecta la organización del texto en columnas a la velocidad de lectura?  
+2  
+- Los textos en múltiples columnas se leen más rápido  
+- Los textos a una sola columna se leen más rápidamente  
+- El número de columnas no afecta la velocidad de lectura  
+- Los textos en columnas cortas aumentan la carga cognitiva
+
+¿Por qué se menciona el concepto de "mind wandering" en el diseño de interfaces?  
+3  
+- Porque mejora la memorización de contenidos  
+- Porque aumenta el interés visual  
+- Porque el divagar puede hacer que se pierda información importante  
+- Porque facilita la navegación por la interfaz
+
+¿Qué factor es crucial para alinear el modelo conceptual del producto con los modelos mentales de los usuarios?  
+4  
+- Diseñar sin tener en cuenta la experiencia del usuario  
+- Basarse únicamente en estándares de la industria  
+- Utilizar únicamente fuentes decorativas para resaltar la marca  
+- Realizar investigaciones para conocer las experiencias previas de los usuarios
+
+¿Cuál es la función principal de agrupar y etiquetar elementos en el diseño visual?  
+1  
+- Mejorar la comprensión visual y la organización de la información  
+- Incrementar la carga cognitiva del usuario  
+- Distraer al usuario de la tarea principal  
+- Aumentar el número de clics necesarios para interactuar
+
+¿Qué se busca al diseñar para el reconocimiento en lugar del recuerdo?  
+2  
+- Aumentar la dificultad de las tareas  
+- Reducir la carga memorística facilitando la identificación de opciones visibles  
+- Estimular la memoria a largo plazo  
+- Incrementar la cantidad de opciones en pantalla
+
+¿Cuál es el objetivo de usar defaults en el diseño de interfaces?  
+3  
+- Obligar al usuario a tomar decisiones complejas  
+- Incrementar la variabilidad de las opciones  
+- Minimizar la carga de memoria y agilizar la toma de decisiones  
+- Forzar la personalización en cada interacción
+
+¿Qué se recomienda para mejorar la legibilidad de textos extensos en pantallas digitales?  
+2  
+- Emplear fuentes decorativas y colores vivos  
+- Utilizar un interlineado adecuado, fuentes con buena x-height y suficiente contraste  
+- Reducir el tamaño de la fuente para incluir más contenido  
+- Distribuir el texto en múltiples columnas sin guías visuales
+
+Según el material, ¿cómo influye el diseño del flujo de pantallas en la experiencia del usuario?  
+1  
+- Hace que el recorrido por la aplicación sea coherente y fácil de seguir  
+- Incrementa la cantidad de opciones en cada paso  
+- Confunde al usuario con transiciones inesperadas  
+- Aumenta la carga motora al requerir más interacciones
+
+¿Qué importancia tiene el feedback en el proceso de interacción de una interfaz?  
+4  
+- Sirve únicamente para mostrar datos estéticos  
+- Aumenta la carga cognitiva sin aportar información útil  
+- Es irrelevante si el diseño es intuitivo  
+- Informa al usuario sobre el resultado de sus acciones y orienta sus decisiones
+
+¿Cómo contribuye la ley de Fitts al diseño de controles en interfaces?  
+2  
+- Determina el color ideal para los botones  
+- Establece la relación entre el tamaño de un objetivo y la distancia del movimiento, facilitando la interacción  
+- Indica la velocidad de procesamiento de la información  
+- Mide el nivel de dificultad de recordar una tarea
+
+¿Qué ventaja ofrece la estrategia de "Progressive Disclosure" en el manejo de la información?  
+1  
+- Permite mostrar solo la información necesaria en cada etapa, evitando sobrecargar al usuario  
+- Obliga al usuario a buscar manualmente la información adicional  
+- Incrementa la cantidad de información en cada pantalla  
+- Minimiza el feedback del sistema
+
+¿Por qué es esencial alinear el diseño conceptual del producto con los modelos mentales de los usuarios?  
+3  
+- Para utilizar exclusivamente nuevas tecnologías en el diseño  
+- Para imponer un nuevo patrón de interacción  
+- Para facilitar la intuición y la comprensión, aprovechando la experiencia previa del usuario  
+- Para aumentar la cantidad de información visual en la interfaz
+
+¿Qué efecto tiene la disposición en una sola columna sobre la velocidad de lectura, según el temario?  
+4  
+- Dificulta la lectura por falta de organización visual  
+- Incrementa la fatiga visual en usuarios de dispositivos móviles  
+- Hace que la información parezca menos accesible  
+- Favorece una lectura más rápida a pesar de la preferencia por columnas múltiples en ciertos casos
+
+¿Qué se entiende por “User Centered Design” según el material?  
+2  
+- Diseñar basándose en tendencias tecnológicas sin considerar al usuario  
+- Centrarse en las necesidades, experiencias y modelos mentales del usuario  
+- Priorizar la estética sobre la funcionalidad  
+- Aplicar soluciones universales sin investigación previa
+
+¿Cuál es el papel de las investigaciones de usuario en la elaboración de modelos mentales?  
+1  
+- Permiten conocer las experiencias previas y expectativas de los usuarios para alinear el diseño  
+- Se utilizan únicamente para validar métricas cuantitativas  
+- Sirven para imponer nuevos comportamientos al usuario  
+- Son irrelevantes si se tiene un buen diseño visual
+
+En relación a las cargas en el diseño, ¿cuál es la carga que consume más recursos mentales?  
+1  
+- Carga cognitiva  
+- Carga visual  
+- Carga motora  
+- Carga emocional
+
+¿Cómo influye la “carga visual” en la experiencia del usuario?  
+3  
+- Facilita el reconocimiento de patrones sin afectar el tiempo de interacción  
+- No tiene impacto si la carga cognitiva es baja  
+- Puede ralentizar la lectura y aumentar la fatiga si es demasiado elevada  
+- Siempre se compensa automáticamente con una buena tipografía
+
+¿Qué función cumple el “feedback” en el proceso de interacción con un sistema?  
+2  
+- Aumenta la complejidad del sistema al ofrecer demasiada información  
+- Informa al usuario sobre los resultados de sus acciones y guía sus decisiones  
+- Se utiliza para recargar información visual sin propósito  
+- Limita la exploración de nuevas funcionalidades
+
+¿Qué representa la ley de Fitts en el contexto del diseño de interfaces?  
+3  
+- Un método para calcular la legibilidad de textos  
+- Una técnica para distribuir visualmente la información en columnas  
+- La relación entre el tamaño del objetivo y la distancia a recorrer para interactuar  
+- Una estrategia para optimizar la memoria del usuario
+
+Según el material, ¿cuál es la ventaja principal de estructurar la información en una sola columna para la lectura?  
+1  
+- Facilita una lectura más rápida al reducir distracciones y saltos de línea  
+- Aumenta la carga visual al concentrar la información  
+- Es la preferencia cultural en todos los casos  
+- Incrementa la complejidad de navegación
+
+¿Qué importancia tiene la “alineación” del texto según el material?  
+4  
+- Aumenta la densidad informativa si se usa alineación centrada  
+- Es irrelevante en entornos digitales  
+- Solo importa en el diseño gráfico, no en la experiencia de usuario  
+- Favorece la rapidez de lectura cuando se adapta a la dirección natural de lectura (por ejemplo, a la izquierda en culturas occidentales)
+
+¿Cómo se beneficia el usuario al utilizar “User Stories” en el diseño de experiencias?  
+2  
+- Se impone una narrativa compleja para retar la memoria  
+- Se facilita la comprensión y memorización mediante ejemplos contextuales  
+- Se reemplaza la necesidad de feedback visual con narrativas extensas  
+- Se genera incertidumbre sobre la funcionalidad del sistema
+
+¿Qué estrategia se propone para equilibrar la carga entre diferentes tipos (cognitiva, visual y motora)?  
+3  
+- Reducir todas las cargas de forma uniforme sin tener en cuenta el contexto  
+- Aumentar la carga visual para compensar la cognitiva  
+- Evaluar el producto y realizar trade-offs, reduciendo la carga cognitiva en favor de más clics si es necesario  
+- Ignorar la carga motora al enfocarse solo en la parte cognitiva
+
+¿Qué estrategia se recomienda para captar la atención visual sin interrumpir la experiencia del usuario?  
+3  
+- Mostrar información de forma masiva  
+- Utilizar colores brillantes en exceso  
+- Atraer la atención solo cuando sea necesario con métodos poco invasivos  
+- Incluir animaciones constantes
+
+¿Qué función cumple el "preview" en la dimensión Intelectual del sistema VIMM?  
+2  
+- Incrementa la carga visual sin aportar información  
+- Facilita la toma de decisiones al mostrar salidas fáciles  
+- Hace visibles las opciones para minimizar la carga memorística  
+- Optimiza la interacción motora mediante controles consistentes
+
+¿Qué recomendación se hace para mejorar la experiencia de lectura en dispositivos móviles?  
+3  
+- Utilizar múltiples columnas para aprovechar el espacio  
+- Incrementar la densidad de texto para maximizar la información  
+- Usar fuentes con gran x-height y tamaño adecuado (al menos 12 puntos)  
+- Reducir el contraste entre texto y fondo
+
+¿Cuál es el efecto de utilizar un interlineado inadecuado en textos digitales?  
+4  
+- Mejora la velocidad de lectura al compactar el contenido  
+- Favorece la organización del contenido sin afectar la legibilidad  
+- Incrementa la atención al separar visualmente párrafos  
+- Disminuye la legibilidad y puede provocar fatiga visual
+
+¿Qué se debe evitar en grandes bloques de texto para no dificultar la lectura?  
+2  
+- Usar interlineado amplio  
+- Emplear el uso excesivo de cursiva  
+- Utilizar fuentes con gran x-height  
+- Incluir títulos y subtítulos innecesarios
+
+¿Qué aspecto de la tipografía se menciona como similar en legibilidad pero diferente en términos de preferencia?  
+1  
+- Las fuentes con serif y sin serif son iguales en legibilidad, pero difieren en preferencia  
+- Las fuentes con serif son superiores en legibilidad en cualquier contexto  
+- Las fuentes sin serif son siempre preferibles para todo tipo de usuario  
+- No existe diferencia alguna en la preferencia de tipografías
+
+¿Qué importancia tienen los recursos visuales como imágenes y capturas de pantalla en los tutoriales?  
+2  
+- Incrementan la carga cognitiva sin aportar claridad  
+- Permiten demostrar de manera práctica cómo realizar tareas  
+- Distren al usuario de la información esencial  
+- Se utilizan únicamente por motivos decorativos
+
+¿Por qué se recomienda dividir la información en secciones (chunking) en el diseño de interfaces?  
+1  
+- Reduce la carga cognitiva y facilita la asimilación de la información  
+- Aumenta la cantidad de clics necesarios para acceder a la información  
+- Hace que la información sea menos accesible para el usuario  
+- Incrementa la fatiga visual por fragmentar el contenido
+
+¿Qué proceso de anticipación se menciona en "How People Read - Comprehension" que ayuda en la lectura?  
+3  
+- La anticipación de la forma global de la palabra  
+- La identificación de la última letra de cada palabra  
+- La anticipación de aproximadamente 15 letras, con especial atención a las 7 primeras  
+- La predicción del color predominante en el texto
+
+¿Cuál es la recomendación para el uso de la cursiva en textos extensos según el material?  
+1  
+- Evitar su uso en grandes bloques de texto  
+- Emplearla de forma continua para resaltar títulos  
+- Alternar entre cursiva y negrita en párrafos largos  
+- Usarla exclusivamente en interacciones críticas del usuario
+
+¿Cuál es una diferencia clave entre la lectura en pantalla y en papel, según el material?  
+2  
+- La lectura en pantalla permite mayor densidad de texto sin afectar la comodidad  
+- La distancia visual es mayor en pantalla, lo que puede generar mayor fatiga  
+- La lectura en papel requiere mayor concentración  
+- La pantalla favorece el uso exclusivo de fuentes decorativas
+
+¿Qué contraste se recomienda para mejorar la legibilidad en pantallas de ordenador?  
+1  
+- Texto negro sobre fondo gris claro  
+- Texto blanco sobre fondo negro  
+- Texto azul sobre fondo amarillo  
+- Texto gris sobre fondo blanco
+
+¿Qué describe mejor el concepto de "Progressive Disclosure" en el diseño de interfaces?  
+3  
+- Mostrar toda la información de forma simultánea para evitar clics adicionales  
+- Dividir la información en múltiples secciones sin conexión entre ellas  
+- Revelar la información de forma gradual, solo cuando el usuario la necesita  
+- Ocultar información importante hasta el final de la navegación
+
+En el manejo de las cargas de un sistema, ¿cuál es el trade-off recomendado cuando se debe elegir entre más clics o mayor esfuerzo mental?  
+2  
+- Aumentar la carga visual y reducir la carga motora  
+- Optar por más clics para disminuir la carga cognitiva  
+- Incrementar la carga motora a cambio de una mayor cantidad de información  
+- Reducir todos los tipos de carga de forma uniforme sin priorizar
+
+Según el material, ¿qué porcentaje aproximado de nuestro tiempo se puede dedicar al "mind wandering" en condiciones normales?  
+3  
+- Menos del 10%  
+- Alrededor del 50%  
+- Aproximadamente el 30%  
+- Más del 90%
+
+¿Cuál es la relación ideal entre el modelo conceptual de un producto y el modelo mental del usuario?  
+2  
+- Deben ser completamente distintos para sorprender al usuario  
+- Deben alinearse lo máximo posible para facilitar la comprensión  
+- No es relevante que coincidan, mientras la interfaz sea atractiva  
+- El modelo conceptual debe ser más complejo que el mental
+
+¿Qué papel cumplen las "User Stories" en el diseño de experiencias de usuario?  
+1  
+- Hacen la información más comprensible, interesante y memorable  
+- Aumentan la cantidad de texto sin aportar claridad  
+- Introducen complejidad innecesaria en la navegación  
+- Se usan exclusivamente para narrar casos de éxito
+
+¿Cuál es una estrategia efectiva para acortar la percepción del tiempo en procesos largos?  
+4  
+- Incluir más contenido visual en cada pantalla  
+- Reducir el tamaño de la fuente para acelerar la lectura  
+- Omitir feedback para no distraer al usuario  
+- Dividir el proceso en etapas con indicadores de progreso
+
+¿Qué medidas se recomiendan para fomentar un estado de "flow" en el usuario durante la interacción?  
+2  
+- Incrementar la dificultad de la tarea para mantener el reto  
+- Dar control sobre las acciones, dividir la dificultad en etapas, proporcionar feedback constante y minimizar distracciones  
+- Reducir al mínimo las opciones y eliminar el feedback para simplificar la experiencia  
+- Utilizar únicamente colores neutros y tipografías sin serif para reducir la fatiga
+
+¿Qué factores culturales se deben considerar en el diseño de interfaces según el material?  
+3  
+- Solo la paleta de colores y el estilo gráfico  
+- Únicamente la velocidad de lectura y el tamaño de fuente  
+- Aspectos como la dirección de lectura, poder, colectivismo versus individualismo, feminidad vs. masculinidad y tolerancia a la incertidumbre  
+- Solamente las tendencias de moda en diseño digital
+
+¿Cómo influye una presentación visual adecuada en la experiencia de lectura, según el material?  
+1  
+- Facilita la comprensión y reduce la fatiga visual  
+- Incrementa la carga cognitiva  
+- No afecta la percepción del usuario  
+- Solo mejora la estética
+
+¿Qué diferencia se observa en la percepción visual entre la lectura en pantalla y en papel?  
+2  
+- La lectura en pantalla siempre es más rápida  
+- La distancia visual es mayor en pantalla, lo que puede provocar mayor fatiga  
+- No hay diferencias significativas  
+- El papel requiere mayor esfuerzo visual
+
+¿Cuál es el efecto del contraste adecuado entre el texto y el fondo en una interfaz?  
+1  
+- Mejora la legibilidad y reduce la fatiga visual  
+- Dificulta el reconocimiento de patrones  
+- Aumenta la carga visual  
+- Solo es relevante para dispositivos móviles
+
+¿Qué factor cultural es esencial al diseñar la alineación del texto para una audiencia occidental?  
+1  
+- La dirección de lectura de izquierda a derecha  
+- El tamaño de la fuente  
+- La cantidad de imágenes utilizadas  
+- El uso de fuentes decorativas
+
+¿Qué conceptos culturales se deben tener en cuenta para adaptar el diseño a diferentes audiencias?  
+2  
+- Solo la paleta de colores  
+- Colectivismo vs. Individualismo y Feminidad vs. Masculinidad  
+- El tamaño de la pantalla  
+- La velocidad de lectura
+
+¿Qué condiciones favorecen el estado de flow en la interacción del usuario, según el temario?  
+2  
+- Aumentar la complejidad de la tarea  
+- Proporcionar control, dividir la dificultad en etapas, ofrecer feedback constante y minimizar distracciones  
+- Reducir la cantidad de información  
+- Incrementar la carga cognitiva
+
+¿Cómo se puede optimizar la percepción del tiempo durante tareas complejas?  
+1  
+- Dividiendo el proceso en etapas con indicadores de progreso  
+- Eliminando cualquier forma de feedback  
+- Aumentando la información en cada pantalla  
+- Usando fuentes de mayor tamaño
+
+¿Cuál es el propósito de incluir ejemplos prácticos o User Stories en el diseño de interfaces?  
+3  
+- Aumentar la carga cognitiva del usuario  
+- Incrementar la cantidad de información visual  
+- Hacer la información más comprensible, interesante y memorable  
+- Reemplazar la necesidad de un buen diseño visual
+
+¿Por qué son efectivas las User Stories en el diseño de experiencias de usuario?  
+1  
+- Permiten que el usuario entienda la relación causa-efecto y se identifique con la narrativa  
+- Incrementan la cantidad de feedback visual  
+- Disminuyen la carga cognitiva al eliminar opciones  
+- Se utilizan únicamente para rellenar contenido
+
+¿Qué rol juegan las imágenes y capturas de pantalla en el aprendizaje de una interfaz, según el temario?  
+2  
+- Incrementan la complejidad del diseño  
+- Facilitan la comprensión mediante ejemplos visuales y clarifican la navegación  
+- Distraen al usuario de la información principal  
+- No tienen relevancia en la experiencia del usuario
+
+¿Cuál es el propósito de la optimización visual en el Sistema VIMM?  
+1  
+- Hacer coincidir el flujo de pantallas con el flujo de tarea  
+- Proporcionar previews y salidas fáciles  
+- Minimizar la carga memorística  
+- Reducir ventanas y pasos  
+
+¿Qué estrategia se utiliza para simplificar la toma de decisiones en la optimización intelectual?  
+2  
+- Uso cuidadoso del color  
+- Proporcionar previews y salidas fáciles  
+- Hacer opciones visibles  
+- Agrupamiento y etiquetado  
+
+¿Cuál es la principal estrategia para minimizar la carga memorística en el diseño según VIMM?  
+3  
+- Proporcionar defaults  
+- Usar controles consistentemente  
+- Diseñar para el reconocimiento en lugar del recuerdo  
+- Optimizar según el dispositivo de entrada  
+
+¿Qué principio se aplica para minimizar el tiempo de movimiento e interacción (optimización motora) en VIMM?  
+2  
+- Hacer opciones visibles  
+- Usar pequeñas distancias y objetivos grandes  
+- Proporcionar un buen feedback de sistema  
+- Agrupamiento y etiquetado  
+
+Según el temario, ¿cuál es la capacidad típica de la memoria a corto plazo?  
+1  
+- Tres o cuatro ítems  
+- Siete ítems  
+- Diez ítems  
+- Una cantidad indefinida  
+
+¿Qué efecto tiene el estrés en la memoria de trabajo?  
+3  
+- Mejora la retención  
+- No tiene ningún efecto  
+- La interfiere y reduce su efectividad  
+- Aumenta la capacidad  
+
+¿Qué se recomienda para facilitar el uso de la memoria de trabajo al presentar información?  
+2  
+- Pedir a los usuarios que recuerden información de un lugar a otro  
+- Presentar la información sin interrupciones  
+- Utilizar números y letras de forma aleatoria  
+- Incrementar la cantidad de información presentada  
+
+¿Qué técnica se menciona para mejorar la retención mediante la repetición?  
+3  
+- Agrupar la información en chunks  
+- Usar ayudas externas como notas y listas  
+- Repetir la información varias veces  
+- Utilizar iconos concretos  
+
+Según el temario, ¿qué factor puede ayudar a recordar información aprovechando el contexto?  
+2  
+- Uso de términos abstractos  
+- Uso de palabras concretas e iconos  
+- Presentación desordenada de la información  
+- Aumento del número de ítems a recordar  
+
+¿Qué consejo se ofrece respecto a la dependencia en la memoria de los usuarios en el diseño?  
+2  
+- Confiar en la memoria de los usuarios para recordar información crítica  
+- Eliminar la carga de memoria proporcionando la información necesaria en el diseño  
+- Incrementar la información a memorizar para fortalecer la memoria  
+- Usar información no organizada para desafiar la memoria
+ 
+¿Cuál es la estrategia recomendada para favorecer el reconocimiento en lugar del recuerdo?  
+3  
+- Hacer opciones visibles  
+- Proporcionar defaults  
+- Diseñar para el reconocimiento en lugar del recuerdo  
+- Optimizar distancias y pasos  
+
+¿Qué se debe evitar al pedir a los usuarios que utilicen su memoria de trabajo para asegurar la retención de la información?  
+2  
+- Presentar la información de manera fragmentada  
+- No interrumpir la tarea de memorización  
+- Agrupar la información en chunks  
+- Incrementar la cantidad de datos simultáneos  
+
+¿Cuántos ítems se recomienda incluir como máximo en cada chunk para facilitar el recuerdo?  
+3  
+- Dos ítems  
+- Tres ítems  
+- Cuatro ítems  
+- Cinco ítems  
+
+¿Qué efecto tiene la repetición sobre el cerebro y la retención de información?  
+3  
+- No tiene efecto observable  
+- Dificulta la organización de la información  
+- Provoca cambios físicos que mejoran la retención  
+- Genera sobrecarga sensorial  
+
+¿Cuál es la relación entre memoria y atención según el temario?  
+2  
+- La atención y la memoria actúan de forma independiente  
+- La atención es fundamental para que la memoria funcione correctamente  
+- La memoria depende únicamente de la repetición  
+- La atención se reduce cuando se refuerza la memoria  
+
+¿Qué recomendación se da para minimizar la carga de la memoria en el diseño?  
+2  
+- Incrementar la cantidad de información en pantalla  
+- Eliminar la necesidad de que el usuario memorice datos críticos  
+- Presentar información de forma dispersa  
+- Utilizar colores brillantes para resaltar datos  
+
+¿Cómo se facilita la integración de nueva información con conocimientos previos del usuario?  
+3  
+- Proporcionando información sin contexto  
+- Introduciendo conceptos abstractos  
+- Identificando y resaltando el schema existente  
+- Cambiando frecuentemente el formato de presentación  
+
+¿Qué papel juega el descanso en la consolidación de la información?  
+3  
+- No tiene ningún efecto en la memoria  
+- Disminuye la capacidad de retención  
+- Consolida y reestructura la información aprendida  
+- Solo afecta la atención momentánea  
+
+¿Qué indica el “suffix effect” en el proceso de memorización?  
+3  
+- Se olvida la parte inicial de la información presentada  
+- Mejora la retención de todos los elementos  
+- Se tiende a olvidar la parte final de la información  
+- Aumenta la carga cognitiva en el inicio  
+
+Según el temario, ¿por qué no se deben tomar al pie de la letra los autoinformes sobre comportamientos pasados?  
+3  
+- Porque los usuarios suelen exagerar los hechos  
+- Porque estos informes se organizan mejor en grupos  
+- Porque la memoria de los hechos pasados es imprecisa  
+- Porque favorecen el recuerdo de detalles irrelevantes
+
+¿Cuál es una característica de la memoria a largo plazo según el temario?  
+3  
+- Almacena una cantidad limitada de información  
+- Permite un acceso inmediato sin necesidad de organización  
+- Puede mantener una cantidad indefinida de información, aunque almacenarla es lenta y compleja  
+- Funciona de forma similar a la memoria a corto plazo  
+
+¿Por qué es importante conectar la información nueva con la previamente almacenada?  
+1  
+- Porque facilita la integración y recuperación de la información  
+- Porque aumenta la cantidad de información a memorizar  
+- Porque obliga a los usuarios a esforzarse más al aprender  
+- Porque disminuye la velocidad del proceso de memorización  
+
+¿Qué papel desempeña el schema en el proceso de aprendizaje según el temario?  
+4  
+- Incrementa la cantidad de información a recordar  
+- Disminuye la importancia de la repetición  
+- Hace que el aprendizaje sea un proceso exclusivamente visual  
+- Permite conectar nueva información con conocimientos previos, facilitando su memorización  
+
+¿Qué recomendación se ofrece respecto al uso del think-aloud protocol?  
+3  
+- Se debe aplicar de forma obligatoria en todos los tests de memoria  
+- Es suficiente para obtener una descripción precisa de la experiencia del usuario  
+- Se debe interpretar con cautela, ya que lo que se dice puede no reflejar fielmente la experiencia  
+- Se recomienda evitarlo en estudios de comportamiento  
+
+¿Por qué se aconseja no tomar al pie de la letra los autoinformes sobre comportamientos pasados?  
+4  
+- Porque son siempre demasiado positivos  
+- Porque se basan en datos objetivos y cuantificables  
+- Porque permiten un análisis estadístico preciso  
+- Porque la memoria de los hechos pasados es imprecisa  
+
+¿Por qué es importante diseñar pensando en el olvido?  
+2  
+- Porque aumenta la capacidad de memorización de los usuarios  
+- Porque se debe asumir que las personas olvidan, por lo que es vital proporcionar la información en el diseño  
+- Porque ayuda a los usuarios a retener más detalles a largo plazo  
+- Porque permite reducir el número de interacciones necesarias  
+
+¿Qué se destaca acerca de la "flashbulb memory" en el temario?  
+1  
+- Que los recuerdos vívidos pueden ser inexactos  
+- Que siempre se recuerdan de forma precisa  
+- Que solo se producen en situaciones rutinarias  
+- Que son independientes del estado emocional  
+
+¿Cuál es la implicación del "suffix effect" en el proceso de memorización?  
+3  
+- Que se mejora la retención de la información al inicio de la presentación  
+- Que solo afecta a la memoria a largo plazo  
+- Que interrumpir el flujo de información puede causar que se olvide la parte final  
+- Que permite reforzar los detalles presentados en la mitad  
+
+¿Qué estrategia se recomienda para minimizar la carga de atención en la interfaz?  
+2  
+- Incrementar la cantidad de elementos visuales para estimular al usuario  
+- No llenar la interfaz con elementos distractores y focalizar en lo esencial  
+- Presentar información de forma caótica para retar al usuario  
+- Utilizar múltiples colores y tipografías en cada sección  
+
+¿Cuál es una recomendación fundamental para mitigar los problemas relacionados con la memoria en el diseño?  
+1  
+- Presentar la información de forma ordenada, estructurada y cercana a la acción  
+- Requerir que el usuario memorice detalles críticos  
+- Utilizar formatos abstractos y poco familiares  
+- Incrementar la cantidad de información en cada pantalla
+
+¿Cuál de los siguientes elementos es parte del diseño visual en el sistema VIMM?  
+1  
+- Hacer coincidir el flujo de pantallas con el flujo de tarea  
+- Proporcionar defaults en controles  
+- Utilizar previews y salidas fáciles  
+- Diseñar para el reconocimiento en lugar del recuerdo  
+
+¿Cuál es la principal recomendación para evitar la sobrecarga de la memoria a corto plazo?  
+3  
+- Incrementar el número de ítems en cada chunk  
+- Aumentar la cantidad de elementos visuales  
+- Presentar la información de forma ordenada y estructurada  
+- Utilizar elementos abstractos y dispersos  
+
+¿Cuál de las siguientes afirmaciones describe mejor la atención en el contexto del diseño de interfaces?  
+2  
+- La atención es ilimitada y se puede mantener en múltiples tareas a la vez  
+- Es un recurso escaso y cada vez más limitado  
+- Se puede incrementar con estímulos visuales excesivos  
+- No influye en la eficacia del diseño  
+
+¿Qué se recomienda para mejorar la eficacia de la memoria de trabajo en el diseño de interfaces?  
+4  
+- Incrementar la cantidad de información presentada  
+- Solicitar que los usuarios memoricen datos de forma dispersa  
+- Usar elementos abstractos en lugar de concretos  
+- Minimizar interrupciones y evitar la interferencia  
+
+En el contexto del “suffix effect”, ¿cuál es la recomendación para evitar la pérdida de información?  
+1  
+- No interrumpir el flujo de la presentación  
+- Aumentar la cantidad de información al final  
+- Usar interrupciones frecuentes para mantener el interés  
+- Permitir descansos largos durante la presentación  
+
+¿Cómo se puede aprovechar el “schema” del usuario para facilitar el aprendizaje?  
+2  
+- Introduciendo información completamente nueva sin relación a experiencias previas  
+- Identificando y resaltando información relacionada con conocimientos previos  
+- Cambiando constantemente el formato de presentación  
+- Usando únicamente términos abstractos  
+
+¿Qué estrategia se sugiere para mitigar el efecto negativo de la sobrecarga de atención en una interfaz?  
+4  
+- Llenar la interfaz de elementos visuales  
+- Incrementar la información sin organización  
+- Usar múltiples colores para distraer  
+- Focalizar la atención en elementos esenciales  
+
+¿Qué ventaja tiene el diseño que facilita el reconocimiento en lugar del recuerdo?  
+3  
+- Aumenta la dificultad de interacción  
+- Obliga al usuario a memorizar detalles críticos  
+- Reduce la carga cognitiva del usuario  
+- Hace que la interfaz sea menos intuitiva  
+
+Según el temario, ¿cuál es el impacto de la repetición en el aprendizaje?  
+1  
+- Cambia físicamente el cerebro y mejora la retención  
+- No tiene ningún impacto en la consolidación de la memoria  
+- Solo afecta la memoria a corto plazo  
+- Genera dependencia en ayudas externas  
+
+¿Qué se sugiere para reducir la dependencia en la memoria de los usuarios en el diseño?  
+2  
+- Incrementar la cantidad de datos a memorizar  
+- Proveer la información en el diseño en lugar de exigir memorización  
+- Fomentar la memorización mediante ejercicios de repetición  
+- Requerir autoinformes de comportamientos pasados
+
+¿Cuál es el beneficio de utilizar el color de forma cuidadosa en el diseño visual?  
+1  
+- Contribuye a resaltar elementos clave y facilita la diferenciación visual  
+- Aumenta la carga cognitiva al saturar la pantalla  
+- Distrae al usuario de la tarea principal  
+- No tiene impacto en la comprensión visual  
+
+¿Cómo se logra la optimización intelectual en el sistema VIMM?  
+2  
+- Mediante el uso exclusivo de iconos abstractos  
+- Proporcionando previews y salidas fáciles de interpretar  
+- Aumentando la cantidad de información en pantalla  
+- Utilizando colores muy contrastados sin consistencia  
+
+¿Cuál es la relación entre la atención y la memoria a corto plazo?  
+1  
+- La atención es necesaria para mantener activa la información en la memoria a corto plazo  
+- La memoria a corto plazo funciona de forma independiente de la atención  
+- La atención solo afecta la memoria a largo plazo  
+- Una alta atención reduce la capacidad de la memoria a corto plazo  
+
+¿Qué impacto tiene una buena organización de la información en la memoria a largo plazo?  
+3  
+- Aumenta el tiempo de almacenamiento sin facilitar su recuperación  
+- Impide la integración con conocimientos previos  
+- Facilita el acceso y la recuperación de la información almacenada  
+- Obliga a memorizar datos sin conexión  
+
+¿Qué recomendación se ofrece para minimizar la interferencia en la memoria de trabajo?  
+2  
+- Solicitar que el usuario memorice información de diferentes ubicaciones  
+- Presentar la información de manera continua sin pedir que se traslade a otro contexto  
+- Incrementar la cantidad de datos para fortalecer la memoria  
+- Utilizar formatos variados para estimular diferentes áreas del cerebro  
+
+¿Cuál es el objetivo principal del buen agrupamiento y etiquetado en el diseño visual?  
+1  
+- Optimizar la comprensión al relacionar elementos coherentes en la interfaz  
+- Incrementar el dinamismo visual sin un orden definido  
+- Disminuir la capacidad de reconocimiento de patrones  
+- Aumentar la cantidad de información visual en la pantalla  
+
+¿Qué papel desempeña el feedback del sistema en la optimización intelectual?  
+3  
+- Confunde al usuario al mostrar información irrelevante  
+- No afecta la toma de decisiones  
+- Facilita la toma de decisiones al informar sobre el estado del sistema  
+- Incrementa la necesidad de memorizar detalles del sistema  
+
+¿Cómo se debe actuar para adaptarse a la capacidad limitada de la atención humana?  
+1  
+- Evitar llenar la interfaz con elementos que compitan por la atención  
+- Incluir la mayor cantidad de información posible para enriquecer la experiencia  
+- Utilizar múltiples colores y tipografías en cada sección  
+- Presentar datos sin estructurar para estimular la concentración  
+
+¿Qué consecuencia puede tener no agrupar adecuadamente la información en el diseño?  
+4  
+- Facilita el reconocimiento visual  
+- Reduce la necesidad de feedback del sistema  
+- Incrementa la claridad de la interfaz  
+- Aumenta la carga memorística y dificulta la recuperación de datos  
+
+¿Por qué es importante hacer coincidir el flujo de pantallas con el flujo de tarea en el diseño de interfaces?  
+2  
+- Porque incrementa el número de pasos necesarios para completar la tarea  
+- Porque mejora la eficiencia y reduce la carga cognitiva del usuario  
+- Porque obliga a los usuarios a recordar procesos complejos  
+- Porque introduce elementos distractores en el proceso de trabajo
+
+¿Cuál es el rol de las ayudas externas (notas, listas, calendarios) en el diseño de interfaces?  
+1  
+- Facilitan el proceso de memorización al externalizar información necesaria  
+- Incrementan la cantidad de datos a recordar  
+- Distraen al usuario de la tarea principal  
+- Aumentan la carga cognitiva por exceso de elementos  
+
+¿Por qué se recomienda incorporar ayudas externas en el diseño de interfaces?  
+2  
+- Para sustituir completamente el uso de la memoria interna  
+- Para evitar depender exclusivamente de la capacidad limitada de la memoria del usuario  
+- Porque obligan al usuario a memorizar información adicional  
+- Para complicar la navegación y hacerlo más interactivo  
+
+¿Cómo contribuye el descanso, especialmente el sueño, a la consolidación de la información?  
+3  
+- Permite recuperar datos almacenados en la memoria a corto plazo  
+- Reduce la necesidad de feedback del sistema  
+- Facilita la reestructuración y consolidación de experiencias del día  
+- Disminuye la capacidad de retención al sobreestimular el cerebro  
+
+¿Qué efecto tiene una interrupción durante la presentación de información en la memoria de trabajo?  
+2  
+- Mejora la retención al segmentar la información  
+- Provoca interferencia y dificulta el mantenimiento de la información  
+- Permite agrupar mejor los datos en chunks  
+- Incrementa la capacidad de la memoria a largo plazo  
+
+Según el temario, ¿cuál es una recomendación fundamental para compensar la limitada capacidad de la atención humana?  
+1  
+- Evitar sobrecargar la interfaz con elementos distractores y focalizar en lo esencial  
+- Incrementar la cantidad de información visual para estimular al usuario  
+- Utilizar múltiples colores y tipografías para diversificar la presentación  
+- Añadir animaciones y transiciones en cada cambio de pantalla  
+
+¿Qué obra se menciona en el temario para conocer aspectos esenciales sobre la psicología aplicada al diseño?  
+3  
+- Un manual de usabilidad digital  
+- Un compendio de técnicas de programación  
+- "100 things every designer needs to know about people"  
+- Un libro sobre tendencias de diseño gráfico  
+
+¿Qué libro se recomienda para aprender a medir la experiencia del usuario?  
+2  
+- Un manual de diseño visual  
+- "Measuring the user experience: Collecting, Analyzing, and Presenting Usability Metrics"  
+- Una guía sobre psicología cognitiva  
+- Un tratado sobre usabilidad móvil  
+
+¿Cómo se aplica el principio de “diseñar para el reconocimiento en lugar del recuerdo” en una interfaz?  
+1  
+- Utilizando iconos y elementos familiares que faciliten la identificación visual  
+- Exigiendo a los usuarios memorizar rutas complejas de navegación  
+- Presentando información en formatos abstractos y poco convencionales  
+- Incrementando la cantidad de datos en cada pantalla  
+
+¿Qué estrategia práctica se sugiere para reducir la carga cognitiva durante la realización de una tarea?  
+4  
+- Incrementar el número de opciones para estimular el pensamiento  
+- Distribuir la información en múltiples pantallas sin relación  
+- Obligar al usuario a recordar detalles críticos de sesiones anteriores  
+- Presentar la información necesaria de forma ordenada, estructurada y cercana a la acción  
+
+¿Cuál es una consecuencia de no considerar ayudas externas ni la importancia del descanso en el diseño?  
+3  
+- Mejora la interacción al retar la memoria del usuario  
+- Incrementa la velocidad de respuesta del sistema  
+- Provoca sobrecarga de memoria y dificulta la retención y recuperación de la información  
+- Optimiza la experiencia al centralizar toda la información en la interfaz
+
+Según el modelo VIMM, ¿qué acción contribuye a optimizar la comprensión visual en el diseño de interfaces?  
+1  
+- Hacer coincidir el flujo de pantallas con el flujo de tarea  
+- Proporcionar previews y salidas fáciles  
+- Hacer opciones visibles para facilitar el reconocimiento  
+- Usar controles de manera consistente  
+
+¿Qué principio del modelo VIMM se enfoca en simplificar la toma de decisiones del usuario?  
+2  
+- Visual  
+- Intelectual  
+- Memorística  
+- Motora  
+
+¿Cómo se minimiza la carga memorística según el modelo VIMM?  
+2  
+- Agrupando y etiquetando elementos  
+- Haciendo las opciones visibles y diseñando para el reconocimiento en lugar de recuerdo  
+- Proporcionando previews y feedback del sistema  
+- Reduciendo ventanas y pasos  
+
+¿Cuál es el objetivo principal del enfoque motora en el modelo VIMM?  
+3  
+- Optimizar el flujo visual  
+- Simplificar la toma de decisiones  
+- Minimizar el tiempo de movimiento e interacción  
+- Facilitar el reconocimiento de opciones  
+
+
+¿Qué modelo matemático se utiliza para calcular el rendimiento en tareas de apuntar en interfaces de usuario?  
+3  
+- Modelo Hick  
+- Modelo VIMM  
+- Fitts’ Law  
+- Modelo de la Carga Cognitiva  
+
+Según Fitts’ Law, ¿qué factores determinan el tiempo de movimiento en una tarea de apuntar?  
+3  
+- Solo la distancia al objetivo  
+- Solo el tamaño del objetivo  
+- La distancia al objetivo, el tamaño del objetivo y el dispositivo de entrada  
+- La complejidad del menú y la visibilidad  
+
+En Fitts’ Law, ¿qué representa la constante “B”?  
+2  
+- El tiempo de inicio del movimiento  
+- El multiplicador según el dispositivo de entrada  
+- La distancia al objetivo  
+- La precisión requerida en la tarea  
+
+¿Por qué se coloca el menú de acceso en la parte superior de la pantalla en sistemas Mac, según Fitts’ Law?  
+2  
+- Porque es una elección estética  
+- Porque al estar en el borde la anchura del objeto se vuelve infinita, facilitando la selección  
+- Porque mejora la visibilidad de la ventana  
+- Porque se utiliza menos frecuentemente  
+
+¿Cuál de las siguientes es una guía de diseño derivada de Fitts’ Law?  
+1  
+- Habilitar botones grandes para las acciones más frecuentes  
+- Reducir siempre la distancia entre todos los botones  
+- Cambiar frecuentemente entre dispositivos de entrada  
+- Aumentar el número de opciones en cada menú  
+
+En el contexto de Fitts’ Law, ¿qué ocurre con el tiempo de movimiento (T) si aumenta la distancia al objetivo?  
+3  
+- T disminuye  
+- T permanece constante  
+- T aumenta  
+- T se vuelve impredecible  
+
+
+En el ejercicio de borrar el browser cache, ¿cuál es la distancia que se recorre en el primer movimiento (para llegar al menú)?  
+2  
+- 22 pixels  
+- 67 pixels  
+- 105 pixels  
+- 20 pixels  
+
+En el ejercicio con el Touchpad, ¿qué parámetros se utilizan para calcular el tiempo esperado para el movimiento?  
+2  
+- La posición inicial y final  
+- La distancia entre las posiciones y la constante del dispositivo (B)  
+- El tamaño del target y el valor de A  
+- El número de pixels recorridos y la velocidad del cursor  
+
+¿Cuál de los siguientes ejemplos ilustra la aplicación de Fitts’ Law en el diseño de un menú?  
+1  
+- Un menú circular en lugar de un menú lineal  
+- Un menú lineal con letras grandes  
+- Un menú con muchos submenús  
+- Un menú que se desplaza horizontalmente  
+
+Según el material, ¿qué efecto tiene reducir la distancia entre elementos que se usan conjuntamente?  
+3  
+- Aumenta la carga cognitiva  
+- Dificulta la selección  
+- Facilita la interacción y mejora el rendimiento  
+- No tiene ningún efecto  
+
+¿Qué aplicación práctica se menciona para ilustrar la ley de Fitts en la interfaz de usuario?  
+2  
+- Un menú desplegable en software de edición de fotos  
+- El ribbon de Microsoft PowerPoint  
+- Una barra de búsqueda en navegadores web  
+- El diseño de una aplicación móvil de mensajería  
+
+¿Cuál es una de las razones mencionadas para que un ratón sea más eficiente que un touchpad para realizar muchas acciones de apuntar?  
+4  
+- Porque el ratón se puede mover más rápido  
+- Porque el touchpad tiene menor resolución  
+- Porque el ratón tiene botones adicionales  
+- Porque el ratón está acoplado a los músculos del antebrazo, que son más resistentes  
+
+¿Qué ventaja se destaca del uso del pen (lápiz digital) en comparación con el ratón?  
+4  
+- Es más rápido para seleccionar elementos  
+- Permite seleccionar sin feedback visual  
+- Tiene mayor precisión en todos los escenarios  
+- Permite movimientos continuos y es excelente para dibujar una vez apoyado  
+
+En el ejercicio donde se calcula el tiempo de movimiento, ¿qué dato se identifica como el recíproco de 4.9 b/s?  
+1  
+- El valor de B del ratón  
+- La distancia a recorrer  
+- El tiempo inicial del movimiento  
+- La tasa de refresco del dispositivo  
+
+¿Cuál es el propósito de hacer opciones visibles según el modelo VIMM?  
+2  
+- Mejorar el agrupamiento de elementos  
+- Minimizar la carga memorística mediante el reconocimiento  
+- Aumentar el número de opciones disponibles  
+- Facilitar la toma de decisiones intelectuales  
+
+¿Por qué se menciona la opción “mover automáticamente a opción por defecto” en las propiedades del ratón de Windows?  
+3  
+- Porque aumenta el tamaño del target  
+- Porque elimina la necesidad de apuntar  
+- Porque reduce la distancia que el ratón tiene que recorrer  
+- Porque mejora la consistencia interna del software  
+
+¿Cuál de las siguientes acciones se recomienda para interfaces donde la labor principal es la entrada de datos?  
+2  
+- Usar menús circulares  
+- Minimizar el cambio entre dispositivos de entrada  
+- Aumentar el número de opciones en pantalla  
+- Disminuir el tamaño de los botones  
+
+¿Qué aspecto se destaca para justificar la introducción comercial del ratón según Fitts’ Law?  
+1  
+- La reducción en los coeficientes A y B comparados con otros dispositivos  
+- El aumento en la resolución de los ratones modernos  
+- La capacidad del ratón para funcionar sin feedback visual  
+- La integración con menús circulares en la interfaz  
+ 
+¿Para qué se ha utilizado Fitts’ Law en el diseño de nuevas interfaces, además de explicar el rendimiento en interfaces tradicionales?  
+3  
+- Solo para medir la eficiencia de los ratones  
+- Únicamente para optimizar menús circulares  
+- Para predecir el rendimiento de nuevas interfaces que involucran apuntar  
+- Para aumentar la visibilidad de las opciones  
+
+Según Fitts’ Law, ¿qué sucede con el tiempo de movimiento (T) si se incrementa el tamaño del objetivo?  
+2  
+- T se incrementa  
+- T se reduce  
+- T se mantiene constante  
+- T se vuelve aleatorio  
+
+En el temario se menciona que el ratón es eficiente porque está acoplado a qué grupo muscular:  
+4  
+- Los músculos del cuello  
+- Los músculos de los dedos  
+- Los músculos de la espalda  
+- Los músculos del antebrazo  
+
+En el ejercicio del Touchpad, ¿qué se utiliza para calcular el tiempo esperado para el movimiento?  
+2  
+- La velocidad del trackpad únicamente  
+- La distancia entre las coordenadas inicial y el centro del target, junto con el valor de B del Touchpad  
+- Solo la diferencia horizontal entre las coordenadas  
+- La suma de los pixels horizontales y verticales  
+
+¿Qué se recomienda para minimizar los cambios entre dispositivos de entrada según Fitts’ Law?  
+1  
+- Minimizar el cambio entre dispositivos de entrada  
+- Aumentar la cantidad de dispositivos disponibles  
+- Utilizar siempre el mismo dispositivo sin opción de cambio  
+- Priorizar el uso de touchpads sobre ratones  
+
+Según Fitts’ Law, ¿cuál es la ventaja de colocar elementos de uso frecuente cerca de los bordes de la pantalla?  
+3  
+- Facilita el agrupamiento de elementos  
+- Permite que los elementos sean más pequeños  
+- El borde de la pantalla convierte la anchura del objeto en infinita, facilitando la selección  
+- Reduce la necesidad de usar el puntero  
+
+¿Qué importancia tiene la visibilidad continua del puntero en pantalla?  
+1  
+- Proporciona feedback inmediato al usuario durante la interacción  
+- Solo es importante en sistemas táctiles  
+- Incrementa la carga memorística  
+- Aumenta el tiempo de respuesta del dispositivo  
+
+En la ecuación de Fitts’ Law, ¿qué componente se utiliza para contabilizar el tiempo de inicio del movimiento?  
+4  
+- La distancia al objetivo (D)  
+- El tamaño del objetivo (W)  
+- El multiplicador según el dispositivo (B)  
+- La constante A  
+
+Según el temario, ¿por qué un ratón es casi tan rápido como no tener ningún dispositivo en las manos?  
+2  
+- Porque reduce la distancia recorrida  
+- Porque utiliza eficientemente los músculos del antebrazo, los cuales tienen alta resistencia y throughput  
+- Porque permite movimientos con mayor precisión  
+- Porque evita la fatiga muscular  
+
+¿Qué aspecto fundamental de Fitts’ Law se utiliza para optimizar el rendimiento en la selección de opciones en interfaces de usuario?  
+3  
+- La facilidad de visualización de elementos  
+- La consistencia en el etiquetado de elementos  
+- La relación entre la distancia al objetivo y su tamaño  
+- La reducción de la carga cognitiva

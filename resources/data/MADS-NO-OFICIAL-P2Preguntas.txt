@@ -1,0 +1,2687 @@
+El acoplamiento en diseño de software se refiere a:
+2
+- El nivel de cohesión entre los módulos.
+- La dependencia entre módulos o componentes del sistema.
+- La cantidad de funcionalidad en un módulo.
+- La capacidad de extender las clases en el sistema.
+
+¿Cuál de las siguientes afirmaciones describe un alto acoplamiento?
+3
+- Los módulos de un sistema son independientes entre sí.
+- El cambio en un módulo no afecta a los demás.
+- Un cambio en un módulo provoca modificaciones en varios otros.
+- Los módulos comparten interfaces genéricas.
+
+¿Cuál es una consecuencia directa de un diseño con alto acoplamiento?
+4
+- Aumenta la cohesión entre módulos.
+- Se facilita la reutilización del código.
+- Mejora la legibilidad del sistema.
+- Dificulta realizar cambios o pruebas aisladas.
+
+Un módulo con alta cohesión:
+1
+- Contiene elementos que están relacionados entre sí y se centran en una única tarea.
+- Está estrechamente acoplado con otros módulos.
+- Tiene dependencias externas que lo hacen más flexible.
+- Puede cambiar por múltiples razones.
+
+¿Cuál es un síntoma de alta cohesión en un módulo?
+2
+- Los cambios en el módulo afectan a otros módulos.
+- Las modificaciones suelen limitarse al interior del módulo.
+- El módulo gestiona múltiples responsabilidades.
+- Requiere cambios frecuentes en su interfaz.
+
+¿Qué ocurre cuando un sistema tiene módulos altamente cohesivos?
+3
+- Aumenta la dependencia entre módulos.
+- Las funcionalidades se mezclan en varios módulos.
+- Los cambios se producen principalmente dentro de los módulos afectados.
+- Los módulos se vuelven rígidos ante el cambio.
+
+¿Cuál de los siguientes es un síntoma de un diseño rígido?
+2
+- Los cambios en el código no introducen errores.
+- Las dependencias hacen que los cambios requieran modificaciones en cascada.
+- Los módulos son independientes y fáciles de modificar.
+- El código es altamente cohesivo.
+
+¿Qué significa que un diseño sea frágil?
+3
+- Es difícil reutilizar el código.
+- Los cambios son fáciles de rastrear y solucionar.
+- Cambios en el código provocan errores inesperados en ejecución.
+- Las interfaces son estables y bien definidas.
+
+Cuando un diseño es inmóvil, se refiere a:
+4
+- No permite refactorización.
+- Tiene dependencias implícitas.
+- Fomenta la herencia múltiple.
+- Es difícil reutilizar su código en otros contextos.
+
+¿Qué describe mejor la viscosidad en un mal diseño?
+1
+- Los cambios correctos son más difíciles de aplicar que soluciones rápidas y erróneas.
+- Las clases tienen demasiadas dependencias externas.
+- Es fácil realizar cambios pequeños en el diseño.
+- La refactorización se realiza sin complicaciones.
+
+El principio de responsabilidad única establece que:
+4
+- Una clase debe ser capaz de manejar múltiples responsabilidades si son relacionadas.
+- Un módulo debe depender solo de otros módulos cohesivos.
+- Las interfaces deben ser pequeñas y específicas.
+- Una clase debe cambiar por una única razón.
+
+¿Cuál de los siguientes ejemplos viola el principio de responsabilidad única?
+1
+- Una clase Rectángulo que maneja cálculos geométricos y representación gráfica.
+- Una clase Post que almacena texto y autor de un mensaje.
+- Una clase Usuario que valida credenciales.
+- Una clase Logger que registra eventos en un archivo.
+
+¿Qué implica un diseño que sigue el principio de responsabilidad única?
+2
+- Los módulos tienen dependencias explícitas con otros módulos.
+- Cada clase tiene una tarea bien definida y aislada.
+- Las clases tienden a ser más grandes y manejan varias responsabilidades.
+- Las interfaces públicas cambian frecuentemente.
+
+¿Cuál de los siguientes diseños aplica correctamente el principio SRP?
+3
+- Un módulo que agrupa múltiples funcionalidades independientes para mayor eficiencia.
+- Una clase con múltiples métodos relacionados con tareas de negocio y de interfaz gráfica.
+- Una clase que gestiona únicamente cálculos geométricos, como el área de figuras.
+- Un sistema que basa su diseño en clases altamente acopladas.
+
+El principio Open-Closed establece que:
+3
+- Las clases deben depender de abstracciones, no de implementaciones concretas.
+- Las interfaces deben ser pequeñas y específicas para cada cliente.
+- Las clases deben estar abiertas para extensión pero cerradas para modificación.
+- Las clases base no deben tener métodos abstractos.
+
+¿Qué técnica se usa comúnmente para implementar el principio Open-Closed?
+2
+- Modificar las clases base para añadir nuevas funcionalidades.
+- Extender clases mediante herencia o composición.
+- Reducir el número de interfaces en el diseño.
+- Limitar el uso de interfaces públicas.
+
+Un ejemplo de mal uso del principio Open-Closed es:
+4
+- Crear una nueva subclase para añadir comportamiento adicional.
+- Usar interfaces para abstraer funcionalidades.
+- Implementar una clase derivada que amplía las capacidades de una clase base.
+- Cambiar directamente el código de una clase ya utilizada en producción.
+
+¿Cuál de las siguientes afirmaciones describe correctamente un diseño que sigue OCP?
+1
+- Se pueden añadir funcionalidades nuevas sin modificar el código existente.
+- Se evita completamente el uso de herencia en el diseño.
+- Todas las dependencias del sistema están basadas en implementaciones concretas.
+- Las clases no tienen interfaces públicas.
+
+El principio de sustitución de Liskov establece que:
+1
+- Una clase derivada debe ser sustituible por su clase base sin alterar el comportamiento del programa.
+- Una clase base no debe depender de clases derivadas.
+- Las interfaces deben dividirse en varias más específicas.
+- Los módulos de alto nivel no deben depender de detalles.
+
+¿Cuál de los siguientes ejemplos viola el principio de sustitución de Liskov?
+2
+- Un Mamífero como clase base de Gato y Caballo.
+- Un Rectángulo como clase base de un Cuadrado.
+- Una clase Figura extendida por Triángulo y Círculo.
+- Una interfaz genérica implementada por varias clases concretas.
+
+¿Qué condición debe cumplir una clase derivada para seguir el principio LSP?
+4
+- Sobrescribir todos los métodos de la clase base.
+- Definir nuevos métodos que no están en la clase base.
+- Cambiar el comportamiento de los métodos base si es necesario.
+- Preservar el comportamiento esperado de la clase base en todos los contextos.
+
+Un ejemplo de diseño que sigue el principio LSP es:
+3
+- Un Coche que hereda de Avión para reutilizar métodos.
+- Un Cuadrado que sobrescribe métodos de un Rectángulo para mantener igualdad en ancho y alto.
+- Un Mamífero que sirve como base para un Perro y un Gato.
+- Una clase derivada que ignora completamente las restricciones de la clase base.
+
+El principio de segregación de interfaces establece que:
+2
+- Las clases deben ser pequeñas y cohesivas.
+- Los clientes no deben depender de interfaces que no usan.
+- Las dependencias deben basarse en implementaciones concretas.
+- Los métodos de las interfaces deben ser abstractos.
+
+¿Cuál de los siguientes ejemplos aplica el principio ISP?
+4
+- Una interfaz única con métodos para lectura y escritura.
+- Una clase que implementa una interfaz con métodos que no utiliza.
+- Una interfaz genérica que obliga a los clientes a implementar métodos innecesarios.
+- Dos interfaces pequeñas y específicas para lectura y escritura, implementadas por clases separadas.
+
+¿Qué problema resuelve el principio ISP?
+1
+- La dependencia innecesaria de los clientes en métodos que no utilizan.
+- El acoplamiento excesivo entre módulos del sistema.
+- La falta de cohesión en las clases.
+- La rigidez en la estructura jerárquica del código.
+
+El principio de inversión de dependencias establece que:
+3
+- Los módulos de bajo nivel deben depender de módulos de alto nivel.
+- Las clases concretas deben depender de abstracciones.
+- Tanto los módulos de alto como de bajo nivel deben depender de abstracciones.
+- Las interfaces deben estar fuertemente relacionadas con las implementaciones.
+
+¿Cuál de los siguientes diseños sigue el principio DIP?
+2
+- Una clase Botón que controla directamente una Lámpara específica.
+- Un Botón que utiliza una interfaz Switchable para controlar cualquier dispositivo.
+- Una clase Controlador que depende directamente de las clases concretas que gestiona.
+- Un módulo de bajo nivel que accede directamente a un módulo de alto nivel.
+
+¿Qué ventaja ofrece seguir el principio DIP en un diseño?
+4
+- Se minimiza la cantidad de código en las clases base.
+- Se simplifica la herencia entre clases.
+- Se eliminan completamente las dependencias en el sistema.
+- Se facilita el reemplazo de implementaciones concretas sin modificar el código de alto nivel.
+
+En el ejemplo del código con User y Database, ¿qué problema de diseño se identifica?
+3
+- Falta de cohesión entre clases.
+- El principio de segregación de interfaces no se aplica.
+- Hay un alto acoplamiento entre User y Database.
+- La herencia no se usa correctamente.
+
+¿Cuál sería una forma de reducir el acoplamiento entre User y Database?
+4
+- Eliminar la clase Database.
+- Crear una subclase de Database dentro de User.
+- Reducir el número de métodos en Database.
+- Utilizar una interfaz o abstracción que User pueda depender en lugar de una implementación concreta.
+
+¿Qué describe mejor la relación entre acoplamiento y cohesión?
+1
+- Un diseño con alta cohesión y bajo acoplamiento es más fácil de modificar y mantener.
+- Alta cohesión y alto acoplamiento son ideales para sistemas escalables.
+- Bajar el acoplamiento implica sacrificar la cohesión.
+- Acoplamiento y cohesión son conceptos independientes y no relacionados.
+
+En el ejemplo del código del blog, ¿qué aspecto de cohesión se mejora al mover la lógica del Post a una clase separada?
+2
+- Se reduce la cantidad de dependencias entre módulos.
+- Se encapsulan responsabilidades relacionadas con los datos y el comportamiento del post en un solo lugar.
+- Se optimiza el rendimiento al reducir llamadas entre clases.
+- Se evita la herencia innecesaria en la clase Blog.
+
+En el ejemplo del código con Guitar y SuperCoolGuitarWithFlames, ¿cómo se aplica el principio Open-Closed?
+1
+- Se extiende la funcionalidad de la clase Guitar creando una subclase sin modificar el código original.
+- Se modifica el método volume de la clase base para soportar nuevas funcionalidades.
+- Se elimina la necesidad de herencia gracias a la clase Guitar.
+- Se asegura que las instancias de SuperCoolGuitarWithFlames puedan reemplazar a Guitar.
+
+¿Cuál es una limitación común del uso de herencia para aplicar el principio Open-Closed?
+2
+- Incrementa la cohesión entre clases.
+- Puede generar dependencias entre clases base y derivadas.
+- Dificulta la extensión de nuevas funcionalidades.
+- Hace que las clases base sean inmodificables.
+
+¿Por qué el ejemplo del Rectángulo y el Cuadrado viola el principio Liskov?
+3
+- El Cuadrado tiene menos funcionalidades que el Rectángulo.
+- Ambos cumplen con la relación "IS-A" pero no comparten métodos comunes.
+- El comportamiento de los métodos de la clase base no es consistente en la clase derivada.
+- Los métodos del Cuadrado no cumplen con los contratos de la interfaz pública.
+
+¿Cuál sería una solución para el problema del Rectángulo y el Cuadrado?
+2
+- Reescribir completamente la clase base para eliminar métodos conflictivos.
+- No usar herencia y definir clases independientes con interfaces comunes si es necesario.
+- Agregar más métodos abstractos para asegurar compatibilidad.
+- Redefinir los métodos en Cuadrado para que sean compatibles con Rectángulo.
+
+En el ejemplo del LineIO, ¿qué problema se resuelve al dividir la interfaz en LineReader y LineWriter?
+4
+- Se reduce el acoplamiento entre módulos.
+- Se mejora el rendimiento del sistema al manejar archivos.
+- Se eliminan métodos abstractos innecesarios.
+- Los clientes solo dependen de los métodos que realmente utilizan.
+
+¿Cómo se aplicaría el principio ISP en un diseño con múltiples responsabilidades?
+3
+- Reduciendo el número total de clases en el sistema.
+- Definiendo métodos concretos en una única interfaz.
+- Dividiendo las responsabilidades en múltiples interfaces específicas.
+- Usando herencia para implementar interfaces más genéricas.
+
+En el ejemplo del Button y Lamp, ¿cómo se aplica el principio de inversión de dependencias?
+1
+- Introduciendo la interfaz Switchable para desacoplar el botón de la implementación concreta de Lamp.
+- Usando herencia para extender las funcionalidades de la clase Button.
+- Dependiendo directamente de la clase Lamp en lugar de una interfaz.
+- Asegurando que Lamp y Button compartan una base común.
+
+¿Qué técnica suele usarse para implementar el principio DIP en un sistema?
+2
+- Reducir el uso de interfaces en el diseño.
+- Inyección de dependencias para desacoplar clases.
+- Eliminar métodos abstractos de las clases base.
+- Crear jerarquías profundas de herencia.
+
+¿Por qué es difícil probar la clase User de forma aislada en el ejemplo de User y Database?
+3
+- Porque User no tiene métodos abstractos.
+- Porque Database no implementa interfaces.
+- Porque User depende directamente de la implementación concreta de Database.
+- Porque la clase Database no es reutilizable.
+
+¿Qué mejora obtendremos al utilizar una interfaz para desacoplar User y Database?
+1
+- Podremos sustituir Database por otra implementación sin modificar la clase User.
+- Se reducirá el número de métodos en la clase User.
+- Se eliminarán completamente las dependencias entre las dos clases.
+- Los métodos de Database se convertirán en estáticos.
+
+En el diseño inicial del blog, ¿qué problema surge al almacenar los posts como cadenas de texto?
+2
+- Aumenta la cohesión dentro de la clase Blog.
+- Hace que el manejo de atributos adicionales, como autores, sea complicado.
+- Facilita la extensión del código para soportar tipos de posts más complejos.
+- Evita la necesidad de usar colecciones.
+
+¿Cuál es el beneficio de encapsular los datos de un post en una clase separada como Post?
+4
+- Aumenta el acoplamiento entre Blog y Post.
+- Reduce la cantidad de métodos en la clase Post.
+- Facilita la dependencia directa de los métodos de Blog.
+- Permite gestionar mejor las responsabilidades del manejo de datos de cada post.
+
+¿Qué principio SOLID permite añadir un ImagePost sin modificar la clase Blog?
+3
+- Principio de responsabilidad única (SRP).
+- Principio de segregación de interfaces (ISP).
+- Principio Open-Closed (OCP).
+- Principio de sustitución de Liskov (LSP).
+
+¿Por qué la clase ImagePost cumple el principio Open-Closed?
+2
+- Porque extiende los métodos de Post.
+- Porque implementa la interfaz IPost sin modificar la clase Post.
+- Porque añade nuevas funcionalidades sin interfaces adicionales.
+- Porque utiliza composición en lugar de herencia.
+
+¿Qué ventaja obtenemos al usar una interfaz como IPost en lugar de depender directamente de la clase Post?
+4
+- Se evita completamente la herencia.
+- No es necesario implementar métodos específicos en las subclases.
+- Aumenta la cohesión de las clases.
+- Permite añadir nuevos tipos de posts sin modificar las clases existentes.
+
+En el diseño con IPost, ¿cómo se garantiza que las clases Post e ImagePost cumplan el principio LSP?
+3
+- Las subclases implementan métodos adicionales no presentes en la interfaz.
+- Las subclases dependen de detalles de la clase base.
+- Las subclases implementan los mismos métodos definidos en IPost.
+- Las subclases pueden ignorar la estructura definida por la interfaz.
+
+¿Qué ocurriría si ImagePost sobrescribe métodos de Post que no son parte de IPost?
+2
+- Se facilitaría la extensión del sistema.
+- Podría violarse el principio de sustitución de Liskov.
+- Se reduciría la cohesión dentro de ImagePost.
+- Sería más sencillo gestionar la clase Blog.
+
+¿Cómo se aplica el principio de inversión de dependencias al usar una interfaz ILogger en el ejemplo del blog?
+1
+- Permite que las clases de alto nivel, como Blog, dependan de una abstracción en lugar de una implementación concreta.
+- Hace que ILogger dependa de las clases de bajo nivel, como StandardLogger.
+- Reduce la necesidad de herencia en el diseño.
+- Permite que los métodos de Blog sean más genéricos.
+
+¿Qué técnica complementa el uso de interfaces para implementar el principio DIP en el ejemplo del blog?
+4
+- Uso de herencia múltiple.
+- Dependencia directa entre módulos.
+- Uso exclusivo de métodos estáticos.
+- Inyección de dependencias para proporcionar implementaciones concretas.
+
+En el diseño final del blog, ¿por qué se divide la interfaz IPost en Identity y Printable?
+3
+- Para reducir la cantidad de clases en el diseño.
+- Para eliminar métodos innecesarios en la clase Post.
+- Para cumplir con el principio de segregación de interfaces y aislar responsabilidades específicas.
+- Para facilitar la implementación de herencia múltiple.
+
+¿Cuál de las siguientes afirmaciones es un beneficio directo de aplicar ISP en el diseño del blog?
+2
+- Las clases tienen menos métodos públicos.
+- Cada clase depende solo de las partes de la interfaz que realmente utiliza.
+- Se elimina la necesidad de usar interfaces.
+- Aumenta el número de métodos abstractos en cada interfaz.
+
+Una aplicación rígida se caracteriza por:
+2
+- Ser fácil de extender con nuevas funcionalidades.
+- Tener dependencias que provocan cambios en cascada al modificar una parte del sistema.
+- Tener interfaces pequeñas y bien definidas.
+- Mantener un alto grado de cohesión entre sus componentes.
+
+¿Qué describe mejor la fragilidad en un diseño?
+3
+- Es difícil modificar las clases debido a la falta de herencia.
+- Las interfaces son demasiado específicas para cada cliente.
+- Los cambios generan errores inesperados en ejecución, aunque el código compile.
+- Las clases base tienen demasiados métodos abstractos.
+
+¿Cuál de los siguientes es un síntoma de inmovilidad en un diseño?
+4
+- Es difícil rastrear los errores debido a dependencias implícitas.
+- Los cambios correctos son más difíciles de aplicar que las soluciones rápidas.
+- Se introduce un alto nivel de acoplamiento entre las clases.
+- El código no se puede reutilizar fácilmente en nuevos contextos.
+
+La viscosidad de un diseño se refiere a:
+1
+- La dificultad de aplicar cambios correctos frente a soluciones rápidas e incorrectas.
+- La alta cohesión entre módulos que facilita el cambio.
+- La necesidad de definir múltiples interfaces para implementar nuevas funcionalidades.
+- La dependencia explícita de clases concretas.
+
+En el ejemplo de Rectangle, ¿por qué violar el principio de responsabilidad única es un problema?
+4
+- La clase se vuelve demasiado abstracta y difícil de usar.
+- Los métodos de la clase base no son compatibles con los de las clases derivadas.
+- Los cambios en el diseño provocan errores en ejecución.
+- La clase tiene múltiples razones para cambiar, ya que mezcla responsabilidades geométricas y gráficas.
+
+¿Cuál de los siguientes es un ejemplo de aplicar correctamente el principio SRP?
+3
+- Una clase Utils que contiene métodos de diversas responsabilidades.
+- Una clase Figura que gestiona propiedades geométricas y de interfaz gráfica.
+- Una clase Logger que registra eventos sin depender de implementaciones concretas.
+- Una clase Controlador que mezcla lógica de negocio y acceso a datos.
+
+En el ejemplo de Guitar, ¿cómo se extiende la funcionalidad sin modificar la clase base?
+2
+- Cambiando directamente el método de ajuste de volumen en Guitar.
+- Creando una subclase como SuperCoolGuitarWithFlames que añade nuevos atributos.
+- Redefiniendo la clase base con nuevos métodos abstractos.
+- Dependiendo de métodos concretos en lugar de abstracciones.
+
+¿Cuál sería un enfoque alternativo al uso de herencia para implementar el principio OCP?
+4
+- Reducir el número de métodos públicos en la clase base.
+- Usar herencia múltiple para extender funcionalidades.
+- Eliminar clases base y depender de clases concretas.
+- Utilizar composición en lugar de herencia para añadir nuevas funcionalidades.
+
+¿Cuál es el problema principal del ejemplo Rectangle y Square respecto al principio LSP?
+3
+- El cuadrado tiene métodos adicionales que no están en la clase base.
+- La clase base define métodos abstractos no implementados en la subclase.
+- El comportamiento de la clase base no es consistente en la subclase.
+- La clase base tiene atributos incompatibles con la subclase.
+
+¿Cómo se puede evitar que el ejemplo Rectangle y Square viole LSP?
+2
+- Asegurándose de que el Square solo tenga métodos privados.
+- Usando clases separadas o una interfaz común para definir comportamientos compatibles.
+- Implementando herencia múltiple para gestionar atributos conflictivos.
+- Eliminando todos los métodos sobrescritos en el Square.
+
+¿Cuál es un problema común al violar el principio ISP?
+3
+- Aumenta la cohesión entre las clases.
+- Las interfaces no se pueden reutilizar en nuevos contextos.
+- Los clientes deben implementar métodos que no necesitan.
+- Los módulos de bajo nivel dependen de abstracciones innecesarias.
+
+En el ejemplo de LineIO, ¿qué ventaja ofrece dividir la interfaz en LineReader y LineWriter?
+4
+- Se eliminan dependencias entre las clases que implementan la interfaz.
+- Se asegura que todas las clases implementen todos los métodos de la interfaz.
+- Se facilita la herencia múltiple para implementar nuevas clases.
+- Cada clase solo implementa los métodos necesarios, reduciendo dependencias innecesarias.
+
+En el ejemplo del Button y la Lamp, ¿cómo se reduce el acoplamiento entre ambas clases?
+1
+- Introduciendo la interfaz Switchable para que Button dependa de una abstracción en lugar de una implementación concreta.
+- Redefiniendo la clase Button para incluir métodos de la clase Lamp.
+- Eliminando la interfaz Switchable para simplificar el diseño.
+- Haciendo que Lamp dependa directamente de Button.
+
+¿Qué problema se resuelve al usar inyección de dependencias en un diseño?
+2
+- Se eliminan las abstracciones innecesarias en el sistema.
+- Las clases de alto nivel no dependen de implementaciones concretas.
+- Las clases derivadas pueden sobrescribir métodos abstractos.
+- Se facilita la herencia múltiple para reducir dependencias.
+
+¿Cuál es un ejemplo de mal diseño que viola el principio DIP?
+3
+- Una clase Servicio que depende de interfaces.
+- Una clase base que define métodos abstractos para subclases.
+- Un módulo de alto nivel que depende directamente de un módulo de bajo nivel.
+- Una interfaz que define métodos compartidos entre múltiples clases.
+
+En el diseño inicial del blog, ¿qué problema se identifica al manejar los posts directamente como cadenas de texto?
+4
+- Incrementa la cohesión en la clase Blog.
+- Facilita la adición de nuevos tipos de posts.
+- Reduce las dependencias entre módulos.
+- Hace que extender el código para añadir atributos adicionales sea más complejo.
+
+¿Qué ventaja se obtiene al usar la interfaz IPost en el diseño del blog?
+2
+- Se reduce la cantidad de clases necesarias en el sistema.
+- Se desacopla la lógica de Blog de la implementación específica de los posts.
+- Se eliminan completamente las dependencias entre Blog y Post.
+- Se asegura que todos los métodos de Post sean abstractos.
+
+En el diseño final del blog, ¿cómo se aplica el principio de segregación de interfaces (ISP)?
+3
+- Se agrupan todas las responsabilidades de los posts en una sola interfaz.
+- Se elimina la necesidad de crear nuevas clases para representar diferentes tipos de posts.
+- Se dividen las responsabilidades de los posts en interfaces específicas como Identity y Printable.
+- Se asegura que todas las clases implementen todos los métodos de la interfaz IPost.
+
+¿Por qué el uso de la clase ImagePost es un ejemplo de cumplimiento del principio Open-Closed?
+1
+- Permite añadir nuevos tipos de posts sin modificar el código existente de Post o Blog.
+- Utiliza herencia múltiple para extender funcionalidades de manera eficiente.
+- Simplifica la implementación de interfaces compartidas.
+- Reduce la necesidad de inyección de dependencias en el sistema.
+
+¿Cuál de los siguientes es un síntoma de deuda técnica acumulada en un diseño?
+3
+- Las clases tienen alta cohesión y bajo acoplamiento.
+- Las interfaces se dividen según los roles de los clientes.
+- Los cambios frecuentes en el código introducen errores inesperados.
+- Las dependencias entre módulos están bien definidas.
+
+¿Qué describe mejor un diseño inmóvil?
+4
+- Tiene clases pequeñas y especializadas.
+- Se pueden realizar cambios sin afectar a otros módulos.
+- Las funcionalidades están distribuidas entre múltiples módulos.
+- No se puede reutilizar el código fácilmente en nuevos contextos.
+
+En el ejemplo del blog, ¿cómo mejora la inyección de dependencias el diseño del sistema?
+1
+- Permite que Blog dependa de interfaces en lugar de implementaciones concretas.
+- Aumenta la cohesión entre las clases de alto y bajo nivel.
+- Facilita la herencia múltiple para implementar nuevos tipos de posts.
+- Elimina completamente las dependencias entre clases del sistema.
+
+¿Cuál de los siguientes ejemplos aplica correctamente inyección de dependencias?
+2
+- Una clase Controlador que instancia directamente sus dependencias en el constructor.
+- Una clase Logger que recibe un objeto de tipo ILogger a través de su constructor.
+- Una clase Servicio que implementa directamente todas sus dependencias.
+- Una clase BaseDeDatos que depende únicamente de clases concretas.
+
+En el diseño inicial del blog, ¿qué mejora introduce el uso de encapsulación en la clase Post?
+3
+- Reduce el número de métodos en la clase Blog.
+- Facilita el acceso directo a las propiedades de un post.
+- Separa las responsabilidades de almacenar datos y gestionar la lógica de presentación.
+- Permite que los posts dependan directamente de la clase Blog.
+
+¿Por qué el método print() en ImagePost es un ejemplo de cumplimiento del principio LSP?
+2
+- Introduce nuevos métodos específicos para el tipo de post.
+- Cumple con la interfaz IPost y conserva el comportamiento esperado.
+- Permite modificar directamente las propiedades del post base.
+- Cambia el comportamiento de los métodos heredados sin afectar al diseño general.
+
+En el ejemplo del Logger, ¿qué ventaja se obtiene al usar una factoría para crear instancias?
+4
+- Se eliminan todas las dependencias entre clases.
+- Se asegura que todos los métodos de la clase base sean abstractos.
+- Se reduce el número total de clases en el sistema.
+- Permite cambiar la implementación concreta del logger sin modificar el código que lo usa.
+
+¿Por qué es problemático depender directamente de una clase concreta como Database?
+1
+- Dificulta reemplazar o modificar la clase Database sin afectar a las dependencias.
+- Incrementa la cohesión entre las clases.
+- Facilita la prueba de las clases que dependen de Database.
+- Reduce el número de interfaces necesarias en el diseño.
+
+¿Qué ventaja tiene un diseño basado en interfaces frente a un diseño que depende de clases concretas?
+2
+- Reduce el número total de clases necesarias.
+- Facilita la extensión del sistema y reduce el acoplamiento.
+- Asegura que todas las dependencias sean explícitas.
+- Elimina la necesidad de herencia en el diseño.
+
+¿Cuál es un problema potencial al usar herencia en lugar de composición?
+3
+- Incrementa la cohesión entre las clases.
+- Reduce la cantidad de código duplicado en las clases derivadas.
+- Puede introducir dependencias innecesarias entre clases base y derivadas.
+- Simplifica la implementación de nuevas funcionalidades.
+
+¿Cuál es una señal de alto acoplamiento en un diseño de software?
+3
+- Los módulos pueden ser reemplazados fácilmente.
+- Un cambio en un módulo afecta únicamente a su propia funcionalidad.
+- Los cambios en un módulo requieren modificaciones en otros módulos relacionados.
+- Las interfaces están bien definidas y desacopladas.
+
+¿Cuál de los siguientes ayuda a reducir el acoplamiento?
+2
+- Incrementar la herencia en el diseño del sistema.
+- Usar interfaces y abstracciones para comunicar módulos.
+- Depender de implementaciones concretas en lugar de interfaces.
+- Crear métodos que manejen múltiples responsabilidades.
+
+Un módulo tiene alta cohesión cuando:
+4
+- Depende de otros módulos para realizar tareas comunes.
+- Contiene métodos y datos no relacionados entre sí.
+- Puede cambiar por múltiples razones diferentes.
+- Sus elementos están estrechamente relacionados y enfocados en una sola tarea.
+
+¿Qué ocurre en un sistema donde la cohesión es baja?
+3
+- Los módulos son independientes y fáciles de probar.
+- Cada módulo tiene un propósito claro y bien definido.
+- Los módulos tienden a ser más complejos y difíciles de mantener.
+- Los cambios en un módulo no afectan a otros módulos.
+
+¿Por qué la herencia puede ser problemática al aplicar el principio Open-Closed?
+3
+- Reduce el número de métodos en la clase base.
+- Hace que las clases base sean inmodificables.
+- Puede provocar dependencias entre clases base y derivadas, dificultando los cambios.
+- Aumenta la cohesión dentro del sistema.
+
+¿Cuál es un ejemplo de un diseño que cumple el principio Open-Closed?
+1
+- Crear una nueva subclase para añadir comportamiento adicional sin modificar la clase base.
+- Modificar directamente el código de la clase base para añadir una funcionalidad nueva.
+- Usar herencia múltiple para combinar funcionalidades de varias clases.
+- Implementar métodos estáticos para reducir dependencias.
+
+¿Qué condición debe cumplir una subclase para respetar el principio de sustitución de Liskov?
+2
+- Tener exactamente los mismos métodos que la clase base.
+- Mantener el comportamiento esperado de la clase base en todos los contextos donde se use.
+- Eliminar métodos abstractos de la clase base.
+- Cambiar el comportamiento de los métodos base según sea necesario.
+
+En el ejemplo de Rectangle y Square, ¿qué solución evitaría violar el principio LSP?
+4
+- Usar herencia múltiple para gestionar las diferencias.
+- Reescribir los métodos base para que no permitan sobrescritura.
+- Hacer que Square extienda Rectangle pero modifique el comportamiento de sus métodos.
+- Definir clases independientes para Rectangle y Square con una interfaz común.
+
+¿Cuál de las siguientes afirmaciones describe mejor el principio ISP?
+3
+- Una interfaz debe incluir todos los métodos necesarios para todos los posibles clientes.
+- Los clientes deben implementar interfaces abstractas.
+- Los clientes no deben depender de métodos que no utilizan.
+- Las interfaces deben ser lo suficientemente generales para ser reutilizables.
+
+¿Qué problema surge al violar el principio ISP en un sistema con interfaces grandes?
+2
+- Aumenta la cohesión entre módulos.
+- Los clientes se ven obligados a implementar métodos innecesarios.
+- Las interfaces se vuelven más flexibles y reutilizables.
+- Los módulos se vuelven independientes y fáciles de modificar.
+
+En el ejemplo del Logger, ¿cómo se aplica el principio de inversión de dependencias?
+1
+- Haciendo que Logger dependa de una interfaz ILogger en lugar de una implementación concreta.
+- Introduciendo herencia para que Logger extienda una clase base común.
+- Eliminando las interfaces para simplificar el diseño.
+- Haciendo que Logger sea una clase concreta dependiente de FileLogger.
+
+¿Cuál es una ventaja clave de aplicar el principio DIP en el diseño de software?
+4
+- Facilita la eliminación de métodos innecesarios en las clases base.
+- Reduce el número total de clases necesarias.
+- Elimina completamente las dependencias entre módulos.
+- Permite modificar o sustituir implementaciones concretas sin afectar a los módulos de alto nivel.
+
+En el diseño del blog, ¿cómo se garantiza que ImagePost cumpla con el principio LSP?
+2
+- Se asegura de que ImagePost sobrescriba los métodos de Post según sea necesario.
+- Implementa la interfaz IPost, manteniendo el comportamiento esperado de Post.
+- Añade métodos específicos de ImagePost sin modificar la clase base.
+- Depende directamente de los métodos de la clase Blog.
+
+¿Por qué dividir la interfaz IPost en Identity y Printable es un ejemplo de cumplimiento del principio ISP?
+3
+- Reduce el número de métodos en la clase base.
+- Aumenta la dependencia entre las clases del sistema.
+- Separa las responsabilidades, permitiendo que las clases implementen solo lo necesario.
+- Elimina la necesidad de definir interfaces adicionales en el diseño.
+
+¿Por qué fue desarrollado Git originalmente?
+2
+- Para reemplazar sistemas de control de versiones como Mercurial.
+- Para gestionar el desarrollo del kernel de Linux en 2005.
+- Para implementar un sistema de control de versiones centralizado.
+- Para facilitar el desarrollo en equipos pequeños.
+
+¿Cuál de las siguientes NO es una característica clave de Git?
+3
+- Velocidad.
+- Soporte para miles de ramas simultáneas.
+- Dependencia de un servidor central para realizar commits.
+- Capacidad de manejar proyectos grandes.
+
+¿Cuál de las siguientes opciones describe mejor un sistema de control de versiones distribuido como Git?
+1
+- Cada desarrollador tiene una copia completa del repositorio y su historial.
+- Los desarrolladores dependen de un servidor central para confirmar cambios.
+- Los cambios en el repositorio remoto se reflejan automáticamente en los repositorios locales.
+- Los desarrolladores no pueden crear ramas locales sin permiso del repositorio central.
+
+¿Cuál es una ventaja clave de los sistemas de control de versiones distribuidos frente a los centralizados?
+4
+- Menor consumo de espacio en disco.
+- Facilidad para trabajar sin conexión a internet.
+- Permiten realizar cambios en el repositorio remoto automáticamente.
+- Los desarrolladores pueden hacer commits locales sin necesidad de conectarse al servidor central.
+
+¿Qué comando en Git permite mover cambios del área de trabajo al área de stage?
+2
+- git commit.
+- git add.
+- git push.
+- git pull.
+
+¿Qué ocurre al ejecutar el comando git commit?
+1
+- Los cambios en el área de stage se confirman en el repositorio local.
+- Los cambios se suben automáticamente al repositorio remoto.
+- Los cambios del área de trabajo se añaden al área de stage.
+- Se eliminan los cambios no guardados del directorio de trabajo.
+
+¿Qué sucede si ejecutas git add después de modificar un archivo?
+3
+- Se eliminan los cambios no guardados.
+- Los cambios se suben directamente al repositorio remoto.
+- Los cambios se añaden al área de stage para ser incluidos en el próximo commit.
+- El archivo se restaura a su estado anterior.
+
+¿Para qué sirve la zona de stage en Git?
+4
+- Para descartar cambios no deseados antes de confirmar el commit.
+- Para mover archivos entre ramas sin necesidad de hacer un commit.
+- Para borrar cambios realizados en el directorio de trabajo.
+- Para seleccionar qué cambios se incluirán en el próximo commit.
+
+¿Qué comando se utiliza para crear una nueva rama y moverse a ella?
+4
+- git branch.
+- git switch.
+- git checkout.
+- git checkout -b.
+
+¿Qué significa que un merge sea un "fast forward"?
+2
+- Se crean nuevos commits de merge automáticamente.
+- La rama se adelanta para apuntar al mismo commit que la otra sin generar un commit adicional.
+- Se eliminan los commits de la rama fusionada.
+- La rama base se rebasa automáticamente sobre la rama secundaria.
+
+¿Qué sucede si hay un conflicto durante un merge en Git?
+3
+- El merge se cancela automáticamente y los cambios se descartan.
+- Los cambios conflictivos se eliminan del repositorio remoto.
+- Git pausa el merge y marca los archivos conflictivos para que el usuario resuelva el problema.
+- Git aplica automáticamente los cambios de ambas ramas sin intervención del usuario.
+
+¿Cómo se marca un conflicto en el archivo durante un merge?
+1
+- Con líneas como <<<<<<< HEAD y =======.
+- Eliminando las líneas conflictivas.
+- Comentando las líneas con el prefijo //.
+- Copiando las líneas conflictivas en un archivo separado.
+
+¿Qué comando deshace un commit sin eliminar los cambios del área de trabajo?
+2
+- git revert.
+- git reset HEAD^.
+- git commit --amend.
+- git reset --hard HEAD.
+
+¿Cuál es la diferencia principal entre git reset y git revert?
+3
+- git reset crea un nuevo commit con los cambios revertidos.
+- git revert elimina commits previos del historial.
+- git reset modifica el historial local, mientras que git revert crea un commit que revierte los cambios anteriores.
+- git reset funciona solo en repositorios remotos.
+
+¿Qué comando se utiliza para aplicar un commit específico de una rama a otra sin fusionarlas completamente?
+1
+- git cherry-pick.
+- git merge.
+- git pull.
+- git checkout.
+
+¿Qué ventaja tiene el uso de git rebase sobre un merge?
+4
+- Facilita la resolución de conflictos.
+- Evita la creación de commits adicionales.
+- Permite trabajar sin conexión.
+- Mantiene un historial de commits más lineal y limpio.
+
+¿Cuál es el objetivo principal del flujo de trabajo GitHub Flow?
+1
+- Facilitar el desarrollo colaborativo mediante ramas de características y pull requests.
+- Mantener múltiples versiones de software en desarrollo simultáneamente.
+- Integrar cambios rápidamente en una rama principal con múltiples ramas de larga duración.
+- Evitar el uso de ramas en el desarrollo.
+
+¿Cuál es la característica principal de un pull request en el flujo de trabajo GitHub Flow?
+4
+- Permite subir directamente cambios a la rama principal.
+- Facilita el trabajo en ramas de larga duración.
+- Solo se utiliza para resolver conflictos entre ramas.
+- Permite revisar, discutir e integrar cambios realizados en una rama secundaria.
+
+¿Qué describe mejor el flujo de trabajo Trunk-Based Development?
+2
+- Uso exclusivo de ramas de corta duración para cada característica.
+- Integración frecuente de cambios en una única rama principal de larga duración.
+- Mantener múltiples versiones en desarrollo simultáneamente.
+- Evitar el uso de ramas y realizar todos los cambios directamente en el repositorio remoto.
+
+¿Cuál es una ventaja clave del flujo Trunk-Based Development?
+3
+- Facilita el mantenimiento de múltiples versiones vivas simultáneamente.
+- Genera un historial de commits más lineal y limpio.
+- Reduce los conflictos de integración al integrar cambios rápidamente en la rama principal.
+- Evita la necesidad de realizar merges en el historial.
+
+¿Cuáles son las dos ramas principales de larga duración en GitFlow?
+3
+- feature y hotfix.
+- main y feature.
+- master y develop.
+- develop y hotfix.
+
+¿Cuándo se utiliza una rama de hotfix en el flujo GitFlow?
+1
+- Para corregir bugs críticos en una versión ya lanzada.
+- Para desarrollar nuevas características de la próxima versión.
+- Para realizar la integración continua de cambios en el sistema.
+- Para realizar ajustes menores en la rama develop.
+
+¿En qué ramas se mezclan los cambios realizados en una rama de release en GitFlow?
+2
+- Solo en develop.
+- En master y develop.
+- Solo en master.
+- En feature y hotfix.
+
+¿Qué comando se utiliza para listar todas las ramas locales y remotas en Git?
+4
+- git branch -l.
+- git log --branches.
+- git status --all.
+- git branch -vva.
+
+¿Cuál de las siguientes es una rama de corta duración?
+2
+- master.
+- Una rama creada para desarrollar una nueva característica.
+- main.
+- Una rama utilizada para mantener una versión antigua de software.
+
+¿Qué comando asegura que siempre se cree un nodo de merge en el historial, incluso si no es necesario?
+2
+- git merge --fast-forward.
+- git merge --no-ff.
+- git rebase.
+- git cherry-pick.
+
+¿Cuál es la diferencia principal entre un merge y un rebase?
+1
+- El merge conserva el historial original, mientras que el rebase lo reescribe para crear un historial lineal.
+- El rebase fusiona los cambios automáticamente, mientras que el merge requiere confirmación manual.
+- El merge elimina los conflictos automáticamente, mientras que el rebase los conserva.
+- El rebase combina las ramas sin generar commits adicionales.
+
+¿Qué herramienta puede usarse para resolver conflictos en un archivo durante un merge?
+3
+- git cherry-pick.
+- git checkout.
+- Un editor de texto o herramientas específicas como VS Code o GitHub Desktop.
+- git rebase.
+
+¿Qué significa cuando Git marca un conflicto en un archivo?
+2
+- Los cambios en las ramas son incompatibles en todos los archivos.
+- Se han realizado cambios incompatibles en la misma línea del mismo archivo en ambas ramas.
+- La rama remota tiene más commits que la rama local.
+- Los cambios en ambas ramas afectan a diferentes líneas del mismo archivo.
+
+¿Cuál es una característica de las ramas de versiones?
+3
+- Se eliminan una vez que los bugs son corregidos.
+- Se usan exclusivamente para desarrollar nuevas características.
+- Permiten mantener múltiples versiones de un software simultáneamente.
+- Solo se crean después de realizar un pull request.
+
+¿Qué se utiliza para identificar versiones específicas en una rama de versiones?
+4
+- Ramas feature.
+- Merges con --no-ff.
+- Commits iniciales.
+- Etiquetas (tags).
+
+¿Cuál es un uso típico del comando git cherry-pick?
+2
+- Fusionar todas las ramas en una sola.
+- Mover un commit específico de una rama a otra sin fusionar completamente las ramas.
+- Eliminar commits antiguos de un repositorio.
+- Crear nuevas ramas a partir de un commit específico.
+
+¿Qué ocurre si usas git cherry-pick para aplicar un commit en una rama diferente?
+3
+- El commit original se elimina del historial.
+- Se generan conflictos automáticamente en la rama destino.
+- Se crea un nuevo commit con los mismos cambios, pero con un identificador diferente.
+- La rama original se fusiona completamente con la rama destino.
+
+¿Qué comando en Git permite etiquetar un commit con un identificador específico?
+3
+- git tag -u.
+- git annotate.
+- git tag <nombre_etiqueta>.
+- git checkout <nombre_etiqueta>.
+
+¿Qué significa el índice HEAD en Git?
+4
+- La rama que tiene más commits en el repositorio remoto.
+- El último commit de la rama master.
+- Un commit que no tiene dependencias en el grafo de commits.
+- El commit actual en el que estás trabajando o la rama activa en tu repositorio local.
+
+¿Cuál de las siguientes NO es una forma válida de deshacer cambios en Git?
+2
+- git reset.
+- git pull --force.
+- git revert.
+- git checkout.
+
+¿Qué pasos son necesarios para resolver un conflicto en un pull request?
+1
+- Hacer un merge de master en la rama del pull request, resolver los conflictos y subir el commit con los cambios.
+- Borrar el pull request y crearlo nuevamente después de resolver los conflictos en master.
+- Usar git cherry-pick para mover los commits conflictivos a una nueva rama.
+- Ejecutar git reset --hard HEAD en ambas ramas para sincronizar los cambios.
+
+¿Qué comando combina automáticamente un fetch y un merge?
+3
+- git fetch-merge.
+- git checkout origin/<rama>.
+- git pull.
+- git push --rebase.
+
+¿Qué sucede cuando ejecutas git push y el repositorio remoto tiene commits que tu repositorio local no tiene?
+4
+- Los commits remotos se eliminan automáticamente.
+- Git sobrescribe los commits remotos con los locales.
+- Se realiza automáticamente un rebase de los commits locales sobre los remotos.
+- Git da un error, pidiendo que primero actualices tu repositorio local con pull o fetch.
+
+¿Qué rama se usa para arreglar un bug crítico en una versión en producción, según GitFlow?
+2
+- Una rama de feature.
+- Una rama de hotfix.
+- Una rama de develop.
+- Una rama de release.
+
+¿Cuál es el propósito principal de una rama de release en GitFlow?
+3
+- Solucionar bugs críticos en una versión ya lanzada.
+- Desarrollar nuevas características para una versión futura.
+- Preparar y estabilizar el código para el lanzamiento de una nueva versión.
+- Experimentar con cambios drásticos antes de integrarlos en master.
+
+¿Qué paso adicional se realiza al finalizar una rama de release en GitFlow?
+1
+- Se etiqueta el commit final con el número de la versión.
+- Se fusiona directamente con todas las ramas de características.
+- Se borra la rama master para evitar conflictos.
+- Se reescribe el historial de commits en la rama develop.
+
+¿Qué beneficio tiene usar etiquetas en GitFlow?
+4
+- Reducen el número de ramas necesarias.
+- Permiten realizar merges más eficientes.
+- Simplifican la resolución de conflictos entre ramas.
+- Identifican de manera clara y permanente las versiones lanzadas.
+
+¿Qué sucede si realizas un cherry-pick de un commit y luego fusionas las ramas?
+3
+- Se eliminan los commits duplicados.
+- Git ignora los conflictos en el commit duplicado.
+- El commit aparece dos veces en el historial, pero con diferentes identificadores.
+- La rama original se elimina automáticamente después del merge.
+
+¿Cuál es una desventaja potencial de usar rebase en lugar de merge?
+2
+- Introduce conflictos que no existen en el historial original.
+- Reescribe el historial de commits, lo que puede causar problemas en repositorios compartidos.
+- Genera un historial no lineal que es difícil de seguir.
+- Obliga a realizar múltiples commits adicionales durante el proceso.
+
+¿Qué significa el comando git rebase --continue?
+1
+- Continúa un proceso de rebase después de resolver un conflicto.
+- Descarta todos los conflictos encontrados durante un rebase.
+- Fusiona automáticamente las ramas involucradas en el rebase.
+- Finaliza el rebase y borra el historial previo.
+
+¿Cuándo se realiza un merge con fast-forward automáticamente?
+2
+- Cuando hay conflictos en los cambios de las ramas.
+- Cuando no hay commits adicionales en la rama base desde que se creó la rama secundaria.
+- Cuando se han realizado múltiples commits en ambas ramas.
+- Cuando se fusionan ramas de diferentes repositorios remotos.
+
+¿Por qué usar --no-ff puede ser beneficioso en un merge?
+3
+- Reduce el número de commits en el historial.
+- Evita conflictos automáticos al fusionar ramas.
+- Crea un nodo de merge explícito en el historial, dejando un rastro claro de la operación.
+- Permite fusionar ramas sin resolver conflictos.
+
+¿Por qué mantener ramas separadas para distintas versiones es útil en proyectos grandes?
+1
+- Permite realizar mantenimiento en versiones antiguas mientras se desarrolla una nueva versión.
+- Simplifica el proceso de integración continua.
+- Reduce el tiempo necesario para realizar merges.
+- Evita la necesidad de usar etiquetas en las versiones lanzadas.
+
+¿Cómo se propagan los arreglos de una rama de versión antigua a la rama develop en un flujo GitFlow?
+4
+- Usando git rebase.
+- Haciendo un pull request directamente desde la rama de versión.
+- Fusionando la rama master con develop.
+- Usando un cherry-pick o un merge desde la rama de versión a develop.
+
+¿Qué representa el índice HEAD en un grafo de commits?
+3
+- La última etiqueta aplicada en la rama principal.
+- El commit más antiguo en la rama activa.
+- El commit actual en el que estás trabajando.
+- La rama remota conectada al repositorio local.
+
+¿Cómo puedes etiquetar un commit específico sin moverte a él?
+2
+- Usando git checkout <commit> seguido de git tag.
+- Usando git tag <etiqueta> <commit>.
+- Aplicando un rebase al commit antes de etiquetarlo.
+- Fusionando el commit en una nueva rama y etiquetándola.
+
+¿Qué comando puedes usar para eliminar una rama remota que ya no necesitas?
+4
+- git branch -d <rama>.
+- git checkout --delete <rama>.
+- git prune <rama>.
+- git push origin --delete <rama>.
+
+¿Cuál es la principal diferencia entre una rama de corta duración y una de larga duración?
+1
+- Las ramas de corta duración se crean para una tarea específica y se eliminan al finalizarla.
+- Las ramas de larga duración no necesitan sincronización con el repositorio remoto.
+- Las ramas de corta duración contienen los commits más antiguos del proyecto.
+- Las ramas de larga duración siempre contienen los hotfix.
+
+¿Cuál de los siguientes pasos es incorrecto al resolver un conflicto?
+4
+- Editar los archivos conflictivos para solucionar las diferencias.
+- Usar git add para marcar los archivos resueltos.
+- Confirmar los cambios con un nuevo commit.
+- Usar git revert para descartar todos los conflictos automáticamente.
+
+¿Cuál es un uso común del flujo GitHub Flow?
+1
+- Desarrollo colaborativo en ramas de características con integración a través de pull requests.
+- Gestión de múltiples versiones de software lanzadas simultáneamente.
+- Resolución de conflictos en ramas antiguas sin crear nuevas ramas.
+- Implementación de cambios rápidos directamente en la rama principal.
+
+¿Qué ventaja tiene trabajar con ramas de versiones en proyectos de software?
+2
+- Evita la necesidad de usar commits adicionales para identificar cambios.
+- Permite realizar mantenimiento en versiones anteriores mientras se desarrollan nuevas funcionalidades.
+- Genera automáticamente etiquetas para cada commit.
+- Mantiene el historial limpio y libre de merges complejos.
+
+¿Por qué es importante integrar una rama de hotfix en develop después de fusionarla en master?
+3
+- Para que los cambios de la rama hotfix estén disponibles en futuras versiones.
+- Para borrar automáticamente la rama hotfix.
+- Para asegurar que las correcciones aplicadas en producción también estén presentes en el desarrollo actual.
+- Para generar una nueva etiqueta de versión en la rama develop.
+
+Si aplicas un commit con git cherry-pick, ¿qué sucede si hay conflictos?
+4
+- Git descarta automáticamente el commit aplicado.
+- Los conflictos se resuelven automáticamente usando la rama base.
+- El commit se aplica sin cambios, ignorando los conflictos.
+- Git pausa el proceso, marca los archivos conflictivos y te permite resolverlos antes de continuar.
+
+¿Cuál es el origen de la filosofía lean aplicada al desarrollo de software?
+1
+- En el sistema de producción de Toyota.
+- En el manifiesto ágil.
+- En la revolución industrial.
+- En las técnicas de integración continua.
+
+¿Qué elementos de los procesos de fabricación lean se pueden aplicar al desarrollo de software?
+3
+- Producción en masa y acumulación de inventario.
+- Entrenamiento intensivo para tareas repetitivas.
+- Eliminación de desperdicios y mejora continua.
+- Uso de maquinaria especializada.
+
+¿Qué característica define al sistema de producción de Ford?
+2
+- Adaptabilidad para cambios rápidos en la demanda.
+- Producción en masa estandarizada y rígida.
+- Eliminación de inventarios innecesarios.
+- Foco en personal cualificado y creativo.
+
+¿Por qué el sistema de Toyota fue más exitoso que el de Ford en los años 60?
+4
+- Producción más rápida que la de Ford.
+- Uso de cadenas de montaje más automatizadas.
+- Contratación de trabajadores más cualificados.
+- Flexibilidad y eliminación de desperdicios.
+
+¿Qué significa el término "muda" en el contexto lean?
+3
+- Automatización del trabajo humano.
+- Producción en exceso.
+- Desperdicio que no agrega valor al cliente.
+- Tiempo dedicado a la formación de trabajadores.
+
+¿Cuál es un principio clave del sistema just-in-time?
+2
+- Producir en grandes lotes para ahorrar costos.
+- Fabricar solo lo necesario, en el momento necesario.
+- Acumular inventarios en caso de aumento de la demanda.
+- Delegar tareas entre trabajadores para aumentar eficiencia.
+
+¿Qué caracteriza al concepto de jidoka en el sistema lean?
+4
+- Uso de maquinaria completamente automatizada.
+- Procesos rígidos y repetitivos para evitar errores.
+- Dependencia total de supervisores humanos.
+- Automatización con intervención humana para mejora continua.
+
+En el desarrollo de software, ¿qué se puede considerar como "entrada" en un proceso lean?
+1
+- Historias de usuario y software existente.
+- Producto final desplegado.
+- Inventarios de materiales y recursos físicos.
+- Mockups y diagramas de flujo.
+
+¿Qué representa el concepto de minimal marketable feature (MMF)?
+2
+- Una funcionalidad completa y compleja del software.
+- La unidad más pequeña de funcionalidad con valor para el cliente.
+- Una tarea técnica que no está directamente relacionada con el cliente.
+- Un elemento técnico que puede desarrollarse en varias iteraciones.
+
+¿Qué busca identificar un value stream map?
+3
+- Las herramientas necesarias para optimizar el software.
+- Los costos asociados a cada fase del desarrollo.
+- Los pasos y tiempos que agregan valor o generan desperdicios.
+- La calidad de las historias de usuario del backlog.
+
+¿Qué significa el término WIP en los sistemas pull?
+2
+- Tiempo total del ciclo de desarrollo.
+- Cantidad de trabajo en progreso en una etapa del proceso.
+- Tiempo de espera entre etapas de desarrollo.
+- Cantidad total de tareas en el backlog.
+
+¿Cuál es el objetivo de limitar el WIP en un sistema Kanban?
+4
+- Reducir el número de desarrolladores necesarios.
+- Aumentar la cantidad de tareas completadas por semana.
+- Asegurar que las etapas iniciales siempre estén ocupadas.
+- Evitar acumulación excesiva y garantizar flujo constante.
+
+¿Cuál de los siguientes NO es un principio de desarrollo de software lean?
+4
+- Eliminar los desperdicios.
+- Fomentar la calidad.
+- Optimizar el conjunto.
+- Incrementar el backlog.
+
+¿Qué implica "decidir lo más tarde posible" en lean?
+2
+- Dejar decisiones sin resolver para después del lanzamiento.
+- Tomar decisiones importantes con la máxima información disponible.
+- Evitar decisiones críticas para agilizar el desarrollo.
+- Asumir decisiones definitivas al inicio del proyecto.
+
+¿Cuál de los siguientes se considera un desperdicio según lean?
+3
+- Refactorizar el código base.
+- Usar pruebas automatizadas.
+- Multi-tarea excesiva.
+- Trabajo colaborativo en una misma funcionalidad.
+
+¿Qué problemas genera el trabajo parcialmente hecho en desarrollo de software?
+1
+- Retrasa otros procesos y dificulta recibir feedback útil.
+- Reduce la capacidad de los equipos para asumir nuevas tareas.
+- Aumenta la deuda técnica acumulada.
+- Impide realizar pruebas automatizadas de forma eficiente.
+
+¿Cuál es una ventaja de realizar entregas rápidas en desarrollo de software?
+3
+- Reduce la cantidad de bugs en el sistema.
+- Permite evitar cambios en el backlog.
+- Facilita recibir feedback del cliente y adaptarse rápidamente.
+- Garantiza la eliminación de toda deuda técnica acumulada.
+
+¿Cómo puede minimizarse la deuda técnica en el desarrollo de software?
+2
+- Retrasando la integración de nuevas funcionalidades.
+- Refactorizando el código constantemente.
+- Aumentando la cantidad de pruebas manuales.
+- Reduciendo el tiempo dedicado a pruebas automatizadas.
+
+¿Qué es el diagrama de flujo acumulado (cumulative flow diagram)?
+4
+- Un diagrama que muestra la arquitectura del software a lo largo del tiempo.
+- Un gráfico para analizar la calidad del código.
+- Una representación del número de bugs corregidos por semana.
+- Una visualización del progreso acumulado en las fases de desarrollo.
+
+¿Cuál es el objetivo de la técnica de los "5 por qués"?
+2
+- Proponer soluciones rápidas y directas a problemas del sistema.
+- Identificar la causa raíz de un problema mediante reflexión.
+- Crear hipótesis sobre el funcionamiento del software.
+- Diseñar un backlog más optimizado y detallado.
+
+¿Cuál es un ejemplo de inventario innecesario en el desarrollo de software?
+2
+- Características de alta prioridad en el backlog.
+- Backlog de características que nunca se implementan.
+- Herramientas de automatización en pruebas de software.
+- Historias de usuario bien documentadas y priorizadas.
+
+¿Qué caracteriza a un sistema de desarrollo basado en entrega continua?
+4
+- Evitar despliegues frecuentes para reducir riesgos.
+- Maximizar el inventario de características en el backlog.
+- Aumentar la cantidad de documentación para cada release.
+- Entregar incrementos de valor regularmente y con ciclos cortos.
+
+¿Qué es una trace bullet en el desarrollo lean?
+3
+- Una línea de código que identifica un bug crítico.
+- Un backlog refinado con tareas mínimas.
+- Una funcionalidad mínima para probar el sistema completo.
+- Un diagrama para identificar problemas en el flujo de trabajo.
+
+¿Cuál es un principio clave según Mary Poppendieck en el desarrollo lean?
+1
+- Eliminar desperdicios.
+- Reducir el backlog.
+- Priorizar tareas secundarias.
+- Usar siempre decisiones tempranas.
+
+¿Qué implica el principio de "optimizar el conjunto" en lean?
+4
+- Reducir la cantidad de herramientas utilizadas.
+- Priorizar la entrega de características individuales.
+- Aumentar la documentación técnica en todas las etapas.
+- Considerar el valor final del producto para el usuario.
+
+¿Qué técnica ayuda a construir calidad en el software según lean?
+3
+- Evitar refactorizaciones para mantener velocidad.
+- Integrar más pasos manuales en las pruebas.
+- Usar revisiones de código y pruebas automatizadas.
+- Aumentar el tamaño del backlog para gestionar cambios.
+
+¿Por qué es importante minimizar la deuda técnica en el desarrollo lean?
+2
+- Para reducir la documentación requerida.
+- Porque los problemas acumulados pueden afectar la evolución futura.
+- Para asegurar que todas las características sean visibles al cliente.
+- Porque permite evitar el uso de pruebas automatizadas.
+
+¿Qué mide el tiempo de ciclo (cycle time) en el desarrollo de software?
+4
+- La cantidad de tareas completadas por sprint.
+- El tiempo dedicado a corregir bugs.
+- El número de iteraciones necesarias para completar un proyecto.
+- El tiempo promedio que toma completar una funcionalidad.
+
+¿Cuál es una ventaja de analizar el flujo acumulado (cumulative flow diagram)?
+3
+- Permite predecir el tiempo de ejecución de cada tarea.
+- Facilita estimar el número de bugs corregidos por iteración.
+- Ayuda a identificar cuellos de botella en el proceso.
+- Evalúa exclusivamente el diseño arquitectónico del proyecto.
+
+¿Cuál es una característica clave de un sistema pull en lean?
+2
+- Produce elementos basados en estimaciones previas.
+- El trabajo avanza según las demandas del cliente o del proceso.
+- Se acumulan tareas en el backlog para procesos posteriores.
+- Se maximiza el WIP en todas las etapas.
+
+¿Cuál es el propósito de limitar el WIP en un sistema Kanban?
+3
+- Evitar conflictos entre desarrolladores.
+- Acelerar el tiempo de entrega final.
+- Reducir acumulaciones y mantener el flujo de trabajo.
+- Aumentar la complejidad de las tareas individuales.
+
+¿Qué significa la idea de "option thinking" en lean?
+1
+- Mantener abiertas las opciones para decidir en el último momento.
+- Priorizar decisiones rápidas sobre las funcionalidades.
+- Completar todas las tareas del backlog al inicio del sprint.
+- Usar entregas frecuentes para reducir opciones futuras.
+
+¿Qué ventaja proporciona el enfoque incremental en el desarrollo lean?
+2
+- Reduce la necesidad de pruebas automatizadas.
+- Permite entregar funcionalidades valiosas desde etapas tempranas.
+- Aumenta la dependencia entre las características implementadas.
+- Simplifica el backlog al eliminar tareas no prioritarias.
+
+¿Qué se considera un desperdicio en el desarrollo de software según lean?
+3
+- Elementos del backlog listos para el próximo sprint.
+- Documentación mínima requerida para el desarrollo.
+- Trabajo parcialmente hecho que no genera valor.
+- Características prioritarias entregadas al cliente.
+
+¿Cuál de las siguientes opciones sería un ejemplo de características "de más" en software?
+4
+- Funcionalidades mínimas necesarias para el MVP.
+- Actualizaciones basadas en retroalimentación del usuario.
+- Refactorizaciones para mejorar la calidad del código.
+- Características complejas que los usuarios no usan.
+
+¿Qué herramienta lean permite medir la velocidad del desarrollo en un proyecto?
+1
+- Diagramas de flujo acumulado (cumulative flow diagram).
+- Pruebas A/B.
+- Tableros físicos de Kanban.
+- Análisis de deuda técnica.
+
+¿Cuál es el propósito de una prueba A/B en el desarrollo lean?
+4
+- Reducir el tamaño de los backlogs de características.
+- Implementar entregas rápidas en cada sprint.
+- Identificar cuellos de botella en el flujo de trabajo.
+- Comparar versiones de una funcionalidad para obtener retroalimentación.
+
+¿Qué implica "potenciar al equipo" según los principios lean?
+3
+- Evitar revisiones para agilizar el desarrollo.
+- Delegar todas las decisiones en el equipo directivo.
+- Crear un entorno de trabajo sostenible y colaborativo.
+- Aumentar la carga de trabajo para acelerar el tiempo de entrega.
+
+¿Por qué es importante evitar depender de "héroes" en el equipo?
+2
+- Porque suelen tomar decisiones técnicas incorrectas.
+- Para fomentar la responsabilidad compartida y evitar dependencias.
+- Porque generalmente ralentizan los procesos de revisión de código.
+- Para reducir el tiempo dedicado a reuniones de equipo.
+
+¿Qué significa "optimizar el conjunto" en el contexto de desarrollo lean?
+4
+- Aumentar la prioridad de las tareas de desarrollo frente a pruebas.
+- Priorizar las decisiones individuales sobre las colectivas.
+- Minimizar las pruebas del producto antes del despliegue.
+- Considerar el impacto global del producto en los usuarios finales.
+
+¿Cuál es el objetivo de la técnica de los "5 por qués" (5 Whys)?
+1
+- Identificar la causa raíz de un problema en el proceso.
+- Justificar cambios en el backlog al final del sprint.
+- Reducir los tiempos de desarrollo en cada iteración.
+- Evitar acumulaciones en el flujo de trabajo pull.
+
+¿Qué concepto se relaciona con tomar decisiones en el "último momento responsable"?
+2
+- Minimizar reuniones para tomar decisiones rápidas.
+- Defer Commitment (Posponer el compromiso).
+- Reducir la planificación de sprints al inicio de cada iteración.
+- Aumentar la deuda técnica para entregar rápido.
+
+¿Por qué es importante mantener opciones abiertas en el diseño incremental?
+3
+- Facilita evitar todas las pruebas de regresión.
+- Permite reducir el tiempo dedicado al desarrollo inicial.
+- Se pueden probar alternativas y ajustar según la retroalimentación.
+- Reduce la necesidad de revisar las decisiones de diseño futuras.
+
+¿Qué estrategia permite minimizar el backlog de características en desarrollo lean?
+1
+- Limitarlo a características prioritarias de uno o dos meses.
+- Crear versiones alternativas de funcionalidades planificadas.
+- Expandirlo para incluir tareas a largo plazo.
+- Utilizar pruebas continuas durante cada sprint.
+
+¿Qué es una Minimal Marketable Feature (MMF) en el contexto de lean?
+4
+- Una característica prioritaria descartada por el equipo.
+- Un componente técnico necesario pero invisible para el cliente.
+- Una funcionalidad que optimiza procesos internos.
+- El incremento más pequeño que aporta valor al cliente final.
+
+¿Cuál de las siguientes opciones se considera un inventario que debe minimizarse en desarrollo lean?
+3
+- El conjunto de pruebas automatizadas implementadas.
+- Las funcionalidades completamente desplegadas y usadas.
+- Las características implementadas pero no desplegadas.
+- Los logs generados por los sistemas en producción.
+
+¿Qué práctica ayuda a minimizar una base de datos de bugs en desarrollo lean?
+1
+- Implementar un sistema de triaje para priorizar y cerrar bugs no críticos.
+- Ampliar el backlog para incluir más bugs como tareas futuras.
+- Crear un sistema automatizado para generar reportes constantes de bugs.
+- Aumentar el equipo de QA para reducir los reportes manuales.
+
+¿Qué es el WIP (Work In Progress) en un sistema pull?
+4
+- La cantidad total de tareas en un backlog de producto.
+- El número de iteraciones necesarias para completar un proyecto.
+- Los elementos que han sido descartados por el equipo.
+- El número máximo de ítems procesados simultáneamente en una etapa.
+
+¿Qué asegura el límite de WIP en un sistema pull?
+2
+- Que todos los ítems procesados sean de alta prioridad.
+- Que las etapas del flujo de trabajo no se saturen.
+- Que cada ítem del backlog tenga asignado un responsable.
+- Que todas las funcionalidades pasen por pruebas automatizadas.
+
+¿Cuál de las siguientes estrategias fomenta la calidad en el desarrollo lean?
+1
+- Refactorizar el código para evitar acumulación de deuda técnica.
+- Minimizar las pruebas para acelerar el proceso de entrega.
+- Implementar características de baja prioridad para probar.
+- Evitar el uso de revisiones de código para acelerar ciclos.
+
+¿Qué es la "deuda técnica" en el desarrollo de software?
+4
+- Costes financieros asociados al uso de herramientas caras.
+- Tiempo empleado en crear documentación extensa.
+- Características descartadas antes de llegar a producción.
+- Problemas de diseño o implementación que dificultan mantenimiento y ampliación.
+
+¿Qué objetivo principal persigue un Value Stream Map en lean?
+2
+- Aumentar el número de tareas en paralelo durante el desarrollo.
+- Identificar actividades que no generan valor para eliminarlas.
+- Centralizar las decisiones del equipo en una única figura.
+- Reducir el tiempo dedicado a las reuniones de planificación.
+
+¿Qué elemento se analiza en un Value Stream Map?
+3
+- Los costes financieros de cada iteración.
+- El número de personas implicadas en cada tarea.
+- Los tiempos de trabajo y de espera en cada fase del proceso.
+- La cantidad de pruebas automatizadas necesarias por funcionalidad.
+
+¿Qué información proporciona un diagrama de flujo acumulado (Cumulative Flow Diagram)?
+3
+- Los cambios semanales en la deuda técnica acumulada.
+- Los bugs encontrados y resueltos en cada sprint.
+- La cantidad de ítems completados en cada etapa del proceso.
+- La variabilidad de la productividad diaria del equipo.
+
+¿Cómo se puede utilizar un diagrama de flujo acumulado en lean?
+2
+- Para asignar tareas a cada miembro del equipo en tiempo real.
+- Para identificar cuellos de botella en el flujo de trabajo.
+- Para priorizar tareas según su tamaño y complejidad.
+- Para optimizar el backlog añadiendo nuevas funcionalidades.
+
+¿Por qué es importante implementar decisiones reversibles en desarrollo lean?
+4
+- Para reducir el tiempo de diseño en fases iniciales del proyecto.
+- Para evitar tomar decisiones críticas durante el sprint.
+- Para asegurar que las tareas completadas no requieren revisión.
+- Para deshacer cambios si se identifican problemas en producción.
+
+¿Qué práctica ayuda a garantizar decisiones reversibles en desarrollo lean?
+1
+- Usar un sistema de control de versiones efectivo.
+- Reducir el tamaño de los sprints al mínimo posible.
+- Implementar sistemas de pruebas únicamente al final del desarrollo.
+- Mantener una base de datos extensa con bugs no resueltos.
+
+¿Qué valor principal se fomenta en los equipos lean?
+3
+- Aumentar la cantidad de trabajo paralelo para mayor productividad.
+- Reducir la cantidad de reuniones semanales entre el equipo.
+- Respetar a las personas y potenciar la colaboración del equipo.
+- Evitar la delegación para que todos los miembros sean autosuficientes.
+
+¿Qué acción contradice los principios lean en un equipo de desarrollo?
+2
+- Fomentar la transparencia en las decisiones.
+- Crear dependencia excesiva en "héroes" para resolver problemas.
+- Construir un entorno sostenible para evitar sobrecarga laboral.
+- Potenciar la comunicación entre los miembros del equipo.
+
+¿Qué principio lean se alinea mejor con la idea ágil de "entregar software funcionando frecuentemente"?
+1
+- Entregar rápido (Deliver Fast).
+- Respetar a las personas y potenciar el equipo (Respect People).
+- Decidir lo más tarde posible (Defer Commitment).
+- Optimizar el conjunto (Optimize the Whole).
+
+¿Qué es un Minimal Marketable Feature (MMF)?
+4
+- La característica más compleja del backlog del producto.
+- Una funcionalidad mínima para iniciar pruebas en un entorno cerrado.
+- Un prototipo que permite evaluar viabilidad técnica.
+- La unidad mínima de funcionalidad que aporta valor al cliente.
+
+¿Cómo ayuda el concepto de MMF en el desarrollo lean?
+1
+- Priorizando funcionalidades pequeñas que aporten valor rápidamente.
+- Asegurando que todas las funcionalidades del backlog sean desarrolladas.
+- Reduciendo la cantidad de historias de usuario creadas por sprint.
+- Fomentando el uso de documentación extensa y detallada.
+
+¿Qué representa el lead time en el desarrollo lean?
+2
+- El tiempo dedicado exclusivamente a pruebas de una funcionalidad.
+- El tiempo total desde la solicitud de una funcionalidad hasta su entrega.
+- El tiempo necesario para completar una tarea individual en el backlog.
+- El tiempo de inactividad en un proceso de desarrollo.
+
+¿Qué mide el cycle time?
+3
+- El tiempo total del proyecto desde inicio hasta finalización.
+- El tiempo necesario para resolver conflictos en un equipo.
+- El tiempo transcurrido para completar una tarea desde que comienza su desarrollo.
+- El tiempo total desde el inicio del backlog hasta el final del proyecto.
+
+¿Por qué es importante entregar rápido en desarrollo lean?
+1
+- Permite obtener feedback del cliente rápidamente.
+- Reduce los costes generales del proyecto.
+- Minimiza la necesidad de pruebas automatizadas.
+- Aumenta la cantidad de historias completadas en cada sprint.
+
+¿Qué herramienta es más útil para analizar tiempos de entrega en lean?
+3
+- El backlog del producto.
+- Una matriz de decisiones.
+- Diagramas de flujo acumulado (Cumulative Flow Diagrams).
+- Un diagrama de Gantt.
+
+¿Qué tipo de desperdicio corresponde a tareas simultáneas que causan cambios constantes de enfoque?
+4
+- Reaprendizaje.
+- Delegación.
+- Trabajo parcialmente hecho.
+- Multi-tarea.
+
+¿Por qué las características no utilizadas se consideran un desperdicio?
+1
+- Porque no aportan valor al cliente y consumen recursos.
+- Porque son las más difíciles de mantener en producción.
+- Porque aumentan el tiempo necesario para las pruebas finales.
+- Porque siempre generan conflictos en los sprints.
+
+¿Qué busca el principio lean de "Optimizar el conjunto"?
+3
+- Reducir la cantidad de pruebas necesarias por funcionalidad.
+- Mejorar el diseño de código para evitar deuda técnica.
+- Asegurar que todo el proceso de desarrollo esté alineado con los objetivos finales.
+- Incrementar la cantidad de tareas completadas por sprint.
+
+¿Cuál es un ejemplo práctico de "Optimizar el conjunto"?
+2
+- Reducir el tiempo de reuniones diarias del equipo.
+- Usar la técnica de los "5 por qués" para analizar problemas.
+- Aumentar el backlog con más ítems pequeños.
+- Priorizar tareas individuales sobre objetivos globales del producto.
+
+¿Qué representa cada columna de un tablero Kanban en desarrollo lean?
+4
+- Una iteración del sprint en curso.
+- Una prioridad asignada a las tareas del backlog.
+- Un tipo específico de desperdicio a eliminar.
+- Una fase del flujo de trabajo de desarrollo.
+
+¿Qué ventaja principal tiene limitar el WIP en un tablero Kanban?
+1
+- Reduce la sobrecarga y mejora la eficiencia del equipo.
+- Aumenta la cantidad de tareas simultáneas completadas.
+- Facilita la incorporación de nuevos integrantes al equipo.
+- Prioriza tareas más complejas en cada fase.
+
+¿Qué caracteriza a la filosofía de "Decidir lo más tarde posible" en lean?
+3
+- Tomar decisiones rápidas para evitar retrasos.
+- Evitar decisiones importantes durante los sprints.
+- Mantener opciones abiertas hasta tener suficiente información.
+- Reducir el tiempo asignado a la planificación inicial.
+
+¿Cuál de estas prácticas fomenta la reversibilidad de decisiones en lean?
+4
+- Ampliar el tamaño del backlog.
+- Usar diagramas de Gantt para planificación.
+- Reducir la cantidad de revisiones de código.
+- Usar un sistema de despliegue que permita revertir cambios fácilmente.
+
+¿Qué se entiende por trabajo parcialmente hecho en el contexto del desarrollo de software?
+4
+- Código listo para producción pero no desplegado.
+- Documentación excesiva o código no testeado.
+- Tareas finalizadas pero no subidas al repositorio.
+- Todas las anteriores.
+
+¿Por qué las características de más se consideran un desperdicio en desarrollo de software?
+4
+- Porque ocupan espacio innecesario en el código base.
+- Porque rara vez son utilizadas por los usuarios.
+- Porque dificultan el mantenimiento y generan complejidad innecesaria.
+- Todas las anteriores.
+
+¿Qué desperdicio ocurre cuando hay reaprendizaje en un proyecto?
+2
+- Las tareas tardan más porque se retoman después de largos periodos de inactividad.
+- La falta de comunicación obliga al equipo a aprender nuevamente sobre un tema que ya conocían.
+- Las decisiones tomadas en etapas tempranas del desarrollo deben ser revisadas.
+- Se acumulan bugs en las fases iniciales de desarrollo.
+
+¿Qué caracteriza a un sistema pull en el desarrollo de software?
+2
+- Los desarrolladores trabajan de forma independiente sin límites de tareas.
+- Las tareas solo avanzan a la siguiente fase cuando hay capacidad disponible.
+- Las tareas son asignadas automáticamente por el gestor del proyecto.
+- Se prioriza siempre el trabajo en paralelo para mayor velocidad.
+
+¿Qué significa el término WIP (Work In Progress) en un tablero Kanban?
+2
+- El tiempo promedio que toma completar una tarea.
+- La cantidad máxima de tareas permitidas en una columna del tablero.
+- El número de tareas que están listas para revisión.
+- La cantidad de tareas pendientes en el backlog.
+
+¿Cuál es el principal problema de un sistema push en comparación con un sistema pull?
+1
+- Genera acumulación de trabajo en fases intermedias del proceso.
+- Promueve entregas rápidas sin control de calidad.
+- No permite identificar cuellos de botella.
+- Limita la creatividad del equipo.
+
+¿Qué mide el lead time en el desarrollo de software?
+1
+- El tiempo total que tarda un elemento desde que se inicia hasta que se entrega.
+- El tiempo promedio que una tarea pasa en el backlog.
+- La cantidad de tareas completadas por semana.
+- El tiempo necesario para corregir un defecto crítico.
+
+En un diagrama acumulativo de flujo, ¿qué representa una separación creciente entre líneas de distintas fases?
+2
+- Que la velocidad del equipo está aumentando.
+- Que se están acumulando tareas en una fase, creando un cuello de botella.
+- Que el backlog está siendo constantemente actualizado.
+- Que el equipo está cerrando tareas más rápido de lo esperado.
+
+¿Qué ventaja ofrece el value stream mapping en un proceso de desarrollo de software?
+2
+- Permite priorizar las tareas más críticas del backlog.
+- Identifica fases del proceso donde hay tiempos muertos o desperdicios.
+- Facilita el seguimiento diario del equipo.
+- Mejora la relación entre desarrolladores y product owners.
+
+Según el principio de "Decidir lo más tarde posible", ¿qué enfoque debería adoptar un equipo ágil?
+1
+- Retrasar decisiones críticas hasta tener toda la información necesaria.
+- Completar todas las tareas del backlog antes de tomar decisiones.
+- Dejar las decisiones importantes al product owner sin consulta previa.
+- Tomar decisiones tempranas para evitar futuros conflictos.
+
+¿Qué técnica se menciona como clave para construir calidad desde el principio en el desarrollo lean?
+1
+- Refactorización constante y revisión de código.
+- Documentación extensa de cada funcionalidad.
+- Utilizar múltiples herramientas de diseño gráfico.
+- Aumentar la cantidad de reuniones de planificación.
+
+¿Qué es una tracer bullet en el desarrollo de software lean?
+1
+- Una pequeña funcionalidad que permite probar todas las capas del sistema.
+- Una herramienta para rastrear errores críticos en el código.
+- Un método de priorización de tareas en sistemas Kanban.
+- Una técnica para optimizar el proceso de despliegue continuo.
+
+¿Qué característica principal comparten los tableros Kanban y los sistemas lean?
+1
+- Permiten identificar desperdicios en el flujo de trabajo.
+- Priorizan el trabajo en paralelo para optimizar tiempos.
+- Evitan completamente los sistemas pull.
+- Se centran en grandes entregas a largo plazo.
+
+¿Cuál de los siguientes elementos es clave para limitar el WIP en un tablero Kanban?
+1
+- Evitar añadir tareas nuevas hasta terminar las actuales.
+- Incrementar el tamaño del equipo de desarrollo.
+- Reducir las reuniones de planificación.
+- Mantener un backlog más extenso.
+
+¿Qué ventaja tiene implementar límites de WIP en el flujo de desarrollo?
+2
+- Aumenta la cantidad de tareas que se pueden trabajar en paralelo.
+- Facilita la detección de cuellos de botella en el proceso.
+- Permite ajustar rápidamente el backlog del equipo.
+- Reduce la necesidad de reuniones entre el equipo y el PO.
+
+¿Cuáles son los dos principios básicos del sistema de producción de Toyota (TPS)?
+4
+- Just-in-time y Lean Manufacturing.
+- Jidoka y Kaizen.
+- Lean Manufacturing y Kanban.
+- Just-in-time y Jidoka.
+
+¿Qué significa el término "Jidoka" en el contexto del TPS?
+3
+- Automatización completa sin intervención humana.
+- Producción en masa eficiente.
+- Automatización con intervención humana para mejora continua.
+- Eliminación de desperdicios en el proceso.
+
+En Kanban, ¿cuál es uno de los objetivos principales de visualizar el flujo de trabajo?
+1
+- Mostrar visualmente en qué está trabajando el equipo en un momento dado.
+- Controlar el tiempo que cada desarrollador dedica a cada tarea.
+- Aumentar la cantidad de tareas en progreso.
+- Reducir el número de reuniones del equipo.
+
+¿Qué es un límite de WIP en Kanban?
+2
+- La cantidad mínima de tareas que debe haber en cada columna.
+- El número máximo de elementos que puede haber en un estado del flujo de trabajo.
+- El tiempo máximo permitido para completar una tarea.
+- La cantidad de tareas pendientes en el backlog.
+
+¿Cuál de las siguientes NO es una de las tres prácticas fundamentales de Kanban?
+4
+- Visualizar el flujo de trabajo.
+- Limitar el WIP (Work In Progress).
+- Medir y optimizar el flujo (lead time o cycle time).
+- Establecer sprints de duración fija.
+
+¿Cuál es el efecto de tener un límite de WIP demasiado alto?
+3
+- El flujo será muy lento y las personas estarán ociosas.
+- Se maximiza la eficiencia y el flujo de trabajo.
+- Habrá una sobrecarga de trabajo y muchas tareas quedarán paradas.
+- Se evita la multitarea excesiva.
+
+¿Qué herramienta se utiliza en Kanban para medir el número de ítems que salen de cada columna por unidad de tiempo?
+1
+- Diagrama de flujo acumulado.
+- Histograma de eficiencia.
+- Diagrama de Gantt.
+- Gráfico de burndown.
+
+¿Qué representa el "cycle time" o "lead time" en Kanban?
+2
+- El tiempo que un desarrollador tarda en completar una tarea.
+- El tiempo medio de terminación de un elemento desde que entra al sistema hasta que se completa.
+- El tiempo que una tarea permanece en una columna específica.
+- El tiempo de inactividad entre tareas.
+
+¿Cuál de las siguientes es una ventaja de limitar el WIP en Kanban?
+4
+- Aumenta el multitasking y la productividad individual.
+- Genera más trabajo en la cadena de proceso.
+- Evita la necesidad de establecer políticas explícitas.
+- Evita sobrecargas y mejora el flujo de trabajo.
+
+En Kanban, ¿qué significa el lema "Stop starting, start finishing"?
+3
+- Dejar de trabajar en tareas nuevas y centrarse en tareas antiguas.
+- Evitar el inicio de tareas hasta que todo el equipo esté disponible.
+- Dejar de empezar tareas y enfocarse en terminar las que ya están en progreso.
+- Parar el trabajo cuando se detecta un error y reiniciar desde cero.
+
+¿Cuál de los siguientes NO es un componente típico de una tarjeta Kanban?
+4
+- Nombre o identificación de la tarea.
+- Descripción breve de la tarea.
+- Criterios de aceptación.
+- Tiempo estimado en horas para completar la tarea.
+
+En un tablero Kanban, ¿cómo se suele representar un ítem que tiene un defecto que hay que resolver?
+2
+- Moviendo la tarjeta a una columna especial de "Defectos".
+- Colocando un pos-it rojo o una marca en la tarjeta.
+- Eliminando la tarjeta del tablero.
+- Creando una nueva tarjeta en la columna "Backlog".
+
+¿Qué ventaja tiene usar tarjetas Kanban para indicar estados no secuenciales?
+1
+- Permite mayor flexibilidad al representar pruebas y validaciones que no siguen un orden fijo.
+- Reduce la necesidad de definir políticas de flujo de trabajo.
+- Facilita el trabajo en multitarea.
+- Aumenta el límite de WIP permitido.
+
+¿Cuál es el propósito principal de medir y optimizar el flujo en Kanban?
+3
+- Aumentar la cantidad de trabajo en progreso.
+- Reducir el número de reuniones necesarias.
+- Maximizar el número de ítems terminados por unidad de tiempo.
+- Incrementar el tamaño del equipo de desarrollo.
+
+¿Qué se debe hacer si en una columna del tablero Kanban se alcanza el límite de WIP y no se pueden mover más ítems a esa columna?
+2
+- Aumentar el límite de WIP de esa columna inmediatamente.
+- Dejar los ítems terminados en la columna anterior hasta que haya espacio.
+- Forzar el movimiento de los ítems ignorando el límite de WIP.
+- Eliminar ítems de menor prioridad para hacer espacio.
+
+Según Kanban, ¿cómo se determina el límite de WIP óptimo?
+3
+- Siguiendo estrictamente la fórmula 2*n - 1, donde n es el número de personas.
+- Estableciéndolo una vez al inicio del proyecto y manteniéndolo constante.
+- Experimentando, midiendo y ajustándolo empíricamente.
+- Siempre fijándolo en un valor bajo para evitar sobrecargas.
+
+En el contexto de Kanban, ¿qué es una "Definition of Done"?
+4
+- Una lista de tareas pendientes para el equipo.
+- Una política de recursos humanos.
+- Un tipo de clase de servicio.
+- Una política explícita que define cuándo un ítem se considera terminado.
+
+¿Cuál de las siguientes es una práctica recomendada en Kanban para mejorar el flujo de trabajo?
+1
+- Realizar reuniones diarias de pie (Daily Standups).
+- Aumentar constantemente el límite de WIP para acelerar el trabajo.
+- Evitar la visualización de tareas en progreso.
+- Eliminar la medición del cycle time.
+
+¿Qué mide la eficiencia de un proceso en Kanban?
+2
+- El número total de tareas completadas.
+- El porcentaje de tiempo trabajado activamente en una tarea sobre el tiempo total que tomó completarla.
+- El tiempo que un ítem permanece en el backlog.
+- El número de personas involucradas en completar una tarea.
+
+¿Cuál es una ventaja de reducir el WIP en un sistema Kanban?
+4
+- Aumenta el tiempo dedicado a cada tarea individual.
+- Genera más tareas para el equipo.
+- Aumenta la multitarea entre los miembros del equipo.
+- Disminuye el tiempo invertido en cambios de contexto y aumenta el rendimiento.
+
+¿Qué significa "WIP" en el contexto de Kanban?
+2
+- Work Input Process
+- Work In Progress
+- Workflow Integration Plan
+- Work Implementation Procedure
+
+¿Cuál es una de las ventajas de visualizar el flujo de trabajo en Kanban?
+1
+- Permite al equipo ver en qué está trabajando cada miembro en tiempo real.
+- Reduce la necesidad de comunicación entre los miembros del equipo.
+- Elimina la necesidad de reuniones diarias.
+- Incrementa automáticamente la velocidad de desarrollo.
+
+En Kanban, ¿qué es un "diagrama de flujo acumulado"?
+3
+- Un gráfico que muestra el rendimiento individual de los desarrolladores.
+- Un calendario de hitos del proyecto.
+- Una representación visual del número de ítems en cada estado del flujo de trabajo a lo largo del tiempo.
+- Un diagrama que muestra la jerarquía del equipo.
+
+¿Qué se logra al limitar el WIP en un equipo que utiliza Kanban?
+4
+- Se aumenta la cantidad de tareas que cada persona puede manejar.
+- Se permite que el equipo trabaje en todas las tareas al mismo tiempo.
+- Se elimina la necesidad de establecer prioridades.
+- Se mejora el enfoque en completar tareas antes de comenzar nuevas.
+
+¿Cuál de las siguientes afirmaciones es cierta acerca de los límites de WIP?
+3
+- Deben ser establecidos por la gerencia sin consultar al equipo.
+- Siempre deben ser incrementados para mejorar la productividad.
+- Deben ser ajustados empíricamente basándose en la capacidad del equipo.
+- Una vez establecidos, no deben cambiarse durante el proyecto.
+
+¿Qué es una "clase de servicio" en Kanban?
+2
+- Un tipo de reunión para evaluar el progreso.
+- Una categoría que define diferentes tipos de ítems de trabajo con políticas específicas.
+- Una herramienta para medir el rendimiento del equipo.
+- Un rol dentro del equipo Kanban.
+
+¿Cómo ayuda Kanban a identificar cuellos de botella en el proceso?
+1
+- Al visualizar el flujo de trabajo, se pueden ver columnas donde las tareas se acumulan.
+- Al aumentar el WIP, se detectan fácilmente las tareas críticas.
+- Al reducir la comunicación entre miembros, se notan las demoras.
+- Al eliminar las reuniones, se hace evidente dónde hay problemas.
+
+¿Cuál es el enfoque de Kanban respecto a las reuniones de planificación?
+3
+- Requiere reuniones de planificación extensas al inicio del proyecto.
+- No considera necesarias las reuniones de planificación.
+- Prefiere planificaciones just-in-time y adaptativas según el flujo de trabajo.
+- Establece sprints de duración fija para planificar.
+
+En Kanban, ¿qué representa mover una tarjeta de una columna a otra en el tablero?
+2
+- El inicio de una nueva tarea.
+- El cambio de estado de un ítem de trabajo en el flujo.
+- La finalización del proyecto.
+- La asignación de una tarea a un nuevo miembro del equipo.
+
+¿Cuál de las siguientes es una práctica que complementa a Kanban para mejorar la eficiencia del equipo?
+4
+- Aumentar el número de tareas en progreso.
+- Evitar cualquier tipo de documentación.
+- Trabajar individualmente sin colaboración.
+- Implementar políticas explícitas y revisarlas regularmente.
+
+¿Qué es el "throughput" en el contexto de Kanban?
+3
+- El tiempo que una tarea permanece en una columna específica.
+- La cantidad de tareas iniciadas en un período de tiempo.
+- El número de ítems completados por unidad de tiempo.
+- La suma total de tareas en el backlog.
+
+¿Por qué es importante hacer explícitas las políticas en Kanban?
+1
+- Para que todos los miembros del equipo entiendan cómo funciona el flujo de trabajo.
+- Para reducir el tiempo dedicado a la formación del personal.
+- Para poder penalizar a quienes no siguen las reglas.
+- Para evitar la necesidad de reuniones de seguimiento.
+
+¿Cuál es el propósito de las "reuniones de pie" o "Daily Standups" en Kanban?
+2
+- Revisar detalladamente el código de cada desarrollador.
+- Compartir rápidamente el estado del trabajo y resolver impedimentos.
+- Planificar las tareas de las próximas semanas.
+- Evaluar el desempeño individual de cada miembro.
+
+En Kanban, ¿qué se entiende por "mejora continua"?
+4
+- Completar más tareas que el equipo puede manejar.
+- Mantener siempre el mismo proceso sin cambios.
+- Evitar la retroalimentación del equipo para no generar conflictos.
+- Revisar y ajustar constantemente el proceso para optimizar el flujo.
+
+¿Cómo ayuda Kanban a gestionar diferentes tipos de ítems de trabajo?
+3
+- Ignorando las diferencias y tratándolos por igual.
+- Creando un tablero separado para cada tipo de ítem.
+- Utilizando clases de servicio y políticas específicas para cada tipo.
+- Limitando el WIP únicamente para ítems críticos.
+
+¿Qué refleja el término "lead time" en Kanban?
+2
+- El tiempo desde que una tarea entra en desarrollo hasta que se prueba.
+- El tiempo desde que se solicita una tarea hasta que se entrega al cliente.
+- El tiempo que un desarrollador dedica a una tarea específica.
+- El tiempo que una tarea pasa en el backlog.
+
+¿Cuál de los siguientes es un indicador de que el límite de WIP es demasiado bajo? 
+1
+- Los miembros del equipo están ociosos esperando tareas.
+- Hay acumulación de tareas en ciertas columnas.
+- El flujo de trabajo es demasiado rápido.
+- Se completan más tareas de las planificadas.
+
+¿Qué acción es recomendable si se detecta que hay un cuello de botella en una fase específica del flujo de trabajo?
+2
+- Ignorar el problema y continuar con el proceso.
+- Reasignar recursos para ayudar a aliviar la carga en esa fase.
+- Reducir el límite de WIP en las fases anteriores.
+- Aumentar el límite de WIP en la fase con el cuello de botella.
+
+¿Cómo puede Kanban ayudar a mejorar la predictibilidad en las entregas?
+4
+- Aumentando el número de tareas en progreso.
+- Reduciendo la comunicación con el cliente.
+- Eliminando la necesidad de estimaciones.
+- Al medir y optimizar el lead time, haciendo que sea más constante.
+
+¿Cuál de los siguientes no es un objetivo de Kanban?
+3
+- Conseguir un ritmo de trabajo sostenible.
+- Visualizar y estandarizar el flujo de trabajo.
+- Incrementar la complejidad del proceso para mejorar la calidad.
+- Establecer políticas explícitas como la Definition of Done.
+
+¿Qué es el patrón "expandir-colapsar" en Kanban?
+2
+- Una técnica para agrupar tareas similares en una sola tarjeta.
+- Una forma de manejar la jerarquía entre historias de usuario e ítems de trabajo.
+- Un método para reducir el número de columnas en el tablero.
+- Una estrategia para eliminar tareas duplicadas.
+
+¿Cuál es una señal de que el límite de WIP es demasiado alto?
+3
+- Los miembros del equipo tienen pocas tareas asignadas.
+- El lead time es corto y constante.
+- Hay muchas tareas en progreso pero pocas se completan.
+- El flujo de trabajo es fluido y sin interrupciones.
+
+¿Por qué es importante estandarizar el proceso en Kanban?
+1
+- Para asegurar que todos sigan las mismas prácticas y mejorar la eficiencia.
+- Para reducir la necesidad de comunicación en el equipo.
+- Para aumentar el número de tareas que se pueden manejar simultáneamente.
+- Para eliminar la necesidad de reuniones de retroalimentación.
+
+En Kanban, ¿cómo se puede representar que un ítem está bloqueado y no puede avanzar?
+2
+- Moviendo la tarjeta a una columna de "Completado".
+- Añadiendo una marca o señal en la tarjeta, como un icono de bloqueo.
+- Eliminando la tarjeta del tablero hasta que se resuelva el bloqueo.
+- Asignando más personas a esa tarea para acelerarla.
+
+¿Qué rol juega el equipo en la definición del límite de WIP?
+3
+- Ninguno, es una decisión exclusiva de la gerencia.
+- Solo pueden sugerir cambios pero no establecerlos.
+- Deben participar en el consenso para establecer y ajustar el límite.
+- El equipo debe seguir el límite impuesto sin cuestionarlo.
+
+¿Cuál es una práctica que NO se recomienda en Kanban?
+4
+- Visualizar el trabajo y el flujo.
+- Limitar el WIP para mejorar el enfoque.
+- Medir y optimizar el lead time.
+- Asignar tareas sin considerar la capacidad actual del equipo.
+
+¿Cómo se relaciona Kanban con los principios Lean?
+1
+- Kanban aplica los principios Lean al desarrollo de software.
+- Kanban y Lean son metodologías opuestas.
+- Kanban solo se enfoca en la gestión de tareas, no en principios Lean.
+- Kanban reemplaza completamente a Lean en la producción.
+
+¿Qué significa "hacer explícitas las políticas" en Kanban?
+2
+- Mantener las reglas implícitas para mayor flexibilidad.
+- Definir y documentar claramente las reglas y procedimientos del equipo.
+- Dejar que cada miembro interprete las reglas a su manera.
+- Evitar establecer procedimientos para fomentar la creatividad.
+
+¿Cuál es el efecto de tener demasiadas tareas en progreso en Kanban?
+3
+- Mejora la eficiencia del equipo al aprovechar todos los recursos.
+- No tiene impacto significativo en el flujo de trabajo.
+- Puede reducir la eficiencia debido a cambios de contexto y multitarea.
+- Facilita la identificación de tareas críticas.
+
+¿Qué se busca al medir el "cycle time" en Kanban?
+4
+- Determinar el tiempo de vida del proyecto.
+- Calcular el tiempo total invertido por el equipo en todas las tareas.
+- Estimar el tiempo restante para completar el backlog.
+- Conocer el tiempo que tarda una tarea en pasar por todo el flujo de trabajo.
+
+¿Cuál es uno de los principales problemas en las empresas tradicionales al poner software en producción?
+4
+- Se realizan entregas demasiado frecuentes, saturando al equipo de operaciones.
+- La automatización completa del despliegue provoca errores constantes.
+- Los usuarios no reportan errores después de la puesta en producción.
+- El proceso es complejo y estresante, con pocas entregas al año y alto riesgo.
+
+¿Qué ventaja principal tiene realizar entregas frecuentes de software?
+1
+- Se obtiene retroalimentación rápida del cliente para validar funcionalidades.
+- Se reduce el número de pruebas automatizadas necesarias.
+- Se incrementa el riesgo al introducir cambios continuos.
+- Se disminuye la necesidad de comunicación con el equipo de operaciones.
+
+¿Qué es la "última milla" en el contexto del despliegue de software?
+2
+- Los últimos usuarios en adoptar el software.
+- Los pasos necesarios para poner en producción el sistema, desde el código hasta el entorno productivo.
+- La distancia física entre el servidor y el usuario final.
+- El tiempo que tarda en compilar el código fuente.
+
+En el enfoque de Integración Continua, ¿qué se espera que hagan los desarrolladores?
+3
+- Trabajar en ramas separadas durante largos periodos antes de integrar.
+- Integrar sus cambios semanalmente para evitar conflictos.
+- Integrar sus cambios diariamente y verificar con pruebas automatizadas.
+- Esperar a que el equipo de operaciones valide su código antes de integrar.
+
+¿Cuál es una ventaja del flujo de trabajo Trunk Based frente al uso de ramas de características?
+2
+- Menos interrupciones en el flujo de trabajo del equipo.
+- Integraciones más frecuentes que facilitan la detección temprana de errores.
+- Mayor aislamiento de los desarrolladores respecto al resto del equipo.
+- Facilita la realización de pull requests y revisiones de código.
+
+¿Qué herramienta se utiliza para automatizar la compilación y lanzamiento de pruebas en Integración Continua?
+1
+- Servidores de Integración Continua como Jenkins o GitHub Actions.
+- Sistemas de control de versiones como Git.
+- Editores de código como Visual Studio Code.
+- Herramientas de seguimiento de tareas como Jira.
+
+En el contexto de Docker, ¿qué es una imagen Docker?
+3
+- Un contenedor en ejecución.
+- Un archivo de configuración de la aplicación.
+- Un artefacto ejecutable que contiene todo lo necesario para correr una aplicación en cualquier entorno Docker.
+- Un repositorio de código fuente para aplicaciones en contenedores.
+
+¿Cuál es una ventaja de usar Docker para el despliegue de aplicaciones?
+2
+- Requiere menos espacio en disco que otros métodos de despliegue.
+- Permite construir una vez y ejecutar en múltiples entornos sin cambios.
+- Elimina la necesidad de pruebas automatizadas.
+- Simplifica la gestión de bases de datos de producción.
+
+¿Qué significa "Infraestructura como código" en el contexto de DevOps?
+1
+- Definir y gestionar la configuración de servidores y entornos mediante código versionado.
+- Contratar desarrolladores que también sean expertos en operaciones.
+- Usar únicamente lenguajes de programación para configurar sistemas.
+- Reemplazar completamente al equipo de operaciones con scripts automatizados.
+
+¿Cuál de las siguientes afirmaciones describe mejor el concepto de Entrega Continua?
+4
+- Automatizar el despliegue en producción sin intervención humana.
+- Integrar cambios en la rama principal una vez al mes.
+- Reducir la cantidad de pruebas para acelerar entregas.
+- Tener el software en un estado que pueda ser puesto en producción en cualquier momento, con despliegues frecuentes y automatizados.
+
+¿Qué es un "interruptor de características" o "feature toggle"?
+2
+- Un mecanismo para eliminar código obsoleto del sistema.
+- Una técnica que permite activar o desactivar funcionalidades en tiempo de ejecución.
+- Un método para acelerar la compilación del software.
+- Una herramienta para gestionar ramas en sistemas de control de versiones.
+
+En el contexto de despliegue, ¿qué es un canary release?
+3
+- Una estrategia para desplegar todas las funcionalidades a todos los usuarios al mismo tiempo.
+- Un sistema de pruebas unitarias más robusto.
+- Un método para lanzar nuevas versiones a un pequeño grupo de usuarios antes de un despliegue completo.
+- Un tipo de rama especial en Git para integraciones críticas.
+
+¿Cuál es una práctica recomendada para gestionar cambios en la base de datos de producción?
+1
+- Automatizar migraciones y mantener un historial de cambios versionado.
+- Realizar cambios directamente en producción sin pruebas previas.
+- Evitar cualquier modificación al esquema de la base de datos.
+- Delegar todas las modificaciones al equipo de operaciones sin involucrar a los desarrolladores.
+
+¿Cuál es una característica clave de un pipeline de despliegue?
+4
+- Requiere intervención manual en cada etapa para garantizar calidad.
+- Solo se utiliza en entornos de producción.
+- Se ejecuta una vez al final del proyecto.
+- Automatiza el proceso de construcción, despliegue, prueba y lanzamiento del software.
+
+¿Qué rol juegan las herramientas de compilación como Maven o Gradle en el proceso de Integración Continua?
+2
+- Gestionan el código fuente en repositorios distribuidos.
+- Automatizan la construcción del proyecto y la generación de artefactos desplegables.
+- Supervisan el rendimiento de la aplicación en producción.
+- Facilitan la comunicación entre desarrolladores y clientes.
+
+¿Por qué es importante externalizar la configuración de una aplicación?
+3
+- Para aumentar el rendimiento en producción.
+- Para reducir el tamaño del artefacto desplegable.
+- Para permitir que el mismo artefacto funcione en diferentes entornos sin recompilar.
+- Para evitar el uso de variables de entorno en el sistema operativo.
+
+En el despliegue continuo, ¿qué se busca al reducir el tamaño de los cambios puestos en producción?
+2
+- Aumentar la cantidad de funcionalidades nuevas en cada release.
+- Minimizar el riesgo y facilitar la identificación y corrección de errores.
+- Reducir la necesidad de pruebas automatizadas.
+- Hacer que el proceso de despliegue sea más complejo y robusto.
+
+¿Qué es una "migración" de base de datos?
+1
+- Un cambio estructural en la base de datos para adaptarla a nuevas necesidades de la aplicación.
+- El proceso de mover la base de datos a un nuevo servidor.
+- Una copia de seguridad completa de la base de datos.
+- La eliminación de datos antiguos para liberar espacio.
+
+¿Qué ventaja ofrece el uso de Docker en entornos de desarrollo y producción?
+4
+- Reduce el número de líneas de código necesarias.
+- Elimina la necesidad de pruebas de integración.
+- Permite a los desarrolladores trabajar sin conexión a internet.
+- Asegura que las aplicaciones se ejecuten de manera consistente en diferentes entornos.
+
+¿Cuál es el objetivo principal del movimiento DevOps?
+2
+- Acelerar el desarrollo de nuevas funcionalidades sin importar la estabilidad.
+- Fomentar la colaboración entre desarrollo y operaciones para entregar software de alta calidad de manera rápida y fiable.
+- Reemplazar al equipo de operaciones por herramientas automatizadas.
+- Dividir claramente las responsabilidades entre desarrollo y operaciones.
+
+¿Cuál es una práctica clave en la Integración Continua?
+3
+- Realizar despliegues en producción sin pruebas previas.
+- Evitar la integración frecuente para reducir conflictos.
+- Integrar cambios frecuentemente y ejecutar pruebas automatizadas en cada integración.
+- Trabajar en ramas aisladas durante largos periodos.
+
+¿Qué función cumplen los servidores de Integración Continua como Jenkins?
+1
+- Automatizan la construcción, pruebas y despliegue de aplicaciones en respuesta a cambios en el código.
+- Actúan como repositorios de código fuente.
+- Son herramientas para el seguimiento de errores.
+- Facilitan la comunicación entre el equipo y los clientes.
+
+¿Por qué es importante que la aplicación sea capaz de funcionar en diferentes entornos sin recompilación?
+2
+- Para reducir el tiempo de compilación.
+- Para permitir el despliegue automático en múltiples entornos con el mismo artefacto.
+- Para minimizar el uso de variables de entorno.
+- Para facilitar la migración de datos entre bases de datos.
+
+En el contexto de la sesión, ¿qué es un artefacto binario?
+3
+- El código fuente de la aplicación.
+- Un archivo de configuración del sistema.
+- Un ejecutable compilado que puede ser desplegado en diferentes entornos.
+- Un registro de cambios realizados en la base de datos.
+
+¿Qué ventaja tiene el uso de Docker Compose?
+4
+- Simplifica la escritura de Dockerfiles.
+- Permite ejecutar contenedores sin necesidad de un Docker Engine.
+- Automatiza las pruebas unitarias de la aplicación.
+- Orquesta múltiples contenedores y sus configuraciones para crear entornos completos.
+
+¿Cuál es el propósito de los entornos de staging o preproducción?
+2
+- Servir como entorno de desarrollo para los programadores.
+- Probar la aplicación en un entorno casi idéntico al de producción antes del despliegue final.
+- Almacenar copias de seguridad de la base de datos.
+- Actuar como entorno de pruebas unitarias.
+
+En una tubería de despliegue, ¿qué sucede en la fase de aceptación?
+3
+- Se realizan pruebas de rendimiento y carga.
+- Se despliega la aplicación en producción.
+- Se ejecutan pruebas de aceptación e integración en un entorno similar al de producción.
+- Se compila y construye el artefacto binario.
+
+¿Qué es un pipeline dashboard en herramientas como Jenkins?
+1
+- Una interfaz visual que muestra el estado y progreso de cada etapa de la tubería de despliegue.
+- Un sistema de seguimiento de errores y tickets.
+- Un editor de código integrado.
+- Un módulo para gestionar bases de datos.
+
+¿Cuál es una de las razones para mantener la compilación rápida en Integración Continua?
+2
+- Para reducir el tamaño del código fuente.
+- Para obtener retroalimentación rápida sobre el estado del código y detectar errores pronto.
+- Para minimizar el uso de recursos del servidor.
+- Para evitar la necesidad de pruebas unitarias.
+
+¿Qué implica el principio de "Todo el mundo realiza commits en la rama principal todos los días"?
+3
+- Que solo un desarrollador puede hacer commits a la vez.
+- Que se deben evitar los commits frecuentes para reducir conflictos.
+- Que todos los desarrolladores integran cambios diariamente, promoviendo la detección temprana de problemas.
+- Que los commits deben hacerse únicamente al final de la semana.
+
+¿Por qué es importante versionar también las configuraciones de los entornos y de la aplicación?
+1
+- Para controlar su evolución y cambios al igual que el código fuente.
+- Para evitar compartir información sensible.
+- Para reducir el tamaño del repositorio.
+- Para eliminar la necesidad de documentación.
+
+¿Qué es una buena práctica al trabajar con bases de datos en un entorno de entrega continua?
+4
+- Realizar cambios directamente en la base de datos de producción.
+- Evitar el uso de bases de datos en desarrollo.
+- No realizar copias de seguridad para ahorrar espacio.
+- Automatizar la creación de esquemas de bases de datos usando scripts.
+
+¿Cuál es una ventaja de los contenedores sobre las máquinas virtuales?
+2
+- Requieren más recursos, proporcionando mayor aislamiento.
+- Son más ligeros y rápidos de iniciar, consumiendo menos recursos.
+- Ofrecen mayor seguridad que las máquinas virtuales.
+- No necesitan un sistema operativo anfitrión.
+
+En Docker, ¿qué comando se utiliza para construir una imagen a partir de un Dockerfile?
+3
+- docker run
+- docker image ls
+- docker build
+- docker start
+
+¿Qué significa el comando docker run -p 80:80 -d nginx-example?
+4
+- Ejecuta un contenedor en modo interactivo.
+- Construye una imagen llamada nginx-example.
+- Detiene un contenedor en ejecución.
+- Ejecuta el contenedor nginx-example en segundo plano, mapeando el puerto 80 del host al puerto 80 del contenedor.
+
+¿Cuál es una forma de pasar variables de entorno a un contenedor Docker?
+1
+- Utilizando el flag -e en el comando docker run.
+- Modificando el Dockerfile después de construir la imagen.
+- Editando directamente el código fuente dentro del contenedor.
+- No es posible pasar variables de entorno a un contenedor.
+
+¿Por qué es importante automatizar el proceso de despliegue?
+2
+- Para reducir los costos de licencias de software.
+- Para minimizar errores humanos y hacer el proceso reproducible y fiable.
+- Para evitar la necesidad de un equipo de operaciones.
+- Para incrementar la complejidad del sistema y mejorar la seguridad.
+
+¿Qué se entiende por "Infrastructure-as-code"?
+3
+- El uso exclusivo de código fuente para el desarrollo de aplicaciones.
+- La creación manual de entornos de despliegue por parte del equipo de operaciones.
+- La definición y configuración de infraestructura (servidores, redes, etc.) mediante código versionado.
+- La externalización de la infraestructura a terceros.
+
+¿Cuál es una de las prácticas recomendadas en la gestión de entornos de despliegue?
+1
+- Automatizar tanto la gestión de entornos como la instalación y ejecución de la aplicación.
+- Mantener configuraciones distintas en cada entorno sin documentarlas.
+- Realizar despliegues manuales en entornos de producción.
+- Evitar el uso de herramientas de virtualización.
+
+¿Qué es una prueba A/B en el contexto de despliegue continuo?
+2
+- Una prueba de unidad básica para verificar el código.
+- Un experimento en el que se presentan dos versiones de una funcionalidad a diferentes usuarios para comparar resultados.
+- Un método de despliegue para servidores alternativos.
+- Una estrategia para eliminar ramas obsoletas en el control de versiones.
+
+En el contexto de DevOps, ¿cuál es uno de los objetivos principales?
+4
+- Mantener separados los equipos de desarrollo y operaciones para evitar conflictos.
+- Aumentar la velocidad de desarrollo sin importar la estabilidad.
+- Reducir la comunicación entre los equipos para ganar eficiencia.
+- Fomentar la colaboración entre desarrollo y operaciones para entregar software rápidamente y con calidad.
+
+¿Qué es un entorno de integración?
+2
+- El entorno utilizado por los clientes finales.
+- Un entorno donde se integran y prueban componentes con servicios reales pero datos de prueba.
+- El ordenador personal de cada desarrollador.
+- Un entorno idéntico a producción utilizado únicamente para copias de seguridad.
+
+¿Por qué es útil mantener un registro histórico de las migraciones realizadas en la base de datos?
+3
+- Para aumentar el rendimiento de la base de datos.
+- Para reducir el tamaño de los backups.
+- Para poder revertir cambios y entender la evolución del esquema de datos.
+- Para eliminar la necesidad de pruebas en desarrollo.
+
+¿Qué técnica permite mostrar una nueva funcionalidad solo a ciertos usuarios seleccionados?
+1
+- Interruptores de características combinados con canary releases.
+- Despliegue simultáneo en todos los entornos.
+- Uso de múltiples ramas de características en producción.
+- Eliminación de pruebas unitarias.
+
+¿Cuál es el propósito de realizar pruebas en un entorno de preproducción?
+2
+- Acelerar el despliegue sin importar la calidad.
+- Validar que la aplicación funciona correctamente en un entorno similar a producción antes del lanzamiento.
+- Reducir el número de pruebas necesarias en producción.
+- Probar funcionalidades no relacionadas con el proyecto.
+
+¿Cuál es una ventaja de desplegar pequeños cambios frecuentemente?
+4
+- Aumenta el riesgo de errores en producción.
+- Dificulta el seguimiento de versiones.
+- Reduce la capacidad de añadir funcionalidades grandes.
+- Facilita la identificación de problemas y reduce el impacto de errores.
+
+En Docker, ¿cómo se llama el archivo donde se especifican los pasos para construir una imagen?
+3
+- docker-compose.yml
+- Dockerbuild
+- Dockerfile
+- Docker.config
+
+¿Qué comando se utiliza para listar todos los contenedores, incluidos los detenidos?
+2
+- docker container ls
+- docker container ls -a
+- docker image ls
+- docker ps
+
+¿Por qué es importante que los desarrolladores prueben su código en sus espacios de trabajo privados antes de integrarlo?
+1
+- Para detectar y corregir errores antes de afectar al resto del equipo.
+- Para evitar tener que escribir pruebas unitarias.
+- Para mantener el código privado y no compartirlo.
+- Para retrasar la integración y evitar conflictos.
+
+¿Qué papel juegan las herramientas como Flyway o Liquibase?
+2
+- Son editores de código para lenguajes específicos.
+- Ayudan a gestionar y automatizar migraciones de bases de datos.
+- Sirven para monitorizar el rendimiento de aplicaciones.
+- Facilitan la comunicación con el cliente.
+
+En el enfoque de Integración Continua, ¿por qué es importante que cada commit sea probado automáticamente?
+3
+- Para aumentar el número de commits en el proyecto.
+- Para evitar que los desarrolladores tengan que hacer pruebas locales.
+- Para detectar errores lo antes posible y mantener el código en un estado funcional.
+- Para reducir el tamaño del repositorio.
+
+¿Qué sucede si en una práctica de Integración Continua un desarrollador no integra sus cambios frecuentemente?
+2
+- No hay ningún impacto significativo en el proyecto.
+- Es más probable que surjan conflictos y problemas al integrar cambios grandes.
+- Se facilita la detección de errores en el código.
+- Se acelera el proceso de despliegue.
+
+¿Cuál es una desventaja de trabajar con ramas de características de larga duración?
+1
+- Puede haber dificultades al integrar los cambios debido a divergencias significativas con la rama principal.
+- Se aumenta la colaboración entre los desarrolladores.
+- Se facilita la implementación de cambios pequeños.
+- Se reducen los riesgos de conflictos de código.
+
+En el contexto de la sesión, ¿qué es un "mock"?
+4
+- Una herramienta para medir el rendimiento de la aplicación.
+- Un tipo de error común en aplicaciones web.
+- Un sistema de despliegue automatizado.
+- Un objeto simulado que imita el comportamiento de componentes reales para pruebas.
+
+¿Por qué es recomendable que las herramientas de compilación puedan ser usadas desde línea de comandos?
+2
+- Para evitar el uso de interfaces gráficas.
+- Facilita la automatización y la integración en scripts de construcción y despliegue.
+- Permite que solo un desarrollador pueda compilar el proyecto.
+- Reduce la necesidad de documentación.
+
+¿Qué se entiende por "Despliegue Continuo" (Continuous Deployment)?
+1
+- Automatizar completamente el proceso de despliegue, llevando cambios a producción de forma automática tras pasar todas las pruebas.
+- Integrar cambios en la rama principal una vez al mes.
+- Tener el software listo para desplegarse, pero requiere aprobación manual.
+- Reducir la cantidad de pruebas para acelerar entregas.
+
+¿Cuál es una diferencia clave entre "Entrega Continua" y "Despliegue Continuo"?
+3
+- No hay diferencias significativas entre ambos términos.
+- Entrega Continua implica despliegues automáticos en producción, mientras que Despliegue Continuo no.
+- En Entrega Continua, el software está listo para desplegarse en cualquier momento, pero el despliegue puede ser manual; en Despliegue Continuo, el despliegue a producción es automático.
+- Despliegue Continuo se centra en pruebas manuales, mientras que Entrega Continua se enfoca en pruebas automatizadas.
+
+¿Cuál de los siguientes NO es un beneficio de la Entrega Continua?
+4
+- Despliegues menos arriesgados.
+- Despliegues más frecuentes.
+- Proceso de despliegue más rápido y predecible.
+- Eliminar completamente la necesidad de pruebas.
+
+En una aplicación Spring Boot, ¿cómo se pueden manejar diferentes configuraciones para distintos entornos?
+2
+- Reescribiendo el código fuente para cada entorno.
+- Usando perfiles y archivos de propiedades específicos para cada entorno.
+- Compilando una versión diferente de la aplicación para cada entorno.
+- Usando únicamente variables de entorno sin archivos de configuración.
+
+¿Por qué es útil el uso de imágenes Docker en el contexto de Entrega Continua?
+3
+- Porque requieren menos memoria que otras soluciones.
+- Permiten evitar el uso de sistemas de control de versiones.
+- Facilitan la creación de artefactos consistentes que pueden ejecutarse en cualquier entorno con Docker.
+- Hacen innecesarias las pruebas automatizadas.
+
+¿Cuál es el propósito de una herramienta de orquestación como Kubernetes en el despliegue de aplicaciones?
+2
+- Reemplazar a Docker en la gestión de contenedores.
+- Gestionar y escalar aplicaciones basadas en contenedores en entornos de producción.
+- Actuar como sistema de control de versiones.
+- Facilitar la comunicación entre el equipo de desarrollo y los clientes.
+
+En el proceso de Entrega Continua, ¿qué se entiende por "Reversibilidad"?
+1
+- La capacidad de revertir cambios y despliegues si se detectan problemas.
+- La posibilidad de cambiar el lenguaje de programación de la aplicación.
+- La habilidad de desplegar múltiples versiones al mismo tiempo.
+- La eliminación de la necesidad de copias de seguridad.
+
+¿Qué técnica permite desplegar una nueva versión sin interrumpir el servicio a los usuarios?
+3
+- Despliegue en caliente.
+- Uso de ramas de características.
+- Implementación de despliegues de tipo "blue-green".
+- Evitar el uso de pruebas automatizadas.
+
+¿Qué es un "pipeline" en el contexto de Integración Continua y Entrega Continua?
+2
+- Un documento que describe los pasos del proyecto.
+- Una secuencia automatizada de pasos desde el commit de código hasta el despliegue en producción.
+- Un equipo de desarrolladores asignados a una tarea.
+- Un repositorio de código fuente.
+
+¿Por qué es importante que los binarios generados sean inmutables y almacenados en un repositorio central?
+4
+- Para poder modificarlos según sea necesario.
+- Para evitar tener que volver a compilar en cada entorno.
+- No es importante; cada entorno puede compilar su propia versión.
+- Para garantizar que el mismo artefacto se use en todos los entornos, asegurando consistencia.
+
+¿Qué es un "entorno de testing/QA" en el despliegue de aplicaciones?
+3
+- El entorno utilizado por los usuarios finales.
+- El ordenador personal del desarrollador.
+- Un entorno donde se realizan pruebas funcionales y de interfaz, a veces manuales.
+- Un entorno idéntico al de producción usado para copias de seguridad.
+
+¿Cuál de las siguientes afirmaciones es cierta sobre los contenedores Docker?
+2
+- Siempre requieren una máquina virtual para ejecutarse.
+- Son más ligeros que las máquinas virtuales y comparten el kernel del sistema operativo anfitrión.
+- No pueden ser ejecutados en sistemas Windows.
+- Requieren más recursos que las máquinas virtuales.
+
+¿Cuál es el resultado de ejecutar el comando docker container ls?
+1
+- Lista los contenedores en ejecución.
+- Lista todas las imágenes disponibles localmente.
+- Lista todos los contenedores, incluyendo los detenidos.
+- Inicia un nuevo contenedor.
+
+¿Qué es "Infraestructura como Código" y por qué es importante en DevOps?
+4
+- Es una metodología para escribir código más eficiente.
+- Es un sistema para documentar la infraestructura.
+- Es una forma de hardware programable.
+- Es el proceso de gestionar y aprovisionar infraestructuras mediante código, permitiendo reproducibilidad y control de versiones.
+
+¿Cuál es una práctica recomendada para minimizar riesgos al desplegar en producción?
+2
+- Desplegar grandes cambios con poca frecuencia.
+- Desplegar pequeños cambios con frecuencia y automatizar pruebas.
+- Evitar automatizar el proceso de despliegue.
+- Hacer despliegues manuales durante fines de semana.
+
+En el contexto de pruebas, ¿qué son las pruebas de "regresión"?
+1
+- Pruebas que aseguran que nuevos cambios no han introducido errores en funcionalidades existentes.
+- Pruebas para medir el rendimiento del sistema.
+- Pruebas que se ejecutan únicamente en producción.
+- Pruebas realizadas por los usuarios finales.
+
+¿Qué significa que una aplicación sea "auto-contenida" en el contexto de despliegue?
+2
+- Que puede compilarse sin necesidad de herramientas externas.
+- Que contiene todo lo necesario para ejecutarse, sin depender de componentes externos en tiempo de ejecución.
+- Que se ejecuta únicamente en sistemas Windows.
+- Que no necesita ser desplegada en un servidor.
+
+¿Qué es "Jenkins"?
+3
+- Un sistema de control de versiones distribuido.
+- Una herramienta de seguimiento de errores.
+- Un servidor de integración continua de código abierto.
+- Un lenguaje de programación orientado a objetos.
+
+¿Por qué es importante que las pruebas automatizadas sean rápidas en un entorno de Integración Continua?
+4
+- Para reducir el consumo de energía.
+- Para minimizar el espacio en disco utilizado.
+- No es importante; las pruebas pueden tardar lo que sea necesario.
+- Para proporcionar retroalimentación rápida y permitir integraciones frecuentes.
+
+¿Qué es un "entorno local" en el contexto de despliegue y pruebas?
+1
+- El entorno de trabajo en el ordenador del desarrollador.
+- Un servidor de producción.
+- Un entorno utilizado para pruebas de rendimiento.
+- Un entorno idéntico al de producción utilizado para pruebas finales.
+
+¿Cuál es una ventaja de utilizar herramientas como Flyway o Liquibase para gestionar migraciones de bases de datos?
+2
+- Eliminan la necesidad de escribir scripts SQL.
+- Automatizan el proceso de migración y mantienen un historial versionado de cambios.
+- Permiten realizar cambios en producción sin pruebas previas.
+- Reemplazan completamente a los administradores de bases de datos.
+
+¿Qué significa que un proceso sea "reproducible" en el contexto de despliegue?
+3
+- Que se puede ejecutar en cualquier sistema operativo.
+- Que es muy rápido de ejecutar.
+- Que puede repetirse de manera consistente obteniendo los mismos resultados.
+- Que no requiere intervención humana.
+
+¿Por qué es importante monitorizar el rendimiento y el estado de una aplicación en producción?
+2
+- Para aumentar el consumo de recursos.
+- Para detectar problemas y errores en tiempo real y asegurar la disponibilidad del servicio.
+- Para reducir la necesidad de pruebas en entornos previos.
+- No es necesario si se han pasado todas las pruebas previas.
+
+¿Cuál de las siguientes es una práctica que ayuda a mejorar la calidad del código en un entorno de Integración Continua?
+1
+- Realizar revisiones de código (code reviews) y aplicar estándares de codificación.
+- Evitar escribir documentación.
+- Integrar cambios grandes y poco frecuentes.
+- Evitar el uso de pruebas unitarias.
+
+¿Qué papel juega el control de versiones en la Entrega Continua?
+3
+- Solo se usa para almacenar el código fuente.
+- No es necesario en Entrega Continua.
+- Almacena todo el código, configuraciones y scripts necesarios para construir y desplegar la aplicación, permitiendo rastrear cambios.
+- Se usa únicamente para versiones finales del producto.
+
+¿Qué se entiende por "Despliegue Azul-Verde" (Blue-Green Deployment)?
+4
+- Un método para optimizar el uso de recursos en la nube.
+- Una estrategia para implementar pruebas unitarias.
+- Un enfoque para gestionar bases de datos en producción.
+- Una técnica de despliegue donde dos entornos idénticos se usan alternadamente para minimizar el tiempo de inactividad.
+
+¿Cuál es una ventaja de los "Feature Flags" o "Feature Toggles"?
+2
+- Reducen la necesidad de pruebas automatizadas.
+- Permiten activar o desactivar características en producción sin desplegar nuevo código.
+- Evitan la necesidad de integrar código frecuentemente.
+- Garantizan que todas las funcionalidades están siempre activas.
+
+En un entorno de Entrega Continua, ¿por qué es crucial tener entornos de pruebas similares a producción?
+1
+- Para detectar problemas que podrían surgir en producción y asegurar que las pruebas sean representativas.
+- Para reducir el costo de los entornos de pruebas.
+- No es necesario; las pruebas pueden hacerse en cualquier entorno.
+- Para permitir a los usuarios acceder a las pruebas.
+
+¿Qué es un "Build" en el contexto de desarrollo de software?
+3
+- Un repositorio de código fuente.
+- Una herramienta de seguimiento de errores.
+- El proceso de compilar código fuente y generar un artefacto ejecutable.
+- Una estrategia de despliegue en producción.
+
+¿Por qué es importante que los desarrolladores estén familiarizados con conceptos de operaciones en un entorno DevOps?
+2
+- Para poder asumir el rol de operadores cuando sea necesario.
+- Para entender cómo sus decisiones afectan la puesta en producción y colaborar efectivamente.
+- No es importante; desarrollo y operaciones deben estar separados.
+- Para reducir la necesidad de un equipo de operaciones.
+
+¿Qué es un "Commit"?
+1
+- La acción de guardar cambios en el sistema de control de versiones.
+- Un error en el código fuente.
+- Un tipo de prueba automatizada.
+- Un despliegue en producción.
+
+¿Cuál de los siguientes NO es un principio del manifiesto DevOps?
+3
+- Cultura de colaboración entre equipos.
+- Automatización de procesos.
+- Separación estricta de responsabilidades entre desarrollo y operaciones.
+- Enfoque en la entrega continua de valor.
+
+¿Qué es "Kubernetes"?
+2
+- Un lenguaje de programación.
+- Una plataforma de código abierto para la automatización de despliegue, escalado y gestión de aplicaciones en contenedores.
+- Un sistema operativo para servidores.
+- Una herramienta de control de versiones.
+
+¿Por qué es importante tener políticas de respaldo y control de cambios en bases de datos de producción?
+4
+- Para aumentar el rendimiento de la base de datos.
+- No es importante en un entorno de Entrega Continua.
+- Para evitar la necesidad de pruebas en desarrollo.
+- Para proteger los datos y asegurar que los cambios pueden ser revertidos si es necesario.
+
+¿Qué se busca lograr con el uso de "Canary Releases"?
+1
+- Desplegar nuevas versiones a un subconjunto de usuarios para validar cambios antes de un despliegue completo.
+- Implementar despliegues simultáneos en todos los entornos.
+- Reducir la necesidad de pruebas automatizadas.
+- Evitar la integración continua.

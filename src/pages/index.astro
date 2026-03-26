@@ -1,144 +1,216 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Navbar from '../components/layout/Navbar.astro';
-import Footer from '../components/layout/Footer.astro';
-import { getSubjects, getModulesForSubject } from '../lib/supabase/service';
-
-let sortedSubjects: any[] = [];
-let subjectsWithLinks: any[] = [];
-let groupedSubjects: Record<string, any[]> = {};
-let uniqueCategories: string[] = [];
-let errorMsg: string | null = null;
-
-try {
-  sortedSubjects = await getSubjects();
-
-  // Fetch modules to conditionally generate links
-  subjectsWithLinks = (await Promise.all(sortedSubjects.map(async (subject: any) => {
-      const modules = await getModulesForSubject(subject.id);
-      return {
-          ...subject,
-          modulesCount: modules.length,
-          href: modules.length === 1 ? `/quiz/${(modules[0] as any).id}` : `/subject/${subject.id}`
-      };
-  }))).filter(s => s.id !== 'ic' && s.id !== 'si').map(s => {
-      if (s.id === 'mads' || s.id.includes('mads')) {
-          s.category = 'Rama Software';
-      }
-      return s;
-  });
-
-  uniqueCategories = [...new Set(subjectsWithLinks.map(s => s.category).filter(Boolean))] as string[];
-  const order = ['Cuarto Curso (Rama Software)', 'Rama Software', 'Cuarto Curso', 'Tercer Curso', 'Segundo Curso', 'Primer Curso'];
-
-  uniqueCategories.sort((a, b) => {
-      const iA = order.indexOf(a as string);
-      const iB = order.indexOf(b as string);
-      if (iA === -1 && iB === -1) return (a as string).localeCompare(b as string);
-      if (iA === -1) return 1;
-      if (iB === -1) return -1;
-      return iA - iB;
-  });
-
-  uniqueCategories.forEach((c: any) => {
-      groupedSubjects[c] = subjectsWithLinks.filter(s => s.category === c);
-  });
-} catch (err: any) {
-  errorMsg = err.message || "Failed to load subjects. Please check Vercel environment variables.";
-}
 ---
 
-<BaseLayout title="Inicio">
-    <Navbar />
-    
-    <main class="flex-1 flex justify-center py-12 px-4 relative min-h-[90vh]">
-        <!-- Background Ambient -->
-        <div class="fixed top-[-10%] justify-center w-full flex pointer-events-none -z-10">
-            <div class="w-[600px] h-[600px] bg-primary/10 blur-[120px] rounded-full"></div>
-            <div class="w-[400px] h-[400px] bg-blue-500/10 blur-[100px] rounded-full absolute mix-blend-screen"></div>
-        </div>
+<BaseLayout>
+	<div id="main-container" class="layout-container animate-fade-in">
+		<div id="app" class="flex flex-col gap-12">
+			<header class="text-center md:text-left">
+				<h1 id="app-title" class="font-heading text-4xl md:text-5xl font-bold tracking-tight text-textMain mb-4">
+					Seleccione una asignatura
+				</h1>
+				<p class="text-textMuted text-lg md:text-xl max-w-2xl text-balance">
+					Explora los distintos exámenes y test clasificados por curso y rama para poner a prueba tus conocimientos.
+				</p>
+			</header>
 
-        <!-- Main App Container mimicking #app with glassmorphism -->
-        <div class="w-full max-w-4xl bg-[#151a24]/90 backdrop-blur-2xl border border-[#2a303c] rounded-[2rem] shadow-2xl p-8 md:p-12 relative" id="app">
-            
-            <h1 class="text-3xl md:text-5xl font-black text-center text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-400 tracking-tight mb-12">
-                Seleccione una asignatura
-            </h1>
+			<div id="asignaturas-container" class="flex flex-col gap-12">
+				
+				<!-- RAMA SOFTWARE -->
+				<section class="group">
+					<h3 class="section-title">Rama Software</h3>
+					<div class="asignaturas grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-4 md:gap-8 items-start">
+						<div class="group-left flex flex-col gap-3">
+							<button id="dca" class="ui-button">DCA</button>
+							<button id="mads" class="ui-button">MADS NO OFICIAL</button>
+						</div>
+						
+						<div class="separator hidden md:block w-px self-stretch bg-borderSubtle"></div>
+						<div class="separator block md:hidden w-full h-px bg-borderSubtle my-2"></div>
+						
+						<div class="group-right flex flex-col gap-3">
+							<button id="gcs" class="ui-button">GCS</button>
+							<button id="sds" class="ui-button">SDS NO OFICIAL</button>
+						</div>
+					</div>
 
-            <!-- Subjects Container with exact structure -->
-            {errorMsg ? (
-                <div class="bg-red-500/10 border border-red-500/50 rounded-xl p-6 text-center text-red-200">
-                    <h3 class="text-xl font-bold mb-2">Error de Conexión</h3>
-                    <p class="mb-4">No se pudieron cargar las asignaturas. Verifica la configuración de la base de datos.</p>
-                    <code class="block bg-black/30 p-4 rounded text-sm text-left overflow-x-auto">{errorMsg}</code>
-                    <p class="mt-4 text-xs opacity-70">Asegúrate de configurar las variables de entorno en Vercel y volver a desplegar la aplicación.</p>
-                </div>
-            ) : (
-                <div id="subjects-container">
-                    {uniqueCategories.map((category: any) => {
-                        const subjects = groupedSubjects[category];
-                        if (subjects.length === 0) return null;
+					<!-- Sublistas Rama Software -->
+					<div id="mads-sublist" class="hidden mt-6 bg-surface p-5 sm:p-6 rounded-2xl border border-borderSubtle shadow-subtle animate-fade-in-up">
+						<h4 class="text-xs font-bold text-textMuted mb-4 uppercase tracking-wider">Exámenes MADS</h4>
+						<div class="asignaturas listaoculta grid grid-cols-1 sm:grid-cols-2 gap-3">
+							<button id="MADS-NO-OFICIAL-P1" class="ui-button-primary">MADS NO OFICIAL P1</button>
+							<button id="MADS-NO-OFICIAL-P2" class="ui-button-primary">MADS NO OFICIAL P2</button>
+						</div>
+					</div>
 
-                        const isCentered = category === 'Primer Curso' || subjects.length === 1;
-                        let leftGroup, rightGroup;
-                        if (category === 'Segundo Curso') {
-                            leftGroup = subjects.filter((s: any) => s.id === 'redes');
-                            rightGroup = subjects.filter((s: any) => s.id !== 'redes');
-                        } else {
-                            const half = Math.ceil(subjects.length / 2);
-                            leftGroup = subjects.slice(0, half);
-                            rightGroup = subjects.slice(half);
-                        }
+					<div id="dca-sublist" class="hidden mt-6 bg-surface p-5 sm:p-6 rounded-2xl border border-borderSubtle shadow-subtle animate-fade-in-up">
+						<h4 class="text-xs font-bold text-textMuted mb-4 uppercase tracking-wider">Exámenes DCA</h4>
+						<div class="asignaturas listaoculta grid grid-cols-1 sm:grid-cols-2 gap-3">
+							<button id="dca-oficial" class="ui-button-primary">DCA OFICIAL</button>
+							<button id="dca-NO-OFICIAL" class="ui-button-primary">DCA NO OFICIAL</button>
+						</div>
+					</div>
 
-                        // Limpiamos el nombre de la categoría para ser idéntico
-                        const displayCategory = category === 'Cuarto Curso (Rama Software)' ? 'Rama Software' : category;
+					<div id="gcs-sublist" class="hidden mt-6 bg-surface p-5 sm:p-6 rounded-2xl border border-borderSubtle shadow-subtle animate-fade-in-up">
+						<h4 class="text-xs font-bold text-textMuted mb-4 uppercase tracking-wider">Exámenes GCS</h4>
+						<div class="asignaturas listaoculta grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+							<button id="gcsp1nooficial" class="ui-button-primary">GCS P1 NO OFICIAL 2025</button>
+							<button id="gcsp1old" class="ui-button-primary">GCS P1 old 2024</button>
+							<button id="gcsp2old" class="ui-button-primary">GCS P2 old 2024</button>
+						</div>
+					</div>
 
-                        return (
-                            <div class="category-section w-full mb-8">
-                                <h3 class="text-lg font-black text-slate-300 mb-6 text-center uppercase tracking-widest">{displayCategory}</h3>
-                                
-                                {isCentered ? (
-                                    <div class="flex flex-wrap justify-center gap-4 w-full mb-6">
-                                        {subjects.map((subject: any) => (
-                                            <a href={subject.href} title={subject.name} aria-label={`Ir a la asignatura ${subject.name}`} class="subject-card flex items-center px-5 py-2.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 text-white font-bold transition-all shadow-lg hover:-translate-y-0.5 hover:shadow-primary/20 text-sm whitespace-nowrap" data-name={subject.name.toLowerCase()}>
-                                                <span class="mr-2 text-base leading-none">{subject.icon}</span> {(subject.id as string).toUpperCase()}
-                                            </a>
-                                        ))}
-                                    </div>
-                                ) : (
-                                    <div class="grid grid-cols-1 md:grid-cols-[1fr_2px_1fr] gap-5 items-center mb-6">
-                                        <!-- Columna Izquierda (group-left) -->
-                                        <div class="flex flex-wrap justify-center md:justify-end gap-4">
-                                            {leftGroup.map((subject: any) => (
-                                                <a href={subject.href} title={subject.name} aria-label={`Ir a la asignatura ${subject.name}`} class="subject-card flex items-center px-5 py-2.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 text-white font-bold transition-all shadow-lg hover:-translate-y-0.5 hover:shadow-primary/20 text-sm whitespace-nowrap" data-name={subject.name.toLowerCase()}>
-                                                    <span class="mr-2 text-base leading-none">{subject.icon}</span> {(subject.id as string).toUpperCase()}
-                                                </a>
-                                            ))}
-                                        </div>
-                                        
-                                        <!-- Separador vertical (separator) -->
-                                        <div class="hidden md:block w-[2px] h-[40px] bg-gradient-to-b from-transparent via-slate-600 to-transparent mx-auto"></div>
-                                        
-                                        <!-- Columna Derecha (group-right) -->
-                                        <div class="flex flex-wrap justify-center md:justify-start gap-4">
-                                            {rightGroup.map((subject: any) => (
-                                                <a href={subject.href} title={subject.name} aria-label={`Ir a la asignatura ${subject.name}`} class="subject-card flex items-center px-5 py-2.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 text-white font-bold transition-all shadow-lg hover:-translate-y-0.5 hover:shadow-primary/20 text-sm whitespace-nowrap" data-name={subject.name.toLowerCase()}>
-                                                    <span class="mr-2 text-base leading-none">{subject.icon}</span> {(subject.id as string).toUpperCase()}
-                                                </a>
-                                            ))}
-                                        </div>
-                                    </div>
-                                )}
-                            </div>
-                        );
-                    })}
-                </div>
-            )}
-        </div>
-    </main>
+					<div id="sds-sublist" class="hidden mt-6 bg-surface p-5 sm:p-6 rounded-2xl border border-borderSubtle shadow-subtle animate-fade-in-up">
+						<h4 class="text-xs font-bold text-textMuted mb-4 uppercase tracking-wider">Exámenes SDS</h4>
+						<div class="asignaturas listaoculta grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
+							<button id="sdsfull" class="ui-button-primary">SDS FULL</button>
+							<button id="sds01-presentacion" class="ui-button-primary">sds01 presentacion</button>
+							<button id="sds02-introgo" class="ui-button-primary">sds02 introgo</button>
+							<button id="sds03-introcripto" class="ui-button-primary">sds03 introcripto</button>
+							<button id="sds04-aleatorios" class="ui-button-primary">sds04 aleatorios</button>
+							<button id="sds05-flujo" class="ui-button-primary">sds05 flujo</button>
+							<button id="sds06-bloque" class="ui-button-primary">sds06 bloque</button>
+							<button id="sds07-hash" class="ui-button-primary">sds07 hash</button>
+							<button id="sds08-publica" class="ui-button-primary">sds08 publica</button>
+							<button id="sds09-transporte" class="ui-button-primary">sds09 transporte</button>
+							<button id="sds10-ejercicios" class="ui-button-primary">sds10 ejercicios</button>
+							<button id="sds11-malware" class="ui-button-primary">sds11 malware</button>
+							<button id="sds12-ataques" class="ui-button-primary">sds12 ataques</button>
+							<button id="sds13-wireless" class="ui-button-primary">sds13 wireless</button>
+							<button id="sds14-recomendaciones" class="ui-button-primary">sds14 recomendaciones</button>
+						</div>
+					</div>
+				</section>
 
-    <Footer />
+				<div class="ui-separator"></div>
+
+				<!-- TERCER CURSO -->
+				<section class="group">
+					<h3 class="section-title">Tercer Curso</h3>
+					<div class="asignaturas grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-4 md:gap-8 items-start">
+						<div class="group-left flex flex-col gap-3">
+							<button id="dss" class="ui-button">DSS</button>
+							<button id="gpi" class="ui-button">GPI</button>
+							<button id="ic-p1" class="ui-button">IC P1</button>
+						</div>
+						
+						<div class="separator hidden md:block w-px self-stretch bg-borderSubtle"></div>
+						<div class="separator block md:hidden w-full h-px bg-borderSubtle my-2"></div>
+						
+						<div class="group-right flex flex-col gap-3">
+							<button id="taes-definitivo" class="ui-button">TAES DEFINITIVO OLD</button>
+							<button id="ppss" class="ui-button">PPSS</button>
+						</div>
+					</div>
+
+					<div id="ppss-sublist" class="hidden mt-6 bg-surface p-5 sm:p-6 rounded-2xl border border-borderSubtle shadow-subtle animate-fade-in-up">
+						<h4 class="text-xs font-bold text-textMuted mb-4 uppercase tracking-wider">Exámenes PPSS</h4>
+						<div class="asignaturas listaoculta grid grid-cols-1 sm:grid-cols-2 gap-3">
+							<button id="ppss-p1" class="ui-button-primary">PPSS P1</button>
+							<button id="ppss-p2" class="ui-button-primary">PPSS P2</button>
+						</div>
+					</div>
+				</section>
+
+				<div class="ui-separator"></div>
+
+				<!-- SEGUNDO CURSO -->
+				<section class="group">
+					<h3 class="section-title">Segundo Curso</h3>
+					<div class="asignaturas grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-4 md:gap-8 items-start">
+						<div class="group-left flex flex-col gap-3">
+							<button id="redes" class="ui-button">REDES</button>
+						</div>
+						
+						<div class="separator hidden md:block w-px self-stretch bg-borderSubtle"></div>
+						<div class="separator block md:hidden w-full h-px bg-borderSubtle my-2"></div>
+						
+						<div class="group-right flex flex-col gap-3">
+							<button id="ada" class="ui-button">ADA</button>
+							<button id="ped" class="ui-button">PED</button>
+							<button id="ac" class="ui-button">AC</button>
+							<button id="hada" class="ui-button">HADA</button>
+						</div>
+					</div>
+
+					<div id="ada-sublist" class="hidden mt-6 bg-surface p-5 sm:p-6 rounded-2xl border border-borderSubtle shadow-subtle animate-fade-in-up">
+						<h4 class="text-xs font-bold text-textMuted mb-4 uppercase tracking-wider">Exámenes ADA</h4>
+						<div class="asignaturas listaoculta grid grid-cols-1 sm:grid-cols-3 gap-3">
+							<button id="ada-p1" class="ui-button-primary">ada p1</button>
+							<button id="ada-p2" class="ui-button-primary">ada p2</button>
+							<button id="ada-full" class="ui-button-primary">ada full</button>
+						</div>
+					</div>
+
+					<div id="ac-sublist" class="hidden mt-6 bg-surface p-5 sm:p-6 rounded-2xl border border-borderSubtle shadow-subtle animate-fade-in-up">
+						<h4 class="text-xs font-bold text-textMuted mb-4 uppercase tracking-wider">Exámenes AC</h4>
+						<div class="asignaturas listaoculta grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+							<button id="ac_CP-F2" class="ui-button-primary">ac CP F2</button>
+							<button id="ac_CP-F3" class="ui-button-primary">ac CP F3</button>
+							<button id="ac_CT1-2" class="ui-button-primary">ac CT1 2</button>
+							<button id="ac_CT3-4" class="ui-button-primary">ac CT3 4</button>
+						</div>
+					</div>
+
+					<div id="redes-sublist" class="hidden mt-6 bg-surface p-5 sm:p-6 rounded-2xl border border-borderSubtle shadow-subtle animate-fade-in-up">
+						<h4 class="text-xs font-bold text-textMuted mb-4 uppercase tracking-wider">Exámenes REDES</h4>
+						<div class="asignaturas listaoculta grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+							<button id="redes_full" class="ui-button-primary">redes full</button>
+							<button id="redesEnero2324" class="ui-button-primary">redes Enero 23 24</button>
+							<button id="redesEnero2425" class="ui-button-primary">redes Enero 24 25</button>
+							<button id="redesJulio2425" class="ui-button-primary">redes Julio 24 25</button>
+							<button id="redesEnero2526" class="ui-button-primary">redes Enero 25 26</button>
+						</div>
+					</div>
+				</section>
+
+				<div class="ui-separator"></div>
+
+				<!-- PRIMER CURSO -->
+				<section class="group mb-12">
+					<h3 class="section-title">Primer Curso</h3>
+					<div id="asignatura-centrada" class="max-w-md mx-auto w-full">
+						<button id="sti" class="ui-button w-full">STI</button>
+					</div>
+				</section>
+
+			</div>
+		</div>
+	</div>
+
+	<script>
+		// Lógica delegada de eventos para los botones
+		const container = document.getElementById("asignaturas-container");
+		
+		if (container) {
+			container.addEventListener("click", function (e) {
+				const target = e.target as HTMLElement;
+				// Asegurarnos de capturar el clic incluso si se hace clic en un hijo del botón
+				const button = target.closest("button");
+				
+				if (button && container.contains(button)) {
+					const idBoton = button.id;
+					
+					// Prevenir lógica si el botón no tiene ID (ej. el toggle de tema podría colarse si estuviera dentro, pero no lo está)
+					if (!idBoton) return;
+
+					const sublist = document.getElementById(idBoton + "-sublist");
+
+					if (sublist) {
+						// Alternar menú ocultando los demás
+						const sublistas = document.querySelectorAll('[id$="-sublist"]');
+						sublistas.forEach((sub) => {
+							if (sub.id !== idBoton + "-sublist") {
+								sub.classList.add("hidden");
+							}
+						});
+						sublist.classList.toggle("hidden");
+					} else {
+						// REDIRECCIÓN A LA URL LIMPIA
+						window.location.href = `/${idBoton}`;
+					}
+				}
+			});
+		}
+	</script>
 </BaseLayout>
-
-
-

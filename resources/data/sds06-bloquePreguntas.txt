@@ -1,0 +1,630 @@
+¿Cuál es la diferencia fundamental real entre un cifrador en bloque y un cifrador en flujo?
+2
+Se basa en bloques de tamaño fijo frente a cifrado elemento a elemento.
+Un cifrador en bloque aplica una transformación fija, mientras que un cifrador en flujo utiliza una transformación que evoluciona con su estado.
+Un cifrador en bloque usa XOR, mientras que un cifrador en flujo usa permutaciones.
+Un cifrador en bloque no puede descifrarse, mientras que un cifrador en flujo sí.
+
+¿Qué esquema de cifrado utiliza un generador pseudoaleatorio y XOR con el mensaje?
+2
+Esquema Feistel
+Esquema Vernam
+AES
+DES
+
+¿Cuál de estas afirmaciones describe mejor una red Feistel?
+2
+Divide el texto en claro en múltiples subconjuntos de igual tamaño y los cifra con la misma subclave.
+Divide el bloque en dos mitades, aplica una función a una mitad y combina con la otra, intercambiando roles en rondas sucesivas.
+Utiliza una permutación inicial y final sin rondas intermedias.
+Opera elemento a elemento cambiando con un vector de estado.
+
+¿Cómo se llamaba el algoritmo de cifrado inicial de IBM que precedió a DES?
+1
+Lucifer
+Rijndael
+IDEA
+Blowfish
+
+¿Por qué la longitud de clave de DES se definió en 56 bits, pese a que Lucifer tenía 128 bits?
+2
+Porque 56 bits fueron suficientes para seguridad militar.
+Para que la clave cupiera en el bus de datos de 64 bits del chip de hardware con 8 bits de paridad.
+Para seguir el estándar de 56 bits de la NSA.
+Fue una limitación del algoritmo de Feistel.
+
+¿Cuál es el tamaño de bloque y el número de rondas en DES?
+3
+Bloque de 64 bits y 8 rondas.
+Bloque de 128 bits y 16 rondas.
+Bloque de 64 bits y 16 rondas.
+Bloque de 128 bits y 12 rondas.
+
+¿Cuál es la longitud efectiva de la clave en DES?
+2
+64 bits
+56 bits
+128 bits
+112 bits
+
+¿Qué ataque permitió romper DES teóricamente con 2^47 textos en claro elegidos?
+2
+Criptoanálisis lineal
+Criptoanálisis diferencial
+Ataque por fuerza bruta
+Ataque por temporización
+
+El criptoanálisis lineal contra DES requiere aproximadamente cuántos textos en claro conocidos?
+3
+2^56
+2^47
+2^43
+2^14
+
+¿Cuál de estos no es un cifrador en bloque?
+3
+AES
+DES
+RC4
+Blowfish
+
+¿Qué algoritmo resultó ganador del concurso AES, originalmente llamado Rijndael?
+3
+Twofish
+Serpent
+Rijndael
+IDEA
+
+¿Qué tamaños de clave soporta AES y cuántas rondas corresponden a cada uno?
+1
+128 bits→10 rondas, 192 bits→12 rondas, 256 bits→14 rondas
+128 bits→12 rondas, 192 bits→10 rondas, 256 bits→14 rondas
+128 bits→14 rondas, 192 bits→12 rondas, 256 bits→10 rondas
+128 bits→10 rondas, 192 bits→14 rondas, 256 bits→12 rondas
+
+En AES, las operaciones se realizan en GF(2^8). ¿Qué implica esto?
+2
+Las operaciones aritméticas se hacen módulo un número primo.
+Las operaciones de suma, multiplicación y división se interpretan como operaciones polinomiales sobre cuerpos de Galois con 256 elementos.
+Solo la suma se realiza en un campo binario; la multiplicación es normal.
+La aritmética se realiza en números enteros de 8 bits con desbordamiento.
+
+¿Cuál es el modo de operación más simple, inseguro, que cifra cada bloque independientemente?
+3
+CBC
+CFB
+ECB
+CTR
+
+En el modo CBC, ¿qué componente se usa para la entrada del primer bloque?
+2
+Un contador
+Un vector de inicialización (IV)
+El bloque anterior de texto cifrado
+Ceros
+
+¿Qué modo de operación convierte un cifrador en bloque en un cifrador en flujo usando realimentación de la salida del cifrador?
+3
+ECB
+CFB
+OFB
+CTR
+
+¿Qué modo utiliza un contador y permite implementaciones en paralelo?
+4
+CBC
+CFB
+OFB
+CTR
+
+AES-GCM proporciona cifrado con integridad mediante…
+2
+Uso de HMAC-SHA256.
+Aritmética de Galois en GF(2^128) junto con AES-CTR.
+Uso de CBC con MAC.
+Realimentación de salida.
+
+¿Para qué se utiliza principalmente el modo XTS?
+2
+Comunicaciones HTTPS.
+Cifrado de datos en disco a nivel de sector.
+Protocolos de streaming en tiempo real.
+Mensajería instantánea.
+
+¿Qué técnica de ataque mide diferencias de tiempo de ejecución para inferir la clave?
+3
+Criptoanálisis diferencial.
+Ataque de fuerza bruta.
+Ataque por temporización.
+Criptoanálisis lineal.
+
+¿Cuál es la diferencia real entre cifradores en bloque y en flujo?
+2
+Divide el texto en bloques versus elemento a elemento.
+Un cifrador en bloque aplica una transformación fija, mientras que un cifrador en flujo utiliza una transformación que evoluciona con su estado.
+Un cifrador en bloque usa permutaciones, mientras que un cifrador en flujo usa sustituciones.
+Un cifrador en bloque no puede descifrarse, mientras que un cifrador en flujo sí.
+
+¿Qué esquema de cifrado utiliza un generador pseudoaleatorio y la operación XOR con el mensaje?
+2
+Esquema Feistel
+Esquema Vernam
+RED SPN de Shannon
+AES
+
+¿Cómo se denomina la estructura base de la mayoría de los cifradores en bloque que divide cada bloque en dos mitades y las intercambia en rondas?
+1
+Red Feistel
+Esquema Vernam
+Red SPN
+Modo CTR
+
+¿Qué algoritmo predecesor de DES fue desarrollado por IBM a finales de los años 60?
+1
+Lucifer
+Rijndael
+IDEA
+Blowfish
+
+¿Cuál fue el motivo principal de la reducción de la longitud de clave de Lucifer de 128 bits a 56 bits en DES?
+2
+Para que la clave cupiera en el bus de datos de 64 bits del chip, reservando 8 bits de paridad.
+Porque 56 bits eran suficientes frente a ataques conocidos.
+Debido a un requisito de la NSA de limitar la seguridad.
+Para ajustar DES al estándar de bloques de 64 bits.
+
+¿Qué estándar de cifrado fue aprobado por el NIST en 2001 para reemplazar a DES?
+3
+Blowfish
+Twofish
+AES
+IDEA
+
+¿Cuál es el tamaño de bloque y la longitud de clave útil en DES?
+2
+Bloque de 128 bits, clave de 128 bits útiles
+Bloque de 64 bits, clave de 56 bits útiles
+Bloque de 64 bits, clave de 64 bits útiles
+Bloque de 128 bits, clave de 56 bits útiles
+
+¿Cuántas rondas tiene DES?
+3
+8 rondas
+12 rondas
+16 rondas
+20 rondas
+
+¿Qué ataque teórico sobre DES requiere alrededor de 2^47 textos en claro elegidos?
+2
+Criptoanálisis lineal
+Criptoanálisis diferencial
+Fuerza bruta
+Ataque por temporización
+
+¿Qué ataque sobre DES mejora el diferencial y necesita unos 2^43 textos en claro conocidos?
+2
+Fuerza bruta
+Criptoanálisis lineal
+Criptoanálisis diferencial
+Ataque de potencia
+
+¿Por qué se consideraba impráctico el ataque de fuerza bruta contra DES en 1977 sin hardware especializado?
+1
+Porque a 1 M de pruebas por segundo tardaría unos 1000 años.
+Porque el espacio de claves era realmente mayor de 2^56.
+Porque no existían detectores fiables de texto en claro.
+Porque la NSA protegía las claves.
+
+¿Qué organización logró romper DES en 1998 en sólo 3 días con 250 K$ de presupuesto?
+3
+NIST
+NSA
+Electronic Frontier Foundation (EFF)
+IBM
+
+¿Cuál de estos no es un cifrador en bloque?
+3
+AES
+DES
+RC4
+Blowfish
+
+¿Qué cifrador es un estándar internacional de 1991 que no alcanzó el éxito de DES o AES?
+3
+RC4
+Blowfish
+IDEA
+Twofish
+
+¿Cómo se llama el algoritmo de Bruce Schneier de 1993 que sirvió de base a bcrypt?
+2
+IDEA
+Blowfish
+Twofish
+RC5
+
+¿Qué modo de operación convierte un cifrador en bloque en un cifrador en flujo realimentando el texto cifrado anterior?
+3
+ECB
+CBC
+CFB
+OFB
+
+¿Qué función no lineal se utiliza en cada ronda de DES?
+2
+Permutación P
+S-boxes
+Desplazamiento circular
+XOR con la subclave
+
+¿Qué rol cumplen las S-boxes en los cifradores en bloque como DES?
+1
+Proporcionan no linealidad sustituyendo bloques de bits de forma dependiente de la clave.
+Realizan permutaciones de bits para difundir la información.
+Generan subclaves de ronda a partir de la clave original.
+Sirven como vector de inicialización (IV).
+
+¿Cuál es la fase inicial y la fase final en el esquema DES?
+1
+Permutación inicial y permutación inversa
+Generación de subclaves y selección permutada
+Desplazamiento circular y sustitución S-box
+Intercambio de mitades
+
+¿Cómo se generan las subclaves de ronda en DES?
+2
+Mediante tablas de sustitución estáticas
+Desplazamiento circular de la clave y selección permutada de 48 bits
+Hash de la clave con MD5
+Uso de la función F con la clave completa
+
+¿Por qué Triple DES aplica tres operaciones (C–D–E) en lugar de dos cifrados con distintas claves?
+2
+Para duplicar la longitud de clave sin aumentar significativamente el costo.
+Para complicar el ataque de hombre en el medio (MITM).
+Para triplicar la seguridad teórica.
+Para acelerar el proceso de cifrado en hardware legado.
+
+¿Qué modo de operación es inseguro porque repite la salida para bloques idénticos de entrada?
+1
+ECB
+CBC
+CFB
+CTR
+
+¿Qué se observa visualmente al cifrar una imagen con ECB?
+4
+Aparece totalmente aleatoria.
+Se ve únicamente ruido en los bordes.
+El resultado es todo negro.
+Se mantiene el patrón original en bloques (p. ej. el pingüino).
+
+En CBC, ¿qué se hace con el bloque cifrado anterior antes de cifrar el siguiente bloque de texto claro?
+2
+Permutación inicial
+XOR con el siguiente bloque de texto claro
+Sustitución por S-boxes
+Desplazamiento circular
+
+¿Por qué es necesario el relleno (padding) en los modos ECB y CBC?
+1
+Porque el texto puede no ser múltiplo del tamaño de bloque.
+Para proporcionar un vector de inicialización.
+Para probar la integridad tras el descifrado.
+Para asegurar la no linealidad.
+
+¿Qué modo de operación realimenta la salida del cifrador en bloque para producir un cifrador en flujo sin necesidad de padding?
+3
+ECB
+CBC
+OFB
+CTR
+
+¿Qué modo de operación usa un contador cifrado y luego XOR con el texto en claro, permitiendo cifrado en paralelo?
+4
+ECB
+CBC
+OFB
+CTR
+
+¿Cuál es la ventaja principal de CTR sobre OFB?
+2
+Permite paralelizar el cifrado de bloques.
+Evita por completo la necesidad de un IV.
+Protege contra ataques de potencia.
+No requiere tener el algoritmo de descifrado.
+
+¿Para qué se utiliza principalmente el modo AES-XTS?
+2
+SSL/TLS en navegadores web
+Cifrado de discos a nivel de sector
+Comunicación IoT en tiempo real
+Mensajería instantánea cifrada
+
+¿Qué modo combina AES-CTR con autentificación mediante aritmética de Galois?
+3
+AES-CBC
+AES-CCM
+AES-GCM
+AES-XTS
+
+Además de confidencialidad, ¿qué aporta AES-GCM?
+3
+Compresión de datos
+Generación de IVs seguros
+Integridad y autenticidad (AEAD)
+Caducidad automática de la clave
+
+¿Qué alternativa a AES-GCM se emplea en TLS para mejorar el rendimiento en software sin AES-NI?
+2
+GOST 28147-89
+ChaCha20-Poly1305
+DES-XTS
+RC4-HMAC
+
+¿Qué es AES-NI?
+1
+Un conjunto de instrucciones de hardware para acelerar AES.
+Un modo de operación de AES en software puro.
+Un algoritmo rival de AES.
+Una biblioteca de cifrado en Java.
+
+¿Qué vulnerabilidad aprovecha la variación en tiempos de acceso a caché para extraer claves?
+2
+Criptoanálisis diferencial
+Ataque por temporización (timing attack)
+Criptoanálisis lineal
+Fuerza bruta distribuida
+
+¿Qué ataque side-channel se basa en medir el consumo energético o el calor para inferir la clave?
+3
+Ataque de co-residencia en VM
+Ataque por temporización de caché
+Análisis de potencia (power analysis)
+Criptoanálisis diferencial
+
+¿Qué ataque microarquitectural busca co-residencia con la víctima en la nube y mide latencias de CPU?
+4
+Criptoanálisis lineal
+Ataque de canal por caché en VM
+Fuerza bruta en cloud
+Ataque de co-residencia en máquina virtual
+
+¿Qué técnica de criptoanálisis requiere que el atacante pueda elegir los mensajes a cifrar?
+3
+Fuerza bruta
+Criptoanálisis lineal
+Criptoanálisis diferencial
+Ataque por temporización
+
+¿Qué técnica solo precisa textos en claro conocidos, no elegidos, para operar?
+2
+Criptoanálisis diferencial
+Criptoanálisis lineal
+Fuerza bruta
+Ataque de potencia
+
+¿Qué métrica evalúa la calidad de una S-box en términos de resistencia a aproximaciones lineales?
+4
+Avalanche
+Difusión
+Equilibrio de bits
+No linealidad
+
+¿Qué mejora en DES se hizo a las S-boxes para reforzar la resistencia al criptoanálisis diferencial?
+4
+Se añadió una ronda extra
+Se cambió la permutación inicial
+Se redujo la longitud de clave
+Se diseñaron para minimizar caminos diferenciales
+
+¿Cuál de estos cifradores no está basado en redes Feistel?
+3
+DES
+Blowfish
+AES
+RC5
+
+¿Cuál es el tamaño de bloque de AES?
+4
+64 bits
+56 bits
+192 bits
+128 bits
+
+¿Qué operación de AES aplica un desplazamiento de filas en la matriz de estado?
+2
+SubBytes
+ShiftRows
+MixColumns
+AddRoundKey
+
+¿Qué función de AES se omite en la ronda final?
+3
+SubBytes
+ShiftRows
+MixColumns
+AddRoundKey
+
+¿Qué operación de AES consiste en hacer XOR de la subclave con el estado?
+4
+SubBytes
+ShiftRows
+MixColumns
+AddRoundKey
+
+¿Cómo representa AES internamente su bloque de 128 bits?
+2
+Vector lineal de 128 bits
+Matriz de 4×4 bytes
+Lista de 16 palabras de 8 bits
+Grafo de permutaciones
+
+¿Qué tamaño de clave AES ofrece el mayor nivel de seguridad?
+3
+128 bits
+192 bits
+256 bits
+512 bits
+
+¿Cuál es una ventaja de ChaCha20-Poly1305 sobre AES-GCM en dispositivos sin aceleración AES-NI?
+1
+Mejor rendimiento constante en software
+Menor uso de memoria
+Claves más cortas
+Compatibilidad con hardware antiguo
+
+¿Qué protocolo de seguridad web utiliza AES-GCM como cifrado autenticado por defecto?
+2
+SSH
+TLS
+IPsec
+Kerberos
+
+¿Qué modo de operación se recomienda para comunicaciones en tiempo real sin relleno y con paralelización?
+4
+CBC
+ECB
+OFB
+CTR
+
+En Go, ¿qué tipo implementa cipher.NewCTR?
+3
+cipher.Block
+cipher.BlockMode
+cipher.Stream
+io.Reader
+
+En Go, ¿por qué es necesario reinicializar el cifrador CTR antes de descifrar?
+2
+Porque Go libera automáticamente la clave después de cifrar.
+Porque el contador interno debe comenzar en el mismo valor inicial para reproducir el flujo cifrante.
+Porque el bloque final requiere un padding especial.
+Porque el cifrador solo funciona una vez por clave.
+
+En modo CTR, reutilizar un mismo nonce provoca…
+1
+La reutilización del flujo cifrante, permitiendo ligar dos textos en claro mediante XOR de sus cifrados.
+Una mayor resistencia a ataques de fuerza bruta.
+Que el algoritmo cambie automáticamente a modo CBC.
+Que se genere un vector de inicialización impredecible.
+
+¿Cómo se genera correctamente un IV aleatorio en Go?
+2
+Utilizando la función math/rand.Int().
+Leyendo bytes con crypto/rand.Read().
+Derivándolo de la clave con SHA-256.
+Usando time.Now().UnixNano().
+
+Un padding mal implementado en CBC puede dar lugar a un…
+1
+Padding oracle (oráculo de relleno).
+Ataque de temporización.
+Reutilización de IV.
+Fuga del keystream.
+
+En modo CBC, el IV debe ser…
+2
+Aleatorio y único para cada mensaje.
+Fijo y conocido por ambas partes.
+Igual que la clave.
+Derivado del primer bloque de texto claro.
+
+¿Cómo mitigar los ataques de temporización en AES?
+2
+Usando saltos de ejecución aleatorios.
+Empleando AES-NI o implementaciones de tiempo constante sin tablas.
+Aumentando el número de rondas.
+Utilizando CBC en lugar de GCM.
+
+ChaCha20-Poly1305 se prefiere a AES-GCM en…
+2
+Servidores con aceleración AES-NI.
+Dispositivos sin hardware AES, como móviles y IoT.
+Hardware FPGA dedicado.
+Encriptación de disco en reposo.
+
+¿Cuál de estos métodos de Go retorna un objeto que implementa cipher.AEAD?
+3
+cipher.NewCTR
+cipher.NewCBCEncrypter
+cipher.NewGCM
+cipher.NewCFBEncrypter
+
+¿Qué ocurre al reutilizar un mismo nonce en AES-GCM?
+3
+La librería genera automáticamente un nonce nuevo.
+Solo compromete la integridad, no la confidencialidad.
+Se rompen la confidencialidad y la autenticidad de los datos.
+No tiene ningún efecto adverso.
+
+¿Qué interfaz define en Go los métodos Seal y Open para cifrado autenticado?
+3
+cipher.Stream
+cipher.BlockMode
+cipher.AEAD
+io.ReadWriter
+
+En TLS 1.3, ¿qué algoritmos AEAD se recomiendan?
+2
+CBC-HMAC y ChaCha20
+AES-GCM y ChaCha20-Poly1305
+RC4-HMAC y AES-ECB
+AES-XTS y AES-CTR
+
+¿Por qué el modo XTS utiliza dos claves?
+3
+Para proporcionar autenticación junto al cifrado.
+Para permitir relleno dinámico de bloques.
+Para diferenciar el cifrado de datos y el de posición (tweak) en discos.
+Para aumentar la longitud de clave a 512 bits.
+
+¿Qué modo de operación requiere padding explícito al cifrar un mensaje de longitud arbitraria?
+1
+CBC
+OFB
+CTR
+GCM
+
+¿Qué ataque side-channel se basa en medir variaciones del consumo energético?
+2
+Ataque por temporización.
+Análisis de potencia (power analysis).
+Criptoanálisis diferencial.
+Ataque de co-residencia.
+
+Para mitigar ataques por canal de caché, se usan implementaciones…
+2
+Que dependen de tablas S-box en RAM.
+De tiempo constante y sin accesos a tablas dependientes de la clave.
+Con paralelización de flujo AES.
+Que alternan modos de operación en cada bloque.
+
+En Go, ¿qué interfaz distingue un cifrador por flujo de uno autenticado?
+3
+cipher.Block
+cipher.BlockMode
+cipher.AEAD
+io.Writer
+
+¿En qué paquete de la librería estándar de Go se define la interfaz AEAD?
+2
+crypto/tls
+crypto/cipher
+crypto/aes
+crypto/sha256
+
+¿Qué protocolo web utiliza AES-GCM por defecto para asegurar confidencialidad e integridad?
+2
+SSH
+TLS
+IPsec
+Kerberos
+
+¿En qué situación elegirías ChaCha20-Poly1305 sobre AES-GCM?
+2
+En entornos sin aceleración AES-NI, como CPUs de dispositivos móviles.
+Cuando dispongas de hardware AES dedicado.
+Para cifrar discos en reposo con XTS.
+En comunicaciones en tiempo real con padding CBC.
+

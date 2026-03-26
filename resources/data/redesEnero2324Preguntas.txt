@@ -1,0 +1,244 @@
+Una red de comunicaciones con tecnología de difusión se caracteriza por:
+2
+Emplear una topología de árbol para la conectividad entre todos los equipos.
+Enviar información a todos los equipos con la transmisión física de un solo paquete.
+Definir varias direcciones físicas diferentes para identificar a todos los equipos de la red.
+Permitir la conectividad entre equipos si falla el medio físico compartido.
+
+El empleo de la multidifusión permite:
+3
+Identificar diferentes grupos de equipos con una única dirección física de multidifusión.
+Identificar a todos los equipos de una red con varias direcciones físicas diferentes.
+Identificar a un grupo de equipos en la red con un valor único de dirección física.
+Establecer n grupos de equipos si se disponen de n bits para identificar direcciones físicas.
+
+¿ En qué tipo de red de comunicaciones NO se indican las direcciones de los equipos origen y destino en los paquetes ?
+1
+Redes de conmutación de paquetes con circuitos virtuales.
+Redes de conmutación de paquetes con datagramas.
+Redes de difusión.
+En cualquier red de comunicaciones se indican las direcciones origen y destino de los equipos en los paquetes.
+
+Sobre el funcionamiento de las redes de conmutación de paquetes con datagramas es cierto que:
+4
+No existe congestión en este tipo de redes, presentan únicamente saturaciones.
+El intercambio de información entre dos equipos siempre se realiza por el mismo camino.
+Si un nodo de la red falla, todas las comunicaciones entre equipos ya no son posibles.
+Enviar información a todos los equipos de la red supone varias transmisiones en varios medios físicos.
+
+En una arquitectura de red de N capas es cierto que:
+3
+Se establecerán como mínimo 2*N protocolos de comunicación.
+La única capa que tiene comunicación horizontal real es la capa N.
+La única capa que tiene comunicación horizontal real es la capa 1.
+Todas las capas emplean un protocolo de comunicación con su capa inferior.
+
+Si la capa N de una arquitectura de red envía información a su capa par, es cierto que:
+1
+Añade a la información la cabecera del protocolo de nivel N.
+Añade a la información la cabecera del protocolo de nivel N+1.
+Añade a la información la cabecera del protocolo de nivel N-1.
+Añade a la información las cabeceras de los protocolos de nivel N+1 y N-1.
+
+¿ Qué organismo toma las decisiones acerca de las directrices de Internet a nivel global ?
+3
+ARPANET.
+MILNET.
+IAB.
+IETF.
+
+Sobre el conjunto de protocolos de la arquitectura TCP/IP, es cierto que:
+4
+Todas las aplicaciones de Internet emplean el protocolo de transporte TCP.
+Todas las aplicaciones de Internet emplean el protocolo de transporte UDP.
+Todas las aplicaciones de Internet emplean el protocolo de control ICMP.
+Todas las aplicaciones de Internet emplean el protocolo de red IP.
+
+El dispositivo de interconexión que provoca más congestión es:
+2
+Puente.
+Repetidor.
+Router.
+La congestión no depende del dispositivo de interconexión empleado.
+
+El valor de ancho de banda de un medio físico depende de:
+1
+Las propiedades físicas del medio.
+El número de señales a transmitir en el medio físico.
+La relación señal-ruido presente en el medio físico.
+El número de armónicos que componen una señal.
+
+Sobre el espectro de frecuencias de una señal periódica de pulsos es cierto que:
+3
+Los valores de frecuencia de cada armónico dependen de los datos en la señal.
+Todas las señales de pulsos tienen el mismo espectro de frecuencias.
+La amplitud de cada armónico depende de los datos de la señal.
+El número de armónicos de la señal es el doble del ancho de banda del medio físico.
+
+Sea un medio físico sin ruido con ancho de banda B Hz, para transmitir una señal de pulsos Manchester a la velocidad máxima posible es necesario:
+1
+Emplear una velocidad de modulación de 2*B baudios.
+Emplear una velocidad de modulación de B baudios.
+Emplear una velocidad de modulación de 4*B baudios.
+Emplear B niveles de amplitud en la señal.
+
+¿ Qué tipo de ruido presente en los medios físicos se produce de manera aleatoria y no es posible predeterminar ?
+2
+Ruido cruzado.
+Ruido de impulso.
+Autoacoplamiento.
+El ruido que presenta un medio físico siempre es posible predeterminarlo.
+
+¿ Qué tipo de señalización en banda base emplea más de dos niveles de amplitud de la señal ?
+4
+Codificación binaria unipolar.
+Codificación binaria bipolar.
+Codificación Manchester.
+Codificación MLT-3.
+
+¿ Qué tipo de modulación emplea más de una señal portadora ?
+2
+Modulación ASK.
+Modulación FSK.
+Modulación PSK.
+Modulación QAM.
+
+¿ En qué tipo de modulación es más probable que el ruido presente en el medio físico provoque errores ?
+3
+Modulación FSK.
+Modulación QPSK.
+Modulación QAM.
+El ruido no afecta a las comunicaciones que emplean la modulación.
+
+¿ Qué tipo de multiplexado es el más adecuado para transmitir por un medio físico varias señales PCM ?
+2
+Multiplexado FDM.
+Multiplexado TDM síncrono.
+Multiplexado TDM asíncrono.
+Multiplexado QAM.
+
+¿ Qué tipo de cable eléctrico es más inmune al ruido de impulso ?
+4
+Cable UTP categoría 5.
+Cable UTP categoría 6.
+Cable UTP categoría 7.
+Cable STP.
+
+¿ En qué tipo de fibra óptica se propagan varios pulsos de luz con diferentes datos en cada uno de ellos ?
+3
+Fibra multimodo de índice de salto.
+Fibra multimodo de índice gradual.
+Fibra monomodo.
+Fibra WDM.
+
+¿ Qué dispositivo emisor de luz es más adecuado para trazados de fibra óptica de larga distancia y muy alta velocidad ?
+1
+Diodo Láser.
+Diodo LED.
+Fotodiodo semiconductor en avalancha.
+Diodo APD.
+
+¿ Qué tipo de comunicación inalámbrica emplea ondas electromagnéticas de mayor frecuencia ?
+4
+Transmisión de TV terrestre.
+Redes Wi-Fi 3.
+Redes Wi-Fi 4.
+Comunicaciones satelitales.
+
+¿ En qué tipo de protocolo de ventana deslizante se realiza un mejor aprovechamiento del medio físico cuando se producen errores en la transmisión de paquetes ?
+3
+Protocolo de ventana deslizante con repetición NO selectiva.
+Protocolo de ventana deslizante con repetición selectiva SIN tiempo de espera de ACK.
+Protocolo de ventana deslizante con repetición selectiva CON tiempo de espera de ACK.
+Protocolo de ventana deslizante con ventana de receptor y de emisor de tamaño 1.
+
+¿ Qué normativa MAC del IEEE permite NO usar la capa LLC en la transmisión de paquetes IP ?
+4
+IEEE 802.3.
+IEEE 802.11.
+IEEE 802.1D.
+Las normas MAC del IEEE siempre emplean la capa LLC.
+
+Si en un puente se recibe un paquete Ethernet con una dirección MAC origen que NO existe en la tabla de reenvío, es cierto que:
+2
+Se reenvía el paquete por todos los puertos del puente, excepto por el que se ha recibido.
+Se añade una entrada en la tabla de reenvío con la dirección MAC de origen del paquete.
+Se añade una entrada en la tabla de reenvío con la dirección MAC de destino del paquete.
+Se descarta el paquete Ethernet y no se reenvía.
+
+Sobre la normativa Fast Ethernet es cierto que:
+4
+La normativa 100BaseTX emplea una señal de reloj de 100 MHz y 100BaseFX un reloj de 125 MHz.
+La normativa 100BaseTX emplea la codificación 4B5B y 100BaseFX 8B10B.
+La normativa 100BaseTX emplea señalización Manchester.
+La normativa 100BaseFX emplea señalización NRZI.
+
+¿ Qué normativa Ethernet puede emplear fibra óptica aplicando el multiplexado WDM ?
+4
+Ethernet 10GBase-T.
+Ethernet 5GBase-T.
+Ethernet 2.5GBase-T.
+Ethernet 40GBase-XX.
+
+Sobre el funcionamiento de un conmutador VLAN es cierto que:
+1
+Permite establecer un dominio de difusión para un conjunto de equipos conectados en diferentes conmutadores VLAN.
+Los equipos conectados deben emplear todos el formato de paquete IEEE 802.1Q.
+Varias VLAN diferentes pueden emplear la misma dirección de red IP.
+El protocolo GVRP emplea los puertos de acceso para conocer qué VLANs existen en el conmutador.
+
+Sobre el funcionamiento de las redes inalámbricas IEEE 802.11x es cierto que:
+1
+La cabecera de los paquetes MAC IEEE 802.11 incorpora 4 direcciones MAC.
+Solo los paquetes MAC IEEE 802.11 de control son confirmados por el destinatario del paquete.
+Dos redes inalámbricas en un mismo entorno físico pueden funcionar con la misma frecuencia sin interferencias.
+Un equipo asociado a un AP puede detectar las transmisiones de todos los equipos asociados al AP.
+
+Si un equipo quiere registrarse en un AP, es cierto que:
+2
+Transmitirá un paquete Beacon Frame de registro.
+Debe conocer el SSID del AP en el que quiere registrarse.
+El AP debe conocer previamente la MAC del dispositivo que quiere registrarse.
+La frecuencia empleada por el AP determina el número máximo de equipos que pueden registrarse.
+
+¿ Qué mecanismo de autenticación Wi-Fi es más resistente a un ataque de fuerza bruta ?
+3
+WPA-PSK.
+WPA2-PSK.
+WPA3-PSK.
+WPA3-AES.
+
+Un sistema autónomo (SA) se caracteriza por:
+4
+Cada SA comparte varias redes IP con otros SA.
+Un SA emplea el protocolo RIP para determinar la conectividad con otros SA.
+Todos los SA de Internet están conectados directamente al troncal de Internet.
+Un SA dispone al menos de un router frontera para su conectividad con otros SA.
+
+¿ Qué algoritmo de gestión de tablas de encaminamiento permite optimizar rutas con un menor tiempo de respuesta ante cambios en la red ?
+3
+BGP.
+RIPv2.
+OSPF.
+IGMP.
+
+La transmisión de vídeo con multidifusión se emplea:
+3
+En los proveedores de streaming en Internet a nivel global (Netflix, YouTube, etc).
+Siempre que sea necesario transmitir el mismo flujo de vídeo a varios equipos en Internet.
+En los Sistemas Autónomos que ofrecen servicio de TV IP a sus clientes.
+Para aumentar la velocidad de transmisión necesaria en los servidores de vídeo en Internet.
+
+¿ Qué parte de una dirección unicast IPv6 emplea el formato EUI-64 ?
+1
+Interface.
+TLA.
+SLA.
+NLA.
+
+Sobre el control de la congestión en TCP es cierto que:
+4
+Permite reducir la ventana de recepción de un equipo.
+Permite aumentar la ventana de congestión de un equipo si expiran los temporizadores de espera de ACK.
+Si expira un temporizador de espera de ACK no se reenvían paquetes TCP.
+Si expira un temporizador de espera de ACK se reduce a la mitad el tamaño de la ventana de congestión de un equipo.

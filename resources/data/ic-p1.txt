@@ -1,0 +1,620 @@
+¿Cuál es la principal ventaja de paralelizar una aplicación?
+3
+- Reducir la cantidad de memoria usada
+- Aumentar la precisión de los resultados
+- Disminuir el tiempo de ejecución
+- Mejorar la legibilidad del código
+
+¿Qué directiva de OpenMP se utiliza para paralelizar bucles en C/C++?
+2
+- #pragma omp thread
+- #pragma omp parallel for
+- #pragma omp distribute
+- #pragma omp loop
+
+¿Qué parámetro se debe estudiar para analizar la eficiencia de un código paralelo en comparación con su versión secuencial?
+2
+- Latencia
+- Aceleración (speed-up)
+- Overhead
+- Ancho de banda
+
+¿Qué tipo de paralelización se utiliza cuando múltiples hilos de un proceso comparten la misma memoria?
+3
+- Paralelismo de procesos
+- Paralelismo de datos
+- Paralelismo de memoria compartida
+- Paralelismo distribuido
+
+¿Cuál es la principal desventaja de la paralelización?
+1
+- La sobrecarga de sincronización
+- Aumento de la velocidad
+- Disminución de la latencia
+- Uso eficiente de la memoria
+
+Explica por qué es importante que un programa sea lo suficientemente costoso computacionalmente antes de proceder a su paralelización.
+1
+- Si un programa no es computacionalmente costoso, la sobrecarga que introduce la paralelización (por la creación de hilos, la sincronización y la comunicación) puede superar los beneficios de reducir el tiempo de cómputo. En estos casos, el esfuerzo de paralelizar el código puede ser innecesario y el rendimiento no mejorará.
+- La paralelización es siempre beneficiosa, ya que reduce el consumo de memoria y disminuye el número de operaciones del programa, sin importar el coste computacional inicial.
+- Paralelizar un programa solo es útil cuando los recursos de hardware son limitados, ya que la paralelización redistribuye las operaciones sin influir en el tiempo de ejecución.
+- Un programa debe ser paralelizado incluso si no es computacionalmente costoso, ya que cualquier tipo de paralelización garantiza una mejora en el rendimiento sin importar el problema a resolver.
+
+¿Qué es el speed-up y cómo se calcula en un programa paralelo?
+1
+- El speed-up es una métrica que mide la mejora de rendimiento de un programa paralelo en comparación con su versión secuencial. Se calcula como la razón entre el tiempo de ejecución secuencial y el tiempo de ejecución paralelo. Es decir, speed-up = Tiempo secuencial / Tiempo paralelo. Si el valor es mayor que 1, significa que el programa ha mejorado su rendimiento con la paralelización.
+- El speed-up es el tiempo total que un programa paralelo tarda en completarse y se calcula sumando el tiempo de ejecución paralelo y el número de núcleos utilizados en el procesamiento.
+- El speed-up mide cuántos núcleos se han utilizado en la ejecución de un programa paralelo y se calcula dividiendo el tiempo de ejecución paralelo por el número de hilos empleados en la ejecución.
+- El speed-up representa la cantidad de tareas realizadas en paralelo y se calcula como el producto entre el tiempo de ejecución secuencial y el número de hilos o núcleos disponibles.
+
+Describe la diferencia entre paralelismo de datos y paralelismo de tareas.
+1
+- El paralelismo de datos implica ejecutar la misma operación en diferentes subconjuntos de datos de manera simultánea. Es común en operaciones como el procesamiento de matrices o imágenes. El paralelismo de tareas, por otro lado, implica dividir un problema en diferentes tareas que pueden ejecutarse en paralelo, donde cada tarea realiza una operación distinta. Este tipo de paralelismo es más adecuado cuando las tareas son independientes entre sí.
+- El paralelismo de datos implica dividir el programa en múltiples funciones que se ejecutan en paralelo, mientras que el paralelismo de tareas implica procesar la misma operación en datos grandes secuencialmente.
+- El paralelismo de datos y el paralelismo de tareas son equivalentes, ambos consisten en ejecutar la misma operación en distintos núcleos sin importar el tipo de datos o tareas involucradas.
+- El paralelismo de datos se utiliza solo cuando las tareas son completamente dependientes entre sí, mientras que el paralelismo de tareas se usa cuando la misma operación debe aplicarse a una gran cantidad de datos.
+
+Dado el siguiente código secuencial en C para sumar dos vectores: ```void sumarVectores(int *A, int *B, int *C, int N) { \n\tsentencia \n\tfor (int i = 0; i < N; i++) { \n\t\tC[i] = A[i] + B[i]; \n\t} \n}``` ¿Cuál de las siguientes opciones muestra una modificación correcta del código para que se ejecute en paralelo utilizando OpenMP y explica correctamente cómo funciona la paralelización en este caso?
+1
+- #pragma omp parallel for
+- #pragma omp for
+- #pragma omp parallel
+
+¿Cuál es el objetivo principal de la paralelización?
+3
+- Reduce el consumo de energía
+- Mejora la legibilidad del código
+- Acelera el tiempo de ejecución
+- Facilita el mantenimiento del código
+
+¿Cuál es un indicador de que la paralelización podría no ser efectiva?
+2
+- Las tareas son altamente independientes
+- Las tareas son altamente dependientes
+- El tiempo de ejecución se ha reducido bastante
+- Se dispone de múltiples núcleos en el procesador
+
+¿Cuál es un indicador de que la paralelización podría no ser efectiva?
+2
+- Las tareas son altamente independientes
+- Las tareas son altamente dependientes
+- El tiempo de ejecución se ha reducido bastante
+- Se dispone de múltiples núcleos en el procesador
+
+En la taxonomía de Flynn, ¿cuál de las siguientes arquitecturas es la más adecuada para ejecutar múltiples tareas independientes?
+3
+- SISD
+- SIMD
+- MIMD
+- MISD
+
+¿Qué técnica de paralelismo se emplea cuando un programa realiza la misma operación en varios elementos de un conjunto de datos en paralelo?
+1
+- Paralelismo de datos
+- Paralelismo funcional
+- Paralelismo a nivel de bucle
+- Paralelismo de tareas
+
+¿Cuál de los siguientes factores limita el speed-up ideal en un sistema paralelo?
+1
+- Ley de Amdahl
+- Tamaño del conjunto de datos
+- Número de instrucciones en un hilo
+- Tamaño de las instrucciones atómicas
+
+¿Cuál de los siguientes problemas es específico de la programación paralela y no existe en programación secuencial?
+2
+- Desbordamiento de pila
+- Condiciones de carrera
+- Uso excesivo de memoria
+- Ciclos infinitos
+
+¿Cuál de los siguientes factores puede afectar negativamente el rendimiento en un sistema paralelo?
+1
+- Sincronización de hilos
+- Uso eficiente de caché
+- Dividir las tareas en bloques independientes
+- Aumento del número de núcleos disponibles
+
+¿Qué se busca optimizar al paralelizar un algoritmo con múltiples hilos?
+4
+- Aumentar el número de instrucciones ejecutadas.
+- Reducir el número de hilos utilizados.
+- Aumentar el tiempo de espera entre hilos.
+- Minimizar el tiempo de ejecución total.
+
+Describe en qué consiste la Ley de Amdahl y cómo afecta a la escalabilidad de un programa paralelo. 
+1
+- La Ley de Amdahl establece que el speed-up máximo de un programa paralelo está limitado por la proporción de código que no se puede paralelizar.
+- La Ley de Amdahl establece que el speed-up máximo de un programa paralelo aumenta indefinidamente con el número de procesadores, sin importar la proporción de código no paralelizable.
+- Según la Ley de Amdahl, el rendimiento de un programa paralelo siempre será óptimo cuando se divida el trabajo en partes iguales entre los procesadores, sin importar la cantidad de código secuencial.
+- La Ley de Amdahl indica que el speed-up de un programa paralelo depende únicamente del número de procesadores y no considera el porcentaje de código que debe ejecutarse secuencialmente.
+
+Imagina un algoritmo de búsqueda secuencial en un gran archivo de texto. Propón un enfoque paralelo para mejorar su eficiencia y describe brevemente el patrón de paralelización que utilizarías.
+1
+- Dividir el archivo en partes iguales y asignar a cada hilo una sección para buscar el patrón de texto.Uno de los patrones que se puede usar es Divide y vencerás (dividir el problema y ejecutar las búsquedas en paralelo). Cada hilo devuelve las posiciones del patrón encontrado y al final se combinan los resultados.
+- El enfoque paralelo más eficiente para mejorar la búsqueda secuencial en un gran archivo de texto es ejecutar el mismo algoritmo en cada hilo repetidamente en toda la extensión del archivo, sin dividirlo en partes.
+- El mejor patrón de paralelización para este problema es asignar todos los hilos a trabajar en la misma sección del archivo simultáneamente, para asegurar que cada parte del archivo se busque más rápido.
+- Un enfoque paralelo eficiente sería asignar a cada hilo la búsqueda de patrones diferentes en lugar de dividir el archivo, ya que la búsqueda de varios patrones simultáneamente aumenta el rendimiento global.
+
+Explica cómo el uso de la memoria caché afecta el rendimiento de un programa paralelo. Proporciona un ejemplo de cómo la reorganización de datos puede mejorar la eficiencia en caché.
+1
+- La caché mejora el rendimiento cuando los datos se encuentran localmente cerca del procesador. Por ejemplo, si un array de matrices se recorre de forma desordenada, reorganizar los accesos a una forma contigua (procesar fila por fila) reduce los fallos de caché.
+- El uso de la memoria caché no afecta significativamente el rendimiento de un programa paralelo, ya que todos los procesadores acceden a la memoria principal de manera uniforme y sin penalización por localización.
+- Reorganizar los accesos a los datos en memoria no tiene ningún impacto en la eficiencia de caché, ya que los fallos de caché solo dependen del tamaño de los datos, no de cómo se acceden.
+- Un ejemplo de cómo mejorar la eficiencia en caché sería acceder a los elementos de un array de forma completamente aleatoria, ya que esto evita que los procesadores saturen la caché con los mismos datos.
+
+¿Qué opción de compilación es la más idónea para optimizar al máximo el tiempo de ejecución si tu programa trabaja con bucles pesados y múltiples vectores?
+4
+- g++ -O1 -march=native -o programa programa.cpp
+- g++ -funroll-loops -flto -o programa programa.cpp
+- g++ -O1 -funroll-loops -o programa programa.cpp
+- g++ -funroll-loops -ftree-vectorize -o programa programa.cpp
+
+¿Cuál de los siguientes parámetros mejora en mayor medida el tamaño del binario del programa?
+2
+- Ofast
+- Oz
+- Os
+- Og
+
+¿Cual es la principal característica de un programa que es buen candidato a ser paralelizado?
+3
+- Tareas secuenciales.
+- Alta dependencia de datos entre tareas.
+- Tareas independientes.
+- Uso intensivo de memoria compartida.
+
+¿Cuál debe ser el primer paso en el análisis previo a la paralelización de un programa?
+2
+- Dividir el programa en subrutinas.
+- Identificar las partes que pueden ejecutarse en paralelo.
+- Estimar el tiempo de ejecución total del programa
+- Medir el rendimiento de la versión secuencial.
+
+¿Qué característica de un programa indica que no es un buen candidato para la paralelización?
+1
+- Un alto grado de dependencia entre tareas.
+- Gran cantidad de cálculos independientes.
+- Acceso frecuente a datos que no cambian.
+- Tareas que requieren mucha memoria.
+
+Recordando los ejercicios con grifos, si un conjunto de grifos tiene una ganancia de 3 y utiliza 6 grifos para llenar el depósito, ¿cuál es su ganancia?
+3
+- 2
+- 1
+- 0,5
+- 0,75
+
+¿Qué características tiene que tener un programa para ser un buen candidato a ser paralelizado?
+1
+- Las características principales para que un programa sea un buen candidato a ser paralelizado son: alta carga computacional, bucles largos o repetitivos y poca dependencia entre  tareas. Unos claros ejemplos pueden ser simulaciones científicas o procesamiento de imágenes, pues permiten dividir el trabajo en múltiples núcleos.
+- Un programa es un buen candidato para ser paralelizado cuando tiene una gran cantidad de operaciones secuenciales, ya que los hilos pueden compartir la misma tarea sin necesidad de coordinación.
+- Un buen candidato para la paralelización es aquel programa que tiene una fuerte dependencia entre tareas, ya que permite que todos los hilos trabajen en sincronía constante.
+- Programas con baja carga computacional y tareas muy interdependientes son ideales para paralelización, porque los hilos pueden esperar unos a otros sin sobrecargar el sistema.
+
+¿Es un programa cuyo tiempo de ejecución es muy bajo un buen candidato a ser paralelizado? ¿Donde es más efectiva la paralelización?
+1
+- No es un buen candidato para ser paralelizado ya que el overhead asociado a la creación de hilos, sincronización y comunicación puede superar las ganancias en rendimiento. La paralelización es más efectiva en problemas de mayor tamaño, donde se justifica el uso de múltiples recursos.
+- Un programa con tiempo de ejecución muy bajo es un excelente candidato para ser paralelizado, ya que cualquier programa puede beneficiarse de tener más hilos, sin importar su complejidad o duración.
+- La paralelización es más efectiva en programas muy cortos, ya que al dividir el trabajo en pequeños fragmentos, se reduce aún más el tiempo de ejecución global.
+- Incluso si un programa tiene un tiempo de ejecución muy bajo, la creación de hilos siempre mejora el rendimiento porque el overhead de sincronización y comunicación es insignificante.
+
+¿En que puede ayudar utilizar un grafo de tareas en el estudio para paralelizar un programa?
+1
+- Un grafo de tareas puede ser muy útil en el estudio para la paralelización de un programa ya que permite visualizar dependencias entre tareas y así ayudar a identificar qué partes del programa pueden llegar a ejecutarse en paralelo.
+- Un grafo de tareas no es útil para la paralelización de un programa, ya que no proporciona ninguna información relevante sobre las dependencias entre tareas ni sobre qué partes pueden ejecutarse en paralelo.
+- El uso de un grafo de tareas solo ayuda a identificar el orden secuencial de ejecución de las tareas, pero no tiene ningún impacto en la detección de oportunidades de paralelización.
+- Un grafo de tareas es irrelevante en la paralelización, ya que todos los programas pueden ser divididos en partes iguales sin importar las dependencias entre tareas.
+
+¿Qué tipo de aplicaciones son más idóneas para la paralelización?
+1
+- Aplicaciones con muchos cálculos paralelos
+- Aplicaciones interactivas
+- Aplicaciones con un 100% de paralelismo de datos
+- Aplicaciones que no dependen de la memoria
+
+¿Cuál es una técnica utilizada para estimar la eficiencia de un proceso de paralelización?
+2
+- Uso de métodos heurísticos
+- Speed-up
+- Ajuste de algoritmos
+- Despliegue en clústeres
+
+¿Qué arquitecturas son idóneas para la paralelización de una aplicación?
+2
+- Computadoras con un solo núcleo
+- GP-GPU y sistemas multi-núcleo
+- Computadoras con un solo proceso
+- Arquitecturas distribuidas simples
+
+¿Qué se debe estudiar para justificar la paralelización de una aplicación?
+2
+- La complejidad algorítmica
+- El coste computacional
+- La cantidad de memoria requerida
+- La portabilidad del código
+
+¿Qué parte de un código secuencial permite identificar si es paralelizable?
+2
+- El flujo de datos
+- Las dependencias entre tareas
+- La interfaz de usuario
+- La cantidad de variables
+
+¿Qué herramienta puede utilizarse para visualizar las dependencias en un código?
+2
+- Herramientas de depuración
+- Grafos de dependencia
+- Optimizadores de compilador
+- Análisis de complejidad
+
+Describe un problema que podría beneficiarse de la paralelización y porqué.
+1
+- Por ejemplo, la simulación de fluidos puede beneficiarse de la paralelización, ya que involucra múltiples cálculos complejos que se pueden dividir en subprocesos y ejecutar simultáneamente, lo que reduce el tiempo total de procesamiento.
+- Un programa que simplemente imprime una lista de números en orden sería un buen candidato para paralelización, ya que dividir la tarea en subprocesos siempre acelera la ejecución, independientemente de la complejidad.
+- El cálculo de sumas sencillas de un par de números sería un gran ejemplo de un problema que se beneficiaría enormemente de la paralelización, ya que cada suma se puede ejecutar en un hilo separado para mejorar la velocidad.
+- La edición de un documento de texto es un buen ejemplo de un problema que se beneficia de la paralelización, ya que varios hilos pueden editar el mismo texto simultáneamente, lo que mejora la eficiencia de escritura.
+
+¿Qué tipo de arquitectura paralela es más adecuada para la simulación de fluidos computacionales? 
+1
+- Clústeres o GP-GPU debido a la alta demanda de procesamiento en paralelo.
+- La arquitectura más adecuada para la simulación de fluidos computacionales es una CPU de un solo núcleo, ya que permite procesar cada cálculo de manera secuencial sin sobrecargar el sistema.
+- La mejor arquitectura para simulaciones de fluidos computacionales es una red de dispositivos móviles, ya que su procesamiento en paralelo es suficiente para manejar los cálculos complejos de este tipo de simulaciones.
+- Para simulaciones de fluidos computacionales, la arquitectura más eficiente es la basada en almacenamiento en la nube, ya que se enfoca más en el almacenamiento de datos que en el procesamiento paralelo intensivo.
+
+¿Cómo afecta el uso de parámetros de compilación al rendimiento de un programa paralelizado? 
+1
+- Los parámetros de compilación pueden permitir optimizaciones como la autovectorización y el uso de instrucciones SIMD, lo que mejora el rendimiento al aprovechar mejor los recursos del procesador.
+- El uso de parámetros de compilación no afecta el rendimiento de un programa paralelizado, ya que las optimizaciones solo dependen del hardware, no de cómo se compila el programa.
+- Los parámetros de compilación siempre empeoran el rendimiento de un programa paralelizado, ya que añaden instrucciones innecesarias y ralentizan la ejecución.
+- Los parámetros de compilación solo influyen en el tamaño del archivo final, pero no tienen ningún impacto en la eficiencia o el rendimiento de un programa paralelizado.
+
+Explica la importancia de las métricas de rendimiento, como el "speed-up", en la evaluación de un programa paralelizado. 
+1
+- El "speed-up" mide la ganancia de rendimiento obtenida al ejecutar un programa en paralelo en comparación con su ejecución secuencial, lo que ayuda a evaluar la efectividad de la paralelización.
+- Las métricas de rendimiento, como el "speed-up", no son importantes en la evaluación de un programa paralelizado, ya que el número de hilos utilizados siempre garantiza un mejor rendimiento sin necesidad de mediciones.
+- El "speed-up" mide solo el tiempo total de ejecución del programa, sin importar si se ejecuta en paralelo o de manera secuencial, por lo que no es útil para evaluar la efectividad de la paralelización.
+- El "speed-up" no es una métrica relevante, ya que un programa paralelizado siempre es más eficiente independientemente del número de hilos o la proporción de código que se paraleliza.
+
+Explica por qué es importante considerar la caché del sistema cuando se paraleliza un programa y cómo podría afectar el rendimiento.
+1
+- La caché juega un papel crucial en el rendimiento de programas paralelizados, ya que el acceso eficiente a los datos almacenados en la caché puede reducir significativamente el tiempo de ejecución. Un mal uso de la caché puede resultar en accesos a memoria más lentos, lo que disminuye la eficiencia del programa.
+- La caché del sistema no es relevante cuando se paraleliza un programa, ya que los procesadores siempre tienen acceso a los datos con la misma velocidad, sin importar su ubicación en la memoria.
+- El uso de la caché solo afecta a programas secuenciales, no a programas paralelizados, ya que cada hilo tiene su propio acceso directo a la memoria principal, lo que hace que la caché sea innecesaria.
+- Es mejor ignorar la caché del sistema al paralelizar un programa, ya que usar la caché puede aumentar los fallos de memoria y hacer que el programa sea menos eficiente.
+
+¿Cuál de las siguientes afirmaciones sobre la paralelización del "Juego de la Vida" de Conway es correcta?
+3
+- La paralelización del "Juego de la Vida" no mejora el rendimiento en matrices de gran tamaño debido a la dependencia entre celdas.
+- La paralelización del "Juego de la Vida" es más eficiente en sistemas de un solo núcleo.
+- La paralelización del "Juego de la Vida" mejora el rendimiento ya que cada celda solo depende de un conjunto pequeño de celdas vecinas.
+- El "Juego de la Vida" solo se puede paralelizar en sistemas con más de 16 núcleos.
+
+¿Qué técnica de paralelización es más adecuada para un problema donde múltiples tareas deben acceder y modificar un gran conjunto de datos compartidos de forma concurrente?
+3
+- Paralelismo de datos
+- Paralelismo de tareas
+- Paralelismo de memoria compartida
+- Paralelismo de memoria distribuida
+
+Supongamos que tienes un algoritmo que procesa una imagen de 1000x1000 píxeles y tarda 200 segundos en completarse. Si duplicas la resolución de la imagen a 2000x2000 píxeles, ¿cuánto tiempo estimas que tardará en procesarse la nueva imagen si la complejidad del algoritmo es 0(n^2), donde n es la dimensión de la imagen?
+1
+- El tiempo estimado de procesamiento: 800 segundos.
+- El tiempo estimado de procesamiento: 400 segundos.
+- El tiempo estimado de procesamiento: 200 segundos.
+- El tiempo estimado de procesamiento: 1600 segundos.
+
+¿Cuál de las siguientes afirmaciones es verdadera respecto al uso de barreras de sincronización en la paralelización del "Juego de la Vida" de Conway?
+1
+- Las barreras de sincronización son necesarias en cada iteración, ya que todas las celdas dependen de la actualización completa de la matriz.
+- Las barreras de sincronización pueden ser ignoradas en implementaciones con memoria distribuida.
+- Las barreras de sincronización solo se necesitan en las celdas de los bordes de la matriz.
+- Las barreras de sincronización incrementan la latencia de acceso a la memoria pero son imprescindibles para garantizar la consistencia.
+
+¿Qué ocurre si en una implementación paralela del "Juego de la Vida" no se maneja correctamente la sincronización entre hilos?
+2
+- Las celdas se actualizarán correctamente, pero el rendimiento disminuirá.
+- Algunas celdas podrían utilizar el estado actualizado mientras que otras utilizarán el estado antiguo, generando resultados inconsistentes.
+- Los hilos competirán por los mismos datos, lo que provocará un error de segmentación.
+- El programa no será afectado, ya que la sincronización no es necesaria en cada iteración.
+
+¿Cuál es la función del parámetro -O3 en el comando de compilación de GCC?
+2
+- Optimiza el código para tamaño.
+- Optimiza el código para velocidad.
+- Desactiva todas las optimizaciones.
+- Aumenta el tamaño del código.
+
+¿Qué hace la opción -march=native en GCC?
+2
+- Compila para cualquier arquitectura.
+- Activa optimizaciones específicas para la arquitectura del procesador en uso.
+- Desactiva todas las optimizaciones.
+- Aumenta el tamaño del archivo ejecutable.
+
+¿Qué se entiende por 'autovectorización'?
+- Es el proceso de compilar código en paralelo.
+- Es la técnica que utiliza el compilador para transformar bucles en operaciones vectoriales.
+- Es el proceso de optimizar código para su ejecución en GPU.
+- Es el aumento del tamaño de un archivo ejecutable.
+
+¿Cuál es la principal ventaja de usar -flto (Link Time Optimization)?
+3
+- Mejora la legibilidad del código.
+- Reduce el tiempo de compilación.
+- Permite optimizar el código en el enlace, mejorando el rendimiento final.
+- Hace que el código sea más portátil.
+
+¿Qué representa el COLOR_LIMIT en el código de la práctica?
+2
+- La cantidad máxima de colores que se pueden utilizar.
+- El valor máximo para los componentes de color RGB en la imagen.
+- La resolución máxima de la imagen.
+- La cantidad de píxeles en la imagen.
+
+En la función smoothing, ¿qué hace el código cuando suma los valores de los píxeles vecinos?
+3
+- Mejora el contraste de la imagen.
+- Aumenta el brillo de la imagen.
+- Suaviza la imagen, reduciendo el ruido.
+- Cambia los colores de la imagen a escala de grises.
+
+¿Cuál de estos tipos de variables es más propenso a ser una variable caliente del programa?
+4
+- Variables globales
+- Variables locales
+- Variables puntuales
+- Arrays de puntos de datos
+
+¿Cuál de estos parámetros de optimización supone una mayor optimización por normal general?
+3
+-free-vectorize
+-ffast-math
+-03
+-funroll-loops
+
+¿Qué se espera que lleve a cabo el parámetro -ffast-math?
+2
+- Permite que GCC aproveche todas las instrucciones disponibles en la CPU
+- Se espera una mejora en cálculos matemáticos a costa de precisión en ciertos casos
+- Se espera que reduzca la sobrecarga de la iteración en los bucles
+- Se espera que mejore significativamente los cálculos repetitivos como los bucles
+
+Si tu programa secuencial no gestiona adecuadamente la memoria dinámica…
+2
+- El programa correrá más rápido pero no podrá guardar memoria
+- El programa podría generar fugas de memoria
+- El programa generará resultados incorrectos por no poder acceder a memoria dinámica
+- El programa simplemente ignora la memoria dinámica
+
+¿Cuál de estas herramientas es una de las principales a la hora de analizar el uso de memoria en C/C++?
+4
+- gcc
+- gdb
+- make
+- valgrind
+
+¿Cuál de estas causas es la más común en fugas de memoria de C/C + +?
+1
+- No liberar memoria después de usar malloc o new
+- Asignar memoria que nunca se va a utilizar
+- Un uso de la memoria excesivo
+- El uso de la misma zona de memoria en gran cantidad de funciones
+
+¿Cuál de las siguientes métricas NO se utiliza comúnmente para justificar la paralelización de una aplicación?
+4
+- Speedup
+- Eficiencia
+- Complejidad algorítmica
+- Tiempo de ejecución secuencial
+
+¿Qué arquitectura es más adecuada para aplicaciones con alta intensidad de cómputo y paralelismo de datos?
+2
+- CPU multi-núcleo
+- GP-CPU
+- Cluster de servidores
+- Sistema big.LITTLE
+
+¿Qué parámetro de compilación puede afectar significativamente el rendimiento de una aplicación paralela?
+1
+-O3
+-Wall
+-g
+-std=c++11
+
+¿Cuál de las siguientes afirmaciones sobre la Ley de Amdahl es correcta?
+3
+- Siempre predice un speedup lineal con el número de procesadores
+- No tiene en cuenta la parte secuencial del programa
+- Establece un límite superior al speedup alcanzable
+- Es aplicable sólo a sistemas de memoria distribuida
+
+¿Qué tipo de aplicación es generalmente más adecuada para la paralelización en sistemas de memoria distribuida? 
+2
+- Aplicaciones con alta dependencia de datos entre tareas
+- Aplicaciones con tareas independientes y baja comunicación
+- Aplicaciones con necesidad de acceso frecuente a memoria compartida
+- Aplicaciones con un alto grado de sincronización entre hilos
+
+¿Cuál de los siguientes NO es un beneficio típico de la paralelización de una aplicación?
+3
+- Reducción del tiempo de ejecución
+- Aumento de la capacidad de procesamiento de datos
+- Mejora de la precisión de los cálculos
+- Posibilidad de resolver problemas más grandes
+
+¿Cuál de las siguientes opciones de optimización se debe evitar al ejecutar el programa en una máquina virtual? 
+3
+- -O3.
+- -O2.
+- -march=native.
+- Todos los anteriores son opciones correctas
+
+¿Qué tipo de paralelización se centra como objetivo principal en dividir los datos en subconjuntos para procesarlos simultáneamente?
+1
+- Paralelización a nivel de datos.
+- Paralelización a nivel de procesos.
+- Paralelización a nivel de instrucciones.
+- Se produce en todos los tipos de paralelización.
+
+¿Cuál de los siguientes factores afecta más al rendimiento de una aplicación paralelizada?
+2
+- La cantidad de memoria RAM.
+- El número de núcleos disponibles.
+- El tamaño del disco duro.
+- La fuente de alimentación.
+
+¿Qué recurso se aprovecha mejor cuando se paraleliza un programa?
+2
+- La capacidad de la tarjeta gráfica
+- El número de núcleos del procesador
+- El espacio en el disco duro
+- La velocidad de la CPU
+
+¿Por qué la paralelización no siempre es posible en todos los programas?
+3
+- Porque algunos programas requieren una gran cantidad de memoria RAM
+- Porque la mayoría de los procesadores no soportan más de un hilo
+- Porque algunos programas tienen tareas que dependen unas de otras y deben ejecutarse en orden
+- Porque la paralelización siempre causa errores en el código
+
+¿Qué es la eficiencia en el contexto de la paralelización de un programa?
+1
+- La relación entre la ganancia de velocidad obtenida y el número de procesadores utilizados
+- El número de núcleos que se usan para ejecutar el programa
+- El tiempo que tarda el programa en acceder al disco duro
+- La cantidad de memoria utilizada durante la ejecución del programa
+
+¿Cuál es un buen ejemplo de un problema susceptible de paralelización?
+2
+- Sumar dos números
+- Multiplicar matrices
+- Buscar el valor máximo en una lista pequeña
+- Mostrar "Hola, mundo" en la pantalla
+
+¿Por qué se deben elegir aplicaciones secuenciales con un coste computacional elevado para paralelizarlas?
+2
+- Porque reducen el tiempo de ejecución secuencial
+- Porque la paralelización introduce una sobrecarga temporal
+- Porque necesitan menos memoria
+- Porque se ejecutan en menos líneas de código
+
+¿Por qué no es recomendable paralelizar un problema que se resuelve rápidamente?
+2
+- Porque el código se vuelve más difícil de entender
+- Porque la sobrecarga de la paralelización puede ser mayor que el beneficio
+- Porque requiere demasiada memoria
+- Porque los resultados pueden no ser precisos
+
+¿Cuál de los siguientes problemas sería menos adecuado para paralelizar según las recomendaciones de la práctica?
+3
+- Un algoritmo de búsqueda que procesa grandes cantidades de datos
+- Un algoritmo que realiza cálculos meteorológicos complejos
+- Un juego interactivo con decisiones en tiempo real
+- Un proceso de simulación física
+
+¿Qué técnica se debe usar para demostrar si un código secuencial puede paralelizarse de forma efectiva?
+2
+- Medir el número de funciones
+- Estudiar las dependencias entre tareas mediante un grafo
+- Contar los comentarios en el código
+- Revisar el nombre de las variables
+
+¿Cuál de las siguientes afirmaciones sobre la autovectorización en el compilador GCC es correcta?
+2
+- Es un proceso manual que el programador debe realizar
+- Es una técnica que permite ejecutar varias operaciones en paralelo utilizando instrucciones SIMD
+- Solo se utiliza en aplicaciones secuenciales
+- No mejora el rendimiento en arquitecturas multinúcleo
+
+¿Cuál de los siguientes métodos se utiliza para enviar datos entre procesos en un programa MPI?
+2
+- pthread_create
+- MPI_Send y MPI_Recv
+- fork y exec
+- cudaMemcpy
+
+¿En un programa MPI, ¿qué función se utiliza para sincronizar todos los procesos involucrados en la ejecución paralela?
+1
+- MPI_Barrier
+- MPI_Bcast
+- MPI_Scatter
+- MPI_Finalize
+
+¿Qué tipo de análisis se realiza para medir el impacto de la paralelización en el rendimiento de una aplicación?
+3
+- MPI es más fácil de implementar en programas secuenciales.
+- MPI es más eficiente en arquitecturas de memoria compartida.
+- MPI permite la comunicación explícita entre procesos en sistemas distribuidos.
+- MPI no requiere optimización del código para mejorar el rendimiento.
+
+¿Qué operación en MPI distribuye un conjunto de datos desde un proceso raíz a todos los demás procesos en el grupo?
+3
+- MPI_Scatter
+- MPI_Gather
+- MPI_Bcast
+- MPI_Reduce
+
+¿Cuál es la finalidad de la función MPI_Init en un programa MPI?
+3
+- Iniciar la ejecución del código paralelo.
+- Configurar los parámetros del compilador.
+- Inicializar el entorno de ejecución MPI.
+- Sincronizar los procesos entre sí.
+
+¿Qué sucede si no se llama a la función MPI_Finalize al final de un programa MPI?
+2
+- El programa se ejecuta correctamente sin problemas.
+- Los recursos del sistema no se liberan correctamente.
+- El programa termina inmediatamente con un error.
+- No se produce ninguna salida.
+
+¿Qué modelo de programación se utiliza en MPI para comunicar procesos en sistemas de memoria distribuida?
+2
+- Memoria compartida
+- Paso de mensajes
+- Memoria centralizada
+- Multiprocesamiento de hilos
+
+¿Cuál de las siguientes es una de las cuatro categorías de instrucciones en MPI?
+1
+- Para transferir datos entre múltiples procesos
+- Para gestionar la memoria compartida entre procesos
+- Para sincronizar hilos en el mismo nodo
+- Para asignar memoria a cada proceso
+
+¿Qué significa la especificación “MPI” en el contexto de programación paralela?
+1
+- Interfaz de Paso de Mensajes
+- Interfaz de Procesos Múltiples
+- Memoria Procesada Internamente
+- Interfaz de Programa Modular
+
+¿Cuál es una ventaja clave del uso de MPI en comparación con otros modelos de programación paralela?
+2
+- Reducción del consumo de memoria
+- Portabilidad y facilidad de uso en arquitecturas multicomputadora
+- Mayor precisión en los cálculos
+- Disminución de la latencia en sistemas de un solo nodo
+
+¿Qué implementación de MPI es adecuada para sistemas de código abierto?
+1
+- OpenMPI
+- IBM MPI
+- Cray MPI
+- SGI MPI
+
+En MPI, ¿qué instrucción se utiliza para inicializar el entorno de comunicación entre procesos?
+3
+- MPI_Open()
+- MPI_Start()
+- MPI_Init()
+- MPI_Connect()
+
+¿Cuál es la función de la operación MPI_Gather en MPI?
+1
+- Recolecta datos de todos los procesos y los envía a un proceso raíz
+- Distribuye datos del proceso raíz a todos los demás procesos
+- Sincroniza los procesos en un punto común de ejecución
+- Divide datos en fragmentos para distribuir entre procesos

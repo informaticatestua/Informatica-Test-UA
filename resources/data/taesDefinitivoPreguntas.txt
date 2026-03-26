@@ -1,0 +1,750 @@
+¿Que fue la crisis del software?
+3,4
+- Se refiere a la bajada de los precios a la hora de desarrollador
+- Un disco de Supertramp
+- Dio origen a la Ingeniería del Software
+- Es un término informático acuñado en 1968, en la primera conferencia organizada por la OTAN sobre desarrollo de software
+
+¿Que motivos indican en 1968 que el desarrollo de software está en crisis?
+1,2,4
+- Se construyen sistemas informáticos que son muy poco flexibles para adaptarse a pequeños cambios en el entorno
+- Se construyen Sistemas Informáticos con prestaciones alejadas de los planteadas
+- Se construyen sistemas informáticos que no hacen caso los postulados de la Ingeniería del Software
+- Se construyen Sistemas Informáticos que han costado más de lo previsto
+
+De las siguientes ¿Cuales forman parte de las conclusiones de la Conferencia e 1968?
+2,3,4
+- Hay que preparar un simulador para poder preparar a los soldados de la OTAN tipo Call of Duty
+- Son necesarias nuevas metodologías de análisis y diseño en base a unas fases secuenciales
+- Es necesario definir unos modelos de gráficos que permitirían al analista-programador comunicarse de manera mucho más razonable con el cliente a la hora de valorar si había comprendido realmente cuáles eran sus necesidades.
+- Es necesario dedicar un tiempo razonable a pensar en el diseño de la solución a utilizar antes de escribir una línea de código.
+
+¿Cuales son las fases del modelo en cascada?
+4
+- Análisis y Diseño de Software, Sprint, Revisión del Sprint
+- Sprint, Revisión del Sprint y Retrosprectiva
+- Definición de requerimientos y Mantenimiento
+- Definición de requerimientos, Análisis y Diseño de Software, Implementación,Prueba,Implantación,Mantenimiento
+
+De los siguientes, ¿Cuáles son inconvenientes del modelo de desarrollo en cascada?
+1,2,3
+- El cliente debe ser capaz de especificar sin ambigüedades los requisitos del sistema que quiere.
+- La mayoría de errores se detectan en estas últimas etapas afectando notablemente a todo el proyecto.
+- La documentación no se actualiza
+- Los contactos del cliente con el desarrollo se producen durante todos los momentos del desarrollo
+
+El manifiesto Ágil ..
+3
+- Lo definen 100 expertos en 2007
+- Es una de las conclusiones de la conferencia de la OTAN en 1968
+- Lo definen 17 expertos en 2001
+- Es un cuento de Edgar Allan Poe
+
+De los siguientes ¿cuales son postulados del manifiesto ágil?
+2,3,4
+- Procesos y herramientas sobre individuos e interacciones
+- Software funcionando sobre documentación extensiva
+- Colaboración con el cliente sobre negociación contractual
+- Respuesta ante el cambio sobre seguir un plan
+
+De los siguientes, marca los que sean principios del manifiesto Ágil
+2,4
+- Entregamos software funcional frecuentemente, entre dos semanas y dos meses, con preferencia al periodo de tiempo más largo posible.
+- Los responsables de negocio y los desarrolladores trabajamos juntos de forma cotidiana durante todo el proyecto
+- Los requisitos se pueden modificar para permitir adaptarse al cambio, pero sólo en etapas tempranas del desarrollo.
+- Nuestra mayor prioridad es satisfacer al cliente mediante la entrega temprana y continua de software con valor
+
+De los siguientes, marca los que sean principios del manifiesto Ágil
+1,2,4
+- Los procesos Ágiles promueven el desarrollo sostenible. Los promotores, desarrolladores y usuarios debemos ser capaces de mantener un ritmo constante de forma indefinida.
+- El método más eficiente y efectivo de comunicar información al equipo de desarrollo y entre sus miembros es la conversación cara a cara.
+- El software bien documentado es la medida principal de progreso.
+- Los proyectos se desarrollan en torno a individuos motivados. Hay que darles el entorno y el apoyo que necesitan, y confiarles la ejecución del trabajo.
+
+De los siguientes, marca los que sean principios del manifiesto Ágil
+1,2,3
+- A intervalos regulares el equipo reflexiona sobre cómo ser más efectivo para a continuación ajustar y perfeccionar su comportamiento en consecuencia
+- La simplicidad, o el arte de maximizar la cantidad de trabajo no realizado, es esencial
+- La atención continua a la excelencia técnica y al buen diseño mejora la Agilidad
+- Las mejores arquitecturas, requisitos y diseños emergen de equipos bien dirigidos
+
+Indica cual o cuales de las afirmaciones sobre los orígenes de Scrum son ciertas
+1,3
+- En 1995 Ken Schwaber presentó en unas conferencias su “Scrum Development Process”, como un marco de reglas para desarrollo de software, basado en los principios de Scrum
+- El nombre de Scrum tiene sus orígenes en la forma de gestionar los partidos de soccer americano
+- Los modelos Scrum se aplicaban al desarrollo de productos que tenían requisitos enormemente variables
+- Los trabajos de Schwaber sirvieron de inspiración a Ikujiro Nonaka e Hirotaka Takeuchi para aplicar el Scrum también a los modelos de producción de productos tecnológicos
+
+Los actores del proceso Scrum son
+3
+- Product Owner, Scrum Master y Equipo de desarrollo
+- Stakeholders
+- Roles, eventos y artefactos
+- Harrison Ford, Mark Hamill y Carrie Fisher
+
+Indica cuáles de las siguientes afirmaciones son ciertas
+1,2,4
+- En el modelo en cascada tradicional se obtiene el producto completo al final
+- El modelo iterativo e incremental es uno de los pilares del proceso Scrum. El objetivo es realizar una serie de iteraciones, cada una de las cuales incrementan la funcionalidad del producto a desarrollar.
+- Utilizar Scrum y el modelo waterfall es totalmente compatible
+- Las iteraciones en Scrum deben producir incremento de funcionalidad en los productos
+
+En las reuniones Scrum
+1,2,3,4
+- El sistema debe adaptarse a los retrasos o a la falta de calidad detectada en una inspección. Cuanto antes se ajusten las desviaciones siempre será preferible
+- Para todos los miembros el concepto de “terminado” tiene que ser el mismo
+- Todos los miembros del equipo deben hablar un mismo lenguaje (informático)
+- Se debe comprobar el estado de cada uno de los elementos de desarrollo (artefacto) de tal forma que sin interferir al trabajo del que lo está realizando se pueda detectar que la noción que tiene el desarrollador sobre el estado de desarrollo es el mismo para el resto del equipo.
+
+En Scrum
+1,3
+- El cliente fija o al menos ayuda a fijar las prioridades
+- A la hora de planificar desarrollo sólo se tiene en cuanta aspectos técnicos
+- Se debe priorizar la parte del proyecto que aporta mayor valor de negocio.
+- Es preferible minimizar el ROI (retorno de inversión). Es decir se desarrollan primero aquellos elementos que tienen mayor dificultad o coste
+
+Indica cual o cuales de las siguientes afirmaciones es cierta
+1,2,4
+- En Scrum, dentro de las partes del proyecto priorizadas por el cliente, se definirán una serie de elementos a desarrollar de manera inminente. Solo para estos se realiza una definición o diseño en detalle
+- En las metodologías tradicionales, donde se dividían claramente diseño y desarrollo, una tarea suministraba la entrada de la segunda. Así se debía completar totalmente la fase de diseño de forma previa al desarrollo. Así se debía diseñar hasta un detalle razonable todas y cada una de las partes que componían el proyecto.
+- No se debe en ningún caso hacer una estimación de coste en horas de una parte del proyecto hasta que se vaya a implementar
+- Al definir en detalle solo aquellas partes que se van a implementar de manera inminente se evita que posibles cambios en los objetivos hagan inservibles las horas dedicadas a diseñar en detalle partes del proyecto que finalmente no va a ser desarrollado como inicialmente estaba previsto
+
+Características deseables de los equipos Scrum
+1,4
+- Nadie es más que nadie, todos y cada uno de los miembros del equipo no solo deben ayudarse sino respetarse y por supuesto compartir aciertos y fallos, ya que al final las decisiones no son individuales sino decisiones de equipo.
+- En Scrum la transparencia es un objetivo deseable, aunque no imprescindible
+- Los equipos Scrum no se focalizan en un objetivo muy concreto, distribuyen su esfuerzo en múltiples requisitos para agilizar desarrollo
+- El equipo SCRUM tiene mucha libertad para desarrollar su trabajo, pero esa libertad tiene como contraprestación el compromiso del equipo para lograr ese éxito que se espera del él.
+
+Indica cual de las siguientes afirmaciones sobre Scrum es o son ciertas.
+2,3
+- Las entregas son priorizadas por los desarrolladores de tal forma que pueden ser entregadas en primer lugar las que consideren prioritarias
+- El Scrum permite dividir un proyecto en entregas parciales con total funcionalidad.
+- Con Scrum se consigue una reducción del Time to Market. El cliente puede utilizar las partes funcionales ya finalizadas antes de que el proyecto esté totalmente acabado
+- El equipo se centra en las tareas priorizadas y en las que no lo son de forma proporcional.
+
+El modelo de entrega continua permite
+2,3,4
+- Facilita realizar presupuestos de trabajos de desarrollo a largo plazo
+- Más calidad, ya que implica un trabajo con tiempo de finalización corto, con compromiso de obtener un producto terminado tras cada sprint.
+- Ser flexible ante las modificaciones en los requerimientos.
+- Mayor productividad, al poner plazos de entrega cortos por una parte se concreta mucho más el objetivo y se pierden las divagaciones en elementos que no conducen al producto final
+
+El equipo Scrum consiste en
+1,1
+- Product Owner, Scrum Master y Development Team
+- Product Manager, Jefe de producto y Development Team
+- Product Manager, Scrum Master y Development Team
+- Cerdos y gallinas
+
+Indica cual o cuales de las siguientes afirmaciones sobre el Product Owner son ciertas
+1,2
+- Es importante destacar que siempre el Product Owner es una única persona, es la persona que asume la responsabilidad de determinar qué es ese producto, aunque obviamente pueda tener que hacer las consultas correspondientes a otras personas.
+- El Product Owner debe estar accesible por parte del Scrum Team en (casi) cualquier momento y debe formar parte activa de las reuniones en los que su presencia es requerida.
+- El Product Owner y el Scrum Master son las personas responsables de fijar los requerimientos del producto.
+- La empresa puede decidir que el Producto Owner sea realmente un comité o grupo de personas
+
+De las siguientes indica cual o cuales son tareas del Product Owner
+1,2,4
+- Hacerse respetar. Si la organización no respeta el criterio del Product Owner los anteriores ítems carecen de sentido, e incluso si perdiera la confianza del Scrum Team sobre la importancia de su criterio
+- Conseguir maximizar el valor del producto y del trabajo del Scrum Team. O sea maximizar especificaciones de producto al menor coste en número de horas del Scrum Team.
+- Determinar el coste de desarrollo de cada tarea
+- Marcar las prioridades y orden en el que los diferentes componentes del producto deben ser implementados.
+
+Especifica de las siguientes tareas cual o cuales son responsabilidad del Scrum Master
+1,2
+- Favorecer la auto-organización del equipo impidiendo interferencias y/o distracciones externas
+- Resuelve problemas e impedimentos que puedan afectar al equipo(ya sean informáticos o de intendencia).
+- Fija los time-boxes o tiempo que cuesta aproximadamente desarrollar cada tarea
+- Determina las prioridades de las tareas a desarrollar
+
+Especifica cual o cuales de las siguientes tareas son responsabilidad del Scrum Master
+1,2,4
+- Debe motivar al equipo, facilitando que consiga sus metas.
+- Debe gestionar la Lista de Producto (lista de tareas que engloba un proyecto) de manera efectiva cumpliendo las peticiones de los StakeHolders o interesados, por ello debe ser capaz de hacerles entender la mejor forma de priorizar tareas.
+- Es el máximo responsable de que todos los eventos Scrum se realicen en tiempo y forma.
+- Debe ser capaz de explicar el modelo Scrum al resto de la organización, haciéndole ver sus ventajas.
+
+Especifica cual o cuales de las siguientes características son propias de un equipo de desarrollo en Scrum
+1,2
+- Los equipos son multifuncionales, es decir tiene miembros con diferentes habilidades desde desarrollo puro a testing e incluso análisis.
+- El equipo es autónomo, no dependen de nadie externo al equipo a la hora de tomar decisiones. Es el mismo equipo el que toma las decisiones que afectan al proyecto que están desarrollando.
+- Los equipos son autoorganizados y son dirigidos por el Scrum Master
+- El tamaño del equipo es razonable hasta las 50/60 personas y quizá tengan poco sentido con menos de 4/5 personas.
+
+Especifica cual o cuales de las siguientes características son propias de un equipo de desarrollo Scrum
+1,2,3,4
+- Scrum no reconoce títulos para los miembros de un equipo de desarrollo, todos son desarrolladores, independientemente del trabajo que realice cada persona. No hay excepciones a esta regla.
+- Es ideal que todos los miembros del equipo tengan habilidades transversales imprescindibles en el desarrollo de proyectos informáticos (análisis, diseño, desarrollo, pruebas, documentación, etc).
+- Se basa en el trabajo colaborativo
+- Lo ideal es que los equipos Scrum se mantengan en el tiempo, en varios proyectos, lo que contribuye al conocimiento profesional y personal de los miembros del equipo.
+
+Indica cual o cuales de las siguientes características son propias de los StakeHolders
+1,4
+- Se refiere a la gente que hace posible el proyecto en el sentido de la financiación o solicitud así como aquellos para quienes el proyecto producirá el beneficio acordado
+- Su nombre viene originado por el uso de estacas (stake) contra los equipos de desarrollo que no cumplen plazos.
+- Solo puede ser visible uno para el equipo, el resto se relacionan a través de éste
+- Solo participan directamente durante las revisiones del producto que va finalizando el equipo de desarrollo
+
+Indica cual o cuales de las siguientes afirmaciones es o son falsas
+1,2,4
+- Quien decide en última instancia el orden en el que se deben desarrollar los incrementos de funcionalidad del producto es el Scrum Master
+- En caso de desarrollos internos para la propia empresa, el rol de Product Owner lo asume el jefe o responsable de Producción
+- El Product Owner debe conocer perfectamente el entorno de negocio del cliente
+- El rol de Product owner puede estar representado por varias personas en el caso de que se trabaje para una empresa grande con muchos departamentos
+
+Especifica cual o cuales de las siguientes características es propia de Scrum
+3,4
+- Esta prohibido jugar al LOL mientras se programa
+- Equipo gestionado por un jefe de proyecto o product manager
+- Solapamiento de fases, diseño y desarrollo
+- Desarrollo incremental
+
+¿Cual o cuales de las siguientes es un tipo de reunión Scrum?
+1,4
+- Reunión de planificación del Sprint
+- Sprint
+- Creación de la pila del Sprint
+- Revisión del Sprint
+
+¿Como se denomina la reunión en la que en base a las peticiones del cliente se determinan cuales van a ser las funcionalidades que se incorporarán al producto en el siguiente Sprint?
+2
+- Retrospectiva
+- Planificación del Sprint
+- Sprint Estimation
+- Scrum Diario
+
+Indica cual o cuales de las siguientes afirmaciones son ciertas acerca de la reunión de planificación del Sprint.
+2,3,4
+- En esta reunión se decide la Pila de Producto o todas las tareas que forman el proyecto
+- No debe durar más de un día
+- Los miembros del equipo deciden que tareas se van a realizar en el siguiente Sprint
+- Debe asistir el Product Owner
+
+En Scrum un incremento se produce
+2
+- En cada retrospectiva del Sprint
+- Cada día
+- En cada Sprint
+- En cada planificación del Sprint
+
+La afirmación "Un equipo Scrum tiene espíritu de colaboración y un propósito común, conseguir la menor desviación del plan del proyecto" es
+2
+- Verdadera
+- Falsa
+
+Indica cual o cuales de los siguientes elementos son salidas que se deben obtener de la reunión de planificación del Sprint
+1,3
+- Pila del Sprint
+- Pila de riesgos del Sprint
+- Duración del Sprint y fecha de revisión del mismo
+- Inventario de recursos
+
+La reunión de revisión del Sprint se debe realizar
+1
+- Cuando se decidió en la reunión de planificación de un Sprint.
+- Cuando el propietario modifique algunas de las tareas del presente sprint
+- Cuando se detecta una desviación importante del tiempo previsto sobre el que se está utilizando.
+- Cuando el Scrum Master lo considere oportuno.
+
+¿Como se llama la reunión en la que el equipo realiza un auto análisis de su forma de trabajar?
+1
+- Retrospectiva
+- Scrum Diario
+- Revisión
+- Planificación
+
+Los StakeHolders o interesados pueden acudir a la reunión de planificación del Sprint
+3
+- En el primer Sprint deben acudir, a partir del segundo solo bajo petición del equipo o del o Product owner
+- Nunca, deben delegar en el Product Owner
+- Cuando el equipo o el Product Owner lo consideren oportuno
+- Siempre que lo deseen
+
+La Pila del Sprint es:
+3
+- Un producto que permite dar energía a los miembros del equipo de desarrollo
+- La lista de requisitos definida y priorizada por el Dueño del producto al inicio del proyecto.
+- El conjunto de elementos de la Pila del producto seleccionados para el Sprint más el plan para conseguir el Objetivo del Sprint.
+- La lista de tareas de la que tomaremos el elemento a desarrollar durante el Sprint.
+
+La Pila del Producto o Product Backlog
+1,2
+- Nunca deja de cambiar, es un artefacto vivo.
+- El nivel de detalle de los requerimientos se va completando en las reuniones de refinamiento del Product Backlog
+- Se compone de los requisitos establecidos en la contratación del proyecto.
+- Requiere de la aceptación del Scrum Master para añadir modificaciones.
+
+¿Qué puede ser terminado en este Sprint?
+1
+- En la reunión de planificación de Sprint, el Scrum Team, bajo el liderazgo del Product Owner deben seleccionar aquellos PBI del Product Backlog que van a formar parte del siguiente Sprint.
+- Los elementos de la Lista de Producto seleccionados por el Sprint depende únicamente del Equipo de desarrollo.
+- El Scrum Master decide cuál es el objetivo del Sprint y lo traslada al Equipo de desarrollo.
+- El Dueño del producto y el Scrum Master deciden qué elementos de la Pila del producto se realizarán durante el Sprint.
+
+La Pila del Sprint:
+1,2
+- Puede contener elementos no previstos al inicio del proyecto.
+- Hace visible todo el trabajo que el Equipo de Desarrollo necesita para alcanzar el Objetivo del Sprint.
+- Hace visible en una gráfica todo el trabajo restante para finalizar el proyecto.
+- No debe incrementar sus tamaño durante la realización del Sprint
+
+La Pila del Producto cambia:
+3
+- No cambia nunca
+- Solo a requerimiento del Scrum Master si un elemento es demasiado complejo.
+- Cambia constantemente para que el producto sea más adecuado, competitivo y útil.
+- Cuando el producto deja de ser competitivo o útil o necesita una refactorización
+
+Los elementos o funcionalidades a construir en la Pila del Producto están normalmente priorizados por:
+3,4
+- La importancia que le dé el Scrum Master a su valor comercial.
+- La dificultad técnica que establezca el Equipo de Desarrollo. A mayor dificultad, mayor prioridad.
+- El valor que aporta su desarrollo en relación con su coste para construirlo.
+- Suele ser responsabilidad del Product Owner definir esa prioridad
+
+La preparación (grooming) de la Pila del Producto:
+2
+- Es un proceso en el cuál el Scrum Master y el Equipo de desarrollo evalúan la dificultad de los elementos a realizar durante el Sprint.
+- Es el acto de añadir detalle, estimaciones y ordenación a los elementos de la Pila del Producto.
+- Es el proceso de quemar todo rastro del Product Backlog una vez finalizado el proyecto
+- Es un proceso en el cuál el Dueño del producto y el Scrum Master definen qué se hará durante el Sprint.
+
+La Pila del Producto está normalmente ordenada por:
+1
+- Teniendo en cuenta valor, riesgo, prioridad y necesidad.
+- Los criterios de dificultad técnica definidos únicamente por el Equipo de Desarrollo.
+- Dificultad y riesgo definidos por el Scrum Master y el Equipo de Desarrollo.
+- La Pila de Producto no está ordenada
+
+Si se requieren nueva tareas al aprender más acerca del trabajo necesario para conseguir el Objetivo del Sprint:
+3
+- El Scrum Master deberá proteger al Equipo de cambios a la Pila del Sprint.
+- El Dueño del Producto y los interesados o StakeHolders deberán esperar a la siguiente
+- El Equipo de Desarrollo lo añade a la Pila del Sprint.
+- Se pueden incluir previa consulta a los interesados o StakeHolders
+
+¿Qué elementos de la Pila del Producto estarán en los primeros lugares de la lista?
+4
+- Aquellos elementos más difíciles o de mayor riesgo para detectar cuanto antes la posibilidad de éxito del sistema siguiendo el principio ‘Fail fast, fail cheap, fail often’.
+- Los que el equipo de trabajo defina cómo más fáciles de acometer y permitan por tanto entregar valor más rápidamente.
+- Los que fueron escritos primero
+- Los elementos definidos como prioritarios por el Dueño del Producto y para los que hay mayor claridad y detalle.
+
+Cada Incremento del producto es:
+4
+- Toda unidad de código o librería utilizada en el proyecto.
+- Lo contrario de decremento
+- La entrega de software que se realiza a la finalización del proyecto y sus sucesivas versiones.
+- Exhaustivamente probado, asegurando que todos los Incrementos funcionan en conjunto.
+
+La Definición de Terminado
+1
+- Se utiliza para evaluar cuándo se ha completado el trabajo sobre el Incremento del producto en el Sprint.
+- Es utilizada al final del proyecto para comprobar que el trabajo ha sido correctamente realizado.
+- Es realizada únicamente por el Equipo de trabajo que decide cuándo se ha terminado un trabajo y por tanto puede marcarse como ‘Hecho’.
+- Es utilizada en una expresión para acabar las reuniones con los interesados o Stakeholders
+
+La entrega de un Incremento de funcionalidad del producto en cada Sprint:
+2,3
+- Forma parte de los entregables del proyecto definidos al inicio del mismo.
+- Es potencialmente utilizable y se ajusta a la Definición de Terminado
+- Puede o no pasar a producción, pero debe cumplir las pautas que definen Terminado
+- Debe ser realizada al menos dos veces durante el ciclo de vida del proyecto.
+
+¿Cuándo podemos decir que un Sprint ha acabado?
+3
+- Cuando el Product Owner o Dueño del Producto deciden que es tiempo suficiente y quiere ver el estado de los trabajos.
+- Cuando todos los elementos de la pila pasan a Terminado
+- Cuando se ha acabado el tiempo prefijado para cada Sprint.
+- Cuando se han completado todas las funcionalidades previstas para el Sprint.
+
+La definición de ‘Terminado’ o ‘Done’:
+2
+- Es establecida en cada Sprint por el Scrum Master que, en la reunión de demo, decide si se aprueba o no la funcionalidad desarrollada.
+- Debe ser entendida por todos los miembros del equipo de trabajo de forma que haya transparencia a la hora de decidir cuándo una funcionalidad está realmente ‘Terminada’ o ‘Done’.
+- Es establecida al inicio del proyecto por el Product Owner mediante un criterio que sólo él comparte y que no puede ser cambiada o modificada a lo largo del proyecto para mantener la coherencia.
+- La pactan en cada reunión de Sprint Diario los miembros del equipo de desarrollo
+
+La definición de ‘Terminado’ o ‘Done’:
+2,3
+- Es el criterio que utiliza el Product Owner para decidir si el Incremento es interesante
+- Puede variar significativamente entre los distintos equipos de trabajo pero haber un claro entendimiento de qué significa ‘Terminado’ dentro de cada equipo.
+- Es una condición que debe cumplir cualquier Incremento de un Sprint para poder ser pasado a Producción
+- Es compartida por todos los equipos de trabajo que deben tener el mismo concepto de ‘Terminado’.
+
+Cuando varios equipos Scrum trabajan en un mismo producto:
+4
+- Cada equipo Scrum debe trabajar en un producto diferente y por tanto tener una Pila propia y única para su producto.
+- Depende del dinero disponible se pueden disponer de una o varias pilas de producto
+- Cada equipo de trabajo tendrán una Pila del Producto propia.
+- Una misma Pila del Producto puede ser compartida entre todos los equipos.
+
+Indica cual o cuales de las siguientes características no son propias de la agilidad
+2,2
+- Solapamiento de fases
+- Equipo gestionado por un gestor de proyecto
+- Resultado basado en el conocimiento de las personas
+- Desarrollo incremental
+
+Indica las afirmaciones que son correctas
+1,4
+- La pila del producto se sitúa en el área de las necesidades del cliente
+- La pila del sprint cubre todos los requisitos de software necesarios para dar respuesta a las funcionalidades esperadas por el cliente
+- La pila del sprint se sitúa en el área de las necesidades del cliente
+- A diferencia de un documento de requisitos delsistema, la pila del producto nunca se dá por completada; está en continuo crecimiento y evolución
+
+Indica cual o cuales de los siguientes aspectos se deberían especificar de forma obligatoria en los elementos que se hallan en la pila del producto
+5,5
+- Número de sprint en el que se realiza
+- Criterios de validación
+- Observaciones
+- Priorización
+- Identificador único
+
+El seguimiento del progreso del Sprint:
+3
+- Se resolverá mediante un tablero Kanban y diagramas de Gantt.
+- Solo se conoce al final del Sprint mediante los gráficos BurnOut y Burn Down
+- En cualquier momento durante un Sprint, es posible sumar el trabajo restante en los elementos de la Pila del Sprint para gestionar su progreso.
+- Es responsabilidad del Dueño del producto y del Scrum Master.
+
+La responsabilidad de proporcionar todas las estimaciones recae en:
+4
+- De los tres marcados en el resto de opciones
+- El Scrum Master.
+- El Dueño del producto.
+- El Equipo de Desarrollo.
+
+El tiempo empleado en trabajar en los elementos de la Pila del Sprint:
+3
+- Es la variable más utilizada en el seguimiento de proyectos con Scrum.
+- Es inversamente proporcional al tiempo que se había previsto
+- No es tenido en cuenta por Scrum. El trabajo restante y la fecha son las únicas variables de interés.
+- El Equipo de Desarrollo monitoriza el tiempo empleado en cada elemento de la Pila del Sprint y lo registra diariamente.
+
+Transparencia de los artefactos de Scrum:
+2,3
+- Las Pilas del Producto o del Sprint son accesibles en cada instante al Product Owner mientras que la información del seguimiento del proyecto lo es sólo cuando el Scrum Master la haya podido recopilar para las reuniones de seguimiento.
+- Es uno de los aspectos fundamentales a garantizar en Scrum
+- Los artefactos de Scrum como las Pilas del Producto o del Sprint y el Seguimiento del progreso deben ser accesibles y transparentes para cada uno de los interesados en el proyecto (Equipo, Scrum Master, Product Owner o Stakeholders).
+- Los artefactos de Scrum deben ser totalmente transparentes al Scrum Master y al equipo de trabajo pero no a Product Owner o Stakeholders.
+
+El Dueño del Producto hace seguimiento:
+4
+- De las horas de trabajo empleadas al menos una vez por cada Demo/Revisión del Sprint.
+- El dueño de producto no debe hacer ningún seguimiento.
+- Al menos una vez a la finalización de las fases de Análisis, Diseño y Desarrollo.
+- Del trabajo restante total al menos una vez por cada Demo/Revisión del Sprint.
+
+La información sobre el trabajo restante en las revisiones de Sprint previas:
+4
+- Solo se puede conocer por ordén judicial
+- Estará disponible sólo al Scrum Master y al Equipo de Desarrollo.
+- Es calculada, junto a las horas empleadas en cada tarea, al menos una vez por semana.
+- Se muestra de forma transparente a todos los interesados.
+
+Transparencia de los artefactos (Pila del Producto, Pila del Sprint, Seguimiento del Progreso):
+2
+- El Seguimiento del Progreso o trabajo restante mediante Gráfica Burndown o similares es opcional y puede ser interna al Equipo de Trabajo y Scrum Master a menos que el Product Owner o Interesados demanden conocer el estado del proyecto en una reunión de seguimiento.
+- Scrum se basa en la transparencia y es labor del Scrum Master fomentar y mejorar la transparencia de lo artefactos utilizados.
+- Se debe utilizar alternativamente o las gráficas Burn Up y las Burn Down
+- Los artefactos de Scrum deben ser totalmente transparentes a Product Owner e Interesados en las reuniones de seguimiento bimensuales que se organicen.
+
+¿Puede un Sprint ser terminado de forma precipitada?
+2
+- Sí, si el equipo de trabajo comprueba que las tareas comprometidas no podrán ser realizadas a tiempo en ningún caso.
+- Sí, si la meta del Sprint o las funcionalidades a desarrollar ya no van a ser útiles o han quedado obsoletas.
+- No, la meta de cada Sprint es un compromiso alcanzado por el equipo de trabajo que intentará realizar lo establecido en el Sprint hasta el final del mismo
+
+¿A que elemento corresponde la siguiente definición? Es un diagrama cartesiano que representa en las ordenadas el trabajo estimado para desarrollar el producto y en el eje de abcisas las fechas medidas según las duraciones previstas para los sprints
+4
+- Pila de producto
+- Tablero Kanban
+- Gráfica de Avance o Burn Down
+- Gráfico de producto o Burn Up
+
+Un equipo Scrum tiene espíritu de colaboración y un propósito común : conseguir la menor desviación del plan de proyecto.
+1
+- Falso
+- Verdadero
+
+¿Cual de las siguientes definiciones de velocidad consideras más correcta?
+4
+- Tiempo real del sprint dividido por el tiempo ideal estimado
+- Puntos de trabajo estimados divididos entre el tiempo real del sprint
+- Tiempo sobrante en un sprint. Puede ser negativo
+- Cantidad de trabajo realizado por unidad de tiempo
+
+¿Cuál de las siguientes es la razón por la que se suele emplear un juego de cartas con números en secuencia de Fibonacci en la estimación de poquer?
+4
+- Para lograr mayor precisión en equipos reducidos
+- Para que resulte más fácil al descomposición de tareas grandes
+- Para evitar empates en medida de lo posible
+- Para agrupar mejor las estimaciones al aumentar el tamaño de las tareas y con el margen previsible de error
+
+Indica la salidas o salidas que se deben obtener de la reunión de planificación del sprint
+1,2
+- Pila del Sprint
+- Duración del Sprint y fecha de la reunión de revisión
+- Gráfico BurnDown
+- Objetivo del Sprint
+- La pila de riesgos del Sprint
+
+¿Cuál es la unidad empleada en la gestión ágil para medir el esfuerzo para completar una tarea?
+4
+- Puntos de función
+- Punto de Scrum
+- Horas ideales
+- No hay una unidad estándar. Cada organización decide la suya según sus circunstancias.
+
+¿Cual de las siguientes afirmaciones es cierta respecto a la estimación de póquer?
+4
+- Es una práctica que facilita la elaboración del presupuesto a un cliente
+- Es una práctica de la Ingeniería de Software Clásica actualmte en desuso
+- Es una práctica ágil para la determinación del tamaño ideal del equipo de desarrollo
+- Es una práctica ágil empleada para estimar el esfuerzo que requieren las tareas
+
+Indica cual de las siguientes unidades son utilizadas en gestión ágil de proyectos
+3,4
+- LOC
+- Tiempo de compilación
+- Tiempo ideal
+- Puntos de función
+
+Para monitorizar el avance de un proyecto la gestión ágil mide
+2
+- El trabajo realizado menos el trabajo estimado
+- El trabajo pendiente
+- El trabajo realizado
+- El trabajo realizado o pendiente en función del gestor del proyecto
+
+El término WIP se refiere a
+5
+- Número máximo de personas que pueden estar trabajando en ese área de forma simultanea
+- Es un parámetro relativo a un día y representa el trabajo que se está llevando a cabo en ese día
+- El parámetro que mide el número mínimo de tareas que pueden encontrarse en un estado de forma simultanea
+- El tiempo relativo que falta para completar las tareas que están en curso
+- El parámetro que mide el número máximo de tareas que pueden encontrarse en un estado de forma simultanea
+
+Indica cual o cuales de las siguientes afirmaciones sobre la estimación de póquer son falsas
+2,3
+- Las tareas de un tamaño demasiado grande deben dividirse en subtareas de menor tamaño
+- Los participantes no pueden hablar entre ellos
+- Cuando las estimaciones de los miembros de un equipo son muy dispares se debe hacer una pausa.
+- En la estimación de póquer cada participante tiene un juego de cartas que emplea para mostrar el valor de esfuerzo que estima para cada tarea
+
+Indica cual o cuales de las siguientes afirmaciones sobre la estimación de póquer son falsas
+2,3
+- Es posible utilizar una carta con un símbolo de duda o interrogación para mostrar que no es posible precisar una estimación
+- Los programadores noveles sólo pueden participar si tienen el certificado de Poquer Manager
+- Al dueño del producto se le entregan los resultados pero no debe acudir a la reunión
+- Si se emplea una baraja con la secuencia de Fibonacci, no se debe levantar más de una carta para componer el resultado
+
+Un hombre apareció después de que el propietario apagara las luces
+1
+- No hay datos
+- Incorrecto
+- Correcto
+
+El ladrón fue un hombre
+1
+- No hay datos
+- Incorrecto
+- Correcto
+
+El hombre que apareció no pidió dinero
+1
+- Incorrecto
+- No hay datos
+- Correcto
+
+El propietario vació la caja registradora
+3
+- Correcto
+- Incorrecto
+- No hay datos
+
+Una vez que el hombre pidió dinero, lo colocara en su bolsillo, salió corriendo
+2
+- No hay datos
+- Incorrecto
+- Correcto
+
+El ladrón pidió dinero al propietario
+2
+- Correcto
+- No hay datos
+- Incorrecto
+
+Un farmacéutico acababa de apagar las luces, cuando un hombre entró en la farmacia.
+3
+- Correcto
+- Incorrecto
+- No hay datos
+
+Era pleno día cuando el hombre apareció.
+3
+- Correcto
+- Incorrecto
+- No hay datos
+
+El hombre que apareció en la farmacia, abrió la caja registradora
+3
+- Correcto
+- Incorrecto
+- No hay datos
+
+La Pila del Producto está normalmente ordenada por:
+1
+- Teniendo en cuenta valor, riesgo, prioridad y necesidad.
+- La Pila de Producto no está ordenada
+- Dificultad y riesgo definidos por el Scrum Master y el Equipo de Desarrollo.
+- Los criterios de dificultad técnica definidos únicamente por el Equipo de Desarrollo.
+
+Los elementos o funcionalidades a construir en la Pila del Producto están normalmente priorizados por:
+1,4
+- Suele ser responsabilidad del Product Owner definir esa prioridad
+- La dificultad técnica que establezca el Equipo de Desarrollo. A mayor dificultad, mayor prioridad.
+- La importancia que le dé el Scrum Master a su valor comercial.
+- El valor que aporta su desarrollo en relación con su coste para construirlo.
+
+En Scrum un incremento se produce
+4
+- En cada planificación del Sprint
+- En cada retrospectiva del Sprint
+- En cada Sprint
+- Cada día
+
+Indica cual o cuales de las siguientes características son propias de los StakeHolders
+2,4
+- Su nombre viene originado por el uso de estacas (stake) contra los equipos de desarrollo que no cumplen plazos.
+- Solo participan directamente durante las revisiones del producto que va finalizando el equipo de desarrollo
+- Solo puede ser visible uno para el equipo, el resto se relacionan a través de éste
+- Se refiere a la gente que hace posible el proyecto en el sentido de la financiación o solicitud así como aquellos para quienes el proyecto producirá el beneficio acordado
+
+¿Cuándo podemos decir que un Sprint ha acabado?
+4
+- Cuando el Product Owner o Dueño del Producto deciden que es tiempo suficiente y quiere ver el estado de los trabajos.
+- Cuando se han completado todas las funcionalidades previstas para el Sprint.
+- Cuando todos los elementos de la pila pasan a Terminado
+- Cuando se ha acabado el tiempo prefijado para cada Sprint.
+
+Cada Incremento del producto es:
+1
+- Exhaustivamente probado, asegurando que todos los Incrementos funcionan en conjunto.
+- Lo contrario de decremento
+- Toda unidad de código o librería utilizada en el proyecto.
+- La entrega de software que se realiza a la finalización del proyecto y sus sucesivas versiones.
+
+¿Qué puede ser terminado en este Sprint?
+1
+- En la reunión de planificación de Sprint, el Scrum Team, bajo el liderazgo del Product Owner deben seleccionar aquellos PBI del Product Backlog que van a formar parte del siguiente Sprint.
+- El Dueño del producto y el Scrum Master deciden qué elementos de la Pila del producto se realizarán durante el Sprint.
+- Los elementos de la Lista de Producto seleccionados por el Sprint depende únicamente del Equipo de desarrollo.
+- El Scrum Master decide cuál es el objetivo del Sprint y lo traslada al Equipo de desarrollo.
+
+Indica cuáles de las siguientes afirmaciones son ciertas
+2,3,4
+- Utilizar Scrum y el modelo waterfall es totalmente compatible
+- El modelo iterativo e incremental es uno de los pilares del proceso Scrum. El objetivo es realizar una serie de iteraciones, cada una de las cuales incrementan la funcionalidad del producto a desarrollar.
+- Las iteraciones en Scrum deben producir incremento de funcionalidad en los productos
+- En el modelo en cascada tradicional se obtiene el producto completo al final
+
+La Pila del Sprint:
+2,4
+- Hace visible en una gráfica todo el trabajo restante para finalizar el proyecto.
+- Puede contener elementos no previstos al inicio del proyecto.
+- No debe incrementar sus tamaño durante la realización del Sprint
+- Hace visible todo el trabajo que el Equipo de Desarrollo necesita para alcanzar el Objetivo del Sprint.
+
+De los siguientes, marca los que sean principios del manifiesto Ágil
+2,4
+- Los requisitos se pueden modificar para permitir adaptarse al cambio, pero sólo en etapas tempranas del desarrollo.
+- Nuestra mayor prioridad es satisfacer al cliente mediante la entrega temprana y continua de software con valor
+- Entregamos software funcional frecuentemente, entre dos semanas y dos meses, con preferencia al periodo de tiempo más largo posible.
+- Los responsables de negocio y los desarrolladores trabajamos juntos de forma cotidiana durante todo el proyecto
+
+Indica cual o cuales de las siguientes afirmaciones son ciertas acerca de la reunión de planificación del Sprint.
+1,2,3
+- Debe asistir el Product Owner
+- No debe durar más de un día
+- Los miembros del equipo deciden que tareas se van a realizar en el siguiente Sprint
+- En esta reunión se decide la Pila de Producto o todas las tareas que forman el proyecto
+
+Indica cual o cuales de las siguientes afirmaciones es cierta
+2,3,4
+- No se debe en ningún caso hacer una estimación de coste en horas de una parte del proyecto hasta que se vaya a implementar
+- En Scrum, dentro de las partes del proyecto priorizadas por el cliente, se definirán una serie de elementos a desarrollar de manera inminente. Solo para estos se realiza una definición o diseño en detalle
+- Al definir en detalle solo aquellas partes que se van a implementar de manera inminente se evita que posibles cambios en los objetivos hagan inservibles las horas dedicadas a diseñar en detalle partes del proyecto que finalmente no va a ser desarrollado como inicialmente estaba previsto
+- En las metodologías tradicionales, donde se dividían claramente diseño y desarrollo, una tarea suministraba la entrada de la segunda. Así se debía completar totalmente la fase de diseño de forma previa al desarrollo. Así se debía diseñar hasta un detalle razonable todas y cada una de las partes que componían el proyecto.
+
+La preparación (grooming) de la Pila del Producto:
+1
+- Es el acto de añadir detalle, estimaciones y ordenación a los elementos de la Pila del Producto.
+- Es un proceso en el cuál el Scrum Master y el Equipo de desarrollo evalúan la dificultad de los elementos a realizar durante el Sprint.
+- Es un proceso en el cuál el Dueño del producto y el Scrum Master definen qué se hará durante el Sprint.
+- Es el proceso de quemar todo rastro del Product Backlog una vez finalizado el proyecto
+
+Indica las afirmaciones que son correctas
+1,4
+- A diferencia de un documento de requisitos delsistema, la pila del producto nunca se dá por completada; está en continuo crecimiento y evolución
+- La pila del sprint cubre todos los requisitos de software necesarios para dar respuesta a las funcionalidades esperadas por el cliente
+- La pila del sprint se sitúa en el área de las necesidades del cliente
+- La pila del producto se sitúa en el área de las necesidades del cliente
+
+De las siguientes indica cual o cuales son tareas del Product Owner
+1,3,4
+- Marcar las prioridades y orden en el que los diferentes componentes del producto deben ser implementados.
+- Determinar el coste de desarrollo de cada tarea
+- Conseguir maximizar el valor del producto y del trabajo del Scrum Team. O sea maximizar especificaciones de producto al menor coste en número de horas del Scrum Team.
+- Hacerse respetar. Si la organización no respeta el criterio del Product Owner los anteriores ítems carecen de sentido, e incluso si perdiera la confianza del Scrum Team sobre la importancia de su criterio
+
+De los siguientes, marca los que sean principios del manifiesto Ágil
+1,3,4
+- Los proyectos se desarrollan en torno a individuos motivados. Hay que darles el entorno y el apoyo que necesitan, y confiarles la ejecución del trabajo.
+- El software bien documentado es la medida principal de progreso.
+- Los procesos Ágiles promueven el desarrollo sostenible. Los promotores, desarrolladores y usuarios debemos ser capaces de mantener un ritmo constante de forma indefinida.
+- El método más eficiente y efectivo de comunicar información al equipo de desarrollo y entre sus miembros es la conversación cara a cara.
+
+La responsabilidad de proporcionar todas las estimaciones recae en:
+2
+- El Dueño del producto.
+- El Equipo de Desarrollo.
+- De los tres marcados en el resto de opciones
+- El Scrum Master.
+
+¿Puede un Sprint ser terminado de forma precipitada?
+3
+- No, la meta de cada Sprint es un compromiso alcanzado por el equipo de trabajo que intentará realizar lo establecido en el Sprint hasta el final del mismo
+- Sí, si el equipo de trabajo comprueba que las tareas comprometidas no podrán ser realizadas a tiempo en ningún caso.
+- Sí, si la meta del Sprint o las funcionalidades a desarrollar ya no van a ser útiles o han quedado obsoletas.
+
+En Scrum
+1,4
+- Se debe priorizar la parte del proyecto que aporta mayor valor de negocio.
+- A la hora de planificar desarrollo sólo se tiene en cuanta aspectos técnicos
+- Es preferible minimizar el ROI (retorno de inversión) . Es decir se desarrollan primero aquellos elementos que tienen mayor dificultad o coste
+- El cliente fija o al menos ayuda a fijar las prioridades
+
+Transparencia de los artefactos (Pila del Producto, Pila del Sprint, Seguimiento del Progreso):
+1
+- Scrum se basa en la transparencia y es labor del Scrum Master fomentar y mejorar la transparencia de los artefactos utilizados.
+- Los artefactos de Scrum deben ser totalmente transparentes a Product Owner e Interesados en las reuniones de seguimiento bimensuales que se organicen.
+- Se debe utilizar alternativamente o las gráficas Burn Up y las Burn Down
+- El Seguimiento del Progreso o trabajo restante mediante Gráfica Burndown o similares es opcional y puede ser interna al Equipo de Trabajo y Scrum Master a menos que el Product Owner o Interesados demanden conocer el estado del proyecto en una reunión de seguimiento.
+
+La reunión de revisión del Sprint se debe realizar
+2
+- Cuando el Scrum Master lo considere oportuno.
+- Cuando se decidió en la reunión de planificación de un Sprint.
+- Cuando se detecta una desviación importante del tiempo previsto sobre el que se está utilizando.
+- Cuando el propietario modifique algunas de las tareas del presente sprint
+
+Si se requieren nueva tareas al aprender más acerca del trabajo necesario para conseguir el Objetivo del Sprint:
+2
+- El Scrum Master deberá proteger al Equipo de cambios a la Pila del Sprint.
+- El Equipo de Desarrollo lo añade a la Pila del Sprint.
+- Se pueden incluir previa consulta a los interesados o StakeHolders
+- El Dueño del Producto y los interesados o StakeHolders deberán esperar a la siguiente

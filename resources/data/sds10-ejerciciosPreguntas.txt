@@ -1,0 +1,342 @@
+¿Qué ventaja ofrece derivar kLogin = SHA-512(passwd) en el cliente antes de enviarlo al servidor?
+2
+Permite cifrar la contraseña en el servidor.
+Genera un resumen de la contraseña con longitud fija antes de la transmisión.
+Encripta la clave simétrica.
+Introduce una marca temporal en la autentificación.
+
+¿Qué algoritmo de derivación de claves utiliza el servidor en el ejemplo para verificar la autenticación?
+2
+PBKDF2 con SHA-256
+Argon2
+BCrypt
+Scrypt
+
+¿Cuál es la principal ventaja de almacenar contraseñas con una salt aleatoria por usuario?
+2
+Reducir el tamaño de los hashes en la base de datos
+Prevenir ataques de rainbow tables
+Mejorar el rendimiento de las búsquedas
+Permitir contraseñas más cortas
+
+¿Por qué el ejercicio no especifica parámetros criptográficos concretos para HTTPS/TLS?
+1
+Porque el protocolo los negocia dinámicamente entre cliente y servidor
+Porque siempre se usa AES-128 en TLS
+Porque TLS no admite cifrado configurable
+Porque es responsabilidad del sistema operativo
+
+En el cifrado a nivel de sistema operativo para discos, ¿qué modo se emplea típicamente?
+3
+AES-CBC
+ChaCha20
+AES-XTS
+RSA
+
+¿Cuál de estos modos de cifrado ofrece garantía de integridad además de confidencialidad?
+2
+AES-CTR
+ChaCha20-Poly1305
+AES-CBC
+RSA-OAEP
+
+¿Qué función cumple la operación EKpriv(H(M)) en la firma digital de un análisis?
+2
+Cifrar todo el mensaje original
+Crear un resumen cifrado que garantiza integridad y no repudio
+Generar una clave compartida
+Establecer un canal seguro
+
+¿Qué combinación de algoritmos se propone como opción equilibrada para firma digital y resumen en el contexto del laboratorio?
+2
+RSA-1024 y SHA-256
+ECDSA-256 y SHA-512
+RSA-3072 y MD5
+ECDSA-512 y SHA-1
+
+¿Por qué es necesaria una marca temporal (timestamp) en cada solicitud del registro digital?
+2
+Para cifrar la petición con mayor seguridad
+Para evitar ataques de repetición y definir caducidad
+Para comprimir los datos antes de enviar
+Para autenticar al usuario automáticamente
+
+¿Qué paso adicional proporciona confidencialidad más allá de HTTPS en el protocolo de registro digital?
+2
+Uso de JSON Web Tokens (JWT)
+Cifrar la petición con una clave simétrica y cifrar esta clave con la clave pública de la entidad
+Configurar políticas CORS estrictas
+Añadir sal a la contraseña del usuario
+
+¿Cuál es una característica distintiva de ChaCha20 frente a AES en modo CTR para cifrado a nivel de aplicación?
+3
+ChaCha20 no proporciona confidencialidad
+AES-CTR siempre incluye autenticación de mensaje
+ChaCha20 siempre usa clave de 256 bits y no tiene modos de operación variables
+AES-CTR no es compatible con dispositivos móviles
+
+¿Qué rol puede asumir el portal para facilitar la verificación de firmas por parte del paciente o terceros?
+2
+Firmar los resultados con contraseñas en lugar de claves públicas
+Comprobar las firmas digitalmente y presentar el estado de validez al usuario
+Omitir la verificación para mejorar rendimiento
+Revocar certificados tras cada sesión
+
+¿Qué técnica describe el uso de “pepper” en el hashing de contraseñas?
+2
+Generar una salt distinta para cada autenticación
+Concatenar una clave secreta global antes de hashear
+Usar Argon2 en lugar de SHA-512
+Derivar la clave con PBKDF2 en el cliente
+
+¿Para qué sirve concatenar user||passwd antes de derivar kLogin en la autenticación cliente-servidor?
+1
+Evitar que dos usuarios con la misma contraseña tengan el mismo hash
+Reducir la longitud total de la contraseña
+Cifrar la contraseña con una clave pública
+Acelerar el proceso de verificación de la contraseña
+
+¿Cuál es el propósito de aplicar kLogin = SHA-512(passwd) en el cliente antes de enviarlo al servidor?  
+2  
+- Cifrar la contraseña en el servidor.  
+- Reducir el riesgo de que la contraseña viaje en texto claro.  
+- Aumentar el tamaño de la contraseña.  
+- Introducir una marca temporal.  
+
+¿Por qué se utiliza una salt aleatoria por usuario al almacenar contraseñas?  
+2  
+- Para que todas las contraseñas tengan el mismo hash.  
+- Para impedir ataques de rainbow tables.  
+- Para acelerar la verificación de contraseñas.  
+- Para permitir contraseñas más cortas.  
+
+¿Qué añade la “pepper” al esquema de hashing de contraseñas?  
+2  
+- Una salt distinta para cada autenticación.  
+- Un valor secreto global concatenado antes de hashear.  
+- Un algoritmo de derivación más lento.  
+- Una marca temporal al hash.  
+
+¿Qué función cumple Argon2 en el proceso de autenticación del servidor?  
+2  
+- Derivar la clave kLogin con sal y ajustes para resistencia a GPU.  
+- Generar la salt aleatoria en el cliente.  
+- Cifrar la contraseña en tránsito.  
+- Crear una firma digital de la contraseña.  
+
+¿Cuál es la razón de no especificar algoritmos concretos al usar HTTPS/TLS?  
+1  
+- Porque el cliente y el servidor negocian dinámicamente los parámetros.  
+- Porque TLS solo admite AES-256.  
+- Porque siempre se usa RSA en TLS.  
+- Porque HTTPS no admite cifrado configurable.  
+
+En cifrado a nivel de disco a través del sistema operativo, ¿qué modo se emplea habitualmente?  
+3  
+- AES-CBC  
+- ChaCha20  
+- AES-XTS  
+- RSA-OAEP  
+
+¿Qué limitación suelen tener las implementaciones de cifrado “transparentes” de bases de datos?  
+2  
+- Sólo usan ChaCha20.  
+- Guardan la clave en disco sin posibilidad de rotación.  
+- No cifran los índices.  
+- No funcionan en la nube.  
+
+Cuando se cifra en la aplicación con AES en modo CTR, ¿qué aspecto no garantiza por sí solo?  
+1  
+- Integridad de los datos.  
+- Confidencialidad.  
+- Rendimiento.  
+- Compatibilidad.  
+
+¿Qué ventaja ofrece ChaCha20-Poly1305 frente a AES-CTR?  
+2  
+- Mayor velocidad en hardware PCI.  
+- Autenticación e integridad además de confidencialidad.  
+- Claves variables de 512 bit.  
+- Soporte nativo en todos los navegadores.  
+
+¿Por qué se utiliza EKpriv(H(M)) al firmar digitalmente un análisis?  
+2  
+- Para cifrar todo el mensaje M.  
+- Para crear un resumen firmado que evita repudio e integra content.  
+- Para intercambiar claves simétricas.  
+- Para negociar una sesión TLS.  
+
+¿Qué combinación se sugiere como opción equilibrada para firma y hash en el laboratorio?  
+2  
+- RSA-1024 + MD5  
+- ECDSA-256 + SHA-512  
+- RSA-3072 + SHA-512  
+- DSA-2048 + SHA-1  
+
+¿Cuál es la función de la marca temporal en cada solicitud del registro digital?  
+2  
+- Identificar automáticamente al usuario.  
+- Prevenir ataques de repetición y definir caducidad.  
+- Comprimir el mensaje antes de firmar.  
+- Agregar una salt adicional al registro.  
+
+¿Qué paso añade confidencialidad extra sobre TLS en el protocolo de registro digital?  
+2  
+- Uso de JWT con encriptación.  
+- Cifrar el mensaje con clave simétrica y cifrar esta clave con la clave pública de la entidad.  
+- Aplicar políticas CORS estrictas.  
+- Derivar kLogin con PBKDF2.  
+
+¿Cuál es la diferencia clave entre CORS y CSRF?  
+1  
+- CORS controla orígenes de peticiones desde el navegador; CSRF explota credenciales del usuario.  
+- CSRF negocia el cifrado en TLS; CORS no.  
+- CORS añade autenticación; CSRF no.  
+- CSRF solo afecta a WebSockets.  
+
+¿Por qué no se recomienda especificar un algoritmo concreto dentro de “HTTPS” al responder un examen?  
+1  
+- Porque TLS negocia automáticamente el algoritmo con el otro extremo.  
+- Porque HTTPS siempre usa RSA.  
+- Porque no importa el algoritmo en TLS.  
+- Porque HTTPS no cifra la capa de aplicación.  
+
+¿Qué ventaja práctica tiene usar RSA-3072 en vez de RSA-2048 para firma digital?  
+2  
+- Mejora la compatibilidad con navegadores antiguos.  
+- Aumenta el margen de seguridad para que la firma perdure sin ser rota.  
+- Reduce el tamaño de la clave pública almacenada.  
+- Permite firmas más rápidas en hardware móvil.  
+
+¿Cuál es el motivo para ofrecer al portal la comprobación de firmas en lugar de dejarlo al paciente?  
+2  
+- Para mejorar el rendimiento del servidor.  
+- Para abstraer la complejidad de verificación al usuario final.  
+- Para omitir la autoridad certificadora.  
+- Para almacenar menos claves públicas.  
+
+¿Cómo se evita que un atacante reutilice un mensaje firmado (ataque de repetición)?  
+2  
+- Cifrando la marca temporal con RSA.  
+- Incluyendo un timestamp único en la firma.  
+- Usando AES-XTS en cada mensaje.  
+- Añadiendo sal aleatoria al mensaje.  
+
+¿Qué representa Kc = EKpubR(Ks) en el esquema de confidencialidad adicional?  
+2  
+- La firma del mensaje con clave simétrica.  
+- El cifrado de la clave simétrica Ks con la clave pública de la entidad.  
+- La derivación de Ks mediante hashing.  
+- El intercambio de certificados digitales.  
+
+¿Cuál es el papel de la autoridad certificadora (CA) en el esquema de firma digital?  
+2  
+- Generar las claves privadas de todos los usuarios.  
+- Firmar las claves públicas para validar su autenticidad.  
+- Cifrar las peticiones antes de enviarlas.  
+- Negociar los parámetros de TLS.  
+
+Un cliente web necesita llamar a una API en otro dominio para obtener datos. Tras implementarlo, el navegador bloquea la petición y se registra un error de CORS. ¿Cuál es la causa y cómo solucionarlo?  
+2  
+- Se debe desactivar HTTPS en la API.  
+- El servidor API debe incluir el encabezado Access-Control-Allow-Origin con el origen del cliente.  
+- Hay que cambiar SHA-512 por SHA-256 en la petición.  
+- Incrementar el tiempo de espera (timeout) de la petición.  
+
+Se detecta que un atacante captura mensajes legítimos firmados y los reenvía días después para falsificar solicitudes. ¿Qué medida evita este ataque de repetición?  
+2  
+- Generar un hash más largo.  
+- Incluir un timestamp único dentro de los datos firmados.  
+- Cambiar SHA-512 por MD5.  
+- Usar solo AES-CTR en la firma.  
+
+Un usuario conecta por HTTP y un atacante redirige la conexión a HTTP inseguro al hacer stripping. ¿Cómo se previene este ataque?  
+2  
+- Configurando HSTS (Strict-Transport-Security) en el servidor.  
+- Aumentando la longitud de la clave RSA.  
+- Activando CSRF tokens en cada formulario.  
+- Cambiando PBKDF2 por Argon2.  
+
+Para que una contraseña resista ataques de GPU durante años, ¿qué parámetro de Argon2 es más crítico aumentar?  
+3  
+- La longitud de la salt aleatoria.  
+- El número de teclas derivadas.  
+- El coste de memoria (memory cost).  
+- El tamaño de la clave pública.  
+
+En un laboratorio con usuarios ancianos, ¿qué segundo factor de autenticación es más usable?  
+4  
+- Token hardware OTP con pantalla.  
+- PIN complejo de 12 dígitos.  
+- Firma digital con certificado.  
+- Código OTP enviado por SMS tras registro presencial.  
+
+Deseas que tu firma digital con RSA no se vuelva insegura en los próximos 10 años. ¿Qué tamaño mínimo de clave debes usar?  
+2  
+- 1024 bits  
+- 3072 bits  
+- 2048 bits  
+- 512 bits  
+
+Para añadir una capa extra de confidencialidad, el solicitante cifra Mf||T con una clave simétrica Ks y luego cifra Ks con la clave pública del servidor. ¿Cómo se llama esta técnica?  
+1  
+- Cifrado híbrido (hybrid encryption).  
+- Autenticación mutua.  
+- Cifrado por bloques (block encryption).  
+- Modo de operación XTS.  
+
+La base de datos ofrece cifrado “transparente” pero no puedes elegir la clave. ¿Qué opción es más segura para evitar este problema?  
+2  
+- Confiar en la implementación de la base de datos.  
+- Cifrar los datos en la capa de aplicación antes de almacenarlos.  
+- Cambiar a ChaCha20-Poly1305 en TLS.  
+- Derivar kLogin con SHA-512 en el cliente.  
+
+Al describir HTTPS en un examen, un alumno incluye “AES-256-GCM” como algoritmo fijo. ¿Por qué es incorrecto?  
+1  
+- Porque TLS negocia dinámicamente el algoritmo en el handshake.  
+- Porque TLS no admite GCM.  
+- Porque HTTPS usa siempre ChaCha20.  
+- Porque los navegadores solo soportan CBC.  
+
+Un hospital externo quiere verificar la firma de un análisis clínico enviado por el portal. ¿Quién es el responsable de facilitar esta verificación?  
+2  
+- El paciente, que descarga la firma y la comprueba manualmente.  
+- El portal, que presenta al hospital el estado de validez tras comprobar la firma.  
+- La entidad certificadora, que genera un nuevo certificado cada sesión.  
+- El analista, que reenvía su clave privada.  
+
+El portal debe recibir solicitudes (firmadas+cifradas) y almacenarlas de forma que solo él pueda leerlas y siempre quede constancia de autoría. ¿Qué combinación aplicar?  
+1  
+- Cifrado híbrido: cifrar solicitud con Ks, cifrar Ks con clave pública del portal, y firma de (S||T) con clave privada del solicitante.  
+- Solo firma digital de S con RSA-2048.  
+- TLS en transporte y hash de S en SHA-256.  
+- Almacenamiento en disco sin cifrar y sin firma.  
+
+¿Qué diferencia clave tiene el “pepper” respecto a la “salt” en el hashing de contraseñas?  
+2  
+- El pepper es secreto y global; la salt es pública y única por usuario.  
+- El pepper se utiliza solo en Argon2; la salt solo en SHA-512.  
+- El pepper añade una marca temporal; la salt no.  
+- La salt cifra la contraseña; el pepper la firma.  
+
+En Argon2, un parámetro de “time cost” muy alto puede:  
+3  
+- Aumentar el uso de memoria.  
+- Reducir la longitud de la salt.  
+- Incrementar el tiempo de cómputo de la derivación.  
+- Disminuir la seguridad contra GPU.  
+
+Para un sistema web con biometría como segundo factor, ¿cuál es el mayor riesgo mencionado?  
+2  
+- Que la cara no sea tan única como una contraseña.  
+- Que la biometría actúe solo como proxy y no sea tan segura como la contraseña.  
+- Que Face ID falle bajo HTTPS.  
+- Que el usuario olvide su PIN.  
+
+En un entorno con alta carga de firma/verificación en tiempo real, ¿qué algoritmo suele elegirse por rendimiento?  
+3  
+- RSA-4096  
+- SHA-512  
+- ECDSA-256  
+- MD5  

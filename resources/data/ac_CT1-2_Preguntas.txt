@@ -1,0 +1,173 @@
+Sobre el concepto del rendimiento 
+2
+- La utilización de más procesadores en los sistemas de reserva de vuelos para tareas separadas afectan tanto al tiempo de respuesta del programa como a la productividad
+- El rendimiento del computador se asocia a la velocidad de computo para un programa dado o a la capacidad de ejecutar un mayor número de transacciones por hora según el punto de vista del usuario o de un administrador de una colección de computadores respectivamente
+- El tiempo de ejecución de un programa es directamente proporcional al rendimiento del computador que lo ejecuta
+
+¿Qué niveles de la arquitectura de un computador determinan el número medio de ciclos por instrucción (CPI)? 
+1
+- Repertorio de instrucciones y Organización 
+- Ninguno de ellos 
+- Organización y Hardware
+
+Sobre los tipos de computadores 
+3
+- Los clusters son sistemas presentes en máquinas: microondas, lavadoras, impresoras, switches, coches... 
+- Los sistemas embebidos son LANs de sobremesas y servidores actuando como un gran computador 
+- En los ordenadores de sobremesa los parámetros que priman son el precio y el rendimiento
+
+Sobre la clasificación de Flynn 
+3
+- SIMD: un único flujo de instrucciones procesa operandos y genera resultados, definiendo un único flujo de datos 
+- SISD: un único flujo de instrucciones procesa operandos y genera resultados, definiendo varios flujos de datos 
+- MIMD: el computador ejecuta varias secuencias o flujos distintos de instrucciones, y cada uno de ellos procesa operandos y genera resultados definiendo un único flujo de instrucciones, de forma que existen también varios flujos de datos uno por cada flujo de instrucciones
+
+Sobre la evolución del rendimiento 
+1
+- El rendimiento de los computadores ha tenido un gran progreso en los últimos 65 años gracias a los avances tecnológicos y en las innovaciones en el diseño del computador 
+- Los avances tecnológicos han logrado una reducción del tamaño del transistor y una mejora en la frecuencia de reloj. Sin embargo, no fue consistente en los primeros 40 años desde la aparición del primer PC 
+- La emergencia del microprocesador permitió dos cambios significativos para el diseñó de computadores: la eliminación virtual del lenguaje ensamblador y la aparición de los compiladores
+
+Sobre el proceso de diseño de arquitecturas de computadores. Tendencias en tecnologías hardware 
+1
+- Tecnología de circuitos integrados: El número de transistores en un chip aumenta aproximadamente el 35% por año, x4 en 4 años 
+- Tecnología de disco: La densidad aumenta desde 2004 un 80% año x7 cada 3 años 
+- DRAM semiconductora: La densidad aumenta en un 90% por año, quintuplicándose en tres años
+
+Sobre las colecciones de benchmarks 
+1
+- Las colecciones de benchmarks permiten medir el rendimiento de los procesadores con una variedad de aplicaciones 
+- En las colecciones de benchmarks, la debilidad de algún benchmark no puede ser minimizada por la presencia de otros 
+- Las colecciones de benchmarks están formadas por programas que pueden ser núcleos, pero fundamentalmente son programas reales
+
+Sobre el proceso de diseño de arquitecturas de computadores. Establecer requerimientos funcionales y especificar 
+3
+- Cuando el diseñador de CPUs decide fijar el nivel de compatibilidad software en el código binario compatible, busca una mayor flexibilidad en el diseño del repertorio de instrucciones 
+- Los dispositivos móviles personales requieren CPUs con capacidad de procesamiento de transacciones y soporte para bases de datos 
+- Para establecer los requerimientos funcionales de un computador hay que tener en cuenta, entre otras cuestiones, los requerimientos del sistema operativo (tamaño del espacio de direcciones, gestión de memoria, cambio de contexto, interrupciones, protección…)
+
+¿Cuáles son los problemas derivados de la utilización de los MIPS y de los FLOPS para medir el rendimiento en los computadores? 
+3
+- Tanto los MIPS como los FLOPS dependen del repertorio de instrucciones de las diferentes máquinas a medir 
+- Los MIPS dependen del repertorio de instrucciones de las diferentes máquinas y del programa utilizado como medida. Los FLOPS sólo dependen del programa utilizado como medida 
+- Tanto los MIPS como los FLOPS dependen del repertorio de instrucciones/operaciones de las diferentes máquinas a medir como del programa utilizado como medida
+
+Sobre los niveles de descripcion de un computador 
+1
+- Dentro de los niveles de abstraccion de un computador, el de logica digital utiliza la logica combinacional y secuencial para proporcionar ALUs, registros, memorias,... al nivel superior (Transferencias entre registros RT) 
+- El nivel de abstraccion "Sistema Computador" utiliza el de "Logica Digital" para proporcionar funcionalidad (Ensamblador, Sistemas de Computo) al nivel superior "Sistema Operativo" 
+- Los niveles de Interpretacion de Levy son cuatro (Aplicaciones, Lenguajes de alto nivel, Sistema Operativo, MicroInstrucciones)
+
+El Core i7 ejecuta un programa en 5 segundos, mientras que el Pentium II lo hace en 20 segundos. ¿Cual de la siguientes afirmaciones es cierta? 
+3
+- El Core i7 es un 400% mas rapido que el Pentium II 
+- El Core i7 es un 40% mas rapido que el Pentium II 
+- El Core i7 es un 300% mas rapido que el Pentium II
+
+Sobre el concepto del rendimiento 
+1
+- El rendimiento del computador se asocia a la velocidad del computo para un programa dado o a la capacidad de ejecutar un mayor numero de transacciones por hora segun el punto de vista del usuario o de un administrador de una coleccion de computadores respectivamente 
+- El tiempo de ejecucion de un programa es directamente proporcional al rendimiento del computador que lo ejecuta 
+- Los sistemas de reserva de vuelos que utilizan multiples procesadores para tareas separadas afectan tanto al tiempo de respuesta del programa como a la productividad
+
+¿De que orden estamos hablando actualmente en los procesos de fabricacion de circuitos integrados para procesadores (tamaño del feature size)? 
+3
+- Picometros 
+- Micrometros 
+- Nanometros
+
+¿Cual de las siguientes listas de programas para evaluar el rendimiento estaria ordenada de mayor a menor segun su fiabilidad? 
+3
+- Programas reales, Benchmarks reducidos, Nucleos, Benchmarks sinteticos 
+- Benchmarks sinteticos, Benchmarks reducidos, Nucleos, Programas reales 
+- Programas reales, Nucleos, Benchmarks reducidos, Benchmarks sinteticos
+
+¿Que factores no influyen en el coste de produccion de un computador? 
+2
+- El volumen de produccion 
+- El rendimiento del computador 
+- La curva de aprendizaje del proceso de manufactura
+
+Sobre el proceso de diseño de arquitecturas de computadores. Tendencias software 
+1
+- Reorientación de las arquitecturas hacia el soporte de los compiladores 
+- Decreciente cantidad de memoria utilizada por los programas y sus datos 
+- Sustitución de los lenguajes de alto nivel por el lenguaje ensamblador
+
+Sobre el proceso de diseño de arquitecturas de computadores. Decisiones de implementación 
+3
+- La principal ventaja de decidir implementar una funcionalidad en software es el rendimiento 
+- Las principales ventajas de decidir implementar una funcionalidad en hardware son la facilidad del diseño, el bajo coste de errores, y la actualización simple 
+- El diseñador debe elegir como implementar mejor una funcionalidad entre las opciones de implementación hardware e implementación software
+
+Sobre el ámbito de la Arquitectura de Computadores 
+1
+- El ámbito de la arquitectura de computadores abarca de forma central desde la arquitectura abstracta a nivel sistema computador hasta la arquitectura concreta a nivel de transferencia de registros 
+- El ámbito de la arquitectura de computadores abarca de forma central desde la arquitectura abstracta a nivel sistema operativo hasta la arquitectura concreta a nivel de transferencia de registros 
+- El ámbito de la arquitectura de computadores abarca de forma central desde la arquitectura abstracta a nivel sistema operativo hasta la arquitectura concreta a nivel de sistema computador
+
+El coste es un parámetro a tener muy en cuenta al diseñar un nuevo procesador o al modificar uno existente. ¿En qué campo de aplicación resulta crítico? 
+3
+-  Procesadores de escritorio 
+-  Supercomputadores 
+-  Procesadores embebidos
+
+¿Cuál de las siguientes listas de programas para evaluar el rendimiento estaría ordenada de mayor a menor según su portabilidad? 
+2
+-  Programas reales, Benchmarks reducidos, Núcleos, Benchmarks sintéticos 
+-  Benchmarks sintéticos, Benchmarks reducidos, Núcleos, Programas reales 
+-  Programas reales, Núcleos, Benchmarks reducidos, Benchmarks sintéticos
+
+¿Cuál es la métrica más fiable para evaluar el rendimiento de un computador? 
+3
+-  MIPS 
+-  El tiempo de CPU 
+-  El tiempo de respuesta
+
+¿Cuál de las siguientes afirmaciones es incorrecta? 
+2
+- La ley de Amdahl define la ganancia de rendimiento o aceleración que puede obtenerse al mejorar alguna característica de un computador 
+- La ley de Amdahl permite cuantificar el principio de diseño de favorecer el caso común. Sin embargo, no permite conocer a priori el tiempo que tardará un proceso al mejorar una parte del mismo 
+- La mejora obtenida en el rendimiento al utilizar algún modo de ejecución más rápido está limitada por la fracción de tiempo en que se puede utilizar ese modo más rápido
+
+Sobre el origen del termino arquitectura de Computadores 
+1
+- En 1964 Amdahl, en la Presentación del IBM S/360 definió: “La arquitectura de un computador es la estructura del computador que un programador en lenguaje máquina debe conocer para escribir un programa correcto 
+- El concepto de Arquitectura de Computadores acuñado por IBM en 1964 abarcaba desde el nivel de “componente” hasta el de “sistema computador” 
+- El termino Arquitectura de Computadores fue acuñado por IBM en 1964 para referirse al nivel de Transferencia de Registros RT
+
+En cuanto a las áreas de aplicación ¿Cuál de las siguientes afirmaciones NO es correctal? Seleccione una.
+1
+- En los servidores el rendimiento de operaciones con tipos de datos enteros es mucho menos importante que el rendimiento para punto flotante o cadenas de caracteres
+- En los sistemas embebidos, el tamaño del código es importante ya que el programa necesita menos memoria siendo el sistema más barato y de menor consumo
+- En los computadores de escritorio el énfasis del rendimiento de los programas debe centrarse en operaciones con tipos de datos enteros y de punto flotante
+
+En cuanto a los repertorios de instrucciones segun el tipo de almacenamiento interno de la CPU. Indica la respuesta NO correcta. Seleccione una.
+2
+- A paltir de 1980, los computadores frecuentemente han utilizado arquitecturas de registro de propósito general
+- Los registros tienen acceso más rápido que la memoria y son más faciles de utilizar por los compiladores y de manera más efectiva, por eso siempre han diseñado arquitecturas GPR
+- Las máquinas más antiguas anteriores a 1980 normalmente era arquitectura de pila y acumulador
+
+En cuanto a la manera de programar las máquinas, indica la respuesta correcta. Seleccione una:
+3
+- Actualmente, las decisiones de diseño de la arquitectura del repertorio de instrucciones se realizan para facilitar la programación en lenguaje ensamblador
+- La aparición de los CISC permitió simplificar las arquitecturas de repertorio de instrucciones
+- La arquitectura a nivel lenguaje máquina es un objeto del compilador
+
+Sobre el proceso de diseño de arquitecturas de computadoras. Tendencias software. Seleccione una:
+1
+- Reorientación de las arquitecturas hacia el soporte de los compiladores
+- Decreciente cantidad de memoria utilizada por los programas y sus datos
+- Sustitución de los lenguajes de alto nivel por el lenguaje ensamblador
+
+¿Cuál de las siguientes afirmaciones es falsa?
+1
+- El funcionamiento de cache se basa en la transferencia de palabras individuales ente la memoria principal y memoria cache 
+- El bloque es la unidad de transferencia entre la memoria principal y la memoria cache 
+- La memoria cache contiene una copia de aquellas posiciones de memoria principal utilizadas por la CPU es un instante dado.
+
+Sobre los principios de diseño de computadores. Seleccione una:
+3
+- La ley de Amdahl es una cuantificación del principio de localidad
+- Los programas suelen emplear el 10% de su tiempo de ejecución en el 90% del código
+- El principio de localidad de referencia establece la tendencia de los programas a reutilizar los datos e instrucciones usados recientemente

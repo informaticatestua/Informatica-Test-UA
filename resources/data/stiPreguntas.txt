@@ -1,0 +1,1452 @@
+Cuando unas pocas empresas ofrecen básicamente el mismo bien, tendremos:
+2
+Monopolio
+Oligopolio
+Competencia monopolística
+Competencia perfecta
+
+Los “staff” son dentro de la estructura organizativa de una empresa:
+1
+El personal que sirve de consulta y asesoramiento.
+Las organizaciones de la empresa que aúnan la autoridad y la responsabilidad de forma compartida.
+Las estructuras que se forman dentro de la empresa de manera temporal para llevar a cabo proyectos específicos.
+Ninguna de las anteriores
+
+¿Cuál de los siguientes criterios serían válidos para clasificar las empresas por su tamaño?:
+1
+El volumen de ventas y el número de trabajadores.
+El número de clientes y proveedores.
+El tamaño de la superficie sobre las que se encuentran sus instalaciones.
+El número de personas que invierten en capital.
+
+En una estructura organizativa empresarial matricial:
+2
+No existen conflictos entre los gerentes funcionales y los de proyectos o productos.
+Los empleados tienen dos jefes: un jefe de función y un jefe de proyecto o producto.
+El personal se distribuye por áreas funcionales y no por proyectos.
+Ninguna de las anteriores.
+
+Si queremos un diseño organizativo en el que prime la cualificación y especialización de los trabajadores, estamos hablando de un:
+3
+Modelo numérico
+Modelo por tiempo
+Modelo por funciones
+Ninguna de las anteriores
+
+La forma en que se registran legalmente las empresas depende:
+4
+Únicamente del número de personas que invierten en capital
+Únicamente de las responsabilidades que tengan los socios
+De su actividad (industrial o de servicios)
+Ninguna de las anteriores
+
+En el diseño organizativo moderno encontramos:
+3
+Estructuras lineales
+Estructuras funcional
+Estructuras matriciales.
+Todas las anteriores son correctas
+
+El organigrama de una empresa:
+3
+Determina todas las actividades que se llevan a cabo en la empresa
+Determina todas las relaciones entre personas, grupos y departamentos
+Proporciona una visión estática de una organización
+Ninguna de las anteriores
+
+Una empresa con 20 trabajadores y una facturación de 12 millones de euros que pertenece al cien por cien a una gran empresaes una:
+3
+Pequeña empresa
+Mediana empresa 
+Gran empresa
+Ninguna de las anteriores
+
+Una empresa con dos socios y con la responsabilidad limitada al capital que es de 5.000€ podrá ser:
+1
+Sociedad Limitada
+Sociedad Cooperativa
+Sociedad Civil
+Sociedad Anónima
+
+Una empresa con 500 trabajadores y una facturación de 60 millones de euros es una:
+3
+Pequeña empresa
+Mediana empresa 
+Gran empresa
+Ninguna de las anteriores
+
+¿Qué estructura de organización no se usa en la empresa:
+4
+Matricial
+Funcional
+Jerarquica
+Orgánica
+
+El Modelo Numérico de diseño organizativo esta basado en el
+numero de:
+2
+Procesos
+Personas
+Departamentos
+Funciones
+
+Según Kotler (1996), la inteligencia de marketing es:
+2
+Toda la información interna de la empresa en cuanto a estrategias de marketing: publicidad, estudios de mercado, etc
+Información sobre el entorno empresarial: competidores, productos semejantes, etc
+Tanto la información interna de la empresa como la información externa.
+Kotler sólo hace referencia a información interna de marketing y a comunicaciones de marketing que fluyen de dentro de la empresa al entorno.
+
+El método MRP II:
+2
+Tiene en cuenta únicamente la planificación de materiales de producción.
+Tiene en cuenta tanto las necesidades de materiales de producción como la de personal y maquinaria necesarios.
+Establece un punto de reorden para mantener unos niveles mínimos de inventario.
+Significa Minimal Requirements Planning
+
+El control de inventarios es realizado por:
+2
+Los sistemas de trabajo del conocimiento
+Los sistema de información gerencial
+Los sistemas de apoyo a toma de decisiones
+Los sistemas de procesamiento de transacciones
+
+Según Laudon y Laudon (2004) los niveles organizativos de la empresa están constituidos por:
+1
+Nivel estratégico, nivel del conocimiento, nivel administrativo y nivel operativo.
+Nivel funcional, nivel operacional y nivel directivo.
+Nivel financiero, nivel de marketing, nivel de producción y nivel de recursos humanos.
+Ninguna de las anteriores.
+
+El subsistema de entrada de Inteligencia de Recursos Humanos:
+3
+Obtiene datos de carácter personal de los empleados (nombre, dirección, etc).
+Obtiene información en relación con los trabajadores y los puestos de trabajo ocupados hasta el momento para estudiar futuros ascensos o detectar habilidades.
+Recopila información en relación a leyes de contratación, bolsas de trabajo, etc.
+Obtiene los datos de tipo financiero de los empleados (salario, impuestos, etc.)
+
+En el proceso de desarrollo de un Sistema de Información:
+4
+Existen 3 etapas: Análisis de sistemas, diseño de sistemas e implementación.
+En la etapa de Análisis de sistemas se estudia el diseño físico.
+En la etapa de Implementación únicamente se realiza la implementación del sistema
+Ninguna de las anteriores
+
+En el desarrollo de un Sistema de Información:
+3
+Los usuarios finales no deben estar implicados
+No es necesario estudiar el sistema actual, únicamente se deben estudiar los requerimientos de los usuarios para proponer una solución a los problemas
+Una vez diseñada e implementada la solución escogida, se debe evaluar el impacto y en su caso, refinar dicha solución
+Ninguna de las anteriores
+
+En una empresa:
+1
+Para cada nivel jerárquico existen diferentes sistemas de información
+Entre los sistemas de información para directivos encontramos los siguientes: ROP, MRP y MRPII
+Los sistemas de información se clasifican en función del número de usuarios
+Ninguna de las anteriores
+
+El responsible de la planificación, supervisión y desarrollo de un sistema es el: 
+4
+Propietario del Sistema
+Análista del Sistema
+Diseñador del sistema
+Project manager
+
+¿Qué fase no corresponde al desarrollo de un sistema?
+2
+Análisis
+Supervisión
+Diseño
+Implementación
+
+¿Qué nivel organizativo no es definido por Laudon y Laudon?
+3
+Operativo
+Estratégico
+Técnico
+Administrativo
+
+El concepto “La Empresa forma parte de un sistema más amplio con el que intercambia bienes, servicios e información” es el de:
+2
+Organización matricial
+Cadena de valor extendida
+Alinación objetivos estratégico.
+Ninguna de las anteriores
+
+Un Sistema de Informacion debe de ser considerado:
+2
+Un gasto necesario para que la empresa tenga una imagen de eficiencia.
+Como una inversión de capital, igual que con otros activos.
+Los componetes de informática de la empresa.
+Ninguna de las anteriores
+
+En el desarrollo de un Sistema de Información hay que tener en cuenta:
+3
+Los usuarios finales no deben estar implicados
+No es necesario estudiar el sistema actual, únicamente se deben estudiar los requerimientos de los usuarios para proponer una solución a los problemas
+Una vez diseñada e implementada la solución escogida, se debe evaluar el impacto y en su caso, refinar dicha solución
+Ninguna de las anteriores
+
+Persona que utilizan los SI de forma regular para capturar, introducir, validar, transformar y almacenar datos e información:
+4
+Propietario del Sistema
+Analista del Sistema
+Diseñador del sistema
+Usuario del Sistema
+
+El método MRP II:
+2
+Tiene en cuenta únicamente la planificación de materiales de producción.
+Tiene en cuenta tanto las necesidades de materiales de producción como la de personal y maquinaria necesarios.
+Establece un punto de reorden para mantener unos niveles mínimos de inventario.
+Significa Minimal Requirements Planning
+
+Los componentes de un SI son: 
+4
+Entrada, Transformación y Salida
+Objetivos, Datos y Procesos
+Personas, Datos y Procesos
+Personas, Datos, Procesos y Tecnología
+
+Cual de estos principios no corresponde al desarrollo de un SI:
+4
+Implicar a los usuarios del sistema
+Documentar
+Dividir los problemas y resolverlos uno a uno
+Ninguno de los anteriores
+
+¿Qué modelo de gestión permite agrupar las actividades de una empresa según la secuencia lógica en la cual se ejecutan?:
+3
+Gestión por departamentos
+Gestión por producción.
+Gestión por procesos.
+Ninguna de las anteriores
+
+La acción que se realiza en una empresa y se responsabiliza un empleado es:
+4
+El Proceso
+La Actividad
+La Secuencia
+La Tarea
+
+Cual no es un objetivo de la gestión por procesos:
+1
+Controlar el trabajo de los departamentos.
+Comprender como las entradas se transforman en salidas y como la información une a las diferentes actividades
+Obtener una orientación del negocio hacia el cliente y sus necesidades
+Dar una visión sistemática del negocio.
+
+Cual no es un componte básico en un proceso:
+3
+Inputs.
+Outputs.
+Programación.
+Sistema de control.
+
+En un diagrama de Flujo de datos, los datos intermedios los guardamos en:
+2
+El Diccionario de Datos
+Los Almacenes de Datos
+Los Procesos
+Ninguna de las anteriores
+
+En una gestión por procesos el sistema de valor:
+2
+Son todas las actividades de la empresa
+Es todo el conjunto de procesos de la empresa
+Son solamente las actividades que reportan beneficios a la empresa
+Ninguna de las anteriores
+
+Los problemas en una organización funcional surgen debido a que:
+4
+La información de un área puede no ser trasladable a otra
+Las actividades se pueden realizar de forma fragmentada
+Los departamentos pueden tener visiones distintas de una misma actividad
+Todas son ciertas
+
+El análisis estructurado:
+4
+Define el software y hardware necesario para modelar los procesos de la empresa
+Utiliza técnicas orientadas a objetos para definir los procesos
+Asegura que cada empleado realice sus tareas de forma correcta
+Determina la secuencia y los procedimientos de trabajo para un proceso
+
+En el análisis estructurado utilizando diagramas de flujos de datos el diseño es:
+2
+Ascendente
+Descendente
+En ambas direcciones
+Indistinto
+
+¿Cuál no es un elemento básico de un proceso?
+2
+Sistema de control
+Programación
+Entradas
+Salidas
+
+Los componentes de un SI son:
+4
+Entrada, Transformación y Salida
+Objetivos, Datos y Procesos
+Personas, Datos y Procesos
+Personas, Datos, Procesos y Tecnología
+
+Cual de estos principios no corresponde al desarrollo de un SI:
+4
+Implicar a los usuarios del sistema
+Documentar
+Dividir los problemas y resolverlos uno a uno
+Ninguno de los anteriores
+
+¿Cuál de estas no es una ventaja de la Gestión por Procesos?
+3
+Eliminar actividades sin valor añadido
+Reducir los costes
+Definir con precisión la cadena de mando
+Mejorar la calidad
+
+El análisis estructurado no asegura que las actividades de un proceso se realicen:
+2
+Lo más rápidamente posible
+De la forma correcta
+Por las personas adecuadas
+En el orden correcto
+
+A la hora de realizar la mejora de procesos, la Reingeniería (BPI):
+3
+Realiza pequeñas modificaciones procesos
+Realiza una mejora gradual de los procesos
+Realiza modificaciones profundas y los procesos ya definidos se tiran a la basura
+Ninguna de las anteriores
+
+En BPM se establece:
+2
+Como funciona la información
+Qué es lo que se hace en la empresa
+Lo que genera beneficio en el negocio
+Lo que deben de hacer los gestores del negocio
+
+
+¿Qué modelo de gestión permite agrupar las actividades de una empresa según la secuencia lógica en la cual se ejecutan?:
+3
+Gestión por departamentos
+Gestión por producción.
+Gestión por procesos.
+Ninguna de las anteriores.
+
+La acción que se realiza en una empresa y se responsabiliza un empleado es:
+4
+El Proceso
+La Actividad
+La Secuencia
+La Tarea
+
+Cual no es un objetivo de la gestión por procesos:
+1
+Controlar el trabajo de los departamentos.
+Comprender como las entradas se transforman en salidas y como la información une a las diferentes actividades
+Obtener una orientación del negocio hacia el cliente y sus necesidades
+Dar una visión sistemática del negocio.
+
+Cual no es un componte básico en un proceso:
+3
+Inputs.
+Outputs.
+Programación.
+Sistema de control.
+
+En un diagrama de Flujo de datos, los datos intermedios los guardamos en:
+2
+El Diccionario de Datos
+Los Almacenes de Datos
+Los Procesos.
+Ninguna de las anteriores.
+
+Los problemas en una organización funcional surgen debido a que:
+4
+La información de un área puede no ser trasladable a otra
+Las actividades se pueden realizar de forma fragmentada
+Los departamentos pueden tener visiones distintas de una misma actividad
+Todas son ciertas
+
+El análisis estructurado:
+4
+Define el software y hardware necesario para modelar los procesos de la empresa
+Utiliza técnicas orientadas a objetos para definir los procesos
+Asegura que cada empleado realice sus tareas de forma correcta
+Determina la secuencia y los procedimientos de trabajo para un proceso
+
+En el análisis estructurado utilizando diagramas de flujos de datos el diseño es:
+2
+Ascendente
+Descendente
+En ambas direcciones
+Indistinto.
+
+¿Cúal no es un elemento básico de un proceso?
+2
+Sistema de control
+Programación
+Entradas
+Salidas
+
+Los componentes de un SI son:
+4
+Entrada, Transformación y Salida
+Objetivos, Datos y Procesos
+Personas, Datos y Procesos
+Personas, Datos, Procesos y Tecnología
+
+Cual de estos principios no corresponde al desarrollo de un SI:
+4
+Implicar a los usuarios del sistema
+Documentar
+Dividir los problemas y resolverlos uno a uno
+Ninguno de los anteriores
+
+¿Cual de estas no es una ventaja de la Gestión por Procesos?
+3
+Eliminar actividades sin valor añadido
+Reducir los costes
+Definir con precisión la cadena de mando
+Mejorar la calidad
+
+El análisis estructurado no asegura que las actividades de un proceso se realicen:
+2
+Lo más rápidamente posible
+De la forma correcta
+Por las personas adecuadas
+En el orden correcto
+
+A la hora de realizar la mejora de procesos, la Reingeniería (BPI)
+3
+Realiza pequeñas modificaciones procesos
+Realiza una mejora gradual de los procesos
+Realiza modificaciones profundas y los procesos ya definidos se tiran a la basura
+Ninguna de las anteriores
+
+En BPM se establece:
+2
+Como funciona la información
+Qué es lo que se hace en la empresa
+Lo que genera beneficio en el negocio
+Lo que deben de hacer los gestores del negocio
+
+Para realizar una reparación de artículos rechazados en la producción utilizaríamos una orden de producción:
+2
+Estándar.
+Especial.
+De desmontaje.
+Ninguna de las anteriores.
+
+Un albarán es un documento que:
+2
+Que implica una orden de pago de materiales.
+Que indica los artículos que se han entregado.
+Que contiene una orden de fabricación
+Ninguno de los anteriores.
+
+Donde se indica qué productos finales hay que fabricar y en qué plazos terminarse.
+1
+Programa Maestro de Producción.
+Albarán
+Hoja de Pedido.
+Orden de producción.
+
+Las listas de materiales del producto:
+3
+Son de 3 tipos: de ventas, de compras y de montaje
+No se pueden alterar en la etapa de producción
+Se utilizan en las órdenes de fabricación estándar
+Ninguna de las anteriores es corrrecta.
+
+En un almacén el Disponible es:
+4
+Stock + Comprometido - Solicitado
+Stock + Comprometido + Solicitado
+Stock – Comprometido – Solicitado
+Stock – Comprometido + Solicitado
+
+Al realizar un pedido de compra:
+2
+Aumenta el Stock
+Aumenta el Disponible
+Aumenta el Comprometido.
+Ninguna de las anteriores.
+
+Las órdenes de fabricación:
+4
+No se pueden crear manualmente o de forma automática a partir de recomendaciones MRP
+Si son de tipo especial envían el producto acabado al pendiente
+Si son de tipo estándar envían el producto acabado al pendiente
+Ninguna de las anteriores es correcta
+
+Mediante la planificación de requerimientos de materiales:
+2
+Se consiguen niveles de stock máximos
+Se realizan pronósticos de demanda de los clientes
+Se elabora un Plan Maestro de Producción, el cual no puede ser modificado
+Se obtiene como única salida las órdenes de compras de material
+
+Al realizar un pedido de compra
+3
+Se aumenta el Stock
+Disminuye el solicitado
+Disminuye el disponible
+No se modifica el comprometido
+
+El programa maestro de producción se basa en:
+3
+Exclusivamente en los pedidos de los clientes
+Exclusivamente en las previsiones de demanda
+En una ponderación de pedidos y previsiones de demanda
+Al 50% entre pedidos y previsiones.
+
+Una factura de compra en base a un albarán
+3
+Aumenta el stock
+Disminuye la deuda con el proveedor
+Disminuye el stock
+Aumenta la deuda con el proveedor
+
+En una orden de fabricación estándar cuando se pasa al estado de planificado el producto acabado.
+2
+Aumenta el stock y diminuye el disponible.
+Aumentan el solicitado y el disponible
+Disminuye el comprometido y el solicitado
+Disminuyen el solicitado y el stock
+
+¿En un proceso de compra a proveedores en la recepción de materiales con que documento se controla la entrega?
+2
+La hoja de pedido
+El albarán
+La factura
+Ninguno de los anteriores
+
+Los tipos de listas de materiales son:
+1
+De Venta, de Montaje y de Producción
+Estándar, Especiales y de Desmontaje
+Estándar, de Montaje y de Desmontaje
+De Venta, Especiales y de Producción
+
+¿En un proceso de compra a proveedores en la recepción de materiales con que documento se controla la entrega?
+2
+La hoja de pedido
+El albarán
+La factura
+Ninguno de los anteriores
+
+En un almacén el Disponible es:
+4
+Stock + Comprometido - Solicitado
+Stock + Comprometido + Solicitado
+Stock – Comprometido – Solicitado
+Stock – Comprometido + Solicitado
+
+Cual es el orden correcto en la secuencia de un proceso de venta.
+3
+Oferta, Pedido, Factura, Albarán
+Pedido, Oferta, Factura, Albarán
+Oferta, Pedido, Albarán, Factura
+Oferta, Albarán, Pedido, Factura
+
+En una factura en base a un albarán:
+2
+Disminuye la cantidad en stock
+Aumenta la deuda de nuestro cliente
+Disminuye la cantidad comprometida
+Ninguna de las anteriores es correcta.
+
+En una empresa:
+4
+Los clientes tienen establecido un límite de crédito fijo
+Los pedidos se realizan siempre en base a un presupuesto
+Los presupuestos, pedidos y albaranes son documentos obligatorios
+Ninguna de las anteriores es correcta.
+
+Al crear un pedido en una venta en nuestro almacén:
+4
+El Disponible y el Comprometido aumentan.
+El Disponible y el Comprometido disminuyen.
+El Stock disminuye.
+El Stock permanece igual.
+
+La autorización de servir un pedido se realiza.
+3
+Lo antes posible
+Si todos los artículos están disponible.
+Si se ha comprobado que el cliente no supera su límite de crédito.
+Si el cliente ha pagado los anteriores pedidos.
+
+En el circuito de ventas:
+1
+Al crear un albarán la cantidad en stock y la cantidad de comprometido disminuyen
+Todos los documentos que intervienen en el proceso de ventas (oferta, pedido, albarán y factura), pueden hacer referencia a uno o varios documentos anteriores
+Al crear un pedido de venta disminuye el stock y la cantidad disponible
+Ninguna de las anteriores es correcta
+
+Que frase es correcta en relación a la numeración de las Facturas.
+2
+No es necesaria su numeración
+Una factura debe tener un número mayor que otra de fecha anterior.
+Una factura puede tener un número menor que otra de fecha anterior.
+Debe de tener el mismo número que el albarán.
+
+Cual es el orden correcto en la secuencia en una Factura Proforma
+1
+Oferta, Pedido, Factura Proforma, Albarán
+Pedido, Oferta, Factura Proforma, Albarán
+Oferta, Pedido, Albarán, Factura Proforma
+Oferta, Albarán, Pedido, Factura Proforma
+
+La regla del 20-80 permite:
+3
+Conocer a los mejores clientes.
+Calcular el margen comercial en un facturación.
+Prever la rotacción de los productos estrella
+Determinar el precio de un producto estrella
+
+Una factura proforma
+3
+Sigue la numeración habitual del proceso de facturación.
+Se realiza a clientes del mismo grupo empresarial.
+Es un documento que sirve para justificar una inversión.
+Es equivalente a un albarán.
+
+Cuando se entrega mercancía a un cliente se le debe de entregar:
+1
+Un Albarán.
+Una Factura
+Un Recibo
+Un abono.
+
+Un albarán de venta supone
+3
+Aumentar el comprometido y disminuir el stock
+Aumentar el disponible y el comprometido
+Disminuir el comprometido y el stock
+Ninguna de las anteriores
+
+Al emitir una factura de venta en base a un pedido:
+1
+Disminuyen el stock y la cantidad comprometida
+Disminuye la cantidad comprometida
+Disminuye el stock
+Disminuye el stock y aumenta la cantidad comprometida
+
+¿Que documentos son opcionales en el proceso de venta?
+1
+Ofertas, pedidos y albaranes
+Ofertas y pedidos
+Pedidos y albaranes
+Ofertas y albaranes
+
+En qué consiste endosar un pagaré
+3
+Pagarlo
+Presentarlo a descuento en el banco
+Transferirle el documento a un tercero para que lo cobre
+Invalidarlo
+
+¿Qué caso de los siguientes es un efecto impagado?:
+3
+Una Factura Proforma no aceptada.
+Un cheque sin fondos.
+Una letra presentada a descuento en el Banco y no pagada en su vencimiento.
+Ninguna de las anteriores.
+
+Que documento de pago emite el acreedor y se puede descontar en el Banco:
+2
+Pagaré
+Letra de Cambio
+Cheque
+Recibo
+
+¿Qué característica es correcta en un cheque?
+4
+Se puede presentar a descuento
+Ofrece la máxima seguridad jurídica frente a un impagado
+No se puede endosar
+Ninguna de las anteriores
+
+El Nivel de reclamación ante un impagado depende:
+1
+De los días transcurridos desde el vencimiento del cobro.
+Del crédito del cliente
+De la cantidad de la deuda
+De ninguno de los anteriores.
+
+Cuando existen efectos impagados:
+2
+Si la entidad financiera nos ha adelantado el dinero y llegado el vencimiento el cliente no atiende el efecto, solamente tendremos que abonar el dinero adelantado por la entidad financiera
+Se puede recuperar la totalidad de la deuda, los gastos ocasionados por el impago y una cantidad extra en concepto de intereses
+Siempre es la entidad financiera la encargada de solicitar las cantidades impagadas al deudor
+Ninguna de las anteriores es correcta
+
+En relación a los pagarés podemos afirmar que:
+1
+Se pueden cobrar de forma inmediata como descuento de crédito en una entidad financiera
+Se debe esperar siempre a su vencimiento para proceder al cobro
+Es el acreedor el que emite el pagaré
+No se pueden endosar
+
+Entre los tipos de documentos de cobro:
+3
+Los cheques tienen un librador (el que emite el cheque) y un librado (el que cobra el cheque)
+La letra de cambio tiene un emisor (llamado también deudor) y un receptor (llamado también acreedor)
+El recibo tiene un emisor (llamado también librador) y un receptor (llamado también beneficiario)
+Ninguna de las anteriores es correcta.
+
+¿Que documento no se puede endosar?
+3
+Una letra de cambio
+Un pagaré
+Un recibo
+Un cheque
+
+¿Qué documento ofrece una mayor seguridad jurídica para reclamar
+1
+Una letra de cambio
+Un pagaré
+Un recibo
+Un cheque
+
+Si un cliente no paga un efecto que hemos descontado en una línea de crédito a su vencimiento.
+3
+El banco le reclamará el pago.
+El banco nos cargará el importe, los intereses y los gastos.
+El banco nos cargará el importe y los gastos
+El banco nos cargará el importe
+
+Que medio de cobro permite un tratamiento mecanizado con el Banco
+4
+Pagaré
+Letra de Cambio
+Cheque
+Recibo
+
+Si un cliente no paga un efecto que hemos descontado en una línea de crédito a su vencimiento.
+2
+El banco le reclamará el pago.
+El banco nos cargará el importe, los intereses y los gastos.
+El banco nos cargará el importe y los gastos
+El banco nos cargará el importe
+
+¿Que documento de pago no se puede descontar en la línea de crédito de la que disponga una empresa en un banco?
+3
+Pagare
+Letra de Cambio
+Cheque
+Ninguna de las anteriores
+
+¿Qué caso de los siguientes es un efecto impagado?:
+3
+Una Factura Proforma no aceptada.
+Un cheque sin fondos.
+Una letra presentada a descuento en el Banco y no pagada en su vencimiento.
+Ninguna de las anteriores
+
+En la Cuenta de Pérdidas y Ganancias los gastos e ingresos Financieros se calculan:
+3
+Antes de los gastos e ingresos de explotación.
+Después de los gastos e ingresos extraordinarios.
+Antes de los gastos e ingresos extraordinarios.
+No se calculan en esta cuenta.
+
+Un asiento en el Diario:
+4
+Puede tener un solo apunte.
+De fecha posterior puede tener un número más bajo que otro de fecha anterior.
+Si es acreedor debe de tener el haber positivo.
+De fecha posterior debe tener un número mayor que otro de fecha anterior
+
+Las acciones propias aquellas que son propiedad de la empresa:
+1
+Forman parte del Inmovilizado.
+Forman parte del Pasivo.
+Forman parte del Disponible.
+Ninguna de las anteriores es correcta.
+
+¿Qué componente no forma parte del activo circulante?:
+3
+Existencias.
+Realizable.
+Inmovilizado
+Disponible.
+
+Las patentes de una empresa forman parte de:
+3
+Inmovilizado material.
+Inmovilizado inmaterial.
+Existencias.
+Disponible.
+
+El Inmovilizado pertenece:
+4
+Al Activo Circulante
+Al Pasivo Fijo
+Al Pasivo Circulante
+Al Activo Fijo
+
+La Caja forma parte del:
+2
+Realizable
+Disponible
+Activo fijo
+Pasivo fijo
+
+Para calcular los beneficios de explotación se utiliza:
+3
+Balance de Sumas y Saldos
+Balance de Situación
+Balance de Pérdidas y Ganancias
+Balance de Comprobación
+
+¿Qué componente no forma parte del activo circulante?:
+3
+Existencias.
+Realizable.
+Inmovilizado
+Disponible.
+
+Las patentes de una empresa forman parte de:
+2
+Inmovilizado material.
+Inmovilizado inmaterial.
+Existencias.
+Disponible.
+
+En la Cuenta de Pérdidas y Ganancias los gastos e ingresos Financieros se calculan:
+3
+Antes de los gastos e ingresos de explotación.
+Después de los gastos e ingresos extraordinarios.
+Antes de los gastos e ingresos extraordinarios.
+No se calculan en esta cuenta.
+
+Las acciones propias aquellas que son propiedad de la empresa:
+1
+Forman parte del Inmovilizado.
+Forman parte del Pasivo.
+Forman parte del Disponible.
+Ninguna de las anteriores es correcta
+
+Para calcular la situación patrimonial se utiliza el:
+2
+Balance de Sumas y Saldos
+Balance de Situación
+Balance de Pérdidas y Ganancias
+Balance de Comprobación
+
+En la Cuenta de Pérdidas y Ganancias los gastos e ingresos extraordinarios se calculan:
+2
+Despueses de los gastos e ingresos de explotación.
+Después de los gastos e ingresos financieros.
+Antes de los gastos e ingresos financieross.
+No se calculan
+
+Las cuentas de Activo:
+1
+Aumentan añadiendo en el debe y disminuyen añadiendo en el haber
+Aumentan añadiendo en el haber y disminuyen añadiendo en el debe
+Aumentan añadiendo en el haber y disminuyen disminuyendo en el debe
+Aumentan disminuyendo en el haber y disminuyen añadiendo en el deber
+
+Los descuentos sobre compras por pronto pago
+2
+Son ingresos
+Son gastos
+Son existencias
+Son realizable
+
+Para calcular el balance de situación es necesario tener calculado
+2
+Sólo el balance de sumas y saldos
+El balance de perdidas y ganancias
+El diario
+Ninguno de los anteriores
+
+Una disminución de las existencias generará:
+2
+Una disminución del pasivo, y pérdidas en la empresa
+Una disminución del activo, un aumento de la rotación y un aumento de la rentabilidad económica.
+Una disminución del activo, una disminución de la rotación y una disminución de la rentabilidad económica.
+Una disminución del pasivo, y ganancias en la empresa.
+
+¿Qué es el apalancamiento?:
+2
+Ventas / Activo.
+Activo / Recursos Propios.
+Recursos Propios/Pasivo.
+Margen/Activo.
+
+Las Auditorías financieras:
+3
+Son realizadas por el personal que realiza la contabilidad.
+Forman parte de los balances de la empresa
+Son realizadas por personal ajeno al que realiza la contabilidad.
+No puede ser interna.
+
+Si el Activo Fijo de una empresa es de 300.000€ y el Pasivo Fijo es de 400.000€, el Fondo de Maniobra será:
+4
+-100.000€.
+700.000€.
+-700.000€.
+100.000€.
+
+Si el fondo de maniobra de una empresa es -40.000€ la situación patrimonial de la empresa es:
+2
+De estabilidad total.
+De suspensión de pagos.
+De estabilidad patrimonial.
+De tesorería estable.
+
+Si FM es el Fondo de Maniobra y AC y PC son el activo y el pasivo circulante, qué ecuación es correcta:
+1
+AC = PC + FM.
+FM = AC + PC
+PC = AC + PC
+Ninguna de las anteriores es correcta
+
+¿Qué es la rotación?:
+3
+Ventas/Tiempo
+Activo/Ventas
+Ventas/Activo
+Beneficio/Ventas
+
+En una Auditoría qué acción no se realiza:
+2
+Se revisa la contabilización de los movimientos de la empresa
+Se corrigen los apuntes erróneos
+Se comprueba la documentación de esos movimientos
+Se comprueba el correcto funcionamiento del proceso contable
+
+Si el Activo Fijo de una empresa es de 300.000€ y el Pasivo Fijo es de 400.000€, el Fondo de Maniobra será:
+4
+-100.000€.
+700.000€.
+-700.000€.
+100.000€.
+
+Si el fondo de maniobra de una empresa es -40.000€ la situación patrimonial de la empresa es:
+2
+De estabilidad total.
+De suspensión de pagos.
+De estabilidad patrimonial.
+De tesorería estable.
+
+Una disminución de las existencias generará:
+2
+Una disminución del pasivo, y pérdidas en la empresa
+Una disminución del activo, un aumento de la rotación y un aumento de la rentabilidad económica.
+Una disminución del activo, una disminución de la rotación y una disminución de la rentabilidad económica.
+Una disminución del pasivo, y ganancias en la empresa.
+
+¿Qué es el apalancamiento?:
+2
+Ventas / Activo
+Activo / Recursos Propios.
+Recursos Propios/Pasivo.
+Margen/Activo.
+
+Las Auditorías financieras:
+3
+Son realizadas por el personal que realiza la contabilidad.
+Forman parte de los balances de la empresa
+Son realizadas por personal ajeno al que realiza la contabilidad.
+No puede ser interna.
+
+Para calcular la situación patrimonial de la empresa se utiliza el:
+3
+Balance de Sumas y Saldos
+Balance de Perdidas y Ganancias
+Balance de Situación
+Balance de Comprobación
+
+El flujo de caja financiero se calcula
+4
+Ingresos - gastos
+Beneficios - impuestos
+Cobros - pagos
+Ninguno de los anteriores
+
+¿Cómo se mide la capacidad de pago de las deudas a corto plazo con lo disponible en caja y bancos?
+4
+Ratio de Autonomía
+Ratio de Garantía
+Ratio de Calidad de la Deuda
+Ratio de Disponibilidad
+
+La rentabilidad financiera es:
+1
+Beneficio Neto / Recursos Propios
+Beneficio Neto / Ventas
+Ventas / Recursos Propios
+Ninguno de los anteriores
+
+El ratio que mide lo mismo que el fondo de maniobra es:
+3
+Solvencia
+Garantía
+Liquidez
+Tesorería
+
+El Tipo de Retención al IRPF en una nómina:
+4
+Es el mismo para cualquier trabajador.
+Depende exclusivamente del sueldo anual.
+Depende exclusivamente de la situación personal y familiar.
+Ninguno de los anteriores.
+
+Las bajas por enfermedad por contingencias comunes:
+4
+Se comunican cuando se produce el alta del trabajador.
+Son abonadas por la mutualidad que haya suscrito la empresa.
+Son abonadas por la seguridad social al trabajador.
+Son abonadas por la empresa y se descuentan de los pagos a la Seguridad Social.
+
+Los gastos por desplazamiento provisional de un trabajador:
+3
+Siempre cotizan a la Seguridad Social y al IRPF.
+Nunca cotizan a Seguridad Social y al IRPF.
+No cotizan a Seguridad Social y al IRPF hasta una cierta cantidad.
+Cotizan a la Seguridad Social pero no al IRPF.
+
+Las pagas extraordinarias:
+2
+No se les aplica la retención del IRPF.
+Se divide su importe entre la nómina de todos los meses para calcular las cuotas de la Seguridad Social
+Se divide su importe entre la nómina de todos los meses para calcular las retenciones del IRPF.
+Están libres de cuotas de la Seguridad Social.
+
+Los Grupos de Cotización a la Seguridad Social están relacionados:
+1
+Con la categoría profesional de los trabajadores.
+Con el sueldo anual del trabajador.
+Con el sueldo mensual.
+Con el convenio colectivo.
+
+La trasformación de contratos de formación en indefinidos
+2
+Son obligatorios
+Pueden tener bonificaciones en la cuota a la Seguridad Social
+Están exentos de pagos del IRPF
+No se puede realizar en ningún caso
+
+Los gastos de locomoción si se utilizan medios públicos
+4
+Cotizan a la Seguridad social a partir de una determinada cantidad
+Cotizan a la Seguridad Social en su totalidad
+No cotizan a la Seguridad Social pero sí al IRPF
+No cotizan ni a la Seguridad Social ni al IRPF
+
+El boletín de liquidación de pagos a la Seguridad Social donde aparece lo correspondiente a cada uno de los trabajadores es el:
+2
+TC0
+TC1
+TC2
+TC3
+
+Las diatas por manutención
+3
+Estan obligadas a cotizar a la Seguridad Social siempre y a partir de un valor diario al IRPF.
+Estan obligadas a cotizar al IRPF siempre y a partir de un valor diario a la Seguridad Social .
+Estan obligadas a cotizar a la Seguridad Social y al IRPF a partir de un valor diario.
+Nunca estan obligadas a cotizar a la Seguridad Social y al IRP.
+
+¿Qué concepto no se tiene en cuenta en el cálculo de la retención del IRPF?
+1
+La categoría profesional.
+El sueldo bruto anual
+Las cargas familiares
+El grado de discapacidad.
+
+Durante una baja el trabajador
+3
+Percibe el sueldo de la Seguridad Social
+La empresa le paga una parte de su salario que después le es devuelto por la Seguridad Social
+La empresa le paga una parte de su salario que se puede deducir de la cuota mensual a la Seguridad Social.
+No percibe ningún salario.
+
+Una crisis económica que crea una contracción en el Mercado de una empresa es una:
+2
+Debilidad.
+Amenaza.
+Fortaleza.
+Oportunidad.
+
+la empresa se enfrenta a amenazas externas sin las fortalezas internas necesarias para luchar contra la competencia de adoptar una estrategia:
+3
+Defensiva.
+Ofensiva.
+De Supervivencia.
+De Reorientación.
+
+Un producto que ha alcanzado sus máximas ventas en los últimos años está en fase:
+3
+Emergente.
+Crecimiento.
+Madurez.
+Declive.
+
+Si el V.A.N. de una inversión de 500.000 € empresa para un tipo de interés esperado del 15% a 5 años es de 3.000€, entonces:
+1
+El TIR > 15.
+El TIR < 15
+El Pay Back es de 5 años.
+El TIR = 15.
+
+El PAY BACK se alcanza cuando:
+3
+Cuando el TIR es cero.
+Cuando se cumplen el año en que el VAN es cero para un tipo de interés del 10%.
+Cuando se cumplen el año en que el VAN es cero para un tipo de interés del 0%.
+En ninguno de los casos anteriores.
+
+Para una empresa de fabricación de chupetes, el incremento de la población inmigante joven supondría en un análiss DAFO una:
+4
+Debilidad
+Amenaza
+Fortaleza
+Oportunidad
+
+Para una inversión a cinco años, si su TIR = 10 %, su Pay Back es:
+3
+Mayor de 5 %
+Mayor del 10 %
+Menor de 5 años
+Igual a 5 años
+
+Una buena imagen de marca supondría en un análiss DAFO una:
+3
+Debilidad
+Amenaza
+Fortaleza
+Oportunidad
+
+Una empresa basada en las Tecnologías de la Información y las Comunicaciones:
+2
+Necesita una gran inversión en Tecnología.
+Con menos Activos puede hacer más ventas que un negocio tradicional.
+Tiene un periodo corto de duración.
+Ninguna de las anteriores es cierta.
+
+¿Qué expresión no es correcta?
+3
+B2C: Business to Consumer
+B2B: Business to Business
+C2C: Counting to Counting
+A2A: Administration to Administration
+
+
+Una pasarela de pago:
+3
+Es un software que hay que programar específico para cada tienda virtual.
+Es el único medio de pago en una tienda virtual.
+La tiene que proveer una entidad bancaria.
+Ninguna de las anteriores es cierta.
+
+¿Qué es el NFC?
+4
+Es una conexión inalámbrica sin restricciones
+Es la Nueva Fiscalidad Comunitaria para el negocio electrónico
+Es la Nueva Forma de Comercio de las tiendas electrónicas.
+Es una Conexión Inalámbrica por Próximidad.
+
+Un mercado electrónico que reune agentes de seguros con las compañías de seguros es un:
+2
+Un B2B vertical
+Un B2B horizontal
+Un A2C vertical
+Un B2C horizontal
+
+El CRM
+2
+Es el sistema de gestion de contenidos
+Es el sistema de gestión de relaciones con clientes
+Es el sistema de gestión de marketing relacional
+Es el sistema de gestión de recursos de almacén
+
+¿Cómo se puede comprobar con mayor seguridad si un mismo usuario vuelva a cargar una página web?
+2
+Con los logs del servidor
+Con las Cookies
+Con la IP del ordenador de lectura
+Con le Proxy utilizado
+
+Los anuncios vinculados al contenido de la página son:
+4
+Los Banners
+Layers
+Intersicial
+Publicidad contextual
+
+¿Qué sistema mide la contratación publicitaria a través del cual el anunciante paga cada vez que un usuario es conducido a su Web Site y se registra en este?
+3
+CPM
+CPC
+CPL
+CPA
+
+El método para crear campañas de marketing por palabra que nos permitan aparecer para las principales palabras clave es:
+4
+CTR
+CPC
+SEO
+SEM
+
+¿Qué es el Freemium
+1
+Un modelo de nogocio
+Una tecnología para crear aplicaciones de móviles
+Un sistema de localización sin usar GPS
+Ninguno de los anteriores
+
+En el principio del principio 90-9-1 el 9 corresponde a
+3
+Creadores
+Audiencia
+Productores
+Realizadores
+
+¿Qué tipo de mercado es el que trasladamos el negocio de un pais a otro?
+4
+Existentes.
+Resegmentado
+Clon.
+Nuevos.
+
+¿Qué mide el apalancamiento?
+4
+La escasa internacionalización de una empresa
+El nivel de actividad de una empresa
+El nivel de obsolescencia de una empresa
+El nivel de endeudamiento de una empresa
+
+Si el V.A.N. de una inversión de 4.000.000 € para un tipo de interés esperado del 15% a 5 años es de 0€, entonces:
+4
+El TIR > 15
+El TIR < 15.
+El Pay Back es de 5 años
+El TIR = 15.
+
+El método para aparecer en los primeros puestos de un buscador pagando para unas palabras clave es:
+2
+SEO
+SEM
+CTR
+CPC
+
+La tarifa de Primas de A.T. y E.P. (Accidentes de Trabajo y Enfermedades Profesionales) dependen:
+3
+El trabajador no tiene obligación de presentarlo lo hace el servicio médico.
+Del número de bajas por enfermedad que se producen al mes
+De la actividad profesional CNAE:
+Del número de trabajadores de la empresa
+
+Si el Pasivo Circulante de una empresa es de 600.000€ y el Activo Circulante es de 500.000€, el Fondo de Maniobra será:
+1
+-100.000€.
+-1.100.000€.
+100.000€.
+1.100.000€.
+
+Un nicho de mercado:
+1
+Es un grupo, o zona donde hay muchos clientes potenciales.
+Es un grupo, o zona donde hay muchos competidores potenciales.
+Es un grupo, o zona donde hay muchos trabajadores potenciales.
+Es un grupo, o zona donde hay muchos proveedores potenciales.
+
+Con qué actuación NO conseguiríamos que el fondo de maniobra de una empresa no sea negativo:
+3
+Vendiendo Activos
+Renegociando la deuda a corto plazo para pasarla a largo plazo.
+Vendiendo existencias
+Ampliando Capital
+
+Si el fondo de maniobra de una empresa es 80.000€ y los recursospropios son de 5.000€ entonces la situación patrimonial de la empresa es:
+2
+De estabilidad patrimonial.
+De quiebra
+De estabilidad total.
+De suspensión de pagos.
+
+Un mercado electrónico que reúne inmobiliarias con empresas que quieren alquilar locales es un:
+2
+Un A2C vertical.
+Un B2B vertical.
+Un B2C horizontal.
+Un B2B horizontal.
+
+Los gastos de locomoción en una nómina:
+2
+Tributan siempre.
+Hay una cantidad exenta de tributación.
+No tributan nunca.
+Ninguna de las otras tres es correcta.
+
+Las deudas de los clientes de una empresa forman parte de:
+3
+Inmovilizado material
+Inmovilizado financiero
+Realizable
+Inmovilizado inmaterial
+
+¿Cuántos segmentos de clientes se pueden definir en el Biz model canvas?
+2
+En el Biz model canvas, no se define los segmentos de clientes.
+En el Biz model canvas, se pueden definir varios segmentos de clientes.
+En el Biz model canvas, no es importante definir el segmento de cliente.
+En el Biz model canvas, solo se puede definir un segmento de clientes.
+
+Las Debilidades en el análisis DAFO estudian:
+2
+Los aspectos del proyecto donde la competencia es inferior
+Los aspectos del proyecto donde la competencia es superior.
+Los aspectos del proyecto donde puede darse una ventaja competitiva.
+Los aspectos del proyecto donde la competencia tiene dificultades.
+
+Cuando tenemos una baja por enfermedad profesional:
+2
+El trabajador tiene obligación de presentarlo cuando se reincorpora al trabajo.
+El trabajador tiene obligación de presentarlo en 24 horas y las empresas en 2 días.
+El trabajador no tiene obligación de presentarlo lo hace el servicio médico.
+El trabajador tiene obligación de presentarlo en 3 días y las empresas en 5 días.
+
+Si el máximo Tipo de Retención al IRPF es del 43% para tramos superiores a los 53.407,20, en una nómina de 90.000 el tipo a aplicar sería:
+1
+> 43%
+< 43%
+43 %
+Estaría exento de impuesto.
+
+¿Qué apartado forma parte del Biz model canvas?
+3
+Facturación.
+Inmovilizado.
+Canales.
+Gestión usuarios.
+
+Qué documento de pago se puede descontar en la línea de crédito de la que disponga una empresa en un Banco:
+1
+Factura aceptada en un Confirming.
+Cheque barrado.
+Factura Proforma
+Recibo con numeración especial.
+
+¿Cúal es la actividad más básica en BPM?:
+4
+Las Tareas.
+Las Secuencias.
+Los Procesos.
+Las Actividades.
+
+Una empresa con 60 trabajadores y una facturación de 60 millones de euros es una:
+2
+Multinacional.
+Gran empresa.
+Mediana empresa.
+Pequeña empresa.
+
+¿Qué forma jurídica tiene la responsabilidad limitada?:
+4
+Empresario individual
+Sociedad Civil
+Comunidad de bienes
+Sociedad Anónima
+
+La regla 20-80:
+3
+El 80% de los clientes compran el 20% de los productos.
+El 20% de los productos son más baratos que el resto del 80%.
+El 80% de las ventas corresponden al 20% de los productos.
+El 20% de los clientes suponen el 80% de las ventas.
+
+¿qué documento es obligatorio en una venta?:
+1
+Una factura es un documento obligatorio para la contabilidad de la empresa.
+Una albarán es un documento obligatorio en una venta directa.
+Un pedido es un documento obligatorio para reclamar una devolución.
+Un abono es un documento obligatorio en una venta al contado.
+
+La lista de materiales se puede llamar:
+1
+Escandallo
+Elemento Padre.
+Ninguno de los otros tres.
+Orden de fabricación
+
+Si queremos conocer la situación de solvencia económico-financiera de una empresa en un momento concreto, tenemos que consultar:
+3
+Libro mayor.
+La cuenta de pérdidas y ganancias.
+Balance de situación.
+Libro diario.
+
+¿Qué componente forma parte del activo circulante?:
+2
+Reservas voluntarias.
+Realizable.
+Exigible.
+Inmovilizado financiero.
+
+¿Cúal es el valor contable de una empresa?
+3
+Los Activos Financieros.
+El realizable.
+Los Recursos Propios.
+El Beneficio
+
+
+Entre los tipos de documentos de cobro:
+2
+La letra de cambio tiene un emisor (llamado también deudor) y un receptor (llamado también acreedor).
+Los cheques se pueden cobrar antes de esa la fecha que figura en el mismo.
+Los cheques no se pueden cobrar antes de esa la fecha que figura en el mismo.
+Los pagarés son iguales a los cheques.
+
+¿Para que sirve una orden de fabricación?
+1
+Se utiliza para crear un artículo de producción normal.
+Se utiliza para descomponer un artículo superior del producto normal en sus componentes.
+Para realizar actividades que no son necesariamente artículos de la lista de materiales.
+para definir la lista de materiales.
+
+Siendo P=Pasivo, A=Activo, Pe=Pasivo Exigible, ¿cúal de las siguientes expresiones es correcta?:
+2
+P = A + Pe + Pe.
+P = A + Pe.
+P = A - Pe.
+P = A - Pe + Pe.
+
+Al crear un pedido de cliente en una venta en nuestro almacén:
+2
+El Disponible y el Comprometido aumentan.
+El Stock permanece igual y el Comprometido aumenta.
+El Stock y el Comprometido se quedan igual.
+El Stock permanece igual y el Comprometido disminuye.
+
+El método para aparecer en los primeros puestos de un buscador pagando para unas palabras clave es:
+3
+CIR.
+CPC.
+SEM.
+SEO.
+
+Si el V.A.N. de una inversión de 4.000.000 € para un tipo de interés esperado del 15% a 5 años es de 0€, entonces:
+1
+EI TIR < 15.
+EI Pay Back es de 5 años.
+EI 15.
+EI TIR 15.
+
+Las deudas de los clientes de una empresa forman parte de:
+3
+Inmovilizado financiero
+Inmovilizado inmaterial
+Realizable
+Inmovilizado material

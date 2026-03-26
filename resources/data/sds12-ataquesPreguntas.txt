@@ -1,0 +1,419 @@
+¿Qué acción maliciosa puede llevar a cabo un ataque de Cross Site Scripting (XSS) en una aplicación web?
+1
+- Robar cookies y secuestrar sesiones
+- Inyectar consultas SQL en la base de datos
+- Provocar un desbordamiento de búfer
+- Realizar un ataque de denegación de servicio
+
+¿Cuál de estos NO es un tipo de ataque XSS?
+4
+- Reflejado
+- Almacenado
+- Basado en DOM
+- Por desbordamiento de pila
+
+¿Qué caracteriza principalmente a una inyección SQL?
+2
+- La manipulación del Document Object Model (DOM)
+- La inserción de comandos SQL en consultas por falta de filtrado
+- La descarga de malware en el cliente
+- El envenenamiento de la caché ARP
+
+¿En qué consiste una inyección XML?
+3
+- En explotar un buffer overflow al procesar XML
+- En manipular cabeceras HTTP para ocultar el origen de una petición XML
+- En introducir código XML malicioso aprovechando una entrada sin filtrar
+- En secuestrar la sesión de usuario mediante cookies flash
+
+¿Qué permite a un atacante una inyección de comandos o recorrido de directorios?
+1
+- Escapar del directorio raíz del servidor y ejecutar comandos arbitrarios
+- Robar tokens CSRF
+- Modificar el atributo SameSite de una cookie
+- Realizar un ataque de denegación de servicio distribuida
+
+¿Cómo se define un ataque a la cadena de suministro (supply chain attack)?
+2
+- Un ataque que explota vulnerabilidades en extensiones del navegador
+- Comprometer software o hardware en algún punto antes de llegar al usuario final
+- Inyectar scripts maliciosos en la respuesta HTTP
+- Desbordar un búfer en el servidor web
+
+¿Cuál de estos casos es un ejemplo real de ataque a la cadena de suministro?
+3
+- Inyección de SQL en una API pública
+- Un ataque XSS reflejado en una URL
+- Compromiso del software Orion de SolarWinds
+- Envenenamiento de la caché ARP en una red local
+
+¿Qué describe mejor un “drive-by download”?
+4
+- Capturar tráfico cifrado en un proxy SSL
+- Envenenar cache DNS para redirigir al usuario
+- Realizar un CSRF contra un banco
+- Descargar y ejecutar código malicioso al visitar una web vulnerada
+
+¿Qué cabecera HTTP manipula un atacante para ocultar de qué sitio proviene una petición?
+1
+- Referer
+- User-Agent
+- Accept-Language
+- Host
+
+Una **cookie de terceros** se caracteriza por:
+3
+- Almacenarse solo en RAM durante la sesión
+- Ser siempre cifrada via HTTPS
+- Provenir de un dominio distinto al que el usuario está visitando
+- No poder persistir tras cerrar el navegador
+
+¿Qué nombre recibe el ataque que consiste en robar o adivinar el token de sesión de un usuario?
+2
+- CSRF
+- Session Hijacking
+- XSS
+- DDoS
+
+¿En qué consiste un ataque CSRF (Cross-Site Request Forgery)?
+1
+- Engañar al navegador para que realice acciones no deseadas en una sesión activa
+- Inyectar JavaScript malicioso en un comentario almacenado
+- Inyectar comandos SQL en una base de datos
+- Provocar un desbordamiento de búfer en el servidor
+
+¿Qué atributo de cookie ayuda a mitigar ataques CSRF?
+4
+- HttpOnly
+- Secure
+- Domain
+- SameSite
+
+¿Qué tecnología de extensión del navegador tiene acceso absoluto al sistema operativo y al disco?
+1
+- ActiveX
+- WebAssembly
+- NaCl (Native Client)
+- gVisor
+
+¿En qué consiste un **desbordamiento de búfer** (buffer overflow)?
+1
+- Al escribir datos más allá de los límites de un búfer, sobrescribiendo memoria adyacente
+- En inyectar consultas SQL con comillas simple
+- En manipular las cookies de sesión
+- En redirigir peticiones HTTP a otro dominio
+
+¿Cuál de estas técnicas dificulta la explotación de un buffer overflow?
+2
+- Validar la entrada de usuario
+- Aleatorización de direcciones de memoria (ASLR)
+- Uso de cookies flash
+- Envenenamiento ARP
+
+¿Qué caracteriza a un ataque DDoS (Distributed Denial of Service)?
+3
+- Uso de scripting en el cliente para robar sesiones
+- Inyección de XML en servicios web
+- Sobrecargar un recurso desde múltiples hosts controlados por el atacante
+- Manipulación de cabeceras HTTP para ocultar el origen de la petición
+
+¿En qué consiste el envenenamiento ARP (ARP poisoning)?
+2
+- Modificar la caché ARP para que una IP apunte a la MAC del atacante
+- Inyectar código JavaScript malicioso en un comentario almacenado
+- Sustituir registros DNS para redirigir un dominio
+- Provocar un desbordamiento de búfer en la pila
+
+¿Qué hace un ataque de envenenamiento DNS (DNS poisoning)?
+1
+- Sustituye la IP asociada a un nombre de dominio en el sistema DNS por una fraudulenta
+- Roba cookies de sesión de terceros
+- Realiza un ataque de denegación de servicio contra servidores DNS
+- Inyecta comandos en una base de datos SQL a través de cabeceras HTTP
+
+¿Qué es un ataque de Cross-Site Scripting (XSS)?
+2
+- Interceptar paquetes de red
+- Inyectar scripts maliciosos para que se ejecuten en el navegador de la víctima
+- Saturar un servidor con peticiones
+- Desbordar un búfer
+
+¿Cuál de estas NO es una consecuencia típica de un ataque XSS?
+4
+- Robar cookies del usuario
+- Secuestrar sesiones
+- Redirigir al usuario a sitios maliciosos
+- Provocar un ataque de denegación de servicio (DoS)
+
+¿Cuál de los siguientes NO es un tipo de ataque XSS?
+4
+- Reflejado
+- Almacenado
+- Basado en DOM
+- Buffer overflow
+
+¿En qué consiste una inyección SQL?
+1
+- Insertar comandos SQL en las consultas debido a falta de filtrado
+- Cambiar cabeceras HTTP para ocultar el origen
+- Inyectar scripts maliciosos en comentarios
+- Desbordar un búfer en el servidor
+
+¿Cuál de estas consultas demuestra una inyección SQL que fuerza siempre la condición a verdadera?
+2
+- SELECT \* FROM users WHERE name = ‘\$USER’
+- SELECT \* FROM users WHERE name = ‘whatever’ OR ‘a’=‘a’
+- SELECT \* FROM users WHERE name = ‘admin’; DROP TABLE users;
+- SELECT \* FROM users WHERE name = ‘x’ AND ‘y’=‘z’
+
+¿En qué consiste una inyección de datos en formatos como XML, JSON o YAML?
+1
+- Aprovechar entradas sin filtrar para insertar código de marcado que explote vulnerabilidades
+- Interceptar paquetes cifrados de estos formatos
+- Sobrescribir la pila de llamadas al procesar datos
+- Redirigir las peticiones de datos a un servidor malicioso
+
+¿Qué caracteriza principalmente a una inyección de comandos o recorrido de directorios?
+3
+- Forzar siempre la condición de una consulta SQL a verdadera
+- Insertar scripts JavaScript en los comentarios
+- Escapar del directorio raíz del servidor web para leer archivos o ejecutar comandos arbitrarios
+- Capturar y reproducir el tráfico HTTPS
+
+¿Qué sigue a “../” en una URL para acceder a un archivo fuera del directorio raíz?
+2
+- /etc/passwd
+- ../../../../../TopSecret.docx
+- /var/log/syslog
+- //admin/config.php
+
+¿Cómo se define un ataque a la cadena de suministro (supply chain attack)?
+2
+- Un ataque que usa scripts en la capa de red
+- Comprometer componentes de software o hardware antes de llegar al usuario final
+- Redirigir peticiones DNS
+- Inyectar SQL en una API pública
+
+¿Cuál es un ejemplo real de ataque a la cadena de suministro mencionado en clase?
+2
+- Stuxnet
+- SolarWinds Orion
+- Heartbleed
+- Mirai
+
+¿Qué vulnerabilidad crítica relacionada con la librería XZ afecta protocolos como SSH?
+3
+- Cross-Site Scripting
+- Buffer overflow en la pila
+- Manipulación de formato XZ que permite ejecución remota
+- Denegación de servicio mediante peticiones repetidas
+
+¿Qué es un “drive-by download”?
+1
+- Descarga y ejecución automática de malware al visitar una web vulnerable
+- Inyección de comandos en un servidor al procesar parámetros
+- Sustitución de un fichero legítimo por uno malicioso en el servidor
+- Captura pasiva de paquetes de red
+
+¿Cuál de estas extensiones del navegador tiene acceso absoluto al sistema operativo y disco?
+1
+- ActiveX
+- WebAssembly
+- NaCl (Native Client)
+- gVisor
+
+¿Qué tecnología basada en sandboxing permite ejecutar código de alto rendimiento dentro del navegador?
+3
+- ActiveX
+- SQL bindings
+- WebAssembly
+- Flash
+
+¿Qué es un desbordamiento de búfer (buffer overflow)?
+1
+- Intentar almacenar datos en RAM más allá de los límites de un búfer, sobrescribiendo memoria adyacente
+- Insertar consultas SQL en la base de datos
+- Inyectar scripts en el cliente
+- Redirigir el tráfico DNS
+
+¿Por qué un desbordamiento de pila (stack overflow) puede permitir la ejecución de código arbitrario?
+1
+- Porque permite modificar la dirección de retorno de la función y saltar a código inyectado
+- Porque corrompe las cabeceras HTTP
+- Porque sobrescribe las cookies en la memoria
+- Porque bloquea la entrada de usuario
+
+¿En qué consiste un ataque de secuestro de sesión (session hijacking)?
+2
+- Forzar una consulta SQL siempre verdadera
+- Robar o adivinar el token de sesión de un usuario para suplantarlo
+- Sobrescribir la pila de llamadas
+- Inyectar XML malicioso
+
+¿Qué es un ataque de reproducción (replay attack)?
+2
+- Reenviar mensajes legítimos capturados para repetir una acción
+- Interceptar y modificar datos en tránsito
+- Inyectar código en la base de datos
+- Saturar un servidor con peticiones
+
+¿En qué consiste un ataque de Cross-Site Request Forgery (CSRF)?
+1
+- Engañar al navegador para que realice acciones no deseadas en un sitio donde el usuario está autenticado
+- Inyectar scripts JavaScript en un comentario almacenado
+- Sobrescribir la memoria del servidor
+- Redirigir DNS a un servidor malicioso
+
+¿Cuál de estos escenarios describe mejor un ataque CSRF contra una cuenta bancaria?
+1
+- Un script en otro sitio envía una petición de transferencia mientras la sesión está activa
+- Inyección de SQL para robar contraseñas
+- Desbordamiento de búfer para ejecutar código
+- Envenenamiento de la caché ARP
+
+¿Qué medida ayuda a proteger contra ataques CSRF?
+4
+- Validar la entrada del usuario
+- Utilizar cabeceras Host
+- Inyectar scripts en la respuesta
+- Implementar tokens CSRF en formularios y verificar en el servidor
+
+¿Cuál atributo de cookie controla cuándo se envía al servidor y mitiga ataques CSRF?
+4
+- HttpOnly
+- Secure
+- Domain
+- SameSite
+
+¿Cuál de estos NO es un ataque de aplicación típico?
+3
+- Cross-Site Scripting (XSS)
+- Inyección SQL
+- Denegación de Servicio Distribuido (DDoS)
+- Cross-Site Request Forgery (CSRF)
+
+¿Cuál es una característica esencial de un ataque de Denegación de Servicio (DoS)?
+1
+- Tener un recurso finito y consumirlo más rápido de lo que se repone
+- Interceptar y modificar paquetes en tránsito
+- Inyectar SQL en la base de datos
+- Robar cookies de sesión
+
+¿Qué diferencia principal tiene un ataque DDoS respecto a uno DoS?
+3
+- Utiliza múltiples hosts controlados para realizar el ataque
+- Ocurre a nivel de aplicación
+- Involucra un único IP de origen
+- Se limita a redes internas
+
+¿Cuál de estos ataques explota respuestas amplificadas de DNS para saturar la red?
+2
+- Ping Flood
+- DNS Amplification
+- SYN Flood
+- Smurf Attack
+
+¿Qué técnica de reclutamiento se usa para crear una botnet DDoS?
+1
+- Scanning (detección de máquinas vulnerables)
+- Drive-by download
+- Inyección de comandos
+- Envenenamiento de DNS
+
+¿Cuál NO es una etapa típica en la creación de una botnet?
+2
+- Scanning (detectar máquinas vulnerables)
+- Inyección SQL en servidores públicos
+- Instalación de software específico
+- Control y actualización remota de bots
+
+¿Qué diferencia hay entre un ataque MITM pasivo y uno activo?
+1
+- El pasivo solo captura y reenvía datos sin modificar, el activo los altera
+- El pasivo infecta con malware, el activo solo escucha
+- El activo redirige DNS, el pasivo modifica cabeceras
+- Ambos son equivalentes
+
+¿Cómo se realiza un ataque de envenenamiento ARP (ARP poisoning)?
+1
+- Sustituyendo la dirección MAC asociada a una IP en la caché ARP para redirigir el tráfico
+- Inyectando scripts en la capa de red
+- Forzando una condición SQL a verdadera
+- Interceptando claves TLS
+
+¿En qué consiste un ataque de envenenamiento DNS (DNS poisoning)?
+1
+- Sustituir la IP devuelta para un nombre de dominio en un servidor DNS
+- Robar cookies mediante un sitio malicioso
+- Sobrescribir la pila de llamadas
+- Saturar un servidor con peticiones
+
+¿Cuál de estas no es una defensa válida contra ataques XSS e inyección SQL?
+4
+- Validar y filtrar la entrada de usuario
+- Utilizar consultas parametrizadas
+- Escapar la salida HTML
+- Desactivar HTTPS en el servidor
+
+¿Qué técnica evita que la entrada del usuario modifique la estructura de una consulta SQL?
+2
+- Filtros de red
+- Consultas parametrizadas o declaraciones preparadas
+- Inyecciones de cabeceras HTTP
+- Desbordamiento de búfer
+
+¿Qué método ayuda a impedir que scripts maliciosos se ejecuten en el HTML generado?
+1
+- Escape/encoding de caracteres especiales
+- Uso de cookies de terceros
+- Interceptar paquetes con un firewall
+- Deshabilitar JavaScript en el navegador
+
+¿Qué técnica de protección de memoria aleatoriza la posición de segmentos para dificultar exploits?
+2
+- Data Execution Prevention (DEP)
+- Address Space Layout Randomization (ASLR)
+- Input validation
+- Cross-Site Request Forgery tokens
+
+¿Qué mecanismo marca regiones de memoria como no ejecutables?
+1
+- NX bit / DEP
+- SameSite
+- Prepared Statements
+- Sandboxing
+
+¿Cuál de estas soluciones confina código a un entorno restringido dentro del navegador?
+1
+- Sandboxing (NaCl, gVisor, WebAssembly)
+- Consultas parametrizadas
+- DNS Filtering
+- Honeypot
+
+¿Para qué sirve un honeypot en seguridad de redes?
+1
+- Simular vulnerabilidades y registrar actividad maliciosa
+- Acelerar el tráfico de red
+- Realizar balanceo de carga
+- Aumentar la aleatorización de memoria
+
+¿Qué defensa de capa de aplicación limita la tasa de peticiones para mitigar DDoS?
+1
+- Rate limiting
+- Depuración de código
+- Inyección de cabeceras
+- Uso de cookies persistentes
+
+¿Qué medida de red ayuda a bloquear tráfico con IP spoofed?
+1
+- Filtrado de spoofing en el router o firewall
+- Aislamiento de código en sandbox
+- Validación de entradas en la aplicación
+- Uso de tokens CSRF
+
+¿Por qué es vital contar con un sistema de logs y monitoreo continuo?
+1
+- Permite detectar actividad anómala y responder rápidamente a incidentes
+- Acelera la página web
+- Elimina la necesidad de firewalls
+- Bloquea automáticamente todos los ataques

@@ -1,0 +1,280 @@
+¿Qué característica define a una función hash criptográfica?
+2
+Permitir invertir fácilmente la transformación para recuperar el mensaje original
+Tomar una entrada de longitud variable y producir una salida de tamaño fijo
+Comprimir datos reduciendo siempre el tamaño de la salida
+Utilizar una clave secreta para cifrar y descifrar
+
+¿Cuál es el propósito del esquema de relleno (Merkle–Damgård) en las funciones hash iterativas?
+3
+Asegurar que la salida sea siempre de longitud variable
+Incrementar la velocidad de cómputo en hardware especializado
+Añadir el tamaño del mensaje al final y completar bloques incompletos para evitar colisiones triviales
+Permitir la compresión reversible de los datos de entrada
+
+¿Qué significa que una función hash sea “de una vía”?
+4
+Que produce un resumen de tamaño variable según la longitud de entrada
+Que puede invertirse fácilmente con la clave correcta
+Que siempre produce el mismo resumen para cualquier entrada
+Que es computacionalmente fácil calcular H(m) pero muy difícil, dado h, encontrar m tal que H(m)=h
+
+En el contexto de funciones hash, ¿qué describe mejor una colisión débil?
+2
+Encontrar dos mensajes cualquiera que produzcan el mismo resumen
+Para un mensaje x dado, hallar otro y≠x tal que H(y)=H(x)
+Calcular H(x) rápidamente en hardware especializado
+Que cambiar un bit de entrada no altere el resumen
+
+¿Por qué se firma el resumen (hash) de un mensaje en lugar del mensaje completo en firmas digitales?
+1
+Porque la aritmética de clave pública solo admite tamaños reducidos y es más rápido
+Porque la firma del mensaje completo no garantiza integridad
+Porque el resumen se puede descifrar
+Porque evita la necesidad de usar hashes
+
+¿Cuál de estas NO es una aplicación típica de funciones hash en seguridad?
+4
+Verificar la integridad de archivos (checksum)
+Generar números verdaderamente aleatorios usando ruido físico
+Indexar y comparar eventos en sistemas IDS/IPS
+Cifrar mensajes de forma reversible
+
+¿En qué consiste el ataque de extensión de longitud (length-extension)?
+3
+Forzar la función a usar más bloques de relleno de los previstos
+Encontrar colisiones débiles mediante la paradoja del cumpleaños
+Dado H(m) y len(m), calcular H(m∥pad(m)∥X) sin conocer m
+Romper la función encontrando la clave interna
+
+Según la paradoja del cumpleaños, ¿cuántas operaciones son necesarias para hallar una colisión en un hash de m bits?
+2
+2^m
+Aproximadamente 2^(m/2)
+m·2^m
+m^2
+
+¿Cuál de las siguientes funciones hash está actualmente considerada rota por ataques prácticos de colisión y preimagen?
+3
+SHA-256
+RIPEMD-160
+MD5
+SHA-3
+
+¿Qué diferencia fundamental existe entre SHA-2 y SHA-3?
+4
+SHA-3 produce siempre resúmenes de 128 bits
+SHA-2 usa un esquema esponja; SHA-3 usa Merkle–Damgård
+SHA-2 fue diseñado por un concurso público; SHA-3 por la NSA
+SHA-2 y SHA-3 emplean algoritmos conceptualmente distintos (Merkle–Damgård vs. esponja)
+
+¿Qué aporta Scrypt frente a PBKDF2 en la gestión de contraseñas?
+1
+Uso intensivo de memoria para dificultar ataques con GPU/ASIC
+Un número de iteraciones configurable basado en potencias de 2
+Compatibilidad con estándares PKCS
+Resistencia a colisiones fuertes
+
+¿Cuál es el papel de la “sal” (salt) al almacenar contraseñas con hash?
+2
+Acelerar el cálculo del hash en el servidor
+Evitar que contraseñas idénticas produzcan el mismo resumen y dificultar tablas precalculadas
+Permitir descifrar la contraseña original
+Garantizar que el hash sea de doble vía
+
+¿En qué se basa Bcrypt para mejorar la seguridad frente a PBKDF2?
+4
+Reemplazar el hash por un cifrador en bloque reversible
+Evitar completamente el uso de memoria
+Utilizar exclusivamente sal fija
+Incorporar memoria y una fase de derivación de subclaves más costosa
+
+¿Cuál de los siguientes algoritmos resultó ganador del Concurso de Password Hashing (PHC) 2015?
+1
+Argon2
+Scrypt
+PBKDF2
+Blake2
+
+¿Cómo pueden usarse hashes para mejorar la privacidad al compartir datos agregados?
+3
+Para cifrar los datos de manera reversible entre varias partes
+Para generar números aleatorios de alta calidad
+Para anonimizar atributos (p. ej., ciudad o edad) sin revelar valores originales
+Para comprimir grandes volúmenes de datos antes de exportarlos
+
+¿Por qué es obligatorio incluir la longitud del mensaje en el relleno de Merkle–Damgård?
+1
+Para distinguir entre mensajes que terminan en cero y bloques de relleno, evitando colisiones triviales
+Para acelerar la computación del hash
+Para permitir la reversibilidad del esquema
+Para mantener el estado interno constante
+
+¿Qué propiedad de un buen hash hace que un pequeño cambio en la entrada produzca un cambio drástico en la salida?
+3
+Función de una vía
+Eficiencia
+Efecto avalancha (avalanche effect)
+Colisión fuerte
+
+¿Cuál de estas afirmaciones sobre CRC (cyclic redundancy check) es correcta?
+2
+Está diseñado para resistir adversarios que intenten manipular datos deliberadamente
+Sirve para detectar errores accidentales, pero no es seguro frente a ataques maliciosos
+Genera siempre un resumen de tamaño fijo de 256 bits
+Utiliza Merkle–Damgård
+
+En firmas digitales, ¿qué ataque se reduce al firmar directamente el mensaje en lugar de su resumen?
+4
+Búsqueda exhaustiva de preimagen
+Ataque de la paradoja del cumpleaños
+Colisión débil
+Ineficiencia computacional (firma se vuelve impracticable)
+
+¿Cómo facilita un IDS/IPS el uso de hashes en la detección de intrusos?
+3
+Comparando el estado de la RAM en tiempo real
+Desencriptando paquetes cifrados
+Indexando y buscando el hash de cada paquete contra una base de anomalías conocidas
+Generando claves de sesión
+
+¿Qué ventaja da a un antivirus almacenar hashes de fragmentos de malware en lugar del binario completo?
+1
+Permite comparar de forma rápida y ligera los resúmenes con el código en ejecución
+Evita la necesidad de actualizaciones
+Garantiza resistencia a falsos positivos
+Hace reversible la detección
+
+¿Por qué forman parte las funciones hash de algunos generadores de números verdaderamente aleatorios?
+2
+Para cifrar la fuente de entropía
+Para “destilar” la entropía cruda en una salida uniforme y sin sesgos
+Para aumentar la longitud de la secuencia
+Para comprimir el vector de entropía
+
+¿Qué requisito NO es propio de una función hash criptográfica?
+4
+Salida de longitud fija
+Eficiencia de cálculo
+Dificultad de colisión
+Uso de una clave secreta
+
+¿Cuál es la diferencia entre resistencia a preimagen y a segunda preimagen?
+1
+Preimagen: dado h, es difícil encontrar cualquier m tal que H(m)=h; segunda preimagen: dado un m₀, difícil hallar m₁≠m₀ con H(m₁)=H(m₀)
+Preimagen: encontrar colisiones generalizadas; segunda preimagen: distinguir salidas pseudorandom
+Preimagen: romper cifradores en bloque; segunda preimagen: atacar esquemas de relleno
+No existe diferencia
+
+El ataque de la paradoja del cumpleaños se usa para estimar:
+2
+El coste de computar un hash por hardware especializado
+El número de intentos necesarios para encontrar una colisión en un hash de m bits (~2^(m/2))
+La longitud óptima de sal
+La probabilidad de preimagen
+
+¿Qué función hash de la lista es de tipo “esponja” y no usa Merkle–Damgård?
+4
+SHA-1
+MD5
+RIPEMD-160
+SHA-3 (Keccak)
+
+¿Cuál de estas funciones NO deberías usar hoy en entornos de seguridad críticos?
+3
+SHA-256
+Argon2
+MD4
+Bcrypt
+
+¿Qué característica introduce Argon2 para defenderse de ataques por caching?
+1
+Acceso aleatorio y secuencial a memoria para evitar filtraciones por tiempo de caché
+Uso de sal fija en todos los usuarios
+Paradoja del cumpleaños interna
+Compresión interactiva
+
+En PBKDF2, ¿qué parámetro afecta directamente al “trabajo” que realiza el derivador?
+2
+Longitud de la sal
+Número de iteraciones
+Tamaño del resumen
+Algoritmo de compresión
+
+¿Por qué Scrypt es más caro de atacar con ASIC que PBKDF2?
+3
+Porque su salida es de longitud variable
+Porque requiere una clave secreta
+Porque consume grandes cantidades de memoria y hace accesos desordenados
+Porque usa un cifrador en bloque reversible
+
+¿Para qué sirve el “Client-Independent Update” en algunos PBKDF?
+2
+Para que el cliente decida el número de iteraciones
+Para cambiar parámetros (iteraciones/ram) sin que el usuario vuelva a escribir su contraseña
+Para permitir precálculo distribuido
+Para derivar múltiples claves a la vez
+
+¿Cuál es la longitud mínima recomendada de sal para hashes de contraseñas?
+1
+64 bits
+32 bits
+128 bytes
+256 bytes
+
+¿Qué problema persiste si guardas en hash+sal contraseñas muy débiles (“123456”)?
+4
+No hay problema: son imposibles de romper
+El hash se vuelve reversible
+La sal deja de tener efecto
+Un atacante aún puede probar todas las contraseñas posibles vía GPU
+
+¿Qué versión de SHA-3 surgió del concurso por no basarse en SHA-2 ni MD4?
+3
+Sponge-256
+Keccak-512
+Keccak (SHA-3)
+Skein
+
+¿Cuál de estos ataques aprovecha directamente la estructura interna de Merkle–Damgård?
+2
+Fuerza bruta de preimagen
+Ataque de extensión de longitud
+Paradoja del cumpleaños
+Uso de GPUs masivas
+
+¿Qué función de la lista es una derivación de clave estándar muy popular pero hoy considerada débil?
+4
+Scrypt
+Bcrypt
+Argon2
+PBKDF2
+
+¿Cuándo usarías un hash en lugar de un cifrado para gestionar contraseñas?
+3
+Cuando necesites descifrar la contraseña en el servidor
+Cuando quieras usar una clave maestra para todo el sistema
+Cuando solo necesites verificar que la contraseña coincide, sin permitir su recuperación
+Cuando requieras cifrado reversible
+
+¿Qué ventaja tiene usar “pimienta” (pepper) además de sal?
+2
+Hace que el resumen sea de variable longitud
+Introduce un valor secreto del servidor para endurecer los hashes incluso si la DB se filtra
+Permite colisiones controladas
+Acelera la derivación de la clave
+
+¿Cuál es el propósito de la “salt” en algoritmos de prueba de trabajo de criptomonedas como Litecoin?
+1
+Democratizar la minería evitando ASICs especializados
+Incrementar la salida de la red
+Firmar bloques de forma rápida
+Evitar la paradoja del cumpleaños
+
+¿Qué parámetro de los PBKDF basados en memoria hace que GPUs y ASICs pierdan su ventaja?
+4
+Tamaño del resumen
+Esquema de relleno
+Seguridad de preimagen
+Consumo de RAM configurables
+

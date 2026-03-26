@@ -1,0 +1,251 @@
+¿Cómo define la asignatura la seguridad en el diseño de software?
+3
+Un conjunto de políticas de empresa para auditar código
+Una fase final que se añade tras el desarrollo
+Un proceso continuo dentro de la ingeniería del software que requiere conocimiento y aplicación de técnicas para evitar defectos y vulnerabilidades
+Una simple revisión de código antes de cada entrega
+
+¿Por qué es cada vez más importante el diseño de software seguro?
+2
+Porque reduce el coste de mantenimiento
+Debido a la creciente complejidad de los sistemas software actuales
+Por la facilidad de uso de los entornos de desarrollo modernos
+Para acelerar los tiempos de compilación
+
+¿Cuál de los siguientes es un objetivo específico de la asignatura?
+2
+Desarrollar interfaces gráficas avanzadas
+Aplicar criterios de seguridad en el desarrollo del software
+Aprender un nuevo lenguaje de programación no relacionado con la seguridad
+Realizar pruebas de rendimiento de sistemas paralelos
+
+¿Cuál de las siguientes NO es una característica destacada del lenguaje Go, según la presentación?
+4
+Sintaxis concisa
+Concurrencia integrada
+Compilación rápida
+Tipado dinámico
+
+¿Cuál de las siguientes afirmaciones describe correctamente el objetivo de Go al combinar ambos mundos (compilados e interpretados)?
+2
+Ofrecer recolector de basura y tipado dinámico, con sintaxis inspirada en Python
+Un lenguaje compilado con tipos estáticos que ofrece seguridad y rendimiento, y al mismo tiempo expresividad y conveniencia de un lenguaje interpretado
+Un intérprete rápido con tipos dinámicos y sin concurrencia
+Un lenguaje de scripts puramente dinámico para desarrollo web
+
+¿Por qué Go ofrece un “soporte excelente para seguridad”?
+3
+Porque implementa tipado dinámico y reflexión en tiempo de ejecución
+Porque depende de librerías externas de criptografía
+Porque tiene tipos estáticos, gestión automática de memoria y una librería estándar coherente
+Porque compila muy lentamente y fuerza revisiones manuales
+
+¿Quiénes son los creadores originales de Go mencionados en la presentación?
+1
+Ken Thompson, Rob Pike y Robert Griesemer
+Dennis Ritchie y Bjarne Stroustrup
+Guido van Rossum y James Gosling
+Linus Torvalds y Richard Stallman
+
+¿Cuál de estos lenguajes NO figura entre las influencias de Go según las diapositivas?
+4
+Pascal
+Modula
+Oberon
+COBOL
+
+¿Qué elemento destacable de Go hace que su librería estándar sea especialmente fácil de usar?
+1
+Su consistencia y ortogonalidad entre los distintos paquetes
+La sintaxis ligera para importaciones
+El uso de tipado dinámico en la librería estándar
+La ausencia de concurrencia
+
+¿Qué comando de Go se utiliza para formatear automáticamente el código fuente?
+1
+fmt
+run
+build
+mod
+
+¿Cuál de estas secciones NO se menciona como destacada en la web oficial de Go (go.dev)?
+3
+Descargas de Go
+Librería estándar
+Foros de discusión
+Buscador de paquetes
+
+¿Qué herramienta interactiva recomienda el profesor para aprender Go la próxima semana?
+1
+El Tour de Go
+El Playground de Python
+El tutorial de Rust
+El curso de Node.js
+
+¿Qué palabra clave se usa en Go para ejecutar una función de forma concurrente?
+1
+go
+func
+parallel
+async
+
+¿Cuál de estos objetivos formativos NO corresponde a la asignatura?
+3
+Aplicar criterios de seguridad en el desarrollo del software
+Conocer y aplicar técnicas de seguridad adecuadas
+Aprender diseño de videojuegos
+Conocer y evitar vulnerabilidades y ataques comunes
+
+¿Cuál es la principal razón para invertir tiempo en seguridad desde el inicio del desarrollo, según el profesor?
+2
+Acelerar la compilación del software
+Evitar problemas de seguridad costosos posteriores
+Reducir el tamaño del manual de usuario
+Cumplir con requisitos estéticos
+
+¿Qué lenguaje de programación utilizan en las prácticas de esta asignatura?
+3
+C++
+Java
+Go
+Python
+
+¿Por qué Go incluye un recolector de basura, según la presentación?
+1
+Para gestionar memoria y reducir vulnerabilidades como buffer overflows
+Para mejorar la velocidad en sistemas de tiempo real estricto
+Para permitir tipado dinámico
+Para facilitar la interoperabilidad con C
+
+¿Qué problema presentan los recolectores de basura en sistemas de tiempo real estricto?
+2
+No liberan memoria de forma eficiente
+Pueden detener la ejecución de forma no predecible
+Generan errores de compilación
+Obligan a usar sintaxis compleja
+
+¿Qué palabra clave utiliza Go para lanzar una función en paralelo?
+4
+async
+parallel
+thread
+go
+
+¿Cuál de estos comandos de Go muestra las variables de entorno?
+2
+go build
+go env
+go run
+go fmt
+
+¿Qué comando de Go se usa para formatear automáticamente el código fuente?
+4
+go build
+go run
+go get
+go fmt
+
+¿Qué utilidad tiene el comando go mod?
+3
+Ejecutar el código
+Formatear archivos
+Gestionar módulos y dependencias
+Mostrar la versión de Go
+
+¿Para qué sirve go get en Go?
+1
+Obtener e instalar paquetes externos
+Compilar binarios locales
+Ejecutar pruebas unitarias
+Generar documentación
+
+¿Qué comando se utiliza para compilar un programa y generar un ejecutable sin ejecutarlo?
+2
+go run
+go build
+go fmt
+go install
+
+¿Qué característica de Go evita errores de punto y coma y estilos de llave inconsistentes?
+3
+El recolector de basura
+La librería estándar
+El formateador go fmt
+El cross‐compiler
+
+¿Por qué Go es compatible hacia atrás (“backward compatible”)?
+2
+Porque usa licencias BSD
+Porque mantiene la capacidad de compilar código escrito en versiones previas
+Porque tiene tipado dinámico
+Porque depende de la comunidad
+
+¿Cuál de estas licencias permite usar Go en proyectos comerciales sin necesidad de publicar el código fuente?
+3
+GPL
+MIT
+BSD
+Apache
+
+¿Qué influencia de Plan 9 se refleja en Go?
+4
+El sistema de tipado
+El recolector de basura
+La sintaxis de paquetes
+La filosofía de herramientas ortogonales y CSP para concurrencia
+
+¿Qué aportó Niklaus Wirth al diseño de Go?
+2
+La concurrencia integrada
+La influencia de Pascal en declaraciones y paquetes
+El recolector de basura
+El manejo de puertos de red
+
+¿Qué ventaja profesional destacó el profesor para aprender Go?
+1
+Alta demanda y buen salario en empresas
+Compatibilidad con C++
+Facilidad de escribir interfaces gráficas
+Uso exclusivo en investigación académica
+
+¿Qué recurso interactivo, distinto del Tour de Go, mencionó el profesor para repasar prácticas?
+2
+Vídeos de revisión
+Go Playground
+Jupyter Notebook
+Presentaciones en PowerPoint
+
+¿Qué comando de Go se utiliza para compilar e instalar un paquete en tu sistema?
+1
+go install
+go build
+go get
+go fmt
+
+¿Qué comando permite conocer la versión actual de Go instalada?
+2
+go env
+go version
+go run version
+go mod version
+
+¿Qué acción NO está permitida en Go Playground?
+1
+Escribir en el sistema de archivos
+Usar la librería estándar
+Ejecutar concurrencia con ‘go’
+Imprimir en pantalla
+
+¿Cómo se configura Go para compilar código para Windows en una máquina Linux/Mac?
+3
+Usando go cross build
+Con go build --windows
+Estableciendo variables de entorno GOOS y GOARCH antes de compilar
+Go solo compila para la plataforma local
+
+¿Cuál es la diferencia principal entre licencias GPL y BSD en proyectos comerciales?
+1
+GPL obliga a publicar el código fuente de trabajos derivados, mientras que BSD no
+BSD obliga a publicar el código de las dependencias, mientras que GPL no
+GPL permite uso comercial sin restricciones, mientras que BSD no
+BSD impone requisitos de documentación estrictos, mientras que GPL no

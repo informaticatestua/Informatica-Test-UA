@@ -1,0 +1,244 @@
+Sobre el funcionamiento de una red de conmutación de paquetes con datagramas es cierto que:
+2
+Los paquetes siempre emplean el mismo camino entre un origen y un destino.
+Es necesario un mecanismo para reordenar los paquetes que llegan al destino.
+Cada intercambio de datos entre dos equipos se identifica con un identificador de camino.
+Siempre se producen errores en el intercambio de paquetes entre dos equipos.
+
+¿En qué tipo de redes la multidifusión se lleva a cabo con la transmisión física de UN SOLO paquete?
+3
+Redes conmutación de paquetes con datagramas.
+Redes conmutación de paquetes con circuitos virtuales.
+Redes de difusión.
+Redes punto a punto.
+
+¿Qué característica NO es propia de las redes de conmutación de paquetes?
+1
+Colisiones en el medio físico compartido entre todos los equipos.
+Congestión en el encaminamiento de paquetes.
+Empleo de routers para encaminar paquetes entre un origen y un destino.
+Tolerancia a fallos en el medio físico en el intercambio de paquetes entre los equipos.
+
+En una arquitectura de red, cada capa n define:
+4
+Al menos un protocolo de comunicación con la capa adyacente n-1.
+Al menos un protocolo de comunicación con la capa adyacente n+1.
+Al menos un protocolo de comunicación con la capa par n+1.
+Al menos un protocolo de comunicación con la capa par n.
+
+Sobre los paquetes generados en la capa n de una arquitectura de red es cierto que:
+1
+Todos los paquetes incorporan siempre la cabecera de la capa n.
+Todos los paquetes incorporan siempre la cabecera de la capa n+1.
+Todos los paquetes incorporan siempre la cabecera de la capa n-1.
+Todas las respuestas anteriores son falsas.
+
+Si en un protocolo de la capa n el tamaño máximo de datos es X, la fragmentación de la información procedente de la capa n+1 se realiza:
+2
+Cuando la cabecera de la capa n+1 excede del valor X.
+Cuando el paquete procedente de la capa n+1 excede el valor X.
+Cuando los datos en el paquete de la capa n+1 excede del valor X.
+Cuando el tamaño del paquete generado en el nivel n excede del valor X.
+
+¿Qué organismo lleva a cabo la definición de las normas RFC de Internet?
+2
+IRTF.
+IETF.
+IAB.
+IANA.
+
+¿Qué dispositivo de interconexión emplea las direcciones físicas de los equipos para el reenvío de paquetes entre segmentos de red?
+2
+Repetidor.
+Puente.
+Encaminador.
+Ningún dispositivo de interconexión emplea las direcciones físicas para el reenvío de paquetes.
+
+Sobre la transmisión de señales de datos a través de un medio físico es cierto que:
+4
+Todos los medios físicos transmiten igual una misma señal de datos.
+Las señales transmitidas a diferentes velocidades siempre sufren los mismos errores.
+Las señales siempre presentarán errores en los datos si existe ruido en el medio físico.
+La existencia de errores en los datos depende de la velocidad de transmisión empleada.
+
+El valor del ancho de banda disponible en un medio físico depende de:
+3
+La velocidad de transmisión empleada en las señales transmitidas.
+El nivel de ruido presente en el medio físico.
+Las características físicas del propio medio físico.
+Los datos existentes en las señales transmitidas.
+
+¿Qué tipo de señalización en banda base con codificación binaria emplea más niveles de tensión?
+4
+Codificación binaria con retorno a cero unipolar.
+Codificación binaria con retorno a cero bipolar.
+Codificación binaria sin retorno a cero bipolar.
+Todas las codificaciones binarias emplean el mismo número de niveles de tensión.
+
+¿En qué situación se emplea la modulación en la transmisión de datos?
+3
+Siempre que la información sean bits digitales.
+Cuando se emplea un medio físico analógico.
+Cuando las principales componentes frecuenciales de una señal están fuera del ancho de banda del medio físico.
+Cuando sea necesario transmitir señales de datos a una velocidad superior al teorema de Nyquist.
+
+¿Qué tipo de modulación permite su empleo en la multiplexión por división en el tiempo?
+4
+Modulación ASK.
+Modulación PSK.
+Modulación FSK.
+Modulación PCM.
+
+¿En qué tipo de cable par trenzado tiene menos efecto el ruido de impulso?
+1
+Cable STP.
+Cable UTP categoría 5.
+Cable UTP categoría 6.
+Cable UTP categoría 7.
+
+¿Qué tipo de fibra óptica presenta mayor limitación en la distancia máxima?
+2
+Fibra monomodo.
+Fibra multimodo de índice de salto.
+Fibra multimodo de índice gradual.
+Todas las fibras ópticas están normalizadas para su funcionamiento a 100 km de distancia.
+
+¿Con qué técnica se combinan varios haces de luz de datos en una fibra óptica?
+3
+Multiplexión intermodal.
+Multiplexión intramodal.
+Multiplexión WDM.
+Multiplexión FTTH.
+
+¿En qué tipo de comunicación inalámbrica se emplean señales portadoras de mayor valor de frecuencia?
+2
+Redes Wi-Fi.
+Redes satelitales.
+Transmisión de televisión.
+Transmisión de radio FM.
+
+¿Qué mecanismo detector de errores permite identificar la posición de 20 bits erróneos en un paquete?
+4
+Código CRC-16.
+Código CRC-32.
+Paridad impar.
+Ningún mecanismo detector de errores puede identificar los 20 bits erróneos en un paquete.
+
+Sobre los formatos de paquetes Ethernet IEEE 802.3 y Ethernet DIX es cierto que:
+1
+Ambos formatos emplean la misma secuencia de sincronización.
+El formato Ethernet DIX permite paquetes Ethernet de mayor tamaño.
+El formato Ethernet IEEE 802.3 detecta errores en ráfaga de mayor longitud que Ethernet DIX.
+Ambos formatos de paquete emplean la cabecera LLC en los datos.
+
+Sobre el procedimiento de aprendizaje de un conmutador Ethernet es cierto que:
+1
+Analiza la dirección MAC origen en los paquetes recibidos en un puerto del conmutador.
+Analiza la dirección MAC origen en los paquetes transmitidos en un puerto del conmutador.
+Analiza la dirección MAC destino en los paquetes recibidos en un puerto del conmutador.
+Analiza la dirección MAC destino en los paquetes transmitidos en un puerto del conmutador.
+
+¿Qué puertos de un conmutador están habilitados para el aprendizaje de la tabla CAM si se emplea el algoritmo Spanning Tree?
+4
+Sólo el puerto raíz.
+Sólo los puertos designados.
+Sólo los puertos raíces y los puertos designados.
+Todos los puertos activos del conmutador.
+
+¿En qué capa se define el tipo de señalización para transmitir los bits de los paquetes Ethernet?
+3
+MAC 802.3.
+MAC DIX.
+PMD.
+CS.
+
+¿Qué normativa Ethernet permite emplear el multiplexado por longitud de onda (WDM)?
+3
+Ethernet 10GBase-T.
+Ethernet 2.5GBase-T.
+Ethernet 40GBase-XX.
+La normativa Ethernet no emplea la multiplexión por longitud de onda.
+
+¿Cuál es el uso de los puertos troncales en los conmutadores VLAN?
+3
+La conexión de dispositivos que emplean el formato Ethernet DIX.
+Solamente para hacer el reenvío de paquetes de difusión a otros puertos troncales del mismo conmutador.
+La conexión de un router para tener conectividad con varias VLAN.
+La conexión de dispositivos que emplean el formato Ethernet IEEE 802.3.
+
+¿Qué mecanismo permite que un AP pueda detectar cualquier transmisión de cualquier equipo de una red inalámbrica?
+3
+CSMA-CD.
+CSMA-CA.
+CSMA-CA con RTS/CTS.
+CSMA-CA con polling.
+
+¿Qué tecnología Ethernet NO añade bits adicionales de sincronización en la transmisión de paquetes?
+1
+Ethernet 1000BaseT.
+Ethernet 1000BaseLX.
+Ethernet 100BaseTX.
+Ethernet 100BaseFX.
+
+¿Qué mecanismo de autenticación Wi-Fi es más resistente a ataques de fuerza bruta?
+3
+WPA-PSK.
+WPA2-PSK.
+WPA3-PSK.
+Los ataques de fuerza bruta no pueden determinar nunca la clave de autenticación.
+
+¿Qué algoritmo de cifrado emplean las redes Wi-Fi WPA2-Enterprise?
+1
+AES
+PEAP.
+TLS.
+TKIP.
+
+¿Qué característica indica que una red está sufriendo congestión?
+2
+La dedicación de la CPU de un router para el encaminamiento alcanza el valor del 50%.
+La red presenta numerosos mensajes ICMP Source Quench.
+El flujo de salida de paquetes en la red aumenta conforme aumenta el flujo de entrada de paquetes en la red.
+La red presenta numerosos mensajes ICMP Host Unreachable.
+
+Si un router está conectado directamente a 3 redes y tiene conectividad a Internet, el número de entradas en su tabla de encaminamiento será:
+3
+Como mínimo 1 entrada.
+Como mínimo 3 entradas.
+Como mínimo 4 entradas.
+Nunca superior a 3 entradas.
+
+Sobre el funcionamiento de un router frontera de un sistema autónomo (AS) es cierto que:
+2
+Establece conexiones UDP con otros routers frontera de otros sistemas autónomos.
+No es posible suplantar un mensaje BGP emitido por un router frontera de Internet.
+Emplea el protocolo BGP para determinar la ruta con mejor métrica a cualquier destino de Internet.
+Un router frontera solo informa de las redes existentes dentro de su sistema autónomo.
+
+¿Qué protocolo de gestión de tablas de encaminamiento emplea un algoritmo de vector de distancia para determinar la ruta óptima a un destino?
+2
+BGP.
+RIP.
+OSPF.
+Todos los protocolos de gestión de tablas de encaminamiento emplean el algoritmo de Djikstra.
+
+¿Qué algoritmo de encaminamiento actualiza con mayor rapidez una ruta óptima que ha modificado su coste?
+3
+RIPv1.
+RIPv2.
+OSPF.
+BGP.
+
+Sobre el protocolo IPv6 es cierto que:
+4
+Emplea direcciones IP compatibles con la versión IPv4.
+Define una dirección de difusión en cada red IPv6.
+Emplea un tamaño de cabecera igual que en la versión IPv4.
+Ningún interfaz de red puede emplear una dirección IPv6 previamente asignada a otro interfaz de red.
+
+Sobre el algoritmo de Inicio Lento en el control de la congestión que realiza el protocolo TCP es cierto que:
+2
+El valor de la ventana de emisión se incrementa en el tamaño del MSS cada vez que se recibe un ACK.
+El valor de la ventana de congestión se incrementa en el tamaño del MSS cada vez que se recibe un ACK.
+El valor de la ventana de recepción se incrementa en el tamaño del MSS cada vez que se recibe un ACK.
+El valor de la ventana de recepción siempre es el valor mínimo de la ventana de emisión y la ventana de congestión.

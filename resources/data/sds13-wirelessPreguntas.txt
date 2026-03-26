@@ -1,0 +1,385 @@
+¿Cuál es la principal vulnerabilidad que explota un ataque de denegación de servicio mediante agotamiento de puertos TCP?
+2
+- Saturación de la RAM
+- Agotamiento de puertos disponibles
+- Saturación de la CPU
+- Sobrecarga del ancho de banda
+
+¿Qué mecanismo describió el profesor para que el sistema operativo recupere puertos cuando se quedan todos ocupados?
+3
+- Liberar dinámicamente memoria swap
+- Reiniciar el servicio de DNS
+- Reiniciar todo el stack TCP/IP
+- Aumentar automáticamente el número de sockets
+
+¿Qué estrategia de mitigación a gran escala emplea una CDN contra ataques de denegación de servicio?
+1
+- Distribución geográfica y cacheo de contenido
+- Cifrado end-to-end de todo el tráfico
+- Balanceo interno de sesiones TCP
+- Uso de proxys inversos únicamente
+
+Según la clase, ¿por qué la mayoría de los servicios de gran tráfico migran de nube pública a infraestructura propia?
+3
+- Menor latencia global
+- Mayor seguridad física
+- Coste más bajo a gran escala
+- Mayor facilidad de autoescalado
+
+¿Qué describe el ataque de Bluejacking en Bluetooth?
+2
+- Análisis pasivo de tramas RF
+- Envío de mensajes no solicitados (spam)
+- Interceptación de credenciales
+- Inhibición de frecuencias
+
+¿En qué consiste el Bluesnarfing?
+3
+- Crear redes mesh maliciosas
+- Desbordar la tabla de emparejamientos
+- Acceder y copiar información sin autorización
+- Inundar un dispositivo con solicitudes PIN
+
+¿Qué algoritmo de cifrado en flujo clásico utiliza Bluetooth “clásico”?
+1
+- E0
+- AES-CCM
+- RC4
+- SHA-1
+
+¿Qué método de emparejamiento Bluetooth emplea ECDH a partir de la versión 2.1?
+4
+- Emparejamiento clásico por PIN
+- Just Works
+- Passkey Entry
+- SSP (Simple Secure Pairing)
+
+¿Cuál de estos modos de interfaz Wi-Fi es necesario para capturar paquetes sin estar asociado a un AP?
+2
+- managed
+- monitor
+- mesh
+- ad-hoc
+
+¿Cuál es la principal debilidad del protocolo WEP?
+1
+- IV de sólo 24 bits que se repiten
+- Cifrado asimétrico débil
+- Uso de AES en modo CBC
+- Autenticación basada en certificados
+
+¿Qué técnica permite acelerar el ataque de recuperación de la clave WEP en minutos?
+4
+- Falsificación de beacon frames
+- Inyección de ARP para generar tráfico
+- Escaneo de SSIDs ocultos
+- Fuerza bruta directa sobre la PSK
+
+¿Qué mejora introduce WPA-TKIP sobre WEP?
+2
+- Uso de IV de 24 bits
+- Claves temporales por paquete y MIC
+- Cambio a AES-CCMP
+- Autenticación 802.1x obligatoria
+
+¿Por qué las PSK de WPA pueden ser vulnerables?
+3
+- El protocolo no incluye MIC
+- No cambian con cada paquete
+- Uso de contraseñas débiles y distribución manual
+- No soportan EAP
+
+¿Qué cifrado e integridad utiliza WPA2 (AES-CCMP)?
+4
+- RC4 + CRC
+- AES-CBC + HMAC-SHA1
+- TKIP + MIC
+- AES-CTR para privacidad y CBC-MAC para integridad
+
+¿Cuál es la función principal de IEEE 802.1x en WPA2-Enterprise?
+1
+- Seguridad por puerto: bloquea todo tráfico hasta autenticar al cliente
+- Cifrado de extremo a extremo
+- Gestión de claves PSK automáticas
+- Monitorización de beacon frames
+
+¿Qué mejora de autenticación de contraseñas introduce WPA3?
+2
+- PSK reforzada con SHA-256
+- SAE (Simultaneous Authentication of Equals)
+- EAP-MD5
+- TKIP con nonce extendido
+
+¿En qué consiste el cifrado individualizado (“individualized data encryption”) de WPA3?
+4
+- Cifrado igual para todos los clientes
+- Cifrado simétrico con PSK
+- Solo cifrado de gestión
+- Claves temporales únicas por cliente (forward secrecy)
+
+¿Qué protocolo IoT usa cifrado AES-128 con claves de red y aplicación separadas?
+1
+- LoRaWAN
+- Zigbee
+- Thread
+- NB-IoT
+
+¿Qué protocolo IoT incluye ECDH en su nivel de S2 para establecimiento seguro?
+3
+- LoRaWAN
+- Zigbee
+- Z-Wave
+- Thread
+
+¿Qué técnica de descubrimiento de redes Wi-Fi consiste en recorrer el entorno con GPS para catalogar SSIDs?
+2
+- Beaconing
+- War Driving
+- SSID-hopping
+- Passive Scanning
+
+¿En qué consiste un ataque SYN flood?
+1
+- Enviar una gran cantidad de SYN sin completar el handshake TCP
+- Cerrar todas las conexiones establecidas con RST
+- Interceptar y modificar paquetes SYN
+- Reiniciar frecuentemente el stack TCP/IP
+
+¿Cómo responden los stacks modernos de TCP/IP ante un SYN flood que agota puertos?
+3
+- Generan advertencias al administrador
+- Aumentan dinámicamente el límite de sockets
+- Reinician todo el stack TCP/IP y cierran conexiones pendientes
+- Filtran los paquetes SYN entrantes
+
+¿Qué recurso explota un ataque de agotamiento de disco?
+2
+- Espacio de swap
+- Espacio en disco al crear archivos infinitos
+- Memoria RAM al hacer malloc sin free
+- CPU con bucles infinitos
+
+¿Para qué sirven las cuotas de disco en un sistema operativo?
+1
+- Reservar espacio para poder seguir funcionando si el disco se llena
+- Limitar la velocidad de lectura/escritura
+- Asegurar la privacidad de los usuarios
+- Evitar fragmentación
+
+¿Por qué las botnets son más efectivas que ataques de un solo origen?
+1
+- Porque distribuyen el ataque en muchas máquinas con tráfico aparentemente legítimo
+- Porque usan protocolos cifrados
+- Porque consumen menos ancho de banda
+- Porque evitan la detección de firmas
+
+¿Cuál es la principal limitación del autoescalado en la nube pública?
+2
+- No puede subir más de cierta cantidad de instancias
+- El aprovisionamiento de una nueva VM puede tardar horas
+- No se factura por consumo real
+- Carece de balanceo geográfico
+
+¿Cómo mitiga una CDN un ataque DDoS?
+1
+- Cacheando y distribuyendo contenido en múltiples puntos antes de tu servidor
+- Cifrando todo el tráfico con SHA-256
+- Obligando a todo el tráfico a pasar por un único proxy
+- Eliminando todas las peticiones HTTP
+
+¿En qué se diferencia un ataque DoS de un DDoS?
+2
+- DoS viene de una sola máquina, DDoS de muchas máquinas coordinadas
+- DoS explota CPUs, DDoS explota discos
+- DoS usa TCP, DDoS usa UDP
+- DoS es siempre local, DDoS es remoto
+
+¿Qué técnica hace que sea casi imposible distinguir tráfico legítimo de malicioso en un DDoS distribuido?
+3
+- Uso de múltiples máquinas generando tráfico normal
+- Enmascarar los paquetes con TLS
+- Variar continuamente los puertos de origen
+- Cambiar constantemente el payload
+
+¿Cuál es la principal ventaja de segmentar la red wireless en VLANs (WVLANs)?
+1
+- Aislar el tráfico de invitados del de la red interna
+- Reducir la latencia en la red wireless
+- Aumentar el ancho de banda total
+- Simplificar la configuración de puntos de acceso
+
+¿Por qué ajustar la potencia de emisión de un punto de acceso mejora la seguridad?
+1
+- Limita el alcance para que la señal no salga del área deseada
+- Aumenta la velocidad máxima de conexión
+- Disminuye el retraso de los paquetes
+- Incrementa el número de clientes simultáneos
+
+¿Cuál es el papel de los sensores de detección de AP no autorizados?
+1
+- Identificar y alertar sobre puntos de acceso rogue en el perímetro
+- Aumentar el ancho de banda de la red
+- Filtrar los SSID ocultos
+- Gestionar dinámicamente las VLANs
+
+¿En qué consiste un ataque de envenenamiento ARP (ARP poisoning)?
+2
+- El atacante envía respuestas ARP falsas para hacerse pasar por el gateway
+- El atacante bloquea todas las respuestas ARP legítimas
+- Se interceptan tramas Bluetooth y se reenvían al servidor
+- Se duplican paquetes IP para saturar la red
+
+¿Qué implica un ataque de envenenamiento DNS (DNS poisoning)?
+1
+- Inyectar respuestas DNS falsas para redirigir dominios legítimos
+- Capturar todo el tráfico HTTP en texto claro
+- Inundar el servidor DNS con consultas
+- Ocultar el SSID de las redes Wi-Fi
+
+¿Qué es MITRE ATT\&CK?
+1
+- Una taxonomía y base de datos de técnicas de ataque conocidas
+- Un firewall de nueva generación
+- Un protocolo de autenticación wireless
+- Un método de cifrado para IoT
+
+¿Qué sucede cuando un sistema operativo agota toda la RAM disponible y comienza a usar swap de forma intensiva?
+2
+- Aumenta el ancho de banda de red
+- Disminuye drásticamente el rendimiento debido al “thrashing” de disco
+- Se liberan procesos inactivos automáticamente
+- Se generan logs de errores de memoria
+
+¿Cuál es la diferencia principal entre un ataque DoS a nivel de red y uno a nivel de aplicación?
+3
+- El DoS de red no usa cifrado, el de aplicación siempre sí
+- El DoS de red explota puertos TCP, el de aplicación usa UDP
+- El DoS de red satura ancho de banda o routers; el de aplicación agota recursos del servidor (CPU, memoria)
+- El DoS de red solo afecta a Cloud, el de aplicación solo a servidores locales
+
+¿Qué métrica de red se suele monitorizar para detectar un posible DDoS?
+1
+- Tasa de paquetes ICMP con destino al servidor
+- Consumo de CPU en la máquina cliente
+- Latencia entre CU y CP
+- Número de usuarios concurrentes en la base de datos
+
+En un entorno de nube pública, ¿qué modelo de facturación permite comprometerse a reservar capacidad con descuento?
+3
+- Spot Instances
+- On-Demand Instances
+- Reserved Instances
+- Dedicated Hosts
+
+¿Cuál es la principal limitación del escalado vertical (“scale up”) frente al escalado horizontal (“scale out”)?
+2
+- Requiere múltiples zonas de disponibilidad
+- Dependes de la capacidad máxima del hardware individual
+- Incrementa automáticamente la latencia
+- No funciona en arquitecturas de microservicios
+
+En Bluetooth SSP, ¿qué método de “Numeric Comparison” garantiza que ambos dispositivos vean el mismo número?
+4
+- Just Works
+- Out-of-Band
+- Passkey Entry
+- Numeric Comparison
+
+¿Cuál de estas vulnerabilidades afecta específicamente a Bluetooth Low Energy y permite forzar la quiniela de claves?
+1
+- KNOB (Key Negotiation of Bluetooth)
+- BlueBorne
+- BlueSnarfing
+- BLE Injection
+
+¿Qué ventaja aporta el beamforming en redes Wi-Fi MIMO?
+2
+- Aumentar la cantidad de SSIDs
+- Enfocar la señal RF hacia el cliente para mayor cobertura y rendimiento
+- Cambiar dinámicamente el canal de 2.4 GHz a 5 GHz
+- Ocultar la antena para mejorar la privacidad
+
+Comparando 2.4 GHz y 5 GHz en Wi-Fi, ¿qué afirmación es correcta?
+3
+- 2.4 GHz siempre ofrece más throughput que 5 GHz
+- 5 GHz penetra mejor paredes que 2.4 GHz
+- 2.4 GHz tiene mejor cobertura (penetración), 5 GHz mayor throughput y menos interferencias
+- Ambas bandas tienen la misma latencia
+
+¿Cuál es la principal vulnerabilidad del protocolo WPS?
+1
+- PIN de 8 dígitos vulnerable a fuerza bruta dividida en dos mitades
+- Uso de RC4 como cifrado
+- Ausencia de MIC en los mensajes
+- Emparejamiento sin cifrado
+
+¿Qué protocolo EAP requiere certificados tanto en cliente como en servidor para autenticar en Wi-Fi Enterprise?
+4
+- EAP-PEAP
+- EAP-LEAP
+- EAP-TTLS
+- EAP-TLS
+
+¿Qué puerto usa por defecto un servidor RADIUS para autentificación?
+2
+- 1813 (Accounting)
+- 1812 (Authentication)
+- 1645 (Legacy Authentication)
+- 636 (LDAPS)
+
+Entre NB-IoT y LTE-M, ¿qué característica es típica de NB-IoT?
+3
+- Soporta voz sobre LTE
+- Ancho de banda de decenas de MHz
+- Latencia más alta y consumo muy bajo
+- Roaming global inmediato
+
+¿Qué vulnerabilidad de Zigbee se explota en Zigbee2MQTT sin actualización de firmware?
+2
+- Uso de claves AES-256 constantes
+- Autenticación débil en la comisión de dispositivos
+- Cifrado en flujo E0
+- Dirección de red estática
+
+¿Cuál herramienta open-source se usa para detectar y catalogar rogue APs en modo monitor?
+1
+- Kismet
+- Nmap
+- Airbase-ng
+- Tcpdump
+
+¿Qué tipo de jammer crea interferencia sólo en una frecuencia específica?
+3
+- Broadband jammer
+- De impulsos
+- Narrowband jammer
+- De pulso ultraancho
+
+En un ataque de retransmisión (“replay attack”) a nivel RF, ¿qué contramedida se utiliza para prevenirlo?
+2
+- SSID oculto
+- Uso de nonces o números de secuencia en cada paquete
+- Desactivar la caché DNS
+- Filtrado de MAC
+
+¿Qué técnica de envenenamiento ARP permite al atacante interceptar tráfico de la red local?
+4
+- Inundar la tabla ARP con peticiones legítimas
+- Deshabilitar el proxy ARP
+- Ocultar la dirección MAC legítima
+- Enviar respuestas ARP falsas indicando que el atacante es la puerta de enlace
+
+¿Qué mecanismo de segmentación wireless usa VLANs y múltiples SSIDs para aislar invitados de la red interna?
+1
+- WVLANs (Wireless VLANs)
+- Access Point Clustering
+- Mesh Networking
+- WPA3 Enterprise
+
+¿Cuál ataque aprovecha la retransmisión de SSID para obligar a un cliente a reconectarse a un AP malicioso?
+2
+- Beacon flooding
+- SSID spoofing (Gemelo maligno)
+- Deauthentication flood
+- Channel hopping attack
+

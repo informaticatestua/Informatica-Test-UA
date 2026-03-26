@@ -1,0 +1,391 @@
+¿Qué concepto erróneo corresponde a la criptografía de clave pública? 
+1
+Que es más segura que la criptografía simétrica
+Que depende de la longitud de clave y del coste computacional
+Que solo sirve para distribuir claves y firmar digitalmente
+Que requiere un protocolo de distribución de claves
+
+¿Cuáles son los dos problemas principales que ataja la criptografía de clave pública? 
+2
+Cifrado de datos y generación de certificados
+Distribución de claves y firma digital
+Autenticación de usuarios y cifrado de correos
+Gestión de certificados y actualización de claves
+
+¿En qué año Diffie y Hellman propusieron el concepto de funciones unidireccionales que posibilitan la criptografía asimétrica? 
+3
+1965
+1970
+1976
+1980
+
+¿Qué caracteriza a la criptografía asimétrica frente a la simétrica? 
+1
+Uso de dos claves distintas, una para cifrar y otra para descifrar
+Uso de la misma clave para cifrar y descifrar
+Dependencia de un canal seguro para el intercambio de claves
+Mayor velocidad en el cifrado de grandes volúmenes de datos
+
+Para lograr privacidad en mensaje cifrado, ¿qué operación se realiza? 
+1
+Se cifra con la clave pública del destino
+Se cifra con la clave privada del origen
+Se cifra con la clave simétrica compartida
+Se cifra con la función hash del mensaje
+
+Para autenticar el origen de un mensaje, ¿qué operación de clave pública se emplea? 
+2
+Cifrar con la clave pública del destino
+Cifrar con la clave privada del origen
+Cifrar con la clave pública del origen
+Cifrar con la clave privada del destino
+
+En RSA, ¿cuál es la condición que debe cumplir el exponente público 𝑒? 
+3
+0 < 𝑒 < 𝑝
+𝑒 debe ser múltiplo de Φ(𝑛)
+𝑒 y Φ(𝑛) deben ser primos relativos (mcd=1)
+𝑒 debe ser mayor que 𝑛
+
+¿En qué se basa la seguridad del algoritmo RSA? 
+4
+En la dificultad de calcular logaritmos discretos
+En la generación de números aleatorios
+En la longitud variable de los certificados
+En la dificultad de factorizar grandes números enteros
+
+¿Cuál es la vulnerabilidad principal del intercambio de claves Diffie-Hellman? 
+1
+Ataque de hombre en el medio por falta de autenticación
+Fuerza bruta sobre claves simétricas
+Debilidad en la función hash utilizada
+Exposición de la clave privada en el canal público
+
+¿Qué es lo que se firma en un esquema de firma digital eficiente? 
+2
+El mensaje completo
+El hash (resumen) del mensaje
+La clave pública del firmante
+La clave simétrica generada
+
+¿Cuál es el principal papel de la función hash en los protocolos de firma digital? 
+1
+Mejorar el rendimiento al reducir el tamaño de los datos a firmar
+Mantener la integridad del mensaje
+Generar la clave privada
+Validar la autenticidad del certificado
+
+¿Qué diferencia fundamental hay entre un certificado y un par de claves pública/privada? 
+3
+El certificado solo contiene la clave privada
+El par de claves incluye metadatos sobre el propietario
+El certificado es un contenedor estandarizado con metadatos y firma de una autoridad
+El par de claves simétricas se intercambia en un certificado
+
+¿Por qué las curvas elípticas se utilizan en criptografía asimétrica moderna? 
+2
+Porque ofrecen mayor seguridad que cualquier tamaño de RSA
+Porque reducen drásticamente el tamaño de la clave para un nivel de seguridad equivalente
+Porque son más fáciles de implementar que RSA
+Porque no requieren funciones unidireccionales
+
+¿Por qué no se utiliza la criptografía de clave pública para cifrar datos de propósito general? 
+1
+Porque es extremadamente lenta comparada con la criptografía simétrica
+Porque no ofrece suficiente seguridad
+Porque no existe un estándar de implementación
+Porque no permite firma digital
+
+¿Qué esquema híbrido es la alternativa habitual para cifrar comunicaciones de forma eficiente? 
+4
+Cifrado directo con clave pública de todos los datos
+Solo firma digital sin cifrado
+Hash de mensaje enviado como clave
+Uso de clave pública para enviar una clave simétrica y luego cifrar datos con AES o ChaCha20
+
+¿Qué concepto erróneo se asocia a la criptografía de clave pública?
+1
+Que es más segura que la criptografía simétrica
+Que depende de la longitud de clave y del coste computacional
+Que solo sirve para distribuir claves y firmar digitalmente
+Que requiere un protocolo de distribución de claves
+
+¿Qué idea equivocada existe sobre la distribución de claves en criptografía de clave pública?
+3
+Que necesita canales seguros previos para intercambiar claves
+Que siempre requiere autoridades certificadoras
+Que la distribución de claves es trivial
+Que solo funciona con criptografía simétrica
+
+¿En qué año Diffie y Hellman propusieron el uso de funciones unidireccionales para la criptografía asimétrica?
+3
+1969
+1970
+1976
+1980
+
+¿Qué caracteriza matemáticamente a las funciones unidireccionales usadas en criptografía asimétrica?
+2
+Son simétricas y usan la misma clave para cifrar y descifrar
+Fáciles de calcular en un sentido, muy costosas de invertir
+Requieren un canal seguro para su transmisión
+Solo funcionan con curvas elípticas
+
+¿Por qué se denomina “asimétrica” a la criptografía de clave pública?
+1
+Porque utiliza dos claves distintas, una para cifrar y otra para descifrar
+Porque la misma clave cifra y descifra en direcciones opuestas
+Porque no requiere clave alguna para el cifrado
+Porque usa curvas elípticas en lugar de primos grandes
+
+En RSA, ¿qué condición debe cumplir el exponente público 𝑒?
+3
+Ser múltiplo de Φ(𝑛)
+0 < 𝑒 < 𝑛
+gcd(e,Φ(n))=1
+Ser un número primo menor que 𝑝
+
+¿En qué problema matemático se basa la seguridad del algoritmo RSA?
+4
+Cálculo de logaritmos discretos
+Generación de números aleatorios
+Optimización de funciones unidireccionales
+Factorización de grandes enteros en sus primos
+
+¿Cuál de estos NO es un ataque práctico contra RSA hoy día?
+2
+Fuerza bruta probando todas las claves privadas
+Cifrar mensajes cortos y comparar (ataque de mensaje probable)
+Factorizar el módulo 𝑛
+Fuerza bruta de claves simétricas
+
+¿Cuál es la longitud mínima de clave recomendada para RSA actualmente?
+2
+512 bits
+2048 bits
+1024 bits
+128 bits
+
+¿Qué funcionalidades ofrece RSA de manera nativa?
+1
+Cifrado, intercambio de claves y firma digital
+Solo intercambio de claves
+Solo firma digital
+Solo cifrado simétrico
+
+¿Hasta qué año estuvo vigente la patente de RSA Labs?
+3
+1990
+1995
+2000
+2005
+
+¿Cuál es el objetivo principal del protocolo Diffie–Hellman?
+1
+Intercambiar de forma segura una clave simétrica
+Firmar digitalmente un mensaje
+Cifrar datos de propósito general
+Autenticar usuarios sin clave previa
+
+¿En qué se basa la dificultad de Diffie–Hellman?
+2
+Factorización de enteros grandes
+Cálculo de logaritmos discretos
+Pruebas de primalidad deterministas
+Cálculo de exponenciaciones modulares rápidas
+
+¿Qué vulnerabilidad principal afecta al intercambio de claves Diffie–Hellman?
+1
+Ataque de hombre en el medio por falta de autenticación
+Fuerza bruta de la clave privada
+Debilidad en la función hash
+Desbordamiento de búfer en la librería
+
+¿DSA se diseñó originalmente como variante de qué algoritmo?
+3
+RSA
+ElGamal
+Diffie–Hellman
+ECC
+
+¿Qué ventaja aporta EdDSA frente a DSA tradicional?
+2
+Permite cifrado de datos
+Usa curvas de Edwards para mayor rendimiento
+No requiere clave privada
+Elimina la necesidad de hashes
+
+¿Cuál de estos algoritmos solo sirve para firma y no para cifrado?
+4
+RSA
+Diffie–Hellman
+ElGamal
+DSA
+
+¿Por qué se usan curvas elípticas en criptografía moderna?
+1
+Reducen drásticamente el tamaño de clave para igual seguridad
+Aumentan la complejidad de implementación
+Requieren menos operaciones de exponenciación
+Eliminan la necesidad de primos probabilísticos
+
+¿Qué escándalo puso en duda la seguridad de algunas curvas elípticas?
+2
+Patente de RSA en EE. UU.
+Backdoors introducidos por la NSA en estándares
+Fallos de implementación en OpenSSL
+Vulnerabilidades en dispositivos móviles
+
+¿Cómo comparan el tamaño de clave y rendimiento RSA puro vs curvas elípticas?
+3
+RSA es más rápido y usa claves más pequeñas
+RSA y ECC tienen rendimiento equivalente
+ECC ofrece igual seguridad con claves mucho menores y mayor velocidad
+RSA crece linealmente con la longitud de clave, ECC no
+
+¿Qué vulnerabilidad es típica de la criptografía simétrica?
+1
+Ataque por fuerza bruta probando todas las claves posibles
+Ataque de mensaje probable
+Factorización de primos
+Repudio de la firma
+
+¿Qué describe un ataque de mensaje probable en criptografía pública?
+2
+Probar todas las claves privadas con fuerza bruta
+Cifrar posibles mensajes cortos con la clave pública hasta hallar el correcto
+Interceptar la clave privada durante la generación
+Reemplazar la clave pública en el repositorio
+
+¿Qué problema surge en la firma digital si no hay autoridad certificadora?
+4
+Debilidad en la función hash
+Exposición de la clave simétrica
+Ataque de mensaje probable
+Repudio de la firma
+
+¿Qué se firma realmente en un esquema de firma digital eficiente?
+2
+El mensaje completo
+El hash (resumen) del mensaje
+La clave pública del firmante
+La clave privada del firmante
+
+¿Cuál es una propiedad clave de la firma digital?
+3
+Oculta el contenido del mensaje
+Genera claves simétricas compartidas
+Verificable por terceros para resolver disputas
+Elimina la necesidad de certificados
+
+¿Cómo se evita el repudio en un contexto legal?
+1
+Usando firmas de autoridades certificadoras adicionales
+Incrementando el tamaño de clave pública
+Empleando solo criptografía simétrica
+Firmando el mensaje completo en texto abierto
+
+¿Por qué es necesario un certificado en vez de solo un par de claves?
+3
+Porque el par de claves no cifra datos
+Para agilizar el cifrado simétrico
+Para contener metadatos y firma de una autoridad estandarizada
+Porque evita ataques de fuerza bruta
+
+¿Cuándo no es necesario usar un certificado?
+4
+Al firmar correos electrónicos con GPG
+Al intercambiar claves en un sistema bancario
+Al desplegar HTTPS en un servidor público
+Cuando la aplicación gestiona internamente sus propias claves sin interoperar
+
+¿Por qué se emplea un esquema híbrido (clave pública + AES/ChaCha)?
+1
+Porque la clave pública solo cifra con lentitud, se usa para enviar la clave simétrica
+Porque evita completamente la firma digital
+Porque elimina la necesidad de funciones hash
+Porque permite intercambiar certificados a alta velocidad
+
+¿Qué protocolo es un ejemplo de uso híbrido habitual?
+4
+SSH
+PGP
+Kerberos
+TLS (HTTPS)
+
+¿Cuál es la principal ventaja del esquema híbrido sobre criptografía pública pura?
+2
+Mayor compatibilidad con clientes antiguos
+Velocidad de cifrado simétrico tras intercambio público
+Seguridad cuántica nativa
+Autenticación mutua sin certificados
+
+¿Qué busca la criptografía post-cuántica?
+1
+Resistir ataques de computadores cuánticos reales
+Aprovechar el paralelismo cuántico para cifrar más rápido
+Sustituir hashes por funciones unidireccionales
+Utilizar primos de verdad en RSA
+
+¿Por qué es relevante la post-cuántica hoy en día?
+3
+Porque ya existen computadores cuánticos que rompen RSA 2048
+Porque elimina la necesidad de claves simétricas
+Porque anticipa futuros ataques basados en Shor
+Porque mejora la velocidad de Diffie–Hellman
+
+¿Qué algoritmo cuántico permitiría factorizar grandes enteros rápidamente?
+2
+Grover
+Shor
+RSA cuántico
+Dijkstra cuántico
+
+¿Cuál es la recomendación general ante la amenaza cuántica?
+4
+Aumentar las longitudes de clave RSA hasta 8192 bits
+Pasar completamente a criptografía simétrica
+Usar curvas elípticas más largas
+Investigar y adoptar algoritmos post-cuánticos estandarizados
+
+¿Qué mecanismo permite comprobar en tiempo real si un certificado ha sido revocado sin descargar la lista completa?
+3
+CRL (Certificate Revocation List)
+S/MIME
+OCSP (Online Certificate Status Protocol)
+SSHFP
+
+¿En qué campo de un certificado X.509 se especifica la fecha de inicio y fin de validez?
+2
+Subject
+Validity (Not Before / Not After)
+Issuer
+Key Usage
+
+¿Qué es la “cadena de confianza” en una infraestructura de clave pública (PKI)?
+1
+El conjunto de certificados desde el emisor raíz hasta el certificado final
+La clave privada del usuario final
+El algoritmo de firma utilizado
+El protocolo de intercambio de claves
+
+¿Cuál es el propósito del padding OAEP en RSA?
+4
+Aumentar la longitud de la clave pública
+Generar claves simétricas seguras
+Firmar digitalmente el mensaje completo
+Introducir aleatoriedad para prevenir ataques de texto plano elegido
+
+¿Qué extensión de un certificado X.509 indica por quién ha sido emitido y firmado?
+2
+Subject Key Identifier
+Authority Key Identifier / Issuer
+Basic Constraints
+Subject Alternative Name
+
+¿Cuál es la diferencia habitual entre los formatos PEM y DER para certificados?
+1
+PEM usa Base64 con encabezados ASCII, DER es binario puro
+DER incluye la clave privada, PEM no
+PEM es solo para claves simétricas
+DER permite OCSP, PEM no permite CRL

@@ -1,0 +1,489 @@
+Para comenzar a usar autoconf es: (no seguro)
+1
+- Aconsejable usar autoscan
+- Imprescindible usar autoscan
+- Innecesario usar autoscan
+- Obligatorio usar autoreconf
+
+En la programación por contrato las precondiciones:
+3
+- Se aplican solo a métodos de una clase
+- Se aplican solo a funciones independientes de cualquier clase
+- Se aplican tanto a métodos de una clase como a funciones independientes de cualquier clase
+- Se aplican en el constructor de una clase
+
+En un lenguaje con soporte para la programación por contrato, las precondiciones y postcondiciones:
+4
+- Se invocan cuando el programador lo indica en métodos de una clase
+- Se invocan primero las postcondiciones, luego las precondiciones y finalmente el código del método
+- Se aplican en el constructor de una clase
+- Se invocan primero las precondiciones, luego el código del método y al final las postcondiciones
+
+Git es un SCVS:
+4
+- Evolucion de BitKeeper
+- Evolucion de Mercurial
+- Evolucion de Monotone
+- Influenciado por BitKeeper
+
+Las autotools se componen de:
+4
+- Solo Autoconf
+- Solo Automake
+- Solo Autoconf y Automake
+- Ninguna de las anteriores
+
+La herramienta cmake:
+3
+- Permite tener solo un fichero CMakeList.txt en el directorio raíz del proyecto y ninguno en subdirectorios del mismo
+- No permite tener un fichero CMakeList.txt en cada subdirectorio del proyecto
+- Nos permite tener un fichero CMakeList.txt en cada subdirectorio del proyecto
+- Nos obliga a tener un fichero CMakeList.txt en cada subdirectorio del proyecto
+
+Gettext:
+4
+- Traduce automáticamente todas las cadenas de nuestra aplicación
+- Necesita que las cadenas estén marcadas de forma distinta según el lenguaje al que se traducirán
+- Lleva a cabo la traducción palabra a palabra de una frase
+- Solo traduce las cadenas marcadas de algún modo en nuestra aplicación
+
+La configuración de un proyecto software se hace:
+3
+- En función de los resultados tras una primera compilación
+- De forma distinta para cada máquina donde vayamos a compilarlo
+- Realizando unos test y chequeos antes de proceder a la compilación
+- De forma manual para cada máquina donde lo vayamos a compilar
+
+Un proyecto configurado con Autotools:
+3
+- Solo se puede compilar en una máquina que tenga instalada el compilador con el que se configuró
+- Necesita que esté instalado autoconf en la maquina donde se va compilar
+- No se necesita que esté instalado autoconf en la máquina donde se va a compilar
+- Debe compilarse en la misma máquina donde se ha configurado
+
+Unas herramientas como Autotools:
+4
+- Solo se pueden emplear en proyectos en lenguaje C
+- Solo se pueden emplear en proyectos en lenguaje C++
+- Solo se pueden emplear en proyectos en lenguaje ObjectiveC
+- Ninguna de las anteriores
+
+Un proyecto configurado con autotools puede constar de:
+3
+- Un único archivo llamado Makefile.am y varios config.h.in
+- Un archivo llamado autoconf.am
+- Un archivo llamado configure.ac y varios Makefile.am
+- Un archivo llamado Makefile.am y otro configure.ac
+
+Lo que conocemos como Cmake:
+1
+- Se compone de varias herramientas
+- Está formado solo por la aplicación cmake
+- Está formado por las aplicaciones cmake y ctest
+- Está formado por las aplicaciones cdash y cmake
+
+En el paso de test, el concepto Branch Coverage
+3
+- Se refiere a la cantidad de ramas empleadas en el controlador de versiones usado
+- Se refiere si estamos testeando la rama master
+- Se refiere la cantidad de ramas del código empleadas
+- Se refiere si estamos testeando la rama trunk
+
+En los Test de datos: (no seguro)
+1
+- Usamos datos reales y sintéticos
+- Usamos solo datos sintéticos que hacen falta
+- Usamos solo datos reales que son los que verdaderamente empleará la aplicación
+- Nos dedicamos a comprobar los datos con los que trabaja la aplicación
+
+El paso de tests…
+1
+- Sirve para mostrar los fallos de nuestro proyecto
+- Sirve para mostrar la ausencia de fallos de nuestro proyecto
+- Sirve para mostrarnos las partes de nuestro poryecto que deben ser mejoradas
+- No sirven para nada
+
+En el GlassBox Testing:
+3
+- Tenemos acceso a parte del código a testear
+- Tenemos acceso sólo al código del programa principal a testear
+- Tenemos acceso a todo el código a testear
+- Tenemos acceso a un módulo del código a testear
+
+Una etiqueta de versión:
+4
+- Siempre ha de seguir el formato X.Y.Z.
+- Siempre ha de seguir el formato W.X.Y.Z.
+- Siempre ha de seguir el formato YYYY.MM.DD.
+- Ninguna de las anteriores
+
+Mercurial es un SCV:
+3
+- Centralizado pero con capacidades de uno distribuidom
+- Descentralizado pero solo en sus versiones más recientes
+- Descentralizado
+- Ninguna de las anteriores
+
+Las mejoras en tiempo de recompilación con ccache:
+4
+- Solo se observan si usamos un Makefile
+- Solo se observan si usamos un Makefile recursivo
+- Solo se observan si usamos un Makefile creado por cmake
+- Ninguna de las anteriores
+
+En un sistema de seguimiento de fallos:
+3
+- Sólo podemos dar de alta informes de fallos
+- Sólo podemos dar de alta peticiones de nuevas características
+- Podemos dar de alta peticiones de nuevas características además de informes de fallos
+- Todas las anteriores son válidas
+
+En un sistema de seguimiento de fallos respecto a los tipos de error:
+2
+- No es importante acotarlos
+- Es bueno acotarlos para facilitar el trabajo del reportador de un fallo
+- Es bueno permitir al usuario que invente sus propias categorías de error
+- Todas las anteriores son válidas
+
+Autoconf + Automake:
+2
+- Es portable directamente a Windows.
+- Es portable a Windows bajo Cygwin
+- No funciona en Windows
+- Ninguna de las anteriores
+
+La cantidad de líneas de código a escribir:
+1
+- Puede ser un factor a tener en cuenta al estructurar un equipo de desarrollo
+- Nunca puede ser un factor a tener en cuenta al estructurar un equipo de desarrollo
+- Síempre será un factor a tener en cuenta al estructurar un equipo de desarrollo
+- Ninguna de las anteriores
+
+La herramienta distcc:
+3
+- Tiene en cuenta de forma automática diferencias de arquitectura al compilan
+- Sólo puede usarse con compiladores GCC
+- Está pensada para ser usada con compíladores GCC
+- Todas las anteriores son válidas
+
+I18N y L10N:
+4
+- Son lo mismo si el lenguaje original empleado en el código es igual al lenguaje destino
+- L10N es una versión simlpíficada de I18N
+- I18N es una versión simplificada L10N
+- Ninguna de las anteriores
+
+El empaquetado DEB: (no seguro)
+4
+- Permíte ejecutar acciones antes de instalar pero no después
+- Permíte ejecutar acciones después de instalar pero no antes
+- No permite ejecutar acciones ni antes ni después de instalar
+- Ninguna de las anteriores
+
+Git puede: (no seguro)
+3
+- Trabajar con sus propios repositorios y los de cualquier otro SCV
+- Trabajar solo con sus propios repositorios
+- Trabajar con sus propios repositorios y ios de algunos otros SCV
+- Todas las anteriores son ciertas
+
+En el paso de tests un fixture: (no seguro)
+1
+- No es necesario en ninguna circunstancia
+- Síempre es necesario
+- Sólo es necesario si reservamos memoria dinámica
+- Ninguna de las anteriores
+
+En el diseño por contrato en lenguaje D los invariantes: (no seguro)
+1
+- Se deben cumplír en métodos con todo tipo de visibilidad
+- Se deben cumplir en métodos con visibilidad publíc
+- Se deben cumplir en métodos con visibilidad private
+- Ninguna de las anteriores
+
+En el diseño por contrato para poder usar post-candiciones:
+3
+- Es obligatorio usar pre-condiciones
+- Es obligatorio usar invariantes
+- Es opcional usar pre-condiciones
+- Todas las anteriores son validas
+
+Dado un cambio a realizar en el código, la ortogonalidad del sistema: (no seguro)
+1
+- Es inversamente proporcional al número de líneas de código implicadas
+- Es inversamente proporcional al número de programadores implicados para hacerlas
+- Es directamente proporcional al número de programadores implicados para hacerlas
+- Ninguna de las anteriores
+
+Un sistema de empaquetado basado en TAR+GZ:
+3
+- Es igual de eficaz que uno basado en RPM
+- Es igual de eficaz que uno basado en DEB
+- Es menos eficaz que DEB o RPM por determinados motivos
+- Ninguna. de las anteriores
+
+Los tests de caja negra:
+4
+- Miden solo el porcentaje de instrucciones testeadas
+- Miden solo el porcentaje de ramas del código usadas
+- Miden ambos porcentajes anteriores
+- Ninguna de las anteriores
+
+La biblioteca Gettext:
+2
+- Solo permite disponer de un idioma destino
+- Permite tener tantos idiomas destino como sea necesario
+- Requiere escribir los mensajes originales en inglés
+- Requiere escribir los mensajes originales codificados en UTF-8
+
+Autoconf necesita a Automake:
+3
+- Obligatoriamente siempre
+- Obligatoriamente si desarrollamos en lenguaje C
+- Opcionalmente
+- Ninguna de las anteriores
+
+Las etiquetas de versión:
+4
+- Solo aportan información al usuario del software
+- Solo aportan información al creador del software
+- No aportan información importante ni al usuario ni al creador del software
+- Ninguna de las anteriores
+
+La herramienta distcc:
+2
+- Usa un solo ejecutable distcc
+- Emplea dos ejecutables:: distcc y distccd
+- En realidad,, distcc y distccd son el mismo programa lanzado con opciones distintas
+- Necesita de make para funcionar
+
+Los archivos DEB: (no seguro)
+2
+- Sólo pueden ser manipulados por dpkg
+- Se pueden manipular por TAR
+- Se pueden manipular por RAR
+- Ninguna de las anteriores
+
+La herramienta make:
+2
+- Sólo puede lanzar trabajos de forma secuencial
+- Puede lanzar más trabajos en paralelo que procesadores o núcleos tiene la máquina en la que se ejecuta
+- Puede lanzar tantos trabajos en paralelo como procesadores o núcleos tenga la máquina en la que se ejecuta
+- No puede ejecutarse de manera recursiva
+
+La herramienta dh_make:
+3
+- Crea un paquete debian a partir de un directorio
+- Crea un paquete debian a partir de un TGZ
+- Debianiza un código fuente a partir de un TGZ
+- Instala un paquete DEB
+
+La herramienta distcc:
+1
+- Funciona entre máquinas conectadas en red
+- Sólo funciona entre máquinas de la misma red
+- No funciona si no hay conexión a la red para la compilación
+- Dispone de un tope de máquinas a usar para compilar
+
+La herramienta distcc en modo bombeo:
+3
+- Hace lo mismo que ccache
+- Hace lo mismo que en modo sencillo
+- Consigue tiempos de compilación mejores
+- Necesita de ccache para funcionar completamente
+
+Los sistemas de empaquetado como DEB o RPM :
+3
+- Sólo permiten instalar software fácilmente
+- Sólo permiten desinstalar software fácilmente
+- Tienen en cuenta dependencias entre paquetes a la hora de instalar uno
+- Ninguna de las anteriores
+
+En el desarrollo de un proyecto software, la etiqueta de versión:
+4
+- Sólo se emplea en el código entregado al usuario final del mismo
+- Siempre tiene el formato X.Y.Z
+- Sólo tiene sentido para los desarrolladores del proyecto
+- Es útil tanto a desarrolladores como a usuarios del proyecto
+
+La herramienta ccache:
+3
+- No hace uso de varios núcleos del procesador
+- Siempre hace uso de varios núcleos del procesador
+- Opcionalmente hace uso de varios núcleos del procesador
+- Puede hacer uso de hasta 2 núcleos de proceso, pero no más
+
+En el desarrollo de un proyecto software, la rama trunk o master:
+2
+- Siempre contendrá una versión estable del proyecto
+- Puede contener una versión estable del proyecto
+- Nunca contendrá una versión estable del proyecto
+- No se emplea nada más que en ocasiones
+
+La herramienta ccache:
+2
+- No sobrecarga nada en el proceso de compilación
+- Añade una sobrecarga mínima al proceso de compilación
+- Almacena sus datos en la cache del disco duro
+- Almacena sus datos en memoria virtual
+
+La herramienta distcc :
+3
+- No hace uso de varios núcleos del procesador
+- Siempre hace uso de varios núcleos del procesador
+- Opcionalmente hace uso de varios núcleos del procesador
+- Puede hacer uso de hasta 3 núcleos de proceso, pero no más
+
+En el desarrollo de un proyecto software, las ramas trunk y master:
+2
+- Son ramas especiales del SCV empleado en el proyecto
+- Son la misma rama del proyecto, pero con diferente nombre
+- Nunca podrán existir simultáneamente
+- Se emplean indistintamente en un mismo proyecto
+
+En un sistema de bugtracking:
+1
+- Es útil acotar los tipos de errores a reportar
+- No debemos acotar los tipos de errores, pues se pueden quedar sin reportar fallos
+- No debemos dejar que el usuario reporte un “whishlist” como un error
+- Un desarrollador no puede cerrar un fallo si el reportador del mismo no lo permite
+
+La herramienta tar:
+4
+- Comprime automáticamente con gzip
+- Comprime automáticamente con bzip2
+- Comprime automáticamente con xz
+- Ninguna de las anteriores
+
+En el desarrollo de un proyecto software, las ramas de desarrollo...: (no seguro)
+2
+- Sólo contienen código de la siguiente versión estable
+- Pueden contener código de corrección de fallos de una versión estable anterior
+- Nunca introducen fallos en el código nuevo
+- Ninguna de las anteriores
+
+Para medir la ortogonalidad de un sistema…:
+3
+- Vemos cuanta gente hay asignada a cada parte del proyecto
+- Vemos cuanta gente permanece en su puesto cuando no hay cambios
+- Vemos a cuanta gente afecta un cambio hecho al proyecto
+- Ninguna de las anteriores
+
+El formato de un paquete DEB :
+3
+- Es desconocido
+- Es el de un archivo TAR
+- Es el de un archivo AR
+- Es el de un archivo TAR.GZ
+
+Un sistema ortogonal se consigue…: (no seguro)
+3
+- Siempre, sin hacer nada especial
+- Separando las distintas capas que lo componen
+- Eliminando las capas necesarias que lo componen
+- Ninguna de las anteriores
+
+La herramienta make cuando se ejecuta sin parámetros…:
+1
+- Trata de obtener el primer objetivo del fichero Makefile
+- Trata de obtener siempre el objetivo ALL del fichero Makefile
+- Trata de obtener siempre el objetivo all del fichero Makefile
+- Ninguna de las anteriores
+
+Indica a qué paradigma hace referencia la siguiente definición:: "Jerarquía de autoridad similar al CC. Útil en la producción de un software similar a uno existente.":
+1
+- Paradigma cerrado
+- Paradigma aleatorio
+- Paradigma abierto
+- Paradigma sincronizado
+
+Indica a qué paradigma hace referencia la siguiente definición:: "El equipo se estructura de manera libre en función de la iniciativa individual de los miembros. Útil cuando se requiere innovación.":
+2
+- Paradigma cerrado
+- Paradigma aleatorio
+- Paradigma abierto
+- Paradigma sincronizado
+
+Indica a qué paradigma hace referencia la siguiente definición:: "Debe haber muy buena comunicación.. Son adecuados para resolver problemas complejos, pero pueden no ser tan eficientes como otros equipos.": (no seguro)
+3
+- Paradigma cerrado
+- Paradigma aleatorio
+- Paradigma abierto
+- Paradigma sincronizado
+
+Indica a qué paradigma hace referencia la siguiente definición: "Las partes del problema nos sirven para organizar los miembros del equipo, los cuales suelen trabajar en estas partes del problema destacando la poca comunicación entre ellos.
+4
+- Paradigma cerrado
+- Paradigma aleatorio
+- Paradigma abierto
+- Paradigma sincronizado
+
+El dictador benevolente de por vida...:
+1
+- Es importante que sea el originador del proyecto software
+- Es imprescindible que sea el originador del proyecto software
+- No son los encargados de velar por el proyecto que tutelan, simplemente cobran los beneficios del mismo
+- Ninguna de las anteriores
+
+La rama master o trunk es cutting Edge significa...:
+3
+- Los cambios no se pueden guardar
+- No es necesario una rama estable con este tipo de rama
+- Tiene las últimas modificaciones de nuestro software
+- Ninguna de las anteriores
+
+Indica cual es un a característica de ccache:
+4
+- Mantiene estadísticas de aciertos/fallos
+- Gestión automática del tamaño de la cache
+- Puede cachear compilaciones con warnings
+- Todas son correctas
+
+Cmake respecto a los out-of-source-builds:
+2
+- No los permite
+- Los hace opcionales
+- Los permite si todo el código está en una única carpeta
+- Los hace obligatorios
+
+Un sistema de empaquetado basado en TAR+BZIP2:
+2
+- Es igual de eficaz que uno basado en DEB
+- Es menos eficaz que DEB o RPM por determinados motivos
+- Ninguna de las anteriores
+- Es igual de eficaz que uno basado en RPM
+
+Plataformas para alojar código como Github o Gitlab:
+4
+- Necesitan de un sistema de bugtracking externo
+- Por su naturaleza no necesitan de sistemas de bugtracking
+- Ninguna de las anteriores
+- Disponen de su propio sistema de bugtracking
+
+Boost::Test forma parte de:
+2
+- Todas las anteriores son válidas
+- De un proyecto externo a C++
+- La biblioteca STL de C++
+- La biblioteca estándard de C++
+
+En el soporte de i18n estudiado:
+1
+- Gettext es una biblioteca externa
+- Gettext forma parte del lenguaje empleado
+- Ninguna de las anteriores
+- Gettext es la única solución existente hoy en dia
+
+Make puede lanzar trabajos en paralelo:
+2
+- Tantos como núcleos de proceso tengamos
+- Tantos como queramos
+- Tantos como núcleos de proceso tengamos menos uno
+- Solo si tenemos mas de un núcleo de proceso
+
+En el lenguaje D podemos tener invariantes de:
+1
+- Clase
+- Clase y bucles
+- Bucles pero no de clase
+- D no soporta invariantes de ningún tipo

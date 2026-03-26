@@ -1,0 +1,149 @@
+En un kernel en CUDA,
+3
+- Cada hilo de un grid ejecuta un código distinto.
+- Cada bloque de un grid ejecuta un código distinto.
+- Todos los hilos agrupados en un grid ejecutan el mismo código.
+
+¿Qué es un kernel en la GPU?
+2
+- Es la función que se ejecutará en los distintos hilos de la GPU de manera secuencial
+- Es la función que se ejecutará en los distintos hilos de la GPU de manera simultánea
+- Es la función que se ejecutará con un modelo MISD en los distintos hilos de la GPU
+
+¿Qué hace el siguiente fragmento de código? ```cudaMemcpy(C, c_d, VECTOR_ELEMENTS * sizeof(float), cudaMemcpyDeviceToHost)```
+2
+- Copia VECTOR_ELEMENTS componentes en punto flotante de los vectores A y B desde la memoria de la CPU hasta la memoria de la GPU.
+- Copia VECTOR_ELEMENTS componentes en punto flotante de los vectores A y B desde la memoria de la GPU hasta la memoria de la CPU.
+- Copia VECTOR_ELEMENTS componentes enteras de los vectores A y B desde la memoria de la GPU hasta la memoria de la CPU.
+
+En una invocación al kernel en un programa en CUDA, ¿Cuál es correcta?
+2
+- El programador ha de especificar el número de hilos por bloque. El tamaño del grid está fijado de antemano.
+- El programador ha de especificar el número de hilos por bloque y el número de bloques que forman el grid.
+- El programador ha de especificar el identificador del hilo dentro del bloque y el identificador del bloque dentro del grid al que se quiera invocar.
+
+¿Qué hace el siguiente fragmento de código? ```# Copy input vectors to device memory \ncudaMemcpy(A_d, A, VECTOR_ELEMENTS * sizeof(float), cudaMemcpyHostToDevice); \ncudaMemcpy(B_d, B, VECTOR_ELEMENTS * sizeof(float), cudaMemcpyHostToDevice);``` \nSeleccione una:
+3
+- Copia VECTOR_ELEMENTS componentes en punto flotante de los vectores A y B desde la memoria de la GPU hasta la memoria de la CPU.
+- Copia VECTOR_ELEMENTS componentes enteras de los vectores A y B desde la memoria de la CPU hasta la memoria de la GPU.
+- Copia VECTOR_ELEMENTS componentes en punto flotante de los vectores A y B desde la memoria de la CPU hasta la memoria de la GPU.
+
+En el nivel más alto encontramos un proceso sobre la CPU (Host) que realiza los siguientes pasos:
+2
+- 1. Inicializa GPU. 2. Reserva memoria en la parte host y device. 3. Copia datos desde la memoria device al host. 4. Lanza la ejecución de múltiples copias del kernel. 5. Copia datos desde el host hacia la memoria device. 6. Se repiten los pasos 3-5 tantas veces como sea necesario. 7. Libera memoria y finaliza la ejecución proceso maestro.
+- 1. Inicializa GPU. 2. Reserva memoria en la parte host y device. 3. Copia datos desde el host hacia la memoria device. 4. Lanza la ejecución de múltiples copias del kernel. 5. Copia datos desde la memoria device al host. 6. Se repiten los pasos 3-5 tantas veces como sea necesario. 7. Libera memoria y finaliza la ejecución proceso maestro.
+- 1. Inicializa GPU. 2. Copia datos desde el host hacia la memoria device. 3. Lanza la ejecución de múltiples copias del kernel. 4. Copia datos desde la memoria device al host. 5. Se repiten los pasos 3-5 tantas veces como sea necesario.
+
+¿Qué especificador en la declaración nos permite definir la función vecadd para que se ejecute en la GPU?
+1
+- __global__ void vecadd()
+- __host__ void vecadd()
+- __kernel__ void vecadd()
+
+¿Qué hace la siguiente función? ```__global__ void vecadd(float* C, const float* A, const float* B)\n{ \n\t# ================================================================ \n\t# Calcula el índice para acceder a cada elemento \n\t# Calcula la suma de las posiciones correspondientes y almacena el resultado \n\t# ================================================================\n\n\tconst int i = (threadIdx.x + blockIdx.x * blockDim.x) * COMPUTE_N_ELEMENTS_PER_THREAD; \n\tif ( i < VECTOR_ELEMENTS ) \n\t{ \n\t\tfor(int j=0; j < COMPUTE_N_ELEMENTS_PER_THREAD; j++) \n\t\t{ \n\t\t\tC[i+j] = A[i+j] + B[i+j]; \n\t\t} \n\t}\n}```
+3
+- Es una función global que realiza la suma en el host de las VECTOR_ELEMENTS componentes del vector.
+- Es el Kernel que se ejecuta en paralelo por cada hilo en la GPU para calcular la suma de las VECTOR_ELEMENTS componentes del vector. Cada hilo realiza la suma del número de componentes del vector indicado por COMPUTE_N_ELEMENTS_PER_THREAD.
+- Es el Kernel que se ejecuta en paralelo por cada hilo en la GPU para calcular la suma de las VECTOR_ELEMENTS componentes del vector. Cada hilo solo puede realizar una única suma.
+
+¿Qué hace el siguiente fragmento de código?```# ===================================================\n# Calcula las dimensiones del grid e invoca el kernel\n# ===================================================\ndim3 block(512);\ndim3 grid( (VECTOR_ELEMENTS + (block.x*COMPUTE_N_ELEMENTS_PER_THREAD-1)) / (block.x*COMPUTE_N_ELEMENTS_PER_THREAD) );\n\n#ifdef DEBUG\n\tprintf(" # of threads in a block %d/n", block.x);\n\tprintf(" # of blocks in a grid %d/n", grid.x);\n\tprintf(" Executing the kernel.../n");\n#endif\n\ngpu_start_time = getTime();\n\nvecAdd<<<grid,block>>>(C_d,A_d,B_d);\n\ncudaThreadSynchronize();\ngpu_end_time = getTime();\nERROR_CHECK\n```
+1
+- Define la estructura y dimensión de los bloques y del grid e invoca al kernel. La estructura definida para los bloques es de una dimensión.
+- Define la estructura y dimensión de los bloques y del grid pero no se invoca ningún kernel. La estructura definida para los bloques es de una dimensión.
+- Define la estructura y dimensión de los bloques y del grid e invoca al kernel. La estructura definida para los bloques es de dos dimensiones.
+
+Sobre la complejidad y dimensión de la cache, la unidad de control y las ALUs de la CPU frente a la GPU ¿Cuál de las siguientes afirmaciones es cierta?
+1
+- Las memorias caches de la GPU son individualmente de mayor tamaño que la cache de la CPU
+- Las ALUs de la CPU son más complejas y mucho menos numerosas que las ALUs de la GPU
+- La unidad de control de la CPU es mucho más simple que las unidades de control de la GPU
+
+EN CUANTO A LAS DIFERENCIAS ENTRE LA CPU Y LA GPU:
+2
+- Una CPU multinúcleo necesita unos pocos hilos más que la GPU para ser igual de eficiente
+- Los hilos de la GPU son más ligeros que los de la CPU, necesitando más hilos que esta última para ser eficiente.
+- Las latencias de memoria en la CPU son mayores que en la GPU.
+
+LA FUNCIÓN QUE SE EJECUTARÁ EN LOS DISTINTOS HILOS QUE SE CREARÁN EN LA TARJETA GRÁFICA DE FORMA PARALELA LE LLAMAMOS:
+1
+- Kernel
+- Bloque
+- Grid
+
+LAS SIGLAS CUDA (Compute Unified Device Architecture) HACEN REFERENCIA A:
+1
+- Tanto a un compilador como a un conjunto de herramientas de desarrollo creadas por NVIDIA.
+- Tanto a un compilador como a un conjunto de herramientas de desarrollo creados por INTEL.
+- Tanto a un compilador como a un conjunto de herramientas de desarrollo creados por AMD.
+
+EN UNA INVOCACIÓN AL KERNEL EN UN PROGRAMA EN CUDA. ¿QUÉ OPCIÓN ES LA CORRECTA?
+2
+- El programador ha de especificar el identificador del hilo dentro del bloque y el identificador del bloque dentro del grid al que se quiere invocar.
+- El programador ha de especificar el número de hilos por bloque y el número de bloques que forman el grid.
+- El programador ha de especificar el número de hilos por bloque. El tamaño del grid está fijado de antemano.
+
+LA ARQUITECTURA CUDA SE CARACTERIZA SEGÚN LA TAXONOMÍA DE FLYNN CON EL TIPO:
+1
+- SIMD
+- MISD
+- MIMD
+
+EN RELACIÓN A CÓMO ORGANIZA CUDA LOS HILOS, ¿CUÁL DE LAS AFIRMACIONES ES CIERTA?
+3
+- El grid es una estructura formada directamente por hilos.
+- El bloque es una estructura formada por grids dentro de los que se organizan los hilos.
+- El grid es una estructura formada por bloques dentro de los que se organizan los hilos.
+
+SI TENEMOS LA VARIABLE dimGrid DEFINIDA COMO "dim3 dimGrid(4,4,1);" ESTAMOS ESPECIFICANDO QUE:
+2
+- Se crean 8 bloques organizados como una matriz 2D.
+- Se crean 16 bloques organizados como una matriz 2D.
+- Se crean 4 bloques organizados como una matriz 2D.
+
+SI TENEMOS LA VARIABLE blockDim DEFINIDA COMO "dim3 blockDim(16,64,1);" ESTAMOS ESPECIFICANDO QUE:
+3
+- Se crean 80 hilos en cada bloque organizados como una matriz 2D.
+- Se crean 16 hilos en cada bloque organizados como una matriz 2D.
+- Se crean 1024 hilos en cada bloque organizados como una matriz 2D.
+
+EN CUANTO A LA ORGANIZACIÓN DE LOS HILOS:
+2
+- Cada bloque de hilos se ejecuta sobre varios Streaming Multiprocessors.
+- Los bloques pueden estructurar los hilos en 1D, 2D o 3D dimensiones.
+- Un Streaming Multiprocessor solo tiene asignado un bloque de hilos.
+
+UNA VEZ EJECUTADO EL KERNEL, ¿QUÉ ES LO QUE DISTINGUE INDIVIDUALMENTE A CADA HILO?
+1
+- La combinación de los índices de bloque y hilo
+- La combinación del índice de hilo y el número de hilos
+- La combinación del índice de bloque y el número de bloques
+
+LA MEMORIA DE LA GPU:
+1
+- Tiene un ancho de banda mucho mayor que el de la memoria principal de una CPU
+- Tiene un ancho de banda menor que el de la memoria principal de una CPU
+- Tiene un ancho de banda similar a la memoria principal de una CPU
+
+LA INVOCACIÓN SIGUIENTE ``` "vecAdd<<<grid,block>>>(C_d,A_d,B_d);"``` DONDE:```dim3 block(512); \ndim3 grid(4);```GENERARÁ:
+3
+- 512 ejecuciones de la función vecAdd
+- 1024 ejecuciones de la función vecAdd
+- 2048 ejecuciones de la función vecAdd
+
+SEGÚN LA SENTENCIA VERDADERA, SELECCIONE UNA:
+3
+- El tiempo de ejecución de la GPU siempre será mayor que en la CPU
+- El tiempo de ejecución en la GPU siempre será menor que en la CPU
+- Hay situaciones en las que el tiempo de ejecución en la GPU es mayor que en la CPU
+
+UN PROGRAMA EN CUDA:
+3
+- Se ejecuta completamente en la tarjeta gráfica
+- Consta de 3 partes: parte host, parte GPU y parte del sistema operativo.
+- Consta de 2 partes: parte host y parte GPU
+
+DADA LA INVOCACIÓN SIGUIENTE ```"vecAdd<<<grid,block>>>(C_d,A_d,B_d);"``` DONDE:```dim3 block(512); \ndim3 grid(4);```EN EL KERNEL SE TIENE LA SIGUIENTE DECLARACIÓN:```int i = (threadIdx.x + blockIdx.x * blockDim.x) * COMPUTE_N_ELEMENTS_PER_THREAD;```¿QUÉ VALOR TOMA LA VARIABLE blockDim.x?
+1
+- Toma el valor de 512
+- Toma el valor 2048
+- Toma el valor 4
