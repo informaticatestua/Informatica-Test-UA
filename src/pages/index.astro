@@ -186,31 +186,31 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 	/* Aplicar bordes suaves a los botones */
 	@media (max-width: 767px) {
 		.asignaturas {
-			@apply flex flex-col items-center !important;
+			@apply flex! flex-col! items-center!;
 		}
 		.group-left, .group-right {
-			@apply w-[100%] flex flex-wrap justify-center !important;
+			@apply w-[100%]! flex! flex-wrap! justify-center!;
 		}
 		.separator {
-			@apply w-[100%] h-[1px] my-[10px] !important;
+			@apply w-[100%]! h-[1px]! my-[10px]!;
 		}
 		.btn, .btn-primary {
-			@apply m-[5px] px-[12px] py-[8px] text-[0.9em] min-w-[80px] !important;
+			@apply m-[5px]! px-[12px]! py-[8px]! text-[0.9em]! min-w-[80px]!;
 		}
 		#app {
-			@apply w-[95%] p-[15px] mt-[70px] !important;
+			@apply w-[95%]! p-[15px]! mt-[70px]!;
 		}
 	}
 	
 	@media (max-width: 480px) {
 		h1 {
-			@apply text-[1.5em] !important;
+			@apply text-[1.5em]!;
 		}
 		h3 {
-			@apply text-[1.2em] !important;
+			@apply text-[1.2em]!;
 		}
 		.btn, .btn-primary {
-			@apply text-[0.8em] min-w-[70px] !important;
+			@apply text-[0.8em]! min-w-[70px]!;
 		}
 	}
 </style>
