@@ -1,0 +1,79 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Test • Community Edition">
+	<div id="main-container" class="flex flex-col items-center justify-center m-auto w-full">
+		<div id="app" class="relative w-max max-w-[95vw] text-center bg-surface shadow-md shadow-black/5 rounded-[5px] px-[40px] py-[30px] mx-auto my-[20px] box-border border border-border-subtle">
+			
+			<button id="copyButton" class="absolute top-[10px] right-[10px] text-[1.5em] p-[5px] bg-transparent border-none cursor-pointer text-text-main opacity-50 hover:opacity-100 transition-opacity" style="display: none">📋</button>
+
+			<div id="pregunta" class="text-left text-[0.95em] md:text-[1em] mb-[15px]"></div>
+			<form id="opciones" class="text-left inline-block mt-[1em] w-full"></form>
+			
+			<div id="resultado" class="mt-[15px] font-semibold"></div>
+			
+			<button id="verificar" class="hidden btn-primary mx-auto mt-[20px]">Verificar</button>
+			<button id="volver" class="btn mx-auto mt-[20px]" onclick="window.location.href = '/'">Volver al Menú</button>
+		</div>
+
+		<div id="button-container" class="w-full flex justify-center mt-[20px]">
+			<button id="resumenBtn" class="btn" style="display: none">Resumen</button>
+		</div>
+	</div>
+
+	<div class="contador hidden fixed bottom-[10px] right-[10px] bg-black/50 text-white text-[14px] px-[10px] py-[5px] rounded-[5px] z-50 backdrop-blur-sm" id="contador">Correctas: 0 / Preguntas: 0</div>
+	<div id="total-preguntas" class="bottom-left hidden fixed bottom-[10px] left-[10px] text-[16px] text-white bg-black/50 p-[5px] rounded-[3px] backdrop-blur-sm"></div>
+</BaseLayout>
+
+<style>
+	@reference "../styles/global.css";
+	
+	.btn {
+		@apply mt-[1em] px-[1.2em] py-[0.6em] text-[1em] border border-border-subtle text-text-main rounded-[5px] cursor-pointer whitespace-nowrap bg-surface hover:bg-surface-hover transition-colors shadow-subtle hover:shadow-sm font-medium;
+	}
+	.btn-primary {
+		@apply mt-[1em] px-[1.2em] py-[0.6em] text-[1em] border-none text-white rounded-[5px] cursor-pointer whitespace-nowrap bg-blue-600 hover:bg-blue-700 transition-colors shadow-sm hover:shadow font-medium;
+	}
+	
+	@media (max-width: 767px) {
+		#app {
+			@apply w-[95%]! p-[15px]! mt-[70px]!;
+		}
+		.btn, .btn-primary {
+			@apply m-[5px]! px-[12px]! py-[8px]! text-[0.9em]! min-w-[80px]!;
+		}
+		#verificar, #volver {
+			@apply w-[45%]! mx-auto! my-[10px]!;
+		}
+	}
+	
+	@media (max-width: 480px) {
+		.btn, .btn-primary {
+			@apply text-[0.8em]! min-w-[70px]!;
+		}
+	}
+
+	/* Opciones estilizaciones inyectadas dinamicamente por JS */
+	:global(form#opciones label) {
+		@apply flex items-center mb-[10px] cursor-pointer text-[0.95em] md:text-[1em] p-[10px] rounded-[5px] hover:bg-surface-hover transition-colors;
+	}
+	:global(form#opciones input[type="radio"]) {
+		@apply mr-[10px] w-[18px] h-[18px] accent-blue-600;
+	}
+	:global(span.correct) {
+		@apply bg-green-500/30 px-[0.5em] py-[0.25em] rounded-[5px] my-[0.25em];
+	}
+	:global(span.incorrect) {
+		@apply bg-red-500/30 px-[0.5em] py-[0.25em] rounded-[5px] my-[0.25em];
+	}
+	:global(pre) {
+		@apply bg-[#f3f3f3] dark:bg-[#1e1e1e] border border-border-subtle rounded-[5px] p-[10px] overflow-auto whitespace-pre-wrap font-mono text-[0.9em] mb-[10px] break-words;
+	}
+	:global(code) {
+		@apply font-mono overflow-auto max-w-full text-[#e83e8c] dark:text-[#ff79c6] bg-[#f8f9fa] dark:bg-[#282a36] px-[4px] py-[2px] rounded-[3px];
+	}
+	:global(pre code) {
+		@apply text-text-main dark:text-[#d4d4d4] bg-transparent p-0;
+	}
+</style>
