@@ -149,13 +149,28 @@ function renderizarResumen(preguntas) {
 
         pregunta.opciones.forEach((opcion) => {
             const li = document.createElement("li");
-            li.style.cssText = "margin-bottom: 4px; padding: 4px 8px; border-radius: 4px;";
+            li.style.cssText = "margin-bottom: 8px; padding: 12px 14px; border-radius: 6px; display: flex; align-items: flex-start; gap: 12px; border: 1px solid var(--border-subtle, rgba(255,255,255,0.1));";
+            
+            const iconSpan = document.createElement("span");
+            iconSpan.style.cssText = "flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 1.1em; line-height: 1.2; margin-top: 2px; width: 24px; height: 24px;";
+            
+            const textDiv = document.createElement("div");
+            textDiv.style.cssText = "flex-grow: 1; margin: 0; padding: 0;";
+            textDiv.innerHTML = formatTextWithCode(opcion.texto);
+
             if (opcion.correcta) {
                 li.className = "correct";
-                li.innerHTML = `✓ ${formatTextWithCode(opcion.texto)}`;
+                iconSpan.innerHTML = "✓";
+                iconSpan.style.fontWeight = "bold";
+                iconSpan.style.color = "var(--green-500, #22c55e)";
             } else {
-                li.innerHTML = `○ ${formatTextWithCode(opcion.texto)}`;
+                iconSpan.innerHTML = "○";
+                iconSpan.style.color = "var(--text-muted, #9ca3af)";
+                li.style.backgroundColor = "transparent";
             }
+            
+            li.appendChild(iconSpan);
+            li.appendChild(textDiv);
             listaOpciones.appendChild(li);
         });
 

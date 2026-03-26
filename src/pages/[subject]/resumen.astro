@@ -23,6 +23,9 @@ import ResumenLayout from '../../layouts/ResumenLayout.astro';
 	:global(#resumen p) {
 		@apply mb-[4px] text-text-main;
 	}
+	:global(#resumen li div > p:last-child) {
+		@apply mb-0;
+	}
 	:global(#resumen li.correct) {
 		@apply bg-green-500/15 text-green-700 dark:text-green-300 font-semibold;
 	}
