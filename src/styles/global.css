@@ -107,3 +107,41 @@
     @apply w-full h-px bg-border-subtle my-8;
   }
 }
+
+/* --- Modal Contribuir Animations ------------------------ */
+.modal-box {
+  opacity: 0;
+  transform: translateY(24px) scale(0.98);
+  transition: opacity 0.28s ease, transform 0.28s ease;
+}
+#contribute-modal.modal-visible .modal-box {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+#contribute-overlay {
+  opacity: 0;
+  transition: opacity 0.28s ease;
+}
+#contribute-overlay.overlay-visible {
+  opacity: 1;
+}
+.contrib-spinner {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(255,255,255,0.4);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: contrib-spin 0.7s linear infinite;
+  vertical-align: middle;
+}
+@keyframes contrib-spin {
+  to { transform: rotate(360deg); }
+}
+/* Mobile: modal scrollable */
+@media (max-height: 700px) {
+  #contribute-modal > div {
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+}

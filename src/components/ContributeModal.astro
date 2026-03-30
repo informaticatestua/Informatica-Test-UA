@@ -1,0 +1,188 @@
+---
+// ContributeModal.astro
+// Componente de modal para contribuciones y reporte de errores, usando EmailJS.
+---
+
+<!-- ─── Modal Contribuir ──────────────────────────────────────────── -->
+<div id="contribute-overlay" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[90] hidden transition-opacity duration-300"></div>
+
+<div id="contribute-modal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4 pointer-events-none">
+    <div class="bg-surface border border-border-subtle rounded-xl shadow-2xl w-full max-w-[520px] pointer-events-auto transition-all duration-300 modal-box">
+        <!-- Header -->
+        <div class="flex items-center justify-between px-6 py-4 border-b border-border-subtle">
+            <h3 class="text-[1.05em] font-bold text-text-main flex items-center gap-2 m-0">
+                <span class="material-icons text-blue-500" style="font-size:20px">volunteer_activism</span>
+                Contribuir al proyecto
+            </h3>
+            <button id="contribute-close" class="text-text-muted hover:text-text-main bg-transparent border-none cursor-pointer p-1 rounded-md hover:bg-surface-hover transition-colors" aria-label="Cerrar">
+                <span class="material-icons" style="font-size:20px">close</span>
+            </button>
+        </div>
+
+        <!-- Form -->
+        <form id="contribute-form" class="px-6 py-5 flex flex-col gap-4" novalidate>
+            <div class="flex flex-col gap-1">
+                <label class="text-[0.82em] font-semibold text-text-muted uppercase tracking-wide" for="contrib-tipo">Tipo de contribución <span class="text-red-500">*</span></label>
+                <select id="contrib-tipo" class="px-3 py-2 rounded-md bg-background border border-border-subtle text-text-main text-[0.95em] focus:outline-none focus:border-blue-500 transition-colors" required>
+                    <option value="">Selecciona una opción...</option>
+                    <option value="nueva-pregunta">➕ Añadir pregunta nueva</option>
+                    <option value="reportar-error">🐛 Reportar error en una pregunta</option>
+                    <option value="sugerencia">💡 Otra sugerencia</option>
+                </select>
+            </div>
+
+            <div class="flex flex-col gap-1">
+                <label class="text-[0.82em] font-semibold text-text-muted uppercase tracking-wide" for="contrib-asignatura">Asignatura afectada <span class="text-red-500">*</span></label>
+                <select id="contrib-asignatura" class="px-3 py-2 rounded-md bg-background border border-border-subtle text-text-main text-[0.95em] focus:outline-none focus:border-blue-500 transition-colors" required>
+                    <option value="">Selecciona una asignatura...</option>
+                    <option value="DCA">DCA</option>
+                    <option value="Redes">Redes</option>
+                    <option value="SDS">SDS</option>
+                    <option value="IC">IC</option>
+                    <option value="TAES">TAES</option>
+                    <option value="Otra / No aplica">Otra / No aplica</option>
+                </select>
+            </div>
+
+            <div class="flex flex-col gap-1">
+                <label class="text-[0.82em] font-semibold text-text-muted uppercase tracking-wide" for="contrib-descripcion">Descripción / Pregunta <span class="text-red-500">*</span></label>
+                <textarea id="contrib-descripcion" rows="5" class="px-3 py-2 rounded-md bg-background border border-border-subtle text-text-main text-[0.95em] focus:outline-none focus:border-blue-500 transition-colors resize-y min-h-[100px]" required></textarea>
+            </div>
+
+            <div class="flex flex-col gap-1">
+                <label class="text-[0.82em] font-semibold text-text-muted uppercase tracking-wide" for="contrib-email">Tu email <span class="text-text-muted font-normal">(opcional)</span></label>
+                <input id="contrib-email" type="email" placeholder="Por si quiero responderte" class="px-3 py-2 rounded-md bg-background border border-border-subtle text-text-main text-[0.95em] focus:outline-none focus:border-blue-500 transition-colors" />
+            </div>
+
+            <!-- Mensajes de estado -->
+            <p id="contrib-success" class="hidden text-green-600 dark:text-green-400 text-[0.9em] font-medium">✅ ¡Gracias! Tu contribución ha sido enviada. La revisaremos lo antes posible.</p>
+            <p id="contrib-error" class="hidden text-red-500 text-[0.9em] font-medium"></p>
+
+            <!-- Botones -->
+            <div class="flex gap-3 justify-end pt-1">
+                <button type="button" id="contrib-cancel" class="px-4 py-2 rounded-md border border-border-subtle text-text-muted hover:bg-surface-hover bg-transparent text-[0.9em] cursor-pointer transition-colors">Cancelar</button>
+                <button type="submit" id="contrib-submit" class="flex items-center gap-2 px-4 py-2 rounded-md bg-blue-600 hover:bg-blue-700 text-white text-[0.9em] font-semibold border-none cursor-pointer transition-colors">
+                    <span class="material-icons" style="font-size:16px">send</span> Enviar contribución
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+<!-- ────────────────────────────────────────────────────────────────── -->
+
+<script>
+    // ASTRO inyectará estas variables en el build (al tener prefijo PUBLIC_)
+    // Nunca estarán escritas en bruto en el código fuente de GitHub.
+    const EMAILJS_SERVICE_ID  = import.meta.env.PUBLIC_EMAILJS_SERVICE_ID;
+    const EMAILJS_TEMPLATE_ID = import.meta.env.PUBLIC_EMAILJS_TEMPLATE_ID;
+    const EMAILJS_PUBLIC_KEY  = import.meta.env.PUBLIC_EMAILJS_PUBLIC_KEY;
+
+    (function initContributeModal() {
+        const placeholders = {
+            "nueva-pregunta": "Escribe el enunciado completo, las opciones A/B/C/D y cuál es la respuesta correcta. Indica también la asignatura y el año del examen si lo recuerdas.",
+            "reportar-error": "Describe el error: ¿qué pregunta es? ¿qué está mal (enunciado, opción incorrecta, respuesta errónea)? ¿cuál crees que es la respuesta correcta?",
+            "sugerencia": "Cuéntanos tu idea: nueva funcionalidad, mejora de diseño, asignaturas que añadir…",
+        };
+
+        const openBtn     = document.getElementById("contribute-btn");
+        const modal       = document.getElementById("contribute-modal");
+        const overlay     = document.getElementById("contribute-overlay");
+        const closeBtn    = document.getElementById("contribute-close");
+        const cancelBtn   = document.getElementById("contrib-cancel");
+        const form        = document.getElementById("contribute-form");
+        const tipoSelect  = document.getElementById("contrib-tipo");
+        const textarea    = document.getElementById("contrib-descripcion");
+        const submitBtn   = document.getElementById("contrib-submit");
+        const msgSuccess  = document.getElementById("contrib-success");
+        const msgError    = document.getElementById("contrib-error");
+
+        if (!openBtn || !modal) return;
+
+        openBtn.addEventListener("click", () => {
+            modal.classList.remove("hidden");
+            overlay.classList.remove("hidden");
+            document.body.style.overflow = "hidden";
+            setTimeout(() => {
+                modal.classList.add("modal-visible");
+                overlay.classList.add("overlay-visible");
+            }, 10);
+        });
+
+        function closeModal() {
+            modal.classList.remove("modal-visible");
+            overlay.classList.remove("overlay-visible");
+            setTimeout(() => {
+                modal.classList.add("hidden");
+                overlay.classList.add("hidden");
+                document.body.style.overflow = "";
+                form.reset();
+                updatePlaceholder();
+                msgSuccess.classList.add("hidden");
+                msgError.classList.add("hidden");
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<span class="material-icons text-[16px]">send</span> Enviar contribución';
+            }, 280);
+        }
+
+        closeBtn.addEventListener("click", closeModal);
+        cancelBtn.addEventListener("click", closeModal);
+        overlay.addEventListener("click", closeModal);
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape" && !modal.classList.contains("hidden")) closeModal();
+        });
+
+        function updatePlaceholder() {
+            const val = tipoSelect ? tipoSelect.value : "";
+            if (textarea) {
+                textarea.placeholder = placeholders[val] || "Cuéntanos tu contribución...";
+            }
+        }
+        if (tipoSelect) tipoSelect.addEventListener("change", updatePlaceholder);
+        updatePlaceholder();
+
+        form.addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+            const tipo        = document.getElementById("contrib-tipo").value;
+            const asignatura  = document.getElementById("contrib-asignatura").value;
+            const descripcion = document.getElementById("contrib-descripcion").value.trim();
+            const emailUser   = document.getElementById("contrib-email").value.trim();
+
+            if (!tipo || !asignatura || !descripcion) {
+                msgError.textContent = "❌ Por favor, rellena los campos obligatorios (Tipo, Asignatura y Descripción).";
+                msgError.classList.remove("hidden");
+                msgSuccess.classList.add("hidden");
+                return;
+            }
+
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<span class="contrib-spinner"></span> Enviando...';
+            msgSuccess.classList.add("hidden");
+            msgError.classList.add("hidden");
+
+            try {
+                // Instanciar EmailJS llamando a la variable global inyectada por el CDN
+                window.emailjs.init(EMAILJS_PUBLIC_KEY);
+                await window.emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+                    tipo:          tipo,
+                    asignatura:    asignatura,
+                    nombre:        "Anónimo",
+                    descripcion:   descripcion,
+                    email_usuario: emailUser || "No proporcionado",
+                });
+
+                submitBtn.innerHTML = '<span class="material-icons text-[16px]">send</span> Enviar contribución';
+                submitBtn.disabled = false;
+                msgSuccess.classList.remove("hidden");
+                form.reset();
+                updatePlaceholder();
+            } catch (err) {
+                console.error("EmailJS error:", err);
+                submitBtn.innerHTML = '<span class="material-icons text-[16px]">send</span> Enviar contribución';
+                submitBtn.disabled = false;
+                msgError.textContent = "❌ Algo salió mal al enviar. Inténtalo de nuevo o escríbenos a informaticatestua@gmail.com.";
+                msgError.classList.remove("hidden");
+            }
+        });
+    })();
+</script>
