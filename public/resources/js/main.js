@@ -1,7 +1,7 @@
 let totalPreguntas = 0;
 let preguntasCorrectas = 0;
 let archivoActual = "";
-let historialPreguntas = [];
+let estadosPreguntas = {}; // index: state mapping
 
 async function cargarPreguntas(archivo) {
     const response = await fetch("/resources/data/" + archivo);
@@ -209,7 +209,7 @@ function mostrarPregunta() {
         delimiters: [{ left: "$$", right: "$$", display: false }],
     });
 
-    if (historialPreguntas.length > 0) {
+    if (preguntaActual > 0) {
         showElement("volver-pregunta");
     } else {
         hideElement("volver-pregunta");
@@ -344,31 +344,17 @@ function arraysEqual(a, b) {
 }
 
 function siguientePregunta() {
-    const respuestaSeleccionada = document.querySelectorAll('input[name="opcion"]:checked');
-    const seleccionadas = Array.from(respuestaSeleccionada).map((input) => parseInt(input.value));
-    const isVerified = document.getElementById("verificar").innerText === "Siguiente";
-    
-    historialPreguntas.push({
-        index: preguntaActual,
-        seleccionadas: seleccionadas,
-        isVerified: isVerified
-    });
+    guardarEstadoActual();
 
     preguntaActual = (preguntaActual + 1) % preguntas.length;
     mostrarPregunta();
-
-    const opciones = document.getElementById("opciones");
-    const inputs = opciones.querySelectorAll("input");
-    inputs.forEach((input) => {
-        input.checked = false;
-        const span = input.closest("label").querySelector("span");
-        if (span) span.classList.remove("correct", "incorrect");
-    });
 
     document.getElementById("verificar").removeEventListener("click", siguientePregunta);
     document.getElementById("verificar").addEventListener("click", verificarRespuesta);
     document.getElementById("verificar").innerText = "Verificar";
     document.getElementById("resultado").innerText = "";
+    
+    restaurarEstadoActual();
 }
 
 const verificarBtn = document.getElementById("verificar");
@@ -376,25 +362,32 @@ if (verificarBtn) {
     verificarBtn.addEventListener("click", verificarRespuesta);
 }
 
-function volverPreguntaAnterior() {
-    if (historialPreguntas.length === 0) return;
+function guardarEstadoActual() {
+    const respuestaSeleccionada = document.querySelectorAll('input[name="opcion"]:checked');
+    const seleccionadas = Array.from(respuestaSeleccionada).map((input) => parseInt(input.value));
+    const isVerified = document.getElementById("verificar").innerText === "Siguiente";
     
-    const estadoAnterior = historialPreguntas.pop();
-    preguntaActual = estadoAnterior.index;
-    
-    mostrarPregunta();
+    estadosPreguntas[preguntaActual] = {
+        seleccionadas: seleccionadas,
+        isVerified: isVerified
+    };
+}
+
+function restaurarEstadoActual() {
+    const estadoGuardado = estadosPreguntas[preguntaActual];
+    if (!estadoGuardado) return;
     
     const opciones = document.getElementById("opciones");
     const inputs = opciones.querySelectorAll("input");
     
     inputs.forEach((input) => {
         const valor = parseInt(input.value);
-        if (estadoAnterior.seleccionadas.includes(valor)) {
+        if (estadoGuardado.seleccionadas.includes(valor)) {
             input.checked = true;
         }
     });
     
-    if (estadoAnterior.isVerified) {
+    if (estadoGuardado.isVerified) {
         const respuestaCorrecta = preguntas[preguntaActual].respuestas;
         const labels = opciones.getElementsByTagName("label");
         
@@ -404,7 +397,7 @@ function volverPreguntaAnterior() {
             if (respuestaCorrecta.includes(valor)) {
                 span.classList.add("correct");
             }
-            if (estadoAnterior.seleccionadas.includes(valor) && !respuestaCorrecta.includes(valor)) {
+            if (estadoGuardado.seleccionadas.includes(valor) && !respuestaCorrecta.includes(valor)) {
                 span.classList.add("incorrect");
             }
         }
@@ -414,6 +407,22 @@ function volverPreguntaAnterior() {
         verificarBtn.addEventListener("click", siguientePregunta);
         verificarBtn.innerText = "Siguiente";
     }
+}
+
+function volverPreguntaAnterior() {
+    if (preguntaActual === 0) return;
+    
+    guardarEstadoActual();
+    
+    preguntaActual = preguntaActual - 1;
+    mostrarPregunta();
+    
+    document.getElementById("verificar").removeEventListener("click", siguientePregunta);
+    document.getElementById("verificar").addEventListener("click", verificarRespuesta);
+    document.getElementById("verificar").innerText = "Verificar";
+    document.getElementById("resultado").innerText = "";
+    
+    restaurarEstadoActual();
 }
 
 const volverPreguntaBtn = document.getElementById("volver-pregunta");
@@ -491,7 +500,7 @@ function resetAppState() {
     document.getElementById("verificar").removeEventListener("click", siguientePregunta);
     document.getElementById("verificar").addEventListener("click", verificarRespuesta);
     document.getElementById("verificar").innerText = "Verificar";
-    historialPreguntas = [];
+    estadosPreguntas = {};
 }
 
 function actualizarContador() {
