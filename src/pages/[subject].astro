@@ -6,12 +6,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 	<div id="main-container" class="flex flex-col items-center justify-center m-auto w-full">
 		<div id="app" class="relative w-max max-w-[95vw] text-center bg-surface shadow-md shadow-black/5 rounded-[5px] px-[40px] py-[30px] mx-auto my-[20px] box-border border border-border-subtle">
 			
-			<button id="copyButton" class="absolute top-[10px] right-[10px] px-[8px] py-[4px] bg-transparent border border-border-subtle rounded-[5px] text-text-muted hover:text-text-main hover:bg-surface-hover transition-colors flex items-center justify-center gap-[5px] text-[0.85em] font-medium" style="display: none">
+			<button id="copyButton" class="absolute top-[10px] right-[10px] sm:top-[15px] sm:right-[15px] px-[8px] py-[4px] bg-surface z-10 border border-border-subtle rounded-[5px] text-text-muted hover:text-text-main hover:bg-surface-hover transition-colors flex items-center justify-center gap-[5px] text-[0.85em] font-medium" style="display: none">
 				<span class="material-icons text-[16px]">content_copy</span>
 				<span id="copyText">Copiar</span>
 			</button>
 
-			<div id="pregunta" class="text-left text-[0.95em] md:text-[1em] mb-[15px]"></div>
+			<div id="pregunta" class="text-left text-[0.95em] md:text-[1em] mb-[15px] mt-[5px] pr-[85px]"></div>
 			<form id="opciones" class="text-left inline-block mt-[1em] w-full"></form>
 			
 			<div id="resultado" class="mt-[15px] font-semibold"></div>
