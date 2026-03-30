@@ -2,24 +2,44 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
+
 <BaseLayout title="Test • Community Edition">
 	<div id="main-container" class="flex flex-col items-center justify-center m-auto w-full">
-		<div id="app" class="relative w-max max-w-[95vw] text-center bg-surface shadow-md shadow-black/5 rounded-[5px] px-[40px] py-[30px] mx-auto my-[20px] box-border border border-border-subtle">
-			
-			<button id="copyButton" class="absolute top-[10px] right-[10px] sm:top-[15px] sm:right-[15px] px-[8px] py-[4px] bg-surface z-10 border border-border-subtle rounded-[5px] text-text-muted hover:text-text-main hover:bg-surface-hover transition-colors flex items-center justify-center gap-[5px] text-[0.85em] font-medium" style="display: none">
-				<span class="material-icons text-[16px]">content_copy</span>
-				<span id="copyText">Copiar</span>
+		<div id="app" class="relative w-max max-w-[95vw] text-center bg-surface shadow-md shadow-black/5 rounded-[10px] px-[40px] py-[32px] mx-auto my-[20px] box-border border border-border-subtle">
+			<!-- Barra de progreso -->
+			<div id="progress-bar-container" class="w-full flex items-center justify-between mb-4">
+				<div class="h-[6px] bg-border-subtle rounded-full flex-1 overflow-hidden mr-3">
+					<div id="progress-bar" class="h-full bg-blue-600 transition-all duration-200" style="width: 0%"></div>
+				</div>
+				<span id="progress-label" class="text-[0.98em] text-text-muted font-semibold min-w-[60px] text-right">1 / 12</span>
+			</div>
+
+			<!-- Botón reportar -->
+			<button id="report-btn" class="absolute top-3 right-3 flex items-center gap-1 px-2 py-1 bg-transparent text-text-muted hover:text-red-600 text-[0.92em] rounded-md transition-colors focus:outline-2 focus:outline-blue-500" aria-label="Reportar un error" title="Reportar un error">
+				<span class="material-icons text-[18px]">flag</span>
+				<span class="hidden sm:inline">Reportar</span>
 			</button>
 
-			<div id="pregunta" class="text-left text-[0.95em] md:text-[1em] mb-[15px] mt-[5px] pr-[85px]"></div>
-			<form id="opciones" class="text-left inline-block mt-[1em] w-full"></form>
-			
-			<div id="resultado" class="mt-[15px] font-semibold"></div>
-			
-			<div id="action-buttons" class="flex justify-center items-center gap-[12px] mt-[20px] w-full flex-wrap">
-				<button id="volver-pregunta" class="btn-secondary hidden mt-0!">← Volver</button>
-				<button id="verificar" class="hidden btn-primary mt-0!">Verificar</button>
-				<button id="volver" class="btn-tertiary mt-0!" onclick="window.location.href = '/'">Volver al Menú</button>
+			<!-- Badge de tema y enunciado -->
+			<div class="flex items-center gap-3 mb-2">
+				<span id="badge-tema" class="inline-block px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-[0.85em] font-semibold tracking-wide shadow-sm">Tema</span>
+			</div>
+			<div id="pregunta" class="text-left text-[1.08em] md:text-[1.13em] font-semibold leading-[1.55] mb-[18px] mt-[2px] pr-[0px]"></div>
+
+			<!-- Opciones -->
+			<form id="opciones" class="flex flex-col gap-3 mt-[1.2em] w-full"></form>
+
+			<!-- Feedback banner -->
+			<div id="feedback-banner" class="hidden mt-4"></div>
+
+			<!-- Botones de acción -->
+			<div id="action-buttons" class="flex flex-col sm:flex-row justify-center items-stretch sm:items-center gap-3 mt-[28px] w-full">
+				<button id="verificar" class="btn-primary w-full min-h-[52px] text-[1.08em] font-bold transition-all duration-200" disabled>Verificar</button>
+				<div class="flex flex-row gap-2 justify-center items-center mt-2 sm:mt-0">
+					<button id="volver-pregunta" class="btn-ghost text-[0.98em]">← Anterior</button>
+					<button id="saltar-pregunta" class="btn-ghost text-[0.98em]">Saltar</button>
+					<button id="volver" class="btn-ghost text-[0.98em]" onclick="window.location.href = '/'">Volver al menú</button>
+				</div>
 			</div>
 		</div>
 
@@ -34,57 +54,136 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 <style>
 	@reference "../styles/global.css";
-	
-	.btn {
-		@apply mt-[1em] px-[1.2em] py-[0.6em] text-[1em] border border-border-subtle text-text-main rounded-[5px] cursor-pointer whitespace-nowrap bg-surface hover:bg-surface-hover transition-colors shadow-subtle hover:shadow-sm font-medium;
-	}
+
+	/* --- Botones --- */
 	.btn-primary {
-		@apply mt-[1em] px-[1.2em] py-[0.6em] text-[1em] border-none text-white rounded-[5px] cursor-pointer whitespace-nowrap bg-blue-600 hover:bg-blue-700 transition-colors shadow-sm hover:shadow font-medium;
+		@apply bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg shadow-sm transition-all duration-200 border-none outline-none focus:outline-2 focus:outline-blue-500;
 	}
-	.btn-secondary {
-		@apply px-[1.2em] py-[0.6em] text-[1em] border-2 border-border-subtle text-text-main rounded-[5px] cursor-pointer whitespace-nowrap bg-transparent hover:bg-surface-hover transition-colors font-medium;
+	.btn-ghost {
+		@apply bg-transparent text-text-muted hover:text-blue-700 px-3 py-2 rounded-md border-none shadow-none transition-colors focus:outline-2 focus:outline-blue-500;
 	}
-	.btn-tertiary {
-		@apply px-[1.2em] py-[0.6em] text-[1em] border-none text-text-muted hover:text-text-main rounded-[5px] cursor-pointer whitespace-nowrap bg-transparent hover:bg-surface-hover transition-colors font-medium;
+	.btn-primary[disabled] {
+		@apply bg-blue-200 text-white opacity-60 cursor-not-allowed;
 	}
-	
-	@media (max-width: 767px) {
+
+	/* --- Opciones como tarjetas/fila --- */
+	:global(form#opciones label.opcion-card) {
+		@apply flex items-center min-h-[52px] px-4 py-3 mb-0 rounded-xl border border-border-subtle bg-white dark:bg-surface cursor-pointer gap-4 shadow-sm transition-all duration-200 relative text-[1.05em] font-medium outline-none;
+		border-width: 2px;
+		margin-bottom: 14px;
+		user-select: none;
+	}
+	:global(form#opciones label.opcion-card:hover),
+	:global(form#opciones label.opcion-card:focus-within) {
+		@apply border-blue-400 bg-blue-50 dark:bg-blue-950/30 shadow-md;
+	}
+	:global(form#opciones label.opcion-card.selected) {
+		@apply border-blue-600 bg-blue-50 dark:bg-blue-900/40 shadow-md;
+	}
+	:global(form#opciones label.opcion-card.correct) {
+		@apply border-green-600 bg-green-50 dark:bg-green-900/40 shadow-md;
+	}
+	:global(form#opciones label.opcion-card.incorrect) {
+		@apply border-red-600 bg-red-50 dark:bg-red-900/40 shadow-md;
+	}
+	:global(form#opciones input[type="radio"]) {
+		@apply appearance-none w-5 h-5 border-2 border-border-subtle rounded-full mr-3 flex-shrink-0 transition-all duration-150 outline-none focus:outline-2 focus:outline-blue-500;
+		background: #fff;
+		position: relative;
+		box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+	}
+	:global(form#opciones input[type="radio"]:checked) {
+		@apply border-blue-600 bg-blue-100;
+	}
+	:global(form#opciones input[type="radio"]:checked::after) {
+		content: '';
+		display: block;
+		width: 11px;
+		height: 11px;
+		margin: 2px auto;
+		border-radius: 50%;
+		background: #2563eb;
+		position: absolute;
+		left: 2px;
+		top: 2px;
+	}
+	:global(form#opciones .opcion-label) {
+		@apply flex-grow text-left break-words;
+	}
+	:global(form#opciones .opcion-icon) {
+		@apply ml-3 flex items-center justify-center w-7 h-7 text-[1.3em] font-bold;
+		min-width: 28px;
+		min-height: 28px;
+	}
+
+	/* --- Feedback banner --- */
+	#feedback-banner {
+		@apply w-full rounded-lg px-4 py-3 font-semibold text-[1em] flex items-center gap-2 shadow-md transition-all duration-200;
+		min-height: 48px;
+	}
+	#feedback-banner.success {
+		@apply bg-green-100 text-green-800 border border-green-300;
+	}
+	#feedback-banner.error {
+		@apply bg-red-100 text-red-800 border border-red-300;
+	}
+
+	/* --- Barra de progreso --- */
+	#progress-bar-container {
+		min-height: 22px;
+	}
+	#progress-bar {
+		@apply bg-blue-600 rounded-full transition-all duration-200;
+		min-width: 12px;
+	}
+
+	/* --- Badge tema --- */
+	#badge-tema {
+		@apply bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-[0.85em] font-semibold tracking-wide shadow-sm;
+		letter-spacing: 0.04em;
+	}
+
+	/* --- Botón reportar --- */
+	#report-btn {
+		@apply absolute top-3 right-3 flex items-center gap-1 px-2 py-1 bg-transparent text-text-muted hover:text-red-600 text-[0.92em] rounded-md transition-colors focus:outline-2 focus:outline-blue-500;
+		z-index: 10;
+	}
+
+	/* --- Accesibilidad y microinteracciones --- */
+	:global(form#opciones label.opcion-card:focus-within),
+	:global(form#opciones label.opcion-card:focus) {
+		outline: 2px solid #2563eb;
+		outline-offset: 2px;
+	}
+	:global(form#opciones label.opcion-card) {
+		transition: border-color 0.18s, background 0.18s, box-shadow 0.18s;
+	}
+
+	/* --- Responsive --- */
+	@media (max-width: 640px) {
 		#app {
-			@apply w-[95%]! p-[15px]! mt-[70px]!;
+			@apply w-full px-2 py-2 mt-[60px] rounded-[0px];
 		}
-		.btn, .btn-primary, .btn-secondary, .btn-tertiary {
-			@apply m-[5px]! px-[12px]! py-[8px]! text-[0.9em]! min-w-[80px]!;
+		.btn-primary {
+			@apply w-full min-h-[54px] text-[1.08em];
 		}
-		#action-buttons button {
-			@apply w-[45%]! mx-auto! my-[5px]!;
+		#action-buttons {
+			@apply flex-col gap-2;
 		}
-	}
-	
-	@media (max-width: 480px) {
-		.btn, .btn-primary, .btn-secondary, .btn-tertiary {
-			@apply text-[0.8em]! min-w-[70px]!;
+		#feedback-banner {
+			font-size: 0.98em;
+			min-height: 44px;
+		}
+		:global(form#opciones label.opcion-card) {
+			min-height: 48px;
+			font-size: 1em;
+			padding: 12px 12px;
 		}
 	}
 
-	/* Opciones estilizaciones inyectadas dinamicamente por JS */
-	:global(form#opciones label) {
-		@apply flex items-start mb-[10px] cursor-pointer text-[0.95em] md:text-[1em] p-[10px] rounded-[5px] hover:bg-surface-hover transition-colors gap-[12px];
-	}
-	:global(form#opciones input[type="radio"]),
-	:global(form#opciones input[type="checkbox"]) {
-		@apply flex-shrink-0 mt-[2px] w-[18px] h-[18px] accent-blue-600;
-	}
-	:global(form#opciones .opcion-label) {
-		@apply flex-grow m-0 p-0 break-words;
-	}
-	:global(span.correct) {
-		@apply bg-green-500/30 px-[0.5em] py-[0.25em] rounded-[5px] my-[0.25em];
-	}
-	:global(span.incorrect) {
-		@apply bg-red-500/30 px-[0.5em] py-[0.25em] rounded-[5px] my-[0.25em];
-	}
+	/* --- Código y badge correct/incorrect --- */
 	:global(pre) {
-		@apply bg-[#f3f3f3] dark:bg-[#1e1e1e] border border-border-subtle rounded-[5px] p-[10px] overflow-auto whitespace-pre-wrap font-mono text-[0.9em] mb-[10px] break-words;
+		@apply bg-[#f3f3f3] dark:bg-[#1e1e1e] border border-border-subtle rounded-[5px] p-[10px] overflow-auto whitespace-pre-wrap font-mono text-[0.98em] mb-[10px] break-words;
 	}
 	:global(code) {
 		@apply font-mono overflow-auto max-w-full text-[#e83e8c] dark:text-[#ff79c6] bg-[#f8f9fa] dark:bg-[#282a36] px-[4px] py-[2px] rounded-[3px];

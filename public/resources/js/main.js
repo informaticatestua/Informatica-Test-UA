@@ -166,37 +166,116 @@ function iniciarAsignatura(archivo) {
 let preguntaActual = 0;
 
 function mostrarPregunta() {
+        // Botón Verificar deshabilitado hasta seleccionar opción
+        const verificarBtn = document.getElementById("verificar");
+        if (verificarBtn) {
+            verificarBtn.disabled = true;
+        }
+
+        // Botones secundarios accesibles
+        const volverBtn = document.getElementById("volver-pregunta");
+        if (volverBtn) {
+            volverBtn.tabIndex = 0;
+            volverBtn.setAttribute("aria-label", "Anterior");
+        }
+        const saltarBtn = document.getElementById("saltar-pregunta");
+        if (saltarBtn) {
+            saltarBtn.tabIndex = 0;
+            saltarBtn.setAttribute("aria-label", "Saltar pregunta");
+            saltarBtn.onclick = function() {
+                guardarEstadoActual();
+                preguntaActual = (preguntaActual + 1) % preguntas.length;
+                mostrarPregunta();
+                restaurarEstadoActual();
+            };
+        }
     const pregunta = preguntas[preguntaActual];
     const contenedorPregunta = document.getElementById("pregunta");
     const contenedorOpciones = document.getElementById("opciones");
 
+
+    // Actualizar barra de progreso
+    const progressBar = document.getElementById("progress-bar");
+    const progressLabel = document.getElementById("progress-label");
+    if (progressBar && progressLabel) {
+        const total = preguntas.length;
+        const actual = preguntaActual + 1;
+        progressBar.style.width = `${(actual / total) * 100}%`;
+        progressLabel.textContent = `${actual} / ${total}`;
+    }
+
+    // Actualizar badge de tema (si hay metadato tema)
+    const badgeTema = document.getElementById("badge-tema");
+    if (badgeTema) {
+        badgeTema.textContent = pregunta.tema || "Tema";
+    }
+
     // Establece el contenido de la pregunta
     contenedorPregunta.innerHTML = formatTextWithCode(pregunta.pregunta);
-
-    // Resaltar el código, si hay alguno en la pregunta
     Prism.highlightAll();
 
-    // Establece el contenido de las opciones
+    // Botón reportar (abre modal reutilizando ContributeModal)
+    const reportBtn = document.getElementById("report-btn");
+    if (reportBtn) {
+        reportBtn.onclick = () => {
+            // Reutiliza el modal de contribución pero con campos preseleccionados
+            const modal = document.getElementById("contribute-modal");
+            const overlay = document.getElementById("contribute-overlay");
+            if (modal && overlay) {
+                modal.classList.remove("hidden");
+                overlay.classList.remove("hidden");
+                document.body.style.overflow = "hidden";
+                // Preselecciona tipo y placeholder
+                const tipo = document.getElementById("contrib-tipo");
+                if (tipo) tipo.value = "reportar-error";
+                const textarea = document.getElementById("contrib-descripcion");
+                if (textarea) textarea.placeholder = "Describe el error: ¿qué pregunta es? ¿qué está mal (enunciado, opción incorrecta, respuesta errónea)? ¿cuál crees que es la respuesta correcta?";
+            }
+        };
+    }
+
+    // Establece el contenido de las opciones (tarjetas/fila, radio, iconos, accesibilidad)
     contenedorOpciones.innerHTML = "";
     pregunta.opciones.forEach((opcion, i) => {
-        // Omitir si es "NO MARCAR" o cualquier otra lógica que tengas
         if (opcion.toUpperCase() !== "NO MARCAR") {
-            const input = document.createElement(pregunta.multiple ? "input" : "input");
-            input.type = pregunta.multiple ? "checkbox" : "radio";
+            const input = document.createElement("input");
+            input.type = "radio";
             input.name = "opcion";
             input.id = `opcion${i + 1}`;
             input.value = i + 1;
-            
+            input.tabIndex = 0;
+            input.setAttribute("aria-label", `Opción ${i + 1}`);
+
             const label = document.createElement("label");
             label.htmlFor = `opcion${i + 1}`;
-            label.className = "opcion-container";
-            
+            label.className = "opcion-card";
+            label.setAttribute("tabindex", "0");
+
+            // Indicador circular (radio visual)
+            const radioVisual = document.createElement("span");
+            radioVisual.className = "radio-indicator";
+            radioVisual.setAttribute("aria-hidden", "true");
+            radioVisual.style.display = "inline-block";
+            radioVisual.style.width = "20px";
+            radioVisual.style.height = "20px";
+            radioVisual.style.borderRadius = "50%";
+            radioVisual.style.border = "2px solid #cbd5e1";
+            radioVisual.style.marginRight = "10px";
+            radioVisual.style.position = "relative";
+
+            // Opción texto
             const span = document.createElement("span");
-            span.innerHTML = splitLongText(opcion); // Usa innerHTML si la opción podría contener LaTeX
+            span.innerHTML = splitLongText(opcion);
             span.className = "opcion-label";
-            
+
+            // Icono de estado (check/X)
+            const icon = document.createElement("span");
+            icon.className = "opcion-icon material-icons";
+            icon.style.display = "none";
             label.appendChild(input);
+            label.appendChild(radioVisual);
             label.appendChild(span);
+            label.appendChild(icon);
             contenedorOpciones.appendChild(label);
         }
     });
@@ -207,6 +286,33 @@ function mostrarPregunta() {
     });
     renderMathInElement(contenedorOpciones, {
         delimiters: [{ left: "$$", right: "$$", display: false }],
+    });
+
+    // Accesibilidad: enfocar la primera opción
+    const firstInput = contenedorOpciones.querySelector("input[type='radio']");
+    if (firstInput) firstInput.focus();
+
+    // Limpiar feedback y estados
+    document.getElementById("feedback-banner").className = "hidden mt-4";
+    document.getElementById("feedback-banner").innerHTML = "";
+    document.getElementById("verificar").disabled = true;
+    document.getElementById("verificar").innerText = "Verificar";
+
+    // Selección y microinteracciones
+    contenedorOpciones.querySelectorAll("input[type='radio']").forEach((input) => {
+        input.addEventListener("change", (e) => {
+            contenedorOpciones.querySelectorAll("label.opcion-card").forEach((l) => l.classList.remove("selected"));
+            const label = input.closest("label.opcion-card");
+            if (label) label.classList.add("selected");
+            document.getElementById("verificar").disabled = false;
+        });
+        // Accesibilidad: seleccionar con Enter/Espacio
+        input.addEventListener("keydown", (e) => {
+            if (e.key === " " || e.key === "Enter") {
+                input.checked = true;
+                input.dispatchEvent(new Event("change"));
+            }
+        });
     });
 
     if (preguntaActual > 0) {
@@ -290,48 +396,61 @@ function formatTextWithCode(text) {
 }
 
 function verificarRespuesta() {
-    totalPreguntas++; // Incrementa el total de preguntas contestadas
-
+    totalPreguntas++;
     const respuestaSeleccionada = document.querySelectorAll('input[name="opcion"]:checked');
-    if (respuestaSeleccionada.length === 0) {
-        alert("Selecciona una opción antes de verificar.");
-        return;
-    }
-
-    const respuestaCorrecta = preguntas[preguntaActual].respuestas; // Array de respuestas correctas
+    if (respuestaSeleccionada.length === 0) return;
+    const respuestaCorrecta = preguntas[preguntaActual].respuestas;
     const opciones = document.getElementById("opciones");
     const labels = opciones.getElementsByTagName("label");
-
     let respuestaEsCorrecta = false;
-
-    // Crear un array con las opciones seleccionadas
     const seleccionadas = Array.from(respuestaSeleccionada).map((input) => parseInt(input.value));
-
-    // Comparar arrays de respuestas
     const correctas = [...respuestaCorrecta].sort((a, b) => a - b);
     const seleccionadasOrdenadas = [...seleccionadas].sort((a, b) => a - b);
-
     if (arraysEqual(correctas, seleccionadasOrdenadas)) {
         respuestaEsCorrecta = true;
         preguntasCorrectas++;
     }
-
-    // Resaltar las opciones correctas e incorrectas
+    // Estados visuales y feedback
     for (let i = 0; i < labels.length; i++) {
-        const span = labels[i].querySelector("span");
-        const valor = parseInt(labels[i].htmlFor.replace("opcion", ""));
+        const label = labels[i];
+        const input = label.querySelector("input");
+        const icon = label.querySelector(".opcion-icon");
+        const valor = parseInt(label.htmlFor.replace("opcion", ""));
+        label.classList.remove("selected", "correct", "incorrect");
+        icon.style.display = "none";
         if (respuestaCorrecta.includes(valor)) {
-            span.classList.add("correct");
+            label.classList.add("correct");
+            if (respuestaEsCorrecta) {
+                icon.textContent = "check_circle";
+                icon.style.color = "#16a34a";
+                icon.style.display = "inline-flex";
+            } else {
+                icon.textContent = "check_circle";
+                icon.style.color = "#16a34a";
+                icon.style.display = "inline-flex";
+            }
         }
         if (seleccionadas.includes(valor) && !respuestaCorrecta.includes(valor)) {
-            span.classList.add("incorrect");
+            label.classList.add("incorrect");
+            icon.textContent = "cancel";
+            icon.style.color = "#dc2626";
+            icon.style.display = "inline-flex";
         }
     }
-
+    // Feedback banner
+    const feedback = document.getElementById("feedback-banner");
+    feedback.classList.remove("hidden", "success", "error");
+    if (respuestaEsCorrecta) {
+        feedback.classList.add("success");
+        feedback.innerHTML = '<span class="material-icons">check_circle</span> ¡Correcto!';
+    } else {
+        feedback.classList.add("error");
+        let correcta = labels[respuestaCorrecta[0] - 1]?.querySelector(".opcion-label")?.textContent || "";
+        feedback.innerHTML = '<span class="material-icons">cancel</span> Incorrecto. La opción correcta era: <b>' + correcta + '</b>';
+    }
     document.getElementById("verificar").removeEventListener("click", verificarRespuesta);
     document.getElementById("verificar").addEventListener("click", siguientePregunta);
-    document.getElementById("verificar").innerText = "Siguiente";
-
+    document.getElementById("verificar").innerText = "Continuar →";
     actualizarContador();
 }
 
