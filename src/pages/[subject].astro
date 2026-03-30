@@ -6,8 +6,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 	<div id="main-container" class="flex flex-col items-center justify-center m-auto w-full">
 		<div id="app" class="relative w-max max-w-[95vw] text-center bg-surface shadow-md shadow-black/5 rounded-[5px] px-[40px] py-[30px] mx-auto my-[20px] box-border border border-border-subtle">
 			
-			<button id="copyButton" class="absolute top-[10px] right-[10px] p-[5px] bg-transparent border-none cursor-pointer opacity-70 hover:opacity-100 transition-colors flex items-center justify-center" title="Copiar pregunta" style="display: none">
-				<span class="material-icons text-[20px] text-[#aaa] hover:text-blue-500 dark:hover:text-white transition-colors">content_copy</span>
+			<button id="copyButton" class="absolute top-[10px] right-[10px] px-[8px] py-[4px] bg-transparent border border-border-subtle rounded-[5px] text-text-muted hover:text-text-main hover:bg-surface-hover transition-colors flex items-center justify-center gap-[5px] text-[0.85em] font-medium" style="display: none">
+				<span class="material-icons text-[16px]">content_copy</span>
+				<span id="copyText">Copiar</span>
 			</button>
 
 			<div id="pregunta" class="text-left text-[0.95em] md:text-[1em] mb-[15px]"></div>

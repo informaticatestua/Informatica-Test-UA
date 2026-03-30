@@ -570,6 +570,25 @@ if (copyBtn) {
         navigator.clipboard.writeText(contenidoParaCopiar).then(
             function () {
                 console.log("Copiado con éxito");
+                const copyText = document.getElementById("copyText");
+                const icon = copyBtn.querySelector(".material-icons");
+                
+                if (copyText && icon) {
+                    const originalText = copyText.innerText;
+                    const originalIcon = icon.innerText;
+                    
+                    copyText.innerText = "Copiado";
+                    icon.innerText = "check";
+                    copyBtn.classList.add("text-green-600", "dark:text-green-400", "border-green-600", "dark:border-green-400");
+                    copyBtn.classList.remove("text-text-muted", "border-border-subtle");
+                    
+                    setTimeout(() => {
+                        copyText.innerText = originalText;
+                        icon.innerText = originalIcon;
+                        copyBtn.classList.remove("text-green-600", "dark:text-green-400", "border-green-600", "dark:border-green-400");
+                        copyBtn.classList.add("text-text-muted", "border-border-subtle");
+                    }, 2000);
+                }
             },
             function (err) {
                 console.error("Error al copiar: ", err);
