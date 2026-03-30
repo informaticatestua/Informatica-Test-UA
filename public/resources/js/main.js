@@ -765,6 +765,10 @@ function cargarDesdeUrl(id) {
         "dca-oficial": "dcaPreguntas.txt",
         "ic-p1": "ic-p1.txt",
         "taes-definitivo": "taesDefinitivoPreguntas.txt",
+        "ac_CP-F2": "ac_CP-F2_Preguntas.txt",
+        "ac_CP-F3": "ac_CP-F3_Preguntas.txt",
+        "ac_CT1-2": "ac_CT1-2_Preguntas.txt",
+        "ac_CT3-4": "ac_CT3-4_Preguntas.txt",
     };
 
     if (excepciones[id]) {
