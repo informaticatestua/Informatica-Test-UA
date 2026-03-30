@@ -214,27 +214,28 @@ function mostrarPregunta() {
     contenedorPregunta.innerHTML = formatTextWithCode(pregunta.pregunta);
     Prism.highlightAll();
 
-    // Botón reportar (abre modal reutilizando ContributeModal)
+    // Botón reportar: abre ReportModal dedicado con pregunta + opciones completas
     const reportBtn = document.getElementById("report-btn");
     if (reportBtn) {
         reportBtn.onclick = () => {
-            // Reutiliza el modal de contribución pero con campos preseleccionados
-            const modal = document.getElementById("contribute-modal");
-            const overlay = document.getElementById("contribute-overlay");
-            if (modal && overlay) {
-                modal.classList.remove("hidden");
-                overlay.classList.remove("hidden");
-                document.body.style.overflow = "hidden";
-                // Preselecciona tipo y placeholder
-                const tipo = document.getElementById("contrib-tipo");
-                if (tipo) tipo.value = "reportar-error";
-                const textarea = document.getElementById("contrib-descripcion");
-                if (textarea) textarea.placeholder = "Describe el error: ¿qué pregunta es? ¿qué está mal (enunciado, opción incorrecta, respuesta errónea)? ¿cuál crees que es la respuesta correcta?";
+            const preguntaTexto = document.getElementById("pregunta")?.innerText || "";
+
+            // Recopilar todas las opciones del form
+            const opcionLabels = document.querySelectorAll("form#opciones label .opcion-label");
+            const letras = ["A", "B", "C", "D", "E", "F"];
+            const opcionesTexto = Array.from(opcionLabels)
+                .map((el, i) => `  ${letras[i] || (i + 1)}. ${el.innerText.trim()}`)
+                .join("\n");
+
+            const textoCompleto = `PREGUNTA:\n${preguntaTexto}\n\nOPCIONES:\n${opcionesTexto}`;
+
+            if (typeof window.openReportModal === "function") {
+                window.openReportModal(textoCompleto);
             }
         };
     }
 
-    // Establece el contenido de las opciones (versión original)
+    // Establece el contenido de las opciones
     contenedorOpciones.innerHTML = "";
     pregunta.opciones.forEach((opcion, i) => {
         if (opcion.toUpperCase() !== "NO MARCAR") {
@@ -257,6 +258,23 @@ function mostrarPregunta() {
             contenedorOpciones.appendChild(label);
         }
     });
+
+    // Delegated change: clase 'selected' en label + habilitar botón Verificar
+    if (contenedorOpciones._changeHandler) {
+        contenedorOpciones.removeEventListener("change", contenedorOpciones._changeHandler);
+    }
+    contenedorOpciones._changeHandler = function(e) {
+        if (!e.target || e.target.name !== "opcion") return;
+        const verificarBtn = document.getElementById("verificar");
+        if (verificarBtn) verificarBtn.disabled = false;
+        const allLabels = contenedorOpciones.getElementsByTagName("label");
+        for (const lbl of allLabels) lbl.classList.remove("selected");
+        contenedorOpciones.querySelectorAll("input:checked").forEach(inp => {
+            const parentLabel = inp.closest("label");
+            if (parentLabel) parentLabel.classList.add("selected");
+        });
+    };
+    contenedorOpciones.addEventListener("change", contenedorOpciones._changeHandler);
 
     // Renderizar LaTeX en la pregunta y las opciones
     renderMathInElement(contenedorPregunta, {
@@ -375,13 +393,28 @@ function verificarRespuesta() {
 
     // Resaltar las opciones correctas e incorrectas
     for (let i = 0; i < labels.length; i++) {
-        const span = labels[i].querySelector("span");
         const valor = parseInt(labels[i].htmlFor.replace("opcion", ""));
+        const inp   = labels[i].querySelector("input");
+        labels[i].classList.remove("selected");
+        if (inp) inp.disabled = true;
+
         if (respuestaCorrecta.includes(valor)) {
-            span.classList.add("correct");
+            labels[i].classList.add("correct");
+            if (!labels[i].querySelector(".status-icon")) {
+                const icon = document.createElement("span");
+                icon.className = "status-icon";
+                icon.innerHTML = '<span class="material-icons">check_circle</span>';
+                labels[i].appendChild(icon);
+            }
         }
         if (seleccionadas.includes(valor) && !respuestaCorrecta.includes(valor)) {
-            span.classList.add("incorrect");
+            labels[i].classList.add("incorrect");
+            if (!labels[i].querySelector(".status-icon")) {
+                const icon = document.createElement("span");
+                icon.className = "status-icon";
+                icon.innerHTML = '<span class="material-icons">cancel</span>';
+                labels[i].appendChild(icon);
+            }
         }
     }
 
@@ -443,26 +476,53 @@ function restaurarEstadoActual() {
             input.checked = true;
         }
     });
-    
+
+    // Restaurar clase 'selected' y habilitar Verificar si hay selecciones sin verificar
+    if (estadoGuardado.seleccionadas.length > 0) {
+        const allLabels = opciones.getElementsByTagName("label");
+        for (const lbl of allLabels) {
+            const inp = lbl.querySelector("input");
+            if (inp && inp.checked) lbl.classList.add("selected");
+        }
+        const vBtn = document.getElementById("verificar");
+        if (vBtn && !estadoGuardado.isVerified) vBtn.disabled = false;
+    }
+
     if (estadoGuardado.isVerified) {
         const respuestaCorrecta = preguntas[preguntaActual].respuestas;
         const labels = opciones.getElementsByTagName("label");
-        
+
         for (let i = 0; i < labels.length; i++) {
-            const span = labels[i].querySelector("span");
             const valor = parseInt(labels[i].htmlFor.replace("opcion", ""));
+            const inp   = labels[i].querySelector("input");
+            labels[i].classList.remove("selected");
+            if (inp) inp.disabled = true;
+
             if (respuestaCorrecta.includes(valor)) {
-                span.classList.add("correct");
+                labels[i].classList.add("correct");
+                if (!labels[i].querySelector(".status-icon")) {
+                    const icon = document.createElement("span");
+                    icon.className = "status-icon";
+                    icon.innerHTML = '<span class="material-icons">check_circle</span>';
+                    labels[i].appendChild(icon);
+                }
             }
             if (estadoGuardado.seleccionadas.includes(valor) && !respuestaCorrecta.includes(valor)) {
-                span.classList.add("incorrect");
+                labels[i].classList.add("incorrect");
+                if (!labels[i].querySelector(".status-icon")) {
+                    const icon = document.createElement("span");
+                    icon.className = "status-icon";
+                    icon.innerHTML = '<span class="material-icons">cancel</span>';
+                    labels[i].appendChild(icon);
+                }
             }
         }
-        
+
         const verificarBtn = document.getElementById("verificar");
         verificarBtn.removeEventListener("click", verificarRespuesta);
         verificarBtn.addEventListener("click", siguientePregunta);
         verificarBtn.innerText = "Siguiente";
+        verificarBtn.disabled = false;
     }
 }
 
@@ -599,19 +659,19 @@ function shuffleArray(array) {
 document.addEventListener("keydown", (event) => {
     const opciones = document.getElementsByName("opcion");
     if (opciones.length > 0) {
-        if (event.key === "1" || event.key === "Numpad1") {
-            opciones[0].checked = true;
-        } else if (event.key === "2" || event.key === "Numpad2") {
-            opciones[1].checked = true;
-        } else if (event.key === "3" || event.key === "Numpad3") {
-            opciones[2].checked = true;
-        } else if (event.key === "4" || event.key === "Numpad4") {
-            opciones[3].checked = true;
-        } else if (event.key === "5" || event.key === "Numpad5") {
-            opciones[4].checked = true;
+        let target = null;
+        if (event.key === "1" || event.key === "Numpad1")      target = opciones[0];
+        else if (event.key === "2" || event.key === "Numpad2") target = opciones[1];
+        else if (event.key === "3" || event.key === "Numpad3") target = opciones[2];
+        else if (event.key === "4" || event.key === "Numpad4") target = opciones[3];
+        else if (event.key === "5" || event.key === "Numpad5") target = opciones[4];
+
+        if (target && !target.disabled) {
+            target.checked = true;
+            target.dispatchEvent(new Event("change", { bubbles: true }));
         } else if (event.key === "Enter" || event.key === "NumpadEnter") {
             const verificarBtn = document.getElementById("verificar");
-            verificarBtn.click();
+            if (verificarBtn && !verificarBtn.disabled) verificarBtn.click();
         }
     }
 });

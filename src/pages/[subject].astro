@@ -7,20 +7,36 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 	<div id="main-container" class="flex flex-col items-center justify-center m-auto w-full">
 		<div id="app" class="relative w-max max-w-[95vw] text-center bg-surface shadow-md shadow-black/5 rounded-[5px] px-[40px] py-[30px] mx-auto my-[20px] box-border border border-border-subtle">
 			
-			<button id="copyButton" class="absolute top-[10px] right-[10px] sm:top-[15px] sm:right-[15px] px-[8px] py-[4px] bg-surface z-10 border border-border-subtle rounded-[5px] text-text-muted hover:text-text-main hover:bg-surface-hover transition-colors flex items-center justify-center gap-[5px] text-[0.85em] font-medium" style="display: none">
-				<span class="material-icons text-[16px]">content_copy</span>
-				<span id="copyText">Copiar</span>
-			</button>
+			<div class="absolute top-[10px] right-[10px] sm:top-[15px] sm:right-[15px] flex items-center justify-end gap-2 z-10 w-full sm:w-auto pr-[10px] sm:pr-0 pl-[40px] pointer-events-none">
+				<button id="report-btn" class="pointer-events-auto px-[8px] py-[4px] bg-surface border border-border-subtle rounded-[5px] text-text-muted hover:text-red-500 hover:border-red-500 hover:bg-red-50 dark:hover:bg-red-900/20 transition-colors flex items-center justify-center gap-[5px] text-[0.85em] font-medium group cursor-pointer" title="Reportar un error">
+					<span class="material-icons text-[16px] group-hover:text-red-500 transition-colors">flag</span>
+					<span class="hidden sm:inline">Reportar</span>
+				</button>
+				<button id="copyButton" class="pointer-events-auto px-[8px] py-[4px] bg-surface z-10 border border-border-subtle rounded-[5px] text-text-muted hover:text-text-main hover:bg-surface-hover transition-colors flex items-center justify-center gap-[5px] text-[0.85em] font-medium cursor-pointer" style="display: none">
+					<span class="material-icons text-[16px]">content_copy</span>
+					<span id="copyText">Copiar</span>
+				</button>
+			</div>
 
-			<div id="pregunta" class="text-left text-[0.95em] md:text-[1em] mb-[15px] mt-[5px] pr-[85px]"></div>
-			<form id="opciones" class="text-left inline-block mt-[1em] w-full"></form>
+			<div id="pregunta" class="text-left text-[0.95em] md:text-[1em] mb-[15px] mt-[25px] sm:mt-[5px] sm:pr-[180px]"></div>
+			<form id="opciones" class="text-left flex flex-col mt-[1em] w-full gap-[10px] sm:gap-[12px] min-w-[300px]"></form>
 			
-			<div id="resultado" class="mt-[15px] font-semibold"></div>
+			<div id="resultado" class="mt-[15px] font-semibold text-center min-h-[24px]"></div>
 			
-			<div id="action-buttons" class="flex justify-center items-center gap-[12px] mt-[20px] w-full flex-wrap">
-				<button id="volver-pregunta" class="btn-secondary hidden mt-0!">← Volver</button>
-				<button id="verificar" class="hidden btn-primary mt-0!">Verificar</button>
-				<button id="volver" class="btn-tertiary mt-0!" onclick="window.location.href = '/'">Volver al Menú</button>
+			<div id="action-buttons-container" class="flex flex-col sm:flex-row justify-center sm:justify-between items-center gap-[12px] mt-[24px] w-full pt-[15px] sm:pt-[20px] border-t border-border-subtle">
+				<!-- Fila secundaria móvil / Izquierda desktop -->
+				<div class="order-3 sm:order-1 flex justify-center sm:justify-start items-center gap-[10px] w-full sm:w-auto">
+					<button id="volver-pregunta" class="btn-ghost hidden mt-0!">← Anterior</button>
+					<button id="saltar-pregunta" class="btn-ghost mt-0!" style="display: none;">Saltar →</button>
+				</div>
+				<!-- Fila principal móvil / Centro desktop -->
+				<div class="order-1 sm:order-2 w-full sm:w-auto flex justify-center">
+					<button id="verificar" class="hidden btn-primary mt-0! w-full sm:w-auto sm:min-w-[200px]" disabled>Verificar / Continuar</button>
+				</div>
+				<!-- Fila terciaria móvil / Derecha desktop -->
+				<div class="order-2 sm:order-3 w-full sm:w-auto flex justify-center sm:justify-end">
+					<button id="volver" class="btn-ghost mt-0!" onclick="window.location.href = '/'">Volver al Menú</button>
+				</div>
 			</div>
 		</div>
 
@@ -40,7 +56,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 		@apply mt-[1em] px-[1.2em] py-[0.6em] text-[1em] border border-border-subtle text-text-main rounded-[5px] cursor-pointer whitespace-nowrap bg-surface hover:bg-surface-hover transition-colors shadow-subtle hover:shadow-sm font-medium;
 	}
 	.btn-primary {
-		@apply mt-[1em] px-[1.2em] py-[0.6em] text-[1em] border-none text-white rounded-[5px] cursor-pointer whitespace-nowrap bg-blue-600 hover:bg-blue-700 transition-colors shadow-sm hover:shadow font-medium;
+		@apply mt-[1em] px-[1.2em] py-[0.6em] text-[1em] border-none text-white rounded-[5px] cursor-pointer whitespace-nowrap bg-blue-600 hover:bg-blue-700 transition-colors shadow-sm hover:shadow font-medium disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-blue-600 disabled:hover:shadow-none;
 	}
 	.btn-secondary {
 		@apply px-[1.2em] py-[0.6em] text-[1em] border-2 border-border-subtle text-text-main rounded-[5px] cursor-pointer whitespace-nowrap bg-transparent hover:bg-surface-hover transition-colors font-medium;
@@ -48,41 +64,86 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 	.btn-tertiary {
 		@apply px-[1.2em] py-[0.6em] text-[1em] border-none text-text-muted hover:text-text-main rounded-[5px] cursor-pointer whitespace-nowrap bg-transparent hover:bg-surface-hover transition-colors font-medium;
 	}
+	.btn-ghost {
+		@apply px-[1em] py-[0.5em] text-[0.9em] border-none text-text-muted hover:text-text-main rounded-[5px] cursor-pointer whitespace-nowrap bg-transparent hover:bg-surface-hover transition-colors font-medium;
+	}
 	
 	@media (max-width: 767px) {
 		#app {
 			@apply w-[95%]! p-[15px]! mt-[70px]!;
 		}
-		.btn, .btn-primary, .btn-secondary, .btn-tertiary {
-			@apply m-[5px]! px-[12px]! py-[8px]! text-[0.9em]! min-w-[80px]!;
+		.btn, .btn-secondary, .btn-tertiary, .btn-ghost {
+			@apply m-[5px]! px-[12px]! py-[8px]! text-[0.9em]!;
 		}
-		#action-buttons button {
-			@apply w-[45%]! mx-auto! my-[5px]!;
+		.btn-primary {
+			@apply w-full! m-0! mb-[8px]! min-h-[52px]! text-[1.05em]! rounded-[8px]!;
+		}
+		#action-buttons-container {
+			@apply gap-[5px]! pt-[15px]!;
 		}
 	}
 	
 	@media (max-width: 480px) {
-		.btn, .btn-primary, .btn-secondary, .btn-tertiary {
-			@apply text-[0.8em]! min-w-[70px]!;
+		.btn, .btn-primary, .btn-secondary, .btn-tertiary, .btn-ghost {
+			@apply text-[0.9em]!;
+		}
+		.btn-primary {
+			@apply min-h-[56px]! text-[1.05em]!;
 		}
 	}
 
-	/* Opciones estilizaciones inyectadas dinamicamente por JS */
+	/* ── Tarjetas de opción múltiple ──────────────────────────────── */
 	:global(form#opciones label) {
-		@apply flex items-start mb-[10px] cursor-pointer text-[0.95em] md:text-[1em] p-[10px] rounded-[5px] hover:bg-surface-hover transition-colors gap-[12px];
+		@apply flex items-center mb-0! cursor-pointer text-[0.95em] md:text-[1em]
+			   p-[12px] sm:px-[16px] rounded-[8px] border-2 border-border-subtle
+			   bg-surface gap-[12px] min-h-[52px] select-none;
+		transition: border-color 150ms ease, background-color 150ms ease, box-shadow 150ms ease;
 	}
+	/* Focus-visible: outline claro para navegación con teclado */
+	:global(form#opciones label:focus-within) {
+		@apply outline-none ring-2 ring-blue-500 ring-offset-2 ring-offset-background;
+	}
+	/* Hover: solo si la tarjeta no tiene estado definitivo */
+	:global(form#opciones label:not(.selected):not(.correct):not(.incorrect):hover) {
+		@apply border-blue-400 bg-surface-hover;
+	}
+	/* Seleccionada */
+	:global(form#opciones label.selected) {
+		@apply border-blue-600 bg-blue-50 dark:bg-blue-900/30;
+	}
+	/* Correcta (tras verificar) */
+	:global(form#opciones label.correct) {
+		@apply border-green-600 bg-green-50 dark:bg-green-900/30 cursor-default;
+	}
+	/* Incorrecta (tras verificar) */
+	:global(form#opciones label.incorrect) {
+		@apply border-red-600 bg-red-50 dark:bg-red-900/30 cursor-default;
+	}
+	/* Radio / Checkbox nativo */
 	:global(form#opciones input[type="radio"]),
 	:global(form#opciones input[type="checkbox"]) {
-		@apply flex-shrink-0 mt-[2px] w-[18px] h-[18px] accent-blue-600;
+		@apply flex-shrink-0 w-[20px] h-[20px] accent-blue-600 focus:outline-none cursor-pointer;
 	}
+	:global(form#opciones label.correct input),
+	:global(form#opciones label.incorrect input) {
+		@apply cursor-default pointer-events-none;
+	}
+	/* Texto de la opción */
 	:global(form#opciones .opcion-label) {
-		@apply flex-grow m-0 p-0 break-words;
+		@apply flex-grow m-0 p-0 break-words font-medium text-text-main;
 	}
-	:global(span.correct) {
-		@apply bg-green-500/30 px-[0.5em] py-[0.25em] rounded-[5px] my-[0.25em];
+	/* Icono de estado (✓ o ✗) */
+	:global(form#opciones .status-icon) {
+		@apply flex-shrink-0 flex items-center justify-center;
 	}
-	:global(span.incorrect) {
-		@apply bg-red-500/30 px-[0.5em] py-[0.25em] rounded-[5px] my-[0.25em];
+	:global(form#opciones .status-icon .material-icons) {
+		font-size: 22px;
+	}
+	:global(form#opciones label.correct .status-icon .material-icons) {
+		@apply text-green-600 dark:text-green-400;
+	}
+	:global(form#opciones label.incorrect .status-icon .material-icons) {
+		@apply text-red-600 dark:text-red-400;
 	}
 	:global(pre) {
 		@apply bg-[#f3f3f3] dark:bg-[#1e1e1e] border border-border-subtle rounded-[5px] p-[10px] overflow-auto whitespace-pre-wrap font-mono text-[0.9em] mb-[10px] break-words;

@@ -1,0 +1,257 @@
+---
+// ReportModal.astro
+// Modal dedicado para reportar errores en preguntas del quiz.
+// En móvil actúa como bottom sheet; en desktop, modal centrado.
+---
+
+<!-- ─── Overlay ────────────────────────────────────────────────────── -->
+<div id="report-overlay" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[90] hidden"></div>
+
+<!-- ─── Modal / Bottom Sheet ─────────────────────────────────────────── -->
+<div
+  id="report-modal"
+  class="fixed inset-0 z-[100] hidden flex items-end sm:items-center justify-center pointer-events-none"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="report-modal-title"
+>
+  <div
+    id="report-modal-box"
+    class="bg-surface border border-border-subtle w-full sm:max-w-[480px] pointer-events-auto
+           rounded-t-2xl sm:rounded-xl shadow-2xl"
+  >
+    <!-- Handle visual (solo móvil) -->
+    <div class="flex justify-center pt-3 pb-1 sm:hidden" aria-hidden="true">
+      <div class="w-10 h-1 rounded-full bg-border-subtle"></div>
+    </div>
+
+    <!-- Header -->
+    <div class="flex items-center justify-between px-6 py-4 border-b border-border-subtle">
+      <h3 id="report-modal-title" class="text-[1em] font-bold text-text-main flex items-center gap-2 m-0">
+        <span class="material-icons text-red-500" style="font-size:18px">flag</span>
+        Reportar un error
+      </h3>
+      <button
+        id="report-close"
+        class="text-text-muted hover:text-text-main bg-transparent border-none cursor-pointer p-1 rounded-md hover:bg-surface-hover transition-colors"
+        aria-label="Cerrar"
+      >
+        <span class="material-icons" style="font-size:20px">close</span>
+      </button>
+    </div>
+
+    <!-- Form -->
+    <form id="report-form" class="px-6 py-5 flex flex-col gap-4" novalidate>
+
+      <!-- Tipo de error -->
+      <div class="flex flex-col gap-1.5">
+        <label class="text-[0.8em] font-semibold text-text-muted uppercase tracking-wide" for="report-tipo">
+          Tipo de error <span class="text-red-500">*</span>
+        </label>
+        <select
+          id="report-tipo"
+          class="px-3 py-2 rounded-md bg-background border border-border-subtle text-text-main text-[0.95em] focus:outline-none focus:border-blue-500 transition-colors cursor-pointer"
+          required
+        >
+          <option value="">Selecciona el tipo de error...</option>
+          <option value="solucion-incorrecta">❌ Solución incorrecta</option>
+          <option value="error-tipografico">📝 Error tipográfico</option>
+          <option value="enunciado-confuso">🤔 Enunciado confuso</option>
+          <option value="otro">💬 Otro</option>
+        </select>
+      </div>
+
+      <!-- Descripción libre -->
+      <div class="flex flex-col gap-1.5">
+        <label class="text-[0.8em] font-semibold text-text-muted uppercase tracking-wide" for="report-descripcion">
+          Descripción <span class="text-[0.85em] text-text-muted font-normal normal-case">(opcional)</span>
+        </label>
+        <textarea
+          id="report-descripcion"
+          rows="3"
+          placeholder="Describe el error con más detalle..."
+          class="px-3 py-2 rounded-md bg-background border border-border-subtle text-text-main text-[0.95em] focus:outline-none focus:border-blue-500 transition-colors resize-y min-h-[80px]"
+        ></textarea>
+      </div>
+
+      <!-- Estado -->
+      <p id="report-success" class="hidden text-green-600 dark:text-green-400 text-[0.9em] font-medium">
+        ✅ ¡Gracias! Tu reporte ha sido enviado correctamente.
+      </p>
+      <p id="report-error-msg" class="hidden text-red-500 text-[0.9em] font-medium"></p>
+
+      <!-- Botones -->
+      <div class="flex gap-3 justify-end pt-1">
+        <button
+          type="button"
+          id="report-cancel"
+          class="px-4 py-2 rounded-md border border-border-subtle text-text-muted hover:bg-surface-hover bg-transparent text-[0.9em] cursor-pointer transition-colors"
+        >
+          Cancelar
+        </button>
+        <button
+          type="submit"
+          id="report-submit"
+          class="flex items-center gap-2 px-4 py-2 rounded-md bg-red-600 hover:bg-red-700 text-white text-[0.9em] font-semibold border-none cursor-pointer transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+        >
+          <span class="material-icons" style="font-size:15px">flag</span>
+          Enviar reporte
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<style>
+  #report-modal-box {
+    opacity: 0;
+    transform: translateY(32px);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+  }
+  #report-modal.report-visible #report-modal-box {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  #report-overlay {
+    opacity: 0;
+    transition: opacity 0.25s ease;
+  }
+  #report-overlay.report-overlay-visible {
+    opacity: 1;
+  }
+  .report-spinner {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: report-spin 0.7s linear infinite;
+    vertical-align: middle;
+  }
+  @keyframes report-spin {
+    to { transform: rotate(360deg); }
+  }
+</style>
+
+<script>
+  const EMAILJS_SERVICE_ID  = import.meta.env.PUBLIC_EMAILJS_SERVICE_ID;
+  const EMAILJS_TEMPLATE_ID = import.meta.env.PUBLIC_EMAILJS_TEMPLATE_ID;
+  const EMAILJS_PUBLIC_KEY  = import.meta.env.PUBLIC_EMAILJS_PUBLIC_KEY;
+
+  (function initReportModal() {
+    const modal     = document.getElementById("report-modal");
+    const overlay   = document.getElementById("report-overlay");
+    const closeBtn  = document.getElementById("report-close");
+    const cancelBtn = document.getElementById("report-cancel");
+    const form      = document.getElementById("report-form");
+    const submitBtn = document.getElementById("report-submit");
+    const msgOk     = document.getElementById("report-success");
+    const msgKo     = document.getElementById("report-error-msg");
+
+    if (!modal) return;
+
+    function openModal(preguntaTexto) {
+      window._reportPreguntaTexto = preguntaTexto || "";
+      modal.classList.remove("hidden");
+      overlay.classList.remove("hidden");
+      document.body.style.overflow = "hidden";
+      setTimeout(() => {
+        modal.classList.add("report-visible");
+        overlay.classList.add("report-overlay-visible");
+        // Focus primer elemento interactivo
+        const firstEl = modal.querySelector("select, textarea, button");
+        if (firstEl) firstEl.focus();
+      }, 10);
+    }
+
+    function closeModal() {
+      modal.classList.remove("report-visible");
+      overlay.classList.remove("report-overlay-visible");
+      setTimeout(() => {
+        modal.classList.add("hidden");
+        overlay.classList.add("hidden");
+        document.body.style.overflow = "";
+        form.reset();
+        msgOk.classList.add("hidden");
+        msgKo.classList.add("hidden");
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = '<span class="material-icons" style="font-size:15px">flag</span> Enviar reporte';
+      }, 260);
+    }
+
+    closeBtn.addEventListener("click", closeModal);
+    cancelBtn.addEventListener("click", closeModal);
+    overlay.addEventListener("click", closeModal);
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && !modal.classList.contains("hidden")) {
+        e.stopPropagation();
+        closeModal();
+      }
+    });
+
+    // Focus trap
+    modal.addEventListener("keydown", (e) => {
+      if (e.key !== "Tab") return;
+      const focusable = Array.from(
+        modal.querySelectorAll("button, select, textarea, input, [tabindex]")
+      ).filter((el) => !el.disabled && el.offsetParent !== null);
+      if (!focusable.length) return;
+      const first = focusable[0];
+      const last  = focusable[focusable.length - 1];
+      if (e.shiftKey) {
+        if (document.activeElement === first) { e.preventDefault(); last.focus(); }
+      } else {
+        if (document.activeElement === last)  { e.preventDefault(); first.focus(); }
+      }
+    });
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const tipo        = document.getElementById("report-tipo").value;
+      const descripcion = document.getElementById("report-descripcion").value.trim();
+
+      if (!tipo) {
+        msgKo.textContent = "❌ Selecciona el tipo de error antes de enviar.";
+        msgKo.classList.remove("hidden");
+        msgOk.classList.add("hidden");
+        return;
+      }
+
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<span class="report-spinner"></span> Enviando...';
+      msgOk.classList.add("hidden");
+      msgKo.classList.add("hidden");
+
+      const preguntaTexto = window._reportPreguntaTexto || "(no disponible)";
+      const asignatura    = window.location.pathname.replace(/\//g, "") || "desconocida";
+
+      try {
+        window.emailjs.init(EMAILJS_PUBLIC_KEY);
+        await window.emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+          tipo:          "reportar-error",
+          asignatura:    asignatura,
+          nombre:        "Anónimo",
+          descripcion:   `[${tipo}]\n${descripcion || "(sin descripción adicional)"}\n\nPregunta reportada:\n${preguntaTexto}`,
+          email_usuario: "No proporcionado",
+        });
+
+        submitBtn.innerHTML = '<span class="material-icons" style="font-size:15px">flag</span> Enviar reporte';
+        submitBtn.disabled = false;
+        msgOk.classList.remove("hidden");
+        form.reset();
+        setTimeout(() => closeModal(), 2200);
+      } catch (err) {
+        console.error("EmailJS error:", err);
+        submitBtn.innerHTML = '<span class="material-icons" style="font-size:15px">flag</span> Enviar reporte';
+        submitBtn.disabled = false;
+        msgKo.textContent = "❌ Error al enviar. Inténtalo de nuevo o escríbenos a informaticatestua@gmail.com.";
+        msgKo.classList.remove("hidden");
+      }
+    });
+
+    // Exponer globalmente para que main.js lo llame
+    window.openReportModal = openModal;
+  })();
+</script>

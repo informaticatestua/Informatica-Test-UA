@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import ContributeModal from '../components/ContributeModal.astro';
+import ReportModal from '../components/ReportModal.astro';
 
 interface Props {
 	title?: string;
@@ -70,6 +71,7 @@ const { title = "Ing. Informática Tests UA" } = Astro.props;
 		</header>
 
 		<ContributeModal />
+		<ReportModal />
 
 		<main class="w-full">
 			<slot />
