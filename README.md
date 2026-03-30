@@ -1,6 +1,6 @@
 <div align="center">
   <h1>🖥️ DCA Test UA</h1>
-  <p><em>Plataforma web ágil e interactiva de simulación de pruebas para estudiantes universitarios.</em></p>
+  <p><em>Plataforma de preparación de exámenes estructurada para estudiantes de la carrera de Ingeniería Informática.</em></p>
 
   <p>
     <a href="https://github.com/usuario/dca">
@@ -17,7 +17,7 @@
   </p>
 </div>
 
-Diseñada con un enfoque de alto rendimiento para cargar baterías de preguntas de Ingeniería Informática, permitiendo realizar repasos instantáneos, mantener el progreso bidireccionalmente y verificar soluciones con explicaciones matemáticas (LaTeX).
+Una herramienta de estudio interactiva diseñada específicamente para ofrecer baterías de preguntas recopiladas de simulacros y exámenes reales de años pasados. Perfecta para poner a prueba los conocimientos adquiridos en cada asignatura, repasar conceptos clave con explicaciones matemáticas detalladas (LaTeX) y entrenar exhaustivamente para el examen final bajo un entorno intuitivo.
 
 ---
 
@@ -41,11 +41,11 @@ Diseñada con un enfoque de alto rendimiento para cargar baterías de preguntas 
 
 ## ✨ Características principales
 
-- ⚡ **Rendimiento Ultrarrápido**: Construida sobre tecnologías estáticas y **Astro** para un LCP cercano a 0.
-- 🌓 **Modo Oscuro Integrado**: Tematización inteligente (`dark/light theme`) adaptado a las preferencias del usuario.
-- 🔙 **Historial Constante**: Navegación de preguntas guardando estado (forward/backward) que previene perder tu puntuación o avance accidental.
-- 📱 **Soporte Responsivo**: Optimizado para estudiar en móvil, tablet o PC gracias a estilos en cascada CSS/Tailwind.
-- 📋 **Acciones de Productividad**: Funciones nativas de portapapeles (`Clipboard API`) para llevarte la pregunta o revisar las fórmulas matemáticas interactivas de las opciones.
+- 📚 **Baterías de Preguntas Reales**: Accede a cientos de preguntas categorizadas por asignatura, diferentes temas y años pasados, ideales para simular cómo evaluarían en un examen oficial.
+- 🔙 **Historial y Progreso Guardado**: Navega libremente hacia adelante y hacia atrás. La plataforma recuerda exactamente cada opción que respondiste anteriormente para que puedas corregir despistes sin perder las contestadas por delante.
+- 🌓 **Modo Oscuro/Claro Inteligente**: Adaptado a tu entorno y preferencias, ideal para largas sesiones de estudio y repaso nocturno sin fatigar la visión.
+- 📱 **Estudia Donde Quieras**: Diseño fluido responsive que muestra esquemas de código, opciones largas de lectura y bloques matemáticos perfectamente legibles tanto desde tu teléfono móvil como en tu PC.
+- 📋 **Extracción Rápida**: Copia el enunciado, las opciones y los ejemplos de código con un solo clic en el portapapeles para estudiarlos luego en tus propios apuntes (como Notion/Obsidian) o compartirlos discutiendo dudas con otros compañeros.
 
 ---
 
