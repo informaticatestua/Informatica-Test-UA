@@ -234,48 +234,26 @@ function mostrarPregunta() {
         };
     }
 
-    // Establece el contenido de las opciones (tarjetas/fila, radio, iconos, accesibilidad)
+    // Establece el contenido de las opciones (versión original)
     contenedorOpciones.innerHTML = "";
     pregunta.opciones.forEach((opcion, i) => {
         if (opcion.toUpperCase() !== "NO MARCAR") {
             const input = document.createElement("input");
-            input.type = "radio";
+            input.type = pregunta.multiple ? "checkbox" : "radio";
             input.name = "opcion";
             input.id = `opcion${i + 1}`;
             input.value = i + 1;
-            input.tabIndex = 0;
-            input.setAttribute("aria-label", `Opción ${i + 1}`);
 
             const label = document.createElement("label");
             label.htmlFor = `opcion${i + 1}`;
-            label.className = "opcion-card";
-            label.setAttribute("tabindex", "0");
+            label.className = "opcion-container";
 
-            // Indicador circular (radio visual)
-            const radioVisual = document.createElement("span");
-            radioVisual.className = "radio-indicator";
-            radioVisual.setAttribute("aria-hidden", "true");
-            radioVisual.style.display = "inline-block";
-            radioVisual.style.width = "20px";
-            radioVisual.style.height = "20px";
-            radioVisual.style.borderRadius = "50%";
-            radioVisual.style.border = "2px solid #cbd5e1";
-            radioVisual.style.marginRight = "10px";
-            radioVisual.style.position = "relative";
-
-            // Opción texto
             const span = document.createElement("span");
             span.innerHTML = splitLongText(opcion);
             span.className = "opcion-label";
 
-            // Icono de estado (check/X)
-            const icon = document.createElement("span");
-            icon.className = "opcion-icon material-icons";
-            icon.style.display = "none";
             label.appendChild(input);
-            label.appendChild(radioVisual);
             label.appendChild(span);
-            label.appendChild(icon);
             contenedorOpciones.appendChild(label);
         }
     });
@@ -286,33 +264,6 @@ function mostrarPregunta() {
     });
     renderMathInElement(contenedorOpciones, {
         delimiters: [{ left: "$$", right: "$$", display: false }],
-    });
-
-    // Accesibilidad: enfocar la primera opción
-    const firstInput = contenedorOpciones.querySelector("input[type='radio']");
-    if (firstInput) firstInput.focus();
-
-    // Limpiar feedback y estados
-    document.getElementById("feedback-banner").className = "hidden mt-4";
-    document.getElementById("feedback-banner").innerHTML = "";
-    document.getElementById("verificar").disabled = true;
-    document.getElementById("verificar").innerText = "Verificar";
-
-    // Selección y microinteracciones
-    contenedorOpciones.querySelectorAll("input[type='radio']").forEach((input) => {
-        input.addEventListener("change", (e) => {
-            contenedorOpciones.querySelectorAll("label.opcion-card").forEach((l) => l.classList.remove("selected"));
-            const label = input.closest("label.opcion-card");
-            if (label) label.classList.add("selected");
-            document.getElementById("verificar").disabled = false;
-        });
-        // Accesibilidad: seleccionar con Enter/Espacio
-        input.addEventListener("keydown", (e) => {
-            if (e.key === " " || e.key === "Enter") {
-                input.checked = true;
-                input.dispatchEvent(new Event("change"));
-            }
-        });
     });
 
     if (preguntaActual > 0) {
@@ -396,61 +347,48 @@ function formatTextWithCode(text) {
 }
 
 function verificarRespuesta() {
-    totalPreguntas++;
+    totalPreguntas++; // Incrementa el total de preguntas contestadas
+
     const respuestaSeleccionada = document.querySelectorAll('input[name="opcion"]:checked');
-    if (respuestaSeleccionada.length === 0) return;
-    const respuestaCorrecta = preguntas[preguntaActual].respuestas;
+    if (respuestaSeleccionada.length === 0) {
+        alert("Selecciona una opción antes de verificar.");
+        return;
+    }
+
+    const respuestaCorrecta = preguntas[preguntaActual].respuestas; // Array de respuestas correctas
     const opciones = document.getElementById("opciones");
     const labels = opciones.getElementsByTagName("label");
+
     let respuestaEsCorrecta = false;
+
+    // Crear un array con las opciones seleccionadas
     const seleccionadas = Array.from(respuestaSeleccionada).map((input) => parseInt(input.value));
+
+    // Comparar arrays de respuestas
     const correctas = [...respuestaCorrecta].sort((a, b) => a - b);
     const seleccionadasOrdenadas = [...seleccionadas].sort((a, b) => a - b);
+
     if (arraysEqual(correctas, seleccionadasOrdenadas)) {
         respuestaEsCorrecta = true;
         preguntasCorrectas++;
     }
-    // Estados visuales y feedback
+
+    // Resaltar las opciones correctas e incorrectas
     for (let i = 0; i < labels.length; i++) {
-        const label = labels[i];
-        const input = label.querySelector("input");
-        const icon = label.querySelector(".opcion-icon");
-        const valor = parseInt(label.htmlFor.replace("opcion", ""));
-        label.classList.remove("selected", "correct", "incorrect");
-        icon.style.display = "none";
+        const span = labels[i].querySelector("span");
+        const valor = parseInt(labels[i].htmlFor.replace("opcion", ""));
         if (respuestaCorrecta.includes(valor)) {
-            label.classList.add("correct");
-            if (respuestaEsCorrecta) {
-                icon.textContent = "check_circle";
-                icon.style.color = "#16a34a";
-                icon.style.display = "inline-flex";
-            } else {
-                icon.textContent = "check_circle";
-                icon.style.color = "#16a34a";
-                icon.style.display = "inline-flex";
-            }
+            span.classList.add("correct");
         }
         if (seleccionadas.includes(valor) && !respuestaCorrecta.includes(valor)) {
-            label.classList.add("incorrect");
-            icon.textContent = "cancel";
-            icon.style.color = "#dc2626";
-            icon.style.display = "inline-flex";
+            span.classList.add("incorrect");
         }
     }
-    // Feedback banner
-    const feedback = document.getElementById("feedback-banner");
-    feedback.classList.remove("hidden", "success", "error");
-    if (respuestaEsCorrecta) {
-        feedback.classList.add("success");
-        feedback.innerHTML = '<span class="material-icons">check_circle</span> ¡Correcto!';
-    } else {
-        feedback.classList.add("error");
-        let correcta = labels[respuestaCorrecta[0] - 1]?.querySelector(".opcion-label")?.textContent || "";
-        feedback.innerHTML = '<span class="material-icons">cancel</span> Incorrecto. La opción correcta era: <b>' + correcta + '</b>';
-    }
+
     document.getElementById("verificar").removeEventListener("click", verificarRespuesta);
     document.getElementById("verificar").addEventListener("click", siguientePregunta);
-    document.getElementById("verificar").innerText = "Continuar →";
+    document.getElementById("verificar").innerText = "Siguiente";
+
     actualizarContador();
 }
 
