@@ -6,15 +6,20 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 	<div id="main-container" class="flex flex-col items-center justify-center m-auto w-full">
 		<div id="app" class="relative w-max max-w-[95vw] text-center bg-surface shadow-md shadow-black/5 rounded-[5px] px-[40px] py-[30px] mx-auto my-[20px] box-border border border-border-subtle">
 			
-			<button id="copyButton" class="absolute top-[10px] right-[10px] text-[1.5em] p-[5px] bg-transparent border-none cursor-pointer text-text-main opacity-50 hover:opacity-100 transition-opacity" style="display: none">📋</button>
+			<button id="copyButton" class="absolute top-[10px] right-[10px] p-[5px] bg-transparent border-none cursor-pointer opacity-70 hover:opacity-100 transition-colors flex items-center justify-center" title="Copiar pregunta" style="display: none">
+				<span class="material-icons text-[20px] text-[#aaa] hover:text-blue-500 dark:hover:text-white transition-colors">content_copy</span>
+			</button>
 
 			<div id="pregunta" class="text-left text-[0.95em] md:text-[1em] mb-[15px]"></div>
 			<form id="opciones" class="text-left inline-block mt-[1em] w-full"></form>
 			
 			<div id="resultado" class="mt-[15px] font-semibold"></div>
 			
-			<button id="verificar" class="hidden btn-primary mx-auto mt-[20px]">Verificar</button>
-			<button id="volver" class="btn mx-auto mt-[20px]" onclick="window.location.href = '/'">Volver al Menú</button>
+			<div id="action-buttons" class="flex justify-center items-center gap-[12px] mt-[20px] w-full flex-wrap">
+				<button id="volver-pregunta" class="btn-secondary hidden mt-0!">← Volver</button>
+				<button id="verificar" class="hidden btn-primary mt-0!">Verificar</button>
+				<button id="volver" class="btn-tertiary mt-0!" onclick="window.location.href = '/'">Volver al Menú</button>
+			</div>
 		</div>
 
 		<div id="button-container" class="w-full flex justify-center mt-[20px]">
@@ -35,21 +40,27 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 	.btn-primary {
 		@apply mt-[1em] px-[1.2em] py-[0.6em] text-[1em] border-none text-white rounded-[5px] cursor-pointer whitespace-nowrap bg-blue-600 hover:bg-blue-700 transition-colors shadow-sm hover:shadow font-medium;
 	}
+	.btn-secondary {
+		@apply px-[1.2em] py-[0.6em] text-[1em] border-2 border-border-subtle text-text-main rounded-[5px] cursor-pointer whitespace-nowrap bg-transparent hover:bg-surface-hover transition-colors font-medium;
+	}
+	.btn-tertiary {
+		@apply px-[1.2em] py-[0.6em] text-[1em] border-none text-text-muted hover:text-text-main rounded-[5px] cursor-pointer whitespace-nowrap bg-transparent hover:bg-surface-hover transition-colors font-medium;
+	}
 	
 	@media (max-width: 767px) {
 		#app {
 			@apply w-[95%]! p-[15px]! mt-[70px]!;
 		}
-		.btn, .btn-primary {
+		.btn, .btn-primary, .btn-secondary, .btn-tertiary {
 			@apply m-[5px]! px-[12px]! py-[8px]! text-[0.9em]! min-w-[80px]!;
 		}
-		#verificar, #volver {
-			@apply w-[45%]! mx-auto! my-[10px]!;
+		#action-buttons button {
+			@apply w-[45%]! mx-auto! my-[5px]!;
 		}
 	}
 	
 	@media (max-width: 480px) {
-		.btn, .btn-primary {
+		.btn, .btn-primary, .btn-secondary, .btn-tertiary {
 			@apply text-[0.8em]! min-w-[70px]!;
 		}
 	}

@@ -1,6 +1,7 @@
 let totalPreguntas = 0;
 let preguntasCorrectas = 0;
 let archivoActual = "";
+let historialPreguntas = [];
 
 async function cargarPreguntas(archivo) {
     const response = await fetch("/resources/data/" + archivo);
@@ -117,7 +118,7 @@ function cerrarTodasLasSublistas() {
 function iniciarAsignatura(archivo) {
     resetAppState();
     document.getElementById("resumenBtn").style.display = "block";
-    document.getElementById("copyButton").style.display = "block";
+    document.getElementById("copyButton").style.display = "flex";
     archivoActual = archivo;
 
     const asignaturaNombre = archivo.split("Preguntas.txt")[0].toUpperCase();
@@ -207,6 +208,12 @@ function mostrarPregunta() {
     renderMathInElement(contenedorOpciones, {
         delimiters: [{ left: "$$", right: "$$", display: false }],
     });
+
+    if (historialPreguntas.length > 0) {
+        showElement("volver-pregunta");
+    } else {
+        hideElement("volver-pregunta");
+    }
 }
 
 // Función para escapar caracteres HTML
@@ -337,6 +344,16 @@ function arraysEqual(a, b) {
 }
 
 function siguientePregunta() {
+    const respuestaSeleccionada = document.querySelectorAll('input[name="opcion"]:checked');
+    const seleccionadas = Array.from(respuestaSeleccionada).map((input) => parseInt(input.value));
+    const isVerified = document.getElementById("verificar").innerText === "Siguiente";
+    
+    historialPreguntas.push({
+        index: preguntaActual,
+        seleccionadas: seleccionadas,
+        isVerified: isVerified
+    });
+
     preguntaActual = (preguntaActual + 1) % preguntas.length;
     mostrarPregunta();
 
@@ -357,6 +374,51 @@ function siguientePregunta() {
 const verificarBtn = document.getElementById("verificar");
 if (verificarBtn) {
     verificarBtn.addEventListener("click", verificarRespuesta);
+}
+
+function volverPreguntaAnterior() {
+    if (historialPreguntas.length === 0) return;
+    
+    const estadoAnterior = historialPreguntas.pop();
+    preguntaActual = estadoAnterior.index;
+    
+    mostrarPregunta();
+    
+    const opciones = document.getElementById("opciones");
+    const inputs = opciones.querySelectorAll("input");
+    
+    inputs.forEach((input) => {
+        const valor = parseInt(input.value);
+        if (estadoAnterior.seleccionadas.includes(valor)) {
+            input.checked = true;
+        }
+    });
+    
+    if (estadoAnterior.isVerified) {
+        const respuestaCorrecta = preguntas[preguntaActual].respuestas;
+        const labels = opciones.getElementsByTagName("label");
+        
+        for (let i = 0; i < labels.length; i++) {
+            const span = labels[i].querySelector("span");
+            const valor = parseInt(labels[i].htmlFor.replace("opcion", ""));
+            if (respuestaCorrecta.includes(valor)) {
+                span.classList.add("correct");
+            }
+            if (estadoAnterior.seleccionadas.includes(valor) && !respuestaCorrecta.includes(valor)) {
+                span.classList.add("incorrect");
+            }
+        }
+        
+        const verificarBtn = document.getElementById("verificar");
+        verificarBtn.removeEventListener("click", verificarRespuesta);
+        verificarBtn.addEventListener("click", siguientePregunta);
+        verificarBtn.innerText = "Siguiente";
+    }
+}
+
+const volverPreguntaBtn = document.getElementById("volver-pregunta");
+if (volverPreguntaBtn) {
+    volverPreguntaBtn.addEventListener("click", volverPreguntaAnterior);
 }
 
 function toggleTheme() {
@@ -419,6 +481,7 @@ function shuffle(array) {
 function resetAppState() {
     hideElement("verificar");
     hideElement("volver");
+    hideElement("volver-pregunta");
     showElement("asignaturas-container");
     showElement("app-title");
     document.getElementById("pregunta").innerText = "";
@@ -428,6 +491,7 @@ function resetAppState() {
     document.getElementById("verificar").removeEventListener("click", siguientePregunta);
     document.getElementById("verificar").addEventListener("click", verificarRespuesta);
     document.getElementById("verificar").innerText = "Verificar";
+    historialPreguntas = [];
 }
 
 function actualizarContador() {
@@ -569,7 +633,7 @@ function cargarDesdeUrl(id) {
 function prepararEntornoMultiples(nombre, archivos) {
     resetAppState();
     document.getElementById("resumenBtn").style.display = "block";
-    document.getElementById("copyButton").style.display = "block";
+    document.getElementById("copyButton").style.display = "flex";
     archivoActual = nombre;
     document.getElementById("asignatura-nombre").innerText = nombre;
 
