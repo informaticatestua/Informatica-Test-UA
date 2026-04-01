@@ -59,7 +59,7 @@ El ejemplo "inner product" contiene la función "sse3_inner" que utiliza la inst
 - SSE permite operar con datos empaquetados en punto flotante
 
 ```__asm { \n\t(...) \n\tbucle: \n\t\t... código ... \n\t\t... 1000 instrucciones más ... \n\tCERRAR bucle \n}``` \n En el código ensamblador x86 anterior ¿Qué instrucción deberá ser CERRAR?
-2
+1
 - JMP, puesto que no se trata de una etiqueta corta (<128 posiciones)
 - LOOP, puesto que se trata de un bucle
 - CLOSE, puesto que CERRAR es pseudocódigo
