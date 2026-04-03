@@ -762,7 +762,7 @@ Puede contener un conjunto de proyectos.
 Ninguna de las anteriores.
 
 En una aplicación de consola C# el enlace entre un evento y su controlador
-3
+1
 se implementa mediante un delegado
 se realiza automáticamente
 se implementa mediante un delegado que es un puntero a función
