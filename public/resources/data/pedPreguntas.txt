@@ -244,7 +244,7 @@ NO MARCAR
 NO MARCAR
 
 El resultado del cálculo de la complejidad temporal en el mejor caso de un algoritmo X, da como resultado n + n*log(n). Por lo tanto, diremos que la complejidad del algoritmo X cuando n -> ∞ pertenece a Ω (n).
-2
+1
 V
 F
 NO MARCAR
