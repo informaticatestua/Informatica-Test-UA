@@ -26,7 +26,7 @@ F
 NO MARCAR
 NO MARCAR
 
-La semántica de la operación base (vista en clase) que actúa sobre una pila y devuelve el primer elemento apilado es la siguiente (p: pila, x: ítem): base(crear())=error_item() base(apilar(crear(),x))=x base(apilar(p,x))=base(p)
+La semántica de la operación base (vista en clase) que actúa sobre una pila y devuelve el primer elemento apilado es la siguiente (p: pila, x: ítem): ```base(crear())=error_item();\nbase(apilar(crear(),x))=x;\nbase(apilar(p,x))=base(p)```
 1
 V
 F
@@ -89,7 +89,7 @@ F
 NO MARCAR
 NO MARCAR
 
-La semántica de la operación multiplicación de números naturales vista en clase es la siguiente: mult(cero, x) = cero; mult(x, cero) = cero; mult(suc(y), x) = suma(mult(y, x), x)
+La semántica de la operación multiplicación de números naturales vista en clase es la siguiente: ```mult(cero, x) = cero;\nmult(x, cero) = cero;\nmult(suc(y), x) = suma(mult(y, x), x)```
 1
 V
 F
@@ -110,21 +110,21 @@ F
 NO MARCAR
 NO MARCAR
 
-Sea el conjunto de los números naturales definidos en clase. La sintaxis y la semántica de la operación factorial de un número natural es la siguiente: factorial: natural → natural Var x: natural; factorial (cero) = suc(cero) factorial (suc(x))= suc(multiplicacion(x, factorial (x))
+Sea el conjunto de los números naturales definidos en clase. La sintaxis y la semántica de la operación factorial de un número natural es la siguiente: ```factorial: natural → natural Var x: natural;\nfactorial (cero) = suc(cero) factorial (suc(x))= suc(multiplicacion(x, factorial (x))```
 2
 V
 F
 NO MARCAR
 NO MARCAR
 
-Sea la operación mismalongitud que actúa sobre dos instancias del TAD pila definido en clase. Dicha operación determina si las dos instancias contienen el mismo número de elementos. La especificación algebraica para mismalongitud es la siguiente: mismalongitud: pila, pila → booleano Var p1,p2: pila, x, y:item mismalongitud(crear_pila, crear_pila) = VERDADEROmismalongitud(apilar(p1,x), crear_pila) = FALSO mismalongitud(crear_pila, apilar(p1,y)) = FALSO mismalongitud(apilar(p1,x), apilar(p2,y)) = mismalongitud(p1,p2)
+Sea la operación mismalongitud que actúa sobre dos instancias del TAD pila definido en clase. Dicha operación determina si las dos instancias contienen el mismo número de elementos. La especificación algebraica para mismalongitud es la siguiente: ```mismalongitud: pila, pila → booleano Var p1,p2: pila, x, y:item mismalongitud(crear_pila, crear_pila) = VERDADEROmismalongitud(apilar(p1,x), crear_pila) = FALSO;\nmismalongitud(crear_pila, apilar(p1,y)) = FALSO;\nmismalongitud(apilar(p1,x), apilar(p2,y)) = mismalongitud(p1,p2)```
 1
 V
 F
 NO MARCAR
 NO MARCAR
 
-Sea el Vector de números naturales definido en clase. La operación EliminaImpares, que borra las posiciones impares del vector marcándolas con “0”, se define así: (Nota: se asume que existen las operaciones básicas de los números naturales incluida MOD) EliminaImpares: vector → vector Var v: vector; i: entero; x: natural; EliminaImpares (crear_vector()) = crear_vector() si (i MOD 2) == 1 entonces EliminaImpares (asig(v,i,x)) = asig(EliminaImpares (v),i,0) si no EliminaImpares (asig(v,i,x)) = asig(EliminaImpares (v),i,x)
+Sea el Vector de números naturales definido en clase. La operación EliminaImpares, que borra las posiciones impares del vector marcándolas con “0”, se define así: ```(Nota: se asume que existen las operaciones básicas de los números naturales incluida MOD) EliminaImpares: vector → vector Var v: vector;\ni: entero;\nx: natural;\nEliminaImpares (crear_vector()) = crear_vector() si (i MOD 2) == 1 entonces EliminaImpares (asig(v,i,x)) = asig(EliminaImpares (v),i,0) si no EliminaImpares (asig(v,i,x)) = asig(EliminaImpares (v),i,x)```
 2
 V
 F
@@ -187,7 +187,7 @@ F
 NO MARCAR
 NO MARCAR
 
-La especificación algebraica vista en clase para el recorrido preorden, pero visitando primero la derecha y después la izquierda (RDI) es la siguiente: preorden( arbin ) -> lista; VAR i, d: arbin; x: item; preorden( crea_arbin( ) ) = crea_lista( ); preorden( enraizar( i, x, d ) ) = concatenar( insiz( x, preorden( i ) ), preorden( d ) )
+La especificación algebraica vista en clase para el recorrido preorden, pero visitando primero la derecha y después la izquierda (RDI) es la siguiente: ```preorden( arbin ) -> lista;\nVAR i, d: arbin;\nx: item;\npreorden( crea_arbin( ) ) = crea_lista( );\npreorden( enraizar( i, x, d ) ) = concatenar(; insiz( x, preorden( i ) ), preorden( d ) )```
 2
 V
 F
@@ -229,7 +229,7 @@ F
 NO MARCAR
 NO MARCAR
 
-En la especificación algebraica de los números naturales vista en clase, la sintaxis y la semántica de la operación de multiplicación (mult) es la siguiente: mult : natural natural --> natural; VAR x, y: natural; mult(cero, x) = cero; mult(x, cero) = cero; mult(suc(y), x) = suma(mult(y, x), x)
+En la especificación algebraica de los números naturales vista en clase, la sintaxis y la semántica de la operación de multiplicación (mult) es la siguiente: ```mult : natural natural --> natural;\nVAR x, y: natural;\nmult(cero, x) = cero;\nmult(x, cero) = cero;\nmult(suc(y), x) = suma(mult(y, x), x)```
 1
 V
 F
@@ -250,7 +250,7 @@ F
 NO MARCAR
 NO MARCAR
 
-La operación Examen que se aplica sobre cualquier pila y devuelve el segundo elemento que fue apilado en la pila es la siguiente: Examen(pila) -> item; VAR p: pila, e,x: item; examen( crear( ) ) = error_item( ); examen( apilar(crear( ), x )) = error_item( ); examen( apilar( apilar (p,e ), x) ) = e
+La operación Examen que se aplica sobre cualquier pila y devuelve el segundo elemento que fue apilado en la pila es la siguiente: ```Examen(pila) -> item;\nVAR p: pila, e,x: item;\nexamen( crear( ) ) = error_item( );\nexamen( apilar(crear( ), x )) = error_item( );\nexamen( apilar( apilar (p,e ), x) ) = e```
 2
 V
 F
@@ -264,7 +264,7 @@ F
 NO MARCAR
 NO MARCAR
 
-La especificación algebraica vista en clase para el recorrido preorden, pero visitando primero la derecha y después la izquierda (RDI) es la siguiente: preorden( arbin ) -> lista; VAR i, d: arbin; x: item; preorden( crea_arbin( ) ) = crea_lista( ); preorden( enraizar( i, x, d ) ) = concatenar( insiz( x, preorden( d ) ), preorden( i ) )
+La especificación algebraica vista en clase para el recorrido preorden, pero visitando primero la derecha y después la izquierda (RDI) es la siguiente: ```preorden( arbin ) -> lista;\nVAR i, d: arbin;\nx: item;\npreorden( crea_arbin( ) ) = crea_lista( );\npreorden( enraizar( i, x, d ) ) = concatenar(; insiz( x, preorden( d ) ), preorden( i ) )```
 1
 V
 F
@@ -327,7 +327,7 @@ F
 NO MARCAR
 NO MARCAR
 
-Las ecuaciones (vistas en clase) que permiten realizar la multiplicación de números naturales son las siguientes: VAR x, y: natural; mult(cero, x) = cero; mult(x, cero) = cero; mult(suc(y), x) = suma(mult(y, x), x);
+Las ecuaciones (vistas en clase) que permiten realizar la multiplicación de números naturales son las siguientes: ```VAR x, y: natural;\nmult(cero, x) = cero;\nmult(x, cero) = cero;\nmult(suc(y), x) = suma(mult(y, x), x);```
 1
 V
 F
@@ -348,7 +348,7 @@ F
 NO MARCAR
 NO MARCAR
 
-Las ecuaciones (vistas en clase) para la operación recu de un vector son las siguientes: recu( crear( ), i ) = error( ); recu( asig(v, i, x ), j ); si ( i == j ) entonces j; si no recu( v, j ) fsi
+Las ecuaciones (vistas en clase) para la operación recu de un vector son las siguientes: ```recu( crear( ), i ) = error( );\nrecu( asig(v, i, x ), j );\nsi ( i == j ) entonces j;\nsi no recu( v, j ) fsi```
 2
 V
 F
@@ -376,7 +376,7 @@ F
 NO MARCAR
 NO MARCAR
 
-Las ecuaciones (vistas en clase) para la operación desencolar son las siguientes: desencolar( crear( ) ) = crear( ); si esvacia( c ) entonces;desencolar( encolar( c, x ) ) = crear ( ) ;si no desencolar( encolar( c, x ) ) = ;encolar( desencolar ( c ), x );
+Las ecuaciones (vistas en clase) para la operación desencolar son las siguientes: ```desencolar( crear( ) ) = crear( );\nsi esvacia( c ) entonces;\ndesencolar( encolar( c, x ) ) = crear ( );\nsi no desencolar( encolar( c, x ) ) =;\nencolar( desencolar ( c ), x );```
 1
 V
 F
@@ -404,7 +404,7 @@ F
 NO MARCAR
 NO MARCAR
 
-La semántica de la operación quita_hojas que actúa sobre un árbol binario y devuelve el árbol binario original sin sus hojas es la siguiente: VAR i, d: arbin; x: item; quita_hojas(crea_arbin( )) = crea_arbin( ); quita_hojas(enraizar(crea_arbin(), x, crea_arbin()) = enraizar(crea_arbin(), x, crea_arbin(); quita_hojas(enraizar(i, x, d)) = enraizar(quita_hojas(i), x, quita_hojas(d))
+La semántica de la operación quita_hojas que actúa sobre un árbol binario y devuelve el árbol binario original sin sus hojas es la siguiente: ```VAR i, d: arbin;\nx: item;\nquita_hojas(crea_arbin( )) = crea_arbin( );\nquita_hojas(enraizar(crea_arbin(), x, crea_arbin()) = enraizar(crea_arbin(), x, crea_arbin(); quita_hojas(enraizar(i, x, d)) = enraizar(quita_hojas(i), x, quita_hojas(d))```
 2
 V
 F
@@ -418,14 +418,14 @@ F
 NO MARCAR
 NO MARCAR
 
-Las ecuaciones (vistas en clase) que permiten realizar la suma de números naturales son las siguientes: VAR x, y: natural; suma(x, cero) = x; suma(cero, x) = x; suma(x, suc(y)) = suma(x, y)
+Las ecuaciones (vistas en clase) que permiten realizar la suma de números naturales son las siguientes: ```VAR x, y: natural;\nsuma(x, cero) = x;\nsuma(cero, x) = x;\nsuma(x, suc(y)) = suma(x, y)```
 2
 V
 F
 NO MARCAR
 NO MARCAR
 
-Dentro de la especificación algebraica de los números naturales, definimos la sintaxis de la función F como: F: natural→BOOL, y su semántica como: F(cero)=TRUE, F(suc(cero))=FALSE, F(suc(suc(x)))=F(x). Para el número natural x=35, la función F devolvería FALSE. Nota: se asume que x=35 es la forma simplificada de indicar x=suc(suc(suc(……..suc(cero)…….))). 
+Dentro de la especificación algebraica de los números naturales, definimos la sintaxis de la función F como: ```F: natural→BOOL, y su semántica como: F(cero)=TRUE,;\nF(suc(cero))=FALSE,;\nF(suc(suc(x)))=F(x). Para el número natural x=35, la función F devolvería FALSE. Nota: se asume que x=35 es la forma simplificada de indicar x=suc(suc(suc(……..suc(cero)…….))).```
 1
 V
 F
@@ -474,7 +474,7 @@ F
 NO MARCAR
 NO MARCAR
 
-La operación desencolar vista en clase es la siguiente: VAR c: cola, x: item; desencolar( crear( ) ) = crear( ); si esvacia( c ) entonces desencolar( encolar( c, x ) ) = crear ( ); si no desencolar( encolar( c, x ) ) = encolar( desencolar ( c ), x );
+La operación desencolar vista en clase es la siguiente: ```VAR c: cola, x: item;\ndesencolar( crear( ) ) = crear( );\nsi esvacia( c ) entonces desencolar( encolar( c, x ) ) = crear ( );\nsi no desencolar( encolar( c, x ) ) = encolar( desencolar ( c ), x );```
 1
 V
 F
@@ -488,7 +488,7 @@ F
 NO MARCAR
 NO MARCAR
 
-La operación palindromo (sobre un vector) vista en clase es la siguiente: Var v: vector; i,x: natural; palindromo(crear_vector()) = VERDADERO; palindromo(asig(v,i,x)) = si i<= 50; entonces si recu(v,100-i+1) == x; entonces palindromo(asig(v,i,x)); sino FALSO; sino VERDADERO
+La operación palindromo (sobre un vector) vista en clase es la siguiente: ```Var v: vector;\ni,x: natural;\npalindromo(crear_vector()) = VERDADERO;\npalindromo(asig(v,i,x)) = si i<= 50;\nentonces si recu(v,100-i+1) == x;\nentonces palindromo(asig(v,i,x));\nsino FALSO;\nsino VERDADERO```
 2
 V
 F
@@ -544,7 +544,7 @@ F
 NO MARCAR
 NO MARCAR
 
-Sea el TIPO arbin definido en clase. La semántica de la operación nodos es la siguiente: Var i,d:arbin; x:item; nodos(crear_arbin())=0; nodos(enraizar(i,x,d))=nodos(i)+nodos(d)
+Sea el TIPO arbin definido en clase. La semántica de la operación nodos es la siguiente: ```Var i,d:arbin;\nx:item;\nnodos(crear_arbin())=0;\nnodos(enraizar(i,x,d))=nodos(i)+nodos(d)```
 2
 V
 F
@@ -579,7 +579,7 @@ F
 NO MARCAR
 NO MARCAR
 
-Sea un vector de números naturales. La operación eliminar que borra las posiciones pares del vector marcándolas con “0”, vista en clase, se define así: eliminar: vector -> vector; Var v:vector; i: entero; x:natural; eliminar(crear()) = crear(); si (i MOD 2) == 0; entonces eliminar(asignar(v,i,x)) = asignar(eliminar(v),i,x); si no eliminar(asignar(v,i,x)) = asignar(eliminar(v),i,0)
+Sea un vector de números naturales. La operación eliminar que borra las posiciones pares del vector marcándolas con “0”, vista en clase, se define así: ```eliminar: vector -> vector;\nVar v:vector;\ni: entero;\nx:natural;\neliminar(crear()) = crear();\nsi (i MOD 2) == 0;\nentonces eliminar(asignar(v,i,x)) = asignar(eliminar(v),i,x);\nsi no eliminar(asignar(v,i,x)) = asignar(eliminar(v),i,0)```
 2
 V
 F
@@ -607,14 +607,14 @@ F
 NO MARCAR
 NO MARCAR
 
-La operación BorrarItem tiene la siguiente sintaxis y semántica: BorrarItem: LISTA, ITEM -> LISTA; BorrarItem( Crear, i) = Crear; BorrarItem( IC(L1,j), i) = si ( i == j ) entonces L1; sino IC ( BorrarItem (L1, i ), j ); Esta operación borra la primera ocurrencia del item que se encuentra en la lista. 
+La operación BorrarItem tiene la siguiente sintaxis y semántica: ```BorrarItem: LISTA, ITEM -> LISTA;\nBorrarItem( Crear, i) = Crear;\nBorrarItem( IC(L1,j), i) = si ( i == j ) entonces L1;\nsino IC ( BorrarItem (L1, i ), j );\nEsta operación borra la primera ocurrencia del item que se encuentra en la lista.```
 1
 V
 F
 NO MARCAR
 NO MARCAR
 
-La operación base, vista en clase, que actúa sobre una pila y devuelve la base de la pila (el primer elemento que se ha apilado) es la siguiente: base(pila) -> item; Var p: pila; x: item; base(crear()) = error(); base(apilar(crear(),x)) = x; base(apilar(p,x)) = base(desapilar(p)) 
+La operación base, vista en clase, que actúa sobre una pila y devuelve la base de la pila (el primer elemento que se ha apilado) es la siguiente: ```base(pila) -> item;\nVar p: pila;\nx: item;\nbase(crear()) = error();\nbase(apilar(crear(),x)) = x;\nbase(apilar(p,x)) = base(desapilar(p))```
 2
 V
 F
@@ -670,7 +670,7 @@ F
 NO MARCAR
 NO MARCAR
 
-La semántica de la operación insertar del tipo lista vista en clase es la siguiente: VAR L1: lista; x,y: item; p: posicion; insertar( crear( ), p, x ) = crear( ); si p == primera( inscabeza( L1, x ) ) entonces; insertar( inscabeza( L1, x ), p, y ) = inscabeza( inscabeza( L1, x ), y ); si no insertar( inscabeza( L1, x ), p, y ) = inscabeza( insertar( L1, p, y ), x )
+La semántica de la operación insertar del tipo lista vista en clase es la siguiente: ```VAR L1: lista;\nx,y: item;\np: posicion;\ninsertar( crear( ), p, x ) = crear( );\nsi p == primera( inscabeza( L1, x ) ) entonces;\ninsertar( inscabeza( L1, x ), p, y ) = inscabeza(; inscabeza( L1, x ), y );\nsi no insertar( inscabeza( L1, x ), p, y ) = inscabeza(; insertar( L1, p, y ), x )```
 2
 V
 F
@@ -712,7 +712,7 @@ F
 NO MARCAR
 NO MARCAR
 
-La operación BorrarItem, que borra todas las ocurrencias del item i que se encuentren en la lista, tiene la siguiente sintaxis y semántica: BorrarItem: LISTA, ITEM -> LISTA; BorrarItem( Crear, i) = Crear; BorrarItem( IC(L1,j), i) = si ( i == j ) entonces BorrarItem (L1, i ); sino IC ( BorrarItem (L1, i ), j ) 
+La operación BorrarItem, que borra todas las ocurrencias del item i que se encuentren en la lista, tiene la siguiente sintaxis y semántica: ```BorrarItem: LISTA, ITEM -> LISTA;\nBorrarItem( Crear, i) = Crear;\nBorrarItem( IC(L1,j), i) = si ( i == j ) entonces BorrarItem (L1, i );\nsino IC ( BorrarItem (L1, i ), j )```
 1
 V
 F
@@ -740,7 +740,7 @@ F
 NO MARCAR
 NO MARCAR
 
-Para el siguiente algoritmo, la complejidad temporal en su peor caso sería O(1): for (i=0; i<100; i++); for (j=0; j<100; j++); if (v[i]<v[j]) v[i]=v[j]; else v[j]=v[i]; 
+Para el siguiente algoritmo, la complejidad temporal en su peor caso sería O(1): ```for (i=0; i<100; i++);\nfor (j=0; j<100; j++);\nif (v[i]<v[j]) v[i]=v[j];\nelse v[j]=v[i];```
 1
 V
 F
@@ -754,21 +754,21 @@ F
 NO MARCAR
 NO MARCAR
 
-La semántica de la operación esvaciapos del tipo vector vista en clase es la siguiente: VAR v: vector; i, j: int; x: item; esvaciapos( crear( ), i ) = CIERTO; esvaciapos( asig( v, i, x ), j ); si ( i == j ) entonces FALSO; si no esvaciapos( v, j ) fsi 
+La semántica de la operación esvaciapos del tipo vector vista en clase es la siguiente: ```VAR v: vector;\ni, j: int;\nx: item;\nesvaciapos( crear( ), i ) = CIERTO;\nesvaciapos( asig( v, i, x ), j );\nsi ( i == j ) entonces FALSO;\nsi no esvaciapos( v, j ) fsi```
 1
 V
 F
 NO MARCAR
 NO MARCAR
 
-La semántica de la operación anterior vista en clase es la siguiente: VAR L1: lista; x: item; p: posicion; anterior( L1, primera( L1 ) ) = error_posicion( ); si p != ultima( L1 ) entonces anterior( L1, siguiente( L1, p ) ) = p; anterior( inscabeza( L1, x ), primera( L1 ) ) = L1;
+La semántica de la operación anterior vista en clase es la siguiente: ```VAR L1: lista;\nx: item;\np: posicion;\nanterior( L1, primera( L1 ) ) = error_posicion( );\nsi p != ultima( L1 ) entonces anterior( L1, siguiente( L1, p ) ) = p;\nanterior( inscabeza( L1, x ), primera( L1 ) ) = L1;```
 2
 V
 F
 NO MARCAR
 NO MARCAR
 
-La sintaxis y semántica de la operación simétricos, que comprueba que 2 árboles binarios son simétricos, es la siguiente: simétricos(arbin, arbin) → bool; VAR i1, d1, i2, d2: arbin; x, y: item; simétricos(enraizar(i1, x, d1), crea_arbin( )) = FALSO; simétricos(crea_arbin( ), enraizar(i1, x, d1)) = FALSO; simétricos(enraizar(i1, x, d1), enraizar(i2, y, d2)) = si (x == y) entonces (simétricos(i1, d2) & simétricos (d1, i2)); sino FALSO
+La sintaxis y semántica de la operación simétricos, que comprueba que 2 árboles binarios son simétricos, es la siguiente: ```simétricos(arbin, arbin) → bool;\nVAR i1, d1, i2, d2: arbin;\nx, y: item;\nsimétricos(enraizar(i1, x, d1), crea_arbin( )) = FALSO;\nsimétricos(crea_arbin( ), enraizar(i1, x, d1)) = FALSO;\nsimétricos(enraizar(i1, x, d1), enraizar(i2, y, d2)) = si (x == y) entonces (simétricos(i1, d2) & simétricos (d1, i2));\nsino FALSO```
 2
 V
 F
@@ -796,7 +796,7 @@ F
 NO MARCAR
 NO MARCAR
 
-Dentro de la especificación algebraica de los números naturales definimos la sintaxis de la función F como: F: naturalÆBOOL, y su semántica como: F(cero)=TRUE, F(suc(cero))=FALSE, F(suc(suc(x)))=F(x). Para el número natural x=35, la función F devolvería TRUE
+Dentro de la especificación algebraica de los números naturales definimos la sintaxis de la función F como: ```F: naturalÆBOOL, y su semántica como: F(cero)=TRUE,;\nF(suc(cero))=FALSE,;\nF(suc(suc(x)))=F(x). Para el número natural x=35, la función F devolvería TRUE```
 2
 V
 F
@@ -824,7 +824,7 @@ F
 NO MARCAR
 NO MARCAR
 
-La semántica de la operación obtener en una lista con acceso por posición es la siguiente (IC=InsertarCabeza(Lista, Ítem), p: posición, l1: lista, x: ítem): obtener(crear(),p)=error_item(); si p = = primera(IC(l1,x)) entonces obtener(IC(l1,x),p)=x; sino obtener(IC(l1,x),p)=IC(obtener(l1,p),x);
+La semántica de la operación obtener en una lista con acceso por posición es la siguiente (IC=InsertarCabeza(Lista, Ítem), p: posición, l1: lista, x: ítem): ```obtener(crear(),p)=error_item();\nsi p = = primera(IC(l1,x)) entonces obtener(IC(l1,x),p)=x;\nsino obtener(IC(l1,x),p)=IC(obtener(l1,p),x);```
 2
 V
 F
@@ -887,14 +887,14 @@ F
 NO MARCAR
 NO MARCAR
 
-Para un vector de naturales, se define la operación eliminar que borra las posiciones pares del vector marcándolas con “0” (para calcular el resto de una división, se puede utilizar la operación MOD). La sintaxis y la semántica de la operación eliminar es la siguiente: eliminar: vector → vector; Var v:vector; i: entero; x:natural; eliminar(crear_vector()) = crear_vector(); si (i MOD 2) == 0; entonces eliminar(asignar(v,i,x)) = asignar(eliminar(v),i,0); si no eliminar(asignar(v,i,x)) = asignar(eliminar(v),i,x);
+Para un vector de naturales, se define la operación eliminar que borra las posiciones pares del vector marcándolas con “0” (para calcular el resto de una división, se puede utilizar la operación MOD). La sintaxis y la semántica de la operación eliminar es la siguiente: ```eliminar: vector → vector;\nVar v:vector;\ni: entero;\nx:natural;\neliminar(crear_vector()) = crear_vector();\nsi (i MOD 2) == 0;\nentonces eliminar(asignar(v,i,x)) = asignar(eliminar(v),i,0);\nsi no eliminar(asignar(v,i,x)) = asignar(eliminar(v),i,x);```
 1
 V
 F
 NO MARCAR
 NO MARCAR
 
-La semántica de la operación ultima vista en clase es la siguiente: VAR L1: lista; x: item; si esvacia( L1 ) entonces; ultima( inscabeza( L1, x ) = primera( L1 ); si no ultima( inscabeza( L1, x ) = ultima( L1 ); 
+La semántica de la operación ultima vista en clase es la siguiente: ```VAR L1: lista;\nx: item;\nsi esvacia( L1 ) entonces;\nultima( inscabeza( L1, x ) = primera( L1 ); si no ultima( inscabeza( L1, x ) = ultima( L1 );```
 2
 V
 F
@@ -908,7 +908,7 @@ F
 NO MARCAR
 NO MARCAR
 
-La sintaxis y semántica de la operación quita_hojas, que actúa sobre un árbol binario y devuelve el árbol binario original sin sus hojas, es la siguiente: quita_hojas(arbin) → arbin; VAR i, d: arbin; x: item; quita_hojas(crea_arbin( )) = crea_arbin( ); quita_hojas(enraizar(crea_arbin(), x, crea_arbin()) = crea_arbin( ); quita_hojas(enraizar(i, x, d)) = enraizar(quita_hojas(i), x, quita_hojas(d))
+La sintaxis y semántica de la operación quita_hojas, que actúa sobre un árbol binario y devuelve el árbol binario original sin sus hojas, es la siguiente: ```quita_hojas(arbin) → arbin;\nVAR i, d: arbin;\nx: item;\nquita_hojas(crea_arbin( )) = crea_arbin( );\nquita_hojas(enraizar(crea_arbin(), x, crea_arbin()) = crea_arbin( ); quita_hojas(enraizar(i, x, d)) = enraizar(quita_hojas(i), x, quita_hojas(d))```
 1
 V
 F
@@ -1020,14 +1020,14 @@ F
 NO MARCAR
 NO MARCAR
 
-La semántica de la operación anterior vista en clase es la siguiente: VAR L1: lista; x: item; p: posicion; anterior( L1, primera( L1 ) ) = error_posicion( ); si p != ultima( L1 ) entonces anterior( L1, siguiente( L1, p ) ) = p; anterior( inscabeza( L1, x ), primera( L1 ) ) = primera( inscabeza( L1, x ) ); 
+La semántica de la operación anterior vista en clase es la siguiente: ```VAR L1: lista;\nx: item;\np: posicion;\nanterior( L1, primera( L1 ) ) = error_posicion( );\nsi p != ultima( L1 ) entonces anterior( L1, siguiente( L1, p ) ) = p;\nanterior( inscabeza( L1, x ), primera( L1 ) ) = primera(; inscabeza( L1, x ) );```
 1
 V
 F
 NO MARCAR
 NO MARCAR
 
-Sea el tipo vector definido en clase. La semántica de la operación recu es la siguiente: Var v:vector; i,j:int; x:item; recu(crear_vector(),i)=error_item(); si i<>j entonces recu(asig(v,i,x),j)=recu(v,j); sino recu(asig(v,i,x),j)=TRUE;
+Sea el tipo vector definido en clase. La semántica de la operación recu es la siguiente: ```Var v:vector;\ni,j:int;\nx:item;\nrecu(crear_vector(),i)=error_item();\nsi i<>j entonces recu(asig(v,i,x),j)=recu(v,j);\nsino recu(asig(v,i,x),j)=TRUE;```
 2
 V
 F
@@ -1041,7 +1041,7 @@ F
 NO MARCAR
 NO MARCAR
 
-La semántica de la operación Base que actúa sobre una pila y devuelve el primer elemento apilado es la siguiente: Base(crear_pila ()) = crear_pila (); Base(apilar(crear_pila (), x)) = x; Base(apilar(p, x)) = Base(p);
+La semántica de la operación Base que actúa sobre una pila y devuelve el primer elemento apilado es la siguiente: ```Base(crear_pila ()) = crear_pila ();\nBase(apilar(crear_pila (), x)) = x;\nBase(apilar(p, x)) = Base(p);```
 2
 V
 F
@@ -1503,7 +1503,7 @@ F
 NO MARCAR
 NO MARCAR
 
-Sea el método Primera perteneciente a la clase TLista que devuelve la primera posición de la lista que lo invoca: TPosicion TLista::Primera(){ TPosicion p; p.pos = primero; return p;} class TLista{ public: ... private: TNodo * primero;} En el método Primera, se invoca de forma implícita a los constructores de TPosicion y TLista.
+Sea el método Primera perteneciente a la clase TLista que devuelve la primera posición de la lista que lo invoca: TPosicion TLista::Primera(){ TPosicion p; p.pos = primero; return p;} class TLista{ public: ... ```private: TNodo * primero;\n} En el método Primera, se invoca de forma implícita a los constructores de TPosicion y TLista.```
 2
 V
 F
@@ -1538,14 +1538,14 @@ F
 NO MARCAR
 NO MARCAR
 
-Sea el método Primera perteneciente a la clase TLista que devuelve la primera posición de la lista que lo invoca: TPosicion TLista::Primera() { TPosicion p; p.pos = lis; return p;} class TLista { public: ... private: TNodo *lis;} En el método Primera, se invoca a la sobrecarga del operador asignación entre objetos del tipo TPosicion.
+Sea el método Primera perteneciente a la clase TLista que devuelve la primera posición de la lista que lo invoca: TPosicion TLista::Primera() { TPosicion p; p.pos = lis; return p;} class TLista { public: ... ```private: TNodo *lis;\n} En el método Primera, se invoca a la sobrecarga del operador asignación entre objetos del tipo TPosicion.```
 2
 V
 F
 NO MARCAR
 NO MARCAR
 
-Sea el método Primera perteneciente a la clase Tlista que devuelve la primera posición de la lista que lo invoca: TPosicion Tlista::Primera() { TPosicion p; p.pos = lis; return p; } class Tlista { public: ... private: Tnodo *lis; } En el método Primera se invoca al constructor y destructor para el objeto TPosicion p.
+Sea el método Primera perteneciente a la clase Tlista que devuelve la primera posición de la lista que lo invoca: TPosicion Tlista::Primera() { TPosicion p; p.pos = lis; return p; } class Tlista { public: ... ```private: Tnodo *lis;\n} En el método Primera se invoca al constructor y destructor para el objeto TPosicion p.```
 1
 V
 F
@@ -1671,14 +1671,14 @@ F
 NO MARCAR
 NO MARCAR
 
-La siguiente especificación corresponde a la operación unión de conjuntos: VAR A, B: Conjuntos; x:item; Union(crear(), A) = A; Union(Insertar(A,x),B)= si (Pertenece(B,x)) entonces Union(A, B); sino Insertar(Union(A, B), x)
+La siguiente especificación corresponde a la operación unión de conjuntos: ```VAR A, B: Conjuntos;\nx:item;\nUnion(crear(), A) = A;\nUnion(Insertar(A,x),B)= si (Pertenece(B,x)) entonces Union(A, B);\nsino Insertar(Union(A, B), x)```
 1
 V
 F
 NO MARCAR
 NO MARCAR
 
-La especificación algebraica de la siguiente operación indica que se devolverá el número de elementos del conjunto multiplicado por 3 (Operación(Conjunto) -->Natural; Var: C: Conjunto; x: Ítem): Operación(Crear) --> 1; Operación (Insertar(C, x)) --> 3 + Operación(C)
+La especificación algebraica de la siguiente operación indica que se devolverá el número de elementos del conjunto multiplicado por 3 (Operación(Conjunto) -->Natural; Var: ```C: Conjunto;\nx: Ítem): Operación(Crear) --> 1; Operación (Insertar(C, x)) --> 3 + Operación(C)```
 2
 V
 F
@@ -1993,7 +1993,7 @@ F
 NO MARCAR
 NO MARCAR
 
-Sea el siguiente TAD: MÓDULO NATURALEXAMEN; TIPO natural; OPERACIONES; uno: --> natural; siguiente: natural --> natural; sumar: natural natural --> natural; FMÓDULO; Si N es un natural: N = sumar(uno,siguiente(uno)) es un uso sintácticamente incorrecto de la operación sumar
+Sea el siguiente TAD: MÓDULO NATURALEXAMEN; TIPO natural; OPERACIONES; uno: --> natural; siguiente: ```natural --> natural;\nsumar: natural natural --> natural;\nFMÓDULO;\nSi N es un natural: N = sumar(uno,siguiente(uno)) es un uso sintácticamente incorrecto de la operación sumar```
 2
 V
 F
@@ -2007,7 +2007,7 @@ F
 NO MARCAR
 NO MARCAR
 
-Dentro de la especificación algebraica de los números naturales definimos la sintaxis de la función F como:F: natural-->BOOL, y su semántica como: F(cero)=TRUE, F(suc(cero))=FALSE, F(suc(suc(x)))=F(x). Para el número natural x=35, la función F devolvería FALSE. Nota: se asume que x=35 es la forma simplificada de indicar x=suc(suc(suc(……..suc(cero)…….)))
+Dentro de la especificación algebraica de los números naturales definimos la sintaxis de la función F como:F: natural-->BOOL, y su semántica como: ```F(cero)=TRUE,;\nF(suc(cero))=FALSE,;\nF(suc(suc(x)))=F(x). Para el número natural x=35, la función F devolvería FALSE. Nota: se asume que x=35 es la forma simplificada de indicar x=suc(suc(suc(……..suc(cero)…….)))```
 1
 V
 F
@@ -2098,7 +2098,7 @@ F
 NO MARCAR
 NO MARCAR
 
-La operación BorrarItem tiene la siguiente sintaxis y semántica: BorrarItem: LISTA, ITEM -> LISTA; BorrarItem( Crear, i) = Crear; BorrarItem( IC(L1,j), i) = si ( i == j ) entonces L1; sino IC ( BorrarItem (L1, i ), j ); Esta operación borra todas las ocurrencias del item que se encuentra en la lista
+La operación BorrarItem tiene la siguiente sintaxis y semántica: ```BorrarItem: LISTA, ITEM -> LISTA;\nBorrarItem( Crear, i) = Crear;\nBorrarItem( IC(L1,j), i) = si ( i == j ) entonces L1;\nsino IC ( BorrarItem (L1, i ), j );\nEsta operación borra todas las ocurrencias del item que se encuentra en la lista```
 2
 V
 F
@@ -2147,14 +2147,14 @@ F
 NO MARCAR
 NO MARCAR
 
-La semántica de la operación cima del tipo pila vista en clase es la siguiente: VAR p: pila, e: item; cima( crear() ) = error(); cima( apilar( p, e ) ) = cima( p )
+La semántica de la operación cima del tipo pila vista en clase es la siguiente: ```VAR p: pila, e: item;\ncima( crear() ) = error();\ncima( apilar( p, e ) ) = cima( p )```
 2
 V
 F
 NO MARCAR
 NO MARCAR
 
-La siguiente especificación corresponde a la operación de borrar una arista en un multigrafo: VAR G: Grafo; a, b, z, t: Vértice; p: Ítem; BorrarArista( CrearGrafo(), z, t ) = CrearGrafo(); BorrarArista( InsertarArista(G,a,b,p), z, t ) = si ( a == z ) y ( b == t ) entonces BorrarArista( G, z, t ) sino InsertarArista( BorrarArista( G, z, t ), a, b, p )
+La siguiente especificación corresponde a la operación de borrar una arista en un multigrafo: ```VAR G: Grafo;\na, b, z, t: Vértice;\np: Ítem;\nBorrarArista( CrearGrafo(), z, t ) = CrearGrafo();\nBorrarArista( InsertarArista(G,a,b,p), z, t ) = si ( a == z ) y ( b == t ) entonces BorrarArista( G, z, t ) sino InsertarArista( BorrarArista( G, z, t ), a, b, p )```
 1
 V
 F
@@ -2175,7 +2175,7 @@ F
 NO MARCAR
 NO MARCAR
 
-La siguiente especificación corresponde a la operación unión de conjuntos: VAR A, B: Conjuntos; x:item; Union(crear(), A) = A; Union(Insertar(A,x),B)= si (Pertenece(B,x)) entonces Union(A, B); sino Insertar(Union(A, B), x)
+La siguiente especificación corresponde a la operación unión de conjuntos: ```VAR A, B: Conjuntos;\nx:item;\nUnion(crear(), A) = A;\nUnion(Insertar(A,x),B)= si (Pertenece(B,x)) entonces Union(A, B);\nsino Insertar(Union(A, B), x)```
 1
 V
 F
@@ -2259,7 +2259,7 @@ F
 NO MARCAR
 NO MARCAR
 
-Las ecuaciones (vistas en clase) que permiten realizar la multiplicación de números naturales son las siguientes: VAR x, y: natural; mult(x, cero) = cero; mult(suc(y), x) = suma(mult(y, x), x)
+Las ecuaciones (vistas en clase) que permiten realizar la multiplicación de números naturales son las siguientes: ```VAR x, y: natural;\nmult(x, cero) = cero;\nmult(suc(y), x) = suma(mult(y, x), x)```
 2
 V
 F
@@ -2385,21 +2385,21 @@ F
 NO MARCAR
 NO MARCAR
 
-La especificación algebraica vista en clase para el recorrido preorden, pero visitando primero la derecha y después la izquierda (RDI) es la siguiente: preorden( arbin ) -> lista; VAR i, d: arbin; x: item; preorden(crea_arbin()) = crea_lista(); preorden( enraizar( i, x, d ) ) = concatenar(insiz(x,preorden(d)), preorden(i))
+La especificación algebraica vista en clase para el recorrido preorden, pero visitando primero la derecha y después la izquierda (RDI) es la siguiente: ```preorden( arbin ) -> lista;\nVAR i, d: arbin;\nx: item;\npreorden(crea_arbin()) = crea_lista();\npreorden( enraizar( i, x, d ) ) = concatenar(insiz(x,preorden(d)),; preorden(i))```
 1
 V
 F
 NO MARCAR
 NO MARCAR
 
-La sintaxis y la semántica de la operación exactos que actúa sobre dos árboles binarios de números naturales e indica si los dos árboles tienen la misma estructura y las etiquetas iguales es la siguiente: exactos(arbin, arbin) -> bool; Var i, d, iz, der: arbin; x, y: item; [enraizar(i,x,d) ➞ E(i,x,d)]; exactos(crear_arbin(), crear_arbin()) = TRUE; exactos(E(crear_arbin(), x, crear_arbin()), E(crear_arbin(), y, crear_arbin())) = si (x==y) entonces TRUE; exactos(E(i, x, d), crear_arbin()) = FALSE; exactos(crear_arbin(), E(i, x, d)) = FALSE; exactos(E(i, x, d), E(iz, y, der)) = exactos(i, iz) & exactos(d, der);
+La sintaxis y la semántica de la operación exactos que actúa sobre dos árboles binarios de números naturales e indica si los dos árboles tienen la misma estructura y las etiquetas iguales es la siguiente: ```exactos(arbin, arbin) -> bool;\nVar i, d, iz, der: arbin;\nx, y: item;\n[enraizar(i,x,d) ➞ E(i,x,d)];\nexactos(crear_arbin(), crear_arbin()) = TRUE;\nexactos(E(crear_arbin(), x, crear_arbin()), E(crear_arbin(), y, crear_arbin())) = si (x==y) entonces TRUE;\nexactos(E(i, x, d), crear_arbin()) = FALSE;\nexactos(crear_arbin(), E(i, x, d)) = FALSE;\nexactos(E(i, x, d), E(iz, y, der)) = exactos(i, iz) & exactos(d, der);```
 2
 V
 F
 NO MARCAR
 NO MARCAR
 
-La siguiente operación insertar definida para listas inserta el nuevo elemento a la derecha de la posicion p: insertar( lista, posicion, item ) -> lista; VAR L1, L2: lista; x, y: item; p: posicion; insertar( crear( ), p, x ) = crear( ); si p == primera( inscabeza( L1, x ) ) entonces insertar( inscabeza( L1, x ), p, y ) = inscabeza( inscabeza( L1, y ), x ) si no insertar( inscabeza( L1, x ), p, y ) = inscabeza( insertar( L1, p, y ), x )
+La siguiente operación insertar definida para listas inserta el nuevo elemento a la derecha de la posicion p: ```insertar( lista, posicion, item ) -> lista;\nVAR L1, L2: lista;\nx, y: item;\np: posicion;\ninsertar( crear( ), p, x ) = crear( );\nsi p == primera( inscabeza( L1, x ) ) entonces insertar( inscabeza( L1, x ), p, y ) = inscabeza(; inscabeza( L1, y ), x ) si no insertar( inscabeza( L1, x ), p, y ) = inscabeza(; insertar( L1, p, y ), x )```
 1
 V
 F
@@ -2595,7 +2595,7 @@ F
 NO MARCAR
 NO MARCAR
 
-La siguiente operación borrar definida para listas borra el elemento que está a la derecha del elemento apuntado por la posicion p: borrar( lista, posicion) -> lista; VAR L1, L2: lista; x: item; p: posicion; borrar(crear(),p) = crear(); si p == primera( inscabeza( L1, x ) ) entonces borrar( inscabeza( L1, x ), p ) = inscabeza( L1, x ) si no borrar( inscabeza( L1, x ), p ) = inscabeza( borrar( L1, p ), x)
+La siguiente operación borrar definida para listas borra el elemento que está a la derecha del elemento apuntado por la posicion p: ```borrar( lista, posicion) -> lista;\nVAR L1, L2: lista;\nx: item;\np: posicion;\nborrar(crear(),p) = crear();\nsi p == primera( inscabeza( L1, x ) ) entonces borrar( inscabeza( L1, x ), p ) = inscabeza( L1, x ) si no borrar( inscabeza( L1, x ), p ) = inscabeza(; borrar( L1, p ), x)```
 2
 V
 F
@@ -2693,7 +2693,7 @@ F
 NO MARCAR
 NO MARCAR
 
-La operación base, vista en clase, que actúa sobre una pila y devuelve la base de la pila (el primer elemento que se ha apilado) es la siguiente: base(pila) -> item; Var p: pila; x: item; base(crear()) = error_item(); base(apilar(crear(),x)) = x; base(apilar(p,x)) = base(desapilar(p));
+La operación base, vista en clase, que actúa sobre una pila y devuelve la base de la pila (el primer elemento que se ha apilado) es la siguiente: ```base(pila) -> item;\nVar p: pila;\nx: item;\nbase(crear()) = error_item();\nbase(apilar(crear(),x)) = x;\nbase(apilar(p,x)) = base(desapilar(p));```
 2
 V
 F
@@ -2721,7 +2721,7 @@ F
 NO MARCAR
 NO MARCAR
 
-En los árboles binarios de búsqueda, en el borrado de un elemento que tiene dos hijos, la siguiente ecuación de la especificación algebraica vista en clase indica que dicho elemento se sustituye por el menor del subárbol derecho: si ( y==x ) y no esvacio( d ) y no esvacio( i ) entonces borrar( enraizar( i, x, d ), y ) = enraizar( i, min( d ), borrar( d, min( d ) ) ) fsi; min( crea_arbin( ) ) = error_item(); si esvacio( i ) entonces min( enraizar( i, x, d ) ) = x; si no min( enraizar( i, x, d ) ) = min( i ) fsi;
+En los árboles binarios de búsqueda, en el borrado de un elemento que tiene dos hijos, la siguiente ecuación de la especificación algebraica vista en clase indica que dicho elemento se sustituye por el menor del subárbol derecho: ```si ( y==x ) y no esvacio( d ) y no esvacio( i ) entonces borrar( enraizar( i, x, d ), y ) = enraizar( i, min( d ), borrar( d, min( d ) ) ) fsi;\nmin( crea_arbin( ) ) = error_item();\nsi esvacio( i ) entonces min( enraizar( i, x, d ) ) = x;\nsi no min( enraizar( i, x, d ) ) = min( i ) fsi;```
 1
 V
 F
@@ -2854,7 +2854,7 @@ F
 NO MARCAR
 NO MARCAR
 
-La semántica de la operación concatena del tipo cola vista en clase es la siguiente: VAR c, q: cola; x: item; concatena( c, crear_cola ( ) ) = c; concatena(crear_cola ( ), c ) = c; concatena( c, encolar( q, x ) ) = encolar( concatena( c, q ), x );
+La semántica de la operación concatena del tipo cola vista en clase es la siguiente: ```VAR c, q: cola;\nx: item;\nconcatena( c, crear_cola ( ) ) = c;\nconcatena(crear_cola ( ), c ) = c;\nconcatena( c, encolar( q, x ) ) = encolar(; concatena( c, q ), x );```
 1
 V
 F
@@ -2868,7 +2868,7 @@ F
 NO MARCAR
 NO MARCAR
 
-La sintaxis y la semántica de la operación quita_hojas que actúa sobre un árbol binario y devuelve el árbol binario original sin sus hojas se definen del siguiente modo: quita_hojas(arbin) --> arbin; VAR i, d: arbin; x: item; quita_hojas(crea_arbin( )) = crea_arbin(); quita_hojas(enraizar(i, x, d)) = enraizar(quita_hojas(i), x, quita_hojas(d))
+La sintaxis y la semántica de la operación quita_hojas que actúa sobre un árbol binario y devuelve el árbol binario original sin sus hojas se definen del siguiente modo: ```quita_hojas(arbin) --> arbin;\nVAR i, d: arbin;\nx: item;\nquita_hojas(crea_arbin( )) = crea_arbin();\nquita_hojas(enraizar(i, x, d)) = enraizar(quita_hojas(i), x, quita_hojas(d))```
 2
 V
 F
@@ -2945,7 +2945,7 @@ F
 NO MARCAR
 NO MARCAR
 
-Utilizando la especificación algebraica de los números naturales vista en clase, la sintaxis y la semántica de la operación de división que calcula el cociente de dos números naturales es la siguiente (Nota: se asume que para resta y división el primer argumento es mayor que el segundo y que el cociente de la división es entero y exacto): resta, division: natural , natural → natural; VAR x, y: natural; resta(x, cero) = x; resta(suc(x),suc(y)) = resta(x,y); division(x,cero)=error_natural; division(x,x)=suc(cero); division(x,y)=division(resta(x,y),y); 
+Utilizando la especificación algebraica de los números naturales vista en clase, la sintaxis y la semántica de la operación de división que calcula el cociente de dos números naturales es la siguiente (Nota: se asume que para resta y división el primer argumento es mayor que el segundo y que el cociente de la división es entero y exacto): ```resta, division: natural , natural → natural;\nVAR x, y: natural;\nresta(x, cero) = x;\nresta(suc(x),suc(y)) = resta(x,y);\ndivision(x,cero)=error_natural;\ndivision(x,x)=suc(cero);\ndivision(x,y)=division(resta(x,y),y);```
 2
 V
 F
@@ -2966,7 +2966,7 @@ F
 NO MARCAR
 NO MARCAR
 
-La operación subconjunto_impares que se aplica sobre un conjunto de números naturales, definida a continuación, devuelve el subconjunto formado por los números impares que existen en el conjunto original (Nota: Se asume que está definida la operación MOD para calcular el resto de la división entera): subconjunto_impares: conjunto → conjunto; Var C: conjunto; x: natural; subconjunto_impares(crear_conjunto()) = crear_conjunto(); subconjunto_impares(Insertar(C,x))= si (x MOD 2 ==suc(cero)) entonces Insertar(subconjunto_impares(C),x) si no subconjunto_impares(C)
+La operación subconjunto_impares que se aplica sobre un conjunto de números naturales, definida a continuación, devuelve el subconjunto formado por los números impares que existen en el conjunto original (Nota: Se asume que está definida la operación MOD para calcular el resto de la división entera): subconjunto_impares: ```conjunto → conjunto;\nVar C: conjunto;\nx: natural;\nsubconjunto_impares(crear_conjunto()) = crear_conjunto();\nsubconjunto_impares(Insertar(C,x))= si (x MOD 2 ==suc(cero)) entonces Insertar(subconjunto_impares(C),x) si no subconjunto_impares(C)```
 1
 V
 F
@@ -3078,7 +3078,7 @@ F
 NO MARCAR
 NO MARCAR
 
-La semántica de la operación recu sobre el TIPO vector vista en clase es la siguiente: VAR v: vector; i, j: int; x: item; recu( crear_vector( ), i ) = error_item(); recu( asig(v, i, x ), j ) si ( i == j ) entonces CIERTO sino FALSO fsi
+La semántica de la operación recu sobre el TIPO vector vista en clase es la siguiente: ```VAR v: vector;\ni, j: int;\nx: item;\nrecu( crear_vector( ), i ) = error_item();\nrecu( asig(v, i, x ), j ) si ( i == j ) entonces CIERTO sino FALSO fsi```
 2
 V
 F
@@ -3099,7 +3099,7 @@ F
 NO MARCAR
 NO MARCAR
 
-La sintaxis y semántica de la operación nodosHoja, que devuelve el número de nodos hoja de un árbol binario, es la siguiente: nodosHoja(arbin) → natural; VAR i, d: arbin; x: item; nodosHoja(crea_arbin( )) = 0; nodosHoja(enraizar(i, x, d)) = si esvacio(i) & esvacio(d) entonces 1 sino nodosHoja(i) + nodosHoja(d)
+La sintaxis y semántica de la operación nodosHoja, que devuelve el número de nodos hoja de un árbol binario, es la siguiente: ```nodosHoja(arbin) → natural;\nVAR i, d: arbin;\nx: item;\nnodosHoja(crea_arbin( )) = 0;\nnodosHoja(enraizar(i, x, d)) = si;\nesvacio(i) & esvacio(d) entonces 1 sino nodosHoja(i) + nodosHoja(d)```
 1
 V
 F
@@ -3232,7 +3232,7 @@ F
 NO MARCAR
 NO MARCAR
 
-La especificación algebraica de la siguiente operación eliminaría todas las ocurrencias de un determinado ítem (C: ConjuntoConClavesRepetidas; x, y: Ítem):  Eliminar(Crear, x) ↔ Crear; Eliminar(Insertar(C, x), y)  ↔ si (x == y) entonces Eliminar(C, y) sino Insertar(Eliminar(C, y), x)
+La especificación algebraica de la siguiente operación eliminaría todas las ocurrencias de un determinado ítem (C: ConjuntoConClavesRepetidas; x, y: Ítem): ```Eliminar(Crear, x) ↔ Crear;\nEliminar(Insertar(C, x), y)  ↔ si (x == y) entonces Eliminar(C, y) sino Insertar(Eliminar(C, y), x)```
 1
 V
 F
