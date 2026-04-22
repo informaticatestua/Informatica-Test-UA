@@ -552,7 +552,7 @@ NO MARCAR
 NO MARCAR
 
 Es posible reconstruir un único árbol binario de altura 6 a partir de un recorrido en postorden con 63 etiquetas.
-1
+2
 V
 F
 NO MARCAR
