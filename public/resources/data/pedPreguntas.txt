@@ -1356,13 +1356,6 @@ F
 NO MARCAR
 NO MARCAR
 
-Es posible reconstruir un único árbol binario de altura 6 a partir de un recorrido en postorden con 63 etiquetas.
-1
-V
-F
-NO MARCAR
-NO MARCAR
-
 La complejidad temporal del recorrido por niveles en un árbol binario es la misma que las de los recorridos in-pre-post orden
 1
 V
