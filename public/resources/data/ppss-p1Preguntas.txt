@@ -75,7 +75,7 @@ El comando nvm de Maven
 - Se ejecuta desde el directorio donde se encuentra el fichero de configuración del proyecto Maven
 - Se ejecuta desde el directorio src para compilar los ficheros fuentes y desde el directorio test paracompilar los ficheros con las pruebas
 
-Dado el siguiente diagrama de Venn que hemos trabajado en clase: \n![Diagrama](/data/images/ppss-p1-1.png){width=200 height=200}\n Indica cual de las siguientes afirmaciones es cierta:
+Dado el siguiente diagrama de Venn que hemos trabajado en clase: \n![Diagrama](/resources/images/ppss-p1-1.png){width=200 height=200}\n Indica cual de las siguientes afirmaciones es cierta:
 2
 - Un tester debe intentar que el subconjunto 7 sea lo más grande posible
 - Con métodos de caja negra y de caja blanca, se pueden alcanzar comportamientos de los subconjuntos 1 y 2
@@ -159,7 +159,7 @@ Para realizar pruebas unitarias utilizando verificación basada en el comportami
 - un StrictControl, un PartialMock y dos Mock
 - un StrictMock, un PartialMock y un Mock
 
-![Diagrama](/data/images/ppss-p1-2.png){width=200 height=200}\nSeleccione una: 
+![Diagrama](/resources/images/ppss-p1-2.png){width=200 height=200}\nSeleccione una: 
 4
 - En las lineas 14 y 18
 - Dejo la pregunta en blanco

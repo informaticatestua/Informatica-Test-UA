@@ -19,7 +19,7 @@ Dado el siguiente fragmento de código en Java:```if (x > 5 & y < 2) {\n\tx = x 
 - ninguno de estos niveles
 - sólo el nivel 1
 
-A partir de este informe de JMeter obtenido con la siguiente configuración del elemento Thread Group:\nNumber of Threads (users): 1\nLoop Count: 1\nIndica en qué instante (expresado en segundos) termina su ejecución el usuario: \n![Tabla](/data/images/ppss-p2-1.png){width=1564 height=279}
+A partir de este informe de JMeter obtenido con la siguiente configuración del elemento Thread Group:\nNumber of Threads (users): 1\nLoop Count: 1\nIndica en qué instante (expresado en segundos) termina su ejecución el usuario: \n![Tabla](/resources/images/ppss-p2-1.png){width=1564 height=279}
 3
 - 3
 - 2
@@ -33,7 +33,7 @@ En un plan de pruebas:
 - Podemos omitir alguno de los niveles de pruebas y cambiar su orden si fuese necesario
 - Podemos separar los procesos de diseño e implementación, pero no su orden
 
-Indica cuál es el valor para del contador de lineas a nivel de clase, según el siguiente informe de JaCoCo:  \n![Tabla](/data/images/ppss-p2-2.png){width=1616 height=165}
+Indica cuál es el valor para del contador de lineas a nivel de clase, según el siguiente informe de JaCoCo:  \n![Tabla](/resources/images/ppss-p2-2.png){width=1616 height=165}
 1
 - 0,70
 - 0,30
@@ -47,7 +47,7 @@ Indica cuál de las siguientes afirmaciones es falsa:
 - las pruebas pueden demostrar la ausencia de defectos
 - aunque un producto funcione de acuerdo a los requerimientos especificados puede que no satidfaga las expectativas del cliente
 
-Dado el siguiente plan JMeter que es ejecutado por un sólo usuario con las siguientes configuraciones:\nThread Properties\n\tLoop Count: 3\n\nEn ambos Loop Controller\n\tLoop Count: 2\n![Lista](/data/images/ppss-p2-3.png){width=400 height=400}
+Dado el siguiente plan JMeter que es ejecutado por un sólo usuario con las siguientes configuraciones:\nThread Properties\n\tLoop Count: 3\n\nEn ambos Loop Controller\n\tLoop Count: 2\n![Lista](/resources/images/ppss-p2-3.png){width=400 height=400}
 4
 - 1
 - 3
@@ -89,7 +89,7 @@ Un test que use Webdriver con maven:
 - necesariamente se debe ejecutar durante la fase verify
 - puede ejecutarse durante la fase test
 
-Teniendo en cuenta el proyecto matriculación usado en prácticas: \n![grafo](/data/images/ppss-p2-4.png){width=400 height=200}
+Teniendo en cuenta el proyecto matriculación usado en prácticas: \n![grafo](/resources/images/ppss-p2-4.png){width=400 height=200}
 3
 - Podemos integrar DAO + PROXY usando alguna estrategia de integración
 - No podemos hacer pruebas unitarias sobre el módulo DAO ya que necesitamos acceder a una BD
@@ -110,7 +110,7 @@ Indica cuál de las siguientes afirmaciones es cierta:
 - El plugin sql lo hemos usado para inicializar el estado de la BD en cada uno de los tests
 - La cadena de conexión con la BD se usa solamente en las tests y en el pom
 
-A partir de este informa de JMeter obtenido con la siguiente configuración del elemento Thread Group:\nNumber of Threads (users): 1\nLoop Count: 2\nIndica en que instante (expresado en segundos) termina su ejecución el usuario: \n![Tabla](/data/images/ppss-p2-5.png){width=1564 height=279}
+A partir de este informa de JMeter obtenido con la siguiente configuración del elemento Thread Group:\nNumber of Threads (users): 1\nLoop Count: 2\nIndica en que instante (expresado en segundos) termina su ejecución el usuario: \n![Tabla](/resources/images/ppss-p2-5.png){width=1564 height=279}
 2
 - 2,2
 - 1,1
@@ -145,7 +145,7 @@ Con respecto a las pruebas de aceptación:
 - el código a probar es el mismo que en las pruebas del sistema
 - todas las afirmaciones del resto de opciones son falsas
 
-Indica cual es el valor para el conador de complejidad ciclomatica a nivel de clase, según el siguiente informe de JaCoCo:  \n![Tabla](/data/images/ppss-p2-6.png){width=1616 height=165}
+Indica cual es el valor para el conador de complejidad ciclomatica a nivel de clase, según el siguiente informe de JaCoCo:  \n![Tabla](/resources/images/ppss-p2-6.png){width=1616 height=165}
 2
 - ninguno de los valores indicados en el resto de opciones
 - 0,80
@@ -159,7 +159,7 @@ Indica cual de las siguientes afirmaciones es cierta:
 - El mecanismo reactor de Maven permite que los proyectos hijos hereden elementos de la configuración del proyecto padre
 - Para establecer una relación de agregación entre proyectos Maven, no es necesario usar la etiqueta <parent>
 
-A partir de este informa de JMeter obtenido con la siguiente configuración del elemento Thread Group:\nNumber of Threads (users): 1\nLoop Count: 3\nIndica en que instante (expresado en segundos) termina su ejecución el usuario: \n![Tabla](/data/images/ppss-p2-7.png){width=1564 height=279}
+A partir de este informa de JMeter obtenido con la siguiente configuración del elemento Thread Group:\nNumber of Threads (users): 1\nLoop Count: 3\nIndica en que instante (expresado en segundos) termina su ejecución el usuario: \n![Tabla](/resources/images/ppss-p2-7.png){width=1564 height=279}
 2
 - 2,2
 - 1,1
