@@ -1,0 +1,174 @@
+(Parcial2) (SINHACER) 1.Queremos implementar dos tests de sistema usando Webdriver sobre la aplicación JPetStore que se ha usado en prácticas. El test consiste en liguearnos en el sistema, acceder al menú de reptiles, añadir al carrito una iguana, eliminarla del carrito y salir del sistema. Indica cuál de las siguientes afirmaciones es cierta: 
+1
+- Si el test usa como datos de entrada un nombre "xxx" y password "yyy" de un usuario previamente registrado, necesitaremos usar cookies en la fase Arrange del test
+- Si el test usa como datos de entrada un nombre "xxx" y password "yyy" de un usuario previamente registrado, necesitaremos usar dbunit en la fase Arrange del test
+- No se puede usar webdriver en una prueba de sistema
+- El test anterior no es válido ya que no comprueba las interacciones entre todos los componentes
+
+(Parcial2) (SINHACER) 2.Indica cuál de las siguientes es falsa:
+1
+- Cuando usamos TDD no necesitamos diseñar los casos de prueba
+- Las pruebas no se incluyen en todos los horizontes de planificación
+- En el modelo de desarrollo SCRUM la estrategia de integración no se determina de forma explicita
+- La planificación de un mismo horizonte temporal puede contener información diferente dependiendo de si realizamos una planificación predictiva o adaptativa
+
+(Parcial2) (SINHACER) 3.Sobre los informes agregados de JaCoCo, indica cuál de las siguientes afirmaciones es cierta:
+1
+- En un proyecto maven multimódulo sólo generaremos informes agregados para los módulos que tengan una relación de herencia entre ellos
+- Los informes agregados para un proyecto maven sólo se pueden generar si se ha ejecutado previamente la fase package de sus dependencias
+- En un proyecto maven con empaquetado pom, su informe agregado siempre tendrá valores cer todas las métricas calculadas
+- Ninguna de las afirmaciones anteriores es cierta
+
+(Parcial2) (SINHACER) 4.Indica cuál de las siguientes es falsa:
+1
+- Si usamos el modelo de desarrollo BDD ejecutaremos los tests de aceptación antes que los unitarios, ya que comenzamos con el diseño de los tests de aceptación
+- En un modelo de desarrollo en W no podemos usar integraciones continua
+- Si usamos un modelo de desarrollo BDD podemos generar los tests de forma automática
+- Independientemente del modelo de desarrollo usado, las pruebas de intregración están condicionadas por el diseño de la aplicación
+
+(Parcial1) 5.En un proyecto maven multimódulo:
+3
+- la relación de agregación entre módulos permite que compartan propiedades y dependencias
+- la relación de herencia requiere usar la etiqueta module en cada módulo hijo
+- la relación de agregación permite determinar el orden de construcción de los módulos
+- debe tener ambos tipos de relaciones
+
+(Parcial1) 6.Indica cuál de las siguientes afirmaciones es falsa:
+3
+- Las pruebas estáticas se pueden aplicar en cualquier momento del desarrollo
+- Las pruebas dinámicas requieren ejecutar código para detectar defectos
+- Las pruebas dinámicas permiten detectar defectos de forma más temprana que las pruebas estáticas
+- Las pruebas estáticas no requieren ejecutar código para detectar defectos
+
+(Parcial2) (SINHACER) 7.Queremos hacer una prueba de integración en la que uno de los componentes a integrar accede a una base de datos. Disponemos de las goals mysql-server:start y mysql-server:stop, que inician y detienen el servidor mysql, respectivamente. Ambas goals no están asociadas por defecto a ninguna fase de construcción de maven. Queremos añadir el plugin en el pom de nuestro proyecto. Indica cuál de las siguientes afirmaciones es cierta:
+1
+- Añadiremos el plugin mysql-server en el pom y asociaremos la goal start a la fase package y la goal stop a la fase verify. Pero tendremos que añadir dicho plugin antes del plugin sql y después del plugin failsafe obligatoriamente
+- Añadiremos el plugin mysql-server en el pom, y asociaremos la goal start a la fase integration-test y la goal stop a la fase verify. Es indiferente el orden de los plugins en el pom
+- Añadiremos el plugin mysql-server en el pom, y asociaremos la goal start a la fase pre-integración-test y la goal stop a la fase verify. Es indiferente el orden de los plugins en el pom
+- Ninguna de las anteriores es cierta
+
+(Parcial2) (SINHACER) 8.Sobre el plugin failsafe usado en prácticas, indica cuál de las siguientes afirmaciones es cierta:
+1
+- Lo incluimos siempre para ejecutar tests de integración. No es necesario configurar la ejecución de los goals, ya que por defecto éstas están asociadas a una fase del ciclo de vida
+- Si no lo incluimos en el pom, funcionará igualmente pero usando una versión anterior
+- Lo incluimos siempre para ejecutar tests de integración. Es necesario configurar la ejecución de las goals:integration-test y verify, obligatoriamente en ese orden
+- Ninguna de las anteriores es cierta
+
+(Parcial1) 9.Indica qué secuencia de fases maven del ciclo de vida por defecto es correcta, teniendo en cuenta sólo si están bien ordenadas, es decir, no tienen por qué ser consecutivas:
+3
+- compile test-compile package test integration-test
+- compile test-compile integration-test package install
+- test package verify install
+- clean compile test-compile test
+
+(Parcial2) (SINHACER) 10.Cuando implementamos un test de integración usando DbUnit, y teniendo en cuenta las normas explicadas en clase, indica cuál de las siguientes afirmaciones es cierta:
+1
+- No siempre necesitamos usar la clase JdbcDatabaseTester
+- No siempre necesitamos usar la clase DatabaseConnection
+- Necesitamos usar la interfaz ITable
+- Necesitamos usar "throws SqlException" en la cabecera del método anotado con @Test si usamos dbunit en el test
+
+(Parcial2) (SINHACER) 11.Teniendo en cuenta que en prácticas hemos automatizado pruebas de aceptación con Webdriver, y hemos usado el modo headless y también cookies, indica cuál de estas afirmaciones falsa:
+1
+- El modo headless se activa desde el test, consultado el valor de la propiedad headless.value desde al plugin surefire
+- Las cookies se han usado en el test, guardándolas en el navegador en un método @BeforeAll
+- Si usamos el modo headless igualmente tendremos que usar el método driver.quit() después de ejecutar cada test
+- Si usamos cookies podemos reducir el tiempo de ejecución de nuestros tests
+
+(Parcial2) (SINHACER) 12.La siguiente figura muestra las relaciones relaciones de dependencia entre las unidades de nuestra aplicación. Teniendo en cuenta que m4 accede a una base de datos(BD), y que queremos integrar con incrementos de uno, indica cuál de las siguientes afirmaciones es cierta:![Diagrama](/data/images/ppss-c4-2025-1.png){width=200 height=200}\n
+1
+- La siguiente secuencia se corresponde con una estrategia de integración top-down: Incremento1: m4+doble BD, Incremento2: m4+BD+m3, Incremento3: m4+BD+m3+m1, Incremento4: m4+BD+m3+m1+m2
+- La siguiente secuencia se corresponde con una estrategia de integración bottom-up: Incremento1: m2+m3, Incremento2: m2+m1, Incremento3: m3+m1+m2+m4+doble BD, Incremento4: m3+m1-m2+m4
+- NO es posible diseñar una estrategia de integración top-down sin usar dobles
+- Ninguna de las afirmaciones anteriores es cierta
+
+(Parcial2) (SINHACER) 13.Queremos implementar una prueba de validación web con JMeter en la que cada usuario, después de loguearse en el sistema, accede a un cliente de correo para consultar los correos recibidos y/o enviar un nuevo correo.\n\nConfiguramos el plan con 20 usuarios y 2 iteraciones. En cada iteración, cuando se accede al cliente de correo, verificaremos que estamos en la página correcta. A continuación, cada usuario debe enviar un correo el 50% de las veces y consultar los correos pendientes el otro 50%. El objetivo es validar si en algún momento la consulta de un correo es inferior a 0,5 segundos, y que el envío del correo es inferior a 0,8 segundos.\n\nDado el plan JMeter que hemos creado, y mostramos a la derecha, indica cuál de las siguientes afirmaciones es falsa:\n![Diagrama](/data/images/ppss-c4-2025-2.png){width=336 height=324}\n
+1
+- El plan es incorrecto: el "Interleave Controller" no ahce nada
+- El plan es incorrecto: deberíamos usar en un "Aggregate Report" en lugar de "View Results in Table"
+- El plan es incorrecto: los dos primeros samplers sobran
+- El plan es incorrecto: la aserción se aplica a todos los samplers
+
+(Parcial2) (SINHACER) 14.Indica cuál de las siguientes es cierta:
+1
+- En un plan de pruebas, no es necesario incluir aserciones si sólo queremos saber los tiempos de respuesta
+- En una prueba de validación UAT siempre debemos usar un perfil operacional, con independencia del tipo de objetivo
+- Los listeners siempre se añaden en el árbol del plan en último lugar
+- El proxy JMeter necesita siempre un controlador en el que anidar los samplers obtenidos
+
+(Parcial2) (SINHACER) 15.Indica cuál de estas afirmaciones sobre JaCoCo es es cierta:
+1
+- Si hemos configurado la goal jacoco:check con varias rules , la construcción del proyecto se detendrá en la primera rule que falle al ejecutar mvn verify
+- En un informe de JaCoCo es imposible que una clase tenga una cobertura de líneas inferior al 100% si su cobertura de líneas es del 100%
+- Incluir en el pom las goals jacoco:prepare-agent y jacoco:report es condición necesaria para generar el informe en formato html pero no es suficiente
+- Si un método no tiene condiciones, el valor de su columna Breanches será cero
+
+(Parcial1) 16.Dado el siguiente código que hemos usado en prácticas para implementar tests con verificación basada en el comportamiento: ```public void realizaReserva(String login, String socio, String [] isbns) throws Exception{\n...\n\tIOperacionBO io = fd.getOperacionBO(); #fd es de tipo FactoriaBO\n\ttry {\n\t\tfor(String isbn: isbns) {\n\t\t\ttry{\n\t\t\t\tio.operacionReserva(socio, isbn);\n\t\t\t} catch (IsbnInvalidoException iie) {\n\t\t\t\terrores.add("ISBN invalido" + ":" + isbn);\n\t\t\t}\n\t\t}\n\t} catch (SocioInvalidoException sie) { errores.add("SOCIO invalido");}\n\t  catch (JDBCException je) { errores.add("CONEXION invalida");\n\t}\n...\n}```\nIndica cuál de las siguientes programaciones de expectativas con EasyMock es sintácticamente correcta.(las variables usadas ya están inicializadas)
+4
+- assertDouesNotThrow(()->mockIOperacionBO.operacionReserva(idSocio, isbn1)); mockIOperacionBO.operacionReserva(idSocio, "1234").andReturn(new IsbnInvalidoException()); mockIOperacionBO.operacionReserva(idSocio, "1234").andReturn(new SocioInvalidoException());
+- assertDoesNotThrow(()->mockIOperacionBO.operacionReserva(idSocio, "1234")); EasyMock.expectLastCall().andReturn(new IsbnInvalidoException()).times(2);
+- mockIOperacionBO.operacionReserva(idSocio, isbn1). andthrow(new IsbnInvalidoException()); mockIOperacionBO.operacionReserva(idSocio, isbn2).times(2).andThrow(new SocioInvalidoException());
+- Ninguna de las programaciones anteriores compilaría
+
+(Parcial1) 17.Dado el siguiente grafo de flujo de control y teniendo en cuenta que a,b,c representan números enteros:\n![Diagrama](/data/images/ppss-c4-2025-3.png){width=336 height=324}\nIndica el número mínimo de casos de prueba que se requieren para probar el código dado por dicho grafo:
+1
+- Se requieren como mínimo 6 casos de prueba
+- Se requieren como mínimo 5 casos de prueba
+- No se puede conocer si no tenemos la especificación
+- No se puede conocer si no tenemos el código
+
+(Parcial1) 18.Dado el siguiente grafo de flujo de control y teniendo en cuenta que a,b,c representan números enteros:\n![Diagrama](/data/images/ppss-c4-2025-3.png){width=336 height=324}\nIndica cuál de los siguientes caminos puede formar parte de un conjunto de caminos independientes asociados a un conjunto de casos de prueba:
+2
+- Camino: 1-2-3-5-6-8-10-11
+- Camino: 1-2-3-5-9-10-11
+- Camino: 1-5-9-10-11
+- Camino: 1-2-5-6-7-8-10-11
+
+(Parcial1) 19.Dado el siguiente código visto en prácticas, estamos interesados en realizar una verificación basad en el comportamiento, para realizar pruebas unitarias del método NotifyCenter.notifyUsers():```public class NotifyCenter {\n\tprivate String login = "root";\n\tprivate String password = "7l65a43"; \n\n\tpublicMailServer getServer() {\n\t\treturn new MailServer(login, password);\n\t}\n\n\tpublic void sendNotify(String email) throws FailedNotifyException{\n\t\tthrow new UnsupportedOperationException("not supported yet");\n\t}\n\n\tpublic void notifyUsers(localDate fecha) throws FailedNotifyException {\n\t\tint failed = 0;\n\t\tMailServer server = getServer();\n\t\tList<String> emails;\n\n\t\tLocalDate today = LocalDate.now();\n\t\tif (today.isEqual(fecha)) {\n\t\t\temails = server.findMailItemsWithDate(fecha);\n\t\t\tfor ( String email : emails {\n\t\t\t\ttry {\n\t\t\t\t\tsendNotify(email);\n\t\t\t\t} catch (FailedNotifyException ex) {\n\t\t\t\t\tfailed++;\n\t\t\t\t}\n\t\t\t}\n\t\t} else {\n\t\t\tthrow new FailedNotifyException("Date error");\n\t\t}\n\t\tif (failed >0) {\n\t\t\tthrow new FailedNotifyException("Failures during sending process");\n\t\t}\n\t}\n}```\n\nIndica cuál de las siguientes afirmaciones es cierta:
+2
+- Para implementar un test unitario necesitaremos usar un assertThrows en la tercera A del test
+- Dependiendo del tipo de refactorización de las dependencias externas del método pueden cambiar
+- Si usamos EasyMock para implementar un test unitario con verificación basada en el estado necesitamos programar las expectativas usando como parámetro un valor concreto
+- Ninguna de las afirmaciones anteriores es cierta
+
+(Parcial1) 20.Dado el siguiente código visto en prácticas, estamos interesados en realizar una verificación basad en el comportamiento, para realizar pruebas unitarias del método NotifyCenter.notifyUsers():```public class NotifyCenter {\n\tprivate String login = "root";\n\tprivate String password = "7l65a43"; \n\n\tpublicMailServer getServer() {\n\t\treturn new MailServer(login, password);\n\t}\n\n\tpublic void sendNotify(String email) throws FailedNotifyException{\n\t\tthrow new UnsupportedOperationException("not supported yet");\n\t}\n\n\tpublic void notifyUsers(localDate fecha) throws FailedNotifyException {\n\t\tint failed = 0;\n\t\tMailServer server = getServer();\n\t\tList<String> emails;\n\n\t\tLocalDate today = LocalDate.now();\n\t\tif (today.isEqual(fecha)) {\n\t\t\temails = server.findMailItemsWithDate(fecha);\n\t\t\tfor ( String email : emails {\n\t\t\t\ttry {\n\t\t\t\t\tsendNotify(email);\n\t\t\t\t} catch (FailedNotifyException ex) {\n\t\t\t\t\tfailed++;\n\t\t\t\t}\n\t\t\t}\n\t\t} else {\n\t\t\tthrow new FailedNotifyException("Date error");\n\t\t}\n\t\tif (failed >0) {\n\t\t\tthrow new FailedNotifyException("Failures during sending process");\n\t\t}\n\t}\n}```\n\nIndica cuál de las siguientes afirmaciones es cierta:
+2
+- Se puede refactorizar añadiendo como parámetro un objeto de la clase MailServer
+- Se puede refactorizar añadiendo como parámetro otro objeto de la clase LocalDate
+- Si se usa refactorización por parámetro, se requiere añadir los 2 parámetros anteriores
+- Este código no se puede refactorizar por parámetro
+
+(Parcial1) 21.Dado el siguiente código visto en prácticas, estamos interesados en realizar una verificación basad en el comportamiento, para realizar pruebas unitarias del método NotifyCenter.notifyUsers():```public class NotifyCenter {\n\tprivate String login = "root";\n\tprivate String password = "7l65a43"; \n\n\tpublicMailServer getServer() {\n\t\treturn new MailServer(login, password);\n\t}\n\n\tpublic void sendNotify(String email) throws FailedNotifyException{\n\t\tthrow new UnsupportedOperationException("not supported yet");\n\t}\n\n\tpublic void notifyUsers(localDate fecha) throws FailedNotifyException {\n\t\tint failed = 0;\n\t\tMailServer server = getServer();\n\t\tList<String> emails;\n\n\t\tLocalDate today = LocalDate.now();\n\t\tif (today.isEqual(fecha)) {\n\t\t\temails = server.findMailItemsWithDate(fecha);\n\t\t\tfor ( String email : emails {\n\t\t\t\ttry {\n\t\t\t\t\tsendNotify(email);\n\t\t\t\t} catch (FailedNotifyException ex) {\n\t\t\t\t\tfailed++;\n\t\t\t\t}\n\t\t\t}\n\t\t} else {\n\t\t\tthrow new FailedNotifyException("Date error");\n\t\t}\n\t\tif (failed >0) {\n\t\t\tthrow new FailedNotifyException("Failures during sending process");\n\t\t}\n\t}\n}```\n\n¿Cuántas dependencias externas necesitamos considerar para implementar los dobles?:
+2
+- 5
+- 4
+- 3
+- 2
+
+(Parcial1) 22.Dado el siguiente código visto en prácticas, estamos interesados en realizar una verificación basad en el comportamiento, para realizar pruebas unitarias del método NotifyCenter.notifyUsers():```public class NotifyCenter {\n\tprivate String login = "root";\n\tprivate String password = "7l65a43"; \n\n\tpublicMailServer getServer() {\n\t\treturn new MailServer(login, password);\n\t}\n\n\tpublic void sendNotify(String email) throws FailedNotifyException{\n\t\tthrow new UnsupportedOperationException("not supported yet");\n\t}\n\n\tpublic void notifyUsers(localDate fecha) throws FailedNotifyException {\n\t\tint failed = 0;\n\t\tMailServer server = getServer();\n\t\tList<String> emails;\n\n\t\tLocalDate today = LocalDate.now();\n\t\tif (today.isEqual(fecha)) {\n\t\t\temails = server.findMailItemsWithDate(fecha);\n\t\t\tfor ( String email : emails {\n\t\t\t\ttry {\n\t\t\t\t\tsendNotify(email);\n\t\t\t\t} catch (FailedNotifyException ex) {\n\t\t\t\t\tfailed++;\n\t\t\t\t}\n\t\t\t}\n\t\t} else {\n\t\t\tthrow new FailedNotifyException("Date error");\n\t\t}\n\t\tif (failed >0) {\n\t\t\tthrow new FailedNotifyException("Failures during sending process");\n\t\t}\n\t}\n}```\n\nSi refactorizamos el código usando una factoría local, ¿Cuántos mocks necesitamos implementar?
+3
+- Se requiere un partialMock que permite sustituir 2 métodos por sus dobles
+- Se requieren 4 mocks
+- Se requiere un partialMock que permite sustituir 3 métodos por sus dobles
+- No se requiere usar StricControl
+
+(Parcial1) 28.Dado el siguiente código visto en prácticas, estamos interesados en realizar una verificación basada en el estado sin utilizar la librería EasyMock, para realizar pruebas unitarias del método MatriculaAlumno.validaAsignaturas():```public class MatriculaAlumno {\n\tprotected Operacion getOperacion() {\n\t\treturn new Operacion();\n\t\n\n\tpublicJustificanteMatricula validaAsignaturas(String dni, String[] asignaturas) {\n\t\tJustificanteMatricula justificante = new JustificanteNMatricula();\n\t\tArrayList<String> validas = new ArrayList<>();\n\t\tArrayList<String> listaErrores = new ArrayList<>();\n\n\t\tOperacion op = getOperacion();\n\t\tfor ( String asignaturas: asignaturas) {\n\t\t\ttry {\n\t\t\t\top.compruebaMatricula(dni, asignatura);\n\t\t\t\tvalidas.add(asignaturas);\n\t\t\t} catch (AsignaturaIncorrectaException ex) {\n\t\t\t\tlistaErrores.add("Asignatura " + asignatura + " no existe");\n\t\t\t} catch (AsignaturaCursadaException ex) ]\n\t\t\t\tlistaErrores.add("Asignatura " + asignatura + " ya cursada");\n\t\t\t}\n\t\t}\n\n\t\tjustificante.setDni(dni);\n\t\tjustificante.setAsignaturas(validas);\n\t\tjustificante.setErrores(listaErrores);\n\n\t\treturn justificante;\n\t}\n}\n\npublic class JustificanteMatricula {\n\tprivateString dni;\n\tprivate ArrayList<String> asignaturas;\n\tprivate ArrayList<String> errores;\n\t#getters y setters\n}```\n\nConforme a lo explicado en clase en cuanto a al ubicación de las clases utilizadas para realizar pruebas unitarias, indica cuál de las siguientes afirmaciones es cierta:
+3
+- En /src/main/java/ tendremos 5 clases y en /src/test/java/ 2 clases
+- En /src/main/java/ tendremos 3 clases y en /src/test/java/ 3 clases
+- En /src/main/java/ tendremos 5 clases y en /src/test/java/ 3 clases
+- En /src/main/java/ tendremos 3 clases y en /src/test/java/ 2 clases
+
+(Parcial1) 29.Dado el siguiente código visto en prácticas, estamos interesados en realizar una verificación basada en el estado sin utilizar la librería EasyMock, para realizar pruebas unitarias del método MatriculaAlumno.validaAsignaturas():```public class MatriculaAlumno {\n\tprotected Operacion getOperacion() {\n\t\treturn new Operacion();\n\t\n\n\tpublicJustificanteMatricula validaAsignaturas(String dni, String[] asignaturas) {\n\t\tJustificanteMatricula justificante = new JustificanteNMatricula();\n\t\tArrayList<String> validas = new ArrayList<>();\n\t\tArrayList<String> listaErrores = new ArrayList<>();\n\n\t\tOperacion op = getOperacion();\n\t\tfor ( String asignaturas: asignaturas) {\n\t\t\ttry {\n\t\t\t\top.compruebaMatricula(dni, asignatura);\n\t\t\t\tvalidas.add(asignaturas);\n\t\t\t} catch (AsignaturaIncorrectaException ex) {\n\t\t\t\tlistaErrores.add("Asignatura " + asignatura + " no existe");\n\t\t\t} catch (AsignaturaCursadaException ex) ]\n\t\t\t\tlistaErrores.add("Asignatura " + asignatura + " ya cursada");\n\t\t\t}\n\t\t}\n\n\t\tjustificante.setDni(dni);\n\t\tjustificante.setAsignaturas(validas);\n\t\tjustificante.setErrores(listaErrores);\n\n\t\treturn justificante;\n\t}\n}\n\npublic class JustificanteMatricula {\n\tprivateString dni;\n\tprivate ArrayList<String> asignaturas;\n\tprivate ArrayList<String> errores;\n\t#getters y setters\n}```\n\nIndica cuál de las siguientes afirmaciones es cierta:
+4
+- Hay que refactorizar usando una factoría local
+- Hay que refactorizar para eliminar se la sut el new de la clase JustificanteMatricula
+- Hay que refactorizar para inyectar un objeto de la clase Operacion
+- Este código no necesita ser refactorizado para realizar pruebas unitarias
+
+(Parcial1) 30.Dado el siguiente código visto en prácticas, estamos interesados en realizar una verificación basada en el estado sin utilizar la librería EasyMock, para realizar pruebas unitarias del método MatriculaAlumno.validaAsignaturas():```public class MatriculaAlumno {\n\tprotected Operacion getOperacion() {\n\t\treturn new Operacion();\n\t\n\n\tpublicJustificanteMatricula validaAsignaturas(String dni, String[] asignaturas) {\n\t\tJustificanteMatricula justificante = new JustificanteNMatricula();\n\t\tArrayList<String> validas = new ArrayList<>();\n\t\tArrayList<String> listaErrores = new ArrayList<>();\n\n\t\tOperacion op = getOperacion();\n\t\tfor ( String asignaturas: asignaturas) {\n\t\t\ttry {\n\t\t\t\top.compruebaMatricula(dni, asignatura);\n\t\t\t\tvalidas.add(asignaturas);\n\t\t\t} catch (AsignaturaIncorrectaException ex) {\n\t\t\t\tlistaErrores.add("Asignatura " + asignatura + " no existe");\n\t\t\t} catch (AsignaturaCursadaException ex) ]\n\t\t\t\tlistaErrores.add("Asignatura " + asignatura + " ya cursada");\n\t\t\t}\n\t\t}\n\n\t\tjustificante.setDni(dni);\n\t\tjustificante.setAsignaturas(validas);\n\t\tjustificante.setErrores(listaErrores);\n\n\t\treturn justificante;\n\t}\n}\n\npublic class JustificanteMatricula {\n\tprivateString dni;\n\tprivate ArrayList<String> asignaturas;\n\tprivate ArrayList<String> errores;\n\t#getters y setters\n}```\n\n¿Cuántos dobles necesitamos implementar?:
+1
+- 2
+- 3
+- 4
+- Dependerá del tipo de refactorización usada
