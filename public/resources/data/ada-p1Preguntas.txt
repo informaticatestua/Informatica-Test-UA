@@ -627,3 +627,45 @@ La eficiencia de los algoritmos voraces se basa en el hecho de que ... \nSelecci
 ... antes de tomar una decisiön se comprueba si satisface las retricciones del problema.
 ... las decisiones tomadas nunca se reconsideran.
 ... con antelaciön, Ias posibles decisiones se ordenan de mejor a peor.
+
+¿Cuál de las formulaciones expresa mejor el coste temporal de la siguiente función?```int f(int n){\n  int count = 0;\n  for (int i = n; i >= 2; i -= 2)\n    for (int j = 1; j < i; j*=2)\n      count += 1;\n  return count;\n}```
+1
+- $$ C_e(n) = \sum_{i=1}^{n/2}(1 + \log_2 i) $$
+- $$ C_e(n) = \sum_{i=1}^{n/2} \log_2(n/2) $$
+- $$ C_e(n) = \sum_{i=2}^{n-1} \log_2(2i) $$
+- No contesto (equivalente a no marcar nada).
+
+En función del parámetro n, ¿Cuál es la complejidad temporal asintótica de la siguiente función?```unsigned long pow2_1 (unsigned n){\n  unsigned long res=1;\n  for (unsigned i=0; i<n; i++)\n    res+=pow2_1(i);\n  return res;\n}```
+3
+- Las otras dos opciones son ambas falsas.
+- No contesto (equivalente a no marcar nada).
+- $$ \Theta(2^n) $$
+- $$ \Theta(n^2) $$
+
+Sin considerar el espacio que ocupa la pila de recursión, ¿Cuál es la complejidad espacial del algoritmo Quicksort?
+2
+- No contesto (equivalente a no marcar nada).
+- $$ \Theta(1) $$
+- $$ \Theta(n) $$
+- $$ \Theta(n \log n) $$
+
+Sea la siguiente relación de recurrencia: \n\n$$ T(n) = \begin{cases} 1 & si\,n \le 1 \\ 2T(n/2) + g(n) & en\,otro\, caso\end{cases} $$\nSi $$ T(n) \in O(n^2) $$, ¿en cuál de estos tres casos nos podemos encontrar?
+4
+- $$ g(n) = n $$
+- $$ g(n) = 1 $$
+- No contesto (equivalente a no marcar nada).
+- $$ g(n) = n^2 $$
+
+La siguiente relación de recurrencia expresa la complejidad de un algoritmo recursivo, donde g(n) es una función polinómica: \n$$ T(n) = \begin{cases} 1 & si\,n \le 1 \\ T(n/2) + g(n) & en\,otro\, caso\end{cases} $$\nDi cuál de las siguientes afirmaciones es falsa:
+4
+- Si $$ g(n) \in O(1) $$ la relación de recurrencia representa la complejidad temporal del algoritmo de búsqueda dicotómica.
+- No contesto (equivalente a no marcar nada).
+- Si $$ g(n) \in O(n) $$ la relación de recurrencia representa la complejidad temporal en el mejor caso del algoritmo de búsqueda del k-ésimo elemento más pequeño de un vector (estudiado en clase).
+- Si $$ g(n) \in O(n^2) $$ la relación de recurrencia representa la complejidad temporal del algoritmo de ordenación por inserción binaria.
+
+Se quieren ordenar n números distintos comprendidos entre 1 y m. Para ello se usa un array de m booleanos que se inicializan primero a false. A continuación se recorren los n números cambiando los valores del elemento del vector de booleanos correspondiente a su número a true. Por último se recorre el vector de booleanos escribiendo los índices de los elementos del vector de booleanos que son true. ¿Es este algoritmo más rápido (asintóticamente) que el Mergesort?
+3
+- No contesto (equivalente a no marcar nada).
+- Sí, ya que el Mergesort es O(n log n) y este es O(n).
+- Sólo si n log n > k · m (donde k es una constante que depende de la implementación).
+- No, ya que este algoritmo ha de recorrer varias veces el vector de booleanos.
