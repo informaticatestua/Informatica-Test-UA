@@ -201,3 +201,69 @@ Ante la instrucción: ``` mov eax, [vector+2*edi] ``` ¿Cual de las siguientes a
 - Iteramos sobre el vector de 2 en 2 posiciones
 - Es el tamaño del vector, qué solo tiene 2 elementos
 - Es el tamaño en bytes del tipo de datos de vector
+
+```int a,b; \na=10; \nb=3; \n_asm \n{ \n\tmov eax, a \n\tmov ebx, b \n\tmov ecx, 0 \n\tbucle: \n\tcmp eax, ebx \n\t\tjs fin \n\t\tinc ecx \n\t\tsub eax, ebx \n\t\tjmp bucle \n\t\tfin: \n}``` \nTras la ejecución del código x86 anterior, ¿qué obtenemos?
+2
+- eax=3 y ecx=1
+- eax=1 y ecx=3
+- eax=3 y ecx=0
+
+El ejemplo "inner product" contiene la función "sse3_inner" que utiliza la instrucción "addps". Dicha instrucción opera sobre los registros xmm0 y xmm1 de la siguiente manera:
+3
+- Suma los registros de 64 bits xmm0 y xmm1 dejando el resultado en xmm0
+- Suma los registros de 128 bits xmm0 y xmm1 dejando el resultado en xmm1
+- Suma los registros de 128 bits xmm0 y xmm1 dejando el resultado en xmm0
+
+```int a,b,c; \n_asm \n{ \n\tadd a, b, c \n}``` \nAnte este código x86 embebido, ¿qué ocurrirá?
+1
+- Error de compilación: Número de operandos no válido
+- La variable en memoria a contendrá la suma de las variables en memoria b y c
+- La variable en memoria c contendrá la suma de las variables en memoria a y b
+
+``` runspec --action=build --tune=base --config=win32-x86-vc7.cfg gzip ``` \n¿Qué efecto tiene esta línea de comandos?
+3
+- Ejecutar un benchmark y obtener el informe de resultados
+- Compilar y ejecutar un benchmark con la configuración por defecto
+- Preparar el entorno para un benchmark de coma flotante
+
+Al llamar a runspec con --config=win32-x86-vc7.cfg, ¿qué indica cada parte del nombre del fichero .cfg utilizado?
+1
+- Hace referencia a la versión de Windows (32 bits), a la arquitectura (x86) y a la versión de Visual Studio / C++ (VC7)
+- Hace referencia a la versión de Windows (32 bits), al lenguaje de las pruebas SPEC (ensamblador x86) con SIMD VC7
+- Hace referencia a la versión de Windows (v32.0), a la arquitectura (x86), y al Vector Count (VC7)
+
+¿Qué hace la instrucción SSE "shufpd"?
+1
+- Mueve los valores de un registro SSE a otro alterando sus posiciones originales
+- Realiza un desplazamiento de un registro SSE
+- Intercambia los valores de dos registros SSE
+
+Al observar un fragmento de código que utiliza las instrucciones "movaps" y "mulps", se puede afirmar:
+3
+- Utiliza extensiones MMX
+- Utiliza tanto extensiones MMX como SSE
+- Utiliza extensiones SSE
+
+La NASA quiere ejecutar una aplicación en un rover llamado "Idiosity" que cuenta con un procesador Pentium III. ¿Qué extensiones utilizarías?
+3
+- BMX
+- MMX
+- SSE
+
+Depurando el algoritmo de la burbuja, en la segunda iteración con la instrucción "cmp edx, eax" seguida de "jl intercambio", ¿qué ocurrirá?
+3
+- El salto "jl" será efectivo procediéndose al intercambio de las posiciones apuntadas por edi=19 y edi=18
+- El salto "jl" no será efectivo continuando con el salto incondicional "jmp" a la etiqueta "decrementar"
+- El salto "jl" será efectivo procediéndose al intercambio de las posiciones apuntadas por edi=18 y edi=17
+
+SPEC2000 diferencia medidas de tiempo base ("conservadora") y no base ("agresiva") para:
+1
+- Diferenciar resultados producidos con opciones de la compilación básicas de las optimizadas
+- Diferenciar resultados producidos con monotarea o multitarea
+- Diferenciar resultados producidos con el sistema cargado y no cargado
+
+Este fragmento de código utiliza la instrucción "movaps" para realizar lo siguiente:
+2
+- Transferir desde memoria a un registro xmm 4 números enteros
+- Transferir desde memoria a un registro xmm 4 números en punto flotante de simple precisión
+- Transferir desde memoria a un registro xmm 4 números en punto flotante de doble precisión
