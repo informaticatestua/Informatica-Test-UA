@@ -34,7 +34,8 @@ async function cargarMultiplesArchivos(archivos) {
         try {
             const preguntasTxt = await cargarPreguntas(archivo);
             const preguntasDelArchivo = preguntasTxt.split(/\n{2,}/).map((preguntaTxt) => {
-                const [pregunta, respuesta, ...opciones] = preguntaTxt.split("\n");
+                const [pregunta, respuesta, ...opcionesRaw] = preguntaTxt.split("\n");
+                const opciones = opcionesRaw.filter((opcion) => opcion.trim() !== "");
                 const respuestasCorrectasOriginal = respuesta.split(",").map((r) => parseInt(r.trim()));
 
                 // Detectar duplicados
@@ -128,7 +129,8 @@ function iniciarAsignatura(archivo) {
         .then((preguntasTxt) => {
             preguntas = preguntasTxt.split(/\n{2,}/).map((preguntaTxt) => {
                 // ... (todo tu código interno del map se queda exactamente igual) ...
-                const [pregunta, respuesta, ...opciones] = preguntaTxt.split("\n");
+                const [pregunta, respuesta, ...opcionesRaw] = preguntaTxt.split("\n");
+                const opciones = opcionesRaw.filter((opcion) => opcion.trim() !== "");
                 const respuestasCorrectasOriginal = respuesta.split(",").map((r) => parseInt(r.trim()));
 
                 const respuestasUnicas = Array.from(new Set(respuestasCorrectasOriginal));

@@ -171,3 +171,722 @@ Sobre los principios de diseño de computadores. Seleccione una:
 - La ley de Amdahl es una cuantificación del principio de localidad
 - Los programas suelen emplear el 10% de su tiempo de ejecución en el 90% del código
 - El principio de localidad de referencia establece la tendencia de los programas a reutilizar los datos e instrucciones usados recientemente
+
+(Numerica) La ejecucion del benchmark Drystone en un Core i7 es de 7,8 segundos, suponiendo una aceleracion de 8,4 con respecto a la ejecucion que tenia en el Pentium 4. Cuanto tardaba el benchmark cuando se ejecutaba en el Pentium 4?
+2
+- 58,32 segundos
+- 65,52 segundos
+- 73,84 segundos
+
+(Numerica) El rendimiento del AMD Athlon para el benchmark Linpack fue de 721,1 en el ano 2006, mientras que para el Intel Core Duo fue de 1442,3 en el ano 2008. Cual es el crecimiento medio del rendimiento por ano entre estos dos computadores (expresarlo segun aceleracion)?
+1
+- 1,41
+- 2,00
+- 1,18
+
+(Numerica) Google esta trabajando en su nuevo Nexus y esta considerando anadir una nueva GPU que permite ejecutar los calculos graficos 6,2 veces mas rapido que en su Galaxy Nexus. Sin embargo es solo utilizable el 79% del tiempo. Cual sera la aceleracion global lograda al incorporar la mejora?
+3
+- 4,90
+- 2,21
+- 2,96
+
+(Numerica) Sin considerar el rendimiento del dado, y considerando un tamano de dado de 14,5 mm x 10,0 mm Cual es el numero maximo de dados que podemos extraer de una oblea de 210 mm de diametro?
+1
+- 200
+- 223
+- 191
+
+(Numerica) La ejecucion del benchmark Drystone en un Core i7 es de 2,5 segundos, suponiendo una aceleracion de 8,8 con respecto a la ejecucion que tenia en el Pentium 4. Cuanto tardaba el benchmark cuando se ejecutaba en el Pentium 4?
+2
+- 20 segundos
+- 22 segundos
+- 24,5 segundos
+
+(Numerica) La ejecucion del benchmark Drystone en un Core i7 es de 9,7 segundos, suponiendo una aceleracion de 8,5 con respecto a la ejecucion que tenia en el Pentium 4. Cuanto tardaba el benchmark cuando se ejecutaba en el Pentium 4?
+3
+- 79,90 segundos
+- 81,20 segundos
+- 82,45 segundos
+
+(Numerica) Calcula el tiempo de CPU en nanosegundos de un programa que ejecuta 822 instrucciones en el AMD Xeon sabiendo que la mezcla de instrucciones es: 20% cargas, 30% almacenamientos, 10% comparaciones, 40% saltos. Las cargas y los almacenamientos tardan 4 ciclos de reloj mientras que las comparaciones y los saltos 2 y 4 ciclos respectivamente. La duracion del ciclo de reloj son 9 ns.
+1
+- 28112,40 ns
+- 28933 ns
+- 27363,6 ns
+
+(Numerica) Calcula el tiempo de CPU en nanosegundos de un programa que ejecuta 846 instrucciones en el AMD Xeon sabiendo que la mezcla de instrucciones es: 20% cargas, 30% almacenamientos, 10% comparaciones, 40% saltos. Las cargas y almacenamientos tardan 4 ciclos, comparaciones 2 ciclos, saltos 4 ciclos. Ciclo de reloj = 9 ns.
+2
+- 28112,40 ns
+- 28933 ns
+- 28511 ns
+
+(Numerica) Calcula el tiempo de CPU en nanosegundos de un programa que ejecuta 691 instrucciones en el AMD Xeon. Mezcla: 20% cargas, 30% almacenamientos, 10% comparaciones, 40% saltos. Cargas y almacenamientos = 45 ciclos, comparaciones = 3 ciclos, saltos = 4 ciclos. Ciclo = 9 ns.
+1
+- 27363,6 ns
+- 13368,00 ns
+- 28933 ns
+
+(Numerica) Calcula el tiempo de CPU en nanosegundos de un programa que ejecuta 557 instrucciones en el AMD Xeon. Mezcla: 20% cargas, 30% almacenamientos, 10% comparaciones, 40% saltos. Cargas y almacenamientos = 5 ciclos, comparaciones = 3, saltos = 3 ciclos. Ciclo = 6 ns.
+3
+- 12768,00 ns
+- 13968,00 ns
+- 13368,00 ns
+
+(Numerica) Sin considerar el rendimiento del dado, y considerando un tamano de dado de 12,0 mm x 10,0 mm Cual es el numero maximo de dados que podemos extraer de una oblea de 201 mm de diametro?
+2
+- 200
+- 223
+- 240
+
+(Numerica) Sin considerar el rendimiento del dado, y considerando un tamano de dado de 18,2 mm x 10,0 mm Cual es el numero maximo de dados que podemos extraer de una oblea de 285 mm de diametro?
+3
+- 381,94
+- 223
+- 303
+
+(Numerica) Sin considerar el rendimiento del dado, y considerando un tamano de dado de 14,9 mm x 10,0 mm Cual es el numero maximo de dados que podemos extraer de una oblea de 287 mm de diametro?
+1
+- 381,94
+- 303
+- 200
+
+(Numerica) El rendimiento del AMD Athlon para el benchmark Linpack fue de 702,3 en el ano 2006, mientras que para el Intel Core Duo fue 1486,6 en el ano 2008. Cual es el crecimiento medio del rendimiento por ano entre estos dos computadores (expresarlo segun aceleracion)?
+2
+- 1,41
+- 1,4549
+- 1,18
+
+(Numerica) El rendimiento del AMD Athlon para el benchmark Linpack fue de 917,4 en el ano 2006, mientras que para el Intel Core Duo fue de 1277,1 en el ano 2008. Cual es el crecimiento medio del rendimiento por ano entre estos dos computadores (expresarlo segun aceleracion)?
+3
+- 1,4549
+- 1,41
+- 1,18
+
+(Numerica) Google esta trabajando en su nuevo Nexus y esta considerando anadir una nueva GPU que permite ejecutar los calculos graficos 7,4 veces mas rapido que en su Galaxy Nexus. Sin embargo es solo utilizable el 75% del tiempo. Cual sera la aceleracion global lograda al incorporar la mejora?
+1
+- 2,85
+- 2,96
+- 3,10
+
+Que significa el termino "arquitectura" en el contexto de la informatica?
+2
+- El diseno fisico de los componentes de un computador
+- La estructura de un computador que un programador debe entender para escribir un programa correcto
+- El proceso de fabricacion de los chips de silicio
+- La forma en que los programas interactuan con el sistema operativo
+
+Cual de los siguientes niveles NO forma parte de los niveles de abstraccion de un computador segun Bell & Newell?
+3
+- Circuito
+- Logica digital
+- Nivel de aplicaciones
+- Nivel de transferencia de registros (RT)
+
+Que nivel de abstraccion se encarga del comportamiento de las unidades de computacion en terminos de transferencia de informacion entre registros?
+2
+- Nivel de logica digital
+- Nivel de transferencia de registros (RT)
+- Nivel de sistema operativo
+- Nivel de circuitos electronicos
+
+Que ley establece que el rendimiento de los computadores se duplica aproximadamente cada 18 meses?
+1
+- Ley de Moore
+- Ley de Amdahl
+- Ley de Flynn
+- Ley de Bell
+
+Cual de los siguientes NO es un tipo de arquitectura segun la taxonomia de Flynn?
+5
+- SISD
+- SIMD
+- MISD
+- MIMD
+- MIND
+
+Que tipo de arquitectura utiliza una unica unidad de control para dirigir multiples elementos de procesamiento sobre multiples flujos de datos?
+2
+- SISD
+- SIMD
+- MISD
+- MIMD
+
+Que principio de diseno sugiere optimizar el caso comun en lugar de los casos raros?
+2
+- Principio de localidad
+- Ley de Amdahl
+- Principio de rendimientos decrecientes
+- Ley de Moore
+
+Que nivel de abstraccion se encarga de la implementacion de programas y compiladores eficientes?
+2
+- Nivel de sistema operativo
+- Nivel de software superior
+- Nivel de logica digital
+- Nivel de transferencia de registros (RT)
+
+Que tipo de paralelismo se refiere a la ejecucion de multiples funciones o tareas en paralelo?
+3
+- Paralelismo de datos
+- Paralelismo de instrucciones
+- Paralelismo funcional
+- Paralelismo de procesos
+
+Que nivel de abstraccion se encarga de la interaccion entre el hardware y el software?
+1
+- Nivel de sistema operativo
+- Nivel de software superior
+- Nivel de logica digital
+- Nivel de transferencia de registros (RT)
+
+Que tipo de arquitectura se utiliza comunmente en dispositivos moviles y tablets?
+3
+- Servidores
+- Clusters
+- Dispositivos personales moviles
+- Computadoras de escritorio
+
+Que nivel de abstraccion se encarga de la implementacion de compuertas logicas, inversores y flip-flops?
+1
+- Nivel de logica digital
+- Nivel de transferencia de registros (RT)
+- Nivel de circuitos electronicos
+- Nivel de sistema operativo
+
+Que tipo de arquitectura se utiliza en sistemas embebidos como microondas y lavadoras?
+3
+- Servidores
+- Clusters
+- Sistemas embebidos
+- Computadoras de escritorio
+
+Que nivel de abstraccion se encarga de la implementacion de transistores, resistencias y capacitores?
+2
+- Nivel de logica digital
+- Nivel de circuitos electronicos
+- Nivel de transferencia de registros (RT)
+- Nivel de sistema operativo
+
+Que tipo de arquitectura se utiliza en servidores que requieren alta disponibilidad y escalabilidad?
+1
+- Servidores
+- Clusters
+- Sistemas embebidos
+- Computadoras de escritorio
+
+Que nivel de abstraccion se encarga de la implementacion de ALUs, registros y memorias?
+2
+- Nivel de logica digital
+- Nivel de transferencia de registros (RT)
+- Nivel de circuitos electronicos
+- Nivel de sistema operativo
+
+Que tipo de arquitectura se utiliza en clusters de computadoras conectadas por redes de area local?
+2
+- Servidores
+- Clusters
+- Sistemas embebidos
+- Computadoras de escritorio
+
+Que nivel de abstraccion se encarga de la implementacion de llamadas al sistema y comandos?
+1
+- Nivel de software superior
+- Nivel de sistema operativo
+- Nivel de logica digital
+- Nivel de transferencia de registros (RT)
+
+Que tipo de arquitectura se utiliza en computadoras de escritorio de proposito general?
+4
+- Servidores
+- Clusters
+- Sistemas embebidos
+- Computadoras de escritorio
+
+Que nivel de abstraccion se encarga de la implementacion de maquinas virtuales apiladas?
+2
+- Nivel de software superior
+- Nivel de sistema operativo
+- Nivel de logica digital
+- Nivel de transferencia de registros (RT)
+
+Que tipo de arquitectura se utiliza en sistemas que requieren procesamiento en tiempo real?
+3
+- Servidores
+- Clusters
+- Sistemas embebidos
+- Computadoras de escritorio
+
+Que nivel de abstraccion se encarga de la implementacion de compiladores y programas escritos en lenguajes de alto nivel?
+1
+- Nivel de software superior
+- Nivel de sistema operativo
+- Nivel de logica digital
+- Nivel de transferencia de registros (RT)
+
+Que tipo de arquitectura se utiliza en sistemas que requieren alto rendimiento para bases de datos y procesamiento de transacciones?
+1
+- Servidores
+- Clusters
+- Sistemas embebidos
+- Computadoras de escritorio
+
+Que nivel de abstraccion se encarga de la implementacion de procesadores, interfaces de E/S y rutas de datos?
+3
+- Nivel de software superior
+- Nivel de sistema operativo
+- Nivel de sistema computacional
+- Nivel de transferencia de registros (RT)
+
+Que tipo de arquitectura se utiliza en sistemas que requieren correccion de errores en memoria y proporcionalidad energetica?
+2
+- Servidores
+- Clusters
+- Sistemas embebidos
+- Computadoras de escritorio
+
+Que nivel de abstraccion se encarga de la implementacion de semiconductores N y P, metales y polisilicio?
+1
+- Nivel de componentes fisicos
+- Nivel de circuitos electronicos
+- Nivel de logica digital
+- Nivel de transferencia de registros (RT)
+
+Que tipo de arquitectura se utiliza en sistemas que requieren soporte para graficos o video?
+3
+- Servidores
+- Clusters
+- Sistemas embebidos
+- Computadoras de escritorio
+
+Que nivel de abstraccion se encarga de la implementacion de uniones PN, metales y polisilicio?
+1
+- Nivel de componentes fisicos
+- Nivel de circuitos electronicos
+- Nivel de logica digital
+- Nivel de transferencia de registros (RT)
+
+Que tipo de arquitectura se utiliza en sistemas que requieren soporte para escalabilidad y alta disponibilidad?
+1
+- Servidores
+- Clusters
+- Sistemas embebidos
+- Computadoras de escritorio
+
+Que nivel de abstraccion se encarga de la implementacion de compuertas NAND, NOR y NOT?
+1
+- Nivel de logica digital
+- Nivel de circuitos electronicos
+- Nivel de transferencia de registros (RT)
+- Nivel de sistema operativo
+
+Que tipo de arquitectura se utiliza en sistemas que requieren soporte para aplicaciones como busqueda, redes sociales y compartir videos?
+2
+- Servidores
+- Clusters
+- Sistemas embebidos
+- Computadoras de escritorio
+
+Que nivel de abstraccion se encarga de la implementacion de contadores, registros y memorias?
+2
+- Nivel de logica digital
+- Nivel de transferencia de registros (RT)
+- Nivel de circuitos electronicos
+- Nivel de sistema operativo
+
+Que nivel de abstraccion se encarga de la implementacion de multiplexores, decodificadores y convertidores de codigo?
+1
+- Nivel de logica digital
+- Nivel de transferencia de registros (RT)
+- Nivel de circuitos electronicos
+- Nivel de sistema operativo
+
+Que es el tiempo de ejecucion en el contexto de la evaluacion del rendimiento de un computador?
+2
+- El tiempo que tarda un programa en completarse, incluyendo operaciones de E/S y sobrecarga del sistema operativo
+- El tiempo que tarda el procesador en ejecutar un programa, excluyendo operaciones de E/S
+- El tiempo total que tarda un programa en completarse, incluyendo todas las operaciones
+- El tiempo que tarda el procesador en ejecutar un programa, incluyendo operaciones de E/S
+
+Que ley define la mejora de rendimiento que se puede obtener al optimizar una parte de un computador?
+2
+- Ley de Moore
+- Ley de Amdahl
+- Ley de Flynn
+- Ley de Bell
+
+Que metrica se utiliza para medir el rendimiento de un computador en terminos de operaciones de punto flotante por segundo?
+2
+- MIPS
+- FLOPS
+- CPI
+- IPC
+
+Que significa CPI en el contexto de la evaluacion del rendimiento de un computador?
+1
+- Ciclos por instruccion
+- Instrucciones por ciclo
+- Ciclos por segundo
+- Instrucciones por segundo
+
+Que tipo de arquitectura se enfoca en la explotacion del paralelismo a nivel de instruccion y el uso de caches?
+2
+- CISC
+- RISC
+- SIMD
+- MIMD
+
+Que es el tiempo de respuesta (response time) en la evaluacion del rendimiento?
+3
+- El tiempo que tarda un programa en completarse, incluyendo operaciones de E/S
+- El tiempo que tarda el procesador en ejecutar un programa, excluyendo operaciones de E/S
+- El tiempo total que tarda un programa en completarse, incluyendo todas las operaciones
+- El tiempo que tarda el procesador en ejecutar un programa, incluyendo operaciones de E/S
+
+Que es el throughput en la evaluacion del rendimiento?
+2
+- El tiempo que tarda un programa en completarse
+- La cantidad de trabajo que un computador puede realizar en un periodo de tiempo
+- El numero de instrucciones ejecutadas por segundo
+- El numero de ciclos de reloj por instruccion
+
+Que es el tiempo de CPU (CPU time)?
+2
+- El tiempo que tarda un programa en completarse, incluyendo operaciones de E/S
+- El tiempo que tarda el procesador en ejecutar un programa, excluyendo operaciones de E/S
+- El tiempo total que tarda un programa en completarse, incluyendo todas las operaciones
+- El tiempo que tarda el procesador en ejecutar un programa, incluyendo operaciones de E/S
+
+Que es el CPI (Cycles Per Instruction)?
+2
+- El numero de instrucciones ejecutadas por ciclo de reloj
+- El numero de ciclos de reloj por instruccion
+- El numero de instrucciones ejecutadas por segundo
+- El numero de ciclos de reloj por segundo
+
+Que es el MIPS (Millions of Instructions Per Second)?
+3
+- El numero de instrucciones ejecutadas por ciclo de reloj
+- El numero de ciclos de reloj por instruccion
+- El numero de instrucciones ejecutadas por segundo
+- El numero de ciclos de reloj por segundo
+
+Que es el FLOPS (Floating Point Operations Per Second)?
+2
+- El numero de operaciones de punto flotante ejecutadas por ciclo de reloj
+- El numero de operaciones de punto flotante ejecutadas por segundo
+- El numero de instrucciones ejecutadas por segundo
+- El numero de ciclos de reloj por segundo
+
+Cual es la principal diferencia entre "arquitectura de computadores" y "diseno de computadores"?
+1
+- La arquitectura se enfoca en la especificacion visible para el programador, mientras que el diseno se ocupa de la implementacion interna
+- La arquitectura se encarga unicamente del hardware, mientras que el diseno se encarga del software
+- La arquitectura determina la velocidad de reloj y el diseno la cantidad de memoria
+- No existe diferencia; ambos terminos son sinonimos
+
+Que nivel de abstraccion se centra en la ejecucion de microinstrucciones y en la organizacion interna del procesador?
+3
+- Nivel de sistema operativo
+- Nivel de transferencia de registros (RT)
+- Nivel de microarquitectura
+- Nivel de logica digital
+
+Cuales son los dos enfoques principales para clasificar los niveles de abstraccion en la arquitectura de computadores?
+1
+- Enfoque estructural y enfoque funcional
+- Enfoque jerarquico y enfoque paralelo
+- Enfoque secuencial y enfoque modular
+- Enfoque teorico y enfoque practico
+
+Cual es la funcion principal del nivel de sistema operativo en la jerarquia de abstraccion?
+2
+- Controlar directamente el hardware a nivel de circuito
+- Proveer una interfaz entre el hardware y el software de aplicacion
+- Ejecutar instrucciones a nivel de microinstrucciones
+- Disenar y fabricar los componentes electronicos
+
+Cual de los siguientes componentes no es caracteristico del nivel de transferencia de registros (RT)?
+3
+- Registros
+- ALUs
+- Compiladores
+- Memorias intermedias
+
+Segun la taxonomia de Flynn, a que categoria se podria asignar una GPU moderna que ejecuta operaciones en paralelo?
+2
+- SISD
+- SIMD
+- MISD
+- MIMD
+
+Como afecta el principio de rendimientos decrecientes a la mejora del rendimiento mediante la paralelizacion?
+2
+- Aumenta linealmente el rendimiento con cada procesador adicional
+- Disminuye la mejora a medida que se agregan mas procesadores
+- No tiene efecto en la paralelizacion
+- Permite mejoras exponenciales en el rendimiento
+
+Cual de los siguientes factores no suele considerarse al evaluar el costo de un circuito integrado?
+4
+- Numero de puertas logicas
+- Longitud de las conexiones
+- Complejidad del proceso de fabricacion
+- Velocidad del reloj
+
+Como influye la curva de aprendizaje en los costos de fabricacion de computadores?
+2
+- Aumenta los costos conforme se incrementa el volumen
+- Disminuye los costos con mayores volumenes de produccion
+- No tiene impacto en los costos
+- Incrementa la complejidad del diseno
+
+Que se entiende por localidad espacial en la ejecucion de programas?
+2
+- Acceder repetidamente a los mismos datos en tiempos cercanos
+- Acceder a datos que se encuentran proximos en direcciones de memoria
+- Distribuir datos en diferentes dispositivos de almacenamiento
+- Ejecutar instrucciones en paralelo
+
+Que metrica se beneficia directamente de la mejora en la memoria cache?
+4
+- Tiempo de respuesta
+- MIPS
+- FLOPS
+- CPI
+
+Que componente mide especificamente el tiempo que la CPU dedica a ejecutar un programa?
+2
+- Tiempo de ejecucion
+- Tiempo de CPU
+- Tiempo de respuesta
+- Tiempo en espera
+
+Por que no es recomendable usar el tiempo de reloj (wall-clock) como unica metrica de rendimiento de la CPU?
+2
+- Porque solo mide el rendimiento de la memoria
+- Porque incluye tiempos de espera y sobrecarga del sistema
+- Porque no refleja la velocidad del procesador
+- Porque es dificil de medir
+
+Cual es el proposito principal de utilizar benchmarks en la evaluacion del rendimiento?
+2
+- Incrementar la velocidad de reloj
+- Comparar cuantitativamente el rendimiento entre sistemas
+- Reducir el costo de fabricacion
+- Mejorar la eficiencia energetica
+
+Como se relaciona la ley de Amdahl con la mejora potencial de un sistema?
+2
+- Permite mejoras ilimitadas en el rendimiento
+- Establece un limite basado en la fraccion del codigo que puede optimizarse
+- Indica que la paralelizacion siempre es la mejor solucion
+- No tiene relacion con la mejora del rendimiento
+
+En el contexto de la paralelizacion, cual escenario ejemplifica una limitacion segun la ley de Amdahl?
+2
+- Un 90% del programa es paralelizable
+- Solo el 50% del programa se puede paralelizar
+- Todo el programa es paralelizable
+- Ninguna parte del programa es paralelizable
+
+Que efecto tiene aumentar la fraccion del codigo mejorado en el speedup global segun Amdahl?
+2
+- Disminuye el speedup global
+- Aumenta el speedup global
+- No tiene efecto
+- Hace el speedup infinito
+
+Cual de los siguientes indicadores mide la tasa de tareas completadas por segundo?
+3
+- Tiempo de CPU
+- CPI
+- Throughput
+- MIPS
+
+Que relacion existe entre el tiempo de ciclo del reloj y el tiempo de ejecucion?
+1
+- Son inversamente proporcionales
+- Son directamente proporcionales
+- No tienen relacion
+- Siempre son iguales
+
+Cual es la formula que relaciona el tiempo de CPU con el numero de instrucciones, el CPI y el tiempo de ciclo?
+2
+- Tiempo de CPU = Instrucciones / (CPI * Tiempo de ciclo)
+- Tiempo de CPU = Instrucciones * CPI * Tiempo de ciclo
+- Tiempo de CPU = (Instrucciones + CPI) / Tiempo de ciclo
+- Tiempo de CPU = Instrucciones * (CPI / Tiempo de ciclo)
+
+Como influye el diseno de computadores en el numero de dies por wafer durante la fabricacion de circuitos integrados?
+3
+- Incrementando el tamano de los dies
+- Reduciendo el numero de transistores por die
+- Mejorando la regularidad del diseno para aprovechar mejor el area del wafer
+- Aumentando la complejidad del proceso
+
+Que factor es crucial para determinar el costo de un circuito integrado?
+2
+- La velocidad del procesador
+- El numero de transistores y la complejidad del diseno
+- La cantidad de memoria cache
+- El tamano del conjunto de instrucciones
+
+En evaluacion de rendimiento, que significa "throughput"?
+2
+- La velocidad a la que se ejecutan las instrucciones
+- La cantidad total de trabajo realizado en un intervalo de tiempo
+- El numero de ciclos de reloj por instruccion
+- El tiempo total de ejecucion de un programa
+
+Que metrica combina la cantidad de instrucciones, el CPI y el tiempo de ciclo para medir el rendimiento de la CPU?
+3
+- MIPS
+- FLOPS
+- Tiempo de CPU
+- Tiempo de respuesta
+
+Que efecto tiene una mejora en el tiempo de ciclo (reduccion del tiempo de reloj) sobre el tiempo de ejecucion?
+2
+- Lo aumenta
+- Lo disminuye
+- No tiene efecto
+- Solo afecta el rendimiento de la memoria
+
+Cual es el proposito principal de la fase de especificacion en el proceso de diseno de computadores?
+2
+- Implementar el hardware
+- Definir los requerimientos funcionales y tecnicos del sistema
+- Realizar pruebas de rendimiento
+- Fabricar los componentes
+
+Que aspecto del diseno de computadores permite que un procesador se mantenga competitivo con el paso del tiempo?
+2
+- La velocidad de la memoria RAM
+- La capacidad de adaptarse a nuevas tecnologias y mejoras en la microarquitectura
+- La cantidad de nucleos
+- El tamano del disco duro
+
+Como impactan las innovaciones microarquitectonicas en el rendimiento, a pesar de que las mejoras tecnologicas fundamentales se estabilicen?
+2
+- No tienen impacto
+- Permiten aumentos significativos en el rendimiento mediante optimizaciones internas
+- Solo mejoran la eficiencia energetica
+- Solo afectan el costo del sistema
+
+Cual es el principal beneficio de utilizar un enfoque por capas en la arquitectura de computadores?
+2
+- Aumenta la complejidad del sistema
+- Facilita el diseno y la comprension mediante la abstraccion de detalles
+- Mejora exclusivamente el rendimiento
+- Reduce la velocidad de procesamiento
+
+Como beneficia la abstraccion en la arquitectura de computadores al desarrollo de software?
+2
+- Obliga a los programadores a conocer detalles del hardware
+- Permite escribir codigo sin preocuparse por la implementacion interna del hardware
+- Incrementa el costo de desarrollo
+- Limita la compatibilidad entre plataformas
+
+Que se entiende por paralelismo a nivel de instrucciones (ILP)?
+2
+- La ejecucion secuencial de instrucciones
+- La capacidad de ejecutar varias instrucciones simultaneamente dentro de un mismo procesador
+- La ejecucion de programas en multiples maquinas
+- La conversion de codigo de alto nivel a lenguaje ensamblador
+
+Cual es el proposito de utilizar herramientas de simulacion en el proceso de diseno de arquitecturas?
+2
+- Reducir el costo del hardware
+- Validar y verificar el comportamiento del diseno antes de su implementacion
+- Aumentar la velocidad del reloj
+- Disenar nuevos lenguajes de programacion
+
+Que factor no contribuye tipicamente a la complejidad del proceso de fabricacion de circuitos integrados?
+4
+- La densidad de transistores
+- La longitud de las conexiones
+- La regularidad del diseno
+- La velocidad del bus del sistema
+
+Como contribuye el principio de localidad al rendimiento del sistema?
+2
+- Aumenta el tiempo de acceso a la memoria
+- Reduce los tiempos de acceso mediante la reutilizacion de datos cercanos
+- Incrementa la latencia de las operaciones de E/S
+- Limita el uso de la memoria cache
+
+En la evaluacion de rendimiento, por que es importante medir tanto el tiempo de CPU como el tiempo de ejecucion total?
+2
+- Porque ambos son siempre iguales
+- Porque el tiempo de CPU refleja la computacion pura y el tiempo de ejecucion total incluye sobrecargas y E/S
+- Porque el tiempo total solo mide la velocidad del reloj
+- Porque el tiempo de CPU se utiliza para calcular la frecuencia de la memoria
+
+Cual de los siguientes desafios se aborda mejor mediante el procesamiento en paralelo?
+3
+- Mejorar la seguridad del sistema
+- Reducir la latencia de acceso a disco
+- Incrementar el rendimiento en tareas computacionales intensivas
+- Aumentar la compatibilidad de software
+
+De que manera influye el uso de lenguajes de alto nivel en el diseno y la arquitectura de computadores?
+3
+- Reduce la necesidad de una interfaz clara entre hardware y software
+- Aumenta la complejidad al soportar multiples paradigmas
+- Permite mayor abstraccion y flexibilidad, facilitando el desarrollo de compiladores y sistemas operativos
+- Limita la capacidad de ejecutar instrucciones en paralelo
+
+Como se caracteriza la relacion entre rendimiento y costo en el diseno de computadores?
+2
+- Es siempre directa y lineal
+- Existe un equilibrio que varia segun la aplicacion, desde sistemas de alto rendimiento y alto costo hasta soluciones de bajo rendimiento y bajo costo
+- El rendimiento se puede mejorar sin afectar el costo
+- El costo no influye en las decisiones de diseno
+
+(Numerica) Google esta trabajando en su nuevo Nexus y esta considerando anadir una nueva GPU que permite ejecutar los calculos graficos 8,8 veces mas rapido que en su Galaxy Nexus. Sin embargo es solo utilizable el 21% del tiempo. Cual sera la aceleracion global lograda al incorporar la mejora?
+2
+- 1,08
+- 1,23
+- 1,56
+
+(Numerica) Se dispone de una mejora que corre 10 veces mas rapido y es utilizable el 40% del tiempo. Cual es la aceleracion global lograda al incorporar la mejora?
+3
+- 1,23
+- 1,41
+- 1,56
+
+(Numerica) La ejecucion del benchmark Drystone en un Core i7 es de 9,5 segundos, suponiendo una aceleracion de 7,0 con respecto a la ejecucion que tenia en el Pentium 4. Cuanto tardaba el benchmark cuando se ejecutaba en el Pentium 4?
+1
+- 66,5 segundos
+- 63,0 segundos
+- 68,4 segundos
+
+(Numerica) La ejecucion del benchmark Drystone en un Core i7 es de 8,9 segundos, suponiendo una aceleracion de 9,6 con respecto a la ejecucion que tenia en el Pentium 4. Cuanto tardaba el benchmark cuando se ejecutaba en el Pentium 4?
+2
+- 80,64 segundos
+- 85,44 segundos
+- 89,60 segundos
+
+(Numerica) Sin considerar el rendimiento del dado, y considerando un tamano de dado de 12,2 mm x 10,0 mm Cual es el numero maximo de dados que podemos extraer de una oblea de 309 mm de diametro?
+3
+- 381
+- 503
+- 552
+
+(Numerica) El rendimiento del AMD Athlon para el benchmark Linpack fue de 689,7 en el ano 2006, mientras que para el Intel Core Duo fue de 1421,4 en el ano 2008. Cual es el crecimiento medio del rendimiento por ano entre estos dos computadores (expresarlo segun aceleracion)?
+2
+- 1,41
+- 1,44
+- 1,49
+
+(Numerica) El rendimiento del AMD Athlon para el benchmark Linpack fue de 738,9 en el ano 2006, mientras que para el Intel Core Duo fue de 1491,7 en el ano 2008. Cual es el crecimiento medio del rendimiento por ano entre estos dos computadores (expresarlo segun aceleracion)?
+1
+- 1,42
+- 1,45
+- 1,39
+
+(Numerica) Calcula el tiempo de CPU en nanosegundos de un programa que ejecuta 691 instrucciones en el AMD Xeon. Mezcla: 20% cargas, 30% almacenamientos, 10% comparaciones, 40% saltos. Cargas y almacenamientos = 5 ciclos, comparaciones = 3 ciclos, saltos = 4 ciclos. Ciclo = 9 ns.
+2
+- 28112,40 ns
+- 27363,6 ns
+- 151743,6 ns

@@ -81,6 +81,10 @@ function cargarResumenDesdeId(id) {
             "dca-oficial": "dcaPreguntas.txt",
             "ic-p1": "ic-p1.txt",
             "taes-definitivo": "taesDefinitivoPreguntas.txt",
+            "ac_CP-F2": "ac_CP-F2_Preguntas.txt",
+            "ac_CP-F3": "ac_CP-F3_Preguntas.txt",
+            "ac_CT1-2": "ac_CT1-2_Preguntas.txt",
+            "ac_CT3-4": "ac_CT3-4_Preguntas.txt",
         };
         const archivo = excepciones[id] ? excepciones[id] : id + "Preguntas.txt";
 
@@ -97,7 +101,8 @@ function cargarResumenDesdeId(id) {
 // --- PROCESAMIENTO DE TEXTO ---
 function procesarTextoPreguntas(preguntasTxt) {
     return preguntasTxt.split(/\n{2,}/).map((preguntaTxt) => {
-        const [pregunta, respuesta, ...opciones] = preguntaTxt.split("\n");
+        const [pregunta, respuesta, ...opcionesRaw] = preguntaTxt.split("\n");
+        const opciones = opcionesRaw.filter((op) => op.trim() !== "");
 
         // Soportamos múltiples respuestas correctas (ej: "1, 3")
         const respuestasCorrectasIndices = respuesta.split(",").map((r) => parseInt(r.trim()));
