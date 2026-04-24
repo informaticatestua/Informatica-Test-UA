@@ -765,6 +765,7 @@ function cargarDesdeUrl(id) {
     // Casos donde el nombre del archivo no sigue la regla de añadir "Preguntas.txt"
     const excepciones = {
         "dca-oficial": "dcaPreguntas.txt",
+        "ada-full": "adaPreguntas.txt",
         "ic-p1": "ic-p1.txt",
         "taes-definitivo": "taesDefinitivoPreguntas.txt",
         "ac_CP-F2": "ac_CP-F2_Preguntas.txt",
