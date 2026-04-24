@@ -308,7 +308,7 @@ Se pretende resolver el problema del viajante de comercio (travelling salesman p
 2
 - El valor que se obtiene de multiplicar k por el peso de la arista mas corta de entre las restantes, donde  k es el numero de ciudades que quedan por visitar.
 - La suma de los pesos de las k aristas restantes mas cortas, donde k es el numero de ciudades que quedan por visitar. 
-- La suma de los pesos de las aristas que completan la solucion paso a paso visitando el vertice mas cercano al ultimo visitado. 
+- La suma de los pesos de las aristas que completan la solucion paso a paso visitando el vertice mas cercano al ultimo visitado.
 
 De los problemas siguientes, indicad cual no se puede tratar eficientemente como los otros dos:
 3
@@ -704,7 +704,7 @@ Cual de los siguientes algoritmos proveeria una cota pesimista para el problema 
 2
 - calcular la distancia geometrica (en linea recta) entre la ciudad origen y destino 
 - calcular la distancia recorrida moviendose al azar por el grafo hasta llegar (por azar) a la ciudad destino
-- para todas las ciudades que son alcanzables en un paso desde la ciudad inicial, sumar la distancia a dicha ciudad y la distancia geometrica hasta la ciudad destino 
+- para todas las ciudades que son alcanzables en un paso desde la ciudad inicial, sumar la distancia a dicha ciudad y la distancia geometrica hasta la ciudad destino
 
 En un problema de optimizacion, si el dominio de las decisiones es un conjunto infinito
 2
@@ -716,7 +716,7 @@ Si f(n) pertenece 0(n^3),  ¿puede pasar que f(n) pertenece 0(n^2)?
 2
 - solo para valores bajos de n
 - es perfectamente posible, ya que 0(n cuadrado) C 0(n^2)
-- no, porque n al cubo “no incrementa” 0(n al cuadrado) 
+- no, porque n al cubo “no incrementa” 0(n al cuadrado)
 
 Si un problema de optimizacion lo es para una funcion que toma valores continuos ... 
 2
@@ -800,7 +800,7 @@ Sea la solucion a la relacion de recurrencia f(n) = 2f(n/2) + n /// f(1) = 1
 1
 - el problema del cambio
 - el problema de la asignacion de tareas
-- la mochila discreta sin restricciones adicionales 
+- la mochila discreta sin restricciones adicionales
 
 Dado un problema de optimizacion, el metodo voraz....
 1
@@ -962,7 +962,7 @@ Un algoritmo recursivo basado en el esquema divide y venceras...
 1
 - ... sera mas eficiente cuanto mas equitativa sea la division en subproblemas
 - las dos anteriores son ciertas
-- ... nunca tendra una complejidad exponencial 
+- ... nunca tendra una complejidad exponencial
 
 Se quieren ordenar d numeros distintos comprendidos entre 1 y n. Para ello se usa un array de n booleanos que se inicializan primero a false. Acontinuacion se recorren los d numeros  cambiando  los  valores  del  elemento  del  vector  de  booleanos correspondiente a su numero a true. Por ultimo se recorre el vector de booleanos escribiendo los indices de los elementos del vector de booleanos que son true. ¿Es este algoritmo mas rapido (asintoticamente) que el mergesort?
 2
@@ -1052,7 +1052,7 @@ Dado el problema de las torres de Hanoi resuelto mediante divide y venceras ¿cu
 1
 - T(n) = 2T(n-1) + 1
 - T(n) = T(n-1) + n
-- T(n) = 2T(n-1) + n 
+- T(n) = 2T(n-1) + n
 
 Si un problema de optimizacion lo es para una funcion que toma valores continuos
 2
@@ -1172,7 +1172,7 @@ El esquema de vuelta atras...
 1
 - garantiza que encuentra la solucion optima a cualquier problema de seleccion discreta
 - las otras dos opciones son ambas verdaderas
-- se puede aplicar a cualquier tipo de problema aunque el coste temporal es elevado 
+- se puede aplicar a cualquier tipo de problema aunque el coste temporal es elevado
 
 Sea la siguiente relacion de recurrencia :::: T( n)=  1  si n< =1 //////  [2T (n/2)+ g(n) en otro caso.Si T(n) e O(n), ¿en cual de estos tres casos nos podemos encontrar?
 3
@@ -1214,7 +1214,7 @@ Que estrategia de busqueda es a priori mas apropiada en un esquema de vuelta atr
 2
 - explorar primero los nodos con mejor cota optimista
 - en el esquema de vuelta atras no se pueden definir estrategias de busqueda
-- explorar primero los nodos que estan mas completados 
+- explorar primero los nodos que estan mas completados
 
 Sea la siguiente relacion de recurrenciat(n) + 1 si n< = 1 // + 2T(n/2) + g(n) en otro caso.. Si t(n) pertenece O(n^2) en cual de los casos nos podemos encontrar?
 2
@@ -1316,7 +1316,7 @@ Asumiendo que n es par, las siguientes recurrencias matematicas, obtienen el val
 2
 - Ambas recurrencias son equivalentes en cuanto a complejidad temporal
 - La primera recurrencia resultara ser la mas eficiente siempre que se utilice la programacion dinamica recursiva para su implementacion.
-- La segunda recurrencia resulta ser la mas eficiente siempre que se utilice  divide  y venceras. 
+- La segunda recurrencia resulta ser la mas eficiente siempre que se utilice  divide  y venceras.
 
 Los algoritmos de ordenacion quicksort y mergesort
 2
@@ -1400,7 +1400,7 @@ Se desea obtener todas las permutaciones de una lista compuesta por n elementos.
 2
 - divide  y  venceras,  puesto  que  la  division  en  sublistas  se  podria  hacer  en  tiempo constante
 - vuelta atras, es el esquema mas eficiente para este problema
-- ramificacion y poda, puesto que con buenas funciones de cota es mas eficiente que vuelta atras 
+- ramificacion y poda, puesto que con buenas funciones de cota es mas eficiente que vuelta atras
 
 Tenemos un vector ordenado y queremos comprobar si contiene un elemento dado ¿ Cual sera la complejidad temporal mas ajustada para hacerlo ?
 3
@@ -1460,7 +1460,7 @@ En el problema del viajante de comercio (travelling salesman problem) queremos l
 1
 - el orden en el que se exploran las soluciones parciales noes relevante; por ello, la tecnica ramificacion y poda no aporta nada fcon respecto a vuelta atras
 - lomas  adecuado  seria  usar  una  tecnica  de  ramificacion  y  poda  ya  que  es  muy importante el orden en el que se exploran las soluciones parciales
-- lo mas importante es conseguir una cota pesimista adecuada. Las diferencias entre ramificacion y poda y vuelta atras son irrelevantes en este caso  
+- lo mas importante es conseguir una cota pesimista adecuada. Las diferencias entre ramificacion y poda y vuelta atras son irrelevantes en este caso
 
 ¿Cual es la complejidad temporal, en el peor de los casos, del mejor algoritmo que se puede escribir para resolver el problema de la mochila discreta?
 3
@@ -1634,7 +1634,7 @@ La función test() procesa una lista de n elementos y devuelve un real. La defin
 3
 - Θ(logn) 
 - Θ(nlogn) 
-- Θ(n) 
+- Θ(n)
 
 El funcionamiento del algoritmo de ordenación Heapsort es similar al algoritmo de ordenación por selección, ya que localiza el valor más grande y lo sitúa en la posición final del vector; a continuación, localiza el siguiente valor más grande y lo sitúa en la posición anterior a la última, etc.\n¿Cuál de las afirmaciones siguientes es cierta?\nSeleccione una:
 2
@@ -1664,7 +1664,7 @@ Dada la siguiente función construida mediante la técnica memoización:```int f
 3
 - Θ(n2)
 - Θ(n) 
-- Θ(nlogn) 
+- Θ(nlogn)
 
 Se dispone de n clases de objetos. De cada una de ellas se conoce el número máximo de piezas que se puede fabricar, mi∈N y el tiempo necesario para su fabricación ti∈R, i∈[0..n-1]. Queremos listar todas las posibilidades de fabricación de objetos  teniendo en cuenta que el tiempo total está limitado por T∈RPara ello hemos hecho el siguiente programa donde faltan unas líneas:```void combinations( const vector<int> &m, const vector<double> &t, double T, size_t k, vector<int> &x) {    \n\tif( k == m.size() ) {        \n\t\tprint_comb(x);        \n\t\treturn;    \n\t}\n\t# ==> Aquí falta código <==\n}``` ```void combinations( const vector<int> &m, const vector<double> &t, double T ) {    \n\tvector<int> x(m.size());    \n\tcombinations(m, t, T, 0, x);\n}```¿Cuales son las líneas que faltan? [suponed que print_comb() imprime correctamente la combinación que hay codificada en x]
 1
@@ -1682,7 +1682,7 @@ Indica cuál es la complejidad, en función de n, del fragmento siguiente:```for
 1
 - Θ(n)
 - Θ(n2)
-- Θ(nlogn) 
+- Θ(nlogn)
 
 ¿Qué hace la siguiente función?```void f( vector<int> &A ) {    \n\tpriority_queue<int> pq;    \n\tfor( auto a: A )         \n\t\tpq.push(a);    \n\tA.clear();    \n\twhile( !pq.empty() ) {        \n\t\tA.push_back(pq.top());        \n\t\tpq.pop();    \n\t}\n}```
 1
@@ -3021,7 +3021,7 @@ Dadas las siguiente ecuaciones de recurrencia determinar el orden al que pertene
 - T1(n) E O(n), T2(n) E O(n^2), T3(n) E O(c^n) y T4(n) E O(n) 
 - T1(n) E O(n), T2(n) E O(n), T3(n) E O(n^2) y T4(n) E O(n^2) 
 - T1(n) E O(log n), T2(n) E O(2^n), T3(n) E O(c^n) y T4(n) E O(n) 
-- T1(n) E O(log n), T2(n) E O(n^2), T3(n) E O(n) y T4(n) E O(n) 
+- T1(n) E O(log n), T2(n) E O(n^2), T3(n) E O(n) y T4(n) E O(n)
 
 Considera la función siguiente, donde todos los elementos del vector L son distintos.Considera como medida significativa las asignaciones a max, entonces el numero de asignaciones para el caso mejor y pero son, respectivamente: ```int maximo( int L[N] ) {\n\tint i, max;\n\tmax=L[0];\n\tfor (i=1; i<N; i++)\n\t\tif (max<L[i])\n\t\t\tmax=L[i];\n\treturn (max);\n}```
 1
@@ -3533,13 +3533,13 @@ Dadas las siguientes ecuaciones de recurrencia. Determinar el orden al que perte
 2
 - Determinar el lenguaje y herramientas disponibles para su desarrollo. 
 - Estimar los recursos que consumirá el algoritmo una vez implementado.
-- Estimar la potencia y características del equipo informático necesarios para el correcto funcionamiento del algoritmo. 
+- Estimar la potencia y características del equipo informático necesarios para el correcto funcionamiento del algoritmo.
 
 ¿Cuál de las siguientes jerarquías de complejidades es la correcta? 
 3
 - O(1)⊂O(lg n)⊂O(lg lg n) ⊂ ... 
 - ... ⊂ (n!)⊂O(2^n) ⊂O(n^n) 
-- ... ⊂ (2^n)⊂O(n!) ⊂O(n^n) 
+- ... ⊂ (2^n)⊂O(n!) ⊂O(n^n)
 
 ¿Cuál de los siguientes algoritmos de ordenación tiene menor complejidad? 
 3
@@ -3563,7 +3563,7 @@ El estudio de la complejidad resulta realmente interesante para tamaños grandes
 3
 - Las diferencias reales en tiempo de compilación de algoritmos con diferente coste para tamaños pequeños del problema no suelen ser muy significativas. 
 - Las diferencias reales en tiempo de ejecución de algoritmos con diferente coste para tamaños grandes del problema no suelen ser muy significativas. 
-- Ninguna de las anteriores. 
+- Ninguna de las anteriores.
 
 ¿Por que se emplean funciones de coste para expresar el coste de una algoritmo? 
 2
@@ -3593,13 +3593,13 @@ Si $$f1(n) \in{ Ο(g1(n))}$$ y $$f2(n) \in{ Ο(g2(n))}$$ entonces:
 2
 - $$f1(n)·f2(n) \in{ Ο(maximo(g1(n),g2(n)))}$$
 - $$f1(n)·f2(n) \in{ Ο (g1(n)· g2(n))}$$
-- Ambas son correctas 
+- Ambas son correctas
 
 Si $$f1(n) \in{ Ο(g1(n))}$$ y $$f2(n) \in{ Ο(g2(n))}$$ entonces:
 3
 - $$f1(n)+f2(n) \in{ Ο(maximo(g1(n),g2(n)))}$$ 
 - $$f1(n)+f2(n) \in{ Ο (g1(n)+g2(n))}$$
-- Ambas son correctas 
+- Ambas son correctas
 
 Un algoritmo cuya talla es n y que tarda $$40^n$$ segundos en resolver cualquier instancia tiene una complejidad temporal:
 2
@@ -3611,13 +3611,13 @@ Si dos algoritmos tienen la misma complejidad asintótica:
 1
 - No necesitan exactamente el mismo tiempo para su ejecución. 
 - Necesitan exactamente el mismo tiempo para su ejecución.
-- Ninguna de las anteriores 
+- Ninguna de las anteriores
 
 Los algoritmos directos de ordenación, respecto de los indirectos:
 1
 - Presentan una mayor complejidad temporal y sus tiempos de ejecución absolutos son mayores. 
 - Presentan una menor complejidad temporal y sus tiempos de ejecución absolutos son menores.
-- Presentan una mayor complejidad temporal si bien sus tiempos de ejecución absolutos son menores. 
+- Presentan una mayor complejidad temporal si bien sus tiempos de ejecución absolutos son menores.
 
 La talla o tamaño de un problema depende de: 
 3
@@ -3629,7 +3629,7 @@ En un algoritmo recursivo, la forma de dividir el problema en subproblemas:
 2
 - Influye en la complejidad espacial del mismo. 
 - Influye en su complejidad temporal.
-- No influye en ninguna de sus complejidades. 
+- No influye en ninguna de sus complejidades.
 
 $$f(n) = 5n+3m·n +11$$ entonces $$f(n)$$ pertenece a: 
 3
@@ -3641,7 +3641,7 @@ El sumatorio, desde $$i=1$$ hasta n, de $$i^k$$ pertenece a:
 1
 - $$Ο(n^{k+1})$$ 
 - $$Ο(n^k)$$
-- Ninguna de las anteriores 
+- Ninguna de las anteriores
 
 La complejidad de la función A2 es: ```Funcion A2 (n, a: entero):entero; \nVar r: entero; fvar \n\tsi (a² > n) devuelve 0 \n\tsino \n\t\tr:= A2(n, 2a); \n\t\topción \n\t\t\tn < a²: devuelve r; \n\t\t\tn ≥ a² : devuelve r + a; \n\t\tfopción \n\tfsi \nfin```
 2
@@ -3653,7 +3653,7 @@ Cual de las siguientes definiciones es cierta:
 1
 - Las cotas de complejidad se emplean cuando para una misma talla se obtienen diferentes complejidades dependiendo de la entrada al problema.
 - Las cotas de complejidad se emplean cuando para diferentes tallas se obtienen diferentes complejidades dependiendo de la entrada al problema.
-- Ninguna de las anteriores 
+- Ninguna de las anteriores
 
 Cuando para distintas instancias de problema con el mismo tamaño no obtenemos el mismo resultado: 
 3
@@ -3671,7 +3671,7 @@ $$f(n) = 10n+7$$ ¿ $$f(n)$$ pertenece a $$O(n 2)$$$?
 2
 - Si. Para c = 1 y a partir de un valor de n_0 =10. 
 - Sí Para cualquier valor de c positivo siempre existe un n_0 a partir del que se cumple. 
-- No. 
+- No.
 
 Si f(n) ∈ Ω (g(n)) entonces:
 1
@@ -4427,13 +4427,13 @@ Decid cuál de estas tres es la cota pesimista más ajustada al valor óptimo de
 1
 - Divide y Vencerás 
 - Programación Dinámica 
-- Backtracking 
+- Backtracking
 
 Ante un problema que presenta una solución recursiva siempre podemos aplicar: (NO SEGURO)
 1
 - Divide y vencerás 
 - Programación dinámica 
-- Cualquiera de las dos anteriores 
+- Cualquiera de las dos anteriores
 
 En cual de los siguientes casos no se puede aplicar el esquema Divide y Vencerás: 
 3
@@ -4445,13 +4445,13 @@ Dado el algoritmo de búsqueda binaria, supongamos que, en vez de dividir la lis
 2
 - Es el mismo que el del original 
 - Es mayor que el del original 
-- Es menor que el del original 
+- Es menor que el del original
 
 Si n es el número de elementos del vector, el coste del algoritmo Mergesort es: 
 2
 - O(n^2) y Ω(n logn) 
 - Θ (n logn) 
-- Θ (n^2) 
+- Θ (n^2)
 
 La serie de números de Fibonacci se define de la siguiente forma: \n\n $$fib(n) = \begin{cases} 1 & n \leq 1 \\ fib(n-1) + fib(n-2) & n > 1 \end{cases}$$ \n\nPara implementar esta función podemos emplear:
 3
@@ -4469,19 +4469,19 @@ El problema de la mochila, ¿puede solucionarse de forma óptima empleando la es
 2
 - Sólo para el caso de la mochila con fraccionamiento 
 - Sólo para el caso de la mochila sin fraccionamiento 
-- Si, se puede aplicar para ambos casos. 
+- Si, se puede aplicar para ambos casos.
 
 Para que un problema de optimización se pueda resolver mediante PD es necesario que: 
 1
 - Cumpla el principio de optimalidad 
 - Cumpla el teorema de reducción 
-- Cumpla los dos anteriores 
+- Cumpla los dos anteriores
 
 Dada una solución recursiva a un problema ¿Cómo podemos evitar la resolución de los mismos subproblemas muchas veces? 
 2
 - Resolver los subproblemas de mayor a menor y guardar su resultado en una tabla, inicializándola con los problemas pequeños. 
 - Resolver los subproblemas de menor a mayor y guardar su resultado en una tabla, inicializándola con los problemas pequeños. 
-- Resolver los subproblemas de mayor a menor y guardar su resultado en una tabla, inicializándola con los problemas más grandes. 
+- Resolver los subproblemas de mayor a menor y guardar su resultado en una tabla, inicializándola con los problemas más grandes.
 
 Si aplicamos Programación Dinámica a un problema que también tiene solución por divide y vencerás podemos asegurar que... 
 3
@@ -4493,7 +4493,7 @@ Si aplicamos Programación Dinámica a un problema que también tiene solución 
 2
 - Cuando se incrementa la eficacia 
 - Cuando se incrementa la eficiencia 
-- Cuando se reduce el coste espacial. 
+- Cuando se reduce el coste espacial.
 
 En programación dinámica, dónde almacenamos los valores de los problemas resueltos? 
 3
@@ -4505,67 +4505,67 @@ Supongamos el problema de la mochila resuelto mediante Programación Dinámica y
 2
 - Si 
 - No 
-- Depende de los valores de n y P. 
+- Depende de los valores de n y P.
 
 Un problema de optimización cuya solución se puede expresar mediante una secuencia de decisiones cumple el principio de optimalidad si, dada una secuencia óptima: (NO SEGURO)
 3
 - Existe una subsecuencia de esa solución que corresponde a la solución óptima de su subproblema asociado
 - Existe al menos una subsecuencia de esa solución que corresponde a la solución óptima de su subproblema asociado 
-- Cualquier subsecuencia de esa solución corresponde a la solución óptima de su subproblema asociado 
+- Cualquier subsecuencia de esa solución corresponde a la solución óptima de su subproblema asociado
 
 La programación dinámica, para resolver un problema, aplica la estrategia... 
 1
 - Se resuelven los problemas más pequeños y, combinando las soluciones, se obtienen las soluciones de problemas sucesivamente más grandes hasta llegar al problema original. 
 - Se descompone el problema a resolver en subproblemas más pequeños, que se resuelven independientemente para finalmente combinar las soluciones de los subproblemas para obtener la solución del problema original. 
-- Ninguna de las anteriores 
+- Ninguna de las anteriores
 
 ¿Qué esquema de programación es el adecuado para resolver el problema del k-ésimo mínimo en un vector? 
 2
 - Programación Dinámica 
 - Divide y Vencerás 
-- Ninguno de los dos 
+- Ninguno de los dos
 
 Si n es el número de elementos de un vector. La solución de menor coste al problema de encontrar su k-ésimo mínimo tiene la siguiente complejidad: 
 2
 - Ω (n) y O(n logn) 
 - Ω (n) y O(n^2) 
-- Ninguna de las dos 
+- Ninguna de las dos
 
 Si n es el número de elementos de un vector. Podemos encontrar una solución al problema de encontrar su k-ésimo que esté acotada superiormente por : 
 1
 - O(n^3) 
 - O (n) 
-- Ninguna de las dos 
+- Ninguna de las dos
 
 Dada la solución recursiva al problema de encontrar el k-ésimo mínimo de un vector. Cada llamada recursiva, ¿cuántas nuevas llamadas recursivas genera? 
 1
 - una o ninguna 
 - dos o ninguna 
-- una o dos 
+- una o dos
 
 La solución al problema de encontrar el k-ésimo mínimo de un vector pone en práctica la siguiente estrategia: 
 2
 - Ordena totalmente el vector 
 - Ordena parcialmente el vector 
-- No ordena ningún elemento del vector 
+- No ordena ningún elemento del vector
 
 ¿Qué esquema de programación es el adecuado para resolver el problema de la búsqueda binaria? 
 2
 - Programación Dinámica 
 - Divide y Vencerás 
-- Ninguno de los dos 
+- Ninguno de los dos
 
 Si n es el número de elementos de un vector. La solución de menor coste al problema de la búsqueda binaria tiene la siguiente complejidad: 
 3
 - Ω (logn) y O(n logn) 
 - Θ(n logn) 
-- Ω (1) y O(logn) 
+- Ω (1) y O(logn)
 
 ¿Con qué esquema de programación obtenemos algoritmos que calculan la distancia de edición entre dos cadenas? 
 1
 - Programación Dinámica 
 - Divide y vencerás 
-- Ambos 
+- Ambos
 
 Disponemos de dos cadenas de longitudes m y n. Si resolvemos el problema de la distancia de edición mediante programación dinámica, ¿De qué tamaño debemos definir la matriz que necesitaremos? 
 3
@@ -4841,7 +4841,7 @@ La costa de un país tiene n núcleos de población, todos unidos por una línea
 2
 - $$ \sum_{p=2}^{n/2} \space\space\space\space$$ (p-1)/2 
 - $$ \sum_{p=1}^{\log n} \space\space\space\space$$ 2^{p-1} 
-- $$ \sum_{p=1}^{\log n} \space\space\space\space$$ 2 * (p-1) 
+- $$ \sum_{p=1}^{\log n} \space\space\space\space$$ 2 * (p-1)
 
 ¿Cuál es el coste temporal de crear un montículo a partir de un vector no ordenado?
 1
@@ -5232,3 +5232,45 @@ Se pretende borrar todos los elementos de un vector cuyo valor es un número par
 - O(n)
 - O(n^2)
 - Ninguna de las otras dos opciones es la correcta.
+
+¿Cuál de las formulaciones expresa mejor el coste temporal de la siguiente función?```int f(int n){\n  int count = 0;\n  for (int i = n; i >= 2; i -= 2)\n    for (int j = 1; j < i; j*=2)\n      count += 1;\n  return count;\n}```
+1
+- $$ C_e(n) = \sum_{i=1}^{n/2}(1 + \log_2 i) $$
+- $$ C_e(n) = \sum_{i=1}^{n/2} \log_2(n/2) $$
+- $$ C_e(n) = \sum_{i=2}^{n-1} \log_2(2i) $$
+- No contesto (equivalente a no marcar nada).
+
+En función del parámetro n, ¿Cuál es la complejidad temporal asintótica de la siguiente función?```unsigned long pow2_1 (unsigned n){\n  unsigned long res=1;\n  for (unsigned i=0; i<n; i++)\n    res+=pow2_1(i);\n  return res;\n}```
+3
+- Las otras dos opciones son ambas falsas.
+- No contesto (equivalente a no marcar nada).
+- $$ \Theta(2^n) $$
+- $$ \Theta(n^2) $$
+
+Sin considerar el espacio que ocupa la pila de recursión, ¿Cuál es la complejidad espacial del algoritmo Quicksort?
+2
+- No contesto (equivalente a no marcar nada).
+- $$ \Theta(1) $$
+- $$ \Theta(n) $$
+- $$ \Theta(n \log n) $$
+
+Sea la siguiente relación de recurrencia: \n\n$$ T(n) = \begin{cases} 1 & si\,n \le 1 \\ 2T(n/2) + g(n) & en\,otro\, caso\end{cases} $$\nSi $$ T(n) \in O(n^2) $$, ¿en cuál de estos tres casos nos podemos encontrar?
+4
+- $$ g(n) = n $$
+- $$ g(n) = 1 $$
+- No contesto (equivalente a no marcar nada).
+- $$ g(n) = n^2 $$
+
+La siguiente relación de recurrencia expresa la complejidad de un algoritmo recursivo, donde g(n) es una función polinómica: \n$$ T(n) = \begin{cases} 1 & si\,n \le 1 \\ T(n/2) + g(n) & en\,otro\, caso\end{cases} $$\nDi cuál de las siguientes afirmaciones es falsa:
+4
+- Si $$ g(n) \in O(1) $$ la relación de recurrencia representa la complejidad temporal del algoritmo de búsqueda dicotómica.
+- No contesto (equivalente a no marcar nada).
+- Si $$ g(n) \in O(n) $$ la relación de recurrencia representa la complejidad temporal en el mejor caso del algoritmo de búsqueda del k-ésimo elemento más pequeño de un vector (estudiado en clase).
+- Si $$ g(n) \in O(n^2) $$ la relación de recurrencia representa la complejidad temporal del algoritmo de ordenación por inserción binaria.
+
+Se quieren ordenar n números distintos comprendidos entre 1 y m. Para ello se usa un array de m booleanos que se inicializan primero a false. A continuación se recorren los n números cambiando los valores del elemento del vector de booleanos correspondiente a su número a true. Por último se recorre el vector de booleanos escribiendo los índices de los elementos del vector de booleanos que son true. ¿Es este algoritmo más rápido (asintóticamente) que el Mergesort?
+3
+- No contesto (equivalente a no marcar nada).
+- Sí, ya que el Mergesort es O(n log n) y este es O(n).
+- Sólo si n log n > k · m (donde k es una constante que depende de la implementación).
+- No, ya que este algoritmo ha de recorrer varias veces el vector de booleanos.

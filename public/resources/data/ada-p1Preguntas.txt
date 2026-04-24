@@ -669,3 +669,22 @@ Se quieren ordenar n números distintos comprendidos entre 1 y m. Para ello se u
 - Sí, ya que el Mergesort es O(n log n) y este es O(n).
 - Sólo si n log n > k · m (donde k es una constante que depende de la implementación).
 - No, ya que este algoritmo ha de recorrer varias veces el vector de booleanos.
+
+Con respecto al parámetro n, ¿Cuál es la complejidad temporal de la siguiente función?```void f(unsigned n){
+	if(n < 2) return;
+	for(int i = 0; i < pow(n,3); i++)
+		cout << "*";
+	f(n/2);
+}```
+2
+- $$ \Theta(n^4) $$
+- $$ \Theta(n^3) $$
+- No contesto.
+- $$ \Theta(n^3 \log n) $$
+
+¿Cuál de las siguientes relaciones de recurrencia expresa mejor el número de llamadas recursivas que hace el algoritmo Mergesort?
+4
+- $$ T(n) = n + T(n/2) $$ para $$ n > 1 $$ y $$ T(n) = 1 $$ para $$ n < 2 $$
+- $$ T(n) = n + 2T(n/2) $$ para $$ n > 1 $$ y $$ T(n) = 1 $$ para $$ n < 2 $$
+- No contesto.
+- $$ T(n) = 1 + 2T(n/2) $$ para $$ n > 1 $$ y $$ T(n) = 1 $$ para $$ n < 2 $$
