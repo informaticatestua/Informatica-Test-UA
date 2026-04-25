@@ -4346,9 +4346,9 @@ Dada la suma de la recurrencia: \n $$ T(n) = \begin{cases} 1 & n = 0 \\ \sum_{k=
 - T(n) ∈ Θ(n!)
 
 Se pretende implementar mediante programación dinámica iterativa la función recursiva: ¿Cuál es la mejor complejidad espacial que se puede conseguir?```float f(unsigned x, int y){ \n\tif( y < 0 ) return 0; \n\tfloat A = 0.0; \n\tif ( v1[y] <= x ) \n\t\tA = v2[y] + f( x-v1[y], y-1 ); \n\tfloat B = f( x, y-1 ); \n\treturn min(A, 2+B); \n}``` CONFIRMADA
-3
-- O(1)
-- O(y^2)
+2
+- O(x*y)
+- O(x)
 - O(y)
 
 La programación dinámica... CONFIRMADA
@@ -4580,10 +4580,10 @@ Se pretende implementar mediante programación dinámica iterativa la función r
 - O(x ⋅ y)
 
 Se pretende implementar mediante programación dinámica iterativa la función recursiva:```int f(int x, int y){\n\tif( x <= y ) return 1;\n\treturn x + f(x-1,y);\n}```¿Cuál es la mejor complejidad temporal que se puede conseguir? CONFIRMADA
-2
-- O(y)
+3
+- O(x^2)
 - O(x)
-- O(x ⋅ y)
+- O(1)
 
 La solución de programación dinámica iterativa del problema de la mochila discreta ... CONFIRMADA
 2
