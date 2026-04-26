@@ -1,66 +1,47 @@
-# DCA Test UA — Guía del Proyecto
+# DCA Test UA — Guía de IA (CLAUDE.md / AGENTS.md)
 
-## Descripción
-**DCA Test UA** es una plataforma web interactiva diseñada para que estudiantes de Ingeniería Informática de la Universidad de Alicante (UA) practiquen con baterías de preguntas de exámenes reales y simulacros. 
+## 1. Project Overview (Descripción del Proyecto)
+**DCA Test UA** es una plataforma web interactiva para que estudiantes de Ingeniería Informática de la Universidad de Alicante (UA) practiquen con baterías de preguntas de exámenes y simulacros. 
+Prioriza una experiencia fluida, retroalimentación inmediata, renderizado matemático complejo y soporte para modo oscuro.
 
-El sistema permite navegar por diferentes asignaturas, responder cuestionarios con retroalimentación inmediata, visualizar fórmulas matemáticas complejas (LaTeX) y fragmentos de código, todo integrado en una interfaz moderna con soporte para modo oscuro.
+## 2. Tech Stack (Tecnologías)
+- **Framework**: Astro 5 (Generación Estática + Rutas Dinámicas).
+- **Core Logic**: Vanilla JS en el cliente (`main.js`).
+- **Styling**: Tailwind CSS 4 + CSS nativo.
+- **Math & Code**: KaTeX (fórmulas LaTeX) y Prism.js (resaltado de código).
+- **Deployment**: Vercel.
 
-## Stack Tecnológico
-- **Framework**: [Astro 5](https://astro.build/) (Generación Estática + Rutas Dinámicas).
-- **Lógica Core**: JavaScript purista (Vanilla JS) en el cliente.
-- **Estilos**: [Tailwind CSS 4](https://tailwindcss.com/) + CSS nativo.
-- **Matemáticas**: [KaTeX](https://katex.org/) para renderizado de fórmulas LaTeX.
-- **Resaltado de Código**: [Prism.js](https://prismjs.com/) para bloques de código C++ y otros.
-- **Despliegue**: Optimizado para Vercel (ver `astro.config.mjs`).
+## 3. Architecture Rules (Reglas de Arquitectura)
+- **Motor Mono-Archivo (`main.js`)**: Maneja carga asíncrona de `.txt`, parseo, shuffle y validación.
+- **Estado Persistente**: `estadosPreguntas` guarda selecciones de usuario para poder navegar entre preguntas sin pérdida de información.
+- **Data Protocol**: Preguntas almacenadas en `public/resources/data/*.txt`. Soporte nativo para Markdown, código (`` ` ``), LaTeX (`$$ ... $$`) e imágenes `![Alt](URL){width=X height=Y}`.
+- **Rutas Dinámicas**: `src/pages/[subject].astro` inyecta el ID de la asignatura de la URL al motor JS.
 
-## Estructura del Repositorio
-```
-/
-├── CLAUDE.md                ← esta guía
-├── README.md                 ← documentación de usuario
-├── public/                  ← activos estáticos y motor JS
-│   └── resources/
-│       ├── data/            ← datasets de preguntas (.txt)
-│       ├── js/
-│       │   └── main.js      ← motor principal del quiz
-│       └── css/             ← estilos de librerías externas
-├── src/                     ← código fuente Astro
-│   ├── components/          ← componentes UI (modales, etc.)
-│   ├── layouts/             ← BaseLayout.astro (layout maestro)
-│   ├── pages/               ← rutas (index, [subject], resumen)
-│   └── styles/              ← CSS global y configuración Tailwind
-└── astro.config.mjs         ← configuración del framework
-```
+## 4. File/Directory Structure (Estructura de Archivos)
+- `public/resources/data/`: Datasets de preguntas en formato texto (`.txt`).
+- `public/resources/js/main.js`: Lógica central del sistema de cuestionarios.
+- `src/layouts/BaseLayout.astro`: Layout maestro (gestión del `<head>` y scripts globales).
+- `src/pages/`: Rutas de la aplicación web (incluye `index.astro` y las páginas dinámicas).
+- `src/styles/global.css`: Variables globales de CSS y configuración base de Tailwind.
 
-## Protocolo de Datos (Preguntas)
-Las preguntas se almacenan en archivos `.txt` dentro de `public/resources/data/` con el siguiente formato:
-```text
-Enunciado de la pregunta (soporta Markdown e imágenes)
-Índice de respuesta correcta (1-N) o lista (1,2)
-- Opción A
-- Opción B
-- Opción C
-- Opción D
-[Línea en blanco opcional]
-```
-- **Soporte de Código**: Usa triple backtick ` ``` ` para bloques de código.
-- **Soporte LaTeX**: Usa `$$ ... $$` para fórmulas matemáticas.
-- **Imágenes**: Usa sintaxis Markdown `![Alt](URL){width=X height=Y}`.
+## 5. Coding Conventions (Convenciones de Código)
+- **Nomenclatura**: Los archivos de datos deben llamarse `[id-asignatura]Preguntas.txt` (las excepciones van explícitamente en `main.js`).
+- **UI/UX y Estilos**: Usa clases utilitarias de Tailwind respetando las variables semánticas (surface, background, text-main) definidas en `global.css`.
+- **Accesibilidad**: Mantener e impulsar la navegación por teclado (teclas 1-5, Enter, etc.) en todos los componentes interactivos.
+- **Rendimiento**: Preferir etiquetas `<script is:inline>` para librerías de terceros, evitando hinchar el bundle de Astro.
 
-## Conceptos de Implementación
-1. **Motor Mono-Archivo (`main.js`)**: Maneja la carga asíncrona de archivos `.txt`, el parseo, la mezcla (shuffle), el control de estado de la sesión y la validación de respuestas.
-2. **Navegación Fluida**: Se guarda el estado de cada pregunta en `estadosPreguntas` para permitir navegar hacia atrás sin perder las selecciones ni los resultados.
-3. **Rutas Dinámicas**: `src/pages/[subject].astro` captura el ID de la asignatura de la URL y lo pasa al motor JS para cargar el dataset correspondiente.
-4. **Resumen de Resultados**: Al finalizar, el sistema calcula estadísticas y permite visualizarlas en una vista dedicada que puede exportarse (vía session storage).
+## 6. "Never" Section (Lo que NUNCA debes hacer)
+- **NUNCA** introduzcas frameworks JS reactivos (React, Vue, Svelte) para la lógica core del cuestionario; mantén estricto Vanilla JS.
+- **NUNCA** alteres el formato posicional y de salto de línea de los archivos `.txt` de preguntas.
+- **NUNCA** utilices colores "hardcodeados" en el HTML que rompan la paleta y el funcionamiento del modo oscuro.
+- **NUNCA** asumas que el proyecto usará renderizado en el servidor (SSR) para la lógica pesada; Astro opera aquí como Generador de Sitios Estáticos (SSG).
 
-## Comandos de Desarrollo
-- `npm install`: Instala dependencias.
-- `npm run dev`: Inicia el servidor de desarrollo en `http://localhost:4321`.
-- `npm run build`: Genera el sitio estático para producción.
-- `npm run preview`: Previsualiza la build de producción localmente.
+## 7. Specific Commands (Comandos Específicos)
+- `npm install` - Instalar las dependencias del proyecto.
+- `npm run dev` - Arrancar el servidor de desarrollo en `localhost:4321`.
+- `npm run build` - Generar la compilación estática del proyecto (carpeta `dist/`).
+- `npm run preview` - Previsualizar localmente la compilación de producción.
 
-## Estándares de Código
-- **Nomenclatura**: Nombres de archivos de datos deben seguir el patrón `[id-asignatura]Preguntas.txt` (con excepciones mapeadas en `main.js`).
-- **UI/UX**: Mantener fidelidad a las variables de color globales definidas en `global.css` (Tailwind 4).
-- **Accesibilidad**: Todos los botones de opciones deben ser accesibles vía teclado (números 1-5 y Enter).
-- **Rendimiento**: Evitar dependencias pesadas innecesarias; preferir librerías `is:inline` que no saturen el bundle de Astro si el peso es crítico.
+## 8. Pointers to Reference Files (Puntos de Referencia)
+- **Documentación de Usuario e Instalación**: Consulta `README.md`.
+- **Sistema de Diseño y Paletas**: Consulta `src/styles/global.css`.
