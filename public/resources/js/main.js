@@ -168,29 +168,29 @@ function iniciarAsignatura(archivo) {
 let preguntaActual = 0;
 
 function mostrarPregunta() {
-        // Botón Verificar deshabilitado hasta seleccionar opción
-        const verificarBtn = document.getElementById("verificar");
-        if (verificarBtn) {
-            verificarBtn.disabled = true;
-        }
+    // Botón Verificar deshabilitado hasta seleccionar opción
+    const verificarBtn = document.getElementById("verificar");
+    if (verificarBtn) {
+        verificarBtn.disabled = true;
+    }
 
-        // Botones secundarios accesibles
-        const volverBtn = document.getElementById("volver-pregunta");
-        if (volverBtn) {
-            volverBtn.tabIndex = 0;
-            volverBtn.setAttribute("aria-label", "Anterior");
-        }
-        const saltarBtn = document.getElementById("saltar-pregunta");
-        if (saltarBtn) {
-            saltarBtn.tabIndex = 0;
-            saltarBtn.setAttribute("aria-label", "Saltar pregunta");
-            saltarBtn.onclick = function() {
-                guardarEstadoActual();
-                preguntaActual = (preguntaActual + 1) % preguntas.length;
-                mostrarPregunta();
-                restaurarEstadoActual();
-            };
-        }
+    // Botones secundarios accesibles
+    const volverBtn = document.getElementById("volver-pregunta");
+    if (volverBtn) {
+        volverBtn.tabIndex = 0;
+        volverBtn.setAttribute("aria-label", "Anterior");
+    }
+    const saltarBtn = document.getElementById("saltar-pregunta");
+    if (saltarBtn) {
+        saltarBtn.tabIndex = 0;
+        saltarBtn.setAttribute("aria-label", "Saltar pregunta");
+        saltarBtn.onclick = function () {
+            guardarEstadoActual();
+            preguntaActual = (preguntaActual + 1) % preguntas.length;
+            mostrarPregunta();
+            restaurarEstadoActual();
+        };
+    }
     const pregunta = preguntas[preguntaActual];
     const contenedorPregunta = document.getElementById("pregunta");
     const contenedorOpciones = document.getElementById("opciones");
@@ -265,7 +265,7 @@ function mostrarPregunta() {
     if (contenedorOpciones._changeHandler) {
         contenedorOpciones.removeEventListener("change", contenedorOpciones._changeHandler);
     }
-    contenedorOpciones._changeHandler = function(e) {
+    contenedorOpciones._changeHandler = function (e) {
         if (!e.target || e.target.name !== "opcion") return;
         const verificarBtn = document.getElementById("verificar");
         if (verificarBtn) verificarBtn.disabled = false;
@@ -396,7 +396,7 @@ function verificarRespuesta() {
     // Resaltar las opciones correctas e incorrectas
     for (let i = 0; i < labels.length; i++) {
         const valor = parseInt(labels[i].htmlFor.replace("opcion", ""));
-        const inp   = labels[i].querySelector("input");
+        const inp = labels[i].querySelector("input");
         labels[i].classList.remove("selected");
         if (inp) inp.disabled = true;
 
@@ -445,7 +445,7 @@ function siguientePregunta() {
     document.getElementById("verificar").addEventListener("click", verificarRespuesta);
     document.getElementById("verificar").innerText = "Verificar";
     document.getElementById("resultado").innerText = "";
-    
+
     restaurarEstadoActual();
 }
 
@@ -458,7 +458,7 @@ function guardarEstadoActual() {
     const respuestaSeleccionada = document.querySelectorAll('input[name="opcion"]:checked');
     const seleccionadas = Array.from(respuestaSeleccionada).map((input) => parseInt(input.value));
     const isVerified = document.getElementById("verificar").innerText === "Siguiente";
-    
+
     estadosPreguntas[preguntaActual] = {
         seleccionadas: seleccionadas,
         isVerified: isVerified
@@ -468,10 +468,10 @@ function guardarEstadoActual() {
 function restaurarEstadoActual() {
     const estadoGuardado = estadosPreguntas[preguntaActual];
     if (!estadoGuardado) return;
-    
+
     const opciones = document.getElementById("opciones");
     const inputs = opciones.querySelectorAll("input");
-    
+
     inputs.forEach((input) => {
         const valor = parseInt(input.value);
         if (estadoGuardado.seleccionadas.includes(valor)) {
@@ -496,7 +496,7 @@ function restaurarEstadoActual() {
 
         for (let i = 0; i < labels.length; i++) {
             const valor = parseInt(labels[i].htmlFor.replace("opcion", ""));
-            const inp   = labels[i].querySelector("input");
+            const inp = labels[i].querySelector("input");
             labels[i].classList.remove("selected");
             if (inp) inp.disabled = true;
 
@@ -530,17 +530,17 @@ function restaurarEstadoActual() {
 
 function volverPreguntaAnterior() {
     if (preguntaActual === 0) return;
-    
+
     guardarEstadoActual();
-    
+
     preguntaActual = preguntaActual - 1;
     mostrarPregunta();
-    
+
     document.getElementById("verificar").removeEventListener("click", siguientePregunta);
     document.getElementById("verificar").addEventListener("click", verificarRespuesta);
     document.getElementById("verificar").innerText = "Verificar";
     document.getElementById("resultado").innerText = "";
-    
+
     restaurarEstadoActual();
 }
 
@@ -633,17 +633,6 @@ function actualizarContador() {
     contador.innerText = `Correctas: ${preguntasCorrectas} | Contestadas: ${totalPreguntas} ${porcentaje}`;
 }
 
-function mostrarContador() {
-    const contador = document.getElementById("contador");
-    contador.classList.toggle("hidden");
-}
-
-document.addEventListener("keydown", (event) => {
-    if (event.key === "c" || event.key === "C") {
-        mostrarContador();
-    }
-});
-
 function resetearContador() {
     totalPreguntas = 0;
     preguntasCorrectas = 0;
@@ -662,7 +651,7 @@ document.addEventListener("keydown", (event) => {
     const opciones = document.getElementsByName("opcion");
     if (opciones.length > 0) {
         let target = null;
-        if (event.key === "1" || event.key === "Numpad1")      target = opciones[0];
+        if (event.key === "1" || event.key === "Numpad1") target = opciones[0];
         else if (event.key === "2" || event.key === "Numpad2") target = opciones[1];
         else if (event.key === "3" || event.key === "Numpad3") target = opciones[2];
         else if (event.key === "4" || event.key === "Numpad4") target = opciones[3];
@@ -691,16 +680,16 @@ if (copyBtn) {
                 console.log("Copiado con éxito");
                 const copyText = document.getElementById("copyText");
                 const icon = copyBtn.querySelector(".material-icons");
-                
+
                 if (copyText && icon) {
                     const originalText = copyText.innerText;
                     const originalIcon = icon.innerText;
-                    
+
                     copyText.innerText = "Copiado";
                     icon.innerText = "check";
                     copyBtn.classList.add("text-green-600", "dark:text-green-400", "border-green-600", "dark:border-green-400");
                     copyBtn.classList.remove("text-text-muted", "border-border-subtle");
-                    
+
                     setTimeout(() => {
                         copyText.innerText = originalText;
                         icon.innerText = originalIcon;
@@ -806,17 +795,17 @@ function prepararEntornoMultiples(nombre, archivos) {
 
 function splitLongText(text) {
     if (!text || text.length < 75) return text;
-    
+
     // Prevent splitting markdown, formatting, HTML, or math
     if (text.includes('<') || text.includes('\n') || text.includes('```') || text.includes('$$') || text.includes('\\[')) return text;
-    
+
     const midPoint = Math.floor(text.length / 2);
     let leftSpace = text.lastIndexOf(' ', midPoint);
     let rightSpace = text.indexOf(' ', midPoint);
-    
+
     let nearestSpace = -1;
     if (leftSpace === -1 && rightSpace === -1) {
-        return text; 
+        return text;
     } else if (leftSpace === -1) {
         nearestSpace = rightSpace;
     } else if (rightSpace === -1) {
@@ -828,8 +817,8 @@ function splitLongText(text) {
             nearestSpace = rightSpace;
         }
     }
-    
+
     if (nearestSpace < 25 || nearestSpace > text.length - 25) return text;
-    
+
     return text.substring(0, nearestSpace) + '<br>' + text.substring(nearestSpace + 1);
 }
