@@ -203,7 +203,6 @@ Callbacks de error
 
 ¿Cómo implementa Go las interfaces sin usar palabras clave como implements?
 1
-
 Con duck typing: un tipo satisface una interfaz si define sus métodos
 Con declaración type T implements I
 Con @implements encima de la estructura
