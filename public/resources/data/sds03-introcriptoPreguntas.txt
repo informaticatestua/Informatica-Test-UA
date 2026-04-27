@@ -90,7 +90,7 @@ Stream / Block
 Monoalfabético / Polialfabético
 
 ¿Quién es considerado el padre de la Teoría de la Información moderna?
-2
+1
 Claude Shannon
 Alan Turing
 Whitfield Diffie
@@ -153,7 +153,7 @@ El componente que realiza la transformación de entradas en salidas cifradas
 El programa que genera claves
 
 ¿Cómo se define el “espacio de claves”?
-2
+1
 El número total de claves posibles de un criptosistema
 La longitud en bits de la clave
 El algoritmo de generación de claves
@@ -195,14 +195,14 @@ Generar números aleatorios criptográficos
 Calcular sumas de verificación rápidas
 
 ¿Qué primitiva es la más adecuada para cifrar grandes volúmenes de datos de forma rápida y segura?
-4
+1
 Criptografía simétrica (AES, etc.)
 RSA
 SHA-256
 DES3
 
 ¿Cuál es la función principal de la criptografía asimétrica en las comunicaciones seguras?
-3
+1
 Intercambio de claves y firma digital
 Cifrado de flujo de datos en tiempo real
 Generación de números aleatorios
@@ -223,7 +223,7 @@ Utilizan menos infraestructura criptográfica
 Siempre usan claves más cortas
 
 En la práctica de películas, ¿por qué es erróneo fijar dígitos de un código uno a uno?
-4
+1
 Porque las posiciones no son independientes; cada combinación es única
 Porque los candados modernos usan códigos aleatorios
 Porque el código cambia automáticamente tras cada intento
@@ -244,7 +244,7 @@ Seguridad por cifrado de pergaminos
 Votaciones cribadas manualmente
 
 ¿A qué corresponde la “hypótesis de Kerckhoffs”?
-3
+1
 La seguridad debe residir en la clave, no en el algoritmo, que debe ser público
 El cifrado más seguro es el polialfabético
 Las máquinas Enigma no se debían compartir con aliados
@@ -412,7 +412,7 @@ Config.PreferServerCipherSuites
 Config.InsecureSkipVerify = true
 
 ¿Cómo se desactiva la comprobación de nombre de servidor en una conexión TLS (no recomendado)?
-4
+1
 Config.InsecureSkipVerify = true
 Config.VerifyPeerCertificate = nil
 Config.Certificates = nil
