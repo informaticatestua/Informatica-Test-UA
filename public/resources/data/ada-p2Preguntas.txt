@@ -193,8 +193,8 @@ Dada la suma de la recurrencia: \n $$ T(n) = \begin{cases} 1 & n = 0 \\ \sum_{k=
 Se pretende implementar mediante programación dinámica iterativa la función recursiva: ¿Cuál es la mejor complejidad espacial que se puede conseguir?```float f(unsigned x, int y){ \n\tif( y < 0 ) return 0; \n\tfloat A = 0.0; \n\tif ( v1[y] <= x ) \n\t\tA = v2[y] + f( x-v1[y], y-1 ); \n\tfloat B = f( x, y-1 ); \n\treturn min(A, 2+B); \n}``` CONFIRMADA
 3
 - O(1)
-- O(y^2)
-- O(y)
+- O(x*y)
+- O(x)
 
 La programación dinámica... CONFIRMADA
 3
@@ -275,7 +275,7 @@ Decid cuál de estas tres es la cota pesimista más ajustada al valor óptimo de
 - Backtracking 
 
 Ante un problema que presenta una solución recursiva siempre podemos aplicar: (NO SEGURO)
-1
+2
 - Divide y vencerás 
 - Programación dinámica 
 - Cualquiera de las dos anteriores 
