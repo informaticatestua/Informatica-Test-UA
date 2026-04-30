@@ -1,326 +1,291 @@
-// --- CARGA DE PREGUNTAS ---
-async function cargarPreguntas(archivo) {
-    // Usamos la ruta absoluta igual que en main.js
-    const response = await fetch("/resources/data/" + archivo);
+/**
+ * DCA Test UA — Página de Resumen.
+ *
+ * Carga las preguntas de una asignatura (o grupo multi-archivo) y las
+ * pinta como una lista con la respuesta correcta marcada. No reutiliza
+ * el motor (main.js), pero sí las utilidades de formateo compartidas
+ * vía `window.QuizFormat` para evitar duplicación de código.
+ *
+ * Organización interna del archivo:
+ *   1. Configuración (constantes, mapas).
+ *   2. Carga y parseo de datos.
+ *   3. Renderizado del resumen.
+ *   4. Inicialización (lectura de URL).
+ */
+(function () {
+    "use strict";
 
-    if (!response.ok) throw new Error("Archivo no encontrado (404)");
+    // ─────────────────────────────────────────────────────────────────────
+    // 1. CONFIGURACIÓN
+    // ─────────────────────────────────────────────────────────────────────
 
-    let preguntasTxt = await response.text();
+    const DATA_PATH = "/resources/data/";
 
-    if (
-        preguntasTxt.trim().toLowerCase().startsWith("<!doctype html>") ||
-        preguntasTxt.trim().toLowerCase().startsWith("<html")
-    ) {
-        throw new Error("Se recibió una página web en lugar de las preguntas");
-    }
+    const { formatTextWithCode, splitLongText } = window.QuizFormat;
 
-    return preguntasTxt.replace(/\r\n/g, "\n").replace(/\r/g, "\n").trim();
-}
+    /**
+     * Mismas excepciones de nombres que en main.js: hay que mantenerlas
+     * sincronizadas porque algunos archivos no siguen la convención
+     * `${id}Preguntas.txt`.
+     */
+    const NAME_EXCEPTIONS = Object.freeze({
+        "dca-oficial": "dcaPreguntas.txt",
+        "ada-full": "adaPreguntas.txt",
+        "ic-p1": "ic-p1.txt",
+        "taes-definitivo": "taesDefinitivoPreguntas.txt",
+        "ac_CP-F2": "ac_CP-F2_Preguntas.txt",
+        "ac_CP-F3": "ac_CP-F3_Preguntas.txt",
+        "ac_CT1-2": "ac_CT1-2_Preguntas.txt",
+        "ac_CT3-4": "ac_CT3-4_Preguntas.txt",
+    });
 
-// --- ARRANQUE PRINCIPAL ---
-window.onload = function () {
-    cargarTemaGuardado(); // Aplicamos el tema (claro/oscuro) nada más entrar
-
-    // 1. Leemos la URL (ejemplo: "/sdsfull/resumen")
-    const path = window.location.pathname;
-
-    // Dividimos la URL por las barras y quitamos espacios vacíos. Nos quedamos con el primer trozo.
-    // Ej: ["sdsfull", "resumen"] -> Nos quedamos con "sdsfull"
-    const pathParts = path.split("/").filter((p) => p);
-
-    if (pathParts.length > 0) {
-        const asignaturaId = pathParts[0];
-        cargarResumenDesdeId(asignaturaId);
-    }
-};
-
-// --- CEREBRO PARA CARGAR LA ASIGNATURA ---
-function cargarResumenDesdeId(id) {
-    let archivosACargar = [];
-    let esMultiple = false;
-
-    // Detectamos si es un examen especial con múltiples archivos
-    if (id === "redes_full") {
-        esMultiple = true;
-        archivosACargar = [
+    /** Defaults para grupos multi-archivo (en sync con main.js). */
+    const MULTI_FILE_GROUPS = Object.freeze({
+        redes_full: [
             "redesPreguntas.txt",
             "redesEnero2324Preguntas.txt",
             "redesEnero2425Preguntas.txt",
             "redesJulio2425Preguntas.txt",
             "redesEnero2526Preguntas.txt",
-        ];
-    } else if (id === "sdsfull") {
-        esMultiple = true;
-        archivosACargar = JSON.parse(sessionStorage.getItem("sdsfullArchivos") || "[]");
-        // Por si alguien entra directo a la URL sin pasar por el menú
-        if (archivosACargar.length === 0) {
-            archivosACargar = [
-                "sds01-presentacionPreguntas.txt",
-                "sds02-introgoPreguntas.txt",
-                "sds03-introcriptoPreguntas.txt",
-                "sds04-aleatoriosPreguntas.txt",
-                "sds05-flujoPreguntas.txt",
-                "sds06-bloquePreguntas.txt",
-                "sds07-hashPreguntas.txt",
-                "sds08-publicaPreguntas.txt",
-                "sds09-transportePreguntas.txt",
-                "sds10-ejerciciosPreguntas.txt",
-                "sds11-malwarePreguntas.txt",
-                "sds12-ataquesPreguntas.txt",
-                "sds13-wirelessPreguntas.txt",
-                "sds14-recomendacionesPreguntas.txt",
-            ];
-        }
-    }
-
-    if (esMultiple) {
-        cargarMultiplesArchivos(archivosACargar).then((preguntas) => renderizarResumen(preguntas));
-    } else {
-        // Excepciones de nombres de archivos
-        const excepciones = {
-            "dca-oficial": "dcaPreguntas.txt",
-            "ada-full": "adaPreguntas.txt",
-            "ic-p1": "ic-p1.txt",
-            "taes-definitivo": "taesDefinitivoPreguntas.txt",
-            "ac_CP-F2": "ac_CP-F2_Preguntas.txt",
-            "ac_CP-F3": "ac_CP-F3_Preguntas.txt",
-            "ac_CT1-2": "ac_CT1-2_Preguntas.txt",
-            "ac_CT3-4": "ac_CT3-4_Preguntas.txt",
-        };
-        const archivo = excepciones[id] ? excepciones[id] : id + "Preguntas.txt";
-
-        cargarPreguntas(archivo)
-            .then((preguntasTxt) => renderizarResumen(procesarTextoPreguntas(preguntasTxt)))
-            .catch((error) => {
-                console.warn("Error cargando el resumen:", error);
-                document.getElementById("app").innerHTML =
-                    "<h1>Error: No se encontró el resumen para esta asignatura.</h1>";
-            });
-    }
-}
-
-// --- PROCESAMIENTO DE TEXTO ---
-function procesarTextoPreguntas(preguntasTxt) {
-    return preguntasTxt.split(/\n{2,}/).map((preguntaTxt) => {
-        const [pregunta, respuesta, ...opcionesRaw] = preguntaTxt.split("\n");
-        const opciones = opcionesRaw.filter((op) => op.trim() !== "");
-
-        // Soportamos múltiples respuestas correctas (ej: "1, 3")
-        const respuestasCorrectasIndices = respuesta.split(",").map((r) => parseInt(r.trim()));
-
-        // Devolvemos todas las opciones con un flag de si son correctas
-        const todasLasOpciones = opciones
-            .filter((op) => op && op.toUpperCase() !== "NO MARCAR")
-            .map((texto, i) => ({
-                texto,
-                correcta: respuestasCorrectasIndices.includes(i + 1),
-            }));
-
-        return {
-            pregunta,
-            opciones: todasLasOpciones,
-        };
+        ],
+        sdsfull: [
+            "sds01-presentacionPreguntas.txt",
+            "sds02-introgoPreguntas.txt",
+            "sds03-introcriptoPreguntas.txt",
+            "sds04-aleatoriosPreguntas.txt",
+            "sds05-flujoPreguntas.txt",
+            "sds06-bloquePreguntas.txt",
+            "sds07-hashPreguntas.txt",
+            "sds08-publicaPreguntas.txt",
+            "sds09-transportePreguntas.txt",
+            "sds10-ejerciciosPreguntas.txt",
+            "sds11-malwarePreguntas.txt",
+            "sds12-ataquesPreguntas.txt",
+            "sds13-wirelessPreguntas.txt",
+            "sds14-recomendacionesPreguntas.txt",
+        ],
     });
-}
 
-// --- CARGA MÚLTIPLE ---
-async function cargarMultiplesArchivos(archivos) {
-    let todasLasPreguntas = [];
-    for (const archivo of archivos) {
+    /** KaTeX en el resumen sí admite display mode (formulas centradas). */
+    const KATEX_OPTIONS = {
+        delimiters: [
+            { left: "$$", right: "$$", display: false },
+            { left: "\\[", right: "\\]", display: true },
+        ],
+    };
+
+    // ─────────────────────────────────────────────────────────────────────
+    // 2. CARGA Y PARSEO
+    // ─────────────────────────────────────────────────────────────────────
+
+    /**
+     * Descarga un archivo de preguntas y devuelve su texto normalizado.
+     * Detecta el caso típico de hosting que sirve un HTML 200 ante un
+     * `.txt` inexistente.
+     */
+    async function fetchPreguntasTxt(archivo) {
+        let response;
         try {
-            const preguntasTxt = await cargarPreguntas(archivo);
-            todasLasPreguntas = todasLasPreguntas.concat(procesarTextoPreguntas(preguntasTxt));
-        } catch (error) {
-            console.error(`Error cargando el archivo ${archivo}:`, error);
+            response = await fetch(DATA_PATH + archivo);
+        } catch (networkErr) {
+            throw new Error(`Error de red al descargar ${archivo}: ${networkErr.message}`);
         }
+
+        if (!response.ok) {
+            throw new Error(`Archivo no encontrado (${response.status}): ${archivo}`);
+        }
+
+        const raw = await response.text();
+        const sniff = raw.trim().toLowerCase();
+        if (sniff.startsWith("<!doctype html>") || sniff.startsWith("<html")) {
+            throw new Error(`El servidor devolvió HTML en lugar de las preguntas: ${archivo}`);
+        }
+
+        return raw.replace(/\r\n/g, "\n").replace(/\r/g, "\n").trim();
     }
-    return todasLasPreguntas;
-}
 
-// --- PINTAR EL RESUMEN EN LA PÁGINA ---
-function renderizarResumen(preguntas) {
-    const resumenContainer = document.getElementById("resumen");
-    resumenContainer.innerHTML = ""; // Limpiamos por si acaso
+    /**
+     * Convierte el texto crudo en una lista de preguntas con sus opciones.
+     * Cada opción se devuelve enriquecida con `{ texto, correcta }` para
+     * facilitar el render: el resumen no baraja, presenta los datos tal
+     * y como están en el archivo (con NO MARCAR filtrada).
+     */
+    function parsePreguntasTxt(preguntasTxt) {
+        return preguntasTxt.split(/\n{2,}/).map((bloque) => {
+            const [pregunta, respuesta, ...opcionesRaw] = bloque.split("\n");
+            const opciones = opcionesRaw.filter((op) => op.trim() !== "");
 
-    preguntas.forEach((pregunta, index) => {
-        // Pregunta
-        const preguntaElement = document.createElement("p");
-        preguntaElement.style.cssText = "margin-bottom: 8px; font-weight: 600;";
-        preguntaElement.innerHTML = `<strong>${index + 1}.</strong> ${formatTextWithCode(pregunta.pregunta)}`;
-        resumenContainer.appendChild(preguntaElement);
+            // 1-based: las respuestas correctas vienen como índices empezando en 1.
+            const indicesCorrectos = respuesta.split(",").map((r) => parseInt(r.trim(), 10));
 
-        // Opciones
-        const listaOpciones = document.createElement("ul");
-        listaOpciones.style.cssText = "list-style: none; padding: 0; margin: 0 0 20px 12px;";
+            const opcionesAnotadas = opciones
+                .filter((op) => op && op.toUpperCase() !== "NO MARCAR")
+                .map((texto, i) => ({
+                    texto,
+                    correcta: indicesCorrectos.includes(i + 1),
+                }));
 
-        pregunta.opciones.forEach((opcion) => {
-            const li = document.createElement("li");
-            li.style.cssText = "margin-bottom: 8px; padding: 12px 14px; border-radius: 6px; display: flex; align-items: flex-start; gap: 12px; border: 1px solid var(--border-subtle, rgba(255,255,255,0.1));";
-            
-            const iconSpan = document.createElement("span");
-            iconSpan.style.cssText = "flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 1.1em; line-height: 1.2; margin-top: 2px; width: 24px; height: 24px;";
-            
-            const textDiv = document.createElement("div");
-            textDiv.style.cssText = "flex-grow: 1; margin: 0; padding: 0;";
-            textDiv.innerHTML = formatTextWithCode(splitLongText(opcion.texto));
+            return { pregunta, opciones: opcionesAnotadas };
+        });
+    }
 
-            if (opcion.correcta) {
-                li.className = "correct";
-                iconSpan.innerHTML = "✓";
-                iconSpan.style.fontWeight = "bold";
-                iconSpan.style.color = "var(--green-500, #22c55e)";
+    /**
+     * Carga varios archivos en paralelo. Tolera fallos individuales:
+     * los registramos pero seguimos pintando los que sí cargaron.
+     */
+    async function loadMultipleFiles(archivos) {
+        const resultados = await Promise.allSettled(archivos.map(fetchPreguntasTxt));
+        const preguntas = [];
+
+        resultados.forEach((res, i) => {
+            if (res.status === "fulfilled") {
+                preguntas.push(...parsePreguntasTxt(res.value));
             } else {
-                iconSpan.innerHTML = "○";
-                iconSpan.style.color = "var(--text-muted, #9ca3af)";
-                li.style.backgroundColor = "transparent";
+                console.error(`Error cargando el archivo ${archivos[i]}:`, res.reason);
             }
-            
-            li.appendChild(iconSpan);
-            li.appendChild(textDiv);
-            listaOpciones.appendChild(li);
         });
 
-        resumenContainer.appendChild(listaOpciones);
-    });
+        return preguntas;
+    }
 
-    // Renderizar expresiones matemáticas KaTeX en todo el resumen
-    if (typeof renderMathInElement !== "undefined") {
-        renderMathInElement(resumenContainer, {
-            delimiters: [
-                { left: "$$", right: "$$", display: false },
-                { left: "\\[", right: "\\]", display: true },
-            ],
+    // ─────────────────────────────────────────────────────────────────────
+    // 3. RENDERIZADO
+    // ─────────────────────────────────────────────────────────────────────
+
+    /**
+     * Crea el `<li>` de una opción con su icono (✓ correcta, ○ incorrecta).
+     * Mantenemos los inline-styles porque el `ResumenLayout` no incluye
+     * todas las clases utilitarias del quiz, y mover esto a clases CSS
+     * obligaría a tocar el sistema de estilos (fuera del scope del refactor).
+     */
+    function renderOpcionLi(opcion) {
+        const li = document.createElement("li");
+        li.style.cssText =
+            "margin-bottom: 8px; padding: 12px 14px; border-radius: 6px;" +
+            " display: flex; align-items: flex-start; gap: 12px;" +
+            " border: 1px solid var(--border-subtle, rgba(255,255,255,0.1));";
+
+        const iconSpan = document.createElement("span");
+        iconSpan.style.cssText =
+            "flex-shrink: 0; display: flex; align-items: center; justify-content: center;" +
+            " font-size: 1.1em; line-height: 1.2; margin-top: 2px; width: 24px; height: 24px;";
+
+        const textDiv = document.createElement("div");
+        textDiv.style.cssText = "flex-grow: 1; margin: 0; padding: 0;";
+        textDiv.innerHTML = formatTextWithCode(splitLongText(opcion.texto));
+
+        if (opcion.correcta) {
+            li.className = "correct";
+            iconSpan.innerHTML = "✓";
+            iconSpan.style.fontWeight = "bold";
+            iconSpan.style.color = "var(--green-500, #22c55e)";
+        } else {
+            iconSpan.innerHTML = "○";
+            iconSpan.style.color = "var(--text-muted, #9ca3af)";
+            li.style.backgroundColor = "transparent";
+        }
+
+        li.appendChild(iconSpan);
+        li.appendChild(textDiv);
+        return li;
+    }
+
+    /** Pinta el resumen completo dentro del contenedor `#resumen`. */
+    function renderizarResumen(preguntas) {
+        const resumenContainer = document.getElementById("resumen");
+        if (!resumenContainer) return;
+        resumenContainer.innerHTML = "";
+
+        preguntas.forEach((pregunta, index) => {
+            const preguntaElement = document.createElement("p");
+            preguntaElement.style.cssText = "margin-bottom: 8px; font-weight: 600;";
+            preguntaElement.innerHTML = `<strong>${index + 1}.</strong> ${formatTextWithCode(pregunta.pregunta)}`;
+            resumenContainer.appendChild(preguntaElement);
+
+            const lista = document.createElement("ul");
+            lista.style.cssText = "list-style: none; padding: 0; margin: 0 0 20px 12px;";
+            pregunta.opciones.forEach((opcion) => lista.appendChild(renderOpcionLi(opcion)));
+            resumenContainer.appendChild(lista);
         });
-    }
 
-    // Resaltar el código si hay Prism
-    if (typeof Prism !== "undefined") {
-        Prism.highlightAll();
-    }
-}
-
-// --- FUNCIONES DE FORMATEO (Copiadas de main.js) ---
-function escapeHTML(str) {
-    return str
-        .replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;")
-        .replace(/"/g, "&quot;")
-        .replace(/'/g, "&#39;");
-}
-
-function formatTextWithCode(text) {
-    if (!text) return "";
-    const parts = text.split("```");
-    let finalText = "";
-
-    parts.forEach((part, index) => {
-        if (index % 2 === 1) {
-            finalText +=
-                '<pre><code class="language-cpp">' +
-                escapeHTML(part)
-                    .replace(/\\n/g, "<br>")
-                    .replace(/\\t/g, "&nbsp;&nbsp;&nbsp;&nbsp;") +
-                "</code></pre>";
-        } else {
-            let escapedText = escapeHTML(part)
-                .replace(/\\n/g, "<br>")
-                .replace(/\\t/g, "&nbsp;&nbsp;&nbsp;&nbsp;");
-
-            const imageRegex = /!\[([^\]]*)\]\(([^)]+)\)(?:\{([^}]+)\})?/g;
-            escapedText = escapedText.replace(imageRegex, (match, alt, url, attrs) => {
-                let style = "max-width: 100%; height: auto;";
-                if (attrs) {
-                    const attrPairs = attrs.split(/\s+/);
-                    attrPairs.forEach((pair) => {
-                        const [key, value] = pair.split("=");
-                        if (key && value) {
-                            if (key.toLowerCase() === "width") {
-                                style += ` width:${value}px;`;
-                            } else if (key.toLowerCase() === "height") {
-                                style += ` height:${value}px;`;
-                            }
-                        }
-                    });
-                }
-                return `<img src="${url}" alt="${alt}" style="${style}" />`;
-            });
-            finalText += escapedText;
+        // KaTeX y Prism: los aplicamos al final, una sola vez.
+        if (typeof window.renderMathInElement === "function") {
+            window.renderMathInElement(resumenContainer, KATEX_OPTIONS);
         }
-    });
-    return finalText;
-}
+        if (typeof window.Prism !== "undefined") window.Prism.highlightAll();
+    }
 
-function splitLongText(text) {
-    if (!text || text.length < 75) return text;
-    
-    // Prevent splitting markdown, formatting, HTML, or math
-    if (text.includes('<') || text.includes('\n') || text.includes('```') || text.includes('$$') || text.includes('\\[')) return text;
-    
-    const midPoint = Math.floor(text.length / 2);
-    let leftSpace = text.lastIndexOf(' ', midPoint);
-    let rightSpace = text.indexOf(' ', midPoint);
-    
-    let nearestSpace = -1;
-    if (leftSpace === -1 && rightSpace === -1) {
-        return text; 
-    } else if (leftSpace === -1) {
-        nearestSpace = rightSpace;
-    } else if (rightSpace === -1) {
-        nearestSpace = leftSpace;
+    /** Muestra un mensaje de error si la asignatura no existe. */
+    function renderError() {
+        const app = document.getElementById("app");
+        if (app) {
+            app.innerHTML =
+                "<h1>Error: No se encontró el resumen para esta asignatura.</h1>";
+        }
+    }
+
+    // ─────────────────────────────────────────────────────────────────────
+    // 4. ARRANQUE DESDE LA URL
+    // ─────────────────────────────────────────────────────────────────────
+
+    /**
+     * Resuelve qué archivo(s) cargar a partir del slug de la URL.
+     * Devuelve `{ files, isMultiple }` o `null` si el slug es desconocido.
+     *
+     * Para SDSFULL prioriza los archivos guardados en sessionStorage
+     * (escritos por main.js justo antes de navegar al resumen). Esto
+     * permite mantener exactamente la misma combinación que el usuario
+     * vio en el quiz, incluso si la lista cambiase en main.js.
+     */
+    function resolverArchivos(id) {
+        if (id === "sdsfull") {
+            const desdeStorage = JSON.parse(sessionStorage.getItem("sdsfullArchivos") || "[]");
+            const files = desdeStorage.length > 0 ? desdeStorage : MULTI_FILE_GROUPS.sdsfull;
+            return { files, isMultiple: true };
+        }
+
+        if (MULTI_FILE_GROUPS[id]) {
+            return { files: MULTI_FILE_GROUPS[id], isMultiple: true };
+        }
+
+        const archivo = NAME_EXCEPTIONS[id] || `${id}Preguntas.txt`;
+        return { files: [archivo], isMultiple: false };
+    }
+
+    /** Carga, parsea y pinta el resumen para el slug `id`. */
+    async function cargarResumenDesdeId(id) {
+        const resolucion = resolverArchivos(id);
+        if (!resolucion) {
+            renderError();
+            return;
+        }
+
+        try {
+            const preguntas = resolucion.isMultiple
+                ? await loadMultipleFiles(resolucion.files)
+                : parsePreguntasTxt(await fetchPreguntasTxt(resolucion.files[0]));
+
+            if (preguntas.length === 0) {
+                renderError();
+                return;
+            }
+            renderizarResumen(preguntas);
+        } catch (error) {
+            console.warn("Error cargando el resumen:", error);
+            renderError();
+        }
+    }
+
+    /** Punto de entrada: extrae el slug del primer segmento de la ruta. */
+    function init() {
+        const pathParts = window.location.pathname.split("/").filter(Boolean);
+        if (pathParts.length === 0) return;
+        cargarResumenDesdeId(pathParts[0]);
+    }
+
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", init);
     } else {
-        if (midPoint - leftSpace <= rightSpace - midPoint) {
-            nearestSpace = leftSpace;
-        } else {
-            nearestSpace = rightSpace;
-        }
+        init();
     }
-    
-    if (nearestSpace < 25 || nearestSpace > text.length - 25) return text;
-    
-    return text.substring(0, nearestSpace) + '<br>' + text.substring(nearestSpace + 1);
-}
-
-// --- TEMA OSCURO / CLARO ---
-function toggleTheme() {
-    const themeToggle = document.getElementById("theme-toggle");
-    const body = document.querySelector("body");
-
-    if (body.classList.contains("dark-theme")) {
-        body.classList.remove("dark-theme");
-        if (themeToggle) {
-            themeToggle.innerHTML = "&#9728;";
-            themeToggle.classList.remove("dark-mode");
-            themeToggle.classList.add("light-mode");
-        }
-        localStorage.setItem("theme", "light");
-    } else {
-        body.classList.add("dark-theme");
-        if (themeToggle) {
-            themeToggle.innerHTML = "&#9790;";
-            themeToggle.classList.remove("light-mode");
-            themeToggle.classList.add("dark-mode");
-        }
-        localStorage.setItem("theme", "dark");
-    }
-}
-
-const themeBtn = document.getElementById("theme-toggle");
-if (themeBtn) {
-    themeBtn.addEventListener("click", toggleTheme);
-}
-
-function cargarTemaGuardado() {
-    const savedTheme = localStorage.getItem("theme");
-    const themeToggle = document.getElementById("theme-toggle");
-    const body = document.querySelector("body");
-
-    if (savedTheme === "dark") {
-        body.classList.add("dark-theme");
-        if (themeToggle) {
-            themeToggle.innerHTML = "&#9790;";
-            themeToggle.classList.remove("light-mode");
-            themeToggle.classList.add("dark-mode");
-        }
-    }
-}
+})();
