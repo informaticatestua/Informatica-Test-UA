@@ -43,28 +43,10 @@
     <!-- Form -->
     <form id="report-form" class="px-6 py-5 flex flex-col gap-4" novalidate>
 
-      <!-- Tipo de error -->
-      <div class="flex flex-col gap-1.5">
-        <label class="text-[0.8em] font-semibold text-text-muted uppercase tracking-wide" for="report-tipo">
-          Tipo de error <span class="text-red-500">*</span>
-        </label>
-        <select
-          id="report-tipo"
-          class="px-3 py-2 rounded-md bg-background border border-border-subtle text-text-main text-[0.95em] focus:outline-none focus:border-blue-500 transition-colors cursor-pointer"
-          required
-        >
-          <option value="">Selecciona el tipo de error...</option>
-          <option value="solucion-incorrecta">❌ Solución incorrecta</option>
-          <option value="error-tipografico">📝 Error tipográfico</option>
-          <option value="enunciado-confuso">🤔 Enunciado confuso</option>
-          <option value="otro">💬 Otro</option>
-        </select>
-      </div>
-
       <!-- Descripción libre -->
       <div class="flex flex-col gap-1.5">
         <label class="text-[0.8em] font-semibold text-text-muted uppercase tracking-wide" for="report-descripcion">
-          Descripción <span class="text-[0.85em] text-text-muted font-normal normal-case">(opcional)</span>
+          Descripción <span class="text-red-500">*</span>
         </label>
         <textarea
           id="report-descripcion"
@@ -72,6 +54,7 @@
           placeholder="Describe el error con más detalle..."
           class="px-3 py-2 rounded-md bg-background border border-border-subtle text-text-main text-[0.95em] focus:outline-none focus:border-blue-500 transition-colors resize-y min-h-[80px]"
         ></textarea>
+        <p id="report-error-descripcion" class="hidden text-red-500 text-[0.82em]"></p>
       </div>
 
       <!-- Estado -->
@@ -140,14 +123,15 @@
   const EMAILJS_PUBLIC_KEY  = import.meta.env.PUBLIC_EMAILJS_PUBLIC_KEY;
 
   (function initReportModal() {
-    const modal     = document.getElementById("report-modal");
-    const overlay   = document.getElementById("report-overlay");
-    const closeBtn  = document.getElementById("report-close");
-    const cancelBtn = document.getElementById("report-cancel");
-    const form      = document.getElementById("report-form");
-    const submitBtn = document.getElementById("report-submit");
-    const msgOk     = document.getElementById("report-success");
-    const msgKo     = document.getElementById("report-error-msg");
+    const modal         = document.getElementById("report-modal");
+    const overlay       = document.getElementById("report-overlay");
+    const closeBtn      = document.getElementById("report-close");
+    const cancelBtn     = document.getElementById("report-cancel");
+    const form          = document.getElementById("report-form");
+    const submitBtn     = document.getElementById("report-submit");
+    const msgOk            = document.getElementById("report-success");
+    const msgKo            = document.getElementById("report-error-msg");
+    const errorDescripcion = document.getElementById("report-error-descripcion");
 
     if (!modal) return;
 
@@ -175,6 +159,7 @@
         form.reset();
         msgOk.classList.add("hidden");
         msgKo.classList.add("hidden");
+        errorDescripcion.classList.add("hidden");
         submitBtn.disabled = false;
         submitBtn.innerHTML = '<span class="material-icons" style="font-size:15px">flag</span> Enviar reporte';
       }, 260);
@@ -209,13 +194,12 @@
 
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
-      const tipo        = document.getElementById("report-tipo").value;
       const descripcion = document.getElementById("report-descripcion").value.trim();
 
-      if (!tipo) {
-        msgKo.textContent = "❌ Selecciona el tipo de error antes de enviar.";
-        msgKo.classList.remove("hidden");
-        msgOk.classList.add("hidden");
+      errorDescripcion.classList.add("hidden");
+      if (!descripcion) {
+        errorDescripcion.textContent = "Añade una descripción antes de enviar.";
+        errorDescripcion.classList.remove("hidden");
         return;
       }
 
@@ -230,11 +214,8 @@
       try {
         window.emailjs.init(EMAILJS_PUBLIC_KEY);
         await window.emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
-          tipo:          "reportar-error",
-          asignatura:    asignatura,
-          nombre:        "Anónimo",
-          descripcion:   `[${tipo}]\n${descripcion || "(sin descripción adicional)"}\n\nPregunta reportada:\n${preguntaTexto}`,
-          email_usuario: "No proporcionado",
+          asignatura,
+          descripcion: `${descripcion}\n\nPregunta reportada:\n${preguntaTexto}`,
         });
 
         submitBtn.innerHTML = '<span class="material-icons" style="font-size:15px">flag</span> Enviar reporte';
@@ -246,7 +227,7 @@
         console.error("EmailJS error:", err);
         submitBtn.innerHTML = '<span class="material-icons" style="font-size:15px">flag</span> Enviar reporte';
         submitBtn.disabled = false;
-        msgKo.textContent = "❌ Error al enviar. Inténtalo de nuevo o escríbenos a informaticatestua@gmail.com.";
+        msgKo.textContent = "Error al enviar. Inténtalo de nuevo o escríbenos a informaticatestua@gmail.com.";
         msgKo.classList.remove("hidden");
       }
     });
