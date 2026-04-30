@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import ReportModal from '../components/ReportModal.astro';
+import Analytics from '@vercel/analytics/astro';
 
 interface Props {
 	title?: string;
@@ -92,5 +93,6 @@ const { title = "Ing. Informática Tests UA" } = Astro.props;
 		
 		<script is:inline src="/resources/js/prism.js"></script>
 		<script is:inline src="/resources/js/main.js"></script>
+		<Analytics />
 		</body>
 </html>
