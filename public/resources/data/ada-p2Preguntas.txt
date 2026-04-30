@@ -4,73 +4,73 @@ Se pretende implementar mediante programación dinamica iterativa la función re
 - int A[]
 - int A[][]
 
-La solución óptima al problema de encontrar el árbol de recubrimiento de coste mínimo para un grafo no dirigido, conexo y ponderado ... CONFIRMADA
+La solución óptima al problema de encontrar el árbol de recubrimiento de coste mínimo para un grafo no dirigido, conexo y ponderado ... 
 2
 - ... se construye haciendo crecer un único árbol.
 - ... puede construir un único árbol que va creciendo o bien construir un bosque de árboles que al final se injertan en un único árbol
 - ... se construye haciendo crecer varios árboles que al final acaban injertados en un único árbol.
 
-En el método voraz ... CONFIRMADA
+En el método voraz ... 
 1
 - ... es habitual preparar los datos para disminuir el coste temporal de la función que determina cuál es la siguiente decisión a tomar.
 - ... siempre se encuentra solución pero puede que no sea la óptima.
 - ... el dominio de las decisiones sólo pueden ser conjuntos discretos o discretizables.
 
-Se pretende implementar mediante programación dinámica iterativa la función recursiva:```unsigned f( unsigned x, unsigned v[] ) { \nif (x==0) \n\treturn 0; \nunsigned m = 0; \nfor ( unsigned k = 0; k < x; k++ ) \n\tm = max( m, v[k] + f( x-k, v ) ); \n\treturn m; \n}``` ¿Cuál es la mejor complejidad espacial que se puede conseguir? CONFIRMADA
+Se pretende implementar mediante programación dinámica iterativa la función recursiva:```unsigned f( unsigned x, unsigned v[] ) { \nif (x==0) \n\treturn 0; \nunsigned m = 0; \nfor ( unsigned k = 0; k < x; k++ ) \n\tm = max( m, v[k] + f( x-k, v ) ); \n\treturn m; \n}``` ¿Cuál es la mejor complejidad espacial que se puede conseguir? 
 3
 - O(1)
 - O(x^2)
 - O(x)
 
-La eficiencia de los algoritmos voraces se basa en el hecho de que... CONFIRMADA
+La eficiencia de los algoritmos voraces se basa en el hecho de que... 
 3
 - ... con antelación, las posibles decisiones se ordenan de mejor a peor
 - ... antes de tomar una decisión de comprueba si satisface las restricciones del problema
 - ... las decisiones tomadas nunca se reconsideran
 
-En la solución al problema de la mochila continua, ¿por qué es conveniente la ordenación previa de los objetos? CONFIRMADA
+En la solución al problema de la mochila continua, ¿por qué es conveniente la ordenación previa de los objetos? 
 2
 - Porque si no se hace no es posible garantizar que la toma de decisiones siga un criterio voraz
 - Para reducir la complejidad temporal en la toma de cada decisión de O(n) a O(1), donde n es el numero de objetos a considerar
 - Para reducir la complejidad temporal en la toma de cada decisión de O(n^2) a O(nlogn), donde n es el numero de objetos a considerar
 
-Si ante un problema de decisión existe un criterio de selección voraz entonces... CONFIRMADA
+Si ante un problema de decisión existe un criterio de selección voraz entonces... 
 2
 - la solución óptima está garantizada
 - Ninguna de las otras dos es cierta
 - al menos una solución factible está garantizada
 
-¿Cuál de estos tres problemas de optimización no tiene, o no se le conoce, un solución voraz óptima? CONFIRMADA
+¿Cuál de estos tres problemas de optimización no tiene, o no se le conoce, un solución voraz óptima? 
 3
 - El árbol de cobertura de coste mínimo de un grafo conexo
 - El problema de la mochila continua o con fraccionamiento
 - El problema de la mochila discreta o sin fraccionamiento
 
-¿Cual de los siguientes pares de problemas son equivalente en cuanto al tipo de solución(óptima, factible, etc) aportada por el método voraz? CONFIRMADA
+¿Cual de los siguientes pares de problemas son equivalente en cuanto al tipo de solución(óptima, factible, etc) aportada por el método voraz? 
 1
 - La mochila discreta y la asignación de tareas
 - El fontanero diligente y el problema del cambio
 - La mochila continua y la asignación de tareas
 
-De los problemas siguientes, indicad cuál no se puede tratar eficientemente como los otros dos: CONFIRMADA
+De los problemas siguientes, indicad cuál no se puede tratar eficientemente como los otros dos: 
 1
 - El problema de la mochila sin fraccionamiento y sin restricciones en cuanto al dominio de los pesos de los objetos y de sus valores
 - El problema de cortar un tubo de forma que se obtenga el máximo beneficio posible
 - El problema del cambio, o sea, el de encontrar la manera de entregar una cantidad de dinero usando el mínimo de monedas posibles
 
-Supongamos que una solución recursiva a un problema de optimización muestra estas dos características: por un lado, se basa en obtener soluciones óptimas a problemas parciales más pequeños, y por otro, estos subproblemas se resuelven más de una vez durante el proceso recursivo. Este problema es candidato a tener una solución alternativa basada en ... CONFIRMADA
+Supongamos que una solución recursiva a un problema de optimización muestra estas dos características: por un lado, se basa en obtener soluciones óptimas a problemas parciales más pequeños, y por otro, estos subproblemas se resuelven más de una vez durante el proceso recursivo. Este problema es candidato a tener una solución alternativa basada en ... 
 2
 - ... un algoritmo del estilo de divide y vencerás.
 - ... un algoritmo de programación dinámica.
 - ... un algoritmo voraz.
 
-La mejora que en general aporta la programación dinámica frente a la solución ingenua se consigue gracias al hecho de que ... CONFIRMADA
+La mejora que en general aporta la programación dinámica frente a la solución ingenua se consigue gracias al hecho de que ... 
 3
 - El número de veces que se resuelven los subproblemas no tiene nada que ver con la eficiencia de los problemas resueltos mediante programación dinámica
 - ... en la solución ingenua se resuelve pocas veces un número relativamente grande de subproblemas distintos.
 - ... en la solución ingenua se resuelve muchas veces un número relativamente pequeño de subproblemas distintos.
 
-¿Cómo se vería afectada la solución voraz al problema de la asignación de tareas en el caso de que se incorporaran restricciones que contemplen que ciertas tareas no pueden ser adjudicadas a ciertos trabajadores ? CONFIRMADA
+¿Cómo se vería afectada la solución voraz al problema de la asignación de tareas en el caso de que se incorporaran restricciones que contemplen que ciertas tareas no pueden ser adjudicadas a ciertos trabajadores ? 
 1
 - La solución factible ya no estaría garantizada, es decir, pudiera ser que el algoritmo no llegue a solución alguna.
 - Ya no se garantizaría la solución óptima pero sí una factible.
@@ -100,7 +100,7 @@ Un algoritm recursivo basado en el esquema divide y vencerás...
 - ... será más eficiente cuanto más equitativa sea la división en subproblemas
 - ... nunca tendrá una complejidad exponencial
 
-Los algoritmos de programación dinámica hacen uso... CONFIRMADA
+Los algoritmos de programación dinámica hacen uso... 
 3
 - ... de que la solución óptima se puede construir añadiendo a la solución el elemento óptimo de los elementos restantes, uno a uno.
 - ... de una estrategia trivial consistente en examinar todas las soluciones posibles
@@ -118,13 +118,13 @@ Se pretende implementar mediante programación dinámica iterativa la función r
 - int A
 - int A[] []
 
-Dado un problema de optimización, el método voraz... CONFIRMADA
+Dado un problema de optimización, el método voraz... 
 3
 - Siempre obtiene una solución óptima
 - Siempre obtiene una solución factible
 - garantiza la solución óptima sólo para determinados problemas
 
-Un informático quiere subir a una montaña y para ello decide que tras cada paso, el siguiente debe tomarlo en la dirección de máxima pendiente hacia arriba. Además, entenderá que ha alcanzado la cima cuando llegue a un punto en el que no haya ninguna dirección que sea cuesta arriba. ¿qué tipo de algoritmo está usando nuestro informático? CONFIRMADA
+Un informático quiere subir a una montaña y para ello decide que tras cada paso, el siguiente debe tomarlo en la dirección de máxima pendiente hacia arriba. Además, entenderá que ha alcanzado la cima cuando llegue a un punto en el que no haya ninguna dirección que sea cuesta arriba. ¿qué tipo de algoritmo está usando nuestro informático? 
 2
 - un algoritmo divide y vencerás.
 - un algoritmo voraz.
@@ -136,49 +136,49 @@ Un informático quiere subir a una montaña y para ello decide que tras cada pas
 - O(1)
 - O(x)
 
-¿Qué mecanismo se usa para acelerar el algoritmo de Prim? CONFIRMADA
+¿Qué mecanismo se usa para acelerar el algoritmo de Prim? 
 3
 - El TAD "Union-find"
 - Mantener una lista de los arcos ordenados según su peso.
 - Mantener para cada vértice el vértice origen de la arista más corta hasta él.
 
-Cuando la descomposición de los problemas da lugar a subproblemas de tamaño similar, ¿qué esquema promete ser más apropiado? CONFIRMADA
+Cuando la descomposición de los problemas da lugar a subproblemas de tamaño similar, ¿qué esquema promete ser más apropiado? 
 1
 - Programación dinámica
 - Divide y vencerás, siempre que se garantice que los problema no son del mismo tamaño
 - El metodo voraz
 
-Se pretende implementar mediante programación dinámica iterativa la función recursiva:```unsigned f(unsigned y, unsigned x) { # suponemos y >= x \n\tif (x==0 || y==x) return 1; \n\treturn f(y-1, x-1) + f(y-1, x); \n} ```¿Cuál es la mejor complejidad espacial que se puede conseguir? \nSeleccione una: CONFIRMADA
+Se pretende implementar mediante programación dinámica iterativa la función recursiva:```unsigned f(unsigned y, unsigned x) { # suponemos y >= x \n\tif (x==0 || y==x) return 1; \n\treturn f(y-1, x-1) + f(y-1, x); \n} ```¿Cuál es la mejor complejidad espacial que se puede conseguir? \nSeleccione una: 
 3
 - O(y^2)
 - O(1)
 - O(y)
 
-La solución de programación dinámica iterativa del problema de la mochila discreta... CONFIRMADA
+La solución de programación dinámica iterativa del problema de la mochila discreta... 
 3
 - ... tiene un coste temporal asintótico exponencial con respecto al número de objetos
 - ... calcula menos veces el valor de la mochila que la correspondiente solución de programación dinámica recursiva
 - ... tiene la restricción de que los valores tienen que ser enteros positivos
 
-¿Cual de los siguientes pares de problemas son equivalentes en cuanto al tipo de solución(óptima, factible, etc) aportada por el método voraz? CONFIRMADA
+¿Cual de los siguientes pares de problemas son equivalentes en cuanto al tipo de solución(óptima, factible, etc) aportada por el método voraz? 
 1
 - El fontanero diligente y mochila continua
 - El fontanero diligente y el problema del cambio
 - El fontanero diligente y asignación de tareas
 
-Un tubo de n centímetros de largo se puede cortar en segmentos de 1 centímetro, 2 centímetros, etc... Existe una lista de los precios a los que se venden los segmentos de cada longitud. Una de las maneras de cortar el tubo es la que más ingresos nos producirá. Di cuál de estas tres afirmaciones es FALSA. CONFIRMADA
+Un tubo de n centímetros de largo se puede cortar en segmentos de 1 centímetro, 2 centímetros, etc... Existe una lista de los precios a los que se venden los segmentos de cada longitud. Una de las maneras de cortar el tubo es la que más ingresos nos producirá. Di cuál de estas tres afirmaciones es FALSA. 
 1
 - Hacer una evaluación exhaustiva "de fuerza bruta" de todas las posibles maneras de cortar el tubo consume un tiempo Θ(n!)
 - Es posible evitar hacer la evaluación exhaustiva "de fuerza bruta" guardando, para cada posible longitud j < n el precio más elevado posible que se puede obtener dividiendo el tubo correspondiente
 - Hace una evaluación exhaustiva "de fuerza bruta" de todas las posibles maneras de cortar el tubo consume un tiempo Θ(2^n)
 
-¿Cuál de estas estrategias para calcular el $$n$$-ésimo elemento de la serie de Fibonacci \n $$f(n) = f(n - 1) + f(n - 2),\ f(1) = f(2) = 1$$ \nes más eficiente? CONFIRMADA
+¿Cuál de estas estrategias para calcular el $$n$$-ésimo elemento de la serie de Fibonacci \n $$f(n) = f(n - 1) + f(n - 2),\ f(1) = f(2) = 1$$ \nes más eficiente? 
 1
 - Programación dinámica
 - La estrategia voraz
 - Las dos estrategias citadas serían similares en cuanto a la eficiencia
 
-El valor que se obtiene con el método voraz para el problema de la mochila discreta es ... CONFIRMADA
+El valor que se obtiene con el método voraz para el problema de la mochila discreta es ... 
 1
 - ... una cota inferior para el valor óptimo que a veces puede ser igual a este.
 - ... una cota superior para el valor óptimo.
@@ -190,13 +190,13 @@ Dada la suma de la recurrencia: \n $$ T(n) = \begin{cases} 1 & n = 0 \\ \sum_{k=
 - T(n) ∈ Θ(2^n)
 - T(n) ∈ Θ(n!)
 
-Se pretende implementar mediante programación dinámica iterativa la función recursiva: ¿Cuál es la mejor complejidad espacial que se puede conseguir?```float f(unsigned x, int y){ \n\tif( y < 0 ) return 0; \n\tfloat A = 0.0; \n\tif ( v1[y] <= x ) \n\t\tA = v2[y] + f( x-v1[y], y-1 ); \n\tfloat B = f( x, y-1 ); \n\treturn min(A, 2+B); \n}``` CONFIRMADA
+Se pretende implementar mediante programación dinámica iterativa la función recursiva: ¿Cuál es la mejor complejidad espacial que se puede conseguir?```float f(unsigned x, int y){ \n\tif( y < 0 ) return 0; \n\tfloat A = 0.0; \n\tif ( v1[y] <= x ) \n\t\tA = v2[y] + f( x-v1[y], y-1 ); \n\tfloat B = f( x, y-1 ); \n\treturn min(A, 2+B); \n}``` 
 3
 - O(1)
 - O(x*y)
 - O(x)
 
-La programación dinámica... CONFIRMADA
+La programación dinámica... 
 3
 - En algunos casos se puede utilizar para resolver problemas de optimización con dominios continuos pero probablemente pierda su eficacia ya que puede disminuir drásticamente el número de subproblemas repetidos
 - Normalmente se usa para resolver problemas de optimización con dominios discretizables puesto que las tablas se han de indexar con este tipo de valores
@@ -208,7 +208,7 @@ Se pretende implementar mediante programación dinámica iterativa la función r
 - O(x)
 - O(1)
 
-Cuando se calculan los coeficientes binomiales usando la recursión $$ {n \choose r} = {n-1 \choose r} + {n-1 \choose r-1} $$, con $$ {n \choose 0} = {n \choose n} = 1 $$, qué problemas se da y cómo se puede resolver? CONFIRMADA
+Cuando se calculan los coeficientes binomiales usando la recursión $$ {n \choose r} = {n-1 \choose r} + {n-1 \choose r-1} $$, con $$ {n \choose 0} = {n \choose n} = 1 $$, qué problemas se da y cómo se puede resolver? 
 2
 - Se repiten muchos cálculos y ello se puede evitar haciendo uso de una estrategia voraz.
 - Se repiten muchos cálculos y ello se puede evitar usando programación dinámica.
@@ -418,55 +418,55 @@ Disponemos de dos cadenas de longitudes m y n. Si resolvemos el problema de la d
 - m x n 
 - (m+1) x (n+1)
 
-Se pretende implementar mediante programación dinámica iterativa la función recursiva:```float f(unsigned x, int y){ \n\tif( y < 0 ) return 0; \n\tfloat A = 0.0; \n\tif ( v1[y] <= x )  \n\t\tA = v2[y] + f( x-v1[y], y-1 ); \n\tfloat B = f( x, y-1 ); \n\treturn min(A,2+B); \n}```¿Cuál es la mejor complejidad temporal que se puede conseguir? CONFIRMADA
+Se pretende implementar mediante programación dinámica iterativa la función recursiva:```float f(unsigned x, int y){ \n\tif( y < 0 ) return 0; \n\tfloat A = 0.0; \n\tif ( v1[y] <= x )  \n\t\tA = v2[y] + f( x-v1[y], y-1 ); \n\tfloat B = f( x, y-1 ); \n\treturn min(A,2+B); \n}```¿Cuál es la mejor complejidad temporal que se puede conseguir? 
 3
 - O(y)
 - O(x)
 - O(x ⋅ y)
 
-Se pretende implementar mediante programación dinámica iterativa la función recursiva:```int f(int x, int y){\n\tif( x <= y ) return 1;\n\treturn x + f(x-1,y);\n}```¿Cuál es la mejor complejidad temporal que se puede conseguir? CONFIRMADA
+Se pretende implementar mediante programación dinámica iterativa la función recursiva:```int f(int x, int y){\n\tif( x <= y ) return 1;\n\treturn x + f(x-1,y);\n}```¿Cuál es la mejor complejidad temporal que se puede conseguir? 
 2
 - O(y)
 - O(x)
 - O(x ⋅ y)
 
-La solución de programación dinámica iterativa del problema de la mochila discreta ... CONFIRMADA
+La solución de programación dinámica iterativa del problema de la mochila discreta ... 
 2
 - ... calcula menos veces el valor de la mochila que la correspondiente solución de programación dinámica recursiva.
 - ... tiene la restricción de que los pesos de los objetos tienen que ser números discretos o discretizables.
 - ... tiene la restricción de que los valores de los objetos tienen que ser números discretos o discretizables.
 
-Se pretende aplicar la técnica memoización a la siguiente función recursiva: ```int f( int x, int y ) {  \n\tif( x > y ) return 1;  \n\treturn x + f(x,y-2); \n}```En el caso más desfavorable, ¿qué complejidades temporal y espacial cabe esperar de la función resultante? CONFIRMADA
+Se pretende aplicar la técnica memoización a la siguiente función recursiva: ```int f( int x, int y ) {  \n\tif( x > y ) return 1;  \n\treturn x + f(x,y-2); \n}```En el caso más desfavorable, ¿qué complejidades temporal y espacial cabe esperar de la función resultante? 
 1
 - O(x-y), tanto temporal como espacial.
 - Ninguna de las otras dos opciones es correcta
 - Temporal O(x-y) y espacial O(1)
 
-El problema de encontrar el árbol de recubrimiento de coste mínimo para un grafo no dirigido, conexo y ponderado ... CONFIRMADA
+El problema de encontrar el árbol de recubrimiento de coste mínimo para un grafo no dirigido, conexo y ponderado ... 
 1
 - ... se puede resolver siempre con una estrategia voraz
 - sólo se puede resolver con una estrategia voraz si existe una arista para cualquier par de vértices del grafo
 - ... no se puede resolver en general con una estrategia voraz
 
-¿Para qué se utiliza el TAD "Union-find" en el algoritmo de Kruskal? CONFIRMADA
+¿Para qué se utiliza el TAD "Union-find" en el algoritmo de Kruskal? 
 1
 - Para comprobar si un arco forma ciclos
 - Para comprobar si un vétice ya ha sido visitado
 - Para comprobar si dos vértices son equivalentes
 
-La solución óptima al problema de encontrar el árbol de recubrimiento de coste mínimo par un grafo no dirigido, conexo y ponderado ... CONFIRMADA
+La solución óptima al problema de encontrar el árbol de recubrimiento de coste mínimo par un grafo no dirigido, conexo y ponderado ... 
 1
 - ...puede construirlo tanto vértice a vértice como arista a arista
 - ...debe construirlo vértice a vértice: arista a arista no puede ser
 - ...debe construirlo arista a arista: vértice a vértice no puede ser
 
-¿Cuál de los siguientes pares de problemas son equivalentes en cuanto al tipo de solución (óptima, factible, etc.) aportada por el método voraz? CONFIRMADA
+¿Cuál de los siguientes pares de problemas son equivalentes en cuanto al tipo de solución (óptima, factible, etc.) aportada por el método voraz? 
 2
 - El fontanero diligente y la asignación de tareas.
 - El fontanero diligente y la mochila continua.
 - El fontanero diligente y el problema del cambio.
 
-Un algoritmo recursivo basado en el esquema de divide y vencerás ... CONFIRMADA
+Un algoritmo recursivo basado en el esquema de divide y vencerás ... 
 3
 - Las demás opciones son verdaderas
 - ... nunca tendrá una complejidad exponencial
