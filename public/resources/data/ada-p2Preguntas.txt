@@ -130,7 +130,7 @@ Un informático quiere subir a una montaña y para ello decide que tras cada pas
 - un algoritmo voraz.
 - un algoritmo de programación dinámica
 
-```int f(int x, int y){  \n\tif (x<=y) return 1;  \n\treturn x + f(x-1,y);\n}```Seleccione una:
+Se pretende implementar mediante programación dinámica iterativa la función recursiva:```int f(int x, int y){  \n\tif (x<=y) return 1;  \n\treturn x + f(x-1,y);\n}```¿Cuál es la mejor complejidad espacial que se puede conseguir?
 2
 - O(x^2)
 - O(1)
