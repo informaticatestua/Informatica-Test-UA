@@ -635,7 +635,7 @@ Cuando  se  usa  un  algoritmovoraz  para  abordar  la  resolucion  de  un  prob
 - Que se reconsidere la decision ya tomada anteriormente respecto a la selecci  on de un elemento a la vista de la decision que se debe tomar en un instante.
 
 Cual de estas expresiones es falsa?
-3
+1
 - n + nlogn pertenece promedio(n)
 - n + nlogn pertenece omega(n)
 - 2n^2 + 3n + 1 pertenece O(n^3)
