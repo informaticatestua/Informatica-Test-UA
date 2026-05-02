@@ -113,10 +113,10 @@ Se pretende aplicar la técnica memoización a la siguiente función recursiva: 
 - Temporal O(x-y) y espacial O(1)
 
 Se pretende implementar mediante programación dinámica iterativa la función recursiva:```unsigned f(unsigned y, unsigned x) { # suponemos y >= x \n\tif (x==0 || y==x) return 1; \n\treturn f(y-1, x-1) + f(y-1, x); \n}```¿Cuál es la mejor estructura para el almacén? \nSeleccione una:
-2
+4
 - int A[]
 - int A
-- int A[] []
+- int A[][]
 
 Dado un problema de optimización, el método voraz... 
 3
