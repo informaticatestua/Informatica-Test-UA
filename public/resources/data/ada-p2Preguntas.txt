@@ -76,9 +76,9 @@ La mejora que en general aporta la programación dinámica frente a la solución
 - Ya no se garantizaría la solución óptima pero sí una factible.
 - Habría que replantearse el criterio de selección para comenzar por aquellos trabajadores con más restricciones en cuanto a las tareas que no pueden realizar para asegurar, al menos, una solución factible.
 
-```unsigned f( unsigned y, unsigned x){  # suponemos y >= x \n\tif (x==0 || y==x) return 1;\n\treturn f(y-1, x-1) + f(y-1, x);\n}```
+Se pretende implementar mediante programación dinámica iterativa la función recursiva:```unsigned f( unsigned y, unsigned x){  # suponemos y >= x \n\tif (x==0 || y==x) return 1;\n\treturn f(y-1, x-1) + f(y-1, x);\n}```¿Cuál es la mejor complejidad temporal que se puede conseguir?
 1
-- O(x-y)
+- O(x*y)
 - O(y)
 - O(x)
 
