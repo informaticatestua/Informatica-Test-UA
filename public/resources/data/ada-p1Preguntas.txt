@@ -670,12 +670,7 @@ Se quieren ordenar n números distintos comprendidos entre 1 y m. Para ello se u
 - Sólo si n log n > k · m (donde k es una constante que depende de la implementación).
 - No, ya que este algoritmo ha de recorrer varias veces el vector de booleanos.
 
-Con respecto al parámetro n, ¿Cuál es la complejidad temporal de la siguiente función?```void f(unsigned n){
-	if(n < 2) return;
-	for(int i = 0; i < pow(n,3); i++)
-		cout << "*";
-	f(n/2);
-}```
+Con respecto al parámetro n, ¿Cuál es la complejidad temporal de la siguiente función?\n```void f(unsigned n){\n\tif(n < 2) return;\n\tfor(int i = 0; i < pow(n,3); i++)\n\t\tcout << "*";\n\tf(n/2);\n}```
 2
 - $$ \Theta(n^4) $$
 - $$ \Theta(n^3) $$
