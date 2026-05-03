@@ -89,7 +89,7 @@ Se pretende implementar mediante programación dinámica iterativa la función r
 - Meter primero los elementos de mayor valor
 
 El problema de encontrar el árbol de recubrimiento de coste mínimo para un grafo dirigido y ponderado...
-2
+3
 - sólo se puede resolver con una estrategia voraz si existe una arista para cualquier par de vértices del grafo
 - ... se puede resolver siempre con una estrategia voraz
 - ... no se puede resolver en general con una estrategia voraz
@@ -291,12 +291,6 @@ Dado el algoritmo de búsqueda binaria, supongamos que, en vez de dividir la lis
 - Es el mismo que el del original 
 - Es mayor que el del original 
 - Es menor que el del original 
-
-Si n es el número de elementos del vector, el coste del algoritmo Mergesort es: 
-2
-- O(n^2) y Ω(n logn) 
-- Θ (n logn) 
-- Θ (n^2) 
 
 La serie de números de Fibonacci se define de la siguiente forma: \n\n $$fib(n) = \begin{cases} 1 & n \leq 1 \\ fib(n-1) + fib(n-2) & n > 1 \end{cases}$$ \n\nPara implementar esta función podemos emplear:
 3
