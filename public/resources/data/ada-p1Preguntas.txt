@@ -286,23 +286,11 @@ Indicad cuál de estas tres expresiones es falsa.
 - $$\Theta(n) \subseteq \space \Theta(n)$$
 - $$\Theta(n) \subseteq \space \Theta(n^2)$$
 
-¿Cuál de estos tres problemas de optimización no tiene, o no se le conoce, una solución voraz óptima?
-2
-- El árbol de cobertura de coste mínimo de un grafo conexo.
-- El problema de la mochila discreta o sin fraccionamiento.
-- El problema de la mochila continua o con fraccionamiento.
-
 Los algoritmos de programación dinámica hacen uso ...
 2
 - ... de que la solución óptima se puede construir añadiendo a la solución el elemento óptimo de los elementos restantes, uno a uno.
 - ... de que se puede ahorrar cálculos guardando resultados anteriores en un almacén. 
 - ... de una estrategia trivial consistente en examinar todas las soluciones posibles.
-
-Cuando se calculan los coeficientes binomiales usando la recursión $$\binom{n}{r} = \binom{n-1}{r} + \binom{n-1}{r-1} $$, con $$ \binom{n}{0} = \binom{n}{n} = 1 $$, qué problema se da y cómo se puede resolver?
-3
-- La recursión puede ser infinita y por tanto es necesario organizarla según el esquema iterativo de programación dinámica.
-- Se repiten muchos cálculos y ello se puede evitar haciendo uso de una estrategia voraz.
-- Se repiten muchos cálculos y ello se puede evitar usando programación dinámica.
 
 Sea $$f(n)$$ la solución de la relación de recurrencia $$f(n) = 2f(n/2) + n $$; $$ f(1) = 1 $$. Indicad cuál de estas tres expresiones es cierta.
 3
@@ -490,12 +478,6 @@ El logaritmo de la longitud del vector
 Lineal con la longitud del vector
 Cuadrática con la longitud del vector
 
-Supongamos que una solución recursiva a un problema de optimización muestra estas dos características: por un lado, se basa en obtener soluciones óptimas a problemas parciales más pequeños, y por otro, estos subproblemas se resuelven más de una vez durante el proceso recursivo. Este problema es candidato a tener una solución alternativa basada en \nSeleccione una:
-1
-un algoritmo de programación dinámica.
-un algoritmo voraz.
-un algoritmo del estilo de divide y vencerás.
-
 Si $$ f ∉ O(g_1) $$ y $$ f \in O(g_2) $$ entonces siempre se cumplirá: \nSeleccione una:
 1
 $$ f \in \Omega(min(g_1,g_2)) $$
@@ -610,23 +592,11 @@ $$ O(x) $$
 $$ O(1) $$
 $$ O(x^2) $$
 
-iCual de los siguientes pares de problemas son equivalentes en cuanto al tipo de solucian (Optima, factible, etc.) aportada por el método voraz? \nSeleccione una:
-3
-La mochila continua y la asignación de tareas.
-El fontanero diligente y el problema del cambio.
-La mochila discreta y la asignación de tareas.
-
 De los problemas siguientes, indicad cual no se puede tratar eficientemente como los otros dos: \nSeleccione una:
 2
 El problema de cortar un tubo de forma que se obtenga el maximo beneficio posible.
 El problema de la mochila sin fraccionamiento y sin restricciones en cuanto al dominio de los pesos de los objetos y de sus valores.
 El problema del cambio, o sea, el de encontrar la manera de entregar una cantidad de dinero usando el minimo de monedas posibles.
-
-La eficiencia de los algoritmos voraces se basa en el hecho de que ... \nSeleccione una:
-2
-... antes de tomar una decisiön se comprueba si satisface las retricciones del problema.
-... las decisiones tomadas nunca se reconsideran.
-... con antelaciön, Ias posibles decisiones se ordenan de mejor a peor.
 
 ¿Cuál de las formulaciones expresa mejor el coste temporal de la siguiente función?```int f(int n){\n  int count = 0;\n  for (int i = n; i >= 2; i -= 2)\n    for (int j = 1; j < i; j*=2)\n      count += 1;\n  return count;\n}```
 1
