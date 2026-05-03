@@ -125,7 +125,8 @@ El sistema actualmente incluye baterías de preguntas para las siguientes asigna
   <br/><em>Retroalimentación inmediata tras responder</em>
   <br/><br/>
   <img src="screenshots/resumen.png" width="700" alt="Pantalla de resumen final con estadísticas"/>
-  <br/><em>Pantalla de resumen final con estadísticas completas</em>
+  <br/>
+  <em>Pantalla de resumen final con todas las preguntas</em>
 </div>
 
 ---

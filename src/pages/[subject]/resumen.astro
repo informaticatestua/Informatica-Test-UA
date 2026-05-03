@@ -1,8 +1,12 @@
 ---
 import ResumenLayout from '../../layouts/ResumenLayout.astro';
+
+const { subject } = Astro.params;
+const formattedSubject = subject ? subject.replace(/[-_]/g, ' ').toUpperCase() : 'Test';
+const pageTitle = `Resumen ${formattedSubject}`;
 ---
 
-<ResumenLayout title="Resumen • Community Edition">
+<ResumenLayout title={pageTitle}>
 	<div id="app" class="w-max max-w-[95vw] mx-auto my-[20px] px-[40px] py-[30px] bg-surface border border-border-subtle rounded-[5px] shadow-subtle box-border">
 		<div id="resumen" class="text-left text-[0.95em] leading-relaxed"></div>
 		
