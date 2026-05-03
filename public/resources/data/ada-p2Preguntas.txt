@@ -466,9 +466,46 @@ La solución óptima al problema de encontrar el árbol de recubrimiento de cost
 - El fontanero diligente y la mochila continua.
 - El fontanero diligente y el problema del cambio.
 
-Un algoritmo recursivo basado en el esquema de divide y vencerás ... 
+Un algoritmo recursivo basado en el esquema de divide y vencerás ...
 3
 - Las demás opciones son verdaderas
 - ... nunca tendrá una complejidad exponencial
 - ... será más eficiente cuanto más equitativa sea la división en subproblemas
+
+Se pretende aplicar la técnica memoización a la siguiente función recursiva: ```int f( int x, int y ) {\n\tif( x <= y ) return 1;\n\treturn x * f(x-1,y) + y;\n}```En el caso más desfavorable, ¿qué complejidades temporal y espacial cabe esperar de la función resultante?
+1
+- O(x-y), tanto temporal como espacial.
+- Ninguna de las otras dos opciones es correcta
+- Temporal O(x-y) y espacial O(1)
+
+¿Cuál de estas estrategias voraces obtiene siempre un mejor valor para la mochila discreta?
+1
+- Ninguna de las otras opciones es cierta.
+- Meter primero los elementos de mayor valor específico o valor por unidad de peso.
+- Meter primero los elementos de mayor valor.
+- Meter primero los elementos de menor peso.
+
+Se pretende aplicar la técnica memoización a la siguiente función recursiva: ```int f( int x, int y ) {\n\tif( x > y ) return 1;\n\treturn x*(y-1) + f(x,y-2);\n}```En el caso más desfavorable, ¿qué complejidades temporal y espacial cabe esperar de la función resultante?
+1
+- O(y-x), tanto temporal como espacial.
+- Temporal O(x*y) y espacial O(x)
+- Temporal O(x-y) y espacial O(1)
+
+Se pretende aplicar la técnica memoización a la siguiente función recursiva: ```int f( int x, int y ) {\n\tif( x <= y ) return 1;\n\treturn f(x-1,y) + y;\n}```En el caso más desfavorable, ¿qué complejidades temporal y espacial cabe esperar de la función resultante?
+1
+- O(x-y), tanto temporal como espacial.
+- Temporal O(x*y) y espacial O(x)
+- Temporal O(x-y) y espacial O(1)
+
+Se pretende implementar mediante programación dinámica recursiva la función recursiva:```float f(unsigned x, int y){\n\tif( y < 0 ) return 0;\n\tfloat a = 0.0;\n\tif ( v1[y] <= x )\n\t\ta = v2[y] + f( x-v1[y], y-1 );\n\tfloat b = f( x, y-1 );\n\treturn min(a, 2*b);\n}```¿Cuál es la mejor estructura para el almacén?
+1
+- float A[][]
+- float A[]
+- float A
+
+Se pretende aplicar la técnica memoización a la siguiente función recursiva: ```int f( int x, int y ) {\n\tif( x <= y ) return 1;\n\treturn x + f(x-1,y) + y;\n}```En el caso más desfavorable, ¿qué complejidades temporal y espacial cabe esperar de la función resultante?
+1
+- O(x-y), tanto temporal como espacial.
+- Temporal O(x-y) y espacial O(1)
+- Ninguna de las otras dos opciones es correcta
 
