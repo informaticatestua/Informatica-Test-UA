@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import ReportModal from '../components/ReportModal.astro';
+import SuggestModal from '../components/SuggestModal.astro';
 import Analytics from '@vercel/analytics/astro';
 
 interface Props {
@@ -63,12 +64,18 @@ const { title = "Ing. Informática Tests UA" } = Astro.props;
 
 
 
-			<button id="theme-toggle" class="ml-auto mt-1 p-2 text-text-muted hover:text-blue-500 bg-transparent border-none rounded-full transition-colors cursor-pointer flex items-center justify-center" aria-label="Cambiar tema">
-				<span class="material-icons" id="theme-icon" style="font-size: 1.2em;">light_mode</span>
-			</button>
+			<div class="ml-auto flex items-center gap-1">
+				<button id="suggest-btn" class="mt-1 p-2 text-text-muted hover:text-yellow-500 bg-transparent border-none rounded-full transition-colors cursor-pointer flex items-center justify-center" aria-label="Enviar sugerencia">
+					<span class="material-icons" style="font-size: 1.2em;">lightbulb</span>
+				</button>
+				<button id="theme-toggle" class="mt-1 p-2 text-text-muted hover:text-blue-500 bg-transparent border-none rounded-full transition-colors cursor-pointer flex items-center justify-center" aria-label="Cambiar tema">
+					<span class="material-icons" id="theme-icon" style="font-size: 1.2em;">light_mode</span>
+				</button>
+			</div>
 		</header>
 
 		<ReportModal />
+		<SuggestModal />
 
 		<main class="w-full">
 			<slot />
@@ -98,6 +105,11 @@ const { title = "Ing. Informática Tests UA" } = Astro.props;
 			if (themeToggle) {
 				updateIcon(document.documentElement.classList.contains("dark"));
 				themeToggle.addEventListener("click", handleToggleClick);
+			}
+
+			const suggestBtn = document.getElementById("suggest-btn");
+			if (suggestBtn) {
+				suggestBtn.addEventListener("click", () => window.openSuggestModal?.());
 			}
 		</script>
 		

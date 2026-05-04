@@ -1,0 +1,232 @@
+---
+// SuggestModal.astro
+// Modal para que los usuarios envíen sugerencias de mejora de la web.
+// Mismo patrón visual y técnico que ReportModal.
+---
+
+<!-- ─── Overlay ────────────────────────────────────────────────────── -->
+<div id="suggest-overlay" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[90] hidden"></div>
+
+<!-- ─── Modal / Bottom Sheet ─────────────────────────────────────────── -->
+<div
+  id="suggest-modal"
+  class="fixed inset-0 z-[100] hidden flex items-end sm:items-center justify-center pointer-events-none"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="suggest-modal-title"
+>
+  <div
+    id="suggest-modal-box"
+    class="bg-surface border border-border-subtle w-full sm:max-w-[480px] pointer-events-auto
+           rounded-t-2xl sm:rounded-xl shadow-2xl"
+  >
+    <!-- Handle visual (solo móvil) -->
+    <div class="flex justify-center pt-3 pb-1 sm:hidden" aria-hidden="true">
+      <div class="w-10 h-1 rounded-full bg-border-subtle"></div>
+    </div>
+
+    <!-- Header -->
+    <div class="flex items-center justify-between px-6 py-4 border-b border-border-subtle">
+      <h3 id="suggest-modal-title" class="text-[1em] font-bold text-text-main flex items-center gap-2 m-0">
+        <span class="material-icons text-yellow-500" style="font-size:18px">lightbulb</span>
+        Enviar sugerencia
+      </h3>
+      <button
+        id="suggest-close"
+        class="text-text-muted hover:text-text-main bg-transparent border-none cursor-pointer p-1 rounded-md hover:bg-surface-hover transition-colors"
+        aria-label="Cerrar"
+      >
+        <span class="material-icons" style="font-size:20px">close</span>
+      </button>
+    </div>
+
+    <!-- Form -->
+    <form id="suggest-form" class="px-6 py-5 flex flex-col gap-4" novalidate>
+
+      <!-- Descripción -->
+      <div class="flex flex-col gap-1.5">
+        <label class="text-[0.8em] font-semibold text-text-muted uppercase tracking-wide" for="suggest-descripcion">
+          Tu sugerencia <span class="text-red-500">*</span>
+        </label>
+        <textarea
+          id="suggest-descripcion"
+          rows="4"
+          placeholder="Cuéntanos qué mejorarías: funcionalidad nueva, diseño, asignaturas que añadir…"
+          class="px-3 py-2 rounded-md bg-background border border-border-subtle text-text-main text-[0.95em] focus:outline-none focus:border-blue-500 transition-colors resize-y min-h-[90px]"
+        ></textarea>
+        <p id="suggest-error-descripcion" class="hidden text-red-500 text-[0.82em]"></p>
+      </div>
+
+      <!-- Estado -->
+      <p id="suggest-success" class="hidden text-green-600 dark:text-green-400 text-[0.9em] font-medium">
+        ✅ ¡Gracias! Tu sugerencia ha sido enviada.
+      </p>
+      <p id="suggest-error-msg" class="hidden text-red-500 text-[0.9em] font-medium"></p>
+
+      <!-- Botones -->
+      <div class="flex gap-3 justify-end pt-1">
+        <button
+          type="button"
+          id="suggest-cancel"
+          class="px-4 py-2 rounded-md border border-border-subtle text-text-muted hover:bg-surface-hover bg-transparent text-[0.9em] cursor-pointer transition-colors"
+        >
+          Cancelar
+        </button>
+        <button
+          type="submit"
+          id="suggest-submit"
+          class="flex items-center gap-2 px-4 py-2 rounded-md bg-yellow-500 hover:bg-yellow-600 text-white text-[0.9em] font-semibold border-none cursor-pointer transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+        >
+          <span class="material-icons" style="font-size:15px">send</span>
+          Enviar sugerencia
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<style>
+  #suggest-modal-box {
+    opacity: 0;
+    transform: translateY(32px);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+  }
+  #suggest-modal.suggest-visible #suggest-modal-box {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  #suggest-overlay {
+    opacity: 0;
+    transition: opacity 0.25s ease;
+  }
+  #suggest-overlay.suggest-overlay-visible {
+    opacity: 1;
+  }
+  .suggest-spinner {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: suggest-spin 0.7s linear infinite;
+    vertical-align: middle;
+  }
+  @keyframes suggest-spin {
+    to { transform: rotate(360deg); }
+  }
+</style>
+
+<script>
+  const EMAILJS_SERVICE_ID  = import.meta.env.PUBLIC_EMAILJS_SERVICE_ID;
+  const EMAILJS_TEMPLATE_ID = import.meta.env.PUBLIC_EMAILJS_SUGGEST_TEMPLATE_ID;
+  const EMAILJS_PUBLIC_KEY  = import.meta.env.PUBLIC_EMAILJS_PUBLIC_KEY;
+
+  (function initSuggestModal() {
+    const modal            = document.getElementById("suggest-modal");
+    const overlay          = document.getElementById("suggest-overlay");
+    const closeBtn         = document.getElementById("suggest-close");
+    const cancelBtn        = document.getElementById("suggest-cancel");
+    const form             = document.getElementById("suggest-form");
+    const submitBtn        = document.getElementById("suggest-submit");
+    const msgOk            = document.getElementById("suggest-success");
+    const msgKo            = document.getElementById("suggest-error-msg");
+    const errorDescripcion = document.getElementById("suggest-error-descripcion");
+
+    if (!modal) return;
+
+    function openModal() {
+      modal.classList.remove("hidden");
+      overlay.classList.remove("hidden");
+      document.body.style.overflow = "hidden";
+      setTimeout(() => {
+        modal.classList.add("suggest-visible");
+        overlay.classList.add("suggest-overlay-visible");
+        const firstEl = modal.querySelector("textarea, input, button");
+        if (firstEl) firstEl.focus();
+      }, 10);
+    }
+
+    function closeModal() {
+      modal.classList.remove("suggest-visible");
+      overlay.classList.remove("suggest-overlay-visible");
+      setTimeout(() => {
+        modal.classList.add("hidden");
+        overlay.classList.add("hidden");
+        document.body.style.overflow = "";
+        form.reset();
+        msgOk.classList.add("hidden");
+        msgKo.classList.add("hidden");
+        errorDescripcion.classList.add("hidden");
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = '<span class="material-icons" style="font-size:15px">send</span> Enviar sugerencia';
+      }, 260);
+    }
+
+    closeBtn.addEventListener("click", closeModal);
+    cancelBtn.addEventListener("click", closeModal);
+    overlay.addEventListener("click", closeModal);
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && !modal.classList.contains("hidden")) {
+        e.stopPropagation();
+        closeModal();
+      }
+    });
+
+    // Focus trap
+    modal.addEventListener("keydown", (e) => {
+      if (e.key !== "Tab") return;
+      const focusable = Array.from(
+        modal.querySelectorAll("button, textarea, input, [tabindex]")
+      ).filter((el) => !el.disabled && el.offsetParent !== null);
+      if (!focusable.length) return;
+      const first = focusable[0];
+      const last  = focusable[focusable.length - 1];
+      if (e.shiftKey) {
+        if (document.activeElement === first) { e.preventDefault(); last.focus(); }
+      } else {
+        if (document.activeElement === last)  { e.preventDefault(); first.focus(); }
+      }
+    });
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const descripcion = document.getElementById("suggest-descripcion").value.trim();
+
+      errorDescripcion.classList.add("hidden");
+      if (!descripcion) {
+        errorDescripcion.textContent = "Escribe tu sugerencia antes de enviar.";
+        errorDescripcion.classList.remove("hidden");
+        return;
+      }
+
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<span class="suggest-spinner"></span> Enviando...';
+      msgOk.classList.add("hidden");
+      msgKo.classList.add("hidden");
+
+      try {
+        window.emailjs.init(EMAILJS_PUBLIC_KEY);
+        await window.emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+          asignatura:    "[SUGERENCIA WEB]",
+          descripcion:   descripcion,
+        });
+
+        submitBtn.innerHTML = '<span class="material-icons" style="font-size:15px">send</span> Enviar sugerencia';
+        submitBtn.disabled = false;
+        msgOk.classList.remove("hidden");
+        form.reset();
+        setTimeout(() => closeModal(), 2200);
+      } catch (err) {
+        console.error("EmailJS error:", err);
+        submitBtn.innerHTML = '<span class="material-icons" style="font-size:15px">send</span> Enviar sugerencia';
+        submitBtn.disabled = false;
+        msgKo.textContent = "Error al enviar. Inténtalo de nuevo o escríbenos a informaticatestua@gmail.com.";
+        msgKo.classList.remove("hidden");
+      }
+    });
+
+    window.openSuggestModal = openModal;
+  })();
+</script>
