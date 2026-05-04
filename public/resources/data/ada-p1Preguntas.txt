@@ -653,3 +653,33 @@ Con respecto al parámetro n, ¿Cuál es la complejidad temporal de la siguiente
 - $$ T(n) = n + 2T(n/2) $$ para $$ n > 1 $$ y $$ T(n) = 1 $$ para $$ n < 2 $$
 - No contesto.
 - $$ T(n) = 1 + 2T(n/2) $$ para $$ n > 1 $$ y $$ T(n) = 1 $$ para $$ n < 2 $$
+
+¿Qué esquema de programación es el adecuado para resolver el problema del k-ésimo mínimo en un vector? 
+2
+- Programación Dinámica 
+- Divide y Vencerás 
+- Ninguno de los dos 
+
+Si n es el número de elementos de un vector. La solución de menor coste al problema de encontrar su k-ésimo mínimo tiene la siguiente complejidad: 
+2
+- Ω (n) y O(n logn) 
+- Ω (n) y O(n^2) 
+- Ninguna de las dos 
+
+Si n es el número de elementos de un vector. Podemos encontrar una solución al problema de encontrar su k-ésimo que esté acotada superiormente por : 
+1
+- O(n^3) 
+- O (n) 
+- Ninguna de las dos 
+
+Dada la solución recursiva al problema de encontrar el k-ésimo mínimo de un vector. Cada llamada recursiva, ¿cuántas nuevas llamadas recursivas genera? 
+1
+- una o ninguna 
+- dos o ninguna 
+- una o dos 
+
+La solución al problema de encontrar el k-ésimo mínimo de un vector pone en práctica la siguiente estrategia: 
+2
+- Ordena totalmente el vector 
+- Ordena parcialmente el vector 
+- No ordena ningún elemento del vector 

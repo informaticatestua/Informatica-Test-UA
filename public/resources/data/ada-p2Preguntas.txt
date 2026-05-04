@@ -158,7 +158,7 @@ La solución de programación dinámica iterativa del problema de la mochila dis
 3
 - ... tiene un coste temporal asintótico exponencial con respecto al número de objetos
 - ... calcula menos veces el valor de la mochila que la correspondiente solución de programación dinámica recursiva
-- ... tiene la restricción de que los valores tienen que ser enteros positivos
+- ... tiene la restricción de que los pesos tienen que ser enteros positivos
 
 ¿Cual de los siguientes pares de problemas son equivalentes en cuanto al tipo de solución(óptima, factible, etc) aportada por el método voraz? 
 1
@@ -357,36 +357,6 @@ La programación dinámica, para resolver un problema, aplica la estrategia...
 - Se resuelven los problemas más pequeños y, combinando las soluciones, se obtienen las soluciones de problemas sucesivamente más grandes hasta llegar al problema original. 
 - Se descompone el problema a resolver en subproblemas más pequeños, que se resuelven independientemente para finalmente combinar las soluciones de los subproblemas para obtener la solución del problema original. 
 - Ninguna de las anteriores 
-
-¿Qué esquema de programación es el adecuado para resolver el problema del k-ésimo mínimo en un vector? 
-2
-- Programación Dinámica 
-- Divide y Vencerás 
-- Ninguno de los dos 
-
-Si n es el número de elementos de un vector. La solución de menor coste al problema de encontrar su k-ésimo mínimo tiene la siguiente complejidad: 
-2
-- Ω (n) y O(n logn) 
-- Ω (n) y O(n^2) 
-- Ninguna de las dos 
-
-Si n es el número de elementos de un vector. Podemos encontrar una solución al problema de encontrar su k-ésimo que esté acotada superiormente por : 
-1
-- O(n^3) 
-- O (n) 
-- Ninguna de las dos 
-
-Dada la solución recursiva al problema de encontrar el k-ésimo mínimo de un vector. Cada llamada recursiva, ¿cuántas nuevas llamadas recursivas genera? 
-1
-- una o ninguna 
-- dos o ninguna 
-- una o dos 
-
-La solución al problema de encontrar el k-ésimo mínimo de un vector pone en práctica la siguiente estrategia: 
-2
-- Ordena totalmente el vector 
-- Ordena parcialmente el vector 
-- No ordena ningún elemento del vector 
 
 ¿Qué esquema de programación es el adecuado para resolver el problema de la búsqueda binaria? 
 2
