@@ -94,7 +94,7 @@ El problema de encontrar el árbol de recubrimiento de coste mínimo para un gra
 - ... se puede resolver siempre con una estrategia voraz
 - ... no se puede resolver en general con una estrategia voraz
 
-Un algoritm recursivo basado en el esquema divide y vencerás...
+Un algoritmo recursivo basado en el esquema divide y vencerás...
 2
 - Las demás opciones son verdaderas
 - ... será más eficiente cuanto más equitativa sea la división en subproblemas
