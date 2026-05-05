@@ -47,7 +47,7 @@ Si ante un problema de decisión existe un criterio de selección voraz entonces
 - El problema de la mochila discreta o sin fraccionamiento
 
 ¿Cual de los siguientes pares de problemas son equivalente en cuanto al tipo de solución(óptima, factible, etc) aportada por el método voraz? 
-1
+3
 - La mochila discreta y la asignación de tareas
 - El fontanero diligente y el problema del cambio
 - La mochila continua y la asignación de tareas
