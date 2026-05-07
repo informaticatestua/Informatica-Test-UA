@@ -274,7 +274,7 @@ Decid cuál de estas tres es la cota pesimista más ajustada al valor óptimo de
 - Programación Dinámica 
 - Backtracking 
 
-Ante un problema que presenta una solución recursiva siempre podemos aplicar: (NO SEGURO)
+Ante un problema que presenta una solución recursiva siempre podemos aplicar:
 2
 - Divide y vencerás 
 - Programación dinámica 
@@ -328,7 +328,7 @@ Si aplicamos Programación Dinámica a un problema que también tiene solución 
 - El coste temporal aumenta y el espacial se reduce con respecto a la solución por DyV 
 - Ninguna de las anteriores.
 
-¿Cuándo utilizaremos Programación Dinámica en lugar de Divide y Vencerás? (NO SEGURO)
+¿Cuándo utilizaremos Programación Dinámica en lugar de Divide y Vencerás?
 2
 - Cuando se incrementa la eficacia 
 - Cuando se incrementa la eficiencia 
@@ -346,7 +346,7 @@ Supongamos el problema de la mochila resuelto mediante Programación Dinámica y
 - No 
 - Depende de los valores de n y P. 
 
-Un problema de optimización cuya solución se puede expresar mediante una secuencia de decisiones cumple el principio de optimalidad si, dada una secuencia óptima: (NO SEGURO)
+Un problema de optimización cuya solución se puede expresar mediante una secuencia de decisiones cumple el principio de optimalidad si, dada una secuencia óptima:
 3
 - Existe una subsecuencia de esa solución que corresponde a la solución óptima de su subproblema asociado
 - Existe al menos una subsecuencia de esa solución que corresponde a la solución óptima de su subproblema asociado 
