@@ -34,7 +34,7 @@ En el caso de que hayamos desarrollado un software de gestion de autonomos en fo
 - Los clientes suscritos a nuestro servicio
 
 Suponemos que en en un momento del desarrollo de un proyecto tenemos unos valores de SPI>1 y CPI<1. ¿Que podemos decir en esta situacion?
-2
+1
 - Puede ser que nos sobre personal
 - Deberiamos aumentar el ritmo de trabajo para ajustarnos a la agenda
 - Puede ser que nos falte personal
@@ -202,7 +202,7 @@ En el análisis EVA, la tarea/proyecto va con retraso según la agenda si:
 - BCWP>BCWS
 
 Tenemos tres actividades: A, B y C. A precede a B. Las holguras totales son: HT(A)=4, HT(B)=2,  HT(C)=3,Las holguras libres son: HL(A)= 3, HL(B)=2, HL(C)=3,  Si A se retrasa 4 días, ¿qué les ocurre a B y C?
-3
+1
 - La holgura total de B y C pasa a ser de 1 y 2 dias respectivamente
 - Ninguna de las anteriores es cierta
 - B se convierte en critica
@@ -230,7 +230,7 @@ En el análisis EVA, el indicador SV se calcula como:
 - Gantt
 
 En Scrum, la gráfica “Burn-Down” indica:
-4
+2
 - La velocidad de desarrollo del equipo.
 - La cantidad de trabajo pendiente en un sprint
 - Los posibles impedimentos del equipo.
@@ -251,7 +251,7 @@ El modelo basado en prototipos
 - Es posible utilizarlo sólo con lenguajes orientados a objetos
 
 El cono de la incertidumbre
-4
+1
 - Dice que conforme avanza el proyecto menos errores de estimación tenemos.
 - Todas las anteriores son falsas.
 - Dice que conforme avanza el proyecto más errores de estimación descubrimos
@@ -321,7 +321,7 @@ Indica cuál de las siguientes metodólogas son ágiles
 - Ninguna de las anteriores.
 
 Tenemos la actividad A B y C. A precede a B. Las holguras totales sonHT(A)=2,HT(B)=4,HT(C)=3. Las holguras libres son HL(A)=3,HL(B)=2,HL(C)=3. Si A seretrasa 2 dias. ¿qué les ocurre a B y C?
-3
+4
 - Nada, ya que no sobrepasamos la holgura total de A
 - La holgura total de B y C pasa a ser de 2 y 1 dias respectivamente.
 - B se convierte en critica
@@ -482,7 +482,7 @@ Una de las recomendaciones que se deben tener en cuenta durante la estimación d
 - Las acciones que realizan los programadores para pasar las pruebas unitarias
 
 ¿Qué podemos decir de una tarea si conocemos los valores BCWS=BCWP=0 y ACWP=800?
-3
+1
 - No debería haber comenzado, pero sí lo ha hecho
 - Debería haber comenzado y no lo ha hecho
 - El valor ACWP es erróneo
@@ -875,7 +875,7 @@ Obligaciones de las empresas respecto a los datos personales:
 - Proteger los ficheros para preservar la confidencialidad e implantar un responsable de seguridad junto con una Auditoría interna o externa.
 
 Durante una reunión con algunos de los interesados del proyecto, se le pide al PM añadir más trabajo al alcance del proyecto. El PM revisó la correspondencia con el patrocinador antes que se firmara el acta de constitución y éste se negó aportar más financiación para el trabajo que supone modificar el alcance mencionado por los interesados. Lo mejor que el PM puede hacer es:
-2
+1
 - Evaluar el impacto sobre el proyecto antes de añadir más trabajo al alcance
 - Decirle a los interesados que no se puede modificar ese aspecto del alcance
 - Añadir el trabajo si el cronograma del proyecto lo permite
@@ -1036,7 +1036,7 @@ En el siguiente diagrama Gantt ¿qué modelo de proceso se está siguiendo? http
 - El seguimiento del proyecto
 
 En el análisis EVA, la tarea/proyecto está por debajo de lo presupuestado si:ç
-2
+3
 - BCWP < ACWP
 - BCWP > ACWS
 - BCWP > ACWP
