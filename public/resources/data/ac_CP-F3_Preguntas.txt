@@ -41,7 +41,7 @@ En el nivel más alto encontramos un proceso sobre la CPU (Host) que realiza los
 - __kernel__ void vecadd()
 
 ¿Qué hace la siguiente función? ```__global__ void vecadd(float* C, const float* A, const float* B)\n{ \n\t# ================================================================ \n\t# Calcula el índice para acceder a cada elemento \n\t# Calcula la suma de las posiciones correspondientes y almacena el resultado \n\t# ================================================================\n\n\tconst int i = (threadIdx.x + blockIdx.x * blockDim.x) * COMPUTE_N_ELEMENTS_PER_THREAD; \n\tif ( i < VECTOR_ELEMENTS ) \n\t{ \n\t\tfor(int j=0; j < COMPUTE_N_ELEMENTS_PER_THREAD; j++) \n\t\t{ \n\t\t\tC[i+j] = A[i+j] + B[i+j]; \n\t\t} \n\t}\n}```
-3
+2
 - Es una función global que realiza la suma en el host de las VECTOR_ELEMENTS componentes del vector.
 - Es el Kernel que se ejecuta en paralelo por cada hilo en la GPU para calcular la suma de las VECTOR_ELEMENTS componentes del vector. Cada hilo realiza la suma del número de componentes del vector indicado por COMPUTE_N_ELEMENTS_PER_THREAD.
 - Es el Kernel que se ejecuta en paralelo por cada hilo en la GPU para calcular la suma de las VECTOR_ELEMENTS componentes del vector. Cada hilo solo puede realizar una única suma.
@@ -53,7 +53,7 @@ En el nivel más alto encontramos un proceso sobre la CPU (Host) que realiza los
 - Define la estructura y dimensión de los bloques y del grid e invoca al kernel. La estructura definida para los bloques es de dos dimensiones.
 
 Sobre la complejidad y dimensión de la cache, la unidad de control y las ALUs de la CPU frente a la GPU ¿Cuál de las siguientes afirmaciones es cierta?
-1
+2
 - Las memorias caches de la GPU son individualmente de mayor tamaño que la cache de la CPU
 - Las ALUs de la CPU son más complejas y mucho menos numerosas que las ALUs de la GPU
 - La unidad de control de la CPU es mucho más simple que las unidades de control de la GPU
