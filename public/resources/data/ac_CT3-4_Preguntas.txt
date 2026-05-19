@@ -156,7 +156,7 @@ Si tenemos una máquina segmentada en 5 etapas cuyas duraciones son 27ns, 32ns, 
 - Riesgo estructural
 
 
-¿Cual es la eficiencia máxima de la unidad segmentada lineal para realizar 100 operaciones? https://i.imgur.com/5zCVQnF.png
+¿Cual es la eficiencia máxima de la unidad segmentada lineal para realizar 100 operaciones? https://i.imgur.com/5zCVQnF.png \n![Figura](/resources/images/ac-5zCVQnF.png){width=1261 height=516}
 1
 Respuesta: 0,97
 Respuesta: 9,7
@@ -324,7 +324,7 @@ En cuanto a la manera de programar las máquinas, indica la respuesta correcta
 - La aparición de los CISC permitió simplificar las arquitecturas de repertorio de instrucciones
 - Actualmente, las decisiones de diseño de la arquitectura del repertorio de instrucciones se realizan para facilitar la programación en lenguaje ensamblador.
 
-¿A qué figura corresponde un procesador con tipo de almacenamiento interno de la CPU para arquitectura de registros de propósito general R-R? https://i.imgur.com/bumK9qs.png
+¿A qué figura corresponde un procesador con tipo de almacenamiento interno de la CPU para arquitectura de registros de propósito general R-R? https://i.imgur.com/bumK9qs.png \n![Figura](/resources/images/ac-bumK9qs.png){width=842 height=714}
 3
 - La marcada en el dibujo como a)
 - La marcada en el dibujo como b)
@@ -376,7 +376,7 @@ Dada la situación en la figura, indica el dato de memoria direccionado por 4(R2
 - Híbrida
 - El RI no depende del tipo de codificación
 
-Dada la máquina A, calcula la ganancia si la segmentación añade 5ns de sobrecarga al clk (NO SEGURO) https://i.imgur.com/Vf1Udk9.png
+Dada la máquina A, calcula la ganancia si la segmentación añade 5ns de sobrecarga al clk (NO SEGURO) https://i.imgur.com/Vf1Udk9.png \n![Figura](/resources/images/ac-Vf1Udk9.png){width=385 height=198}
 3
 - 3,85
 - 5
