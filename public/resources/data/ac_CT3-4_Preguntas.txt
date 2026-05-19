@@ -356,7 +356,7 @@ Dada la situación en la figura, indica el dato de memoria direccionado por (R1)
 - 1004
 
 Dada la situación en la figura, indica el dato de memoria direccionado por @(R1)```REGISTROS              MEMORIA \n+----+------+          +-----------+------+ \n| R1 | 1012 |          | Dirección | Dato | \n+----+------+          +-----------+------+ \n| R2 | 1004 |          |      1000 | 1012 | \n+----+------+          +-----------+------+ \n| R3 |    2 |          |      1004 |    4 | \n+----+------+          +-----------+------+ \n                       |      1008 |    8 | \n                       +-----------+------+ \n                       |      1012 | 1004 | \n                       +-----------+------+ \n                       |      1016 | 1020 | \n                       +-----------+------+ \n                       |      1020 |   16 | \n                       +-----------+------+ \n                       |      1024 |    0 | \n                       +-----------+------+ \n \n                       d = 4 (palabras de 32 bits) \n```
-4
+3
 - 16
 - 1020
 - 4
