@@ -90,7 +90,7 @@ Un test que use Webdriver con maven:
 - puede ejecutarse durante la fase test
 
 Teniendo en cuenta el proyecto matriculación usado en prácticas: \n![grafo](/resources/images/ppss-p2-4.png){width=400 height=200}
-3
+4
 - Podemos integrar DAO + PROXY usando alguna estrategia de integración
 - No podemos hacer pruebas unitarias sobre el módulo DAO ya que necesitamos acceder a una BD
 - Podemos integrar DAO + PROXY usando una estrategia de integración

@@ -1245,7 +1245,7 @@ Es incorrecto, la conexion no se abre correctamente
 Es incorrecto, no se está obteniendo correctamente la cadena de conexion
 
 En mi página web tengo un asp:Label que inicializo a cadena vacía en el Page.Load. Adicionalmente, tengo un botón asociado a un evento que concatena una letra "a" al componente asp:Label anterior. Si al lanzar la página, pulso tres veces el botón, ¿qué veré en el componente asp:Label?:
-2
+4
 "aa"
 "aaa"
 Nada
