@@ -783,8 +783,8 @@
         copyBtn.addEventListener("click", () => {
             const pregunta = $("pregunta")?.innerText || "";
             const opciones = Array.from(
-                $("opciones")?.getElementsByTagName("span") || [],
-            ).map((e) => e.innerText);
+                document.querySelectorAll("form#opciones label .opcion-label"),
+            ).map((e) => e.innerText.trim());
             const contenido = pregunta + "\n\n" + "- " + opciones.join("\n- ");
 
             navigator.clipboard.writeText(contenido).then(
