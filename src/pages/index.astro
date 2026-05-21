@@ -5,7 +5,29 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 <BaseLayout>
 	<div id="main-container" class="flex flex-col items-center justify-center m-auto w-full">
 		<div id="app" class="relative w-max max-w-[95vw] text-center bg-surface shadow-md shadow-black/5 rounded-[5px] px-[40px] py-[30px] mx-auto my-[20px] box-border border border-border-subtle">
-			
+
+			<a
+				href="mailto:informaticatestua@gmail.com?subject=Preguntas%20para%20a%C3%B1adir%20a%20Inform%C3%A1tica%20Test%20UA"
+				id="contribute-banner"
+				class="group relative block overflow-hidden rounded-[10px] mb-6 px-5 py-4 text-left border border-blue-400/40 dark:border-blue-400/30 bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all"
+			>
+				<span class="pointer-events-none absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_top_right,white,transparent_60%)]"></span>
+				<div class="relative flex items-center gap-3 flex-wrap">
+					<span class="material-icons text-white text-[1.8em] drop-shadow">mark_email_unread</span>
+					<div class="flex-1 min-w-[200px]">
+						<p class="m-0 text-white font-heading font-bold text-[1.05em] leading-tight">
+							¿Tienes preguntas de otras asignaturas?
+						</p>
+						<p class="m-0 mt-1 text-white/90 text-[0.92em] leading-snug">
+							Envíamelas a
+							<span class="font-semibold underline decoration-white/60 underline-offset-2">informaticatestua@gmail.com</span>
+							y las añado a la web.
+						</p>
+					</div>
+					<span class="material-icons text-white/90 group-hover:translate-x-1 transition-transform" aria-hidden="true">arrow_forward</span>
+				</div>
+			</a>
+
 			<div id="asignaturas-container">
 				
 				<!-- Rama Software -->
