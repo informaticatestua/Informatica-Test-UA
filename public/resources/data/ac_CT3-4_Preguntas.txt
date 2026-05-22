@@ -137,13 +137,13 @@ En una unidad segmentada con 10 etapas de 1 ciclo y sin producirse ninguna deten
 - 20
 - 2
 
-Si tenemos una máquina segmentada en 5 etapas cuyas duraciones son 27ns, 32ns, 42ns, 38ns y 66ns y el tiempo de almacenamiento de los registros intermedios es 2ns. ¿Cuál será el ciclo de reloj de la máquina segmentada en nanosegundos?
+(Numérica) Si tenemos una máquina segmentada en 5 etapas cuyas duraciones son 27ns, 32ns, 42ns, 38ns y 66ns y el tiempo de almacenamiento de los registros intermedios es 2ns. ¿Cuál será el ciclo de reloj de la máquina segmentada en nanosegundos?
 1
 - Respuesta: 68
 - Respuesta: 6,8
 - Respuesta: 0,68
 
-¿Cuál es la ganancia máxima de una unidad segmentada de 5 etapas para 500 instrucciones?
+(Numérica) ¿Cuál es la ganancia máxima de una unidad segmentada de 5 etapas para 500 instrucciones?
 1
 - Respuesta: 4,96
 - Respuesta: 49,6
@@ -156,13 +156,13 @@ Si tenemos una máquina segmentada en 5 etapas cuyas duraciones son 27ns, 32ns, 
 - Riesgo estructural
 
 
-¿Cual es la eficiencia máxima de la unidad segmentada lineal para realizar 100 operaciones? https://i.imgur.com/5zCVQnF.png \n![Figura](/resources/images/ac-5zCVQnF.png){width=1261 height=516}
+(Numérica) ¿Cual es la eficiencia máxima de la unidad segmentada lineal para realizar 100 operaciones? https://i.imgur.com/5zCVQnF.png \n![Figura](/resources/images/ac-5zCVQnF.png){width=1261 height=516}
 1
 Respuesta: 0,97
 Respuesta: 9,7
 Respuesta: 0,097
 
-Segmentar en 5 etapas una unidad con 1 detención en el 5% de las instrucciones, ¿qué ganancia máxima tendría?
+(Numérica) Segmentar en 5 etapas una unidad con 1 detención en el 5% de las instrucciones, ¿qué ganancia máxima tendría?
 1
 Respuesta: 4,76
 Respuesta: 476
