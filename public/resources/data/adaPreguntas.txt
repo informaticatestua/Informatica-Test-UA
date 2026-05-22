@@ -910,12 +910,6 @@ Para cual de estos problemas de optimizacion existe una solucion voraz?
 - el problema de la mochila discreta
 - el problema de la asignacion de coste minimo de n tareas a n trabajadores cuando el coste de asignar la tarea i al trabajador j, cij esta tabulado en una matriz
 
-La mejor solucion que se conoce para el problema de la mochila continua sigue el esquema...
-3
-- ... voraz 
-- ... ramificacion y poda
-- ... divide y venceras
-
 Si  para  resolver  unmismo  problema  usamos  un  algoritmo  de  vuelta  atras  y  lo modificamos minimamente para convertirlo en un algoritmo de ramificacion y poda, ¿que cambiamos realmente?
 2
 - cambiamos la funcion que damos ala cota pesimista
@@ -1037,7 +1031,7 @@ En ausencia de cotas optimistas y pesimistas, la estrategiade vuelta atras...
 - ...debe recorrer siempre todo el arbol
 
 La mejor solucion que se conoce para el problema de la mochila continua sigue el esquema
-1
+2
 - divide y venceras
 - voraz
 - ramificacion y poda
