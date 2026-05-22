@@ -76,12 +76,6 @@ LAS SIGLAS CUDA (Compute Unified Device Architecture) HACEN REFERENCIA A:
 - Tanto a un compilador como a un conjunto de herramientas de desarrollo creados por INTEL.
 - Tanto a un compilador como a un conjunto de herramientas de desarrollo creados por AMD.
 
-EN UNA INVOCACIÓN AL KERNEL EN UN PROGRAMA EN CUDA. ¿QUÉ OPCIÓN ES LA CORRECTA?
-2
-- El programador ha de especificar el identificador del hilo dentro del bloque y el identificador del bloque dentro del grid al que se quiere invocar.
-- El programador ha de especificar el número de hilos por bloque y el número de bloques que forman el grid.
-- El programador ha de especificar el número de hilos por bloque. El tamaño del grid está fijado de antemano.
-
 LA ARQUITECTURA CUDA SE CARACTERIZA SEGÚN LA TAXONOMÍA DE FLYNN CON EL TIPO:
 1
 - SIMD
