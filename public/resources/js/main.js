@@ -477,7 +477,15 @@
             saltarBtn.setAttribute("aria-label", "Saltar pregunta");
             saltarBtn.onclick = function () {
                 guardarEstadoActual();
-                state.preguntaActual = (state.preguntaActual + 1) % state.preguntas.length;
+
+                const nextIndex = (state.preguntaActual + 1) % state.preguntas.length;
+                
+                // resetea el historial al dar la vuelta completa.
+                if (nextIndex === 0) {
+                    state.estadosPreguntas = {}
+                };
+
+                state.preguntaActual = nextIndex;
                 mostrarPregunta();
                 restaurarEstadoActual();
             };
@@ -602,7 +610,15 @@
     /** Avanza al siguiente índice (con wrap-around) y restaura su estado. */
     function siguientePregunta() {
         guardarEstadoActual();
-        state.preguntaActual = (state.preguntaActual + 1) % state.preguntas.length;
+        
+        const nextIndex = (state.preguntaActual + 1) % state.preguntas.length;
+        
+        // Al completar el ciclo, limpia el historial para evitar que aparezcan respuestas previas destacadas.
+        if (nextIndex === 0) {
+            state.estadosPreguntas = {}
+        };
+
+        state.preguntaActual = nextIndex;
         mostrarPregunta();
         setVerificarMode("verificar");
         const resultado = $("resultado");
