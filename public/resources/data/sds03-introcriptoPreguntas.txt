@@ -181,7 +181,7 @@ Detección de cambios en datos (integridad)
 Salida de longitud fija
 
 ¿Para qué sirve un MAC (Message Authentication Code)?
-2
+1
 Autenticar y verificar la integridad con una clave secreta
 Generar números aleatorios verdaderos
 Cifrar grandes volúmenes de datos rápidamente
