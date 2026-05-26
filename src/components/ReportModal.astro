@@ -144,6 +144,10 @@
 
     if (!modal) return;
 
+    function normalizeReportText(value) {
+      return value.trim().toLocaleLowerCase("es-ES").replace(/\s+/g, " ");
+    }
+
     function openModal(preguntaTexto) {
       window._reportPreguntaTexto = preguntaTexto || "";
       modal.classList.remove("hidden");
@@ -204,6 +208,7 @@
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
       const descripcion = document.getElementById("report-descripcion").value.trim();
+      const normalizedDescripcion = normalizeReportText(descripcion);
 
       errorDescripcion.classList.add("hidden");
       if (!descripcion) {
@@ -212,13 +217,15 @@
         return;
       }
 
-      if (descripcion === IMAGE_REPORT_BLOCK_TEXT) {
+      if (normalizedDescripcion === IMAGE_REPORT_BLOCK_TEXT) {
         window.alert(
           "Eres un puto retrasado, deja de enviar que no se ven las imagenes, si que se ven, no seas pesado"
         );
         msgOk.classList.add("hidden");
         msgKo.textContent = "Ese mensaje no se ha enviado como reporte.";
         msgKo.classList.remove("hidden");
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = '<span class="material-icons" style="font-size:15px">flag</span> Enviar reporte';
         return;
       }
 
