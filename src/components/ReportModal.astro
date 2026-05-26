@@ -129,8 +129,6 @@
   const EMAILJS_SERVICE_ID  = import.meta.env.PUBLIC_EMAILJS_SERVICE_ID;
   const EMAILJS_TEMPLATE_ID = import.meta.env.PUBLIC_EMAILJS_TEMPLATE_ID;
   const EMAILJS_PUBLIC_KEY  = import.meta.env.PUBLIC_EMAILJS_PUBLIC_KEY;
-  const IMAGE_REPORT_BLOCK_TEXT = "no se ve la imagen";
-  const REPORT_BUTTON_LOCK_KEY = "reportButtonLocked";
 
   (function initReportModal() {
     const modal         = document.getElementById("report-modal");
@@ -144,10 +142,6 @@
     const errorDescripcion = document.getElementById("report-error-descripcion");
 
     if (!modal) return;
-
-    function normalizeReportText(value) {
-      return value.trim().toLocaleLowerCase("es-ES").replace(/\s+/g, " ");
-    }
 
     function openModal(preguntaTexto) {
       window._reportPreguntaTexto = preguntaTexto || "";
@@ -209,25 +203,11 @@
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
       const descripcion = document.getElementById("report-descripcion").value.trim();
-      const normalizedDescripcion = normalizeReportText(descripcion);
 
       errorDescripcion.classList.add("hidden");
       if (!descripcion) {
         errorDescripcion.textContent = "Añade una descripción antes de enviar.";
         errorDescripcion.classList.remove("hidden");
-        return;
-      }
-
-      if (normalizedDescripcion === IMAGE_REPORT_BLOCK_TEXT) {
-        localStorage.setItem(REPORT_BUTTON_LOCK_KEY, "true");
-        window.alert(
-          "Eres un puto retrasado, deja de enviar que no se ven las imagenes, si que se ven, no seas pesado"
-        );
-        msgOk.classList.add("hidden");
-        msgKo.textContent = "Ese mensaje no se ha enviado como reporte.";
-        msgKo.classList.remove("hidden");
-        submitBtn.disabled = false;
-        submitBtn.innerHTML = '<span class="material-icons" style="font-size:15px">flag</span> Enviar reporte';
         return;
       }
 
