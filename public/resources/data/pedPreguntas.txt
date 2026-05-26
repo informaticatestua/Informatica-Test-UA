@@ -2050,7 +2050,7 @@ NO MARCAR
 NO MARCAR
 
 El TAD vector visto en clase se define como un conjunto ordenado de pares <índice, valor>. Para cada índice definido dentro de un rango finito existe asociado un valor.
-2
+1
 V
 F
 NO MARCAR
@@ -2239,7 +2239,7 @@ NO MARCAR
 NO MARCAR
 
 La función de búsqueda BINARIA de un elemento en una lista ordenada podría alcanzar una complejidad temporal O(log2 n).
-2
+1
 V
 F
 NO MARCAR
