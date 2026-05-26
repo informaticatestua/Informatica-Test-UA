@@ -1238,7 +1238,7 @@ Es correcto, recuperamos la cadena de conexión del web.config y se obtienen los
 Es incorrecto, para consultar los usuarios en la base de datos se usaría el método ExecuteCommand
 
 En el siguiente codigo de ADO.net, el código: String s ConfigurationManager.ConnectionStrings["bdExamenConnectionString"]; SqlConnection c = new SqlConnection(s); c.Open(); SqlCommand com = new SqlCommand(“Select * from cliente”, c); Com.ExecuteReader(); c.Close(); REVISADA
-4
+1
 Es correcto, utiliza un metodo del acceso conectado
 Es correcto, utiliza un metodo del acceso desconectado
 Es incorrecto, la conexion no se abre correctamente
