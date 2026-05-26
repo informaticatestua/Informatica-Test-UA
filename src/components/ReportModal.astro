@@ -129,6 +129,7 @@
   const EMAILJS_SERVICE_ID  = import.meta.env.PUBLIC_EMAILJS_SERVICE_ID;
   const EMAILJS_TEMPLATE_ID = import.meta.env.PUBLIC_EMAILJS_TEMPLATE_ID;
   const EMAILJS_PUBLIC_KEY  = import.meta.env.PUBLIC_EMAILJS_PUBLIC_KEY;
+  const IMAGE_REPORT_BLOCK_TEXT = "no se ve la imagen";
 
   (function initReportModal() {
     const modal         = document.getElementById("report-modal");
@@ -208,6 +209,16 @@
       if (!descripcion) {
         errorDescripcion.textContent = "Añade una descripción antes de enviar.";
         errorDescripcion.classList.remove("hidden");
+        return;
+      }
+
+      if (descripcion === IMAGE_REPORT_BLOCK_TEXT) {
+        window.alert(
+          "Eres un puto retrasado, deja de enviar que no se ven las imagenes, si que se ven, no seas pesado"
+        );
+        msgOk.classList.add("hidden");
+        msgKo.textContent = "Ese mensaje no se ha enviado como reporte.";
+        msgKo.classList.remove("hidden");
         return;
       }
 
