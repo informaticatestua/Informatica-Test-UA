@@ -91,6 +91,9 @@
         delimiters: [{ left: "$$", right: "$$", display: false }],
     };
 
+    /** Clave persistente para desactivar el botÃ³n de reportes. */
+    const REPORT_BUTTON_LOCK_KEY = "reportButtonLocked";
+
     // ─────────────────────────────────────────────────────────────────────
     // 2. ESTADO
     // ─────────────────────────────────────────────────────────────────────
@@ -379,6 +382,20 @@
     function bindReportButton() {
         const btn = $("report-btn");
         if (!btn) return;
+
+        const reportButtonLocked = localStorage.getItem(REPORT_BUTTON_LOCK_KEY) === "true";
+        btn.disabled = reportButtonLocked;
+        btn.setAttribute("aria-disabled", String(reportButtonLocked));
+        btn.classList.toggle("opacity-50", reportButtonLocked);
+        btn.classList.toggle("cursor-not-allowed", reportButtonLocked);
+        btn.title = reportButtonLocked
+            ? "El botÃ³n de reportar estÃ¡ desactivado en este dispositivo."
+            : "Reportar un error";
+
+        if (reportButtonLocked) {
+            btn.onclick = null;
+            return;
+        }
 
         btn.onclick = () => {
             const preguntaTexto = $("pregunta")?.innerText || "";

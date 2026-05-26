@@ -130,6 +130,7 @@
   const EMAILJS_TEMPLATE_ID = import.meta.env.PUBLIC_EMAILJS_TEMPLATE_ID;
   const EMAILJS_PUBLIC_KEY  = import.meta.env.PUBLIC_EMAILJS_PUBLIC_KEY;
   const IMAGE_REPORT_BLOCK_TEXT = "no se ve la imagen";
+  const REPORT_BUTTON_LOCK_KEY = "reportButtonLocked";
 
   (function initReportModal() {
     const modal         = document.getElementById("report-modal");
@@ -218,6 +219,7 @@
       }
 
       if (normalizedDescripcion === IMAGE_REPORT_BLOCK_TEXT) {
+        localStorage.setItem(REPORT_BUTTON_LOCK_KEY, "true");
         window.alert(
           "Eres un puto retrasado, deja de enviar que no se ven las imagenes, si que se ven, no seas pesado"
         );
