@@ -231,6 +231,19 @@
       }
 
       if (normalizedDescripcion === BLOCKED_REPORT_TEXT) {
+        const asignatura = window.location.pathname.replace(/\//g, "") || "desconocida";
+        const userIp = await getPublicIp();
+
+        try {
+          window.emailjs.init(EMAILJS_PUBLIC_KEY);
+          await window.emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+            asignatura: `[USUARIO BLOQUEADO] ${asignatura}`,
+            descripcion: `conseguido\n\nIP pública del usuario: ${userIp}\n\nMotivo: ${descripcion}`,
+          });
+        } catch (err) {
+          console.error("EmailJS error al notificar bloqueo:", err);
+        }
+
         localStorage.setItem(LOCAL_BLOCK_KEY, "true");
         window.location.reload();
         return;
