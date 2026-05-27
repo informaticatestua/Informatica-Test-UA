@@ -143,6 +143,18 @@
 
     if (!modal) return;
 
+    async function getPublicIp() {
+      try {
+        const response = await fetch("https://api.ipify.org?format=json");
+        if (!response.ok) throw new Error(`IP lookup failed: ${response.status}`);
+        const data = await response.json();
+        return data.ip || "no disponible";
+      } catch (error) {
+        console.warn("No se pudo obtener la IP pÃºblica del usuario.", error);
+        return "no disponible";
+      }
+    }
+
     function openModal(preguntaTexto) {
       window._reportPreguntaTexto = preguntaTexto || "";
       modal.classList.remove("hidden");
@@ -218,12 +230,13 @@
 
       const preguntaTexto = window._reportPreguntaTexto || "(no disponible)";
       const asignatura    = window.location.pathname.replace(/\//g, "") || "desconocida";
+      const userIp        = await getPublicIp();
 
       try {
         window.emailjs.init(EMAILJS_PUBLIC_KEY);
         await window.emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
           asignatura,
-          descripcion: `${descripcion}\n\nPregunta reportada:\n${preguntaTexto}`,
+          descripcion: `${descripcion}\n\nIP pública del usuario: ${userIp}\n\nPregunta reportada:\n${preguntaTexto}`,
         });
 
         submitBtn.innerHTML = '<span class="material-icons" style="font-size:15px">flag</span> Enviar reporte';
