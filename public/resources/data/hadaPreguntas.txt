@@ -216,7 +216,7 @@ Debemos escribir el código necesario para gestionarla
 Se guarda una copia del dataset original y se compara la BBDD para ver si ha sido modificada
 
 En .NET cada lenguaje de programación define sus propios tipos de datos
-1
+2
 cierto
 falso
 solo coinciden los tipos de datos de C# y F#

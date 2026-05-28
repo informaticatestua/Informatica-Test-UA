@@ -118,15 +118,15 @@ A partir de este informa de JMeter obtenido con la siguiente configuración del 
 - no se puede saber porque falta en la configuración el valor Ramp-up
 
 Dado el siguiente fragmento de código en Java:```if (x > 5 & y < 2) {\n\tx = x + 1;\n}\nif (y > 0) {\n\tx = x + 2;\n}\nelse {\n\tx = x + 3;\n}```y dados los datos de entreda para los siguientes casos de prueba:\n\nCaso 1: x = 4, y = -1\nCaso 2: x = 6, y = 2\n\ny teniendo en cuenta los niveles 1 y 3 de cobertura, indica cuál o cuáles de estos niveles se cumplen:
-1
+3
 - sólo el nivel 3
 - niveles 1 y 3
 - ninguno de estos niveles
 - sólo el nivel 1
 
 Indica cuál de las siguientes afirmaciones es cierta:
-4
-- todaslas afirmaciones del resto de opciones son falsas
+1
+- todas las afirmaciones del resto de opciones son falsas
 - cuando utilizamos la clase PageFactory,el método initElements() tenemos que invocarlo desde el constructor de la page object asociada a la página principal
 - es conveniente que los objetos de tipo Alert sean manejados en el código de los tests
 - cuando utilizamos la clase PageFactory, no creamos una page object usando new()
