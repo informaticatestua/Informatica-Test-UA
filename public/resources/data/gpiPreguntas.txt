@@ -55,7 +55,7 @@ Las versiones de un sistema:
 - Elaboracion
 
 ¿Que aspecto ha sido el mas importante a la hora d establecer los objetivos de las fases de elaboracion y construccion en el modelo UP seguido para la planificacion del software de gestion de autonomos?
-3
+4
 - El modelo de proceso
 - Los recursos empleados
 - La arquitectura elegida
