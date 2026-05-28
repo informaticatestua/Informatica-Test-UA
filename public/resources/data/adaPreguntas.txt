@@ -4063,7 +4063,7 @@ Las otras dos opciones son ambas verdaderas.
 ... es una función de la talla, o tamano del problema, que tiene que estar definida para todos los posibles valores de ésta
 ... es el tiempo que tarda el algoritmo en resolver la talla más pequena que se le puede presentar.
 
-Con respecto al parámetro n, ¿Cuál es la complejidad temporal de la siguiente función? \n```void f(unsigned n){ \n\tif(n < 1) return; \n\tfor( int i = 0;i < n; i++) \n\t\tfor(int j = 0; j < n; j++) \n\t\t\tfor(int k = 0; k < n; k++) \n\t\t\t\tcout << "*"; \n\tfor(int i = 0; i < 8; i++) \n\t\tif(n / 2); \n}``` \nSeleccione una:
+Con respecto al parámetro n, ¿Cuál es la complejidad temporal de la siguiente función? \n```void f(unsigned n){ \n\tif(n < 1) return; \n\tfor( int i = 0;i < n; i++) \n\t\tfor(int j = 0; j < n; j++) \n\t\t\tfor(int k = 0; k < n; k++) \n\t\t\t\tcout << "*"; \n\tfor(int i = 0; i < 8; i++) \n\t\tf(n / 2); \n}``` \nSeleccione una:
 3
 $$ \Theta(n^3) $$
 $$ \Theta(n^2 \log n) $$
