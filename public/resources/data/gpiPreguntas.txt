@@ -47,13 +47,6 @@ Las versiones de un sistema:
 - Tienen un coste menor que las releases
 - Todas son ciertas
 
-El plan detallado de un proyecto
-3
-- Contiene todas las actividades incluidas en el plan general
-- Solo corresponde a una fase del proyecto
-- Todas son falsas
-- Se hace siempre de dos en dos iteraciones
-
 ¿En nuestras practicas, se que fase del mdelo UP ha sido objetivo la implementacion de la capa logica de negocio y acceso a datos?
 1
 - Construccion
