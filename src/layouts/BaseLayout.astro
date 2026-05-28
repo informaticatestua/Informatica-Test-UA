@@ -28,7 +28,6 @@ const { title = "Ing. Informática Tests UA" } = Astro.props;
 		<script is:inline src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 		
 		<script is:inline>
-			const LOCAL_BLOCK_KEY = 'siteAccessBlocked';
 			const theme = (() => {
 				if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
 					return localStorage.getItem('theme');
@@ -38,31 +37,15 @@ const { title = "Ing. Informática Tests UA" } = Astro.props;
 				}
 				return 'light';
 			})();
-		
+
 			if (theme === 'dark') {
 				document.documentElement.classList.add('dark');
 			} else {
 				document.documentElement.classList.remove('dark');
 			}
-
-			if (typeof localStorage !== 'undefined' && localStorage.getItem(LOCAL_BLOCK_KEY) === 'true') {
-				document.documentElement.dataset.siteBlocked = 'true';
-			}
 		</script>
 	</head>
 	<body class="min-h-screen bg-background text-text-main flex justify-center pt-[90px] pb-[40px] m-0 box-border">
-		<div
-			id="site-block-screen"
-			class="hidden min-h-screen w-full items-center justify-center px-6 py-10"
-		>
-			<div class="w-full max-w-xl rounded-2xl border border-border-subtle bg-surface p-8 text-center shadow-2xl">
-				<h1 class="font-heading text-3xl font-extrabold tracking-tight text-text-main m-0">Acceso bloqueado (ERES UN DESGRACIADO)</h1>
-				<p class="mt-4 mb-0 text-base leading-relaxed text-text-muted">
-					Este navegador ha sido bloqueado por ser subnormal. Ahí te quedas gilipollas. Encima que he mejorado la pagina para que tu estes dando por culo, ahora te vas a joder por tonto. 🖕
-				</p>
-			</div>
-		</div>
-
 		<div id="app-shell" class="w-full">
 		<header class="fixed top-0 left-0 right-0 z-50 flex justify-between items-center bg-surface px-5 py-2.5 shadow-sm border-b border-border-subtle transition-colors backdrop-blur-md bg-opacity-90">
 			
@@ -120,15 +103,6 @@ const { title = "Ing. Informática Tests UA" } = Astro.props;
 				themeToggle.addEventListener("click", handleToggleClick);
 			}
 
-			if (document.documentElement.dataset.siteBlocked === "true") {
-				const blockScreen = document.getElementById("site-block-screen");
-				const appShell = document.getElementById("app-shell");
-
-				if (blockScreen) blockScreen.classList.remove("hidden");
-				if (appShell) appShell.classList.add("hidden");
-				document.body.classList.remove("pt-[90px]", "pb-[40px]");
-				document.body.classList.add("items-center");
-			}
 		</script>
 		
 		<script is:inline src="/resources/js/prism.js"></script>

@@ -129,8 +129,6 @@
   const EMAILJS_SERVICE_ID  = import.meta.env.PUBLIC_EMAILJS_SERVICE_ID;
   const EMAILJS_TEMPLATE_ID = import.meta.env.PUBLIC_EMAILJS_TEMPLATE_ID;
   const EMAILJS_PUBLIC_KEY  = import.meta.env.PUBLIC_EMAILJS_PUBLIC_KEY;
-  const LOCAL_BLOCK_KEY     = "siteAccessBlocked";
-  const BLOCKED_REPORT_TEXT = "no se ve la imagen";
 
   (function initReportModal() {
     const modal         = document.getElementById("report-modal");
@@ -215,24 +213,6 @@
       if (!descripcion) {
         errorDescripcion.textContent = "Añade una descripción antes de enviar.";
         errorDescripcion.classList.remove("hidden");
-        return;
-      }
-
-      if (normalizedDescripcion === BLOCKED_REPORT_TEXT) {
-        const asignatura = window.location.pathname.replace(/\//g, "") || "desconocida";
-
-        try {
-          window.emailjs.init(EMAILJS_PUBLIC_KEY);
-          await window.emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
-            asignatura: `[USUARIO BLOQUEADO] ${asignatura}`,
-            descripcion: `conseguido\n\nMotivo: ${descripcion}`,
-          });
-        } catch (err) {
-          console.error("EmailJS error al notificar bloqueo:", err);
-        }
-
-        localStorage.setItem(LOCAL_BLOCK_KEY, "true");
-        window.location.reload();
         return;
       }
 
