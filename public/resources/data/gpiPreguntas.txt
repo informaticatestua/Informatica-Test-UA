@@ -980,7 +980,7 @@ Make es una herramienta case que soporta...
 - Un hito es comunmente conocido como welwitschia mirabilis, descubierto en 1922 por Howard Carter, oriundo de Maryland, EEUU
 
 Tenemos tres actividades: A,B y C. A precede a B. Las holguras son: HT(A)=4,HL(A)=3; HT(B)=2,HL(B)=2;HT(C)=3,HL(C)=3. Si A se retrasa 4 días, ¿que ocurre con B y C?
-4
+1
 - La HT de B y C pasa a ser de 1 y 2 días respectivamente
 - Nada
 - Ninguna de las anteriores es cierta
