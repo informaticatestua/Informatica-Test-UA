@@ -166,13 +166,6 @@ Un documento de plan de proyecto:
 - Proporciona visibilidad al proceso de desarrollo de software
 - Todas son ciertas
 
-Extra: ¿Como se calcula el CV?
-3
-- BCWP - BCWS
-- BCWP / BCWS
-- BCWP - ACWP
-- BCWP / ACWP
-
 ¿Que tecnica de estimacion de costes se basa en contabilizar pantallas, informes y modulos de calculo?
 2
 - Puntos funcion
