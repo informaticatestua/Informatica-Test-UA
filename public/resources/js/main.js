@@ -417,7 +417,7 @@
             label.className = "opcion-container";
 
             const span = document.createElement("span");
-            span.innerHTML = splitLongText(opcion);
+            span.innerHTML = splitLongText(formatTextWithCode(opcion));
             span.className = "opcion-label";
 
             label.appendChild(input);

@@ -172,7 +172,7 @@
 
         const textDiv = document.createElement("div");
         textDiv.style.cssText = "flex-grow: 1; margin: 0; padding: 0;";
-        textDiv.innerHTML = formatTextWithCode(splitLongText(opcion.texto));
+        textDiv.innerHTML = splitLongText(formatTextWithCode(opcion.texto));
 
         if (opcion.correcta) {
             li.className = "correct";

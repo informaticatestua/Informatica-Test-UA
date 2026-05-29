@@ -1033,7 +1033,6 @@ En el análisis EVA, la tarea/proyecto está por debajo de lo presupuestado si:�
 - BCWP < ACWP
 - BCWP > ACWS
 - BCWP > ACWP
-- BCWP < ACWP
 
 ¿Cuál es la distribución de tiempo dentro de un desarrollo de proyecto?
 2
