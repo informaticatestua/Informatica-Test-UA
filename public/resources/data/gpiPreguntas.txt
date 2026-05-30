@@ -619,12 +619,6 @@ Tenemos una tarea en MicrosoftProject de 2 días de duración con un recurso asi
 - Depende del tipo de tarea que tenga establecido
 - Nada, simplemente tiene en cuenta que la tarea la realizan 2 recursos
 
-Indica cuál de las siguientes afirmaciones sobre dirección de proyectos es FALSA:
-1
-- La dirección de proyectos no es la encargada de equilibrar las restricciones contrapuestas del proyecto.
-- Los cinco grupos de procesos en la dirección de proyectos son: iniciación, planificación, ejecución, seguimiento y control y cierre.
-- El objetivo principal de la dirección de proyectos es cumplir con los requisitos del proyecto
-
 Sobre la gestión de riesgos:
 3
 - Para todo riesgo se debe determinar un conjunto de acciones para reducir o eliminar el riesgo
@@ -1070,26 +1064,12 @@ El PM y su equipo estuvieron dos meses involucrados en el proceso de inicio del 
 - Ejecución del proyecto/Seguimiento y Control.
 - Acta de constitución/Ejecución del proyecto.
 
-¿Cuál de los siguientes se incluye en el acta de constitución del proyecto?
-4
-- Una estrategia de gestión de los riesgos
-- Una estimación de los diferentes paquetes de trabajo
-- Una estimación detallada de los recursos
-- El caso de negocio del proyecto
-
 Has creado el acta de constitución del proyecto, pero no se pudo aprobar. Tu director y su jefe pidieron que el proyecto se iniciara inmediatamente ¿Cuál de las siguientes es la mejor opción?
 2
 - Crear un proceso de control de cambios integrados
 - Mostrarle a tu director el impacto de proceder sin una aprobación
 - Comenzar el trabajo solo con las actividades de la ruta crítica
 - No comenzar el proyecto
-
-El PM tiene por primera vez un problema con uno de los miembros del equipo. ¿Cuál es la mejor forma de comunicación para abordar el problema?
-4
-- Comunicación formal escrita
-- Comunicación formal verbal
-- Comunicación informal escrita
-- Comunicación informal verbal
 
 El resultado más probable de la falta de comunicación en un proyecto es:
 3
@@ -1098,7 +1078,7 @@ El resultado más probable de la falta de comunicación en un proyecto es:
 - Se produzcan conflictos
 - La gerencia se disguste
 
-El sistema de numeración de una EDT permite al equipo del proyecto:
+El sistema de numeración de una EDT(WBS) permite al equipo del proyecto:
 3
 - Estimar de forma sistemática los costes de los elementos de la EDT
 - Proporcionar la justificación del proyecto
@@ -1112,7 +1092,7 @@ El sistema de numeración de una EDT permite al equipo del proyecto:
 - Al final de cada fase del proyecto
 - Durante los procesos de planificación
 
-Después de varios años de trabajar en proyectos, te acabas de integrar en la oficina de la dirección de proyectos. Una de las cosas que quieres introducir en tu organización es el valor de la creación y utilización de EDT. Algunos de los directores de proyectos están en desacuerdo porque les entienden que les supondrá un trabajo añadido más. ¿Cuál de las siguientes sería la mejor de las respuestas posibles a dichos directores para convencerlos de usar EDT?:
+Después de varios años de trabajar en proyectos, te acabas de integrar en la oficina de la dirección de proyectos. Una de las cosas que quieres introducir en tu organización es el valor de la creación y utilización de EDT(WBS). Algunos de los directores de proyectos están en desacuerdo porque les entienden que les supondrá un trabajo añadido más. ¿Cuál de las siguientes sería la mejor de las respuestas posibles a dichos directores para convencerlos de usar EDT?:
 1
 - LAS EDT evitarán que el trabajo se omita
 - Las EDT sólo son necesarias en proyectos grandes
@@ -1125,13 +1105,6 @@ Un PM nuevo te ha pedido un consejo sobre la creación de una EDT. Después de e
 - La aceptación del equipo
 - Las definición de las actividades
 - Disponer de una lista de riesgos
-
-Un PM acaba de ser asignado a un nuevo proyecto y se le ha entregado el acta de constitución del proyecto aprobada. Lo primero que el PM debe hacer es:
-1
-- Crear el enunciado del alcance del proyecto
-- Confirmar que todos los interesados conocen y aceptan el alcance
-- Analizar los riesgos del proyecto
-- Iniciar el proyecto en base a un plan para la dirección del proyecto
 
 Tras la elaboración del correspondiente grafo PERT, una empresa calcula que el camino crítico de uno de sus proyectos es A-F-G. Si la duración de las actividades del camino crítico es 10, 19 y 10 semanas respectivamente, podemos asegurar que:
 1
