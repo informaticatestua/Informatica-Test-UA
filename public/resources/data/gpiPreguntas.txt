@@ -998,13 +998,6 @@ Un proyecto está lleno de modificaciones al acta de constitución ¿Quién tien
 - El patrocinador
 - Los interesados
 
-El patrocinador está por comenzar el proceso de inicio de un proyecto. Todos los siguientes ítems son necesarios antes de comenzar este proceso, a excepción de:
-3
-- El enunciado del trabajo.
-- Estándares de la industria.
-- El director del proyecto.
-- Requisitos del negocio.
-
 El PM y su equipo estuvieron dos meses involucrados en el proceso de inicio del proyecto. Después de identificar a los interesados, dieron por finalizado el proceso de inicio. Indique qué se acaba de finalizar y qué está a punto de comenzar:
 2
 - Plan para la dirección del proyecto/La ejecución del proyecto.
