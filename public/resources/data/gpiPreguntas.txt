@@ -55,7 +55,7 @@ Las versiones de un sistema:
 - Elaboracion
 
 ¿Que aspecto ha sido el mas importante a la hora d establecer los objetivos de las fases de elaboracion y construccion en el modelo UP seguido para la planificacion del software de gestion de autonomos?
-4
+3
 - El modelo de proceso
 - Los recursos empleados
 - La arquitectura elegida
@@ -188,7 +188,7 @@ En el análisis EVA, la tarea/proyecto va con retraso según la agenda si:
 - BCWP>BCWS
 
 Tenemos tres actividades: A, B y C. A precede a B. Las holguras totales son: HT(A)=4, HT(B)=2,  HT(C)=3,Las holguras libres son: HL(A)= 3, HL(B)=2, HL(C)=3,  Si A se retrasa 4 días, ¿qué les ocurre a B y C?
-2
+3
 - La holgura total de B y C pasa a ser de 1 y 2 dias respectivamente
 - Ninguna de las anteriores es cierta
 - B se convierte en critica
@@ -237,7 +237,7 @@ El modelo basado en prototipos
 - Es posible utilizarlo sólo con lenguajes orientados a objetos
 
 El cono de la incertidumbre
-1
+4
 - Dice que conforme avanza el proyecto menos errores de estimación tenemos.
 - Todas las anteriores son falsas.
 - Dice que conforme avanza el proyecto más errores de estimación descubrimos
@@ -285,7 +285,7 @@ Señala cuál de las siguientes características corresponden a la metodología 
 - Se basa en roles y pasa a segundo plano la calidad del proyecto
 - Lo importante es el trabajo individual y la documentación que se realice sobre la aplicación.
 
-Muchas organizaciones fortalecen sus equipos de gestión de riesgos, para que estossean identificados a priori, pero lo que ocurre realmente es…
+Muchas organizaciones fortalecen sus equipos de gestión de riesgos, para que estos sean identificados a priori, pero lo que ocurre realmente es…
 2
 - Es imposible identificar los riesgos a priori
 - Lo mas usual es identificar los riesgos de ejecución
@@ -368,13 +368,6 @@ Las metodologías de desarrollo de software tienen como objetivo:
 - Proporcionar sistemas que satisfagan a todas las personas afectadas por el mismo
 - Desarrollar un sistema dentro de un tiempo apropiado y con unos costes aceptables
 - Establecer los requisitos de un sistema.
-
-Las metodologías ágiles se caracterizan
-4
-- Por hacer más énfasis en la documentación a entregar
-- Por inventarse a finales del S XIX en la revolución industrial
-- Ponen en el centro el proyecto a entregar no al cliente
-- Simplificar la complejidad de otras metodologías
 
 ¿Qué podemos decir de una tarea si conocemos los valores BCWS=1200 y BCWP=ACWP?
 3
@@ -668,13 +661,6 @@ Un PM ha sido asignado a un nuevo proyecto del que dispone de poca experiencia y
 - Asegurarse de que todos los interesados acepten el alcance del proyecto
 - Obtener registros históricos desde la oficina de gestión de proyectos
 - Contactar con el PM del proyecto anterior y pedirle consejos.
-
-En su proyecto ya se ha finalizado con la identificación de los interesados agregando información sobre sus roles, áreas de conocimiento, necesidades, intereses y expectativas ¿Cuál debería ser el siguiente paso a realizar?:
-3
-- Evaluar cómo podrían influir los interesados en el proyecto.
-- Controlar la participación de los interesados en el proyecto.
-- Clasificar a los interesados según su influencia e intereses.
-- Definir la mejor estrategia de comunicaciones con cada grupo de interesados.
 
 En el modelo UP.
 4
@@ -1140,7 +1126,7 @@ Analizando los valores de los parámetros EVA de la imagen... ```+-------+------
 - No debería haber comenzado pero sí lo ha hecho
 
 La necesidad de ........ es una de las mayores razones para la comunicación en un proyecto.
-2
+3
 - Optimización
 - Integridad
 - Integración
@@ -1244,20 +1230,6 @@ Un PM acaba de ser asignado a un nuevo proyecto y se le ha entregado el acta de 
 - Analizar los riesgos del proyecto
 - Iniciar el proyecto en base a un plan para la dirección del proyecto
 
-¿Cuál de las siguientes puede crear el mayor malentendido en el enunciado de la definición del alcance del proyecto?:
-1
-- Utilizar un lenguaje impreciso
-- Utilizar una estructura y un orden cronológico deficiente
-- Pequeñas variaciones en el tamaño de los paquetes de trabajo
-- Demasiado detalle
-
-El cliente ha entregado el enunciado del alcance del proyecto ¿Cuál será el próximo paso?:
-2
-- Ejecutar los paquetes de trabajo.
-- Realizar el Plan para la dirección del proyecto.
-- Completar la verificación del alcance.
-- Realizar el control integrado de cambios.
-
 Tras la elaboración del correspondiente grafo PERT, una empresa calcula que el camino crítico de uno de sus proyectos es A-F-G. Si la duración de las actividades del camino crítico es 10, 19 y 10 semanas respectivamente, podemos asegurar que:
 1
 - La duración total del proyecto es de 39 semanas
@@ -1269,12 +1241,6 @@ Tu empresa está evaluando tres proyectos de inversión mutuamente excluyentes e
 - Proyecto A
 - Proyecto B
 - Proyecto C
-
-El código de ética y práctica profesional de la ACM-IEEE los ingenieros de software se adhieren a los ocho principios siguientes:
-3
-- Sociedad, cliente, producto, empresario, juicio, administración, profesión y personal.
-- Cliente y empresario, producto, gestión, compañeros, juicio, administración, personal y computadores.
-- Sociedad, cliente y empresario, producto, valoración, gestión, profesión, compañeros y personal
 
 Tu empresa está evaluando tres proyectos de inversión mutuamente excluyentes entre sí. El proyecto A tiene un 50% de probabilidad de ganar 50.000€ y un 50% de perder 10.000€. El proyecto B tiene un 30% de probabilidad de ganar 40.000€ y un 70% de ganar 10.000€. El proyecto C tiene un 45% de probabilidad de ganar 50.000€ y un 55% de perder 5.000€. En base al valor monetario esperado, ¿Qué proyecto es el peor para tu empresa?
 2
@@ -1294,9 +1260,3 @@ Usted trabaja como responsable de un proyecto en una empresa con una estructura 
 - Medio.
 - Muy alto.
 - Bajo.
-
-Indica cuál de las siguientes afirmaciones sobre dirección de proyectos es incorrecta:
-3
-- El objetivo principal de la dirección de proyectos es cumplir con los requisitos del proyecto.
-- Los cinco grupos de procesos en la dirección de proyectos son: iniciación, planificación, ejecución, seguimiento y control y cierre.
-- La dirección de proyectos no es la encargada de equilibrar las restricciones contrapuestas del proyecto.
