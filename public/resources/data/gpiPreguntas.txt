@@ -145,8 +145,8 @@ Monitorizar una agenda tiene como objetivo fundamental
 - Sirve para justificar las horas dedicadas a un proyecto
 - Se usa como seguimiento interno
 
-En una iteracion del Plan detallado se establece una actividad de revision de los riesgosdel proyecto. Dicha actividad consiste en:
-3
+En una iteracion del Plan detallado se establece una actividad de revision de los riesgos del proyecto. Dicha actividad consiste en:
+2
 - Identificar mas riesgos para el proyecto
 - Volver a analizar la probabilidad y los efectos de todos los riesgos del plan
 - Revisar los identificadores potenciales que se marcaron en el plan de proyecto
@@ -215,13 +215,6 @@ En el análisis EVA, el indicador SV se calcula como:
 - Ley de Parkinson
 - Gantt
 
-En Scrum, la gráfica “Burn-Down” indica:
-2
-- La velocidad de desarrollo del equipo.
-- La cantidad de trabajo pendiente en un sprint
-- Los posibles impedimentos del equipo.
-- Todas son ciertas
-
 ¿Hasta que momento durante la ejecución de un proyecto, la contingencia debe serconsiderada?
 2
 - Hasta el fin del proyecto
@@ -278,33 +271,12 @@ En el registro de la propiedad intelectual de un software bajo una relación lab
 - Para la cesión de los derechos de autoría del software del empleado a la empresa
 - Para la cesión de los derechos de autoría del software de la empresa al empleado
 
-Señala cuál de las siguientes características corresponden a la metodología SCRUM
-2
-- Reuniones diarias, y trabajo individual.
-- Es incremental, reuniones diarias y se basa en roles.
-- Se basa en roles y pasa a segundo plano la calidad del proyecto
-- Lo importante es el trabajo individual y la documentación que se realice sobre la aplicación.
-
 Muchas organizaciones fortalecen sus equipos de gestión de riesgos, para que estos sean identificados a priori, pero lo que ocurre realmente es…
 2
 - Es imposible identificar los riesgos a priori
 - Lo mas usual es identificar los riesgos de ejecución
 - No se identifican a tiempo
 - Identifican normalmente riegos muy poco probables
-
-Los modelos de SCRUM y XP
-4
-- Tienen unos roles predefinidos.
-- Ofrecen resultados al cliente al finalizar cada iteración
-- Utilizan historias de usuario para definir requisitos.
-- Todas son ciertas.
-
-Indica cuál de las siguientes metodólogas son ágiles
-1
-- Kanban, Scrum, Extrem Programming
-- Cobol, c++, Java.
-- Uml , PPo,itil.
-- Ninguna de las anteriores.
 
 Tenemos la actividad A B y C. A precede a B. Las holguras totales sonHT(A)=2,HT(B)=4,HT(C)=3. Las holguras libres son HL(A)=3,HL(B)=2,HL(C)=3. Si A seretrasa 2 dias. ¿qué les ocurre a B y C?
 4
@@ -340,20 +312,6 @@ Ms Project es
 - Una herramienta de estimación de costes de proyectos
 - Una herramienta de desarrollo de proyectos
 - Una herramienta de modelado de proyectos
-
-Un impedimento en SCRUM
-4
-- Se refleja como una línea vertical en el gráfico burn-down.
-- Ninguna de las anteriores.
-- Se refleja como una línea discontinua en el gráfico burn-d.own.
-- Se refleja como una línea horizontal en el gráfico burn-down.
-
-¿Cuál de estas características no es de la metodología SCRUM?
-4
-- Demo al cliente al final de cada iteración
-- Metodología iterativa e incremental
-- Reuniones diarias.
-- Descanso cada 15 días para renovar las ideas
 
 ¿Cual de las siguientes afirmaciones es cierta?
 3
@@ -397,19 +355,12 @@ Las releases de una sistema:
 - Tienen un costo menor que las versiones
 - Todas son ciertas
 
-En Scrum, un Sprint:
-2
-- Tiene la duración que el cliente indique.
-- Tiene una duración prefijada
-- Puede alargarse el tiempo necesario hasta acabar todas las tareas pendientes.
-- Ninguna de las anteriores
-
 Según la LOPDGDD ¿A partir de qué edad puede un menor expresar el consentimiento en términos de protección de datos?
 3
 - 18 años
 - 16 años
 - 14 años
-- El padre o tutor legal será el que lo haga en su nombre mientras forme parte de launidad familliar
+- El padre o tutor legal será el que lo haga en su nombre mientras forme parte de la unidad familliar
 
 ¿Cuál es la distribución de tiempo dentro de un de desarrollo de equipo?
 2
@@ -432,8 +383,8 @@ Un plan de proyecto…
 - GPL
 - BSD
 
-Cuando el desarrollo del plan del proyecto existen restricciones de tiempo y presupuestoestablecidas por el cliente, estos deben..
-4
+Cuando el desarrollo del plan del proyecto existen restricciones de tiempo y presupuesto establecidas por el cliente, estos deben..
+2
 - Ser descartadas ya que no se podrán hacer ajustes en el presupuesto
 - Deben ser consideradas evaluando su impacto en el proyecto
 - Ser descartadas ya que hay que ignorar completamente al cliente
@@ -586,13 +537,6 @@ Tras la elaboración del correspondiente grafo PERT, una empresa sabe que las ho
 - Si la holgura de la actividad D se reduce en una unidad no se alteraría la duración final del proyecto.
 - La duración final del proyecto será de 9.
 
-Una empresa está haciendo un esfuerzo por mejorar el rendimiento de sus proyectos y crear registros históricos de proyectos pasados ¿Cuál es la mejor manera de lograrlo?
-4
-- Crear informes de estado.
-- Crear planes para la dirección de proyectos.
-- Crear diagramas de red.
-- Crear registros lecciones aprendidas.
-
 Durante la ejecución del proyecto, un miembro del equipo se acerca al PM porque no está seguro sobre qué trabajo debe realizar en el proyecto ¿Cuál de los siguientes documentos contiene descripción detallada de los paquetes de trabajo?:
 1
 - Diccionario de la EDT
@@ -654,13 +598,6 @@ Según el modelo de estimación de “Puntos de función”, ¿Cuál de las sigu
 - Depende del lenguaje de programación.
 - Realiza la estimación a partir de los requisitos.
 - Es un modelo adecuado para proyectos de gestión
-
-Un PM ha sido asignado a un nuevo proyecto del que dispone de poca experiencia y es bastante más grande de otros proyectos en los que ha trabajado. El PM conoce a un amigo que ya ha dirigido proyectos similares ¿Qué debería hacer el PM?:
-3
-- Esperar a la ejecución del proyecto para ver si necesitará ayuda.
-- Asegurarse de que todos los interesados acepten el alcance del proyecto
-- Obtener registros históricos desde la oficina de gestión de proyectos
-- Contactar con el PM del proyecto anterior y pedirle consejos.
 
 En el modelo UP.
 4
@@ -724,13 +661,6 @@ Los diagramas de GANTT
 - se usan para la planificación temporal
 - se usan para la estimación
 - son unos diagramas de red que permiten calcularles camines y tiempos límite
-
-Ms Project es ...
-4
-- Una herramienta de modelado de proyectos
-- Una herramienta de desarrollo de proyectos
-- Una herramienta de estimación de costes de proyectos
-- Una herramienta de seguimiento de proyectos
 
 COCOMO versus PUNTOS DE FUNCIÓN:
 3
@@ -821,12 +751,6 @@ Respecto a la protección de datos del software de gestión de autónomos, indic
 - Incluir un apartado de aviso legal en la web
 - Resgitrar los ficheros con los datos de carácter personal en la AEPD
 
-Rol del gerente funcional:
-3
-- Persona relacionada con la producción y el mantenimiento de los productos o servicios que vende la empresa
-- Responsable de la gestión coordinada de proyectos relacionados.
-- Persona clave que desempeña el rol de gestor en un área de la empresa, como recursos humanos, finanzas,contabilidad o adquisiciones.
-
 La Deontología Profesional:
 1
 - Está recogida en normas y códigos deontológicos.
@@ -887,13 +811,6 @@ Analizando los valores EVA que tenemos en la foto...¿que podemos decir del proy
 - El proyecto va adelantado y su productividad es baja
 - El proyecto va atrasado y su productividad es baja
 - El proyecto va atrasado y su productividad es alta
-
-Ms Project es...
-2
-- Una herramienta de desarrollo de proyectos
-- Una herramienta de seguimiento de proyectos
-- Una herramienta de modelado de proyectos
-- Una herramienta de estimación de costes de proyectos
 
 ¿Que ocurriría si en un proyecto el valor EVA de CPTR supera al valor CPTP?
 3
@@ -1104,13 +1021,6 @@ Analizando los valores de los parámetros EVA de la imagen... ```+-------+------
 - Va adelantada respecto a la agenda
 - Va atrasada respecto a la agenda
 
-Analizando los valores de los parámetros EVA de la imagen... ```+-------+------+------+------+ \n| Tarea | BCWS | BCWP | ACWP | \n+-------+------+------+------+ \n|TareaR | 2800 | 1800 | 2600 | \n+-------+------+------+------+ \n| Tarea1| 600  | 600  | 1000 | \n+-------+------+------+------+ \n| Tarea2| 1200 | 0    | 0    | \n+-------+------+------+------+ \n| Tarea3| 1000 | 1200 | 800  | \n+-------+------+------+------+ \n| Tarea4| 0    | 0    | 800  | \n+-------+------+------+------+ \n``` ¿Qué podemos decir de la tarea 2?
-4
-- No ha comenzado
-- Debería haber comenzado
-- Va retrasada
-- Todas son cierta
-
 Analizando los valores de los parámetros EVA de la imagen... ```+-------+------+------+------+ \n| Tarea | BCWS | BCWP | ACWP | \n+-------+------+------+------+ \n|TareaR | 2800 | 1800 | 2600 | \n+-------+------+------+------+ \n| Tarea1| 600  | 600  | 1000 | \n+-------+------+------+------+ \n| Tarea2| 1200 | 0    | 0    | \n+-------+------+------+------+ \n| Tarea3| 1000 | 1200 | 800  | \n+-------+------+------+------+ \n| Tarea4| 0    | 0    | 800  | \n+-------+------+------+------+ \n``` ¿Qué podemos decir de la tarea 3?
 3
 - No ha comenzado
@@ -1194,13 +1104,6 @@ El sistema de numeración de una EDT permite al equipo del proyecto:
 - Proporcionar la justificación del proyecto
 - Identificar el nivel en el que se encuentra cada actividad
 - Usarlo en una herramienta software para la dirección de proyectos
-
-¿Cuál de las siguientes es una salida clave del proceso de verificar el alcance?
-2
-- Un plan para la gestión del alcance más complejo
-- La aceptación del cliente de los entregables del proyecto
-- Disponer de estimaciones del cronograma mejorada
-- Un sistema de información para la mejora de la dirección de proyectos
 
 ¿Cuándo debería realizarse el proceso de verificar el alcance?:
 3
