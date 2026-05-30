@@ -420,17 +420,10 @@ Según la LOPDGDD ¿A partir de qué edad puede un menor expresar el consentimie
 
 ¿Cuál es la distribución de tiempo dentro de un de desarrollo de equipo?
 2
-- 30% Trabajando sólo, 20% actividades de gestión, 50% Interactuando con otragente
-- 30% Trabajando sólo, 20% actividades no productivas, 50% Interactuando conotra gente.
-- 20% Implementando, 30% Interactuando con otra gente y 50% en actividadesde gestión
-- 20% Trabajando sólo, 30% actividades no productivas, 50% Interactuando conotra gente.
-
-En eXtreme programming:
-3
-- Cada iteración debe acabar con una versión lista para su producción.
-- No es necesario que se escriban las pruebas antes de comenzar a programar
-- Ninguna de las anteriores.
-- No es necesario que el cliente esté in situ, ya que, se pueden utilizar especificaciones escritaspara la siguiente iteración.
+- 30% Trabajando sólo, 20% actividades de gestión, 50% Interactuando con otra gente
+- 30% Trabajando sólo, 20% actividades no productivas, 50% Interactuando con otra gente.
+- 20% Implementando, 30% Interactuando con otra gente y 50% en actividades de gestión
+- 20% Trabajando sólo, 30% actividades no productivas, 50% Interactuando con otra gente.
 
 Un plan de proyecto…
 4
@@ -628,7 +621,7 @@ La estimación con puntos de función:
 
 El estudio de viabilidad en un proyecto consiste en
 2
-- Estudio que garantice que el proyecto se puede integrar en otros sistemas de la empresa y sepuede hacer en plazo y coste
+- Estudio que garantice que el proyecto se puede integrar en otros sistemas de la empresa y se puede hacer en plazo y coste
 - Las dos anteriores son correctas.
 - Estudio que garantice que el proyecto es factible y es la mejor solución
 
@@ -1181,13 +1174,6 @@ El PM y su equipo estuvieron dos meses involucrados en el proceso de inicio del 
 - Ejecución del proyecto/Seguimiento y Control.
 - Acta de constitución/Ejecución del proyecto.
 
-¿Cuál de las siguientes opciones es verdadera sobre el desarrollo del acta de constitución del proyecto?
-4
-- El patrocinador crea el acta de constitución del proyecto y el director la aprueba
-- El equipo del proyecto crea el acta de constitución y la Oficina de proyectos la aprueba
-- El gerente ejecutivo crea el acta de constitución y el gerente funcional la aprueba
-- El director del proyecto crea el acta de constitución y el patrocinador la aprueba
-
 ¿Cuál de los siguientes se incluye en el acta de constitución del proyecto?
 4
 - Una estrategia de gestión de los riesgos
@@ -1277,12 +1263,6 @@ Tras la elaboración del correspondiente grafo PERT, una empresa calcula que el 
 - La duración total del proyecto es de 39 semanas
 - La duración total del proyecto es de 19 semanas, ya que es la máxima duración de una de las actividades del camino crítico
 - Estas actividades son las únicas que pueden retrasarse sin que se retrase la entrega final del proyecto
-
-La duración del proyecto es de 15 semanas, la varianza del camino crítico es 3,11 y su desviación estándar 1,76 semanas. La probabilidad de que el proyecto termine en 16 semanas es:
-2
-- 62,5%
-- 71,2%
-- 77,3%
 
 Tu empresa está evaluando tres proyectos de inversión mutuamente excluyentes entre sí. El proyecto A tiene un 70% de probabilidad de ganar 5.000€ y un 30% de ganar 10.000€. El proyecto B tiene un 50% de probabilidad de ganar 70.000€ y un 50% de perder 10.000€. El proyecto C tiene un 25% de probabilidad de ganar 20.000€ y un 75% de perder 35.000€. En base al valor monetario esperado, ¿Qué proyecto es el mejor para tu empresa?
 2
