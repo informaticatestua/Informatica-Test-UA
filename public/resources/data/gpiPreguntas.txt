@@ -362,13 +362,6 @@ Según la LOPDGDD ¿A partir de qué edad puede un menor expresar el consentimie
 - 14 años
 - El padre o tutor legal será el que lo haga en su nombre mientras forme parte de la unidad familliar
 
-¿Cuál es la distribución de tiempo dentro de un de desarrollo de equipo?
-2
-- 30% Trabajando sólo, 20% actividades de gestión, 50% Interactuando con otra gente
-- 30% Trabajando sólo, 20% actividades no productivas, 50% Interactuando con otra gente.
-- 20% Implementando, 30% Interactuando con otra gente y 50% en actividades de gestión
-- 20% Trabajando sólo, 30% actividades no productivas, 50% Interactuando con otra gente.
-
 Un plan de proyecto…
 4
 - Es una representación abstracta de un proceso que proporciona informaciónparcial sobre el proceso software
@@ -404,7 +397,7 @@ Una de las recomendaciones que se deben tener en cuenta durante la estimación d
 - Las acciones que realizan los testers para definir los casos de prueba
 - Las acciones que realizan los programadores para pasar las pruebas unitarias
 
-¿Qué podemos decir de una tarea si conocemos los valores BCWS=BCWP=0 y ACWP=800?
+¿Qué podemos decir de una tarea si conocemos los valores BCWS=BCWP=0 y ACWP=800? (NO SEGURO)
 1
 - No debería haber comenzado, pero sí lo ha hecho
 - Debería haber comenzado y no lo ha hecho
@@ -512,12 +505,6 @@ El plazo de protección de los derechos de autor según la LPI es
 - 70 años a partir del fallecimiento del autor
 - 20 años a partir del fallecimiento del autor
 
-Estudio de viabilidad en un proyecto software:
-2
-- Solo debe realizarse el estudio de viabilidad cuando el cliente lo solicita.
-- Debe hacerse un estudio de viabilidad como una de las etapas iniciales del ciclo de vida.
-- Debe hacerse el estudio de viabilidad cuando el coste supere el umbral Boehm
-
 Una editorial solicita a una empresa de informática que desarrolle un software para un nuevo libro electrónico. El presidente de la empresa de informática asigna a un director de proyecto para que se haga cargo del desarrollo del proyecto. En este ámbito tenemos:
 3
 - Patrocinador: Director de Proyecto. Vendedor/Socio de Negocio: Editorial.
@@ -555,12 +542,6 @@ La estimación con puntos de función:
 - Es una técnica de estimación empírica, al Igual que PERT
 - No es un modelo adecuado para proyectos "tipo gestión"
 - Es independiente del lenguaje de implementación.
-
-El estudio de viabilidad en un proyecto consiste en
-2
-- Estudio que garantice que el proyecto se puede integrar en otros sistemas de la empresa y se puede hacer en plazo y coste
-- Las dos anteriores son correctas.
-- Estudio que garantice que el proyecto es factible y es la mejor solución
 
 ¿Qué modelo COCOMO utilizarías si el proyecto a desarrollar es muy complejo, restrictivo e innovador?
 3
@@ -644,12 +625,6 @@ Indica cuál de las siguientes características aplican al modelo Canvas de nego
 - Técnica Delphi
 - WBS (Work Breakdown Structure)
 
-El objetivo básico del estudio de viabilidad es:
-3
-- Incorporar el proyecto con las metas estratégicas de la empresa
-- Determinar las actividades principales dentro del proyecto y desglosarlas en paquetes de trabajo componentes
-- Determinar si la organización cuenta con los recursos y capacidades requeridas para llevar a cabo el proyecto
-
 Los diagramas de GANTT
 1
 - se usan para la planificación temporal
@@ -668,12 +643,6 @@ COCOMO versus PUNTOS DE FUNCIÓN:
 - Al final.
 - Al inicio.
 - En la mitad.
-
-El estudio de viabilidad del proyecto se realiza desde cuatro perspectivas diferentes:
-1
-- Económico, técnico, operativo y legal
-- Económico, normativo, legal y social
-- Económico, técnico, operativo y social
 
 ¿Quién debe cumplir la Ley Orgánica de Protección de Datos?
 3
@@ -756,13 +725,6 @@ Obligaciones de las empresas respecto a los datos personales:
 - Desarrollar un Reglamento de Medidas de Seguridad e informar al Registro General de Protección de Datos sobre los datos de carácter personal sensible
 - Proteger los ficheros para preservar la confidencialidad, legitimar los datos personales y declarar los ficheros con datos de carácter personal a la Agencia de Protección de Datos
 - Proteger los ficheros para preservar la confidencialidad e implantar un responsable de seguridad junto con una Auditoría interna o externa.
-
-Durante una reunión con algunos de los interesados del proyecto, se le pide al PM añadir más trabajo al alcance del proyecto. El PM revisó la correspondencia con el patrocinador antes que se firmara el acta de constitución y éste se negó aportar más financiación para el trabajo que supone modificar el alcance mencionado por los interesados. Lo mejor que el PM puede hacer es:
-1
-- Evaluar el impacto sobre el proyecto antes de añadir más trabajo al alcance
-- Decirle a los interesados que no se puede modificar ese aspecto del alcance
-- Añadir el trabajo si el cronograma del proyecto lo permite
-- Dejar que el patrocinador se entere de la solicitud de los interesados
 
 ¿Cuál de las siguientes no es una causa legal para poder transmitir los derechos de propiedad intelectual?
 1
@@ -862,8 +824,8 @@ Make es una herramienta case que soporta...
 - Son resultados del proyecto que se entregan a los clientes
 - Un hito es comunmente conocido como welwitschia mirabilis, descubierto en 1922 por Howard Carter, oriundo de Maryland, EEUU
 
-Tenemos tres actividades: A,B y C. A precede a B. Las holguras son: HT(A)=4,HL(A)=3; HT(B)=2,HL(B)=2;HT(C)=3,HL(C)=3. Si A se retrasa 4 días, ¿que ocurre con B y C?
-1
+Tenemos tres actividades: A,B y C. A precede a B. Las holguras son: HT(A)=4,HL(A)=3; HT(B)=2,HL(B)=2;HT(C)=3,HL(C)=3. Si A se retrasa 4 días, ¿que ocurre con B y C? (NO SEGURO)
+4
 - La HT de B y C pasa a ser de 1 y 2 días respectivamente
 - Nada
 - Ninguna de las anteriores es cierta
@@ -1029,13 +991,6 @@ Analizando los valores de los parámetros EVA de la imagen... ```+-------+------
 - El valor ACWP es erróneo
 - No debería haber comenzado pero sí lo ha hecho
 
-La necesidad de ........ es una de las mayores razones para la comunicación en un proyecto.
-3
-- Optimización
-- Integridad
-- Integración
-- Diferenciación
-
 Un proyecto está lleno de modificaciones al acta de constitución ¿Quién tiene la responsabilidad principal de decidir si estos cambios son necesarios?
 3
 - El PM
@@ -1044,18 +999,11 @@ Un proyecto está lleno de modificaciones al acta de constitución ¿Quién tien
 - Los interesados
 
 El patrocinador está por comenzar el proceso de inicio de un proyecto. Todos los siguientes ítems son necesarios antes de comenzar este proceso, a excepción de:
-2
+3
 - El enunciado del trabajo.
 - Estándares de la industria.
 - El director del proyecto.
 - Requisitos del negocio.
-
-¿Por qué es tan importante que los interesados participen en los distintos procesos de un proyecto?:
-2
-- Evita cambios en el alcance.
-- Mejora la probabilidad de un cliente satisfecho.
-- Definen las restricciones del alcance.
-- Sirve para una comunicación más fluida.
 
 El PM y su equipo estuvieron dos meses involucrados en el proceso de inicio del proyecto. Después de identificar a los interesados, dieron por finalizado el proceso de inicio. Indique qué se acaba de finalizar y qué está a punto de comenzar:
 2
@@ -1063,13 +1011,6 @@ El PM y su equipo estuvieron dos meses involucrados en el proceso de inicio del 
 - Acta de constitución/Planificación del proyecto
 - Ejecución del proyecto/Seguimiento y Control.
 - Acta de constitución/Ejecución del proyecto.
-
-Has creado el acta de constitución del proyecto, pero no se pudo aprobar. Tu director y su jefe pidieron que el proyecto se iniciara inmediatamente ¿Cuál de las siguientes es la mejor opción?
-2
-- Crear un proceso de control de cambios integrados
-- Mostrarle a tu director el impacto de proceder sin una aprobación
-- Comenzar el trabajo solo con las actividades de la ruta crítica
-- No comenzar el proyecto
 
 El resultado más probable de la falta de comunicación en un proyecto es:
 3
@@ -1084,13 +1025,6 @@ El sistema de numeración de una EDT(WBS) permite al equipo del proyecto:
 - Proporcionar la justificación del proyecto
 - Identificar el nivel en el que se encuentra cada actividad
 - Usarlo en una herramienta software para la dirección de proyectos
-
-¿Cuándo debería realizarse el proceso de verificar el alcance?:
-3
-- Al final del proyecto
-- Al inicio del proyecto
-- Al final de cada fase del proyecto
-- Durante los procesos de planificación
 
 Después de varios años de trabajar en proyectos, te acabas de integrar en la oficina de la dirección de proyectos. Una de las cosas que quieres introducir en tu organización es el valor de la creación y utilización de EDT(WBS). Algunos de los directores de proyectos están en desacuerdo porque les entienden que les supondrá un trabajo añadido más. ¿Cuál de las siguientes sería la mejor de las respuestas posibles a dichos directores para convencerlos de usar EDT?:
 1
