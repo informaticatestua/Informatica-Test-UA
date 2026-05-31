@@ -230,7 +230,7 @@ El modelo basado en prototipos
 - Es posible utilizarlo sólo con lenguajes orientados a objetos
 
 El cono de la incertidumbre
-4
+1
 - Dice que conforme avanza el proyecto menos errores de estimación tenemos.
 - Todas las anteriores son falsas.
 - Dice que conforme avanza el proyecto más errores de estimación descubrimos
@@ -463,13 +463,6 @@ Desarrollamos un software para jugar al ajedrez. Para proteger este programa de 
 - Las dos anteriores son correctas, ya que ambas ofrecen igual grado de protección.
 - Lo registramos mediante una Patente del Software.
 - Lo registramos en el Registro de la Propiedad Intelectual
-
-¿Cuál de las siguientes afirmaciones relativas a la EDT no es correcta?:
-4
-- La suma del trabajo de todos los niveles inferiores debe corresponder al trabajo total de sus niveles inmediatamente superiores.
-- Lo que no aparece en la EDT no forma parte del proyecto y no se ejecuta salvo que se haya integrado y aprobado en el control de cambios del proyecto
-- La EDT representa todo el trabajo que hay que realizar para ejecutar el proyecto y entregar el producto o servicio solicitado.
-- La EDT incluye todas las tareas necesarias para realizar el proyecto salvo las relacionadas con la gestión del proyecto.
 
 En relación con la técnica PERT podemos afirmar que:
 1
