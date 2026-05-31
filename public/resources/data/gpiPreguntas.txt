@@ -943,7 +943,7 @@ Tu empresa está evaluando tres proyectos de inversión mutuamente excluyentes e
 - Proyecto C
 
 Tu empresa está evaluando tres proyectos de inversión mutuamente excluyentes entre sí. El proyecto A tiene un 50% de probabilidad de ganar 50.000€ y un 50% de perder 10.000€. El proyecto B tiene un 30% de probabilidad de ganar 40.000€ y un 70% de ganar 10.000€. El proyecto C tiene un 45% de probabilidad de ganar 50.000€ y un 55% de perder 5.000€. En base al valor monetario esperado, ¿Qué proyecto es el peor para tu empresa?
-3
+2
 - Proyecto A
 - Proyecto B
 - Proyecto C
