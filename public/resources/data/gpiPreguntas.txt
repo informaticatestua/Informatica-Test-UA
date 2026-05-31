@@ -229,7 +229,7 @@ El modelo basado en prototipos
 - Reduce las horas de implementación
 - Es posible utilizarlo sólo con lenguajes orientados a objetos
 
-El cono de la incertidumbre
+El cono de la incertidumbre (COMPROBADO)
 4
 - Dice que conforme avanza el proyecto menos errores de estimación tenemos.
 - Todas las anteriores son falsas.
@@ -584,13 +584,6 @@ La holgura de una tarea:
 - Siempre es cero
 - Es el tiempo máximo que puede durar una tarea en caso de comenzar en su inicio temprano y concluir en su fin tardío
 - Es el tiempo que disponemos para jugar con el inicio de una tarea sin afectar al proyecto
-
-Indica cuál de las siguientes características aplican al modelo Canvas de negocio.
-4
-- Se puede dejar apartados sin rellenar, al menos con rellenar el 50 por ciento es válido.
-- Se utiliza solo para proyectos de robótica
-- Es una herramienta nueva que surge después de la segunda guerra mundial
-- Se basa en existencia de una propuesta de valor que tenemos que comunicar al cliente mediante un modelo canvas y rellenando todos los apartados
 
 Los diagramas de GANTT
 1
