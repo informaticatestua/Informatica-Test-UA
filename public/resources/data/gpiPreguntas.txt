@@ -369,13 +369,6 @@ Un plan de proyecto…
 - Todas las afirmaciones son falsas.
 - Proporciona visibilidad al progreso del proyecto
 
-¿Cuál de los siguientes tipos de licencia no es propia del software libre?
-2
-- Creative Commons 
-- OEM
-- GPL
-- BSD
-
 Cuando el desarrollo del plan del proyecto existen restricciones de tiempo y presupuesto establecidas por el cliente, estos deben..
 2
 - Ser descartadas ya que no se podrán hacer ajustes en el presupuesto
@@ -396,13 +389,6 @@ Una de las recomendaciones que se deben tener en cuenta durante la estimación d
 - Debería haber comenzado y no lo ha hecho
 - El valor ACWP es erróneo
 - El valor BCWP es erróneo
-
-¿Cuál de las siguientes no es técnica de estimación de costes de un proyecto?
-2
-- Juicio Experto
-- Gantt
-- Modelado algorítmico de costes
-- Ley de Parkinson
 
 En el modelo UP…
 3
@@ -566,7 +552,7 @@ Los tipos básicos de relaciones entre fases de un proyecto son:
 - Relación de gobernabilidad, relación con los stakeholders y relación bilateral.
 - Relación secuencial, relación bilateral y relación de superposición
 
-Tenemos una tarea en MicrosoftProject de 2 días de duración con un recurso asignado a tiempo completo ¿Qué ocurre si le asignamos otro recurso adicional también a tiempo completo?
+Tenemos una tarea en Microsoft Project de 2 días de duración con un recurso asignado a tiempo completo ¿Qué ocurre si le asignamos otro recurso adicional también a tiempo completo?
 3
 - El trabajo necesario para realizar la tarea se duplicará al ser dos recursos
 - La duración de la tarea se reducirá a la mitad
@@ -742,13 +728,6 @@ Analizando los valores EVA de la imagen...¿qué podemos decir de la tarea 1?  h
 - Reestructuración, Análisis, Desarrollo y Planificación
 - Desarrollo, Análisis, Planificación y Evaluación
 
-¿Cuál es la distribución de tiempo dentro de un equipo de desarrollo?
-3
-- 50% trabajando solo, 30% interactuando con otra gente, 20% actividades no productivas
-- 20% trabajando solo, 30% actividades no productivas, 50% interactuando con otra gente
-- 30% trabajando solo, 20% actividades no productivas, 50% interactuando con otra gente
-- 50% actividades no productivas, 30% interactuando con otra gente, 20% trabajando solo
-
 Make es una herramienta case que soporta...
 4
 - La gestión de versiones y releases
@@ -805,13 +784,6 @@ En el siguiente diagrama Gantt ¿qué modelo de proceso se está siguiendo? http
 - Prototipado
 - Todos los anteriores
 
-¿Qué tarea no podemos realizar en Microsoft Project?
-3
-- Todas las tareas de estas contestaciones se pueden realizar en Microsoft Project
-- La planificación detallada de todo el proyecto
-- La estimación del proyecto
-- El seguimiento del proyecto
-
 En el análisis EVA, la tarea/proyecto está por debajo de lo presupuestado si:
 3
 - BCWP < ACWP
@@ -853,20 +825,6 @@ Tenemos un proyecto con los siguientes datos del modelo EVA. ¿Cuál de las sigu
 - La estimación del proyecto
 - No hemos realizado ninguna de las anteriores en Microsoft Project
 
-Según la LPI, ¿Cual de los siguientes figuras tienen un plazo de protección indefinido?
-2
-- Marcas
-- Secretos comerciales
-- Patentes
-- Derecho de autor
-
-¿ Que podemos decir del proyecto en su conjunto? https://i.imgur.com/co7DiE0.png \n![Figura](/resources/images/co7DiE0.png){width=615 height=184}
-4
-- El proyecto va adelantado y su productividad es baja
-- El proyecto va atrasado y su productividad es alta
-- El proyecto va adelantado y su productividad es alta
-- El proyecto va atrasado y su productividad es baja
-
 ¿Qué podemos decir de la tarea 1? https://i.imgur.com/co7DiE0.png \n![Figura](/resources/images/co7DiE0.png){width=615 height=184}
 1
 - No podemos saber si ha terminado sin conocer su BAC
@@ -887,20 +845,6 @@ Según la LPI, ¿Cual de los siguientes figuras tienen un plazo de protección i
 - Va retrasada
 - Está gastando menos de lo provisto
 - Todas son falsas
-
-Analizando los valores de los parámetros EVA de la imagen... ```+-------+------+------+------+ \n| Tarea | BCWS | BCWP | ACWP | \n+-------+------+------+------+ \n|TareaR | 2800 | 1800 | 2600 | \n+-------+------+------+------+ \n| Tarea1| 600  | 600  | 1000 | \n+-------+------+------+------+ \n| Tarea2| 1200 | 0    | 0    | \n+-------+------+------+------+ \n| Tarea3| 1000 | 1200 | 800  | \n+-------+------+------+------+ \n| Tarea4| 0    | 0    | 800  | \n+-------+------+------+------+ \n``` ¿Qué podemos decir del proyecto en su conjunto?
-4
-- El proyecto va adelantado y su productividad es baja
-- El proyecto va atrasado y su productividad es alta
-- El proyecto va adelantado y su productividad es alta
-- El proyecto va atrasado y su productividad es baja
-
-Analizando los valores de los parámetros EVA de la imagen... ```+-------+------+------+------+ \n| Tarea | BCWS | BCWP | ACWP | \n+-------+------+------+------+ \n|TareaR | 2800 | 1800 | 2600 | \n+-------+------+------+------+ \n| Tarea1| 600  | 600  | 1000 | \n+-------+------+------+------+ \n| Tarea2| 1200 | 0    | 0    | \n+-------+------+------+------+ \n| Tarea3| 1000 | 1200 | 800  | \n+-------+------+------+------+ \n| Tarea4| 0    | 0    | 800  | \n+-------+------+------+------+ \n``` ¿Qué podemos decir de la tarea 1?
-1
-- No podemos saber si ha terminado sin conocer su BAC
-- Ha gastado menos de lo previsto
-- Va adelantada respecto a la agenda
-- Va atrasada respecto a la agenda
 
 El PM y su equipo estuvieron dos meses involucrados en el proceso de inicio del proyecto. Después de identificar a los interesados, dieron por finalizado el proceso de inicio. Indique qué se acaba de finalizar y qué está a punto de comenzar:
 2
