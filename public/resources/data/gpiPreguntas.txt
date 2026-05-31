@@ -425,13 +425,6 @@ De los siguientes derechos regulados en la LOPD, ¿Cuál es un derecho digital?
 - Derecho de supresión
 - Derecho de rectificación
 
-En la fase de exploración de eXtreme programming:
-2
-- El equipo de desarrollo establece la velocidad del proyecto.
-- Se prueba la tecnología y se construye un prototipo.
-- Se realizan tareas de soporte para el cliente.
-- El cliente establece la prioridad de cada historia de usuario.
-
 En el análisis EVA la tarea/proyecto va adelantada según la agenda si:
 3
 - BCWP > ACWP
