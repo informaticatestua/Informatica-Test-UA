@@ -390,13 +390,6 @@ Una de las recomendaciones que se deben tener en cuenta durante la estimación d
 - Todas las respuestas son válidas
 - Identificar las tareas que consumen más recursos
 
-¿Qué es la refactorización en XP?
-1
-- La simplificación del código sin modificar su comportamiento
-- Ninguna de las anteriores
-- Las acciones que realizan los testers para definir los casos de prueba
-- Las acciones que realizan los programadores para pasar las pruebas unitarias
-
 ¿Qué podemos decir de una tarea si conocemos los valores BCWS=BCWP=0 y ACWP=800? (NO SEGURO)
 3
 - No debería haber comenzado, pero sí lo ha hecho
@@ -718,7 +711,6 @@ Analizando los valores EVA de la imagen...¿que podemos decir de la tarea 4? htt
 - El valor BCWP es erroneo
 - Debería haber comenzado y no lo ha hecho 
 - El valor ACWP es erroneo
-- Estamos Gucci
 
 Cuales son las tres claves de una buena gestión en un proyecto informático
 3
@@ -887,13 +879,6 @@ Tenemos un proyecto con los siguientes datos del modelo EVA. ¿Cuál de las sigu
 - La tarea 4 aún no ha comenzado
 - La tarea 0 va retrasada y consumiendo más de lo previsto
 
-¿Qué beneficios tiene las metodologías agiles?
-2
-- Rapidez, documentación muy completa y trabajar de forma intensa la última semana antes de la entrega
-- Eficiencia, rapidez y visión cliente
-- Cliente, proveedores y cumplir el presupuesto
-- Individualismo
-
 ¿Qué tarea no hemos realizado en Microsoft Project? 
 3
 - La planificación detallada de todo el proyecto
@@ -1015,10 +1000,3 @@ La ACM y la IEEE ha cooperado para crear un código de ética y práctica profes
 - El ingeniero de software mantendrá la valoración de su juicio personal y profesional a lo largo de todo el proyecto.
 - El ingeniero de software mantendrá la integridad e independencia en sus valoraciones profesionales
 - El ingeniero de software tiene la obligación de informar al cliente, teniendo en cuenta sus valoraciones personales.
-
-Usted trabaja como responsable de un proyecto en una empresa con una estructura funcional. Su nivel de autoridad en el proyecto será:
-4
-- Alto.
-- Medio.
-- Muy alto.
-- Bajo.
