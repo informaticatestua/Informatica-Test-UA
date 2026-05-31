@@ -27,7 +27,7 @@ Tenemos tres actividades: A, B y C. A precede a B. Las holguras totales son: HT(
 - Intervivos
 
 En el caso de que hayamos desarrollado un software de gestion de autonomos en forma de servicio web. ¿Quien deberia encargarse del cumplimiento del cumplimiento de la legislacion a nvel de proteccion de datos?
-3
+2
 - No seria necesario al no tratarse de una aplicacion de escritorio
 - Nosotros como desarrolladores de la aplicacion
 - Los vendedores del servicio
@@ -230,11 +230,11 @@ El modelo basado en prototipos
 - Es posible utilizarlo sólo con lenguajes orientados a objetos
 
 El cono de la incertidumbre
-1
+4
 - Dice que conforme avanza el proyecto menos errores de estimación tenemos.
 - Todas las anteriores son falsas.
 - Dice que conforme avanza el proyecto más errores de estimación descubrimos
-- No puedo aplicarlo sino hago el seguimiento del proyecto.
+- No puedo aplicarlo si no hago el seguimiento del proyecto.
 
 ¿Cuál de los siguientes libros es el principal recomendado en la asignatura?
 1
@@ -592,12 +592,6 @@ Indica cuál de las siguientes características aplican al modelo Canvas de nego
 - Es una herramienta nueva que surge después de la segunda guerra mundial
 - Se basa en existencia de una propuesta de valor que tenemos que comunicar al cliente mediante un modelo canvas y rellenando todos los apartados
 
-¿Cuál de los siguientes NO es un modelo de estimación del software?
-3
-- COCOMO
-- Técnica Delphi
-- WBS (Work Breakdown Structure)
-
 Los diagramas de GANTT
 1
 - se usan para la planificación temporal
@@ -667,12 +661,6 @@ La estimación con puntos de función:
 - Es un modelo adecuado para proyectos “Tipo Gestión”
 - Es dependiente del lenguaje de implementación
 
-La representación gráfica del WBS:
-2
-- Nos muestra un grafo no ordenado donde los nodos son las tareas
-- Nos muestra un árbol en que las hojas son las tareas
-- Ninguna de las dos anteriores es correcta
-
 Respecto a la protección de datos del software de gestión de autónomos, indica cuál de las siguientes sería una acción obligatoria para cumplir con la legislación actual en el caso de desarrollaría como aplicación web
 3
 - Ninguna de las otras respuestas es correcta
@@ -739,13 +727,6 @@ Analizando los valores EVA que tenemos en la foto...¿que podemos decir del proy
 - Es una situación indeseable
 - El proyecto va adelantado
 - Necesitamos contratar más personal
-
-Somos una empresa desarrolladora de una aplicación que recoge datos de análisis médicos del usuario(tensión arterial, nivel de glucosa, nivel de colesterol, etc.). Si recurrimos a la herramienta gratuita de Facilita 2.0 ...¿qué datos hay que completar o indicar que vamos a recolectar? 
-3
-- Hay que indicar que nos dedicamos al sector de la sanidad, teniendo que indicar después en que provincia nos situamos para que nos genere los documentos necesarios para situar al pie de nuestra aplicación y así cumplir la LGPD al 100%
-- Datos médicos, DNI de los pacientes, Procedencia médica del paciente y otros datos biométricos
-- Al indicar que nos dedicamos al sector de sanidad, la herramienta Facilita 2.0 no nos permite seguir
-- Nada, no funciona la herramienta, no está activa actualmente
 
 Analizando los valores EVA de la imagen...¿qué podemos decir de la tarea 1?  https://i.imgur.com/co7DiE0.png \n![Figura](/resources/images/co7DiE0.png){width=615 height=184}
 4
@@ -928,13 +909,6 @@ Analizando los valores de los parámetros EVA de la imagen... ```+-------+------
 - Va adelantada respecto a la agenda
 - Va atrasada respecto a la agenda
 
-Un proyecto está lleno de modificaciones al acta de constitución ¿Quién tiene la responsabilidad principal de decidir si estos cambios son necesarios?
-3
-- El PM
-- El equipo del proyecto
-- El patrocinador
-- Los interesados
-
 El PM y su equipo estuvieron dos meses involucrados en el proceso de inicio del proyecto. Después de identificar a los interesados, dieron por finalizado el proceso de inicio. Indique qué se acaba de finalizar y qué está a punto de comenzar:
 2
 - Plan para la dirección del proyecto/La ejecución del proyecto.
@@ -948,20 +922,6 @@ El resultado más probable de la falta de comunicación en un proyecto es:
 - Aumente el nivel de confianza
 - Se produzcan conflictos
 - La gerencia se disguste
-
-El sistema de numeración de una EDT(WBS) permite al equipo del proyecto:
-3
-- Estimar de forma sistemática los costes de los elementos de la EDT
-- Proporcionar la justificación del proyecto
-- Identificar el nivel en el que se encuentra cada actividad
-- Usarlo en una herramienta software para la dirección de proyectos
-
-Después de varios años de trabajar en proyectos, te acabas de integrar en la oficina de la dirección de proyectos. Una de las cosas que quieres introducir en tu organización es el valor de la creación y utilización de EDT(WBS). Algunos de los directores de proyectos están en desacuerdo porque les entienden que les supondrá un trabajo añadido más. ¿Cuál de las siguientes sería la mejor de las respuestas posibles a dichos directores para convencerlos de usar EDT?:
-1
-- LAS EDT evitarán que el trabajo se omita
-- Las EDT sólo son necesarias en proyectos grandes
-- Las EDT sólo serán necesarias si el proyecto conlleva más de un contrato
-- Las EDT son la única manera de identificar los riesgos del proyecto
 
 Un PM nuevo te ha pedido un consejo sobre la creación de una EDT. Después de explicarle el proceso, te pregunta qué software debe usar para crear la EDT y que debe hacer con la EDT cuando esté completada. Quizás responda que la imagen no es el resultado más valioso de crear una EDT, sino que es:
 3
