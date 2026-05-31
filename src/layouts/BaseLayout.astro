@@ -215,6 +215,84 @@ const { title = "Ing. Informática Tests UA" } = Astro.props;
 
 		<ReportModal />
 
+		<!-- ─── AI Onboarding overlay ──────────────────────────────────────── -->
+		<div id="ai-onboarding-overlay" class="hidden fixed inset-0 z-[400] bg-black/70 backdrop-blur-sm"></div>
+
+		<!-- ─── AI Onboarding modal ────────────────────────────────────────── -->
+		<div id="ai-onboarding-modal" class="hidden fixed inset-0 z-[401] flex items-center justify-center p-4">
+			<div class="w-full max-w-md bg-surface rounded-2xl shadow-2xl border border-border-subtle overflow-hidden">
+				<div class="h-1 w-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"></div>
+				<div class="p-6">
+
+					<!-- Cabecera -->
+					<div class="flex items-start justify-between mb-4">
+						<div class="flex items-center gap-3">
+							<div class="flex items-center justify-center w-10 h-10 rounded-xl bg-blue-100 dark:bg-blue-900/40 flex-shrink-0">
+								<span class="material-icons text-blue-500">auto_awesome</span>
+							</div>
+							<div>
+								<h3 class="font-heading font-bold text-text-main text-base m-0 leading-tight">Nueva funcionalidad: Explicaciones con IA</h3>
+								<p class="text-text-muted text-xs mt-0.5 m-0">Obtén explicaciones detalladas de cada respuesta</p>
+							</div>
+						</div>
+						<button id="ai-onboarding-close" class="p-1 text-text-muted hover:text-text-main rounded-full hover:bg-surface-hover transition-colors cursor-pointer border-none bg-transparent flex-shrink-0" aria-label="Cerrar">
+							<span class="material-icons">close</span>
+						</button>
+					</div>
+
+					<!-- Pasos -->
+					<ol class="space-y-3 mb-6">
+						<li class="flex items-start gap-3">
+							<span class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-600 text-white text-xs font-bold flex items-center justify-center mt-0.5">1</span>
+							<div>
+								<p class="text-text-main text-sm font-medium m-0">Abre la configuración de IA</p>
+								<p class="text-text-muted text-xs mt-0.5 m-0">Pulsa el icono <span class="material-icons align-middle text-blue-500" style="font-size:0.95rem;">auto_awesome</span> en la barra superior.</p>
+							</div>
+						</li>
+						<li class="flex items-start gap-3">
+							<span class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-600 text-white text-xs font-bold flex items-center justify-center mt-0.5">2</span>
+							<div>
+								<p class="text-text-main text-sm font-medium m-0">Elige un proveedor</p>
+								<p class="text-text-muted text-xs mt-0.5 m-0">Selecciona <strong>Gemini</strong>, <strong>Groq</strong> o <strong>DeepSeek</strong>. Los tres ofrecen planes gratuitos.</p>
+							</div>
+						</li>
+						<li class="flex items-start gap-3">
+							<span class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-600 text-white text-xs font-bold flex items-center justify-center mt-0.5">3</span>
+							<div>
+								<p class="text-text-main text-sm font-medium m-0">Obtén una API Key gratuita</p>
+								<p class="text-text-muted text-xs mt-0.5 m-0">Regístrate en la web del proveedor y genera una clave. Pégala en el campo correspondiente.</p>
+							</div>
+						</li>
+						<li class="flex items-start gap-3">
+							<span class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-600 text-white text-xs font-bold flex items-center justify-center mt-0.5">4</span>
+							<div>
+								<p class="text-text-main text-sm font-medium m-0">Guarda y aplica</p>
+								<p class="text-text-muted text-xs mt-0.5 m-0">Haz clic en <strong>Guardar y aplicar</strong>. La configuración se guarda en tu navegador.</p>
+							</div>
+						</li>
+						<li class="flex items-start gap-3">
+							<span class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-600 text-white text-xs font-bold flex items-center justify-center mt-0.5">5</span>
+							<div>
+								<p class="text-text-main text-sm font-medium m-0">¡Úsala al responder!</p>
+								<p class="text-text-muted text-xs mt-0.5 m-0">Tras contestar una pregunta, pulsa el botón <strong>Explicar con IA</strong> para recibir una explicación detallada.</p>
+							</div>
+						</li>
+					</ol>
+
+					<!-- Pie -->
+					<div class="flex items-center justify-between gap-3">
+						<label class="flex items-center gap-2 cursor-pointer select-none">
+							<input id="ai-onboarding-no-show" type="checkbox" class="w-4 h-4 accent-blue-600 rounded cursor-pointer" />
+							<span class="text-text-muted text-xs">No volver a mostrar</span>
+						</label>
+						<button id="ai-onboarding-ok" class="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm font-semibold transition-colors cursor-pointer border-none">
+							¡Entendido!
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<main class="w-full">
 			<slot />
 		</main>
@@ -248,6 +326,49 @@ const { title = "Ing. Informática Tests UA" } = Astro.props;
 
 		</script>
 		
+		<script is:inline>
+			(function () {
+				const LS_KEY = "ai_onboarding_seen_v1";
+				const $ = (id) => document.getElementById(id);
+
+				function close(persist) {
+					$("ai-onboarding-modal")?.classList.add("hidden");
+					$("ai-onboarding-overlay")?.classList.add("hidden");
+					document.body.classList.remove("overflow-hidden");
+					if (persist) localStorage.setItem(LS_KEY, "1");
+				}
+
+				function init() {
+					if (localStorage.getItem(LS_KEY)) return;
+					$("ai-onboarding-modal")?.classList.remove("hidden");
+					$("ai-onboarding-overlay")?.classList.remove("hidden");
+					document.body.classList.add("overflow-hidden");
+
+					$("ai-onboarding-ok")?.addEventListener("click", function () {
+						const noShow = $("ai-onboarding-no-show")?.checked;
+						close(noShow);
+					});
+					$("ai-onboarding-close")?.addEventListener("click", function () {
+						close(false);
+					});
+					$("ai-onboarding-overlay")?.addEventListener("click", function () {
+						close(false);
+					});
+					document.addEventListener("keydown", function (e) {
+						if (e.key === "Escape" && !$("ai-onboarding-modal")?.classList.contains("hidden")) {
+							close(false);
+						}
+					});
+				}
+
+				if (document.readyState === "loading") {
+					document.addEventListener("DOMContentLoaded", init);
+				} else {
+					init();
+				}
+			})();
+		</script>
+
 		<script is:inline src="/resources/js/prism.js"></script>
 		<script is:inline src="/resources/js/formatters.js"></script>
 		<script is:inline src="/resources/js/main.js"></script>
