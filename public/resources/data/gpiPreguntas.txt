@@ -398,7 +398,7 @@ Una de las recomendaciones que se deben tener en cuenta durante la estimación d
 - Las acciones que realizan los programadores para pasar las pruebas unitarias
 
 ¿Qué podemos decir de una tarea si conocemos los valores BCWS=BCWP=0 y ACWP=800? (NO SEGURO)
-1
+3
 - No debería haber comenzado, pero sí lo ha hecho
 - Debería haber comenzado y no lo ha hecho
 - El valor ACWP es erróneo
@@ -949,13 +949,6 @@ Según la LPI, ¿Cual de los siguientes figuras tienen un plazo de protección i
 - Va retrasada
 - Está gastando menos de lo provisto
 - Todas son falsas
-
-¿Qué podemos decir de la tarea 4? https://i.imgur.com/co7DiE0.png \n![Figura](/resources/images/co7DiE0.png){width=615 height=184}
-1
-- Debería haber comenzado y no lo ha hecho
-- El valor BCWP es erróneo
-- El valor ACWP es erróneo
-- No debería haber comenzado per si lo ha hecho
 
 Analizando los valores de los parámetros EVA de la imagen... ```+-------+------+------+------+ \n| Tarea | BCWS | BCWP | ACWP | \n+-------+------+------+------+ \n|TareaR | 2800 | 1800 | 2600 | \n+-------+------+------+------+ \n| Tarea1| 600  | 600  | 1000 | \n+-------+------+------+------+ \n| Tarea2| 1200 | 0    | 0    | \n+-------+------+------+------+ \n| Tarea3| 1000 | 1200 | 800  | \n+-------+------+------+------+ \n| Tarea4| 0    | 0    | 800  | \n+-------+------+------+------+ \n``` ¿Qué podemos decir del proyecto en su conjunto?
 4
