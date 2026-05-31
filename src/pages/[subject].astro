@@ -47,13 +47,153 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 			</div>
 		</div>
 
-		<div id="button-container" class="w-full flex justify-center mt-[20px]">
+		<div id="button-container" class="w-full flex justify-center gap-3 mt-[20px] flex-wrap">
 			<button id="resumenBtn" class="btn" style="display: none">Resumen</button>
+			<button id="aigen-open-btn" class="btn btn-aigen" style="display: none" aria-label="Generar quiz con IA">
+				<span class="material-icons" style="font-size:1rem;">psychology</span>
+				Generar quiz con IA
+			</button>
 		</div>
 	</div>
 
 	<div class="contador hidden fixed bottom-[10px] right-[10px] bg-black/50 text-white text-[14px] px-[10px] py-[5px] rounded-[5px] z-50 backdrop-blur-sm" id="contador">Correctas: 0 / Preguntas: 0</div>
 	<div id="total-preguntas" class="bottom-left hidden fixed bottom-[10px] left-[10px] text-[16px] text-white bg-black/50 p-[5px] rounded-[3px] backdrop-blur-sm"></div>
+
+	<!-- ─── AI Generate overlay ─────────────────────────────────────────── -->
+	<div id="aigen-overlay" class="hidden fixed inset-0 z-[300] bg-black/60 backdrop-blur-sm"></div>
+
+	<!-- ─── AI Generate modal ────────────────────────────────────────────── -->
+	<div id="aigen-modal" class="hidden fixed inset-0 z-[301] flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="aigen-title">
+		<div class="aigen-modal-box w-full max-w-md bg-surface rounded-2xl shadow-2xl border border-border-subtle overflow-hidden">
+			<div class="h-1 w-full bg-gradient-to-r from-violet-500 via-purple-500 to-blue-500"></div>
+			<div class="p-5 sm:p-6">
+
+				<!-- Cabecera -->
+				<div class="flex items-start justify-between mb-5">
+					<div class="flex items-center gap-3">
+						<div class="flex items-center justify-center w-10 h-10 rounded-xl bg-violet-100 dark:bg-violet-900/40 flex-shrink-0">
+							<span class="material-icons text-violet-600 dark:text-violet-400">psychology</span>
+						</div>
+						<div>
+							<h3 id="aigen-title" class="font-heading font-bold text-text-main text-base m-0 leading-tight">Generar quiz con IA</h3>
+							<p class="text-text-muted text-xs mt-0.5 m-0">Preguntas nuevas sobre esta asignatura</p>
+						</div>
+					</div>
+					<button id="aigen-close" class="p-1 text-text-muted hover:text-text-main rounded-full hover:bg-surface-hover transition-colors cursor-pointer border-none bg-transparent flex-shrink-0" aria-label="Cerrar">
+						<span class="material-icons">close</span>
+					</button>
+				</div>
+
+				<!-- ── Estado: Configuración ────────────────────────────────── -->
+				<div id="aigen-config">
+
+					<!-- Proveedor activo -->
+					<div class="flex items-center gap-2 p-3 mb-5 bg-surface-hover rounded-xl border border-border-subtle text-sm">
+						<span class="material-icons text-violet-500" style="font-size:1rem;">auto_awesome</span>
+						<span class="text-text-muted text-xs">Proveedor:</span>
+						<span id="aigen-provider-label" class="text-text-main text-xs font-semibold flex-1"></span>
+						<a id="aigen-config-link" href="#" class="text-xs text-blue-500 hover:text-blue-600 underline decoration-dotted">Cambiar</a>
+					</div>
+
+					<!-- Slider -->
+					<div class="mb-6">
+						<div class="flex items-end justify-between mb-3 gap-2">
+							<span class="text-sm font-semibold text-text-main">Número de preguntas</span>
+							<div class="flex items-baseline gap-2">
+								<span id="aigen-range-label" class="aigen-range-badge aigen-range-badge--fast">Rápido</span>
+								<span class="flex items-baseline gap-1">
+									<span id="aigen-count" class="text-[2rem] font-heading font-bold text-violet-600 dark:text-violet-400 tabular-nums leading-none">20</span>
+									<span class="text-text-muted text-xs">preg.</span>
+								</span>
+							</div>
+						</div>
+
+						<div class="relative py-2">
+							<input
+								id="aigen-slider"
+								type="range" min="5" max="200" step="5" value="20"
+								class="aigen-slider w-full"
+								aria-label="Número de preguntas a generar"
+								aria-valuemin="5" aria-valuemax="200" aria-valuenow="20"
+							/>
+						</div>
+
+						<div class="flex justify-between mt-1">
+							<span class="text-text-muted text-[0.68rem]">5</span>
+							<span class="text-text-muted text-[0.68rem]">50</span>
+							<span class="text-text-muted text-[0.68rem]">100</span>
+							<span class="text-text-muted text-[0.68rem]">150</span>
+							<span class="text-text-muted text-[0.68rem]">200</span>
+						</div>
+					</div>
+
+					<!-- Aviso para números grandes -->
+					<div id="aigen-token-warning" class="hidden mb-4 p-3 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-700/60 rounded-xl">
+						<div class="flex items-start gap-2">
+							<span class="material-icons text-amber-500 flex-shrink-0 mt-0.5" style="font-size:1rem;">warning_amber</span>
+							<p class="text-amber-800 dark:text-amber-300 text-xs m-0 leading-relaxed">
+								Con más de 80 preguntas la generación puede tardar varios minutos y consumir muchos tokens. Asegúrate de que tu plan de API lo permite.
+							</p>
+						</div>
+					</div>
+
+					<!-- Error -->
+					<div id="aigen-error-box" class="hidden mb-4 p-3 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-700/60 rounded-xl">
+						<div class="flex items-start gap-2">
+							<span class="material-icons text-red-500 flex-shrink-0 mt-0.5" style="font-size:1rem;">error_outline</span>
+							<p id="aigen-error-msg" class="text-red-700 dark:text-red-400 text-xs m-0 leading-relaxed"></p>
+						</div>
+					</div>
+
+					<!-- Botón generar -->
+					<button id="aigen-generate-btn" class="aigen-generate-btn w-full py-3 rounded-xl text-sm font-semibold cursor-pointer border-none flex items-center justify-center gap-2 transition-all">
+						<span class="material-icons" style="font-size:1.1rem;">auto_fix_high</span>
+						Generar preguntas
+					</button>
+				</div>
+
+				<!-- ── Estado: Generando ─────────────────────────────────────── -->
+				<div id="aigen-generating" class="hidden">
+					<div class="flex flex-col items-center py-8 gap-4">
+						<div class="aigen-spinner"></div>
+						<div class="text-center">
+							<p id="aigen-progress-text" class="text-text-muted text-sm m-0">Conectando con la IA…</p>
+							<p class="text-text-muted text-xs mt-1 m-0">Esto puede tardar unos segundos</p>
+						</div>
+						<button id="aigen-cancel-btn" class="mt-2 text-text-muted hover:text-text-main text-xs underline decoration-dotted cursor-pointer bg-transparent border-none transition-colors">
+							Cancelar
+						</button>
+					</div>
+				</div>
+
+				<!-- ── Estado: Éxito ────────────────────────────────────────── -->
+				<div id="aigen-success" class="hidden">
+					<div class="flex flex-col items-center py-6 gap-4 text-center">
+						<div class="w-14 h-14 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center">
+							<span class="material-icons text-green-600 dark:text-green-400" style="font-size:1.8rem;">check_circle</span>
+						</div>
+						<div>
+							<p class="text-text-main font-heading font-bold text-lg m-0">¡Quiz listo!</p>
+							<p class="text-text-muted text-sm mt-1 m-0">
+								<span id="aigen-success-count" class="font-bold text-text-main">0</span> preguntas nuevas generadas
+							</p>
+						</div>
+						<div class="w-full flex flex-col gap-2 pt-2">
+							<button id="aigen-start-btn" class="w-full py-3 bg-green-600 hover:bg-green-700 text-white rounded-xl text-sm font-semibold transition-colors cursor-pointer border-none flex items-center justify-center gap-2">
+								<span class="material-icons" style="font-size:1.1rem;">play_arrow</span>
+								Iniciar quiz con estas preguntas
+							</button>
+							<button id="aigen-regenerate-btn" class="w-full py-2.5 bg-transparent hover:bg-surface-hover text-text-muted hover:text-text-main border border-border-subtle rounded-xl text-sm font-medium transition-colors cursor-pointer flex items-center justify-center gap-1.5">
+								<span class="material-icons" style="font-size:1rem;">refresh</span>
+								Generar de nuevo
+							</button>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
 
 	<!-- ─── AI Explanation Drawer ────────────────────────────────────────── -->
 	<div id="ai-drawer" class="ai-drawer" aria-hidden="true">
@@ -182,6 +322,122 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 			@apply min-h-[56px]! text-[1.05em]!;
 		}
 	}
+
+	/* ── Botón Generar quiz con IA ─────────────────────────────────── */
+	.btn-aigen {
+		@apply flex items-center gap-1.5 text-violet-600 dark:text-violet-400
+			   border-violet-400/60 dark:border-violet-500/50
+			   hover:bg-violet-50 dark:hover:bg-violet-900/20 hover:border-violet-500;
+	}
+
+	/* ── Modal AI Generate: entrada animada ──────────────────────────── */
+	.aigen-modal-box {
+		opacity: 0;
+		transform: translateY(16px) scale(0.97);
+		transition: opacity 0.24s ease, transform 0.24s ease;
+	}
+	#aigen-modal:not(.hidden) .aigen-modal-box {
+		opacity: 1;
+		transform: translateY(0) scale(1);
+	}
+
+	/* ── Botón "Generar preguntas" ────────────────────────────────────── */
+	.aigen-generate-btn {
+		background: linear-gradient(135deg, #7c3aed, #6d28d9);
+		color: white;
+		box-shadow: 0 4px 14px rgba(124, 58, 237, 0.35);
+	}
+	.aigen-generate-btn:hover {
+		background: linear-gradient(135deg, #6d28d9, #5b21b6);
+		box-shadow: 0 6px 20px rgba(124, 58, 237, 0.45);
+		transform: translateY(-1px);
+	}
+	.aigen-generate-btn:active {
+		transform: translateY(0);
+		box-shadow: 0 2px 8px rgba(124, 58, 237, 0.3);
+	}
+
+	/* ── Slider personalizado ─────────────────────────────────────────── */
+	.aigen-slider {
+		-webkit-appearance: none;
+		appearance: none;
+		width: 100%;
+		height: 8px;
+		border-radius: 4px;
+		cursor: pointer;
+		outline: none;
+		background: linear-gradient(
+			to right,
+			#7c3aed var(--aigen-fill, 8%),
+			rgb(var(--border-subtle)) var(--aigen-fill, 8%)
+		);
+		transition: background 0.1s ease;
+	}
+	.aigen-slider::-webkit-slider-thumb {
+		-webkit-appearance: none;
+		width: 28px;
+		height: 28px;
+		border-radius: 50%;
+		background: #7c3aed;
+		border: 3px solid rgb(var(--bg-surface));
+		box-shadow: 0 0 0 2px #7c3aed, 0 2px 8px rgba(124, 58, 237, 0.45);
+		cursor: pointer;
+		transition: transform 0.12s ease, box-shadow 0.12s ease;
+	}
+	.aigen-slider:hover::-webkit-slider-thumb,
+	.aigen-slider:focus::-webkit-slider-thumb {
+		transform: scale(1.12);
+		box-shadow: 0 0 0 2px #7c3aed, 0 4px 14px rgba(124, 58, 237, 0.55);
+	}
+	.aigen-slider:active::-webkit-slider-thumb {
+		transform: scale(1.05);
+	}
+	.aigen-slider::-moz-range-thumb {
+		width: 24px;
+		height: 24px;
+		border-radius: 50%;
+		background: #7c3aed;
+		border: 3px solid rgb(var(--bg-surface));
+		box-shadow: 0 0 0 2px #7c3aed, 0 2px 8px rgba(124, 58, 237, 0.45);
+		cursor: pointer;
+	}
+	.aigen-slider::-moz-range-track {
+		height: 8px;
+		border-radius: 4px;
+		background: rgb(var(--border-subtle));
+	}
+
+	/* ── Spinner violeta ──────────────────────────────────────────────── */
+	.aigen-spinner {
+		width: 36px;
+		height: 36px;
+		border: 3px solid rgba(124, 58, 237, 0.2);
+		border-top-color: #7c3aed;
+		border-radius: 50%;
+		animation: aigen-spin 0.75s linear infinite;
+	}
+	@keyframes aigen-spin {
+		to { transform: rotate(360deg); }
+	}
+
+	/* ── Badge de rango ───────────────────────────────────────────────── */
+	.aigen-range-badge {
+		display: inline-flex;
+		align-items: center;
+		font-size: 0.65rem;
+		font-weight: 700;
+		letter-spacing: 0.06em;
+		text-transform: uppercase;
+		padding: 2px 8px;
+		border-radius: 999px;
+		transition: background-color 0.2s ease, color 0.2s ease;
+	}
+	.aigen-range-badge--fast  { background: rgba(124, 58, 237, 0.1); color: #7c3aed; }
+	.aigen-range-badge--std   { background: rgba(59, 130, 246, 0.1); color: #3b82f6; }
+	.aigen-range-badge--large { background: rgba(245, 158, 11, 0.1); color: #d97706; }
+	:global(.dark) .aigen-range-badge--fast  { background: rgba(167, 139, 250, 0.15); color: #a78bfa; }
+	:global(.dark) .aigen-range-badge--std   { background: rgba(96, 165, 250, 0.15);  color: #60a5fa; }
+	:global(.dark) .aigen-range-badge--large { background: rgba(251, 191, 36, 0.15);  color: #fbbf24; }
 
 	/* ── Tarjetas de opción múltiple ──────────────────────────────── */
 	:global(form#opciones label) {

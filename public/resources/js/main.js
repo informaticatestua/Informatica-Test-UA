@@ -655,8 +655,10 @@
 
         const resumenBtn = $("resumenBtn");
         const copyButton = $("copyButton");
+        const aigenBtn   = $("aigen-open-btn");
         if (resumenBtn) resumenBtn.style.display = "block";
         if (copyButton) copyButton.style.display = "flex";
+        if (aigenBtn)   aigenBtn.style.display   = "flex";
 
         state.archivoActual = archivo;
         const asignaturaNombre = archivo.split("Preguntas.txt")[0].toUpperCase();
@@ -687,8 +689,10 @@
 
         const resumenBtn = $("resumenBtn");
         const copyButton = $("copyButton");
+        const aigenBtn   = $("aigen-open-btn");
         if (resumenBtn) resumenBtn.style.display = "block";
         if (copyButton) copyButton.style.display = "flex";
+        if (aigenBtn)   aigenBtn.style.display   = "flex";
 
         state.archivoActual = displayName;
         const titleEl = $("asignatura-nombre");
@@ -865,4 +869,42 @@
     } else {
         init();
     }
+
+    // ─────────────────────────────────────────────────────────────────────
+    // 8. API PÚBLICA (consumida por ai-generate.js)
+    // ─────────────────────────────────────────────────────────────────────
+
+    window.QuizAPI = {
+        /** Copia inmutable de las preguntas actualmente cargadas. */
+        getPreguntas: () => [...state.preguntas],
+
+        /**
+         * Reemplaza las preguntas del quiz con las generadas por IA y
+         * resetea todos los contadores y estados para comenzar desde cero.
+         */
+        injectGeneratedQuestions(nuevasPreguntas) {
+            state.preguntas         = nuevasPreguntas;
+            state.preguntaActual    = 0;
+            state.preguntasCorrectas = 0;
+            state.totalPreguntas    = 0;
+            state.estadosPreguntas  = {};
+
+            const totalEl = $("total-preguntas");
+            if (totalEl) totalEl.innerText = `Total IA: ${state.preguntas.length}`;
+
+            actualizarContador();
+
+            const resultado = $("resultado");
+            if (resultado) resultado.innerText = "";
+
+            const verificarBtn = $("verificar");
+            if (verificarBtn) verificarBtn.disabled = true;
+
+            const explicarBtn = $("explicar-ia-btn");
+            if (explicarBtn) explicarBtn.disabled = true;
+
+            mostrarPregunta();
+            setVerificarMode("verificar");
+        },
+    };
 })();
