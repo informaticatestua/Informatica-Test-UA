@@ -64,6 +64,10 @@ const { title = "Ing. Informática Tests UA" } = Astro.props;
 
 
 			<div class="ml-auto flex items-center gap-1">
+				<button id="changelog-btn" class="relative mt-1 p-2 text-text-muted hover:text-blue-500 bg-transparent border-none rounded-full transition-colors cursor-pointer flex items-center justify-center" aria-label="Registro de actualizaciones">
+					<span class="material-icons" style="font-size: 1.2em;">new_releases</span>
+					<span id="changelog-badge" class="hidden absolute top-1 right-1 w-2.5 h-2.5 bg-red-500 rounded-full border-2 border-surface"></span>
+				</button>
 				<button id="ai-settings-btn" class="mt-1 p-2 text-text-muted hover:text-blue-500 bg-transparent border-none rounded-full transition-colors cursor-pointer flex items-center justify-center" aria-label="Configuración de IA">
 					<span class="material-icons" style="font-size: 1.2em;">auto_awesome</span>
 				</button>
@@ -172,6 +176,43 @@ const { title = "Ing. Informática Tests UA" } = Astro.props;
 			</div>
 		</div>
 
+		<!-- ─── Changelog overlay ───────────────────────────────────────────── -->
+		<div id="changelog-overlay" class="hidden fixed inset-0 z-[300] bg-black/60 backdrop-blur-sm"></div>
+
+		<!-- ─── Changelog modal ─────────────────────────────────────────────── -->
+		<div id="changelog-modal" class="hidden fixed inset-0 z-[301] flex items-center justify-center p-4">
+			<div class="changelog-modal-box w-full max-w-md bg-surface rounded-2xl shadow-2xl border border-border-subtle overflow-hidden flex flex-col" style="max-height: 80vh;">
+				<div class="h-1 w-full bg-gradient-to-r from-green-400 via-blue-500 to-purple-500 flex-shrink-0"></div>
+				<div class="px-5 py-4 flex items-center justify-between flex-shrink-0 border-b border-border-subtle">
+					<div class="flex items-center gap-2">
+						<span class="material-icons text-blue-500">new_releases</span>
+						<h3 class="font-heading font-bold text-text-main text-lg m-0">Registro de cambios</h3>
+					</div>
+					<button id="changelog-close" class="p-1 text-text-muted hover:text-text-main rounded-full hover:bg-surface-hover transition-colors cursor-pointer border-none bg-transparent" aria-label="Cerrar">
+						<span class="material-icons">close</span>
+					</button>
+				</div>
+
+				<!-- Loading -->
+				<div id="changelog-loading" class="hidden flex items-center justify-center py-10 gap-3 flex-shrink-0">
+					<div class="ai-spinner"></div>
+					<span class="text-text-muted text-sm">Cargando actualizaciones...</span>
+				</div>
+
+				<!-- Error -->
+				<div id="changelog-error" class="hidden mx-5 mt-4 p-3 bg-red-50 dark:bg-red-900/20 border border-red-300 dark:border-red-700 rounded-xl flex-shrink-0">
+					<div class="flex items-center gap-2 mb-1">
+						<span class="material-icons text-red-500" style="font-size:1rem;">error_outline</span>
+						<span class="font-semibold text-red-700 dark:text-red-400 text-sm">No se pudieron cargar los cambios</span>
+					</div>
+					<p id="changelog-error-msg" class="text-red-600 dark:text-red-400 text-xs m-0"></p>
+				</div>
+
+				<!-- Lista de commits -->
+				<div id="changelog-list" class="overflow-y-auto flex-1 px-5 py-4 space-y-3"></div>
+			</div>
+		</div>
+
 		<ReportModal />
 
 		<main class="w-full">
@@ -211,6 +252,7 @@ const { title = "Ing. Informática Tests UA" } = Astro.props;
 		<script is:inline src="/resources/js/formatters.js"></script>
 		<script is:inline src="/resources/js/main.js"></script>
 		<script is:inline src="/resources/js/ai-features.js"></script>
+		<script is:inline src="/resources/js/changelog.js"></script>
 		<Analytics />
 		</body>
 </html>
