@@ -644,13 +644,6 @@ COCOMO versus PUNTOS DE FUNCIÓN:
 - Persona o personas responsables de los ficheros.
 - El responsable del fichero y el encargado del tratamiento.
 
-En el análisis EVA, la tarea/proyecto está por debajo de lo presupuesto si:
-1
-- BCWP>ACWP
-- BCWP>BCWS
-- BCWP<ACWP
-- BCWS<ACWP
-
 ¿Cuál de los siguientes parámetros EVA nos informa de la cantidad de trabajo planificado al final del proyecto/tarea?
 2
 - BCWP
@@ -867,7 +860,7 @@ En el siguiente diagrama Gantt ¿qué modelo de proceso se está siguiendo? http
 - La estimación del proyecto
 - El seguimiento del proyecto
 
-En el análisis EVA, la tarea/proyecto está por debajo de lo presupuestado si:ç
+En el análisis EVA, la tarea/proyecto está por debajo de lo presupuestado si:
 3
 - BCWP < ACWP
 - BCWP > ACWS
