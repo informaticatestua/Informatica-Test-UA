@@ -465,6 +465,9 @@
         const verificarBtn = $("verificar");
         if (verificarBtn) verificarBtn.disabled = true;
 
+        const explicarBtn = $("explicar-ia-btn");
+        if (explicarBtn) explicarBtn.disabled = true;
+
         // Accesibilidad de los botones secundarios.
         const volverBtn = $("volver-pregunta");
         if (volverBtn) {
@@ -545,6 +548,9 @@
         pintarResultado(labels, respuestasCorrectas, seleccionadas);
         setVerificarMode("siguiente");
         actualizarContador();
+
+        const explicarBtn = $("explicar-ia-btn");
+        if (explicarBtn) explicarBtn.disabled = false;
     }
 
     /** Guarda el estado de la pregunta visible antes de cambiar de índice. */
@@ -596,6 +602,9 @@
             setVerificarMode("siguiente");
             const vBtn = $("verificar");
             if (vBtn) vBtn.disabled = false;
+
+            const explicarBtn = $("explicar-ia-btn");
+            if (explicarBtn) explicarBtn.disabled = false;
         }
     }
 

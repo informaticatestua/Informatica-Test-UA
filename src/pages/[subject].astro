@@ -33,8 +33,12 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 					<button id="saltar-pregunta" class="btn-ghost mt-0!" style="display: none;">Saltar →</button>
 				</div>
 				<!-- Fila principal móvil / Centro desktop -->
-				<div class="order-1 sm:order-2 w-full sm:w-auto flex justify-center">
+				<div class="order-1 sm:order-2 w-full sm:w-auto flex flex-col sm:flex-row justify-center items-center gap-2">
 					<button id="verificar" class="hidden btn-primary mt-0! w-full sm:w-auto sm:min-w-[200px]" disabled>Verificar / Continuar</button>
+					<button id="explicar-ia-btn" class="btn-explicar-ia" disabled onclick="window.AIFeatures?.showExplanation()">
+						<span class="material-icons" style="font-size:1.1em;">auto_awesome</span>
+						Explicar con IA
+					</button>
 				</div>
 				<!-- Fila terciaria móvil / Derecha desktop -->
 				<div class="order-2 sm:order-3 w-full sm:w-auto flex justify-center sm:justify-end">
@@ -50,6 +54,76 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 
 	<div class="contador hidden fixed bottom-[10px] right-[10px] bg-black/50 text-white text-[14px] px-[10px] py-[5px] rounded-[5px] z-50 backdrop-blur-sm" id="contador">Correctas: 0 / Preguntas: 0</div>
 	<div id="total-preguntas" class="bottom-left hidden fixed bottom-[10px] left-[10px] text-[16px] text-white bg-black/50 p-[5px] rounded-[3px] backdrop-blur-sm"></div>
+
+	<!-- ─── AI Explanation Drawer ────────────────────────────────────────── -->
+	<div id="ai-drawer" class="ai-drawer" aria-hidden="true">
+		<div id="ai-drawer-backdrop" class="ai-drawer-backdrop"></div>
+		<div id="ai-drawer-panel" class="ai-drawer-panel">
+
+			<!-- Drag handle (solo móvil) -->
+			<div class="flex justify-center pt-3 pb-1 sm:hidden flex-shrink-0">
+				<div class="w-10 h-1 rounded-full bg-border-subtle"></div>
+			</div>
+
+			<!-- Cabecera del panel -->
+			<div class="flex items-center justify-between px-5 py-3 border-b border-border-subtle flex-shrink-0">
+				<div class="flex items-center gap-2">
+					<span class="material-icons text-blue-500" style="font-size:1.2rem;">auto_awesome</span>
+					<span class="font-heading font-bold text-text-main text-[0.95rem]">Explicación IA</span>
+				</div>
+				<div class="flex items-center gap-1.5">
+					<select id="ai-drawer-provider" class="ai-drawer-select" aria-label="Proveedor de IA">
+						<option value="gemini">Gemini</option>
+						<option value="groq">Groq</option>
+						<option value="deepseek">DeepSeek</option>
+					</select>
+					<select id="ai-drawer-model" class="ai-drawer-select" aria-label="Modelo de IA"></select>
+					<button id="ai-drawer-close" class="ml-1 p-1 text-text-muted hover:text-text-main hover:bg-surface-hover rounded-full transition-colors cursor-pointer border-none bg-transparent" aria-label="Cerrar panel">
+						<span class="material-icons" style="font-size:1.3rem;">close</span>
+					</button>
+				</div>
+			</div>
+
+			<!-- Contenido con scroll -->
+			<div class="overflow-y-auto flex-1 px-5 py-4">
+
+				<!-- Resumen de la pregunta -->
+				<div id="ai-question-summary" class="mb-4 p-4 bg-surface-hover rounded-xl border border-border-subtle text-sm leading-relaxed"></div>
+
+				<!-- Separador -->
+				<div class="flex items-center gap-3 mb-4">
+					<div class="flex-1 h-px bg-border-subtle"></div>
+					<span class="text-[0.7rem] text-text-muted font-semibold uppercase tracking-wider">Explicación</span>
+					<div class="flex-1 h-px bg-border-subtle"></div>
+				</div>
+
+				<!-- Loading -->
+				<div id="ai-loading" class="hidden flex flex-col items-center justify-center py-10 gap-3">
+					<div class="ai-spinner"></div>
+					<span class="text-text-muted text-sm">Generando explicación...</span>
+				</div>
+
+				<!-- Error -->
+				<div id="ai-error" class="hidden p-4 bg-red-50 dark:bg-red-900/20 border border-red-300 dark:border-red-700 rounded-xl mb-3">
+					<div class="flex items-center gap-2 mb-1">
+						<span class="material-icons text-red-500" style="font-size:1rem;">error_outline</span>
+						<span class="font-semibold text-red-700 dark:text-red-400 text-sm">Error al generar la explicación</span>
+					</div>
+					<p id="ai-error-msg" class="text-red-600 dark:text-red-400 text-xs m-0 leading-relaxed"></p>
+				</div>
+
+				<!-- Texto de la IA (streaming) -->
+				<div id="ai-text" class="text-text-main text-sm leading-relaxed" data-raw=""></div>
+
+				<!-- Botón reintentar -->
+				<button id="ai-retry-btn" class="hidden mt-4 w-full py-2 px-4 border border-border-subtle rounded-lg text-text-muted hover:text-text-main hover:bg-surface-hover text-sm font-medium transition-colors cursor-pointer bg-transparent flex items-center justify-center gap-1.5">
+					<span class="material-icons" style="font-size:1rem;">refresh</span>
+					Reintentar
+				</button>
+
+			</div>
+		</div>
+	</div>
 </BaseLayout>
 
 <style>
@@ -70,7 +144,18 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 	.btn-ghost {
 		@apply px-[1em] py-[0.5em] text-[0.9em] border-none text-text-muted hover:text-text-main rounded-[5px] cursor-pointer whitespace-nowrap bg-transparent hover:bg-surface-hover transition-colors font-medium;
 	}
-	
+
+	.btn-explicar-ia {
+		@apply flex items-center justify-center gap-1.5 px-4 py-2 text-sm font-semibold
+			   border border-blue-400/60 text-blue-500 dark:text-blue-400
+			   rounded-lg cursor-pointer transition-all bg-transparent
+			   hover:bg-blue-50 dark:hover:bg-blue-900/20 hover:border-blue-500
+			   hover:shadow-sm hover:-translate-y-px;
+	}
+	.btn-explicar-ia:disabled {
+		@apply opacity-40 cursor-not-allowed pointer-events-none hover:bg-transparent hover:border-blue-400/60 hover:shadow-none hover:translate-y-0;
+	}
+
 	@media (max-width: 767px) {
 		#app {
 			@apply w-[95%]! p-[15px]! mt-[70px]!;
@@ -80,6 +165,9 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 		}
 		.btn-primary {
 			@apply w-full! m-0! mb-[8px]! min-h-[52px]! text-[1.05em]! rounded-[8px]!;
+		}
+		.btn-explicar-ia {
+			@apply w-full! m-0!;
 		}
 		#action-buttons-container {
 			@apply gap-[5px]! pt-[15px]!;
