@@ -538,7 +538,7 @@ NO MARCAR
 NO MARCAR
 
 El tipo de datos vector (visto en clase) se define como un conjunto en el que sus componentes ocupan posiciones consecutivas de memoria
-2
+1
 V
 F
 NO MARCAR
@@ -2100,13 +2100,6 @@ NO MARCAR
 
 La operación de lista: Longitud: (LISTA) --> NATURAL es una operación consultora
 1
-V
-F
-NO MARCAR
-NO MARCAR
-
-El tipo de datos vector (visto en clase) se define como un conjunto en el que sus componentes ocupan posiciones consecutivas de memoria
-2
 V
 F
 NO MARCAR
