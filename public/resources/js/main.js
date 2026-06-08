@@ -262,7 +262,9 @@
 
     /** Controla la visibilidad de los botones superiores del quiz. */
     function toggleQuizUtilityButtons(visible) {
+        const reportBtn = $("report-btn");
         const copyBtn = $("copyButton");
+        if (reportBtn) reportBtn.classList.toggle("hidden", !visible);
         if (copyBtn) copyBtn.classList.toggle("hidden", !visible);
     }
 
