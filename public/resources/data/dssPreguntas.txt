@@ -1,115 +1,3 @@
-Seleccionar la única respuesta correcta a la siguiente pregunta sobre el denominado 'Espacio Ubicuo' (US):
-3
-La proactividad de los dispositivos solo significa la capacidad iniciar flujos de datos hacia los usuarios del sistema ubicuo
-El espacio ubicuo (US) principalmente está lleno de teléfonos inteligentes
-Un dispositivo pervasivo debe estar centrado en el ser humano (no solo que funcione sin la intervención humana) ya que se desarrollan para establecer una interacción directa con sus usuarios
-Los dispositivos no saben nada sobre los dispositivos pervasivos ubicados en el espacio ubicuo cercano
-La actividad de desarrollo de software se puede realizar según los estándares SOA solo asegurando que se satisfacen los requisitos de sistemas ubícuos
-
-Seleccionar la única respuesta correcta a la siguiente pregunta sobre Computación Ubicua (UC):
-1
-Sin los principios de la UC, la convergencia de las tecnologías actuales para hacer realidad IoT y M2M sería muy difícil
-Actualmente existe un estándar mundialmente aceptado para sistemas UC
-Cualquier sistema de teléfono móvil podría integrarse en un sistema informático con ubicuidad y colaborativo
-Internet de las cosas (IoT) es básicamente lo que ya tenemos actualmente con todas las computadoras, teléfonos inteligentes, relojes, etc. interconectados a escala planetaria
-Computación generalizada, computación ubicua (UC), inteligencia ambiental (AI) y tecnología móvil 5G son términos equivalentes en la práctica
-
-Seleccionar la única respuesta correcta a la siguiente pregunta sobre Computación Sensible al Contexto ('context aware computing'):
-1
-Los usuarios no tienen necesariamente un papel directo en una aplicación clasificada como de CAC, pero se ven influenciados por los programas que obtienen la solución de problemas que resuelve este tipo de computación
-El desarrollo de software para aplicaciones móviles no tiene que estar relacionado con este tipo de informática, que se centra más en la informática emocional o afectiva
-Este tipo de computación está dirigido principalmente al desarrollo de aplicaciones domóticas
-Los conceptos de computación ubícua y computación sensible al contexto no tienen, en principio, ninguna relación entre sí
-En realidad, solo hay un contexto para este tipo de computación: el del 'espacio ubicuo' (US) conformado por los dispositivos colaborativos
-
-Seleccionar la única respuesta correcta a la siguiente pregunta sobre axiomas de cubrimiento ('covering axioms'):
-2
-Las clases de cobertura deben ser subclases disjuntas de la clase "cubierta" predeterminada
-Un axioma de cobertura define la unión de las clases de cobertura como una clase, que es una superclase de la clase que está cubriendo
-Necesitamos crear una propiedad Datatype que tenga como rango definido el de la clase "Partición de Valores" (ValuePartition class), para poder usarlo
-Una clase de "partición de valores" ('ValuePartition class') solo es una sublista de posibles tipos de valores
-No todas las clases de particiones de valores necesitan agregar un axioma de cobertura a su sección de clase equivalente
-
-Seleccionar la única respuesta correcta a la siguiente pregunta sobre el desarrollo de software para entornos inteligentes (software con ‘inteligencia ambiental’):
-5
-Este tipo de aplicaciones de software debe estar diseñado para ser utilizado por miles de nodos con capacidad de procesamiento cada uno de ellos
-El grado de conocimiento del contexto de una aplicación depende mucho de sus usuarios y, por lo tanto, la forma de representarlo siempre dependerá de modelos lógicos difusos
-El desarrollo de este software es solo un problema de diseño que, además, ha de tener en cuenta el contexto formado por muchos dispositivos pervasivos heterogéneos
-La programación tradicional de aplicaciones con objetos es equivalente a la programación de aplicaciones para entornos ubicuos más un modelado ontológico del entorno
-Para desarrollar aplicaciones con Inteligencia Ambiental es obligatorio tener la definición de dominio de información semántica en el que se desplegarán dispositivos y servicios ubicuos
-
-En cuanto a la diferencia entre las actividades "receive" e "invoke" en BPEL 2.0, seleccione cuál de las siguientes es la alternativa correcta:
-1
-Los “PartnerLinks” de la actividad "invoke" y de la actividad "receive",implicados cuando se llama a la operación de un servicio, son los mismos
-La actividad "receive" no puede almacenar la respuesta del “callback”identificado en su "PortType" y, por lo tanto, esta actividad solo se puede programar para llamadas sincrónicas al servicio de cliente
-La actividad "invoke" sólo puede especificar operaciones "unidireccionales" en un servicio (el cliente no puede programarse para esperar una respuesta enviada a un puerto)
-No se pueden crear automáticamente variables en una actividad de"invocación"
-La actividad "receive" abre un puerto en el proceso BPEL para enviar y recibir datos
-
-Uno de los siguientes elementos no puede ser considerado un objetivo de la notación WS-BPEL:
-1
-La creación de un estándar privativo de cada empresa para orquestar SW de forma modular
-Permitir la definición de un modelo transaccional que admitaerrores/recuperación de algunas partes de las descripciones de procesos
-El utilizar una representación de los SW como modelo fundamental para describir la estructuración y la composición de procesos de negocio
-El motor de orquestación BPEL asume implícitamente la creación y terminación de instancias de un proceso de negocio; sin embargo, no se incluyen operaciones de "suspensión" o "reanudación" en la versión actual de BPEL
-Admitir un mecanismo de identificación ("partners") para la definición deidentificadores de instancias de proceso que pueden ser utilizados por los mensajes y que pueden ser cambiados durante la ejecución del proceso
-
-Seleccionar la única respuesta correcta a la siguiente pregunta sobre la especificación de una restricción universal para la propiedad de objeto ‘tieneCubierta’. La especificación en lenguaje natural sería: “Una pizza vegetariana solo tiene cubierta de queso y vegetales”:
-2
-Ninguna de las proposiciones anteriores describe exactamente la condición: “Una pizza vegetariana solo tiene cubierta de queso y vegetales”
-es una Pizza and tieneCubierta only (IngredienteQueso or IngredienteVegetal)
-tieneCubierta only (IngredienteQueso and IngredienteVegetal)
-tieneCubierta only (IngredienteQueso or IngredienteVegetal)
-(tieneCubierta only IngredienteQueso) and (tieneCubierta only IngredienteVegetal)
-
-Seleccionar cuál (sólo 1) de los siguientes elementos no se puede considerar como un objetivo de modelado de procesos de negocio alcanzable con WS-BPEL:
-1
-El definir una representación gráfica de los procesos de negocio y poder llevar a cabo una metodología de diseño particular de tales procesos
-La programación de procesos de negocio utilizando principalmente un lenguaje de programación basado en XML
-El definir un conjunto de conceptos y construcciones sintácticas para poder programar la orquestación de SW de tal forma que puedan ser utilizadas por vistas externas (“abstractas”) e internas (“ejecutables”) de un proceso de negocio
-El proporcionar funciones de manipulación de los datos necesarias para operar con los datos y con el flujo de control de los procesos
-Sólo permitir la descripción de las interacciones entre procesos de negocio basada en las construcciones “PortType” de WSDL (descripción “abstracta de tales interacciones) en lugar de “Ports” (descripción física)
-
-En cuanto a la actividad “reply”, seleccionar cuál de las siguientes afirmaciones es falsa:
-1
-El código necesario para programar actividades "reply" o "invoke" de“partners” en un proceso BPEL es equivalente, porque en ambos casos ejecutamos las mismas operaciones en una misma definición de proceso
-La actividad "reply" debe estar siempre asociada a una actividad "receive" para conformar una doble operación de solicitud/respuesta en el proceso
-Esta actividad permite enviar un mensaje en respuesta a un mensaje anterior recibido en el proceso
-Con el partner "invoke" podemos tener una sola actividad para manejarmúltiples operaciones y así, sólo actualizando los partners en el proceso, podemos actualizar el código del proceso BPEL más fácilmente
-En caso de que haya un cambio en el archivo WSDL concreto que incluya un par "receive"-"reply", es más fácil programar un "invoke" que un mensaje SOAP independiente de respuesta
-
-Seleccionar cuál de las siguientes acciones sería redundante para completar ladefinición de un proceso BPEL 2.0 suponiendo que anteriormente hemosprogramado el archivo con la definición WSDL de tal servicio: 
-5
-Definir las variables necesarias para contener los mensajes de entrada/salida necesarios para intercambiar información con los servicios asociados al mencionado proceso
-Añadir las definiciones de los “PartnerLinkTypes” además de las definiciones del servicio realizadas previamente en WSDL
-Crearse un “PartnerLink” para cada servicio asociado al proceso BPEL 2.0
-Definir los servicios asociados participantes (“partnerlinks”) y sus roles
-Crear los “PortTypes” que se han de abrir cuando se reciba una petición de servicio en cada servicio
-
-Seleccionar la única respuesta correcta a la siguiente pregunta sobre relaciones existenciales en OWL:
-2
-La restricción: "Pizza Margherita tieneCubierta only (IngredienteMozzarella or IngredienteTomate)" la puede cumplir una pizza individual que tenga solo "IngredienteTomate" y pueda ser considerada una instancia ("individual") de la clase Pizza Margherita.
-La restricción: "La pizza Margherita tieneCubierta some IngredienteMozzarella and tieneCubierta some IngredienteTomate" no impide que Margherita tenga otros ingredientes más, además del tomate y la mozzarella.
-A partir de la restricción "Pizza Margherita tieneCubierta IngredienteMozzarella and tieneCubierta CubiertaTomate" se puede inferir el axioma de cierre de la propiedad tieneCubierta para la clase de Pizza Margherita.
-Estas relaciones obligan a que la correspondencia de una determinada propiedad se lleve a cabo solo con los individuos de una clase de relleno ("filler").
-Las restricciones "Pizza Margherita tieneCubierta only IngredienteMozzarella or IngredienteTomate)" y "PizzaMargherita tieneCubierta only IngredienteMozzarella and Pizza Margherita tieneCubierta only IngredienteTomate" son equivalentes.
-
-¿Cuál de las siguientes afirmaciones sobre elementos de WSDL que se usan para descripción de SW es incorrecta?:
-4
-La definición concreta “Port” de WSDL sirve principalmente para representar la dirección a través de la cual otros procesos o “partners” pueden acceder al servicio
-WSDL es un lenguaje de definición de interfaces de servicios basado en XML que se utiliza principalmente para proporcionar una descripción de la funcionalidad ofrecida por un SW
-El constructo “operation” (incluido en la definición de un PortType) sirve para definir el conjunto de mensajes de entrada y salida del servicio que se describe
-La parte “binding” de la descripción de un servicio en WSDL es necesaria para establecer conexiones físicas de este servicio con otros procesos o servicios
-El constructo “PortType” de WSDL proporciona la definición el orden correcto de los mensajes que pueden ser procesados por un SW
-
-Seleccionar la única alternativa correcta entre las siguientes afirmaciones sobre WSBPEL:
-4
-WS-BPEL no es más que una notación para describir coreografías de SW
-Realmente, el lenguaje WS-BPEL está destinado solo para pequeños proyectos de desarrollo de software
-El código de los “programas” desarrollados con WS-BPEL no puede ser serializado en un archivo XML tal como hacemos cuando utilizamos la API de programación JAXB
-BPEL es una notación que extiende el modelo de interacción entre servicios Web (SW) y entonces añade soporte para representar transacciones entre procesos de negocio a la notación WSDL
-Los procesos de negocio que se pueden describir con WS-BPEL sólo han de pertenecer a una notación de modelado de procesos de negocio (WSDL; BPEL, BPMN, etc.)
-
 ¿Cual es la diferencia entre patrones de diseño y frameworks?
 1
 Los frameworks se basan en uno o más patrones para resolver problemas específicos
@@ -1238,20 +1126,6 @@ Unit of Work
 Identity Map 
 Lazy Load
 
-En el proceso RUP un ciclo es:
-3
-Un esfuerzo de trabajo en un proyecto que recorre varios flujos de trabajo, al final del cual se ha incrementado la infomación disponible sobre el sistema
-Un intervalo de tiempo entre dos hitos importantes del proceso.
-Cada uno de los recorridos a través de'todas las fases del proceso que produce como resultado una versión de la aplicación
-Ninguna de las anteriores
-
-EI hito de la fase de construcción en RUP es...
-3
-La visión del sistema
-La arquitectura básica del sistema
-La versión final del producto con una capacidad operacional parcial del producto
-La versión final del producto con una capacidad operacional completa
-
 Según UML, la descripción bajo la forma de acciones y reacciones del comportamiento del sistema desde eI punto de vista del usuario viene determinado
 1
 EI diagrama de casos de uso.
@@ -1259,41 +1133,11 @@ EI diagrama de clases.
 EI diagrama de actividad.
 Ninguna de las anteriores.
 
-¿Qué mide la velocidad de un equipo?
-2
-EI número medio de iteraciones que tarda en terminar un proyecto
-EI número de puntos de historia que puede completar en una iteración
-EI número de tareas o historias de usuario que puede completar en una iteración
-
-¿Cuál de las siguientes historias es una mala historia de usuario?
-1
-El programa se conectará a la BD a través de un pool de conexiones
-La empresa debe poder anunciar puestos de trabajo
-Hacienda podrá consultar el IVA repercutido
-
 ¿Qué patrón sería mejor aplicar cuando no sabemos la clase de los objetos que van a crear las subclases de una clase abstracta?
 1
 Factory Method
 Abstract Factory
 Builder
-
-¿Cuál es el principal objetivo de las reuniones diarias de Scrum?
-3
-Conseguir que todos los miembros del equipo asuman la misma carga de trabajo
-Hacer demostraciones del buen funcionamiento del proyecto
-Detectar impedimentos en el avance del equipo
-
-En Scrum, ¿cuál es el rol encargado de mantener las historias de usuario?
-3
-Stakeholder
-Scrum Master
-Product Owner
-
-¿Cuál de las siguientes afirmaciones es falsa? EI uso de una aproximación XP para el desarrollo software...
-3
-Normalmente requiere entornos de integración automática
-Normalmente requiere la existencia en el equipo de desarrolladores experimentados
-Normalmente requiere que los clientes tengan muy claros los requisitos
 
 En XP...
 1
