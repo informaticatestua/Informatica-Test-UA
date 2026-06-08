@@ -890,3 +890,9 @@ La ACM y la IEEE ha cooperado para crear un código de ética y práctica profes
 - El ingeniero de software mantendrá la valoración de su juicio personal y profesional a lo largo de todo el proyecto.
 - El ingeniero de software mantendrá la integridad e independencia en sus valoraciones profesionales
 - El ingeniero de software tiene la obligación de informar al cliente, teniendo en cuenta sus valoraciones personales.
+
+Según el RGPD ¿A partir de qué edad puede un menor expresar el consentimiento en términos de protección de datos?
+1
+- Máximo 16 años
+- 14 años 
+- 18 años
