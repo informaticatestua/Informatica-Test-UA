@@ -235,9 +235,11 @@
             return;
         }
 
-        reviewBtn.style.display = "inline-flex";
+        reviewBtn.style.display = "flex";
         reviewBtn.disabled = !state.modoRepaso && totalErrores === 0;
-        reviewBtn.innerText = state.modoRepaso
+
+        const label = $("review-errors-label") || reviewBtn;
+        label.innerText = state.modoRepaso
             ? "Salir del repaso"
             : totalErrores > 0
                 ? `Repasar fallos (${totalErrores})`
@@ -337,8 +339,7 @@
         toggleQuizUtilityButtons(false);
         $("button-container")?.classList.add("hidden");
         resultsEl.classList.remove("hidden");
-        hideElement("contador");
-        hideElement("total-preguntas");
+        hideElement("stats-panel");
     }
 
     /** Cierra la pantalla final y devuelve la UI habitual del quiz. */
@@ -936,8 +937,7 @@
         hideElement("app-title");
         showElement("verificar");
         showElement("volver");
-        showElement("total-preguntas");
-        showElement("contador");
+        showElement("stats-panel");
     }
 
     /**
@@ -951,7 +951,7 @@
         const resumenBtn = $("resumenBtn");
         const copyButton = $("copyButton");
         const aigenBtn   = $("aigen-open-btn");
-        if (resumenBtn) resumenBtn.style.display = "block";
+        if (resumenBtn) resumenBtn.style.display = "flex";
         if (copyButton) copyButton.style.display = "flex";
         if (aigenBtn)   aigenBtn.style.display   = "flex";
 
@@ -986,7 +986,7 @@
         const resumenBtn = $("resumenBtn");
         const copyButton = $("copyButton");
         const aigenBtn   = $("aigen-open-btn");
-        if (resumenBtn) resumenBtn.style.display = "block";
+        if (resumenBtn) resumenBtn.style.display = "flex";
         if (copyButton) copyButton.style.display = "flex";
         if (aigenBtn)   aigenBtn.style.display   = "flex";
 
@@ -1134,6 +1134,45 @@
         });
     }
 
+    /**
+     * Menú "Más opciones": agrupa Resumen, Repasar fallos y Generar quiz
+     * con IA en un desplegable para reducir el número de botones visibles.
+     */
+    function bindMoreOptionsMenu() {
+        const toggleBtn = $("more-options-btn");
+        const menu = $("more-options-menu");
+        if (!toggleBtn || !menu) return;
+
+        const closeMenu = () => {
+            menu.classList.add("hidden");
+            toggleBtn.setAttribute("aria-expanded", "false");
+        };
+        const openMenu = () => {
+            menu.classList.remove("hidden");
+            toggleBtn.setAttribute("aria-expanded", "true");
+        };
+
+        toggleBtn.addEventListener("click", (event) => {
+            event.stopPropagation();
+            if (menu.classList.contains("hidden")) openMenu();
+            else closeMenu();
+        });
+
+        menu.addEventListener("click", (event) => {
+            if (event.target.closest("button")) closeMenu();
+        });
+
+        document.addEventListener("click", (event) => {
+            if (!menu.classList.contains("hidden") && !menu.contains(event.target) && event.target !== toggleBtn) {
+                closeMenu();
+            }
+        });
+
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "Escape" && !menu.classList.contains("hidden")) closeMenu();
+        });
+    }
+
     /** Botón de acceso al modo de repaso de fallos. */
     function bindReviewButton() {
         const reviewBtn = $("review-errors-btn");
@@ -1199,6 +1238,7 @@
 
         bindResumenBtn();
         bindCopyButton();
+        bindMoreOptionsMenu();
         bindReviewButton();
         bindSessionResultsButtons();
         bindKeyboardShortcuts();
