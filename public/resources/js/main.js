@@ -36,6 +36,8 @@
         "ac_CP-F3": "ac_CP-F3_Preguntas.txt",
         "ac_CT1-2": "ac_CT1-2_Preguntas.txt",
         "ac_CT3-4": "ac_CT3-4_Preguntas.txt",
+        "sti-oficial": "stiPreguntas.txt",
+        "stiEnero26": "stiEnero26.txt",
     });
 
     /**
@@ -48,10 +50,14 @@
             displayName: "REDESFULL",
             files: [
                 "redesPreguntas.txt",
-                "redesEnero2324Preguntas.txt",
-                "redesEnero2425Preguntas.txt",
-                "redesJulio2425Preguntas.txt",
                 "redesEnero2526Preguntas.txt",
+            ],
+        },
+        "sti-full": {
+            displayName: "STIFULL",
+            files: [
+                "stiPreguntas.txt",
+                "stiEnero26.txt",
             ],
         },
         sdsfull: {
