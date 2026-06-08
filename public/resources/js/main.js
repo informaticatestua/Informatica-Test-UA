@@ -91,6 +91,9 @@
         delimiters: [{ left: "$$", right: "$$", display: false }],
     };
 
+    /** Namespace de persistencia para historial de fallos por quiz. */
+    const REVIEW_STORAGE_PREFIX = "quizIncorrectHistory:";
+
     // ─────────────────────────────────────────────────────────────────────
     // 2. ESTADO
     // ─────────────────────────────────────────────────────────────────────
@@ -102,6 +105,8 @@
     const state = {
         /** Lista de preguntas ya parseadas y barajadas. */
         preguntas: [],
+        /** Banco completo de preguntas de la asignatura actual. */
+        todasLasPreguntas: [],
         /** Índice de la pregunta visible. */
         preguntaActual: 0,
         /** Total de preguntas verificadas (correctas + incorrectas). */
@@ -110,6 +115,14 @@
         preguntasCorrectas: 0,
         /** Identificador del archivo / grupo activo (para el botón Resumen). */
         archivoActual: "",
+        /** Clave estable del quiz actual para persistir fallos. */
+        quizKey: "",
+        /** Si el usuario está repasando únicamente preguntas falladas. */
+        modoRepaso: false,
+        /** Fallos detectados en esta sesión. */
+        erroresSesion: new Set(),
+        /** Fallos persistidos localmente desde sesiones anteriores. */
+        erroresHistoricos: new Set(),
         /**
          * Snapshot por pregunta de las opciones seleccionadas y si el
          * usuario ya pulsó "Verificar". Permite navegar atrás/adelante
@@ -128,6 +141,7 @@
      * la pantalla de resumen sin duplicar código (DRY).
      */
     const { formatTextWithCode, splitLongText } = window.QuizFormat;
+    const { shuffle, hashString, parsePreguntasTxt } = window.QuizParserCore;
 
     /** Acceso corto al DOM por id. */
     const $ = (id) => document.getElementById(id);
@@ -144,25 +158,153 @@
         if (el) el.classList.remove("hidden");
     }
 
-    /**
-     * Baraja un array in-place mediante Fisher-Yates.
-     * Devuelve el mismo array por comodidad para los call sites
-     * que esperaban el valor de retorno (compatibilidad con la versión
-     * previa del código).
-     */
-    function shuffle(array) {
-        for (let i = array.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [array[i], array[j]] = [array[j], array[i]];
-        }
-        return array;
-    }
-
     /** Comparación rápida de dos arrays numéricos del mismo orden. */
     function arraysEqual(a, b) {
         if (a.length !== b.length) return false;
         for (let i = 0; i < a.length; i++) if (a[i] !== b[i]) return false;
         return true;
+    }
+
+    /** Devuelve la pregunta visible o `undefined` si aún no hay datos. */
+    function getPreguntaActual() {
+        return state.preguntas[state.preguntaActual];
+    }
+
+    /** Clave estable para guardar/restaurar estado de una pregunta. */
+    function getPreguntaStateKey(index = state.preguntaActual) {
+        const pregunta = state.preguntas[index];
+        return pregunta?.id || String(index);
+    }
+
+    /** Lee el historial persistido de fallos del quiz actual. */
+    function loadStoredErrors() {
+        if (!state.quizKey || typeof localStorage === "undefined") return new Set();
+        try {
+            const raw = localStorage.getItem(REVIEW_STORAGE_PREFIX + state.quizKey);
+            const parsed = raw ? JSON.parse(raw) : [];
+            return new Set(Array.isArray(parsed) ? parsed : []);
+        } catch (error) {
+            console.warn("No se pudo leer el historial de fallos:", error);
+            return new Set();
+        }
+    }
+
+    /** Persiste el historial de fallos del quiz actual. */
+    function saveStoredErrors() {
+        if (!state.quizKey || typeof localStorage === "undefined") return;
+        try {
+            localStorage.setItem(
+                REVIEW_STORAGE_PREFIX + state.quizKey,
+                JSON.stringify(Array.from(state.erroresHistoricos)),
+            );
+        } catch (error) {
+            console.warn("No se pudo guardar el historial de fallos:", error);
+        }
+    }
+
+    /** Unión de fallos actuales e históricos. */
+    function getReviewQuestionIds() {
+        return new Set([...state.erroresSesion, ...state.erroresHistoricos]);
+    }
+
+    /** Subconjunto de preguntas que deben entrar en el repaso. */
+    function getReviewQuestions() {
+        const errores = getReviewQuestionIds();
+        return state.todasLasPreguntas.filter((pregunta) => errores.has(pregunta.id));
+    }
+
+    /** Ajusta el contador de preguntas según el modo actual. */
+    function actualizarTotalPreguntasLabel() {
+        const totalEl = $("total-preguntas");
+        if (!totalEl) return;
+        const prefix = state.modoRepaso ? "Repaso" : "Total";
+        totalEl.innerText = `${prefix}: ${state.preguntas.length}`;
+    }
+
+    /** Sincroniza visibilidad y texto del botón de repaso. */
+    function actualizarBotonRepaso() {
+        const reviewBtn = $("review-errors-btn");
+        if (!reviewBtn) return;
+
+        const totalErrores = getReviewQuestionIds().size;
+        if (state.preguntas.length === 0 && totalErrores === 0) {
+            reviewBtn.style.display = "none";
+            reviewBtn.disabled = true;
+            return;
+        }
+
+        reviewBtn.style.display = "inline-flex";
+        reviewBtn.disabled = !state.modoRepaso && totalErrores === 0;
+        reviewBtn.innerText = state.modoRepaso
+            ? "Salir del repaso"
+            : totalErrores > 0
+                ? `Repasar fallos (${totalErrores})`
+                : "Repasar fallos";
+    }
+
+    /** Resetea progreso y UI para arrancar un modo de quiz desde cero. */
+    function resetQuizProgress() {
+        state.preguntaActual = 0;
+        state.totalPreguntas = 0;
+        state.preguntasCorrectas = 0;
+        state.estadosPreguntas = {};
+
+        const resultado = $("resultado");
+        if (resultado) resultado.innerText = "";
+
+        const verificarBtn = $("verificar");
+        if (verificarBtn) verificarBtn.disabled = true;
+
+        const explicarBtn = $("explicar-ia-btn");
+        if (explicarBtn) explicarBtn.disabled = true;
+
+        setVerificarMode("verificar");
+        actualizarContador();
+    }
+
+    /** Marca una pregunta como pendiente de repaso. */
+    function registrarFalloPregunta(questionId) {
+        if (!questionId) return;
+        state.erroresSesion.add(questionId);
+        state.erroresHistoricos.add(questionId);
+        saveStoredErrors();
+        actualizarBotonRepaso();
+    }
+
+    /** Elimina una pregunta del repaso tras responderla correctamente. */
+    function resolverFalloPregunta(questionId) {
+        if (!questionId) return;
+        state.erroresSesion.delete(questionId);
+        state.erroresHistoricos.delete(questionId);
+        saveStoredErrors();
+        actualizarBotonRepaso();
+    }
+
+    /** Sale del modo repaso y vuelve al banco completo. */
+    function salirModoRepaso() {
+        state.modoRepaso = false;
+        state.preguntas = [...state.todasLasPreguntas];
+        resetQuizProgress();
+        actualizarTotalPreguntasLabel();
+        actualizarBotonRepaso();
+        if (state.preguntas.length > 0) mostrarPregunta();
+    }
+
+    /** Activa el modo de repaso usando sesión actual + histórico local. */
+    function iniciarModoRepaso() {
+        const preguntasRepaso = getReviewQuestions();
+        if (preguntasRepaso.length === 0) {
+            alert("Todavía no hay preguntas falladas para repasar.");
+            actualizarBotonRepaso();
+            return;
+        }
+
+        state.modoRepaso = true;
+        state.preguntas = preguntasRepaso;
+        resetQuizProgress();
+        actualizarTotalPreguntasLabel();
+        actualizarBotonRepaso();
+        mostrarPregunta();
     }
 
     /**
@@ -212,45 +354,6 @@
 
         // Normalizamos saltos de línea para que el parser sea agnóstico al SO.
         return raw.replace(/\r\n/g, "\n").replace(/\r/g, "\n").trim();
-    }
-
-    /**
-     * Convierte el texto de un archivo `.txt` en un array de preguntas.
-     * El formato esperado (NUNCA modificar) es:
-     *
-     *   <enunciado>
-     *   <índices respuesta correcta separados por coma>
-     *   <opción 1>
-     *   <opción 2>
-     *   ...
-     *
-     * Las preguntas se separan con líneas en blanco (uno o más `\n\n`).
-     */
-    function parsePreguntasTxt(preguntasTxt) {
-        return preguntasTxt.split(/\n{2,}/).map((bloque) => {
-            const [pregunta, respuesta, ...opcionesRaw] = bloque.split("\n");
-            const opciones = opcionesRaw.filter((opcion) => opcion.trim() !== "");
-
-            // Las respuestas vienen como números 1-based. Detectamos duplicados
-            // (que en algunos sets indican preguntas tipo "marca ambas correctas").
-            const indicesOriginales = respuesta.split(",").map((r) => parseInt(r.trim(), 10));
-            const indicesUnicos = Array.from(new Set(indicesOriginales));
-            const tieneDuplicados = indicesOriginales.length !== indicesUnicos.length;
-
-            // Barajamos las opciones y reubicamos los índices correctos para
-            // que sigan apuntando al texto original tras el shuffle.
-            const opcionesMezcladas = shuffle([...opciones]);
-            const respuestasMezcladas = indicesUnicos.map(
-                (indice) => opcionesMezcladas.indexOf(opciones[indice - 1]) + 1,
-            );
-
-            return {
-                pregunta,
-                respuestas: respuestasMezcladas,
-                opciones: opcionesMezcladas,
-                multiple: tieneDuplicados || respuestasMezcladas.length > 1,
-            };
-        });
     }
 
     /**
@@ -346,7 +449,8 @@
                 ? `| ${Math.round((state.preguntasCorrectas / state.totalPreguntas) * 100)}%`
                 : "";
 
-        contador.innerText = `Correctas: ${state.preguntasCorrectas} | Contestadas: ${state.totalPreguntas} ${porcentaje}`;
+        const modo = state.modoRepaso ? " | Modo repaso" : "";
+        contador.innerText = `Correctas: ${state.preguntasCorrectas} | Contestadas: ${state.totalPreguntas} ${porcentaje}${modo}`;
     }
 
     /**
@@ -367,8 +471,18 @@
         if (opciones) opciones.innerHTML = "";
         if (resultado) resultado.innerText = "";
 
+        state.preguntas = [];
+        state.todasLasPreguntas = [];
+        state.preguntaActual = 0;
+        state.totalPreguntas = 0;
+        state.preguntasCorrectas = 0;
+        state.modoRepaso = false;
+        state.erroresSesion = new Set();
+        state.erroresHistoricos = new Set();
         setVerificarMode("verificar");
         state.estadosPreguntas = {};
+        actualizarContador();
+        actualizarBotonRepaso();
     }
 
     /**
@@ -494,7 +608,7 @@
             };
         }
 
-        const pregunta = state.preguntas[state.preguntaActual];
+        const pregunta = getPreguntaActual();
         const contenedorPregunta = $("pregunta");
         const contenedorOpciones = $("opciones");
 
@@ -533,24 +647,29 @@
      * los contadores y bloquea los inputs para impedir más cambios.
      */
     function verificarRespuesta() {
-        state.totalPreguntas++;
-
         const seleccionadasInputs = document.querySelectorAll('input[name="opcion"]:checked');
         if (seleccionadasInputs.length === 0) {
             alert("Selecciona una opción antes de verificar.");
             return;
         }
 
-        const respuestasCorrectas = state.preguntas[state.preguntaActual].respuestas;
+        state.totalPreguntas++;
+
+        const preguntaActual = getPreguntaActual();
+        const respuestasCorrectas = preguntaActual.respuestas;
         const opciones = $("opciones");
         const labels = opciones.getElementsByTagName("label");
         const seleccionadas = Array.from(seleccionadasInputs).map((i) => parseInt(i.value, 10));
+        const questionId = preguntaActual.id;
 
         // El orden no importa: comparamos arrays ordenados.
         const correctasOrdenadas = [...respuestasCorrectas].sort((a, b) => a - b);
         const seleccionadasOrdenadas = [...seleccionadas].sort((a, b) => a - b);
         if (arraysEqual(correctasOrdenadas, seleccionadasOrdenadas)) {
             state.preguntasCorrectas++;
+            resolverFalloPregunta(questionId);
+        } else {
+            registrarFalloPregunta(questionId);
         }
 
         pintarResultado(labels, respuestasCorrectas, seleccionadas);
@@ -568,7 +687,7 @@
         ).map((input) => parseInt(input.value, 10));
 
         const isVerified = $("verificar")?.innerText === "Siguiente";
-        state.estadosPreguntas[state.preguntaActual] = { seleccionadas, isVerified };
+        state.estadosPreguntas[getPreguntaStateKey()] = { seleccionadas, isVerified };
     }
 
     /**
@@ -577,7 +696,7 @@
      * "Siguiente" para mantener la coherencia con la versión previa.
      */
     function restaurarEstadoActual() {
-        const guardado = state.estadosPreguntas[state.preguntaActual];
+        const guardado = state.estadosPreguntas[getPreguntaStateKey()];
         if (!guardado) return;
 
         const opciones = $("opciones");
@@ -619,13 +738,44 @@
     /** Avanza al siguiente índice (con wrap-around) y restaura su estado. */
     function siguientePregunta() {
         guardarEstadoActual();
-        
+
+        if (state.modoRepaso) {
+            const currentQuestionId = getPreguntaActual()?.id;
+            const previousIndex = state.preguntaActual;
+            const preguntasRepaso = getReviewQuestions();
+
+            if (preguntasRepaso.length === 0) {
+                salirModoRepaso();
+                return;
+            }
+
+            const currentIndex = preguntasRepaso.findIndex((pregunta) => pregunta.id === currentQuestionId);
+            const nextIndex =
+                currentIndex === -1
+                    ? previousIndex % preguntasRepaso.length
+                    : (currentIndex + 1) % preguntasRepaso.length;
+
+            if (nextIndex === 0) {
+                state.estadosPreguntas = {};
+            }
+
+            state.preguntas = preguntasRepaso;
+            state.preguntaActual = nextIndex;
+            actualizarTotalPreguntasLabel();
+            mostrarPregunta();
+            setVerificarMode("verificar");
+            const resultado = $("resultado");
+            if (resultado) resultado.innerText = "";
+            restaurarEstadoActual();
+            return;
+        }
+
         const nextIndex = (state.preguntaActual + 1) % state.preguntas.length;
-        
+
         // Al completar el ciclo, limpia el historial para evitar que aparezcan respuestas previas destacadas.
         if (nextIndex === 0) {
-            state.estadosPreguntas = {}
-        };
+            state.estadosPreguntas = {};
+        }
 
         state.preguntaActual = nextIndex;
         mostrarPregunta();
@@ -639,6 +789,15 @@
     function volverPreguntaAnterior() {
         if (state.preguntaActual === 0) return;
         guardarEstadoActual();
+
+        if (state.modoRepaso) {
+            state.preguntas = getReviewQuestions();
+            if (state.preguntas.length === 0) {
+                salirModoRepaso();
+                return;
+            }
+        }
+
         state.preguntaActual -= 1;
         mostrarPregunta();
         setVerificarMode("verificar");
@@ -677,6 +836,7 @@
         if (aigenBtn)   aigenBtn.style.display   = "flex";
 
         state.archivoActual = archivo;
+        state.erroresHistoricos = loadStoredErrors();
         const asignaturaNombre = archivo.split("Preguntas.txt")[0].toUpperCase();
         const titleMain = document.querySelector("#asignatura-nombre .title-main");
         if (titleMain) titleMain.innerText = asignaturaNombre;
@@ -684,11 +844,11 @@
         try {
             const preguntasTxt = await fetchPreguntasTxt(archivo);
             state.preguntas = parsePreguntasTxt(preguntasTxt);
-
-            const totalEl = $("total-preguntas");
-            if (totalEl) totalEl.innerText = `Total: ${state.preguntas.length}`;
-
             shuffle(state.preguntas);
+            state.todasLasPreguntas = [...state.preguntas];
+            actualizarTotalPreguntasLabel();
+            actualizarBotonRepaso();
+
             mostrarPregunta();
         } catch (error) {
             console.warn("URL inválida o asignatura no encontrada:", error);
@@ -711,16 +871,16 @@
         if (aigenBtn)   aigenBtn.style.display   = "flex";
 
         state.archivoActual = displayName;
+        state.erroresHistoricos = loadStoredErrors();
         const titleEl = $("asignatura-nombre");
         if (titleEl) titleEl.innerText = displayName;
 
         const todas = await loadMultipleFiles(archivos);
         state.preguntas = todas;
-
-        const totalEl = $("total-preguntas");
-        if (totalEl) totalEl.innerText = `Total: ${state.preguntas.length}`;
-
         shuffle(state.preguntas);
+        state.todasLasPreguntas = [...state.preguntas];
+        actualizarTotalPreguntasLabel();
+        actualizarBotonRepaso();
         mostrarPregunta();
         mostrarUIQuiz();
     }
@@ -731,6 +891,8 @@
      * `${id}Preguntas.txt`; las excepciones se mapean explícitamente.
      */
     function cargarDesdeUrl(id) {
+        state.quizKey = id;
+
         // 1) Grupos multi-archivo (REDESFULL, SDSFULL...).
         const grupo = MULTI_FILE_GROUPS[id];
         if (grupo) {
@@ -852,6 +1014,21 @@
         });
     }
 
+    /** Botón de acceso al modo de repaso de fallos. */
+    function bindReviewButton() {
+        const reviewBtn = $("review-errors-btn");
+        if (!reviewBtn) return;
+
+        reviewBtn.addEventListener("click", () => {
+            if (state.modoRepaso) {
+                salirModoRepaso();
+                return;
+            }
+
+            iniciarModoRepaso();
+        });
+    }
+
     /**
      * Conecta los listeners persistentes (no dependen de la pregunta
      * visible). Los listeners por pregunta se configuran en mostrarPregunta().
@@ -865,6 +1042,7 @@
 
         bindResumenBtn();
         bindCopyButton();
+        bindReviewButton();
         bindKeyboardShortcuts();
     }
 
@@ -899,26 +1077,17 @@
          * resetea todos los contadores y estados para comenzar desde cero.
          */
         injectGeneratedQuestions(nuevasPreguntas) {
-            state.preguntas         = nuevasPreguntas;
-            state.preguntaActual    = 0;
-            state.preguntasCorrectas = 0;
-            state.totalPreguntas    = 0;
-            state.estadosPreguntas  = {};
-
-            const totalEl = $("total-preguntas");
-            if (totalEl) totalEl.innerText = `Total IA: ${state.preguntas.length}`;
-
-            actualizarContador();
-
-            const resultado = $("resultado");
-            if (resultado) resultado.innerText = "";
-
-            const verificarBtn = $("verificar");
-            if (verificarBtn) verificarBtn.disabled = true;
-
-            const explicarBtn = $("explicar-ia-btn");
-            if (explicarBtn) explicarBtn.disabled = true;
-
+            state.modoRepaso = false;
+            state.erroresSesion = new Set();
+            state.erroresHistoricos = new Set();
+            state.preguntas = nuevasPreguntas.map((pregunta, index) => ({
+                ...pregunta,
+                id: pregunta.id || hashString(JSON.stringify(pregunta) + ":" + index),
+            }));
+            state.todasLasPreguntas = [...state.preguntas];
+            resetQuizProgress();
+            actualizarTotalPreguntasLabel();
+            actualizarBotonRepaso();
             mostrarPregunta();
             setVerificarMode("verificar");
         },

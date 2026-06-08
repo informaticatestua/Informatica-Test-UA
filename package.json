@@ -9,7 +9,8 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "test": "vitest run"
   },
   "dependencies": {
     "@astrojs/vercel": "^8.0.0",
@@ -29,6 +30,7 @@
     "tailwindcss": "^4.2.1"
   },
   "devDependencies": {
-    "@types/katex": "^0.16.8"
+    "@types/katex": "^0.16.8",
+    "vitest": "^3.2.4"
   }
 }
