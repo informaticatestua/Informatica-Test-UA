@@ -244,7 +244,7 @@ El cono de la incertidumbre (COMPROBADO)
 - "Técnicas de Programación y Control de Proyectos". C.Romero López. Pirámide
 
 Según el RGPD, el RAT (registro de Actividades de Tratamiento) es obligatorio para
-4
+3
 - Solo para la Administración Publica
 - Empresas de menos de 250 empleados y PYMES
 - Cualquier empresa publica o privada
@@ -272,7 +272,7 @@ En el registro de la propiedad intelectual de un software bajo una relación lab
 - Para la cesión de los derechos de autoría del software de la empresa al empleado
 
 Muchas organizaciones fortalecen sus equipos de gestión de riesgos, para que estos sean identificados a priori, pero lo que ocurre realmente es…
-2
+3
 - Es imposible identificar los riesgos a priori
 - Lo mas usual es identificar los riesgos de ejecución
 - No se identifican a tiempo
@@ -314,7 +314,7 @@ Ms Project es
 - Una herramienta de modelado de proyectos
 
 ¿Cual de las siguientes afirmaciones es cierta?
-3
+4
 - El conocimiento semántico se adquiere mediante memorización
 - El conocimiento sintáctico se adquiere mediante experiencia y aprendizaje activo
 - Ninguna de las anteriores

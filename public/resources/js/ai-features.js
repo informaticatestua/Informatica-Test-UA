@@ -125,7 +125,9 @@
     // 4. DRAWER DE EXPLICACIÓN
     // ─────────────────────────────────────────────────────────────────────
 
-    let abortCtrl = null;
+    let abortCtrl     = null;
+    let chatAbortCtrl = null;
+    let chatHistory   = [];
 
     function openDrawer() {
         const drawer = $("ai-drawer");
@@ -136,7 +138,8 @@
     }
 
     function closeDrawer() {
-        if (abortCtrl) { abortCtrl.abort(); abortCtrl = null; }
+        if (abortCtrl)     { abortCtrl.abort();     abortCtrl     = null; }
+        if (chatAbortCtrl) { chatAbortCtrl.abort();  chatAbortCtrl = null; }
         const drawer = $("ai-drawer");
         if (!drawer) return;
         drawer.classList.remove("ai-drawer--open");
@@ -203,6 +206,18 @@
             if (e.key === "Escape" && $("ai-drawer")?.classList.contains("ai-drawer--open")) {
                 closeDrawer();
             }
+        });
+
+        $("ai-chat-send")?.addEventListener("click", sendFollowUp);
+        $("ai-chat-input")?.addEventListener("keydown", (e) => {
+            if (e.key === "Enter" && !e.shiftKey) {
+                e.preventDefault();
+                sendFollowUp();
+            }
+        });
+        $("ai-chat-input")?.addEventListener("input", function () {
+            this.style.height = "auto";
+            this.style.height = Math.min(this.scrollHeight, 120) + "px";
         });
 
         initDragToClose();
@@ -298,6 +313,8 @@ OPCIONES:\n`;
         const textEl    = $("ai-text");
         const retryBtn  = $("ai-retry-btn");
 
+        resetChat();
+
         // Reiniciar estado visual
         loadingEl?.classList.remove("hidden");
         errorEl?.classList.add("hidden");
@@ -326,6 +343,7 @@ OPCIONES:\n`;
         }
 
         loadingEl?.classList.add("hidden");
+        showChatSection();
     }
 
     // Añade texto al output de forma segura (XSS-safe + markdown mínimo)
@@ -516,7 +534,207 @@ OPCIONES:\n`;
     }
 
     // ─────────────────────────────────────────────────────────────────────
-    // 7. PUNTO DE ENTRADA PÚBLICO
+    // 7. CHAT DE SEGUIMIENTO
+    // ─────────────────────────────────────────────────────────────────────
+
+    function resetChat() {
+        chatHistory = [];
+        const historyEl = $("ai-chat-history");
+        if (historyEl) historyEl.innerHTML = "";
+        $("ai-chat-section")?.classList.add("hidden");
+        const input = $("ai-chat-input");
+        if (input) { input.value = ""; input.style.height = ""; }
+    }
+
+    function showChatSection() {
+        $("ai-chat-section")?.classList.remove("hidden");
+    }
+
+    function appendChatBubble(role, isLoading) {
+        const historyEl = $("ai-chat-history");
+        if (!historyEl) return null;
+
+        const wrap  = document.createElement("div");
+        wrap.className = role === "user" ? "flex justify-end" : "flex justify-start";
+
+        const inner = document.createElement("div");
+        inner.className = role === "user" ? "ai-chat-bubble-user" : "ai-chat-bubble-ai";
+        inner.setAttribute("data-raw", "");
+
+        if (isLoading) {
+            inner.innerHTML = '<div class="ai-spinner" style="width:14px;height:14px;border-width:2px;margin:2px 0;"></div>';
+        }
+
+        wrap.appendChild(inner);
+        historyEl.appendChild(wrap);
+        wrap.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        return inner;
+    }
+
+    function buildChatMessages(userMessage, questionData, provider) {
+        const letras  = ["A", "B", "C", "D", "E", "F"];
+        const ctxOpts = questionData.opciones.map((o, i) => {
+            const marca = o.isCorrect ? "✓ CORRECTA" : "✗ INCORRECTA";
+            return `${letras[i] ?? i + 1}. [${marca}] ${o.text}`;
+        }).join("\n");
+
+        const systemContent =
+            `Eres un tutor de informática universitaria. El estudiante ha respondido una pregunta y recibido una explicación. Continúa ayudándole con sus dudas. Responde en español, de forma concisa (máximo 200 palabras).\n\n` +
+            `PREGUNTA: ${questionData.pregunta}\nOPCIONES:\n${ctxOpts}\n\n` +
+            `EXPLICACIÓN INICIAL:\n${$("ai-text")?.getAttribute("data-raw") ?? ""}`;
+
+        if (provider === "gemini") {
+            return [
+                { role: "user",  content: systemContent },
+                { role: "model", content: "Entendido, estoy listo para resolver tus dudas sobre esta pregunta." },
+                ...chatHistory.map((m) => ({ role: m.role === "assistant" ? "model" : "user", content: m.content })),
+                { role: "user",  content: userMessage },
+            ];
+        }
+
+        return [
+            { role: "system",    content: systemContent },
+            ...chatHistory,
+            { role: "user",      content: userMessage },
+        ];
+    }
+
+    async function sendFollowUp() {
+        const input   = $("ai-chat-input");
+        const sendBtn = $("ai-chat-send");
+        const userMsg = input?.value.trim();
+        if (!userMsg) return;
+
+        appendChatBubble("user", false).innerHTML = esc(userMsg);
+        input.value = "";
+        input.style.height = "";
+        sendBtn.disabled = true;
+
+        const aiBubble = appendChatBubble("assistant", true);
+
+        const provider = $("ai-drawer-provider")?.value ?? get(LS.PROVIDER, "gemini");
+        const model    = $("ai-drawer-model")?.value ?? "";
+        const qData    = getQuestionData();
+        const messages = buildChatMessages(userMsg, qData, provider);
+
+        if (chatAbortCtrl) chatAbortCtrl.abort();
+        chatAbortCtrl = new AbortController();
+
+        let fullText  = "";
+        let firstChunk = true;
+
+        const onChunk = (chunk) => {
+            if (firstChunk) { aiBubble.innerHTML = ""; firstChunk = false; }
+            fullText += chunk;
+            aiBubble.setAttribute("data-raw", fullText);
+            aiBubble.innerHTML = miniMarkdown(fullText);
+            aiBubble.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        };
+
+        try {
+            if (provider === "gemini")        await callGeminiChat(messages, model, onChunk);
+            else if (provider === "groq")     await callGroqChat(messages, model, onChunk);
+            else                              await callDeepSeekChat(messages, model, onChunk);
+
+            chatHistory.push({ role: "user",      content: userMsg  });
+            chatHistory.push({ role: "assistant",  content: fullText });
+        } catch (err) {
+            if (err.name === "AbortError") return;
+            if (aiBubble) aiBubble.innerHTML = `<span style="color:#f87171;">Error: ${esc(err.message ?? "Error desconocido.")}</span>`;
+        } finally {
+            sendBtn.disabled = false;
+            input.focus();
+        }
+    }
+
+    async function consumeSSEChat(res, extractor, onChunk) {
+        const reader  = res.body.getReader();
+        const decoder = new TextDecoder();
+        let buffer    = "";
+
+        while (true) {
+            const { done, value } = await reader.read();
+            if (done) break;
+            buffer += decoder.decode(value, { stream: true });
+            const lines = buffer.split("\n");
+            buffer = lines.pop() ?? "";
+
+            for (const line of lines) {
+                if (!line.startsWith("data: ")) continue;
+                const data = line.slice(6).trim();
+                if (data === "[DONE]") continue;
+                try {
+                    const json = JSON.parse(data);
+                    const text = extractor(json);
+                    if (text) onChunk(text);
+                } catch { /* ignorar */ }
+            }
+        }
+    }
+
+    async function callGeminiChat(messages, modelOverride, onChunk) {
+        const apiKey = get(LS.GEMINI_KEY);
+        if (!apiKey) throw new Error("No has configurado tu API Key de Google Gemini.");
+        const model = modelOverride || get(LS.GEMINI_MODEL, "gemini-2.0-flash");
+        const url   = `https://generativelanguage.googleapis.com/v1beta/models/${model}:streamGenerateContent?key=${apiKey}&alt=sse`;
+
+        const res = await fetch(url, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ contents: messages }),
+            signal: chatAbortCtrl.signal,
+        });
+
+        if (!res.ok) {
+            const err = await res.json().catch(() => ({}));
+            throw new Error(err?.error?.message ?? `Gemini error ${res.status}`);
+        }
+
+        await consumeSSEChat(res, (json) => json?.candidates?.[0]?.content?.parts?.[0]?.text ?? "", onChunk);
+    }
+
+    async function callGroqChat(messages, modelOverride, onChunk) {
+        const apiKey = get(LS.GROQ_KEY);
+        if (!apiKey) throw new Error("No has configurado tu API Key de Groq.");
+        const model  = modelOverride || get(LS.GROQ_MODEL, "llama-3.3-70b-versatile");
+
+        const res = await fetch("https://api.groq.com/openai/v1/chat/completions", {
+            method: "POST",
+            headers: { "Authorization": `Bearer ${apiKey}`, "Content-Type": "application/json" },
+            body: JSON.stringify({ model, messages, stream: true, max_tokens: 600 }),
+            signal: chatAbortCtrl.signal,
+        });
+
+        if (!res.ok) {
+            const err = await res.json().catch(() => ({}));
+            throw new Error(err?.error?.message ?? `Groq error ${res.status}`);
+        }
+
+        await consumeSSEChat(res, (json) => json?.choices?.[0]?.delta?.content ?? "", onChunk);
+    }
+
+    async function callDeepSeekChat(messages, modelOverride, onChunk) {
+        const apiKey = get(LS.DEEPSEEK_KEY);
+        if (!apiKey) throw new Error("No has configurado tu API Key de DeepSeek.");
+        const model  = modelOverride || get(LS.DEEPSEEK_MODEL, "deepseek-chat");
+
+        const res = await fetch("https://api.deepseek.com/v1/chat/completions", {
+            method: "POST",
+            headers: { "Authorization": `Bearer ${apiKey}`, "Content-Type": "application/json" },
+            body: JSON.stringify({ model, messages, stream: true, max_tokens: 600 }),
+            signal: chatAbortCtrl.signal,
+        });
+
+        if (!res.ok) {
+            const err = await res.json().catch(() => ({}));
+            throw new Error(err?.error?.message ?? `DeepSeek error ${res.status}`);
+        }
+
+        await consumeSSEChat(res, (json) => json?.choices?.[0]?.delta?.content ?? "", onChunk);
+    }
+
+    // ─────────────────────────────────────────────────────────────────────
+    // 8. PUNTO DE ENTRADA PÚBLICO
     // ─────────────────────────────────────────────────────────────────────
 
     function showExplanation() {

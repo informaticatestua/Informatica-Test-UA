@@ -244,7 +244,7 @@ La introducción de una jerarquía de herencia disminuye el acoplamiento.
 Las instancias de clases hijas se pueden comportar como si se tratase de la clase padre.
 
 ¿Qué patrón de lógica de negocios permite implementar funcionalidades que involucran a varias entidades distintas (tablas en la base de datos) en los métodos de una misma clase?
-3
+2
 Table Module
 Transaction Script
 Domain model
@@ -1233,7 +1233,7 @@ Proxy de protección
 Proxy remoto
 
 ¿Con que patrón podemos mantener la consistencia cuando se modifican dos instancias de un mismo objeto desde distintas partes del sistema? 
-1
+2
 Unit of Work 
 Identity Map 
 Lazy Load
@@ -1464,7 +1464,7 @@ Sobre el patrón Creador, ¿cuál de las siguientes afirmaciones es CORRECTA? C3
 (c) Template Method
 
 Tenemos un software en el que es relativamente habitual realizar modificaciones funcionales, sin embargo cada vez que lo hacemos el número de clases a modificar es alto y desproporcionado con respecto a lo que se podría esperar inicialmente teniendo en cuenta la modificación funcional. Parece que estamos ante un síntoma de: C3-2024
-2
+3
 (a) Código con bajo acoplamiento y baja cohesión
 (b) Código con bajo acoplamiento y alta cohesión
 (c) Código con alto acoplamiento y baja cohesión
@@ -1476,7 +1476,7 @@ En una aplicación con una interfaz de usuario, queremos actualizar automáticam
 (c) Facade
 
 Te incorporas a un proyecto nuevo para modificar un software, ampliamente extendido y con un gran número de funcionalidades, para que se vaya generando un log de todas las operaciones que los usuarios van realizando al trabajar con él, con el id del usuario, id de la operación, fecha y hora. Se pretende evaluar el rendimiento de cada uno de los empleados con el análisis de los datos obtenidos. ¿Cómo propondrías abordarlo? C3-2024
-1
+2
 (a) Utilizando el patrón Proxy
 (b) Utilizando el patrón Command
 (c) Utilizando el patrón Adapter

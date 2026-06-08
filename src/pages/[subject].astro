@@ -261,9 +261,57 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 					Reintentar
 				</button>
 
+				<!-- ── Chat de seguimiento ──────────────────────────────────── -->
+				<div id="ai-chat-section" class="hidden mt-5">
+					<div class="flex items-center gap-3 mb-4">
+						<div class="flex-1 h-px bg-border-subtle"></div>
+						<span class="text-[0.7rem] text-text-muted font-semibold uppercase tracking-wider">Continuar conversación</span>
+						<div class="flex-1 h-px bg-border-subtle"></div>
+					</div>
+					<div id="ai-chat-history" class="flex flex-col gap-3 mb-3"></div>
+					<div class="flex gap-2 items-end">
+						<textarea
+							id="ai-chat-input"
+							rows="2"
+							placeholder="¿Tienes alguna duda sobre la explicación?"
+							class="flex-1 px-3 py-2 rounded-lg bg-background border border-border-subtle text-text-main text-sm focus:outline-none focus:border-blue-500 transition-colors resize-none"
+						></textarea>
+						<button
+							id="ai-chat-send"
+							class="flex-shrink-0 p-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors cursor-pointer border-none disabled:opacity-50 disabled:cursor-not-allowed"
+							aria-label="Enviar pregunta"
+						>
+							<span class="material-icons" style="font-size:1.1rem;">send</span>
+						</button>
+					</div>
+				</div>
+
 			</div>
 		</div>
 	</div>
+<style is:global>
+  .ai-chat-bubble-user {
+    max-width: 85%;
+    padding: 0.5rem 0.75rem;
+    border-radius: 1rem 1rem 0.25rem 1rem;
+    background: rgb(37 99 235);
+    color: white;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    word-break: break-word;
+  }
+  .ai-chat-bubble-ai {
+    max-width: 85%;
+    padding: 0.5rem 0.75rem;
+    border-radius: 1rem 1rem 1rem 0.25rem;
+    background: rgb(var(--bg-surface-hover));
+    border: 1px solid rgb(var(--border-subtle));
+    color: rgb(var(--text-main));
+    font-size: 0.875rem;
+    line-height: 1.5;
+    word-break: break-word;
+  }
+</style>
 </BaseLayout>
 
 <style>

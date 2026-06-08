@@ -244,7 +244,7 @@ Las dos con * son correctas
 Ninguna de las anteriores son correctas
 
 En la programación dirigida por eventos, la cola de eventos:
-2
+1
 Es necesaria.
 No es necesaria.
 Depende del lenguaje de programación usado.
@@ -1448,7 +1448,7 @@ todos los objetos llevarán un prefijo diferente (Sql,OleDb..)
 el objeto DataSet y el objeto DataReader no llevan prefijo
 
 EI control de validación RangeValidator de asp.net:
-2
+4
 Realiza la validación en el servidor
 Ninguna de las anteriores
 Compara el valor del control a validar con el de otro control
@@ -1546,7 +1546,7 @@ Aplicando una concurrencia positiva, de forma que se produce un error cuando se 
 Manteniendo el último cambio que se escribió.
 
 En el entorno desconectado,¿Cómo podemos saber si una modificacion ha sido correctamente aplicada?: REVISADA
-4
+3
 El código no ha lanzado ninguna excepción
 El método Update de DataAdapter devuelve true
 Ninguna es correcta
