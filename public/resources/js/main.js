@@ -119,6 +119,8 @@
         quizKey: "",
         /** Si el usuario está repasando únicamente preguntas falladas. */
         modoRepaso: false,
+        /** Si la pantalla de resultados de la sesión está visible. */
+        sessionFinished: false,
         /** Fallos detectados en esta sesión. */
         erroresSesion: new Set(),
         /** Fallos persistidos localmente desde sesiones anteriores. */
@@ -242,8 +244,116 @@
                 : "Repasar fallos";
     }
 
+    /** Número de preguntas verificadas en la sesión actual. */
+    function getVerifiedQuestionsCount() {
+        return state.preguntas.reduce((count, pregunta) => {
+            return state.estadosPreguntas[pregunta.id]?.isVerified ? count + 1 : count;
+        }, 0);
+    }
+
+    /** Oculta o muestra el bloque principal del quiz. */
+    function toggleQuizQuestionUI(visible) {
+        ["pregunta", "opciones", "resultado", "action-buttons-container"].forEach((id) => {
+            const el = $(id);
+            if (!el) return;
+            el.classList.toggle("hidden", !visible);
+        });
+    }
+
+    /** Controla la visibilidad de los botones superiores del quiz. */
+    function toggleQuizUtilityButtons(visible) {
+        const reportBtn = $("report-btn");
+        const copyBtn = $("copyButton");
+        if (reportBtn) reportBtn.classList.toggle("hidden", !visible);
+        if (copyBtn) copyBtn.classList.toggle("hidden", !visible);
+    }
+
+    /** Copy breve para la pantalla final según el rendimiento. */
+    function getResultsTone(accuracy) {
+        if (accuracy === 100) {
+            return {
+                title: "Módulo dominado",
+                subtitle: "Has cerrado la sesión con pleno. Muy buena señal de dominio.",
+            };
+        }
+        if (accuracy >= 75) {
+            return {
+                title: "Muy buen resultado",
+                subtitle: "La base está sólida. Un repaso corto de los fallos puede dejarla redonda.",
+            };
+        }
+        if (accuracy >= 50) {
+            return {
+                title: "Progreso claro",
+                subtitle: "Ya hay bastante asentado. Ahora compensa atacar justo lo que más ha costado.",
+            };
+        }
+        return {
+            title: "Sesión completada",
+            subtitle: "Has terminado el módulo. El siguiente mejor paso es repasar los fallos con calma.",
+        };
+    }
+
+    /** Muestra la pantalla de resultados al completar el módulo. */
+    function mostrarResultadosSesion() {
+        const resultsEl = $("session-results");
+        if (!resultsEl) return;
+
+        const total = state.preguntas.length;
+        const correct = state.preguntasCorrectas;
+        const incorrect = Math.max(total - correct, 0);
+        const accuracy = total > 0 ? Math.round((correct / total) * 100) : 0;
+        const tone = getResultsTone(accuracy);
+
+        state.sessionFinished = true;
+
+        const titleEl = $("results-title");
+        const subtitleEl = $("results-subtitle");
+        const correctEl = $("results-correct");
+        const incorrectEl = $("results-incorrect");
+        const accuracyEl = $("results-accuracy");
+        const summaryEl = $("results-summary");
+        const reviewBtn = $("results-review-btn");
+
+        if (titleEl) titleEl.innerText = tone.title;
+        if (subtitleEl) subtitleEl.innerText = tone.subtitle;
+        if (correctEl) correctEl.innerText = String(correct);
+        if (incorrectEl) incorrectEl.innerText = String(incorrect);
+        if (accuracyEl) accuracyEl.innerText = `${accuracy}%`;
+        if (summaryEl) {
+            summaryEl.innerHTML =
+                `<strong>Has completado ${total} preguntas.</strong> ` +
+                `Terminas con ${correct} aciertos y ${incorrect} fallos.` +
+                (incorrect > 0
+                    ? " Puedes repetir el módulo o entrar directamente en repaso de fallos."
+                    : " Si quieres reforzarlo aún más, puedes repetir el módulo desde cero.");
+        }
+        if (reviewBtn) {
+            reviewBtn.disabled = incorrect === 0;
+            reviewBtn.classList.toggle("hidden", incorrect === 0);
+        }
+
+        toggleQuizQuestionUI(false);
+        toggleQuizUtilityButtons(false);
+        $("button-container")?.classList.add("hidden");
+        resultsEl.classList.remove("hidden");
+        hideElement("contador");
+        hideElement("total-preguntas");
+    }
+
+    /** Cierra la pantalla final y devuelve la UI habitual del quiz. */
+    function ocultarResultadosSesion() {
+        const resultsEl = $("session-results");
+        if (resultsEl) resultsEl.classList.add("hidden");
+        state.sessionFinished = false;
+        toggleQuizQuestionUI(true);
+        toggleQuizUtilityButtons(true);
+        $("button-container")?.classList.remove("hidden");
+    }
+
     /** Resetea progreso y UI para arrancar un modo de quiz desde cero. */
     function resetQuizProgress() {
+        ocultarResultadosSesion();
         state.preguntaActual = 0;
         state.totalPreguntas = 0;
         state.preguntasCorrectas = 0;
@@ -463,6 +573,7 @@
         hideElement("volver-pregunta");
         showElement("asignaturas-container");
         showElement("app-title");
+        ocultarResultadosSesion();
 
         const pregunta = $("pregunta");
         const opciones = $("opciones");
@@ -477,6 +588,7 @@
         state.totalPreguntas = 0;
         state.preguntasCorrectas = 0;
         state.modoRepaso = false;
+        state.sessionFinished = false;
         state.erroresSesion = new Set();
         state.erroresHistoricos = new Set();
         setVerificarMode("verificar");
@@ -576,6 +688,8 @@
      * todos los controles dependientes.
      */
     function mostrarPregunta() {
+        if (state.sessionFinished) return;
+
         const verificarBtn = $("verificar");
         if (verificarBtn) verificarBtn.disabled = true;
 
@@ -771,6 +885,12 @@
         }
 
         const nextIndex = (state.preguntaActual + 1) % state.preguntas.length;
+        const sessionComplete = getVerifiedQuestionsCount() >= state.preguntas.length;
+
+        if (nextIndex === 0 && sessionComplete) {
+            mostrarResultadosSesion();
+            return;
+        }
 
         // Al completar el ciclo, limpia el historial para evitar que aparezcan respuestas previas destacadas.
         if (nextIndex === 0) {
@@ -1029,6 +1149,43 @@
         });
     }
 
+    /** Acciones disponibles desde la pantalla final de sesión. */
+    function bindSessionResultsButtons() {
+        const restartBtn = $("results-restart-btn");
+        const reviewBtn = $("results-review-btn");
+        const resumenBtn = $("results-resumen-btn");
+
+        if (restartBtn) {
+            restartBtn.addEventListener("click", () => {
+                state.modoRepaso = false;
+                state.sessionFinished = false;
+                state.erroresSesion = new Set();
+                state.preguntas = [...state.todasLasPreguntas];
+                shuffle(state.preguntas);
+                state.todasLasPreguntas = [...state.preguntas];
+                resetQuizProgress();
+                actualizarTotalPreguntasLabel();
+                actualizarBotonRepaso();
+                mostrarUIQuiz();
+                mostrarPregunta();
+            });
+        }
+
+        if (reviewBtn) {
+            reviewBtn.addEventListener("click", () => {
+                ocultarResultadosSesion();
+                iniciarModoRepaso();
+                mostrarUIQuiz();
+            });
+        }
+
+        if (resumenBtn) {
+            resumenBtn.addEventListener("click", () => {
+                $("resumenBtn")?.click();
+            });
+        }
+    }
+
     /**
      * Conecta los listeners persistentes (no dependen de la pregunta
      * visible). Los listeners por pregunta se configuran en mostrarPregunta().
@@ -1043,6 +1200,7 @@
         bindResumenBtn();
         bindCopyButton();
         bindReviewButton();
+        bindSessionResultsButtons();
         bindKeyboardShortcuts();
     }
 

@@ -25,6 +25,40 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 			<form id="opciones" class="text-left flex flex-col mt-[1em] w-full gap-[10px] sm:gap-[12px] min-w-[300px]"></form>
 			
 			<div id="resultado" class="mt-[15px] font-semibold text-center min-h-[24px]"></div>
+
+			<section id="session-results" class="hidden text-left">
+				<div class="results-hero">
+					<div class="results-badge">
+						<span class="material-icons">emoji_events</span>
+						<span>Sesión completada</span>
+					</div>
+					<h3 id="results-title" class="results-title">Buen trabajo</h3>
+					<p id="results-subtitle" class="results-subtitle">Has terminado este módulo.</p>
+				</div>
+
+				<div class="results-grid">
+					<article class="results-stat-card">
+						<span class="results-stat-label">Aciertos</span>
+						<strong id="results-correct" class="results-stat-value">0</strong>
+					</article>
+					<article class="results-stat-card">
+						<span class="results-stat-label">Fallos</span>
+						<strong id="results-incorrect" class="results-stat-value">0</strong>
+					</article>
+					<article class="results-stat-card">
+						<span class="results-stat-label">Precisión</span>
+						<strong id="results-accuracy" class="results-stat-value">0%</strong>
+					</article>
+				</div>
+
+				<div id="results-summary" class="results-summary"></div>
+
+				<div class="results-actions">
+					<button id="results-restart-btn" class="btn-primary mt-0! w-full sm:w-auto">Repetir módulo</button>
+					<button id="results-review-btn" class="btn-secondary mt-0! w-full sm:w-auto">Repasar fallos</button>
+					<button id="results-resumen-btn" class="btn mt-0! w-full sm:w-auto">Ver resumen</button>
+				</div>
+			</section>
 			
 			<div id="action-buttons-container" class="flex flex-col sm:flex-row justify-center sm:justify-between items-center gap-[12px] mt-[24px] w-full pt-[15px] sm:pt-[20px] border-t border-border-subtle">
 				<!-- Fila secundaria móvil / Izquierda desktop -->
@@ -343,6 +377,37 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 	}
 	.btn-explicar-ia:disabled {
 		@apply opacity-40 cursor-not-allowed pointer-events-none hover:bg-transparent hover:border-blue-400/60 hover:shadow-none hover:translate-y-0;
+	}
+
+	.results-hero {
+		@apply flex flex-col gap-3 rounded-2xl border border-border-subtle bg-surface-hover/80 p-5 sm:p-6 mb-5;
+	}
+	.results-badge {
+		@apply inline-flex items-center gap-2 self-start rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1 text-[0.78rem] font-semibold text-emerald-700 dark:text-emerald-300;
+	}
+	.results-title {
+		@apply m-0 font-heading text-2xl sm:text-3xl font-bold tracking-tight text-text-main;
+	}
+	.results-subtitle {
+		@apply m-0 text-sm sm:text-base text-text-muted leading-relaxed;
+	}
+	.results-grid {
+		@apply grid grid-cols-1 sm:grid-cols-3 gap-3 mb-5;
+	}
+	.results-stat-card {
+		@apply rounded-xl border border-border-subtle bg-surface p-4 shadow-subtle;
+	}
+	.results-stat-label {
+		@apply block text-[0.78rem] font-semibold uppercase tracking-wide text-text-muted mb-2;
+	}
+	.results-stat-value {
+		@apply block font-heading text-3xl font-bold text-text-main;
+	}
+	.results-summary {
+		@apply rounded-xl border border-border-subtle bg-surface p-4 sm:p-5 text-sm leading-relaxed text-text-main mb-5;
+	}
+	.results-actions {
+		@apply flex flex-col sm:flex-row gap-3 justify-center sm:justify-start;
 	}
 
 	@media (max-width: 767px) {
