@@ -1,6 +1,5 @@
 ---
 import '../styles/global.css';
-import ReportModal from '../components/ReportModal.astro';
 import Analytics from '@vercel/analytics/astro';
 
 interface Props {
@@ -212,8 +211,6 @@ const { title = "Ing. Informática Tests UA" } = Astro.props;
 				<div id="changelog-list" class="overflow-y-auto flex-1 px-5 py-4 space-y-3"></div>
 			</div>
 		</div>
-
-		<ReportModal />
 
 		<!-- ─── AI Onboarding overlay ──────────────────────────────────────── -->
 		<div id="ai-onboarding-overlay" class="hidden fixed inset-0 z-[400] bg-black/70 backdrop-blur-sm"></div>

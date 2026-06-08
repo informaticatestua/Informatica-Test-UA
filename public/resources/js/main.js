@@ -11,9 +11,7 @@
  *   5. Renderizado y controladores de UI (mostrar pregunta, verificar...).
  *   6. Inicialización (lectura de la URL y arranque del quiz).
  *
- * El motor se ejecuta dentro de una IIFE para evitar contaminar `window`,
- * exceptuando los hooks que ya consumían otros componentes
- * (`window.openReportModal` se sigue invocando desde fuera).
+ * El motor se ejecuta dentro de una IIFE para evitar contaminar `window`.
  */
 (function () {
     "use strict";
@@ -264,9 +262,7 @@
 
     /** Controla la visibilidad de los botones superiores del quiz. */
     function toggleQuizUtilityButtons(visible) {
-        const reportBtn = $("report-btn");
         const copyBtn = $("copyButton");
-        if (reportBtn) reportBtn.classList.toggle("hidden", !visible);
         if (copyBtn) copyBtn.classList.toggle("hidden", !visible);
     }
 
@@ -599,30 +595,6 @@
     }
 
     /**
-     * Configura el botón "Reportar" para abrir el modal global con el
-     * enunciado y las opciones de la pregunta visible. Se reasigna en
-     * cada render porque depende del DOM actualmente pintado.
-     */
-    function bindReportButton() {
-        const btn = $("report-btn");
-        if (!btn) return;
-
-        btn.onclick = () => {
-            const preguntaTexto = $("pregunta")?.innerText || "";
-            const opcionLabels = document.querySelectorAll("form#opciones label .opcion-label");
-            const letras = ["A", "B", "C", "D", "E", "F"];
-            const opcionesTexto = Array.from(opcionLabels)
-                .map((el, i) => `  ${letras[i] || i + 1}. ${el.innerText.trim()}`)
-                .join("\n");
-
-            const textoCompleto = `PREGUNTA:\n${preguntaTexto}\n\nOPCIONES:\n${opcionesTexto}`;
-            if (typeof window.openReportModal === "function") {
-                window.openReportModal(textoCompleto);
-            }
-        };
-    }
-
-    /**
      * Pinta los `<label>` con sus inputs (radio o checkbox) según si la
      * pregunta admite múltiples respuestas. Se omiten las opciones marcadas
      * como "NO MARCAR" en los datasets oficiales.
@@ -745,7 +717,6 @@
         contenedorPregunta.innerHTML = formatTextWithCode(pregunta.pregunta);
         highlightCode();
 
-        bindReportButton();
         renderOpciones(pregunta, contenedorOpciones);
         bindOpcionesChangeHandler(contenedorOpciones);
 
