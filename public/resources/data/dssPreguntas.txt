@@ -1212,7 +1212,7 @@ Al mapear la herencia utilizando el patrón Single table inheritance, ¿cuántas
 - Una tabla para cada clase en la jerarquía
 
 En el patrón MVC, cuando usamos un Front controller:
-1
+2
 - Hay un controlador diferente para cada vista del sitio web
 - Hay un controlador que centraliza la gestión de todas las peticiones del sitio web
 - Cuando se utiliza el patrón MVC es más recomendable utilizar el patrón Page controller
