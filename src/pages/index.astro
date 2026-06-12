@@ -5,237 +5,290 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 <BaseLayout>
 
 <div id="main-container" class="flex flex-col items-center justify-center m-auto w-full">
-		<div id="app" class="relative w-max max-w-[95vw] text-center bg-surface shadow-md shadow-black/5 rounded-[5px] px-[40px] py-[30px] mx-auto my-[20px] box-border border border-border-subtle">
+	<div id="app" class="relative w-max max-w-[95vw] text-center bg-surface shadow-md shadow-black/5 rounded-[5px] px-[40px] py-[30px] mx-auto my-[20px] box-border border border-border-subtle">
 
-			<a
-				href="mailto:informaticatestua@gmail.com?subject=Preguntas%20para%20a%C3%B1adir%20a%20Inform%C3%A1tica%20Test%20UA"
-				id="contribute-banner"
-				class="group relative hidden lg:block overflow-hidden rounded-[10px] mb-6 px-5 py-4 text-left border border-blue-400/40 dark:border-blue-400/30 bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all"
-			>
-				<span class="pointer-events-none absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_top_right,white,transparent_60%)]"></span>
-				<div class="relative flex items-center gap-3 flex-wrap">
-					<span class="material-icons text-white text-[1.8em] drop-shadow">mark_email_unread</span>
-					<div class="flex-1 min-w-[200px]">
-						<p class="m-0 text-white font-heading font-bold text-[1.05em] leading-tight">
-							¿Tienes preguntas de otras asignaturas?
-						</p>
-						<p class="m-0 mt-1 text-white/90 text-[0.92em] leading-snug">
-							Envíamelas a
-							<span class="font-semibold underline decoration-white/60 underline-offset-2">informaticatestua@gmail.com</span>
-							y las añado a la web.
-						</p>
-					</div>
-					<span class="material-icons text-white/90 group-hover:translate-x-1 transition-transform" aria-hidden="true">arrow_forward</span>
-				</div>
-			</a>
-
-			<div id="asignaturas-container">
-				
-				<!-- Rama Software -->
-				<h3 class="text-[1.2em] font-heading font-semibold mt-6 mb-2">Rama Software</h3>
-				<div class="asignaturas grid grid-cols-[1fr_2px_1fr] gap-[20px] w-full mb-[20px] items-center">
-					<div class="group-left flex justify-end gap-[10px] flex-wrap">
-						<button id="dca" class="btn">DCA</button>
-						<button id="mads" class="btn">MADS NO OFICIAL</button>
-					</div>
-					<div class="separator w-[2px] h-[35px] bg-border-subtle mx-auto"></div>
-					<div class="group-right flex justify-start gap-[10px] flex-wrap">
-						<button id="gcs" class="btn">GCS</button>
-						<button id="sds" class="btn">SDS NO OFICIAL</button>
-					</div>
-				</div>
-
-				<div id="mads-sublist" class="hidden bg-surface-hover p-[20px] rounded-[8px] border border-border-subtle shadow-sm flex flex-col items-center mb-[20px] transition-all">
-					<h4 class="mt-0 mb-[15px] font-semibold text-text-muted">Exámenes MADS</h4>
-					<div class="asignaturas listaoculta flex justify-center items-center flex-wrap gap-[15px] w-full">
-						<button id="MADS-NO-OFICIAL-P1" class="btn-primary">MADS NO OFICIAL P1</button>
-						<button id="MADS-NO-OFICIAL-P2" class="btn-primary">MADS NO OFICIAL P2</button>
-					</div>
-				</div>
-
-				<div id="dca-sublist" class="hidden bg-surface-hover p-[20px] rounded-[8px] border border-border-subtle shadow-sm flex flex-col items-center mb-[20px] transition-all">
-					<h4 class="mt-0 mb-[15px] font-semibold text-text-muted">Exámenes DCA</h4>
-					<div class="asignaturas listaoculta flex justify-center items-center flex-wrap gap-[15px] w-full">
-						<button id="dca-oficial" class="btn-primary">DCA OFICIAL</button>
-						<button id="dca-NO-OFICIAL" class="btn-primary">DCA NO OFICIAL</button>
-					</div>
-				</div>
-
-				<div id="gcs-sublist" class="hidden bg-surface-hover p-[20px] rounded-[8px] border border-border-subtle shadow-sm flex flex-col items-center mb-[20px] transition-all">
-					<h4 class="mt-0 mb-[15px] font-semibold text-text-muted">Exámenes GCS</h4>
-					<div class="asignaturas listaoculta flex justify-center items-center flex-wrap gap-[15px] w-full">
-						<button id="gcsp1nooficial" class="btn-primary">GCS P1 NO OFICIAL 2025</button>
-						<button id="gcsp1old" class="btn-primary">GCS P1 old 2024</button>
-						<button id="gcsp2old" class="btn-primary">GCS P2 old 2024</button>
-					</div>
-				</div>
-
-				<div id="sds-sublist" class="hidden bg-surface-hover p-[20px] rounded-[8px] border border-border-subtle shadow-sm flex flex-col items-center mb-[20px] transition-all">
-					<h4 class="mt-0 mb-[15px] font-semibold text-text-muted">Exámenes SDS</h4>
-					<div class="asignaturas listaoculta flex justify-center items-center flex-wrap gap-[15px] w-full max-w-[800px]">
-						<button id="sdsfull" class="btn-primary">SDS FULL</button>
-						<button id="sds01-presentacion" class="btn-primary">sds01 presentacion</button>
-						<button id="sds02-introgo" class="btn-primary">sds02 introgo</button>
-						<button id="sds03-introcripto" class="btn-primary">sds03 introcripto</button>
-						<button id="sds04-aleatorios" class="btn-primary">sds04 aleatorios</button>
-						<button id="sds05-flujo" class="btn-primary">sds05 flujo</button>
-						<button id="sds06-bloque" class="btn-primary">sds06 bloque</button>
-						<button id="sds07-hash" class="btn-primary">sds07 hash</button>
-						<button id="sds08-publica" class="btn-primary">sds08 publica</button>
-						<button id="sds09-transporte" class="btn-primary">sds09 transporte</button>
-						<button id="sds10-ejercicios" class="btn-primary">sds10 ejercicios</button>
-						<button id="sds11-malware" class="btn-primary">sds11 malware</button>
-						<button id="sds12-ataques" class="btn-primary">sds12 ataques</button>
-						<button id="sds13-wireless" class="btn-primary">sds13 wireless</button>
-						<button id="sds14-recomendaciones" class="btn-primary">sds14 recomendaciones</button>
-					</div>
-				</div>
-
-				<!-- Tercer Curso -->
-				<h3 class="text-[1.2em] font-heading font-semibold mt-6 mb-2">Tercer Curso</h3>
-				<div class="asignaturas grid grid-cols-[1fr_2px_1fr] gap-[20px] w-full mb-[20px] items-center">
-					<div class="group-left flex justify-end gap-[10px] flex-wrap">
-						<button id="dss" class="btn">DSS</button>
-						<button id="gpi" class="btn">GPI</button>
-						<button id="ic-p1" class="btn">IC P1</button>
-					</div>
-					<div class="separator w-[2px] h-[35px] bg-border-subtle mx-auto"></div>
-					<div class="group-right flex justify-start gap-[10px] flex-wrap">
-						<button id="taes-definitivo" class="btn">TAES DEFINITIVO OLD</button>
-						<button id="ppss" class="btn">PPSS</button>
-					</div>
-				</div>
-
-				<div id="ppss-sublist" class="hidden bg-surface-hover p-[20px] rounded-[8px] border border-border-subtle shadow-sm flex flex-col items-center mb-[20px] transition-all">
-					<h4 class="mt-0 mb-[15px] font-semibold text-text-muted">Exámenes PPSS</h4>
-					<div class="asignaturas listaoculta flex justify-center items-center flex-wrap gap-[15px] w-full">
-						<button id="ppss-p1" class="btn-primary">PPSS P1</button>
-						<button id="ppss-p2" class="btn-primary">PPSS P2</button>
-						<button id="ppss-C4-2025" class="btn-primary">ppss C4 2025</button>
-					</div>
-				</div>
-
-				<!-- Segundo Curso -->
-				<h3 class="text-[1.2em] font-heading font-semibold mt-6 mb-2">Segundo Curso</h3>
-				<div class="asignaturas grid grid-cols-[1fr_2px_1fr] gap-[20px] w-full mb-[20px] items-center">
-					<div class="group-left flex justify-end gap-[10px] flex-wrap">
-						<button id="redes" class="btn">REDES</button>
-					</div>
-					<div class="separator w-[2px] h-[35px] bg-border-subtle mx-auto"></div>
-					<div class="group-right flex justify-start gap-[10px] flex-wrap">
-						<button id="ada" class="btn">ADA</button>
-						<button id="ped" class="btn">PED</button>
-						<button id="ac" class="btn">AC</button>
-						<button id="hada" class="btn">HADA</button>
-					</div>
-				</div>
-
-				<div id="ada-sublist" class="hidden bg-surface-hover p-[20px] rounded-[8px] border border-border-subtle shadow-sm flex flex-col items-center mb-[20px] transition-all">
-					<h4 class="mt-0 mb-[15px] font-semibold text-text-muted">Exámenes ADA</h4>
-					<div class="asignaturas listaoculta flex justify-center items-center flex-wrap gap-[15px] w-full">
-						<button id="ada-p1" class="btn-primary">ada p1</button>
-						<button id="ada-p2" class="btn-primary">ada p2</button>
-						<button id="ada-full" class="btn-primary">ada full</button>
-					</div>
-				</div>
-
-				<div id="ac-sublist" class="hidden bg-surface-hover p-[20px] rounded-[8px] border border-border-subtle shadow-sm flex flex-col items-center mb-[20px] transition-all">
-					<h4 class="mt-0 mb-[15px] font-semibold text-text-muted">Exámenes AC</h4>
-					<div class="asignaturas listaoculta flex justify-center items-center flex-wrap gap-[15px] w-full">
-						<button id="ac_CP-F2" class="btn-primary">ac CP F2</button>
-						<button id="ac_CP-F3" class="btn-primary">ac CP F3</button>
-						<button id="ac_CT1-2" class="btn-primary">ac CT1 2</button>
-						<button id="ac_CT3-4" class="btn-primary">ac CT3 4</button>
-					</div>
-				</div>
-
-				<div id="redes-sublist" class="hidden bg-surface-hover p-[20px] rounded-[8px] border border-border-subtle shadow-sm flex flex-col items-center mb-[20px] transition-all">
-					<h4 class="mt-0 mb-[15px] font-semibold text-text-muted">Exámenes REDES</h4>
-					<div class="asignaturas listaoculta flex justify-center items-center flex-wrap gap-[15px] w-full">
-						<button id="redes_full" class="btn-primary">redes full</button>
-						<button id="redesEnero2526" class="btn-primary">redes Enero 25 26</button>
-					</div>
-				</div>
-
-				<!-- Primer Curso -->
-				<h3 class="text-[1.2em] font-heading font-semibold mt-6 mb-2">Primer Curso</h3>
-				<div id="asignatura-centrada" class="flex justify-center w-full mb-[20px]">
-					<button id="sti" class="btn">STI</button>
-				</div>
-
-				<div id="sti-sublist" class="hidden bg-surface-hover p-[20px] rounded-[8px] border border-border-subtle shadow-sm flex flex-col items-center mb-[20px] transition-all">
-					<h4 class="mt-0 mb-[15px] font-semibold text-text-muted">Exámenes STI</h4>
-					<div class="asignaturas listaoculta flex justify-center items-center flex-wrap gap-[15px] w-full">
-						<button id="sti-full" class="btn-primary">STI FULL</button>
-						<button id="sti-oficial" class="btn-primary">STI OFICIAL</button>
-						<button id="stiEnero26" class="btn-primary">STI Enero 25 26</button>
-					</div>
-				</div>
-				
-			</div>
+		<!-- Estado de carga -->
+		<div id="subjects-loading" class="flex flex-col items-center gap-3 py-10 text-text-muted">
+			<div class="index-spinner"></div>
+			<span class="text-sm">Cargando asignaturas…</span>
 		</div>
+
+		<!-- Contenedor dinámico (relleno por JS) -->
+		<div id="asignaturas-container" class="hidden"></div>
+
 	</div>
+</div>
 
-	<script>
-		document.getElementById("asignaturas-container")?.addEventListener("click", function (e) {
-			const target = e.target as HTMLElement;
-			if (target.tagName === "BUTTON") {
-				const idBoton = target.id;
-				if (!idBoton) return;
-				
-				const sublist = document.getElementById(idBoton + "-sublist");
+<script is:inline>
+(function () {
+	"use strict";
 
-				if (sublist) {
-					const sublistas = document.querySelectorAll('[id$="-sublist"]');
-					sublistas.forEach((sub) => {
-						if (sub.id !== idBoton + "-sublist") sub.classList.add("hidden");
-					});
-					sublist.classList.toggle("hidden");
+	// ─── Configuración ───────────────────────────────────────────────────────
+
+	const CATEGORY_LABELS = {
+		software:    "Rama Software",
+		third_year:  "Tercer Curso",
+		second_year: "Segundo Curso",
+		first_year:  "Primer Curso",
+		other:       "Otros",
+	};
+
+	const CATEGORY_ORDER = ["software", "third_year", "second_year", "first_year", "other"];
+
+	/**
+	 * Botón sintético "FULL" que agrupa todos los hijos de un padre.
+	 * Se inserta como primer hijo en la sublista de su parent_id.
+	 */
+	const SYNTHETIC_FULL = {
+		sds:          { id: "sdsfull",    display_name: "SDS FULL" },
+		redes_parent: { id: "redes_full", display_name: "REDES FULL" },
+	};
+
+	// ─── Renderizado ─────────────────────────────────────────────────────────
+
+	function buildSublist(subject, children) {
+		const div = document.createElement("div");
+		div.id = `${subject.id}-sublist`;
+		div.className = "hidden bg-surface-hover p-[20px] rounded-[8px] border border-border-subtle shadow-sm flex flex-col items-center mb-[20px] transition-all";
+
+		const h4 = document.createElement("h4");
+		h4.className = "mt-0 mb-[15px] font-semibold text-text-muted";
+		h4.textContent = `Exámenes ${subject.display_name}`;
+		div.appendChild(h4);
+
+		const row = document.createElement("div");
+		row.className = "asignaturas listaoculta flex justify-center items-center flex-wrap gap-[15px] w-full max-w-[800px]";
+
+		// Botón FULL sintético (primero)
+		const synth = SYNTHETIC_FULL[subject.id];
+		if (synth) {
+			const btn = document.createElement("button");
+			btn.id = synth.id;
+			btn.className = "btn-primary";
+			btn.textContent = synth.display_name;
+			btn.addEventListener("click", () => { window.location.href = `/${synth.id}`; });
+			row.appendChild(btn);
+		}
+
+		for (const child of children) {
+			const btn = document.createElement("button");
+			btn.id = child.id;
+			btn.className = "btn-primary";
+			btn.textContent = child.display_name;
+			btn.addEventListener("click", () => { window.location.href = `/${child.id}`; });
+			row.appendChild(btn);
+		}
+
+		div.appendChild(row);
+		return div;
+	}
+
+	function renderSubjects(subjects) {
+		const container = document.getElementById("asignaturas-container");
+		if (!container) return;
+		container.innerHTML = "";
+
+		// Separar top-level y children
+		const topLevel = {};   // category → [subject]
+		const children = {};   // parent_id → [subject]
+
+		for (const s of subjects) {
+			if (s.parent_id === null) {
+				if (!topLevel[s.category]) topLevel[s.category] = [];
+				topLevel[s.category].push(s);
+			} else {
+				if (!children[s.parent_id]) children[s.parent_id] = [];
+				children[s.parent_id].push(s);
+			}
+		}
+
+		const categoriesToShow = CATEGORY_ORDER.filter(
+			(cat) => topLevel[cat] && topLevel[cat].length > 0,
+		);
+
+		for (const cat of categoriesToShow) {
+			const tops = topLevel[cat];
+
+			// ── Título de sección ──────────────────────────────────────────
+			const h3 = document.createElement("h3");
+			h3.className = "text-[1.2em] font-heading font-semibold mt-6 mb-2";
+			h3.textContent = CATEGORY_LABELS[cat] || cat;
+			container.appendChild(h3);
+
+			// ── Fila principal con grid [1fr_2px_1fr] o centrado ──────────
+			const hasManyButtons = tops.length > 1;
+
+			if (!hasManyButtons) {
+				// Un solo botón → centrado (como STI en el original)
+				const centered = document.createElement("div");
+				centered.className = "flex justify-center w-full mb-[20px]";
+				const btn = makeTopBtn(tops[0], children);
+				centered.appendChild(btn);
+				container.appendChild(centered);
+			} else {
+				// Varios botones → grid izq | separador | der
+				// Si algún subject tiene left_group explícito, usarlo; si no, auto-split
+				const hasExplicit = tops.some((s) => s.semester !== null && s.semester !== undefined);
+				let leftGroup, rightGroup;
+				if (hasExplicit) {
+					leftGroup  = tops.filter((s) => s.semester !== 2);
+					rightGroup = tops.filter((s) => s.semester === 2);
 				} else {
-					window.location.href = `/${idBoton}`;
+					const mid = Math.ceil(tops.length / 2);
+					leftGroup  = tops.slice(0, mid);
+					rightGroup = tops.slice(mid);
+				}
+
+				const grid = document.createElement("div");
+				grid.className = "asignaturas grid grid-cols-[1fr_2px_1fr] gap-[20px] w-full mb-[20px] items-center";
+
+				const leftDiv = document.createElement("div");
+				leftDiv.className = "group-left flex justify-end gap-[10px] flex-wrap";
+				for (const s of leftGroup) leftDiv.appendChild(makeTopBtn(s, children));
+
+				const sep = document.createElement("div");
+				sep.className = "separator w-[2px] h-[35px] bg-border-subtle mx-auto";
+
+				const rightDiv = document.createElement("div");
+				rightDiv.className = "group-right flex justify-start gap-[10px] flex-wrap";
+				for (const s of rightGroup) rightDiv.appendChild(makeTopBtn(s, children));
+
+				grid.appendChild(leftDiv);
+				grid.appendChild(sep);
+				grid.appendChild(rightDiv);
+				container.appendChild(grid);
+			}
+
+			// ── Sublistas (ocultas, una por cada padre con hijos) ─────────
+			for (const s of tops) {
+				const kids = children[s.id] || [];
+				const hasSynth = !!SYNTHETIC_FULL[s.id];
+				if (kids.length > 0 || hasSynth) {
+					container.appendChild(buildSublist(s, kids));
 				}
 			}
+		}
+
+		// Delegar clics en el contenedor
+		container.addEventListener("click", function (e) {
+			const btn = e.target.closest("button");
+			if (!btn) return;
+			const sublistId = btn.id + "-sublist";
+			const sublist = document.getElementById(sublistId);
+			if (sublist) {
+				// Toggle propio, cierra los demás
+				container.querySelectorAll('[id$="-sublist"]').forEach((sl) => {
+					if (sl.id !== sublistId) sl.classList.add("hidden");
+				});
+				sublist.classList.toggle("hidden");
+			}
+			// Si no tiene sublist, la navegación ya está en el listener del btn
 		});
-	</script>
+	}
+
+	/** Crea el botón raíz: si tiene hijos, abre sublist; si no, navega. */
+	function makeTopBtn(subject, children) {
+		const kids = children[subject.id] || [];
+		const hasSynth = !!SYNTHETIC_FULL[subject.id];
+		const hasChildren = kids.length > 0 || hasSynth;
+
+		const btn = document.createElement("button");
+		btn.id = subject.id;
+		btn.className = "btn";
+		btn.textContent = subject.display_name;
+
+		if (!hasChildren) {
+			btn.addEventListener("click", () => { window.location.href = `/${subject.id}`; });
+		}
+		// Si tiene hijos, el clic lo gestiona el listener delegado del container
+
+		return btn;
+	}
+
+	// ─── Carga de datos ──────────────────────────────────────────────────────
+
+	async function loadSubjects() {
+		const loading   = document.getElementById("subjects-loading");
+		const container = document.getElementById("asignaturas-container");
+
+		const db = window.SupabaseClient;
+		if (!db) {
+			if (loading) loading.innerHTML = '<p class="text-text-muted text-sm">No se pudo conectar con la base de datos.</p>';
+			return;
+		}
+
+		try {
+			const { data, error } = await db
+				.from("subjects")
+				.select("id, display_name, category, parent_id, sort_order, semester")
+				.order("sort_order", { ascending: true });
+
+			if (error) throw error;
+
+			if (loading)   loading.classList.add("hidden");
+			if (container) container.classList.remove("hidden");
+
+			renderSubjects(data || []);
+		} catch (err) {
+			console.error("[Index] Error cargando asignaturas:", err);
+			if (loading) loading.innerHTML = '<p class="text-text-muted text-sm">Error al cargar las asignaturas. Recarga la página.</p>';
+		}
+	}
+
+	if (document.readyState === "loading") {
+		document.addEventListener("DOMContentLoaded", loadSubjects);
+	} else {
+		loadSubjects();
+	}
+})();
+</script>
 </BaseLayout>
 
-<style>
+<style is:global>
 	@reference "../styles/global.css";
-	/* Optamos por usar @apply dentro de un scope de Astro para no tener un HTML tan ensordecedor */
-	.btn {
-		@apply mt-[0px] px-[1.2em] py-[0.6em] text-[1em] border border-border-subtle text-text-main rounded-[5px] cursor-pointer whitespace-nowrap bg-surface hover:bg-surface-hover transition-colors shadow-subtle hover:shadow-sm font-medium;
+
+	.index-spinner {
+		width: 28px;
+		height: 28px;
+		border: 3px solid rgb(var(--border-subtle));
+		border-top-color: rgb(var(--color-primary-rgb));
+		border-radius: 50%;
+		animation: spin 0.7s linear infinite;
 	}
-	.btn-primary {
-		@apply mt-[0px] px-[1.2em] py-[0.6em] text-[1em] border-none text-white rounded-[5px] cursor-pointer whitespace-nowrap bg-blue-600 hover:bg-blue-700 transition-colors shadow-sm hover:shadow font-medium;
-	}
-	
-	/* Aplicar bordes suaves a los botones */
+
 	@media (max-width: 767px) {
-		.asignaturas {
-			@apply flex! flex-col! items-center!;
+		#asignaturas-container .asignaturas {
+			display: flex !important;
+			flex-direction: column !important;
+			align-items: center !important;
 		}
-		.group-left, .group-right {
-			@apply w-[100%]! flex! flex-wrap! justify-center!;
+		#asignaturas-container .group-left,
+		#asignaturas-container .group-right {
+			width: 100% !important;
+			display: flex !important;
+			flex-wrap: wrap !important;
+			justify-content: center !important;
 		}
-		.separator {
-			@apply w-[100%]! h-[1px]! my-[10px]!;
+		#asignaturas-container .separator {
+			width: 100% !important;
+			height: 1px !important;
+			margin: 10px 0 !important;
 		}
-		.btn, .btn-primary {
+		#asignaturas-container .btn,
+		#asignaturas-container .btn-primary {
 			@apply m-[5px]! px-[12px]! py-[8px]! text-[0.9em]! min-w-[80px]!;
 		}
 		#app {
 			@apply w-[95%]! p-[15px]! mt-[70px]!;
 		}
 	}
-	
+
 	@media (max-width: 480px) {
-		h1 {
-			@apply text-[1.5em]!;
-		}
-		h3 {
+		#asignaturas-container h3 {
 			@apply text-[1.2em]!;
 		}
-		.btn, .btn-primary {
+		#asignaturas-container .btn,
+		#asignaturas-container .btn-primary {
 			@apply text-[0.8em]! min-w-[70px]!;
 		}
 	}

@@ -731,3 +731,20 @@ body.tools-sheet-body-lock {
 .body-locked {
   overflow: hidden !important;
 }
+
+/* Button utilities (shared across pages) */
+.btn {
+  @apply px-[1.2em] py-[0.6em] text-[1em] border border-border-subtle text-text-main rounded-[5px] cursor-pointer whitespace-nowrap bg-surface hover:bg-surface-hover transition-colors shadow-subtle hover:shadow-sm font-medium;
+}
+
+.btn-primary {
+  @apply px-[1.2em] py-[0.6em] text-[1em] border-none text-white rounded-[5px] cursor-pointer whitespace-nowrap bg-blue-600 hover:bg-blue-700 transition-colors shadow-sm hover:shadow font-medium;
+}
+
+.btn-secondary {
+  @apply px-[1.2em] py-[0.6em] text-[1em] border border-border-subtle text-text-main rounded-[5px] cursor-pointer whitespace-nowrap bg-surface hover:bg-surface-hover transition-colors;
+}
+
+.btn-ghost {
+  @apply px-[1.2em] py-[0.6em] text-[1em] border-none text-text-main rounded-[5px] cursor-pointer whitespace-nowrap bg-transparent hover:bg-surface-hover transition-colors;
+}
