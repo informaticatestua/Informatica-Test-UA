@@ -1,0 +1,620 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Admin • Tests UA">
+<div class="max-w-4xl mx-auto px-4 py-8 w-full">
+
+	<!-- Auth guard -->
+	<div id="admin-loading" class="flex flex-col items-center justify-center py-20 gap-4">
+		<div class="w-8 h-8 border-2 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+		<p class="text-text-muted text-sm">Verificando acceso…</p>
+	</div>
+
+	<div id="admin-content" class="hidden space-y-8">
+
+		<!-- ── Header ───────────────────────────────────────────────── -->
+		<div class="flex items-center gap-3">
+			<span class="material-icons text-purple-500" style="font-size:2rem;">admin_panel_settings</span>
+			<div>
+				<h1 class="font-heading font-bold text-text-main text-2xl m-0">Panel de Administración</h1>
+				<p class="text-text-muted text-sm mt-0.5 m-0">Gestiona reportes, contribuciones y usuarios</p>
+			</div>
+		</div>
+
+		<!-- ── Tabs ─────────────────────────────────────────────────── -->
+		<div class="flex gap-1 border-b border-border-subtle overflow-x-auto">
+			<button class="admin-tab active" data-tab="reportes">
+				<span class="material-icons text-[16px]">flag</span>
+				Reportes
+				<span id="tab-badge-reportes" class="hidden ml-1 px-1.5 py-0.5 bg-red-500 text-white text-[0.65rem] font-bold rounded-full leading-none"></span>
+			</button>
+			<button class="admin-tab" data-tab="contribuciones">
+				<span class="material-icons text-[16px]">add_circle</span>
+				Contribuciones
+				<span id="tab-badge-contribuciones" class="hidden ml-1 px-1.5 py-0.5 bg-blue-500 text-white text-[0.65rem] font-bold rounded-full leading-none"></span>
+			</button>
+			<button class="admin-tab" data-tab="usuarios">
+				<span class="material-icons text-[16px]">group</span>
+				Usuarios
+			</button>
+			<button class="admin-tab" data-tab="anuncios">
+				<span class="material-icons text-[16px]">campaign</span>
+				Anuncios
+			</button>
+		</div>
+
+		<!-- ── Tab: Reportes pendientes ─────────────────────────────── -->
+		<div id="tab-reportes" class="admin-panel space-y-4">
+			<div id="rep-loading" class="text-text-muted text-sm flex items-center gap-2 py-4">
+				<div class="w-4 h-4 border-2 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+				Cargando reportes…
+			</div>
+			<div id="rep-empty" class="hidden text-center py-12">
+				<span class="material-icons text-text-muted" style="font-size:2.5rem;">check_circle</span>
+				<p class="text-text-muted text-sm mt-2">No hay reportes pendientes.</p>
+			</div>
+			<div id="rep-list" class="hidden space-y-4"></div>
+		</div>
+
+		<!-- ── Tab: Contribuciones pendientes ───────────────────────── -->
+		<div id="tab-contribuciones" class="admin-panel hidden space-y-4">
+			<div id="cont-loading" class="text-text-muted text-sm flex items-center gap-2 py-4">
+				<div class="w-4 h-4 border-2 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+				Cargando contribuciones…
+			</div>
+			<div id="cont-empty" class="hidden text-center py-12">
+				<span class="material-icons text-text-muted" style="font-size:2.5rem;">check_circle</span>
+				<p class="text-text-muted text-sm mt-2">No hay contribuciones pendientes.</p>
+			</div>
+			<div id="cont-list" class="hidden space-y-4"></div>
+		</div>
+
+		<!-- ── Tab: Usuarios ────────────────────────────────────────── -->
+		<div id="tab-usuarios" class="admin-panel hidden space-y-4">
+			<div class="flex gap-3 items-center">
+				<input id="user-search" type="text" placeholder="Buscar por nombre de usuario…" class="flex-1 px-3 py-2 rounded-lg border border-border-subtle bg-background text-text-main text-sm focus:outline-none focus:border-blue-500 transition-colors" />
+				<button id="user-search-btn" class="px-4 py-2 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors border-none cursor-pointer">Buscar</button>
+			</div>
+			<div id="user-loading" class="hidden text-text-muted text-sm flex items-center gap-2">
+				<div class="w-4 h-4 border-2 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+				Buscando…
+			</div>
+			<div id="user-list" class="space-y-3"></div>
+		</div>
+
+		<!-- ── Tab: Anuncios ─────────────────────────────────────── -->
+		<div id="tab-anuncios" class="admin-panel hidden space-y-5">
+			<div class="p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-700/60 rounded-xl">
+				<div class="flex items-start gap-2">
+					<span class="material-icons text-amber-500 flex-shrink-0 mt-0.5" style="font-size:1rem;">warning_amber</span>
+					<p class="text-amber-800 dark:text-amber-300 text-xs m-0 leading-relaxed">
+						Los anuncios se envían como notificación a <strong>todos los usuarios registrados</strong>. Úsalos solo para comunicar cambios relevantes.
+					</p>
+				</div>
+			</div>
+
+			<div class="space-y-3">
+				<div>
+					<label class="block text-sm font-semibold text-text-main mb-1.5" for="announce-msg">Mensaje del anuncio</label>
+					<textarea id="announce-msg" rows="4" maxlength="500" placeholder="Ej: Se han añadido nuevas preguntas de Redes y STI. ¡A practicar!" class="w-full px-3 py-2 rounded-lg border border-border-subtle bg-background text-text-main text-sm focus:outline-none focus:border-blue-500 transition-colors resize-none"></textarea>
+					<div class="flex justify-end mt-1">
+						<span id="announce-char-count" class="text-xs text-text-muted">0 / 500</span>
+					</div>
+				</div>
+				<div class="flex justify-end">
+					<button id="announce-send-btn" class="flex items-center gap-2 px-4 py-2 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors border-none cursor-pointer">
+						<span class="material-icons text-[16px]">campaign</span>
+						Enviar a todos
+					</button>
+				</div>
+			</div>
+
+			<div id="announce-feedback" class="hidden px-4 py-3 rounded-xl text-sm font-medium"></div>
+		</div>
+
+	</div>
+</div>
+
+<!-- ── Confirm modal ─────────────────────────────────────────────────────── -->
+<div id="confirm-overlay" class="hidden fixed inset-0 z-[300] bg-black/60 backdrop-blur-sm"></div>
+<div id="confirm-modal" class="hidden fixed inset-0 z-[301] flex items-center justify-center p-4">
+	<div class="w-full max-w-sm bg-surface rounded-2xl shadow-2xl border border-border-subtle p-6 space-y-4">
+		<p id="confirm-text" class="text-text-main text-sm leading-relaxed m-0"></p>
+		<div>
+			<label class="block text-sm font-medium text-text-main mb-1.5" for="confirm-note">Nota para el usuario (opcional)</label>
+			<textarea id="confirm-note" rows="3" class="w-full px-3 py-2 rounded-lg border border-border-subtle bg-background text-text-main text-sm focus:outline-none focus:border-blue-500 transition-colors resize-none"></textarea>
+		</div>
+		<div class="flex justify-end gap-3">
+			<button id="confirm-cancel" class="px-4 py-2 text-sm font-medium text-text-muted hover:text-text-main bg-transparent border border-border-subtle hover:bg-surface-hover rounded-lg transition-colors cursor-pointer">Cancelar</button>
+			<button id="confirm-ok" class="px-4 py-2 text-sm font-semibold text-white rounded-lg transition-colors cursor-pointer border-none"></button>
+		</div>
+	</div>
+</div>
+
+<script is:inline>
+(function () {
+    "use strict";
+
+    function getDb() { return window.SupabaseClient; }
+
+    function formatDate(iso) {
+        return new Date(iso).toLocaleDateString("es-ES", { day: "2-digit", month: "short", year: "numeric" });
+    }
+
+    function truncate(str, n = 150) {
+        return str && str.length > n ? str.slice(0, n) + "…" : (str || "");
+    }
+
+    // ── Confirm modal ─────────────────────────────────────────────────────────
+
+    // XSS prevention: escape HTML entities
+    function esc(str) {
+        if (str == null) return '';
+        return String(str)
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#39;');
+    }
+
+    function openConfirm(text, okLabel, okClass, onOk) {
+        document.getElementById("confirm-text").textContent = text;
+        document.getElementById("confirm-note").value = "";
+        const okBtn = document.getElementById("confirm-ok");
+        okBtn.textContent = okLabel;
+        okBtn.className = `px-4 py-2 text-sm font-semibold text-white rounded-lg transition-colors cursor-pointer border-none ${okClass}`;
+
+        document.getElementById("confirm-overlay").classList.remove("hidden");
+        document.getElementById("confirm-modal").classList.remove("hidden");
+
+        const doOk = () => {
+            const note = document.getElementById("confirm-note").value.trim();
+            closeConfirm();
+            onOk(note);
+        };
+
+        okBtn._handler && okBtn.removeEventListener("click", okBtn._handler);
+        okBtn._handler = doOk;
+        okBtn.addEventListener("click", doOk);
+    }
+
+    function closeConfirm() {
+        document.getElementById("confirm-overlay").classList.add("hidden");
+        document.getElementById("confirm-modal").classList.add("hidden");
+    }
+
+    document.getElementById("confirm-cancel")?.addEventListener("click", closeConfirm);
+    document.getElementById("confirm-overlay")?.addEventListener("click", closeConfirm);
+
+    // ── Reports ───────────────────────────────────────────────────────────────
+    // Las notificaciones a los usuarios las generan los RPCs (accept_report,
+    // reject_reports_for_question…) dentro de la BD: el cliente no inserta nada.
+
+    async function loadReports() {
+        const db = getDb();
+        const { data } = await db
+            .from("reports")
+            .select(`id, reason, details, status, created_at, user_id,
+                     questions(id, content, subject_id, options(id, content, is_correct, position)),
+                     profiles(username)`)
+            .eq("status", "pendiente")
+            .order("created_at", { ascending: true });
+        return data || [];
+    }
+
+    function renderReports(reports) {
+        const loading = document.getElementById("rep-loading");
+        const empty   = document.getElementById("rep-empty");
+        const list    = document.getElementById("rep-list");
+        loading?.classList.add("hidden");
+
+        if (reports.length === 0) { empty?.classList.remove("hidden"); return; }
+
+        const badge = document.getElementById("tab-badge-reportes");
+        if (badge) { badge.textContent = reports.length; badge.classList.remove("hidden"); }
+
+        list?.classList.remove("hidden");
+
+        // Group by question
+        const byQuestion = {};
+        for (const r of reports) {
+            const qid = r.questions?.id || r.id;
+            if (!byQuestion[qid]) byQuestion[qid] = { question: r.questions, reports: [] };
+            byQuestion[qid].reports.push(r);
+        }
+
+        list.innerHTML = Object.values(byQuestion).map(({ question, reports: rs }) => {
+            if (!question) return "";
+            const opts = (question.options || []).sort((a, b) => a.position - b.position);
+            const optionsHtml = opts.map(o => `
+                <label class="flex items-center gap-2 cursor-pointer p-2 rounded-lg border-2 ${o.is_correct ? "border-green-500 bg-green-50 dark:bg-green-900/20" : "border-border-subtle"} transition-colors">
+                    <input type="radio" name="correct-opt-${question.id}" value="${o.id}" ${o.is_correct ? "checked" : ""} class="accent-green-600 flex-shrink-0" />
+                    <span class="text-sm text-text-main">${esc(o.content)}</span>
+                </label>
+            `).join("");
+
+            const reportsHtml = rs.map(r => `
+                <div class="flex items-start gap-2 text-xs text-text-muted">
+                    <span class="font-semibold text-text-main">@${esc(r.profiles?.username || "?")}:</span>
+                    <span>[${esc(r.reason)}] ${truncate(r.details, 100)}</span>
+                    <span class="ml-auto flex-shrink-0">${formatDate(r.created_at)}</span>
+                </div>
+            `).join("");
+
+            return `
+                <div class="bg-surface border border-border-subtle rounded-2xl p-5 space-y-4" data-question-id="${question.id}" data-user-ids="${rs.map(r => r.user_id).join(",")}">
+                    <div class="flex items-start justify-between gap-3">
+                        <div class="flex-1">
+                            <p class="text-text-main text-sm font-medium m-0 leading-snug">${truncate(esc(question.content))}</p>
+                            ${question.subject_id ? `<span class="text-xs text-text-muted mt-1 block">${esc(question.subject_id).toUpperCase()}</span>` : ""}
+                        </div>
+                        <span class="flex-shrink-0 inline-flex items-center gap-1 px-2.5 py-1 bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300 rounded-full text-xs font-semibold">
+                            <span class="material-icons" style="font-size:0.85rem;">flag</span>
+                            ${rs.length} reporte${rs.length > 1 ? "s" : ""}
+                        </span>
+                    </div>
+
+                    <!-- Reportes individuales -->
+                    <div class="space-y-1.5 p-3 bg-surface-hover rounded-xl border border-border-subtle">
+                        ${reportsHtml}
+                    </div>
+
+                    <!-- Opciones para seleccionar la correcta -->
+                    <div>
+                        <p class="text-xs font-semibold text-text-muted uppercase tracking-wider mb-2">Selecciona la respuesta correcta:</p>
+                        <div class="space-y-2">${optionsHtml}</div>
+                    </div>
+
+                    <!-- Acciones -->
+                    <div class="flex flex-wrap gap-2 pt-2 border-t border-border-subtle">
+                        <button class="rep-accept-btn flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-white bg-green-600 hover:bg-green-700 rounded-lg transition-colors border-none cursor-pointer">
+                            <span class="material-icons text-[14px]">check</span> Aceptar
+                        </button>
+                        <button class="rep-reject-btn flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-white bg-red-600 hover:bg-red-700 rounded-lg transition-colors border-none cursor-pointer">
+                            <span class="material-icons text-[14px]">close</span> Rechazar
+                        </button>
+                        <button class="rep-delete-btn flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-text-muted hover:text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20 border border-border-subtle hover:border-red-400 rounded-lg transition-colors bg-transparent cursor-pointer">
+                            <span class="material-icons text-[14px]">delete</span> Eliminar pregunta
+                        </button>
+                    </div>
+                </div>
+            `;
+        }).join("");
+
+        // Wire buttons
+        list.querySelectorAll("[data-question-id]").forEach(card => {
+            const questionId = card.dataset.questionId;
+
+            card.querySelector(".rep-accept-btn")?.addEventListener("click", () => {
+                const selected = card.querySelector(`input[name="correct-opt-${questionId}"]:checked`)?.value;
+                if (!selected) { alert("Selecciona la opción correcta primero."); return; }
+                openConfirm(
+                    "¿Aceptar el reporte y actualizar la respuesta correcta?",
+                    "Aceptar y corregir", "bg-green-600 hover:bg-green-700",
+                    async () => {
+                        const db = getDb();
+                        const { error } = await db.rpc("accept_report", { p_question_id: questionId, p_correct_option_id: selected });
+                        if (error) { alert("Error al aceptar el reporte: " + error.message); return; }
+                        card.remove();
+                        checkRepEmpty();
+                    }
+                );
+            });
+
+            card.querySelector(".rep-reject-btn")?.addEventListener("click", () => {
+                openConfirm(
+                    "¿Rechazar el reporte? La pregunta se mantendrá sin cambios.",
+                    "Rechazar", "bg-red-600 hover:bg-red-700",
+                    async (note) => {
+                        const db = getDb();
+                        const { error } = await db.rpc("reject_reports_for_question", { p_question_id: questionId, p_admin_note: note || null });
+                        if (error) { alert("Error al rechazar el reporte: " + error.message); return; }
+                        card.remove();
+                        checkRepEmpty();
+                    }
+                );
+            });
+
+            card.querySelector(".rep-delete-btn")?.addEventListener("click", () => {
+                openConfirm(
+                    "¿Eliminar esta pregunta permanentemente? No se puede deshacer.",
+                    "Eliminar", "bg-red-700 hover:bg-red-800",
+                    async () => {
+                        const db = getDb();
+                        const { error } = await db.from("questions").delete().eq("id", questionId);
+                        if (error) { alert("Error al eliminar la pregunta: " + error.message); return; }
+                        card.remove();
+                        checkRepEmpty();
+                    }
+                );
+            });
+        });
+    }
+
+    function checkRepEmpty() {
+        const list = document.getElementById("rep-list");
+        if (list && list.children.length === 0) {
+            list.classList.add("hidden");
+            document.getElementById("rep-empty")?.classList.remove("hidden");
+            const badge = document.getElementById("tab-badge-reportes");
+            if (badge) badge.classList.add("hidden");
+        }
+    }
+
+    // ── Contributions ─────────────────────────────────────────────────────────
+
+    async function loadContribs() {
+        const db = getDb();
+        const { data } = await db
+            .from("contributions")
+            .select(`id, content, explanation, subject_id, section, created_at, user_id,
+                     contribution_options(id, content, is_correct, position),
+                     profiles(username)`)
+            .eq("status", "pendiente")
+            .order("created_at", { ascending: true });
+        return data || [];
+    }
+
+    function renderContribs(contribs) {
+        const loading = document.getElementById("cont-loading");
+        const empty   = document.getElementById("cont-empty");
+        const list    = document.getElementById("cont-list");
+        loading?.classList.add("hidden");
+
+        if (contribs.length === 0) { empty?.classList.remove("hidden"); return; }
+
+        const badge = document.getElementById("tab-badge-contribuciones");
+        if (badge) { badge.textContent = contribs.length; badge.classList.remove("hidden"); }
+
+        list?.classList.remove("hidden");
+        list.innerHTML = contribs.map(c => {
+            const opts = (c.contribution_options || []).sort((a, b) => a.position - b.position);
+            const optionsHtml = opts.map(o => `
+                <div class="flex items-center gap-2 p-2 rounded-lg border ${o.is_correct ? "border-green-500 bg-green-50 dark:bg-green-900/20" : "border-border-subtle"}">
+                    <span class="material-icons flex-shrink-0 ${o.is_correct ? "text-green-600 dark:text-green-400" : "text-text-muted"} mi-sm">${o.is_correct ? "check_circle" : "radio_button_unchecked"}</span>
+                    <span class="text-sm text-text-main">${esc(o.content)}</span>
+                </div>
+            `).join("");
+
+            return `
+            <div class="bg-surface border border-border-subtle rounded-2xl p-5 space-y-3" data-contribution-id="${c.id}">
+                <div class="flex items-start justify-between gap-3">
+                    <p class="text-text-main text-sm leading-snug m-0 flex-1">${truncate(esc(c.content), 300)}</p>
+                    <div class="text-right flex-shrink-0 text-xs text-text-muted">
+                        <div>${esc(c.subject_id?.toUpperCase() || "–")}${c.section ? ` · ${esc(c.section)}` : ""}</div>
+                        <div>@${esc(c.profiles?.username || "?")}</div>
+                        <div>${formatDate(c.created_at)}</div>
+                    </div>
+                </div>
+                <div class="space-y-1.5">${optionsHtml}</div>
+                ${c.explanation ? `
+                <div class="px-3 py-2 bg-surface-hover border border-border-subtle rounded-lg text-xs text-text-muted">
+                    <span class="font-semibold">Explicación:</span> ${truncate(esc(c.explanation), 300)}
+                </div>` : ""}
+                <div class="flex flex-wrap gap-2 pt-2 border-t border-border-subtle">
+                    <button class="cont-accept-btn flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-white bg-green-600 hover:bg-green-700 rounded-lg transition-colors border-none cursor-pointer">
+                        <span class="material-icons text-[14px]">check</span> Aceptar
+                    </button>
+                    <button class="cont-reject-btn flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-white bg-red-600 hover:bg-red-700 rounded-lg transition-colors border-none cursor-pointer">
+                        <span class="material-icons text-[14px]">close</span> Rechazar
+                    </button>
+                </div>
+            </div>
+        `;}).join("");
+
+        list.querySelectorAll("[data-contribution-id]").forEach(card => {
+            const contributionId = card.dataset.contributionId;
+
+            card.querySelector(".cont-accept-btn")?.addEventListener("click", () => {
+                openConfirm(
+                    "¿Aceptar esta contribución? Se añadirá al banco de preguntas y se notificará al autor.",
+                    "Aceptar", "bg-green-600 hover:bg-green-700",
+                    async () => {
+                        const db = getDb();
+                        const { error } = await db.rpc("accept_contribution", { p_contribution_id: contributionId });
+                        if (error) {
+                            alert("Error al aceptar: " + error.message);
+                            return;
+                        }
+                        card.remove();
+                        checkContEmpty();
+                    }
+                );
+            });
+
+            card.querySelector(".cont-reject-btn")?.addEventListener("click", () => {
+                openConfirm(
+                    "¿Rechazar esta contribución? Se notificará al autor con el motivo indicado.",
+                    "Rechazar", "bg-red-600 hover:bg-red-700",
+                    async (note) => {
+                        const db = getDb();
+                        const { error } = await db.rpc("reject_contribution", { p_contribution_id: contributionId, p_reason: note || null });
+                        if (error) {
+                            alert("Error al rechazar: " + error.message);
+                            return;
+                        }
+                        card.remove();
+                        checkContEmpty();
+                    }
+                );
+            });
+        });
+    }
+
+    function checkContEmpty() {
+        const list = document.getElementById("cont-list");
+        if (list && list.children.length === 0) {
+            list.classList.add("hidden");
+            document.getElementById("cont-empty")?.classList.remove("hidden");
+            const badge = document.getElementById("tab-badge-contribuciones");
+            if (badge) badge.classList.add("hidden");
+        }
+    }
+
+    // ── Users ─────────────────────────────────────────────────────────────────
+
+    async function searchUsers(query) {
+        const db = getDb();
+        const { data } = await db
+            .from("profiles")
+            .select("id, username, avatar_url, role, banned, created_at")
+            .ilike("username", `%${query}%`)
+            .limit(20);
+        return data || [];
+    }
+
+    function renderUsers(users) {
+        const list = document.getElementById("user-list");
+        if (!list) return;
+        if (users.length === 0) {
+            list.innerHTML = `<p class="text-text-muted text-sm text-center py-6">Sin resultados.</p>`;
+            return;
+        }
+
+        list.innerHTML = users.map(u => `
+            <div class="flex items-center gap-4 p-4 bg-surface border border-border-subtle rounded-xl" data-user-id="${u.id}">
+                <img src="${u.avatar_url || ""}" alt="" class="w-10 h-10 rounded-full border border-border-subtle object-cover flex-shrink-0" onerror="this.style.display='none'" />
+                <div class="flex-1 min-w-0">
+                    <p class="font-semibold text-text-main text-sm m-0">@${u.username}</p>
+                    <p class="text-text-muted text-xs mt-0.5 m-0">Desde ${formatDate(u.created_at)} · ${u.role}</p>
+                </div>
+                ${u.banned ? `<span class="px-2 py-0.5 bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300 rounded-full text-xs font-semibold">Baneado</span>` : ""}
+                ${u.role !== "admin" ? `
+                <button class="user-ban-btn flex-shrink-0 px-3 py-1.5 text-xs font-medium border border-border-subtle rounded-lg cursor-pointer transition-colors ${u.banned ? "bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-300 border-green-300 hover:bg-green-100" : "hover:bg-red-50 dark:hover:bg-red-900/20 text-text-muted hover:text-red-600 hover:border-red-400"} bg-transparent" data-banned="${u.banned}">
+                    ${u.banned ? "Desbanear" : "Banear"}
+                </button>` : ""}
+            </div>
+        `).join("");
+
+        list.querySelectorAll("[data-user-id]").forEach(card => {
+            const userId = card.dataset.userId;
+            const banBtn = card.querySelector(".user-ban-btn");
+            if (!banBtn) return;
+
+            banBtn.addEventListener("click", async () => {
+                const isBanned = banBtn.dataset.banned === "true";
+                const action   = isBanned ? "desbanear" : "banear";
+                openConfirm(
+                    `¿Confirmas ${action} a este usuario?`,
+                    isBanned ? "Desbanear" : "Banear",
+                    isBanned ? "bg-green-600 hover:bg-green-700" : "bg-red-600 hover:bg-red-700",
+                    async () => {
+                        const db = getDb();
+                        await db.from("profiles").update({ banned: !isBanned }).eq("id", userId);
+                        banBtn.dataset.banned = String(!isBanned);
+                        banBtn.textContent    = !isBanned ? "Desbanear" : "Banear";
+                    }
+                );
+            });
+        });
+    }
+
+    // ── Tabs ─────────────────────────────────────────────────────────────────
+
+    function initTabs() {
+        document.querySelectorAll(".admin-tab").forEach(btn => {
+            btn.addEventListener("click", () => {
+                document.querySelectorAll(".admin-tab").forEach(b => b.classList.remove("active"));
+                document.querySelectorAll(".admin-panel").forEach(p => p.classList.add("hidden"));
+                btn.classList.add("active");
+                document.getElementById("tab-" + btn.dataset.tab)?.classList.remove("hidden");
+            });
+        });
+
+        document.getElementById("user-search-btn")?.addEventListener("click", async () => {
+            const q = document.getElementById("user-search")?.value.trim();
+            if (!q) return;
+            document.getElementById("user-loading")?.classList.remove("hidden");
+            const users = await searchUsers(q);
+            document.getElementById("user-loading")?.classList.add("hidden");
+            renderUsers(users);
+        });
+
+        document.getElementById("user-search")?.addEventListener("keydown", (e) => {
+            if (e.key === "Enter") document.getElementById("user-search-btn")?.click();
+        });
+
+        // ── Anuncios ──────────────────────────────────────────────────────────
+
+        const msgArea   = document.getElementById("announce-msg");
+        const charCount = document.getElementById("announce-char-count");
+        const sendBtn   = document.getElementById("announce-send-btn");
+        const feedback  = document.getElementById("announce-feedback");
+
+        msgArea?.addEventListener("input", () => {
+            const len = msgArea.value.length;
+            if (charCount) charCount.textContent = `${len} / 500`;
+        });
+
+        sendBtn?.addEventListener("click", async () => {
+            const msg = msgArea?.value.trim();
+            if (!msg) { showFeedback("Escribe un mensaje antes de enviar.", false); return; }
+
+            sendBtn.disabled = true;
+            sendBtn.textContent = "Enviando…";
+
+            const db = getDb();
+            const { error } = await db.rpc("send_announcement", { p_message: msg });
+
+            sendBtn.disabled = false;
+            sendBtn.innerHTML = '<span class="material-icons text-[16px]">campaign</span> Enviar a todos';
+
+            if (error) {
+                showFeedback("Error al enviar: " + error.message, false);
+            } else {
+                showFeedback("Anuncio enviado correctamente a todos los usuarios.", true);
+                if (msgArea) msgArea.value = "";
+                if (charCount) charCount.textContent = "0 / 500";
+            }
+        });
+
+        function showFeedback(msg, ok) {
+            if (!feedback) return;
+            feedback.textContent = msg;
+            feedback.className = `px-4 py-3 rounded-xl text-sm font-medium ${ok ? "bg-green-50 dark:bg-green-900/20 text-green-800 dark:text-green-300 border border-green-300 dark:border-green-700" : "bg-red-50 dark:bg-red-900/20 text-red-800 dark:text-red-300 border border-red-300 dark:border-red-700"}`;
+            feedback.classList.remove("hidden");
+            setTimeout(() => feedback.classList.add("hidden"), 5000);
+        }
+    }
+
+    // ── Main ─────────────────────────────────────────────────────────────────
+
+    async function main() {
+        const { user, profile } = await new Promise(resolve => window.Auth?.onReady((u, p) => resolve({ user: u, profile: p })));
+
+        if (!user || profile?.role !== "admin") {
+            window.location.replace("/");
+            return;
+        }
+
+        document.getElementById("admin-loading")?.classList.add("hidden");
+        document.getElementById("admin-content")?.classList.remove("hidden");
+
+        initTabs();
+
+        const [reports, contribs] = await Promise.all([loadReports(), loadContribs()]);
+        renderReports(reports);
+        renderContribs(contribs);
+    }
+
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", main);
+    } else {
+        main();
+    }
+})();
+</script>
+
+<style>
+    @reference "../styles/global.css";
+
+    .admin-tab {
+        @apply flex items-center gap-1.5 px-4 py-2.5 text-sm font-medium text-text-muted border-b-2 border-transparent hover:text-text-main hover:border-border-subtle cursor-pointer bg-transparent transition-colors -mb-px whitespace-nowrap;
+    }
+    .admin-tab.active {
+        @apply text-blue-600 border-blue-600;
+    }
+</style>
+</BaseLayout>

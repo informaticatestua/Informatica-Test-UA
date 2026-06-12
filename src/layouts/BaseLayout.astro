@@ -7,13 +7,16 @@ interface Props {
 }
 
 const { title = "Ing. Informática Tests UA" } = Astro.props;
+
+const supabaseUrl     = import.meta.env.PUBLIC_SUPABASE_URL     ?? '';
+const supabaseAnonKey = import.meta.env.PUBLIC_SUPABASE_ANON_KEY ?? '';
 ---
 
 <!doctype html>
 <html lang="es">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
 		<title>{title}</title>
 		<link rel="icon" type="image/png" href="/resources/images/logo.png" />
 		
@@ -54,26 +57,62 @@ const { title = "Ing. Informática Tests UA" } = Astro.props;
 				</svg>
 			</a>
 
-			<h2 id="asignatura-nombre" class="m-0 text-center flex-grow pl-[10px] flex items-center justify-center gap-3 flex-wrap cursor-pointer" onclick="window.location.href = '/'">
-				<span class="title-main font-heading font-extrabold tracking-wide text-black dark:text-white">
+			<a href="/" class="m-0 text-center flex-grow pl-[10px] flex items-center justify-center gap-3 flex-wrap no-underline hover:opacity-80 transition-opacity">
+				<span class="title-main font-heading font-extrabold tracking-wide text-text-main">
 					Ing. Informática Tests UA
 				</span>
-			</h2>
+			</a>
 
 
 
-			<div class="ml-auto flex items-center gap-1">
-				<button id="changelog-btn" class="relative mt-1 p-2 text-text-muted hover:text-blue-500 bg-transparent border-none rounded-full transition-colors cursor-pointer flex items-center justify-center" aria-label="Registro de actualizaciones">
-					<span class="material-icons" style="font-size: 1.2em;">new_releases</span>
-					<span id="changelog-badge" class="hidden absolute top-1 right-1 w-2.5 h-2.5 bg-red-500 rounded-full border-2 border-surface"></span>
-				</button>
-				<button id="ai-settings-btn" class="mt-1 p-2 text-text-muted hover:text-blue-500 bg-transparent border-none rounded-full transition-colors cursor-pointer flex items-center justify-center" aria-label="Configuración de IA">
-					<span class="material-icons" style="font-size: 1.2em;">auto_awesome</span>
-				</button>
-				<button id="theme-toggle" class="mt-1 p-2 text-text-muted hover:text-blue-500 bg-transparent border-none rounded-full transition-colors cursor-pointer flex items-center justify-center" aria-label="Cambiar tema">
-					<span class="material-icons" id="theme-icon" style="font-size: 1.2em;">light_mode</span>
-				</button>
-			</div>
+			<nav aria-label="Navegación principal" class="ml-auto flex items-center gap-1">
+				<!-- ─── Notificaciones (solo visible con sesión) ──────────── -->
+				<div id="notif-wrapper" class="hidden relative mt-1">
+					<button id="notif-btn" class="relative p-2 text-text-muted hover:text-blue-500 bg-transparent border-none rounded-full transition-colors cursor-pointer flex items-center justify-center" aria-label="Notificaciones">
+						<span class="material-icons mi-md">notifications</span>
+						<span id="notif-badge" class="hidden absolute top-1 right-1 min-w-[16px] h-4 px-1 bg-red-500 rounded-full border-2 border-surface flex items-center justify-center">
+							<span id="notif-count" class="text-white font-bold leading-none" style="font-size:0.55rem;">0</span>
+						</span>
+					</button>
+					<!-- Dropdown -->
+					<div id="notif-dropdown" class="hidden absolute right-0 top-full mt-2 w-80 bg-surface border border-border-subtle rounded-xl shadow-lg z-[200] overflow-hidden">
+						<div class="px-4 py-3 border-b border-border-subtle flex items-center justify-between">
+							<span class="font-heading font-semibold text-text-main text-sm">Notificaciones</span>
+							<button id="notif-mark-all-btn" class="text-xs text-blue-500 hover:text-blue-600 bg-transparent border-none cursor-pointer p-0 font-medium transition-colors">Marcar todos como leídos</button>
+						</div>
+						<div id="notif-list" class="max-h-72 overflow-y-auto divide-y divide-border-subtle"></div>
+					</div>
+				</div>
+				<!-- ─── Auth: botón login (visible si no hay sesión) ───────── -->
+				<a id="auth-login-btn" href="/login" class="hidden mt-1 ml-1 px-3 py-1.5 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors no-underline flex items-center gap-1.5">
+					<span class="material-icons mi-sm">login</span>
+					Entrar
+				</a>
+
+				<!-- ─── Auth: avatar (visible si hay sesión) ──────────────── -->
+				<div id="auth-user-btn" class="hidden relative mt-1 ml-1">
+					<button id="auth-avatar-trigger" class="flex items-center justify-center w-8 h-8 rounded-full overflow-hidden border-2 border-border-subtle hover:border-blue-400 transition-colors cursor-pointer bg-surface-hover p-0" aria-label="Mi cuenta">
+						<img id="auth-user-avatar" src="" alt="Avatar" class="hidden w-full h-full object-cover" />
+						<span id="auth-user-initial" class="text-text-main font-bold text-sm leading-none hidden"></span>
+					</button>
+					<!-- Dropdown -->
+					<div id="auth-dropdown" class="hidden absolute right-0 top-full mt-2 w-48 bg-surface border border-border-subtle rounded-xl shadow-lg z-[200] overflow-hidden py-1">
+						<a href="/perfil" class="flex items-center gap-2 px-4 py-2.5 text-sm text-text-main hover:bg-surface-hover transition-colors no-underline">
+							<span class="material-icons mi-sm text-text-muted">person</span>
+							Mi perfil
+						</a>
+						<a id="auth-admin-link" href="/admin" class="hidden items-center gap-2 px-4 py-2.5 text-sm text-purple-600 dark:text-purple-400 hover:bg-surface-hover transition-colors no-underline">
+							<span class="material-icons mi-sm">admin_panel_settings</span>
+							Panel admin
+						</a>
+						<hr class="border-border-subtle my-1 mx-2" />
+						<button id="auth-logout-btn" class="w-full flex items-center gap-2 px-4 py-2.5 text-sm text-red-500 hover:bg-surface-hover transition-colors bg-transparent border-none cursor-pointer text-left">
+							<span class="material-icons mi-sm">logout</span>
+							Cerrar sesión
+						</button>
+					</div>
+				</div>
+			</nav>
 		</header>
 
 		<!-- ─── AI Settings overlay ──────────────────────────────────────────── -->
@@ -175,43 +214,6 @@ const { title = "Ing. Informática Tests UA" } = Astro.props;
 			</div>
 		</div>
 
-		<!-- ─── Changelog overlay ───────────────────────────────────────────── -->
-		<div id="changelog-overlay" class="hidden fixed inset-0 z-[300] bg-black/60 backdrop-blur-sm"></div>
-
-		<!-- ─── Changelog modal ─────────────────────────────────────────────── -->
-		<div id="changelog-modal" class="hidden fixed inset-0 z-[301] flex items-center justify-center p-4">
-			<div class="changelog-modal-box w-full max-w-md bg-surface rounded-2xl shadow-2xl border border-border-subtle overflow-hidden flex flex-col" style="max-height: 80vh;">
-				<div class="h-1 w-full bg-gradient-to-r from-green-400 via-blue-500 to-purple-500 flex-shrink-0"></div>
-				<div class="px-5 py-4 flex items-center justify-between flex-shrink-0 border-b border-border-subtle">
-					<div class="flex items-center gap-2">
-						<span class="material-icons text-blue-500">new_releases</span>
-						<h3 class="font-heading font-bold text-text-main text-lg m-0">Registro de cambios</h3>
-					</div>
-					<button id="changelog-close" class="p-1 text-text-muted hover:text-text-main rounded-full hover:bg-surface-hover transition-colors cursor-pointer border-none bg-transparent" aria-label="Cerrar">
-						<span class="material-icons">close</span>
-					</button>
-				</div>
-
-				<!-- Loading -->
-				<div id="changelog-loading" class="hidden flex items-center justify-center py-10 gap-3 flex-shrink-0">
-					<div class="ai-spinner"></div>
-					<span class="text-text-muted text-sm">Cargando actualizaciones...</span>
-				</div>
-
-				<!-- Error -->
-				<div id="changelog-error" class="hidden mx-5 mt-4 p-3 bg-red-50 dark:bg-red-900/20 border border-red-300 dark:border-red-700 rounded-xl flex-shrink-0">
-					<div class="flex items-center gap-2 mb-1">
-						<span class="material-icons text-red-500" style="font-size:1rem;">error_outline</span>
-						<span class="font-semibold text-red-700 dark:text-red-400 text-sm">No se pudieron cargar los cambios</span>
-					</div>
-					<p id="changelog-error-msg" class="text-red-600 dark:text-red-400 text-xs m-0"></p>
-				</div>
-
-				<!-- Lista de commits -->
-				<div id="changelog-list" class="overflow-y-auto flex-1 px-5 py-4 space-y-3"></div>
-			</div>
-		</div>
-
 		<!-- ─── AI Onboarding overlay ──────────────────────────────────────── -->
 		<div id="ai-onboarding-overlay" class="hidden fixed inset-0 z-[400] bg-black/70 backdrop-blur-sm"></div>
 
@@ -290,38 +292,23 @@ const { title = "Ing. Informática Tests UA" } = Astro.props;
 			</div>
 		</div>
 
+		<!-- ─── Credenciales Supabase (anon key pública, seguro exponer) ── -->
+		<script is:inline define:vars={{ supabaseUrl, supabaseAnonKey }}>
+			window.SUPABASE_URL      = supabaseUrl;
+			window.SUPABASE_ANON_KEY = supabaseAnonKey;
+		</script>
+		<!-- ─── Supabase JS SDK (UMD, expone window.supabase) ─────────── -->
+		<script is:inline src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+		<script is:inline src="/resources/js/supabase-client.js"></script>
+		<script is:inline src="/resources/js/utils.js"></script>
+		<script is:inline src="/resources/js/auth.js"></script>
+		<script is:inline src="/resources/js/quiz-data.js"></script>
+
 		<main class="w-full">
 			<slot />
 		</main>
 		</div>
 
-		<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.0/katex.min.js" crossorigin="anonymous"></script>
-		<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.0/contrib/auto-render.min.js" crossorigin="anonymous"></script>
-		
-		<script>
-			const themeToggle = document.getElementById("theme-toggle");
-			const themeIcon = document.getElementById("theme-icon");
-			
-			const updateIcon = (isDark) => {
-				if (themeIcon) {
-					themeIcon.innerText = isDark ? "dark_mode" : "light_mode";
-				}
-			};
-
-			const handleToggleClick = () => {
-				const element = document.documentElement;
-				element.classList.toggle("dark");
-				const isDark = element.classList.contains("dark");
-				localStorage.setItem("theme", isDark ? "dark" : "light");
-				updateIcon(isDark);
-			};
-
-			if (themeToggle) {
-				updateIcon(document.documentElement.classList.contains("dark"));
-				themeToggle.addEventListener("click", handleToggleClick);
-			}
-
-		</script>
 		
 		<script is:inline>
 			(function () {
@@ -366,13 +353,41 @@ const { title = "Ing. Informática Tests UA" } = Astro.props;
 			})();
 		</script>
 
-		<script is:inline src="/resources/js/prism.js"></script>
-		<script is:inline src="/resources/js/formatters.js"></script>
-		<script is:inline src="/resources/js/quiz-parser-core.js"></script>
-		<script is:inline src="/resources/js/main.js"></script>
+		<!-- ─── Auth dropdown ───────────────────────────────────────────────── -->
+		<script is:inline>
+		(function () {
+			"use strict";
+			function initAuthDropdown() {
+				const trigger  = document.getElementById("auth-avatar-trigger");
+				const dropdown = document.getElementById("auth-dropdown");
+				const logoutBtn = document.getElementById("auth-logout-btn");
+
+				if (!trigger || !dropdown) return;
+
+				trigger.addEventListener("click", function (e) {
+					e.stopPropagation();
+					dropdown.classList.toggle("hidden");
+				});
+
+				document.addEventListener("click", function () {
+					dropdown.classList.add("hidden");
+				});
+
+				logoutBtn?.addEventListener("click", function () {
+					window.Auth?.logout();
+				});
+			}
+
+			if (document.readyState === "loading") {
+				document.addEventListener("DOMContentLoaded", initAuthDropdown);
+			} else {
+				initAuthDropdown();
+			}
+		})();
+		</script>
+
+		<script is:inline src="/resources/js/notifications.js"></script>
 		<script is:inline src="/resources/js/ai-features.js"></script>
-		<script is:inline src="/resources/js/ai-generate.js"></script>
-		<script is:inline src="/resources/js/changelog.js"></script>
 		<Analytics />
 		</body>
 </html>
