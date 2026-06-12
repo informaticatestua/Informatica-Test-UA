@@ -53,13 +53,6 @@
                 "redesEnero2526Preguntas.txt",
             ],
         },
-        "sti-full": {
-            displayName: "STIFULL",
-            files: [
-                "stiPreguntas.txt",
-                "stiEnero26.txt",
-            ],
-        },
         sdsfull: {
             displayName: "SDSFULL",
             files: [
@@ -123,6 +116,10 @@
         quizKey: "",
         /** Si el usuario está repasando únicamente preguntas falladas. */
         modoRepaso: false,
+        /** Si la sesión actual es un examen (sin feedback hasta el final). */
+        modoExamen: false,
+        /** Si las preguntas provienen de Supabase (ids UUID, sincronizables). */
+        fromSupabase: false,
         /** Si la pantalla de resultados de la sesión está visible. */
         sessionFinished: false,
         /** Fallos detectados en esta sesión. */
@@ -223,7 +220,7 @@
     function actualizarTotalPreguntasLabel() {
         const totalEl = $("total-preguntas");
         if (!totalEl) return;
-        const prefix = state.modoRepaso ? "Repaso" : "Total";
+        const prefix = state.modoExamen ? "Examen" : state.modoRepaso ? "Repaso" : "Total";
         totalEl.innerText = `${prefix}: ${state.preguntas.length}`;
     }
 
@@ -311,6 +308,9 @@
         const accuracy = total > 0 ? Math.round((correct / total) * 100) : 0;
         const tone = getResultsTone(accuracy);
 
+        // Test completado: el progreso guardado deja de tener sentido.
+        clearSavedProgress();
+
         state.sessionFinished = true;
 
         const titleEl = $("results-title");
@@ -341,9 +341,10 @@
 
         toggleQuizQuestionUI(false);
         toggleQuizUtilityButtons(false);
-        $("button-container")?.classList.add("hidden");
+        $("tools-trigger-wrap")?.classList.add("hidden");
         resultsEl.classList.remove("hidden");
         hideElement("stats-panel");
+        hideElement("report-warning");
     }
 
     /** Cierra la pantalla final y devuelve la UI habitual del quiz. */
@@ -353,7 +354,7 @@
         state.sessionFinished = false;
         toggleQuizQuestionUI(true);
         toggleQuizUtilityButtons(true);
-        $("button-container")?.classList.remove("hidden");
+        $("tools-trigger-wrap")?.classList.remove("hidden");
     }
 
     /** Resetea progreso y UI para arrancar un modo de quiz desde cero. */
@@ -362,10 +363,9 @@
         state.preguntaActual = 0;
         state.totalPreguntas = 0;
         state.preguntasCorrectas = 0;
-        state.estadosPreguntas = {};
+        resetEstadosPreguntas();
 
-        const resultado = $("resultado");
-        if (resultado) resultado.innerText = "";
+        clearResultado();
 
         const verificarBtn = $("verificar");
         if (verificarBtn) verificarBtn.disabled = true;
@@ -383,6 +383,7 @@
         state.erroresSesion.add(questionId);
         state.erroresHistoricos.add(questionId);
         saveStoredErrors();
+        window.Failures?.add(questionId, state.quizKey);
         actualizarBotonRepaso();
     }
 
@@ -392,7 +393,30 @@
         state.erroresSesion.delete(questionId);
         state.erroresHistoricos.delete(questionId);
         saveStoredErrors();
+        window.Failures?.remove(questionId);
         actualizarBotonRepaso();
+    }
+
+    /**
+     * Mezcla los fallos guardados en Supabase con el histórico local.
+     * Solo añade ids presentes en el banco actual para no inflar el contador.
+     */
+    function mergeRemoteFailures() {
+        if (!window.Failures || !window.Auth) return;
+        window.Auth.onReady(async (user) => {
+            if (!user) return;
+            const remote = await window.Failures.load();
+            if (remote.size === 0) return;
+            const bankIds = new Set(state.todasLasPreguntas.map((p) => p.id));
+            let added = false;
+            remote.forEach((id) => {
+                if (bankIds.has(id) && !state.erroresHistoricos.has(id)) {
+                    state.erroresHistoricos.add(id);
+                    added = true;
+                }
+            });
+            if (added) actualizarBotonRepaso();
+        });
     }
 
     /** Sale del modo repaso y vuelve al banco completo. */
@@ -422,6 +446,219 @@
         mostrarPregunta();
     }
 
+    // ─────────────────────────────────────────────────────────────────────
+    // 5b. MODO EXAMEN REAL
+    // ─────────────────────────────────────────────────────────────────────
+
+    /** Alterna la UI exclusiva del examen (cronómetro, Finalizar, etc.). */
+    function toggleExamUI(active) {
+        const finishBtn = $("exam-finish-btn");
+        const timerChip = $("exam-timer-chip");
+        const explicarBtn = $("explicar-ia-btn");
+
+        if (finishBtn) finishBtn.classList.toggle("hidden", !active);
+        if (timerChip) timerChip.classList.toggle("hidden", !active);
+        // Sin feedback durante el examen → sin explicaciones de IA.
+        if (explicarBtn) explicarBtn.classList.toggle("hidden", active);
+        // El menú "Más opciones" cambiaría el estado del examen: fuera.
+        $("tools-trigger-wrap")?.classList.toggle("hidden", active);
+    }
+
+    /** Arranca un examen con la configuración del modal. */
+    function iniciarModoExamen(config) {
+        window.ExamMode?.setConfig(config);
+
+        const banco = [...state.todasLasPreguntas];
+        shuffle(banco);
+
+        state.modoExamen = true;
+        state.modoRepaso = false;
+        state.preguntas = banco.slice(0, config.count);
+        resetQuizProgress();
+        hideElement("exam-results");
+
+        actualizarTotalPreguntasLabel();
+        actualizarBotonRepaso();
+        toggleExamUI(true);
+        mostrarPregunta();
+
+        window.ExamMode?.startTimer((label) => {
+            const el = $("exam-timer-label");
+            if (el) el.innerText = label;
+        });
+    }
+
+    /** Avanza en el examen guardando la selección, sin verificar nada. */
+    function examAdvance() {
+        guardarEstadoActual();
+        const siguiente = state.preguntaActual + 1;
+        if (siguiente >= state.preguntas.length) {
+            finalizarExamen();
+            return;
+        }
+        state.preguntaActual = siguiente;
+        mostrarPregunta();
+        restaurarEstadoActual();
+        actualizarContador();
+    }
+
+    /** Corrige el examen y muestra la pantalla de resultados. */
+    function finalizarExamen() {
+        if (!state.modoExamen || !window.ExamMode) return;
+
+        guardarEstadoActual();
+
+        const sinResponder = state.preguntas.filter((p) => {
+            const sel = state.estadosPreguntas[p.id]?.seleccionadas;
+            return !sel || sel.length === 0;
+        }).length;
+
+        if (sinResponder > 0) {
+            const seguir = confirm(
+                `Tienes ${sinResponder} pregunta${sinResponder > 1 ? "s" : ""} sin responder. ` +
+                `¿Finalizar el examen igualmente?`,
+            );
+            if (!seguir) return;
+        }
+
+        const elapsed = window.ExamMode.stopTimer();
+        const cfg = window.ExamMode.getConfig();
+        const res = window.ExamMode.grade(state.preguntas, state.estadosPreguntas);
+
+        // Los fallos del examen también alimentan el repaso.
+        res.detail.forEach((d) => {
+            if (d.status === "wrong") registrarFalloPregunta(d.pregunta.id);
+        });
+
+        state.sessionFinished = true;
+
+        // ── Pintar resultados ────────────────────────────────────────────
+        const score = Math.round(res.score * 100) / 100;
+        const maxScore = Math.round(state.preguntas.length * cfg.pointsOk * 100) / 100;
+
+        const set = (id, val) => { const el = $(id); if (el) el.innerText = val; };
+        set("exam-score", String(score));
+        set("exam-time", window.ExamMode.formatTime(elapsed));
+        set("exam-correct", String(res.correct));
+        set("exam-wrong", String(res.wrong));
+        set("exam-blank", String(res.blank));
+
+        const subtitle = $("exam-results-subtitle");
+        if (subtitle) {
+            subtitle.innerText =
+                `Puntuación: ${score} de ${maxScore} posibles ` +
+                `(+${cfg.pointsOk} por acierto, −${cfg.pointsBad} por fallo).`;
+        }
+
+        const breakdown = $("exam-breakdown");
+        if (breakdown) {
+            breakdown.innerHTML = res.detail.map((d, i) => {
+                const cls =
+                    d.status === "correct" ? "border-green-500/50 bg-green-50 dark:bg-green-900/15"
+                    : d.status === "wrong" ? "border-red-500/50 bg-red-50 dark:bg-red-900/15"
+                    : "border-border-subtle bg-surface-hover/60";
+                const icon =
+                    d.status === "correct" ? `<span class="material-icons text-green-600 dark:text-green-400" style="font-size:1.2rem;">check_circle</span>`
+                    : d.status === "wrong" ? `<span class="material-icons text-red-600 dark:text-red-400" style="font-size:1.2rem;">cancel</span>`
+                    : `<span class="material-icons text-text-muted" style="font-size:1.2rem;">remove_circle_outline</span>`;
+
+                const textoOpcion = (idx) => formatTextWithCode(d.pregunta.opciones[idx - 1] ?? "");
+                const tuRespuesta = d.seleccionadas.length > 0
+                    ? d.seleccionadas.map(textoOpcion).join(", ")
+                    : "<em>Sin responder</em>";
+                const correcta = d.correctas.map(textoOpcion).join(", ");
+
+                return `
+                    <div class="border rounded-xl p-4 ${cls}">
+                        <div class="flex items-start gap-2.5">
+                            ${icon}
+                            <div class="flex-1 min-w-0 text-[0.9em]">
+                                <p class="font-medium text-text-main m-0 mb-2 leading-snug"><span class="text-text-muted mr-1">${i + 1}.</span>${formatTextWithCode(d.pregunta.pregunta)}</p>
+                                <p class="m-0 text-text-muted text-[0.92em]">Tu respuesta: <span class="${d.status === "wrong" ? "text-red-600 dark:text-red-400 font-medium" : "text-text-main"}">${tuRespuesta}</span></p>
+                                ${d.status !== "correct" ? `<p class="m-0 mt-0.5 text-text-muted text-[0.92em]">Correcta: <span class="text-green-700 dark:text-green-400 font-medium">${correcta}</span></p>` : ""}
+                            </div>
+                        </div>
+                    </div>`;
+            }).join("");
+            renderMath(breakdown);
+            highlightCode();
+        }
+
+        toggleQuizQuestionUI(false);
+        toggleQuizUtilityButtons(false);
+        toggleExamUI(false);
+        $("tools-trigger-wrap")?.classList.add("hidden");
+        hideElement("stats-panel");
+        hideElement("report-warning");
+        showElement("exam-results");
+    }
+
+    /** Sale del examen y restaura el modo test normal. */
+    function salirModoExamen() {
+        state.modoExamen = false;
+        state.sessionFinished = false;
+        window.ExamMode?.stopTimer();
+        hideElement("exam-results");
+        toggleExamUI(false);
+        $("tools-trigger-wrap")?.classList.remove("hidden");
+
+        state.preguntas = [...state.todasLasPreguntas];
+        shuffle(state.preguntas);
+        state.todasLasPreguntas = [...state.preguntas];
+        resetQuizProgress();
+        actualizarTotalPreguntasLabel();
+        actualizarBotonRepaso();
+        toggleQuizQuestionUI(true);
+        toggleQuizUtilityButtons(true);
+        showElement("stats-panel");
+        mostrarPregunta();
+    }
+
+    /** Abre el modal de configuración del examen. */
+    function abrirModalExamen() {
+        const max = state.todasLasPreguntas.length;
+        if (max === 0) return;
+
+        const maxEl = $("exam-max-questions");
+        if (maxEl) maxEl.innerText = String(max);
+
+        const countInput = $("exam-question-count");
+        if (countInput) {
+            countInput.max = String(max);
+            countInput.value = String(Math.min(20, max));
+        }
+        $("exam-config-error")?.classList.add("hidden");
+
+        showElement("exam-overlay");
+        showElement("exam-modal");
+    }
+
+    function cerrarModalExamen() {
+        hideElement("exam-overlay");
+        hideElement("exam-modal");
+    }
+
+    /** Valida la configuración y lanza el examen. */
+    function confirmarConfigExamen() {
+        const errorBox = $("exam-config-error");
+        const showError = (msg) => {
+            if (errorBox) { errorBox.innerText = msg; errorBox.classList.remove("hidden"); }
+        };
+
+        const pointsOk  = parseFloat($("exam-points-ok")?.value);
+        const pointsBad = parseFloat($("exam-points-bad")?.value);
+        const count     = parseInt($("exam-question-count")?.value, 10);
+        const max       = state.todasLasPreguntas.length;
+
+        if (!Number.isFinite(pointsOk) || pointsOk <= 0) { showError("La puntuación por acierto debe ser mayor que 0."); return; }
+        if (!Number.isFinite(pointsBad) || pointsBad < 0) { showError("La penalización no puede ser negativa."); return; }
+        if (!Number.isInteger(count) || count < 1) { showError("Indica un número de preguntas válido."); return; }
+        if (count > max) { showError(`Solo hay ${max} preguntas disponibles en este banco.`); return; }
+
+        cerrarModalExamen();
+        iniciarModoExamen({ pointsOk, pointsBad, count });
+    }
+
     /**
      * Llamada segura a renderMathInElement de KaTeX. Si la librería aún
      * no está cargada (carga `is:inline` desde CDN) silenciamos el error
@@ -436,6 +673,147 @@
     /** Resaltado de código con Prism, defensivo ante carga diferida. */
     function highlightCode() {
         if (typeof window.Prism !== "undefined") window.Prism.highlightAll();
+    }
+
+    // ─────────────────────────────────────────────────────────────────────
+    // 3b. AVISO DE REPORTES, PROGRESO DE TEST Y MODO EXAMEN
+    // ─────────────────────────────────────────────────────────────────────
+
+    /** Pinta el aviso de pregunta reportada antes de las opciones de respuesta. */
+    function renderReportWarning(pregunta) {
+        const box = $("report-warning");
+        if (!box) return;
+
+        const count = pregunta?.reportCount || 0;
+        if (count < 5) {
+            box.classList.add("hidden");
+            box.classList.remove("report-warning--strong");
+            box.innerHTML = "";
+            box.removeAttribute("aria-label");
+            return;
+        }
+
+        const strong = count >= 10;
+        const badgeLabel = `${count} reportes`;
+        const title = strong ? "Pregunta muy reportada" : "Pregunta reportada";
+        const body = strong
+            ? "Muchos estudiantes coinciden en que la respuesta marcada no es correcta. Revísala con criterio."
+            : `${count} estudiantes han señalado un posible error en esta pregunta.`;
+
+        box.className = "report-warning" + (strong ? " report-warning--strong" : "");
+        box.classList.remove("hidden");
+        box.setAttribute(
+            "aria-label",
+            `${badgeLabel}. ${title}. ${body}`
+        );
+        box.innerHTML =
+            `<div class="report-warning__inner">` +
+                `<div class="report-warning__icon" aria-hidden="true">` +
+                    `<span class="material-icons">${strong ? "error_outline" : "flag"}</span>` +
+                `</div>` +
+                `<div class="report-warning__content">` +
+                    `<div class="report-warning__header">` +
+                        `<span class="report-warning__badge">${badgeLabel}</span>` +
+                        `<p class="report-warning__title">${title}</p>` +
+                    `</div>` +
+                    `<p class="report-warning__text">${body}</p>` +
+                    `<div class="report-warning__actions">` +
+                        (window.Reports?.hasUserReported?.(pregunta.id)
+                            ? `<span class="report-warning__reported-label">Ya has reportado esta pregunta</span>`
+                            : `<button id="report-warning-confirm" type="button" class="report-warning__btn report-warning__btn--primary" title="Indica que tú también ves un error en esta pregunta">` +
+                                `Yo también veo un error` +
+                              `</button>`) +
+                        `<button id="report-warning-detail" type="button" class="report-warning__btn report-warning__btn--ghost" title="Abrir formulario para describir el problema">` +
+                            `Detallar problema` +
+                        `</button>` +
+                    `</div>` +
+                `</div>` +
+            `</div>`;
+
+        box.querySelector("#report-warning-confirm")
+            ?.addEventListener("click", () => window.Reports?.confirmReport());
+        box.querySelector("#report-warning-detail")
+            ?.addEventListener("click", () => window.Reports?.open());
+    }
+
+    /** Instantánea del estado actual para poder retomar el test. */
+    function buildProgressSnapshot() {
+        return {
+            question_ids:   state.preguntas.map((p) => p.id),
+            states:         state.estadosPreguntas,
+            current_index:  state.preguntaActual,
+            correct_count:  state.preguntasCorrectas,
+            answered_count: state.totalPreguntas,
+        };
+    }
+
+    /** Programa el guardado del progreso (solo tests normales de Supabase). */
+    function scheduleProgressSave(immediate = false) {
+        if (!state.fromSupabase || state.modoRepaso || state.modoExamen || state.sessionFinished) return;
+        if (!window.TestProgress || !window.Auth?.isLoggedIn()) return;
+
+        const snap = buildProgressSnapshot();
+        if (immediate) window.TestProgress.saveNow(state.quizKey, snap);
+        else window.TestProgress.save(state.quizKey, snap);
+    }
+
+    /** Borra el progreso guardado del quiz actual. */
+    function clearSavedProgress() {
+        if (state.fromSupabase && window.TestProgress && window.Auth?.isLoggedIn()) {
+            window.TestProgress.clear(state.quizKey);
+        }
+    }
+
+    /** Ofrece retomar un test guardado si existe progreso para este quiz. */
+    function ofrecerRetomarProgreso() {
+        if (!window.TestProgress || !window.Auth) return;
+
+        window.Auth.onReady(async (user) => {
+            if (!user || !state.fromSupabase || state.modoExamen || state.modoRepaso) return;
+
+            const prog = await window.TestProgress.load(state.quizKey);
+            if (!prog || !Array.isArray(prog.question_ids) || prog.question_ids.length === 0) return;
+            if (!prog.answered_count || prog.answered_count <= 0) return;
+
+            const byId = new Map(state.todasLasPreguntas.map((p) => [p.id, p]));
+            const ordered = prog.question_ids.map((id) => byId.get(id)).filter(Boolean);
+            if (ordered.length < 2) return;
+
+            const info = $("resume-modal-info");
+            if (info) {
+                info.textContent =
+                    `Llevabas ${prog.answered_count} de ${ordered.length} preguntas respondidas. ` +
+                    `¿Quieres continuar donde lo dejaste?`;
+            }
+            showElement("resume-overlay");
+            showElement("resume-modal");
+
+            const cerrar = () => {
+                hideElement("resume-overlay");
+                hideElement("resume-modal");
+            };
+
+            const contBtn = $("resume-continue-btn");
+            const discBtn = $("resume-discard-btn");
+            if (contBtn) contBtn.onclick = () => { cerrar(); aplicarProgresoGuardado(ordered, prog); };
+            if (discBtn) discBtn.onclick = () => { cerrar(); window.TestProgress.clear(state.quizKey); };
+        });
+    }
+
+    /** Restaura un progreso guardado: orden, respuestas y contadores. */
+    function aplicarProgresoGuardado(ordered, prog) {
+        state.preguntas = ordered;
+        state.estadosPreguntas = prog.states && typeof prog.states === "object" ? prog.states : {};
+        state.preguntasCorrectas = prog.correct_count || 0;
+        state.totalPreguntas = prog.answered_count || 0;
+        state.preguntaActual = Math.min(Math.max(prog.current_index || 0, 0), ordered.length - 1);
+
+        actualizarTotalPreguntasLabel();
+        actualizarContador();
+        mostrarPregunta();
+        setVerificarMode("verificar");
+        clearResultado();
+        restaurarEstadoActual();
     }
 
     // ─────────────────────────────────────────────────────────────────────
@@ -552,12 +930,27 @@
             btn.addEventListener("click", siguientePregunta);
             btn.innerText = "Siguiente";
         }
+        // En modo examen el botón siempre avanza y está habilitado.
+        if (state.modoExamen) {
+            btn.innerText = "Siguiente";
+            btn.disabled = false;
+        }
     }
 
     /** Actualiza el HUD inferior derecho con aciertos y porcentaje. */
     function actualizarContador() {
         const contador = $("contador");
         if (!contador) return;
+
+        // En examen no se desvela ningún resultado: solo el avance.
+        if (state.modoExamen) {
+            const respondidas = state.preguntas.reduce((n, p) => {
+                const sel = state.estadosPreguntas[p.id]?.seleccionadas;
+                return sel && sel.length > 0 ? n + 1 : n;
+            }, 0);
+            contador.innerText = `Respondidas: ${respondidas} / ${state.preguntas.length}`;
+            return;
+        }
 
         const porcentaje =
             state.totalPreguntas !== 0
@@ -593,13 +986,32 @@
         state.totalPreguntas = 0;
         state.preguntasCorrectas = 0;
         state.modoRepaso = false;
+        state.modoExamen = false;
+        state.fromSupabase = false;
         state.sessionFinished = false;
         state.erroresSesion = new Set();
         state.erroresHistoricos = new Set();
+        window.ExamMode?.stopTimer();
+        toggleExamUI(false);
+        hideElement("exam-results");
+        hideElement("report-warning");
         setVerificarMode("verificar");
-        state.estadosPreguntas = {};
+        resetEstadosPreguntas();
         actualizarContador();
         actualizarBotonRepaso();
+    }
+
+    function showQuizActionButtons() {
+        showQuizActionButtons();
+    }
+
+    function clearResultado() {
+        const r = $("resultado");
+        if (r) r.innerText = "";
+    }
+
+    function resetEstadosPreguntas() {
+        resetEstadosPreguntas();
     }
 
     /**
@@ -691,15 +1103,16 @@
                 guardarEstadoActual();
 
                 const nextIndex = (state.preguntaActual + 1) % state.preguntas.length;
-                
-                // resetea el historial al dar la vuelta completa.
-                if (nextIndex === 0) {
+
+                // resetea el historial al dar la vuelta completa (nunca en examen).
+                if (nextIndex === 0 && !state.modoExamen) {
                     state.estadosPreguntas = {}
                 };
 
                 state.preguntaActual = nextIndex;
                 mostrarPregunta();
                 restaurarEstadoActual();
+                scheduleProgressSave();
             };
         }
 
@@ -721,6 +1134,9 @@
         const badgeTema = $("badge-tema");
         if (badgeTema) badgeTema.textContent = pregunta.tema || "Tema";
 
+        // Aviso de reportes de la pregunta visible.
+        renderReportWarning(pregunta);
+
         // Pregunta y opciones.
         contenedorPregunta.innerHTML = formatTextWithCode(pregunta.pregunta);
         highlightCode();
@@ -732,6 +1148,12 @@
         renderMath(contenedorPregunta);
         renderMath(contenedorOpciones);
 
+        // En modo examen el botón siempre avanza (sin verificación).
+        if (state.modoExamen && verificarBtn) {
+            verificarBtn.innerText = "Siguiente";
+            verificarBtn.disabled = false;
+        }
+
         if (state.preguntaActual > 0) showElement("volver-pregunta");
         else hideElement("volver-pregunta");
     }
@@ -741,6 +1163,12 @@
      * los contadores y bloquea los inputs para impedir más cambios.
      */
     function verificarRespuesta() {
+        // En modo examen no hay verificación: el botón avanza sin feedback.
+        if (state.modoExamen) {
+            examAdvance();
+            return;
+        }
+
         const seleccionadasInputs = document.querySelectorAll('input[name="opcion"]:checked');
         if (seleccionadasInputs.length === 0) {
             alert("Selecciona una opción antes de verificar.");
@@ -770,6 +1198,10 @@
         setVerificarMode("siguiente");
         actualizarContador();
 
+        // Persistir el estado recién verificado y el progreso del test.
+        guardarEstadoActual();
+        scheduleProgressSave();
+
         const explicarBtn = $("explicar-ia-btn");
         if (explicarBtn) explicarBtn.disabled = false;
     }
@@ -780,7 +1212,8 @@
             document.querySelectorAll('input[name="opcion"]:checked'),
         ).map((input) => parseInt(input.value, 10));
 
-        const isVerified = $("verificar")?.innerText === "Siguiente";
+        // En examen nada queda "verificado": solo se conserva la selección.
+        const isVerified = !state.modoExamen && $("verificar")?.innerText === "Siguiente";
         state.estadosPreguntas[getPreguntaStateKey()] = { seleccionadas, isVerified };
     }
 
@@ -850,7 +1283,7 @@
                     : (currentIndex + 1) % preguntasRepaso.length;
 
             if (nextIndex === 0) {
-                state.estadosPreguntas = {};
+                resetEstadosPreguntas();
             }
 
             state.preguntas = preguntasRepaso;
@@ -873,16 +1306,16 @@
         }
 
         // Al completar el ciclo, limpia el historial para evitar que aparezcan respuestas previas destacadas.
-        if (nextIndex === 0) {
-            state.estadosPreguntas = {};
+        if (nextIndex === 0 && !state.modoExamen) {
+            resetEstadosPreguntas();
         }
 
         state.preguntaActual = nextIndex;
         mostrarPregunta();
         setVerificarMode("verificar");
-        const resultado = $("resultado");
-        if (resultado) resultado.innerText = "";
+        clearResultado();
         restaurarEstadoActual();
+        scheduleProgressSave();
     }
 
     /** Vuelve a la pregunta anterior si no estamos en la primera. */
@@ -901,9 +1334,9 @@
         state.preguntaActual -= 1;
         mostrarPregunta();
         setVerificarMode("verificar");
-        const resultado = $("resultado");
-        if (resultado) resultado.innerText = "";
+        clearResultado();
         restaurarEstadoActual();
+        scheduleProgressSave();
     }
 
     // ─────────────────────────────────────────────────────────────────────
@@ -927,12 +1360,7 @@
     async function iniciarAsignatura(archivo) {
         resetAppState();
 
-        const resumenBtn = $("resumenBtn");
-        const copyButton = $("copyButton");
-        const aigenBtn   = $("aigen-open-btn");
-        if (resumenBtn) resumenBtn.style.display = "flex";
-        if (copyButton) copyButton.style.display = "flex";
-        if (aigenBtn)   aigenBtn.style.display   = "flex";
+        showQuizActionButtons();
 
         state.archivoActual = archivo;
         state.erroresHistoricos = loadStoredErrors();
@@ -962,12 +1390,7 @@
     async function iniciarMultiplesArchivos(displayName, archivos) {
         resetAppState();
 
-        const resumenBtn = $("resumenBtn");
-        const copyButton = $("copyButton");
-        const aigenBtn   = $("aigen-open-btn");
-        if (resumenBtn) resumenBtn.style.display = "flex";
-        if (copyButton) copyButton.style.display = "flex";
-        if (aigenBtn)   aigenBtn.style.display   = "flex";
+        showQuizActionButtons();
 
         state.archivoActual = displayName;
         state.erroresHistoricos = loadStoredErrors();
@@ -985,27 +1408,71 @@
     }
 
     /**
-     * A partir del id de la URL (slug) decide si arrancar un quiz
-     * de un único archivo o de un grupo. La regla por defecto es
-     * `${id}Preguntas.txt`; las excepciones se mapean explícitamente.
+     * A partir del id de la URL (slug) carga las preguntas:
+     *
+     *  1. Intenta obtenerlas desde Supabase (via window.QuizData).
+     *  2. Si Supabase no responde o no hay datos, cae al fallback
+     *     de archivos .txt (grupos multi-archivo o convención estándar).
      */
-    function cargarDesdeUrl(id) {
+    async function cargarDesdeUrl(id) {
         state.quizKey = id;
 
-        // 1) Grupos multi-archivo (REDESFULL, SDSFULL...).
+        // ── 1. Fuente Supabase ──────────────────────────────────────────
+        if (window.QuizData) {
+            let preguntas = null;
+            try {
+                preguntas = await window.QuizData.getQuestions(id);
+            } catch (err) {
+                console.warn("[QuizData] Error al consultar Supabase:", err);
+            }
+
+            if (preguntas && preguntas.length > 0) {
+                resetAppState();
+
+                const resumenBtn = $("resumenBtn");
+                const copyButton = $("copyButton");
+                const aigenBtn   = $("aigen-open-btn");
+                const examBtn    = $("exam-open-btn");
+                if (resumenBtn) resumenBtn.style.display = "flex";
+                if (copyButton) copyButton.style.display = "flex";
+                if (aigenBtn)   aigenBtn.style.display   = "flex";
+                if (examBtn)    examBtn.style.display    = "flex";
+
+                state.archivoActual = id;
+                state.fromSupabase = true;
+                state.erroresHistoricos = loadStoredErrors();
+
+                const displayName = id.toUpperCase().replace(/-/g, " ");
+                const titleMain = document.querySelector("#asignatura-nombre .title-main");
+                if (titleMain) titleMain.innerText = displayName;
+
+                state.preguntas = preguntas;
+                shuffle(state.preguntas);
+                state.todasLasPreguntas = [...state.preguntas];
+                actualizarTotalPreguntasLabel();
+                actualizarBotonRepaso();
+                mostrarPregunta();
+                mostrarUIQuiz();
+
+                // Fallos remotos + posible test a medias (requieren sesión).
+                mergeRemoteFailures();
+                ofrecerRetomarProgreso();
+                return;
+            }
+        }
+
+        // ── 2. Fallback: archivos .txt ──────────────────────────────────
         const grupo = MULTI_FILE_GROUPS[id];
         if (grupo) {
             iniciarMultiplesArchivos(grupo.displayName, grupo.files);
             return;
         }
 
-        // 2) Asignaturas con nombre de archivo no estándar.
         if (NAME_EXCEPTIONS[id]) {
             iniciarAsignatura(NAME_EXCEPTIONS[id]);
             return;
         }
 
-        // 3) Convención por defecto.
         iniciarAsignatura(`${id}Preguntas.txt`);
     }
 
@@ -1114,41 +1581,51 @@
     }
 
     /**
-     * Menú "Más opciones": agrupa Resumen, Repasar fallos y Generar quiz
-     * con IA en un desplegable para reducir el número de botones visibles.
+     * Panel "Herramientas": rejilla accesible sin scroll de página.
+     * En móvil abre como bottom sheet; en desktop como diálogo centrado.
      */
     function bindMoreOptionsMenu() {
         const toggleBtn = $("more-options-btn");
-        const menu = $("more-options-menu");
-        if (!toggleBtn || !menu) return;
+        const sheet = $("tools-sheet");
+        const panel = $("tools-sheet-panel");
+        const backdrop = $("tools-sheet-backdrop");
+        const closeBtn = $("tools-sheet-close");
+        if (!toggleBtn || !sheet || !panel) return;
 
-        const closeMenu = () => {
-            menu.classList.add("hidden");
+        const closeSheet = () => {
+            sheet.classList.remove("tools-sheet--open");
+            sheet.setAttribute("aria-hidden", "true");
             toggleBtn.setAttribute("aria-expanded", "false");
+            document.body.classList.remove("tools-sheet-body-lock");
         };
-        const openMenu = () => {
-            menu.classList.remove("hidden");
+        const openSheet = () => {
+            sheet.classList.add("tools-sheet--open");
+            sheet.setAttribute("aria-hidden", "false");
             toggleBtn.setAttribute("aria-expanded", "true");
+            document.body.classList.add("tools-sheet-body-lock");
+            closeBtn?.focus();
         };
 
         toggleBtn.addEventListener("click", (event) => {
             event.stopPropagation();
-            if (menu.classList.contains("hidden")) openMenu();
-            else closeMenu();
+            if (sheet.classList.contains("tools-sheet--open")) closeSheet();
+            else openSheet();
         });
 
-        menu.addEventListener("click", (event) => {
-            if (event.target.closest("button")) closeMenu();
-        });
+        closeBtn?.addEventListener("click", closeSheet);
+        backdrop?.addEventListener("click", closeSheet);
 
-        document.addEventListener("click", (event) => {
-            if (!menu.classList.contains("hidden") && !menu.contains(event.target) && event.target !== toggleBtn) {
-                closeMenu();
+        panel.addEventListener("click", (event) => {
+            if (event.target.closest("button") && event.target.closest("button") !== closeBtn) {
+                closeSheet();
             }
         });
 
         document.addEventListener("keydown", (event) => {
-            if (event.key === "Escape" && !menu.classList.contains("hidden")) closeMenu();
+            if (event.key === "Escape" && sheet.classList.contains("tools-sheet--open")) {
+                closeSheet();
+                toggleBtn.focus();
+            }
         });
     }
 
@@ -1175,6 +1652,7 @@
 
         if (restartBtn) {
             restartBtn.addEventListener("click", () => {
+                clearSavedProgress();
                 state.modoRepaso = false;
                 state.sessionFinished = false;
                 state.erroresSesion = new Set();
@@ -1204,6 +1682,51 @@
         }
     }
 
+    /** Botones del modo examen: menú, modal de configuración y resultados. */
+    function bindExamButtons() {
+        $("exam-open-btn")?.addEventListener("click", abrirModalExamen);
+        $("exam-close")?.addEventListener("click", cerrarModalExamen);
+        $("exam-overlay")?.addEventListener("click", cerrarModalExamen);
+        $("exam-start-btn")?.addEventListener("click", confirmarConfigExamen);
+        $("exam-finish-btn")?.addEventListener("click", finalizarExamen);
+        $("exam-exit-btn")?.addEventListener("click", salirModoExamen);
+        $("exam-retry-btn")?.addEventListener("click", () => {
+            hideElement("exam-results");
+            iniciarModoExamen(window.ExamMode?.getConfig() || { pointsOk: 1, pointsBad: 0.25, count: 20 });
+            toggleQuizQuestionUI(true);
+            toggleQuizUtilityButtons(true);
+            showElement("stats-panel");
+        });
+
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape" && !$("exam-modal")?.classList.contains("hidden")) {
+                cerrarModalExamen();
+            }
+        });
+    }
+
+    /** Enlaces a contribuir pregunta y al foro de la asignatura actual. */
+    function bindCommunityButtons() {
+        $("contribute-btn")?.addEventListener("click", () => {
+            window.location.href = "/contribuir?subject=" + encodeURIComponent(state.quizKey || "");
+        });
+        $("forum-btn")?.addEventListener("click", () => {
+            window.location.href = "/foro/" + encodeURIComponent(state.quizKey || "");
+        });
+    }
+
+    /** Refresca el aviso de reportes cuando el usuario reporta la pregunta. */
+    function bindReportEvents() {
+        document.addEventListener("question-reported", (e) => {
+            const questionId = e.detail?.questionId;
+            if (!questionId) return;
+            const pregunta = state.todasLasPreguntas.find((p) => p.id === questionId);
+            if (pregunta) pregunta.reportCount = (pregunta.reportCount || 0) + 1;
+            const actual = getPreguntaActual();
+            if (actual?.id === questionId) renderReportWarning(actual);
+        });
+    }
+
     /**
      * Conecta los listeners persistentes (no dependen de la pregunta
      * visible). Los listeners por pregunta se configuran en mostrarPregunta().
@@ -1221,6 +1744,9 @@
         bindReviewButton();
         bindSessionResultsButtons();
         bindKeyboardShortcuts();
+        bindExamButtons();
+        bindCommunityButtons();
+        bindReportEvents();
     }
 
     /** Punto de entrada: lee el slug de la URL y arranca si procede. */
@@ -1249,12 +1775,20 @@
         /** Copia inmutable de las preguntas actualmente cargadas. */
         getPreguntas: () => [...state.preguntas],
 
+        /** Pregunta actualmente visible (incluye id de Supabase si procede). */
+        getCurrentQuestion: () => getPreguntaActual(),
+
         /**
          * Reemplaza las preguntas del quiz con las generadas por IA y
          * resetea todos los contadores y estados para comenzar desde cero.
          */
         injectGeneratedQuestions(nuevasPreguntas) {
             state.modoRepaso = false;
+            state.modoExamen = false;
+            // Las preguntas de IA no existen en la BD: sin sync ni progreso.
+            state.fromSupabase = false;
+            window.ExamMode?.stopTimer();
+            toggleExamUI(false);
             state.erroresSesion = new Set();
             state.erroresHistoricos = new Set();
             state.preguntas = nuevasPreguntas.map((pregunta, index) => ({

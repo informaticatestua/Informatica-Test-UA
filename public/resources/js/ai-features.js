@@ -24,6 +24,11 @@
         DEEPSEEK_MODEL:  "ai_deepseek_model",
     });
 
+    const DEFAULT_INSTRUCTIONS =
+        "Eres un tutor de informática universitaria. Responde en español.\n" +
+        "Explica brevemente (máximo 180 palabras) por qué la respuesta correcta es correcta " +
+        "y por qué cada opción incorrecta es incorrecta. Sé directo y educativo; no repitas el enunciado.";
+
     const GEMINI_MODELS    = ["gemini-2.0-flash", "gemini-2.5-flash", "gemini-1.5-pro"];
     const GROQ_MODELS      = [
         "llama-3.3-70b-versatile",
@@ -31,6 +36,9 @@
         "llama-3.1-8b-instant",
     ];
     const DEEPSEEK_MODELS  = ["deepseek-chat", "deepseek-reasoner"];
+
+    const LETTERS = ["A", "B", "C", "D", "E", "F"];
+    const MAX_TOKENS = 600;
 
     // ─────────────────────────────────────────────────────────────────────
     // 2. HELPERS DE STORAGE Y DOM
@@ -76,14 +84,30 @@
     }
 
     function saveSettings() {
-        const provider = document.querySelector('input[name="ai-provider"]:checked')?.value ?? "gemini";
+        const provider     = document.querySelector('input[name="ai-provider"]:checked')?.value ?? "gemini";
+        const geminiModel  = val("ai-gemini-model")  || "gemini-2.0-flash";
+        const groqModel    = val("ai-groq-model")    || "llama-3.3-70b-versatile";
+        const deepseekModel= val("ai-deepseek-model") || "deepseek-chat";
+
         save(LS.PROVIDER,       provider);
         save(LS.GEMINI_KEY,     val("ai-gemini-key"));
-        save(LS.GEMINI_MODEL,   val("ai-gemini-model")   || "gemini-2.0-flash");
+        save(LS.GEMINI_MODEL,   geminiModel);
         save(LS.GROQ_KEY,       val("ai-groq-key"));
-        save(LS.GROQ_MODEL,     val("ai-groq-model")     || "llama-3.3-70b-versatile");
+        save(LS.GROQ_MODEL,     groqModel);
         save(LS.DEEPSEEK_KEY,   val("ai-deepseek-key"));
-        save(LS.DEEPSEEK_MODEL, val("ai-deepseek-model") || "deepseek-chat");
+        save(LS.DEEPSEEK_MODEL, deepseekModel);
+
+        // Persistir proveedor y modelos en Supabase si el usuario está autenticado
+        const userId = window.Auth?.getUser()?.id;
+        const db     = window.SupabaseClient;
+        if (userId && db) {
+            db.from("profiles").update({
+                ai_provider:       provider,
+                ai_gemini_model:   geminiModel,
+                ai_groq_model:     groqModel,
+                ai_deepseek_model: deepseekModel,
+            }).eq("id", userId); // fire-and-forget
+        }
 
         const btn = $("ai-settings-save");
         if (btn) {
@@ -262,7 +286,6 @@
     function renderQuestionSummary(data) {
         const container = $("ai-question-summary");
         if (!container) return;
-        const letras = ["A", "B", "C", "D", "E", "F"];
         let html = `<p class="font-medium text-text-main mb-3 leading-snug">${esc(data.pregunta)}</p><ul class="space-y-1">`;
 
         data.opciones.forEach((op, i) => {
@@ -275,7 +298,7 @@
                 cls = "text-red-600 dark:text-red-400 line-through opacity-70";
                 badge = ' <span class="text-[0.68rem] bg-red-100 dark:bg-red-900/40 text-red-600 dark:text-red-400 px-1.5 py-0.5 rounded ml-1">✗</span>';
             }
-            html += `<li class="flex items-start gap-1 ${cls}"><span class="font-bold shrink-0">${letras[i] ?? i + 1}.</span><span>${esc(op.text)}${badge}</span></li>`;
+            html += `<li class="flex items-start gap-1 ${cls}"><span class="font-bold shrink-0">${LETTERS[i] ?? i + 1}.</span><span>${esc(op.text)}${badge}</span></li>`;
         });
 
         container.innerHTML = html + "</ul>";
@@ -286,17 +309,14 @@
     // ─────────────────────────────────────────────────────────────────────
 
     function buildPrompt(data) {
-        const letras = ["A", "B", "C", "D", "E", "F"];
         const correctas = data.opciones.filter((o) => o.isCorrect).map((o) => o.text).join(", ");
-        let prompt = `Eres un tutor de informática universitaria. Responde en español.
-Explica brevemente (máximo 180 palabras) por qué la respuesta correcta es correcta y por qué cada opción incorrecta es incorrecta. Sé directo y educativo; no repitas el enunciado.
+        const customInstructions = (window.Auth?.getProfile()?.ai_custom_instructions ?? "").trim();
+        const instructions = customInstructions || DEFAULT_INSTRUCTIONS;
 
-PREGUNTA: ${data.pregunta}
-
-OPCIONES:\n`;
+        let prompt = `${instructions}\n\nPREGUNTA: ${data.pregunta}\n\nOPCIONES:\n`;
         data.opciones.forEach((op, i) => {
             const marca = op.isCorrect ? "✓ CORRECTA" : "✗ INCORRECTA";
-            prompt += `${letras[i] ?? i + 1}. [${marca}] ${op.text}\n`;
+            prompt += `${LETTERS[i] ?? i + 1}. [${marca}] ${op.text}\n`;
         });
         prompt += `\nRespuesta correcta: ${correctas}`;
         return prompt;
@@ -372,6 +392,37 @@ OPCIONES:\n`;
             .replace(/"/g, "&quot;");
     }
 
+    // ── SSE Streaming utility ───────────────────────────────────────────
+
+    async function consumeSSE(res, extractTextFn, outputEl) {
+        const reader  = res.body.getReader();
+        const decoder = new TextDecoder();
+        let buffer    = "";
+        let firstChunk = true;
+
+        while (true) {
+            const { done, value } = await reader.read();
+            if (done) break;
+            buffer += decoder.decode(value, { stream: true });
+            const lines = buffer.split("\n");
+            buffer = lines.pop() ?? "";
+
+            for (const line of lines) {
+                if (!line.startsWith("data: ")) continue;
+                const data = line.slice(6).trim();
+                if (data === "[DONE]") continue;
+                try {
+                    const json = JSON.parse(data);
+                    const text = extractTextFn(json);
+                    if (text) {
+                        if (firstChunk) { $("ai-loading")?.classList.add("hidden"); firstChunk = false; }
+                        appendText(outputEl, text);
+                    }
+                } catch { /* ignorar líneas mal formadas */ }
+            }
+        }
+    }
+
     // ── Gemini (SSE streaming) ──────────────────────────────────────────
 
     async function callGemini(prompt, modelOverride, outputEl) {
@@ -393,32 +444,7 @@ OPCIONES:\n`;
             throw new Error(err?.error?.message ?? `Gemini error ${res.status}`);
         }
 
-        const reader  = res.body.getReader();
-        const decoder = new TextDecoder();
-        let buffer    = "";
-        let firstChunk = true;
-
-        while (true) {
-            const { done, value } = await reader.read();
-            if (done) break;
-            buffer += decoder.decode(value, { stream: true });
-            const lines = buffer.split("\n");
-            buffer = lines.pop() ?? "";
-
-            for (const line of lines) {
-                if (!line.startsWith("data: ")) continue;
-                const data = line.slice(6).trim();
-                if (data === "[DONE]") continue;
-                try {
-                    const json = JSON.parse(data);
-                    const text = json?.candidates?.[0]?.content?.parts?.[0]?.text ?? "";
-                    if (text) {
-                        if (firstChunk) { $("ai-loading")?.classList.add("hidden"); firstChunk = false; }
-                        appendText(outputEl, text);
-                    }
-                } catch { /* ignorar líneas mal formadas */ }
-            }
-        }
+        await consumeSSE(res, (json) => json?.candidates?.[0]?.content?.parts?.[0]?.text ?? "", outputEl);
     }
 
     // ── Groq (OpenAI-compatible SSE streaming) ──────────────────────────
@@ -439,7 +465,7 @@ OPCIONES:\n`;
                 model,
                 messages: [{ role: "user", content: prompt }],
                 stream: true,
-                max_tokens: 600,
+                max_tokens: MAX_TOKENS,
             }),
             signal: abortCtrl.signal,
         });
@@ -449,32 +475,7 @@ OPCIONES:\n`;
             throw new Error(err?.error?.message ?? `Groq error ${res.status}`);
         }
 
-        const reader  = res.body.getReader();
-        const decoder = new TextDecoder();
-        let buffer    = "";
-        let firstChunk = true;
-
-        while (true) {
-            const { done, value } = await reader.read();
-            if (done) break;
-            buffer += decoder.decode(value, { stream: true });
-            const lines = buffer.split("\n");
-            buffer = lines.pop() ?? "";
-
-            for (const line of lines) {
-                if (!line.startsWith("data: ")) continue;
-                const data = line.slice(6).trim();
-                if (data === "[DONE]") continue;
-                try {
-                    const json = JSON.parse(data);
-                    const text = json?.choices?.[0]?.delta?.content ?? "";
-                    if (text) {
-                        if (firstChunk) { $("ai-loading")?.classList.add("hidden"); firstChunk = false; }
-                        appendText(outputEl, text);
-                    }
-                } catch { /* ignorar */ }
-            }
-        }
+        await consumeSSE(res, (json) => json?.choices?.[0]?.delta?.content ?? "", outputEl);
     }
 
     // ── DeepSeek (OpenAI-compatible SSE streaming) ─────────────────────
@@ -495,7 +496,7 @@ OPCIONES:\n`;
                 model,
                 messages: [{ role: "user", content: prompt }],
                 stream: true,
-                max_tokens: 600,
+                max_tokens: MAX_TOKENS,
             }),
             signal: abortCtrl.signal,
         });
@@ -505,32 +506,7 @@ OPCIONES:\n`;
             throw new Error(err?.error?.message ?? `DeepSeek error ${res.status}`);
         }
 
-        const reader  = res.body.getReader();
-        const decoder = new TextDecoder();
-        let buffer    = "";
-        let firstChunk = true;
-
-        while (true) {
-            const { done, value } = await reader.read();
-            if (done) break;
-            buffer += decoder.decode(value, { stream: true });
-            const lines = buffer.split("\n");
-            buffer = lines.pop() ?? "";
-
-            for (const line of lines) {
-                if (!line.startsWith("data: ")) continue;
-                const data = line.slice(6).trim();
-                if (data === "[DONE]") continue;
-                try {
-                    const json = JSON.parse(data);
-                    const text = json?.choices?.[0]?.delta?.content ?? "";
-                    if (text) {
-                        if (firstChunk) { $("ai-loading")?.classList.add("hidden"); firstChunk = false; }
-                        appendText(outputEl, text);
-                    }
-                } catch { /* ignorar líneas mal formadas */ }
-            }
-        }
+        await consumeSSE(res, (json) => json?.choices?.[0]?.delta?.content ?? "", outputEl);
     }
 
     // ─────────────────────────────────────────────────────────────────────
@@ -572,10 +548,9 @@ OPCIONES:\n`;
     }
 
     function buildChatMessages(userMessage, questionData, provider) {
-        const letras  = ["A", "B", "C", "D", "E", "F"];
         const ctxOpts = questionData.opciones.map((o, i) => {
             const marca = o.isCorrect ? "✓ CORRECTA" : "✗ INCORRECTA";
-            return `${letras[i] ?? i + 1}. [${marca}] ${o.text}`;
+            return `${LETTERS[i] ?? i + 1}. [${marca}] ${o.text}`;
         }).join("\n");
 
         const systemContent =
@@ -701,7 +676,7 @@ OPCIONES:\n`;
         const res = await fetch("https://api.groq.com/openai/v1/chat/completions", {
             method: "POST",
             headers: { "Authorization": `Bearer ${apiKey}`, "Content-Type": "application/json" },
-            body: JSON.stringify({ model, messages, stream: true, max_tokens: 600 }),
+            body: JSON.stringify({ model, messages, stream: true, max_tokens: MAX_TOKENS }),
             signal: chatAbortCtrl.signal,
         });
 
@@ -721,7 +696,7 @@ OPCIONES:\n`;
         const res = await fetch("https://api.deepseek.com/v1/chat/completions", {
             method: "POST",
             headers: { "Authorization": `Bearer ${apiKey}`, "Content-Type": "application/json" },
-            body: JSON.stringify({ model, messages, stream: true, max_tokens: 600 }),
+            body: JSON.stringify({ model, messages, stream: true, max_tokens: MAX_TOKENS }),
             signal: chatAbortCtrl.signal,
         });
 
