@@ -10,20 +10,25 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 	<div id="main-container" class="flex flex-col items-center justify-center m-auto w-full">
 		<div id="app" class="relative w-max max-w-[95vw] text-center bg-surface shadow-md shadow-black/5 rounded-[5px] px-[40px] py-[30px] mx-auto my-[20px] box-border border border-border-subtle">
 			
-			<div class="absolute top-[10px] right-[10px] sm:top-[15px] sm:right-[15px] flex items-center justify-end gap-2 z-10 w-full sm:w-auto pr-[10px] sm:pr-0 pl-[40px] pointer-events-none">
-				<a id="report-btn" href="https://github.com/informaticatestua/Informatica-Test-UA/pulls" target="_blank" rel="noopener noreferrer" class="pointer-events-auto px-[8px] py-[4px] bg-surface border border-border-subtle rounded-[5px] text-text-muted hover:text-red-500 hover:border-red-500 hover:bg-red-50 dark:hover:bg-red-900/20 transition-colors flex items-center justify-center gap-[5px] text-[0.85em] font-medium group cursor-pointer" title="Reportar un error">
-					<span class="material-icons text-[16px] group-hover:text-red-500 transition-colors">flag</span>
-					<span class="hidden sm:inline">Reportar</span>
-				</a>
-				<button id="copyButton" class="pointer-events-auto px-[8px] py-[4px] bg-surface z-10 border border-border-subtle rounded-[5px] text-text-muted hover:text-text-main hover:bg-surface-hover transition-colors flex items-center justify-center gap-[5px] text-[0.85em] font-medium cursor-pointer" style="display: none">
-					<span class="material-icons text-[16px]">content_copy</span>
-					<span id="copyText">Copiar</span>
+			<div class="absolute top-[10px] right-[10px] sm:top-[15px] sm:right-[15px] flex items-center justify-end gap-1.5 z-10 w-full sm:w-auto pr-[10px] sm:pr-0 pl-[40px] pointer-events-none">
+				<button id="explicar-ia-btn"  class="pointer-events-auto p-[7px] bg-gradient-to-br from-blue-500 to-violet-600 text-white rounded-[8px] shadow-sm hover:shadow-md hover:-translate-y-px transition-all flex items-center justify-center cursor-pointer border-none disabled:opacity-40 disabled:cursor-not-allowed" title="Explicar con IA" disabled>
+					<span class="material-icons mi-lg">auto_awesome</span>
+				</button>
+				<button id="report-btn"  class="pointer-events-auto p-[7px] bg-surface border border-border-subtle rounded-[8px] text-text-muted hover:text-red-500 hover:border-red-500 hover:bg-red-50 dark:hover:bg-red-900/20 transition-colors flex items-center justify-center group cursor-pointer" title="Reportar un error en esta pregunta">
+					<span class="material-icons mi-sm group-hover:text-red-500 transition-colors">flag</span>
+				</button>
+				<button id="copyButton" class="pointer-events-auto p-[7px] bg-surface z-10 border border-border-subtle rounded-[8px] text-text-muted hover:text-text-main hover:bg-surface-hover transition-colors flex items-center justify-center cursor-pointer" class="hidden" title="Copiar pregunta">
+					<span class="material-icons mi-sm">content_copy</span>
+					<span id="copyText" class="sr-only">Copiar</span>
 				</button>
 			</div>
 
 			<div id="pregunta" class="text-left text-[0.95em] md:text-[1em] mb-[15px] mt-[25px] sm:mt-[5px] sm:pr-[180px]"></div>
+
+			<div id="report-warning" class="report-warning hidden" role="status" aria-live="polite" aria-atomic="true"></div>
+
 			<form id="opciones" class="text-left flex flex-col mt-[1em] w-full gap-[10px] sm:gap-[12px] min-w-[300px]"></form>
-			
+
 			<div id="resultado" class="mt-[15px] font-semibold text-center min-h-[24px]"></div>
 
 			<section id="session-results" class="hidden text-left">
@@ -59,58 +64,154 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 					<button id="results-resumen-btn" class="btn mt-0! w-full sm:w-auto">Ver resumen</button>
 				</div>
 			</section>
+
+			<!-- ── Resultados del modo examen ─────────────────────────────────── -->
+			<section id="exam-results" class="hidden text-left">
+				<div class="results-hero">
+					<div class="results-badge results-badge--exam">
+						<span class="material-icons">timer</span>
+						<span>Examen finalizado</span>
+					</div>
+					<h3 id="exam-results-title" class="results-title">Resultados del examen</h3>
+					<p id="exam-results-subtitle" class="results-subtitle"></p>
+				</div>
+
+				<div class="results-grid results-grid--exam">
+					<article class="results-stat-card">
+						<span class="results-stat-label">Nota</span>
+						<strong id="exam-score" class="results-stat-value">0</strong>
+					</article>
+					<article class="results-stat-card">
+						<span class="results-stat-label">Tiempo</span>
+						<strong id="exam-time" class="results-stat-value">0:00</strong>
+					</article>
+					<article class="results-stat-card">
+						<span class="results-stat-label">Aciertos</span>
+						<strong id="exam-correct" class="results-stat-value text-green-600 dark:text-green-400">0</strong>
+					</article>
+					<article class="results-stat-card">
+						<span class="results-stat-label">Fallos</span>
+						<strong id="exam-wrong" class="results-stat-value text-red-600 dark:text-red-400">0</strong>
+					</article>
+					<article class="results-stat-card">
+						<span class="results-stat-label">En blanco</span>
+						<strong id="exam-blank" class="results-stat-value">0</strong>
+					</article>
+				</div>
+
+				<div class="flex items-center gap-3 mb-4 mt-2">
+					<div class="flex-1 h-px bg-border-subtle"></div>
+					<span class="text-[0.7rem] text-text-muted font-semibold uppercase tracking-wider">Desglose pregunta a pregunta</span>
+					<div class="flex-1 h-px bg-border-subtle"></div>
+				</div>
+				<div id="exam-breakdown" class="space-y-3 mb-5"></div>
+
+				<div class="results-actions">
+					<button id="exam-exit-btn" class="btn-primary mt-0! w-full sm:w-auto">Volver al modo test</button>
+					<button id="exam-retry-btn" class="btn-secondary mt-0! w-full sm:w-auto">Repetir examen</button>
+				</div>
+			</section>
 			
-			<div id="action-buttons-container" class="flex flex-col sm:flex-row justify-center sm:justify-between items-center gap-[12px] mt-[24px] w-full pt-[15px] sm:pt-[20px] border-t border-border-subtle">
-				<!-- Fila secundaria móvil / Izquierda desktop -->
-				<div class="order-3 sm:order-1 flex justify-center sm:justify-start items-center gap-[10px] w-full sm:w-auto">
-					<button id="volver-pregunta" class="btn-ghost hidden mt-0!">← Anterior</button>
-					<button id="saltar-pregunta" class="btn-ghost mt-0!" style="display: none;">Saltar →</button>
-				</div>
-				<!-- Fila principal móvil / Centro desktop -->
-				<div class="order-1 sm:order-2 w-full sm:w-auto flex flex-col sm:flex-row justify-center items-center gap-2">
-					<button id="verificar" class="hidden btn-primary mt-0! w-full sm:w-auto sm:min-w-[200px]" disabled>Verificar / Continuar</button>
-					<button id="explicar-ia-btn" class="btn-explicar-ia" disabled onclick="window.AIFeatures?.showExplanation()">
-						<span class="material-icons" style="font-size:1.1em;">auto_awesome</span>
-						Explicar con IA
+			<div id="action-buttons-container" class="quiz-actions">
+				<div class="quiz-actions-primary">
+					<button id="volver-pregunta" class="quiz-nav-btn hidden" aria-label="Pregunta anterior">
+						<span class="material-icons" aria-hidden="true">chevron_left</span>
+						<span class="quiz-nav-btn-label">Anterior</span>
 					</button>
-				</div>
-				<!-- Fila terciaria móvil / Derecha desktop -->
-				<div class="order-2 sm:order-3 w-full sm:w-auto flex justify-center sm:justify-end">
-					<button id="volver" class="btn-ghost mt-0!" onclick="window.location.href = '/'">Volver al Menú</button>
+					<button id="verificar" class="hidden quiz-verify-btn" disabled>Verificar / Continuar</button>
+					<div id="tools-trigger-wrap" class="w-full sm:w-auto">
+						<button id="more-options-btn" class="quiz-nav-btn w-full sm:w-auto" aria-haspopup="dialog" aria-expanded="false" aria-controls="tools-sheet-panel">
+							<span class="material-icons" aria-hidden="true">apps</span>
+							<span class="quiz-nav-btn-label">Herramientas</span>
+						</button>
+					</div>
 				</div>
 			</div>
 		</div>
+	</div>
 
-		<div id="button-container" class="w-full flex justify-center mt-[20px] relative">
-			<div class="relative">
-				<button id="more-options-btn" class="btn flex! items-center gap-1.5" aria-haspopup="true" aria-expanded="false" aria-controls="more-options-menu">
-					<span class="material-icons text-[18px]">tune</span>
-					Más opciones
-					<span class="material-icons text-[18px] transition-transform" id="more-options-chevron">expand_more</span>
+	<!-- Panel de herramientas: rejilla fija, sin scroll de página -->
+	<div id="tools-sheet" class="tools-sheet" aria-hidden="true">
+		<div id="tools-sheet-backdrop" class="tools-sheet-backdrop"></div>
+		<div id="tools-sheet-panel" class="tools-sheet-panel" role="dialog" aria-modal="true" aria-labelledby="tools-sheet-title">
+			<div class="tools-sheet-handle" aria-hidden="true"></div>
+			<header class="tools-sheet-header">
+				<div>
+					<h3 id="tools-sheet-title" class="tools-sheet-title">Herramientas del test</h3>
+					<p class="tools-sheet-subtitle">Modos de estudio y accesos rápidos</p>
+				</div>
+				<button id="tools-sheet-close" type="button" class="tools-sheet-close" aria-label="Cerrar herramientas">
+					<span class="material-icons">close</span>
 				</button>
-				<div id="more-options-menu" role="menu" class="hidden absolute z-40 bottom-full mb-2 left-1/2 -translate-x-1/2 sm:left-auto sm:right-0 sm:translate-x-0 min-w-[230px] bg-surface border border-border-subtle rounded-[10px] shadow-md shadow-black/10 p-[6px] flex flex-col gap-[2px]">
-					<button id="resumenBtn" class="menu-item" style="display: none">
-						<span class="material-icons text-[18px]">summarize</span>
-						Resumen
-					</button>
-					<button id="review-errors-btn" class="menu-item" style="display: none">
-						<span class="material-icons text-[18px]">refresh</span>
-						<span id="review-errors-label">Repasar fallos</span>
-					</button>
-					<button id="aigen-open-btn" class="menu-item menu-item-aigen" style="display: none" aria-label="Generar quiz con IA">
-						<span class="material-icons text-[18px]">psychology</span>
-						Generar quiz con IA
-					</button>
+			</header>
+			<div class="tools-sheet-body">
+				<div id="tools-quiz-section" class="tools-sheet-section">
+					<p class="tools-sheet-section-label">Estudio</p>
+					<div class="tools-sheet-grid">
+						<button id="resumenBtn" type="button" class="tools-sheet-item" class="hidden">
+							<span class="tools-sheet-icon tools-sheet-icon--blue"><span class="material-icons">summarize</span></span>
+							<span class="tools-sheet-item-text">
+								<span class="tools-sheet-item-label">Resumen</span>
+								<span class="tools-sheet-item-desc">Todas las preguntas</span>
+							</span>
+						</button>
+						<button id="review-errors-btn" type="button" class="tools-sheet-item" class="hidden">
+							<span class="tools-sheet-icon tools-sheet-icon--amber"><span class="material-icons">refresh</span></span>
+							<span class="tools-sheet-item-text">
+								<span id="review-errors-label" class="tools-sheet-item-label">Repasar fallos</span>
+								<span class="tools-sheet-item-desc">Solo las incorrectas</span>
+							</span>
+						</button>
+						<button id="aigen-open-btn" type="button" class="tools-sheet-item tools-sheet-item--accent" class="hidden" aria-label="Generar quiz con IA">
+							<span class="tools-sheet-icon tools-sheet-icon--violet"><span class="material-icons">psychology</span></span>
+							<span class="tools-sheet-item-text">
+								<span class="tools-sheet-item-label">Quiz con IA</span>
+								<span class="tools-sheet-item-desc">Preguntas nuevas</span>
+							</span>
+						</button>
+						<button id="exam-open-btn" type="button" class="tools-sheet-item tools-sheet-item--accent" class="hidden" aria-label="Modo examen real">
+							<span class="tools-sheet-icon tools-sheet-icon--orange"><span class="material-icons">timer</span></span>
+							<span class="tools-sheet-item-text">
+								<span class="tools-sheet-item-label">Modo examen</span>
+								<span class="tools-sheet-item-desc">Simulacro real</span>
+							</span>
+						</button>
+					</div>
+				</div>
+				<div class="tools-sheet-section">
+					<p class="tools-sheet-section-label">Comunidad</p>
+					<div class="tools-sheet-grid">
+						<button id="contribute-btn" type="button" class="tools-sheet-item" aria-label="Contribuir una pregunta">
+							<span class="tools-sheet-icon tools-sheet-icon--green"><span class="material-icons">add_circle_outline</span></span>
+							<span class="tools-sheet-item-text">
+								<span class="tools-sheet-item-label">Contribuir</span>
+								<span class="tools-sheet-item-desc">Añadir pregunta</span>
+							</span>
+						</button>
+						<button id="forum-btn" type="button" class="tools-sheet-item" aria-label="Foro de la asignatura">
+							<span class="tools-sheet-icon tools-sheet-icon--slate"><span class="material-icons">forum</span></span>
+							<span class="tools-sheet-item-text">
+								<span class="tools-sheet-item-label">Foro</span>
+								<span class="tools-sheet-item-desc">Dudas y debate</span>
+							</span>
+						</button>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 
 	<div id="stats-panel" class="hidden fixed bottom-[10px] right-[10px] z-50 flex items-center gap-2.5 bg-surface/90 text-text-main text-[13px] px-[14px] py-[8px] rounded-full border border-border-subtle shadow-md shadow-black/10 backdrop-blur-sm">
-		<span class="material-icons text-[16px] text-text-muted">bar_chart</span>
+		<span class="material-icons mi-sm text-text-muted">bar_chart</span>
 		<span id="total-preguntas" class="font-medium whitespace-nowrap"></span>
 		<span class="w-px h-4 bg-border-subtle" aria-hidden="true"></span>
 		<span id="contador" class="font-medium whitespace-nowrap"></span>
+	</div>
+
+	<!-- Cronómetro del modo examen -->
+	<div id="exam-timer-chip" class="hidden fixed top-[80px] right-[10px] z-50 flex items-center gap-2 bg-amber-500/95 text-white text-[14px] px-[14px] py-[8px] rounded-full shadow-md shadow-black/15 backdrop-blur-sm font-semibold tabular-nums">
+		<span class="material-icons text-[17px]">timer</span>
+		<span id="exam-timer-label">0:00</span>
 	</div>
 
 	<!-- ─── AI Generate overlay ─────────────────────────────────────────── -->
@@ -366,6 +467,135 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
     word-break: break-word;
   }
 </style>
+
+<!-- ─── Exam Config Modal ─────────────────────────────────────────────────── -->
+<div id="exam-overlay" class="hidden fixed inset-0 z-[300] bg-black/60 backdrop-blur-sm"></div>
+<div id="exam-modal" class="hidden fixed inset-0 z-[301] flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="exam-modal-title">
+	<div class="exam-modal-box w-full max-w-md bg-surface rounded-2xl shadow-2xl border border-border-subtle overflow-hidden">
+		<div class="h-1 w-full bg-gradient-to-r from-amber-400 via-orange-500 to-red-500"></div>
+		<div class="p-5 sm:p-6">
+			<div class="flex items-center justify-between mb-5">
+				<div class="flex items-center gap-2">
+					<span class="material-icons text-amber-500">timer</span>
+					<h3 id="exam-modal-title" class="font-heading font-bold text-text-main text-lg m-0">Modo examen real</h3>
+				</div>
+				<button id="exam-close" class="p-1 text-text-muted hover:text-text-main rounded-full hover:bg-surface-hover transition-colors cursor-pointer border-none bg-transparent" aria-label="Cerrar">
+					<span class="material-icons">close</span>
+				</button>
+			</div>
+
+			<p class="text-text-muted text-sm mb-5 leading-relaxed">Sin retroalimentación hasta el final. Configura la puntuación y el número de preguntas:</p>
+
+			<div class="space-y-4">
+				<div class="grid grid-cols-2 gap-3">
+					<div>
+						<label class="block text-sm font-medium text-text-main mb-1.5" for="exam-points-ok">Puntos por acierto</label>
+						<input id="exam-points-ok" type="number" step="0.05" min="0" value="1" class="w-full px-3 py-2.5 rounded-lg bg-background border border-border-subtle text-text-main text-sm focus:outline-none focus:border-amber-500 transition-colors" />
+					</div>
+					<div>
+						<label class="block text-sm font-medium text-text-main mb-1.5" for="exam-points-bad">Penalización por fallo</label>
+						<input id="exam-points-bad" type="number" step="0.05" min="0" value="0.25" class="w-full px-3 py-2.5 rounded-lg bg-background border border-border-subtle text-text-main text-sm focus:outline-none focus:border-amber-500 transition-colors" />
+					</div>
+				</div>
+				<div>
+					<label class="block text-sm font-medium text-text-main mb-1.5" for="exam-question-count">
+						Número de preguntas <span class="text-text-muted font-normal">(máx. <span id="exam-max-questions">0</span>)</span>
+					</label>
+					<input id="exam-question-count" type="number" min="1" step="1" value="20" class="w-full px-3 py-2.5 rounded-lg bg-background border border-border-subtle text-text-main text-sm focus:outline-none focus:border-amber-500 transition-colors" />
+				</div>
+				<div id="exam-config-error" class="hidden p-3 bg-red-50 dark:bg-red-900/20 border border-red-300 dark:border-red-700 rounded-lg text-red-700 dark:text-red-400 text-sm"></div>
+			</div>
+
+			<button id="exam-start-btn" class="mt-6 w-full py-3 rounded-xl text-sm font-semibold cursor-pointer border-none flex items-center justify-center gap-2 transition-all text-white bg-amber-600 hover:bg-amber-700 shadow-sm">
+				<span class="material-icons" style="font-size:1.1rem;">play_arrow</span>
+				Comenzar examen
+			</button>
+		</div>
+	</div>
+</div>
+
+<!-- ─── Resume Test Modal ─────────────────────────────────────────────────── -->
+<div id="resume-overlay" class="hidden fixed inset-0 z-[300] bg-black/60 backdrop-blur-sm"></div>
+<div id="resume-modal" class="hidden fixed inset-0 z-[301] flex items-center justify-center p-4" role="dialog" aria-modal="true">
+	<div class="exam-modal-box w-full max-w-sm bg-surface rounded-2xl shadow-2xl border border-border-subtle overflow-hidden">
+		<div class="h-1 w-full bg-gradient-to-r from-blue-400 via-blue-500 to-indigo-500"></div>
+		<div class="p-6 text-center">
+			<div class="w-12 h-12 mx-auto rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center mb-3">
+				<span class="material-icons text-blue-600 dark:text-blue-400" style="font-size:1.5rem;">restore</span>
+			</div>
+			<h3 class="font-heading font-bold text-text-main text-lg m-0 mb-1">Tienes un test a medias</h3>
+			<p id="resume-modal-info" class="text-text-muted text-sm m-0 mb-5"></p>
+			<div class="flex flex-col gap-2">
+				<button id="resume-continue-btn" class="w-full py-2.5 rounded-xl text-sm font-semibold cursor-pointer border-none text-white bg-blue-600 hover:bg-blue-700 transition-colors flex items-center justify-center gap-2">
+					<span class="material-icons" style="font-size:1rem;">play_arrow</span>
+					Retomar test
+				</button>
+				<button id="resume-discard-btn" class="w-full py-2.5 rounded-xl text-sm font-medium cursor-pointer bg-transparent hover:bg-surface-hover text-text-muted hover:text-text-main border border-border-subtle transition-colors">
+					Empezar de nuevo
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- ─── Report Modal ──────────────────────────────────────────────────────── -->
+<div id="report-overlay" class="hidden fixed inset-0 z-[300] bg-black/60 backdrop-blur-sm"></div>
+<div id="report-modal" class="hidden fixed inset-0 z-[301] flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="report-modal-title">
+	<div class="report-modal-box w-full max-w-md bg-surface rounded-2xl shadow-2xl border border-border-subtle overflow-hidden">
+		<div class="h-1 w-full bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400"></div>
+		<div class="p-5 sm:p-6">
+			<div class="flex items-center justify-between mb-5">
+				<div class="flex items-center gap-2">
+					<span class="material-icons text-red-500">flag</span>
+					<h3 id="report-modal-title" class="font-heading font-bold text-text-main text-lg m-0">Reportar pregunta</h3>
+				</div>
+				<button id="report-close" class="p-1 text-text-muted hover:text-text-main rounded-full hover:bg-surface-hover transition-colors cursor-pointer border-none bg-transparent" aria-label="Cerrar">
+					<span class="material-icons">close</span>
+				</button>
+			</div>
+
+			<!-- Formulario -->
+			<div id="report-form-body" class="space-y-4">
+				<div id="report-error" class="hidden p-3 bg-red-50 dark:bg-red-900/20 border border-red-300 dark:border-red-700 rounded-lg text-red-700 dark:text-red-400 text-sm"></div>
+
+				<div>
+					<label class="block text-sm font-medium text-text-main mb-1.5" for="report-details">Describe el problema <span class="text-red-500">*</span></label>
+					<textarea id="report-details" rows="4" placeholder="Explica el problema con detalle…" class="w-full px-3 py-2.5 rounded-lg bg-background border border-border-subtle text-text-main text-sm focus:outline-none focus:border-blue-500 transition-colors resize-none"></textarea>
+				</div>
+
+				<div class="flex justify-end gap-3 pt-1">
+					<button type="button" onclick="window.Reports?.close()" class="px-4 py-2 text-sm font-medium text-text-muted hover:text-text-main bg-transparent hover:bg-surface-hover border border-border-subtle rounded-lg transition-colors cursor-pointer">
+						Cancelar
+					</button>
+					<button id="report-submit-btn" type="button" class="px-5 py-2 text-sm font-semibold text-white bg-red-600 hover:bg-red-700 rounded-lg transition-colors cursor-pointer border-none disabled:opacity-50 disabled:cursor-not-allowed">
+						Enviar reporte
+					</button>
+				</div>
+			</div>
+
+			<!-- Éxito -->
+			<div id="report-success" class="hidden flex flex-col items-center py-6 gap-3 text-center">
+				<div class="w-12 h-12 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center">
+					<span class="material-icons text-green-600 dark:text-green-400" style="font-size:1.6rem;">check_circle</span>
+				</div>
+				<p class="font-heading font-bold text-text-main text-base m-0">Reporte enviado</p>
+				<p class="text-text-muted text-sm m-0">Gracias por contribuir a mejorar el contenido.</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.0/katex.min.js" crossorigin="anonymous"></script>
+<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.0/contrib/auto-render.min.js" crossorigin="anonymous"></script>
+<script is:inline src="/resources/js/prism.js"></script>
+<script is:inline src="/resources/js/formatters.js"></script>
+<script is:inline src="/resources/js/quiz-parser-core.js"></script>
+<script is:inline src="/resources/js/failures.js"></script>
+<script is:inline src="/resources/js/test-progress.js"></script>
+<script is:inline src="/resources/js/exam-mode.js"></script>
+<script is:inline src="/resources/js/main.js"></script>
+<script is:inline src="/resources/js/reports.js"></script>
+<script is:inline src="/resources/js/ai-generate.js"></script>
 </BaseLayout>
 
 <style>
@@ -387,25 +617,76 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 		@apply px-[1em] py-[0.5em] text-[0.9em] border-none text-text-muted hover:text-text-main rounded-[5px] cursor-pointer whitespace-nowrap bg-transparent hover:bg-surface-hover transition-colors font-medium;
 	}
 
-	.btn-explicar-ia {
-		@apply flex items-center justify-center gap-1.5 px-4 py-2 text-sm font-semibold
-			   border border-blue-400/60 text-blue-500 dark:text-blue-400
-			   rounded-lg cursor-pointer transition-all bg-transparent
-			   hover:bg-blue-50 dark:hover:bg-blue-900/20 hover:border-blue-500
-			   hover:shadow-sm hover:-translate-y-px;
+	/* ── Barra de acciones del quiz ─────────────────────────────────── */
+	.quiz-actions {
+		@apply flex flex-col gap-3 mt-6 w-full pt-5 border-t border-border-subtle;
 	}
-	.btn-explicar-ia:disabled {
-		@apply opacity-40 cursor-not-allowed pointer-events-none hover:bg-transparent hover:border-blue-400/60 hover:shadow-none hover:translate-y-0;
+	.quiz-actions-primary {
+		@apply grid gap-2 w-full;
+		grid-template-columns: minmax(0, 1fr) minmax(0, 3fr) minmax(0, 1fr);
+		align-items: stretch;
+	}
+	.quiz-nav-btn {
+		@apply inline-flex items-center justify-center gap-0.5 px-2 py-2.5 text-sm font-medium
+			   text-text-muted hover:text-text-main rounded-lg border border-border-subtle
+			   bg-surface hover:bg-surface-hover transition-colors cursor-pointer min-h-[48px];
+	}
+	.quiz-nav-btn .material-icons {
+		font-size: 1.25rem;
+	}
+	.quiz-nav-btn-label {
+		@apply hidden sm:inline;
+	}
+	.quiz-verify-btn {
+		@apply px-4 py-2.5 text-[1em] border-none text-white rounded-lg cursor-pointer
+			   bg-blue-600 hover:bg-blue-700 transition-colors shadow-sm font-semibold
+			   min-h-[48px] disabled:opacity-50 disabled:cursor-not-allowed
+			   disabled:hover:bg-blue-600;
 	}
 
-	#more-options-btn[aria-expanded="true"] #more-options-chevron {
-		@apply rotate-180;
+	#tools-quiz-section:not(:has(.tools-sheet-item[style*="flex"])) {
+		display: none;
 	}
-	.menu-item {
-		@apply flex items-center gap-2.5 w-full text-left px-[12px] py-[9px] text-[0.92em] font-medium text-text-main rounded-[6px] cursor-pointer whitespace-nowrap bg-transparent hover:bg-surface-hover transition-colors border-none mt-0!;
+
+	@media (min-width: 640px) {
+		.quiz-actions-primary {
+			@apply flex justify-center items-center;
+		}
+		.quiz-verify-btn {
+			@apply min-w-[260px];
+		}
 	}
-	.menu-item-aigen {
-		@apply text-violet-600 dark:text-violet-400;
+
+	@media (max-width: 767px) {
+		.quiz-actions {
+			@apply sticky bottom-0 z-30 -mx-[15px] -mb-[15px] px-[15px] py-3 mt-5
+				   bg-surface/95 backdrop-blur-md border-t border-border-subtle shadow-[0_-4px_24px_rgba(0,0,0,0.06)];
+		}
+		:global(.dark) .quiz-actions {
+			box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.25);
+		}
+		.quiz-nav-btn-label {
+			@apply inline;
+		}
+	}
+
+	/* ── Modal Examen / Retomar: entrada animada ─────────────────────── */
+	.exam-modal-box {
+		opacity: 0;
+		transform: translateY(16px) scale(0.97);
+		transition: opacity 0.22s ease, transform 0.22s ease;
+	}
+	#exam-modal:not(.hidden) .exam-modal-box,
+	#resume-modal:not(.hidden) .exam-modal-box {
+		opacity: 1;
+		transform: translateY(0) scale(1);
+	}
+
+	.results-badge--exam {
+		@apply border-amber-500/30 bg-amber-500/10 text-amber-700 dark:text-amber-300;
+	}
+	.results-grid--exam {
+		@apply grid-cols-2 sm:grid-cols-5;
 	}
 
 	.results-hero {
@@ -441,19 +722,13 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 
 	@media (max-width: 767px) {
 		#app {
-			@apply w-[95%]! p-[15px]! mt-[70px]!;
+			@apply w-[95%]! p-[15px]! pb-[8px]! mt-[70px]!;
 		}
 		.btn, .btn-secondary, .btn-tertiary, .btn-ghost {
 			@apply m-[5px]! px-[12px]! py-[8px]! text-[0.9em]!;
 		}
 		.btn-primary {
 			@apply w-full! m-0! mb-[8px]! min-h-[52px]! text-[1.05em]! rounded-[8px]!;
-		}
-		.btn-explicar-ia {
-			@apply w-full! m-0!;
-		}
-		#action-buttons-container {
-			@apply gap-[5px]! pt-[15px]!;
 		}
 	}
 	
@@ -471,6 +746,17 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 		@apply flex items-center gap-1.5 text-violet-600 dark:text-violet-400
 			   border-violet-400/60 dark:border-violet-500/50
 			   hover:bg-violet-50 dark:hover:bg-violet-900/20 hover:border-violet-500;
+	}
+
+	/* ── Modal Report: entrada animada ───────────────────────────────── */
+	.report-modal-box {
+		opacity: 0;
+		transform: translateY(16px) scale(0.97);
+		transition: opacity 0.22s ease, transform 0.22s ease;
+	}
+	#report-modal:not(.hidden) .report-modal-box {
+		opacity: 1;
+		transform: translateY(0) scale(1);
 	}
 
 	/* ── Modal AI Generate: entrada animada ──────────────────────────── */
