@@ -70,7 +70,7 @@ const supabaseAnonKey = import.meta.env.PUBLIC_SUPABASE_ANON_KEY ?? '';
 				<!-- ─── Usuarios online (tiempo real) ────────────────────── -->
 				<div id="online-counter" class="hidden flex items-center gap-1.5 px-2.5 py-1 mr-1 rounded-full text-xs font-medium text-text-muted border border-border-subtle mt-1 select-none transition-all duration-300" aria-live="polite" aria-label="Usuarios conectados ahora">
 					<span class="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse flex-shrink-0"></span>
-					<span id="online-count"></span>
+					<span id="online-count"><span id="online-count-num"></span><span id="online-count-suffix" class="hidden sm:inline"></span></span>
 				</div>
 				<!-- ─── Notificaciones (solo visible con sesión) ──────────── -->
 				<div id="notif-wrapper" class="hidden relative mt-1">

@@ -726,10 +726,6 @@ body.tools-sheet-body-lock {
   animation: online-bump 0.3s ease-out;
 }
 
-/* Hide online counter on small screens to avoid crowding the nav */
-@media (max-width: 639px) {
-  #online-counter { display: none !important; }
-}
 
 /* Unified modal entrance animation */
 .modal-enter {

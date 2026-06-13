@@ -21,17 +21,15 @@
     }
 
     function updateUI(count) {
-        const wrapper  = document.getElementById("online-counter");
-        const countEl  = document.getElementById("online-count");
-        if (!wrapper || !countEl) return;
+        const wrapper   = document.getElementById("online-counter");
+        const numEl     = document.getElementById("online-count-num");
+        const suffixEl  = document.getElementById("online-count-suffix");
+        if (!wrapper || !numEl) return;
 
-        const label = count === 1 ? "1 conectado" : `${count} conectados`;
-        const prev  = countEl.textContent;
-
-        if (prev !== label) {
-            countEl.textContent = label;
-
-            // Animación de "bump" al cambiar el número
+        const prev = numEl.textContent;
+        if (prev !== String(count)) {
+            numEl.textContent = count;
+            if (suffixEl) suffixEl.textContent = count === 1 ? " conectado" : " conectados";
             wrapper.classList.add("online-counter--bump");
             setTimeout(() => wrapper.classList.remove("online-counter--bump"), 300);
         }
