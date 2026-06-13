@@ -1,4 +1,4 @@
----
+﻿---
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
@@ -73,12 +73,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 		<!-- ── Tab: Usuarios ────────────────────────────────────────── -->
 		<div id="tab-usuarios" class="admin-panel hidden space-y-4">
 			<div class="flex gap-3 items-center">
-				<input id="user-search" type="text" placeholder="Buscar por nombre de usuario…" class="flex-1 px-3 py-2 rounded-lg border border-border-subtle bg-background text-text-main text-sm focus:outline-none focus:border-blue-500 transition-colors" />
+				<input id="user-search" type="text" placeholder="Filtrar por nombre de usuario…" class="flex-1 px-3 py-2 rounded-lg border border-border-subtle bg-background text-text-main text-sm focus:outline-none focus:border-blue-500 transition-colors" />
 				<button id="user-search-btn" class="px-4 py-2 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors border-none cursor-pointer">Buscar</button>
 			</div>
 			<div id="user-loading" class="hidden text-text-muted text-sm flex items-center gap-2">
 				<div class="w-4 h-4 border-2 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
-				Buscando…
+				<span id="user-loading-text">Cargando usuarios…</span>
+			</div>
+			<div id="user-count-row" class="hidden flex items-center justify-between text-xs text-text-muted pb-1 border-b border-border-subtle">
+				<span id="user-count"></span>
 			</div>
 			<div id="user-list" class="space-y-3"></div>
 		</div>
@@ -455,19 +458,27 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
     // ── Users ─────────────────────────────────────────────────────────────────
 
-    async function searchUsers(query) {
+    async function loadUsers(query = "") {
         const db = getDb();
-        const { data } = await db
+        let req = db
             .from("profiles")
             .select("id, username, avatar_url, role, banned, created_at")
-            .ilike("username", `%${query}%`)
-            .limit(20);
+            .order("created_at", { ascending: false })
+            .limit(100);
+        if (query) req = req.ilike("username", `%${query}%`);
+        const { data } = await req;
         return data || [];
     }
 
     function renderUsers(users) {
-        const list = document.getElementById("user-list");
+        const list     = document.getElementById("user-list");
+        const countRow = document.getElementById("user-count-row");
+        const countEl  = document.getElementById("user-count");
         if (!list) return;
+
+        if (countEl) countEl.textContent = `${users.length} usuario${users.length !== 1 ? "s" : ""} encontrado${users.length !== 1 ? "s" : ""}`;
+        if (countRow) countRow.classList[users.length > 0 ? "remove" : "add"]("hidden");
+
         if (users.length === 0) {
             list.innerHTML = `<p class="text-text-muted text-sm text-center py-6">Sin resultados.</p>`;
             return;
@@ -523,12 +534,26 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             });
         });
 
+        let usuariosLoaded = false;
+        document.querySelector('[data-tab="usuarios"]')?.addEventListener("click", async () => {
+            if (usuariosLoaded) return;
+            usuariosLoaded = true;
+            const loadingText = document.getElementById("user-loading-text");
+            if (loadingText) loadingText.textContent = "Cargando usuarios…";
+            document.getElementById("user-loading")?.classList.remove("hidden");
+            const users = await loadUsers();
+            document.getElementById("user-loading")?.classList.add("hidden");
+            renderUsers(users);
+        });
+
         document.getElementById("user-search-btn")?.addEventListener("click", async () => {
             const q = document.getElementById("user-search")?.value.trim();
-            if (!q) return;
+            const loadingText = document.getElementById("user-loading-text");
+            if (loadingText) loadingText.textContent = q ? "Buscando…" : "Cargando usuarios…";
             document.getElementById("user-loading")?.classList.remove("hidden");
-            const users = await searchUsers(q);
+            const users = await loadUsers(q);
             document.getElementById("user-loading")?.classList.add("hidden");
+            usuariosLoaded = true;
             renderUsers(users);
         });
 
