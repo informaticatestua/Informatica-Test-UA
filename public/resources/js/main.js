@@ -1002,7 +1002,8 @@
     }
 
     function showQuizActionButtons() {
-        showQuizActionButtons();
+        toggleQuizQuestionUI(true);
+        toggleQuizUtilityButtons(true);
     }
 
     function clearResultado() {
@@ -1011,7 +1012,7 @@
     }
 
     function resetEstadosPreguntas() {
-        resetEstadosPreguntas();
+        state.estadosPreguntas = {};
     }
 
     /**

@@ -10,6 +10,8 @@
 (function () {
     "use strict";
 
+    const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+
     // ─── Set en memoria de preguntas ya reportadas por el usuario ────────────
     // Se rellena desde Supabase al hacer login; se actualiza al reportar.
 
@@ -50,7 +52,7 @@
         }
 
         const q = window.QuizAPI?.getCurrentQuestion();
-        if (!q?.id || typeof q.id !== "string") {
+        if (!q?.id || !UUID_RE.test(q.id)) {
             alert("Esta pregunta no puede reportarse porque no está en la base de datos aún.");
             return;
         }
@@ -90,7 +92,7 @@
 
     async function submitReport() {
         const db         = window.Utils?.getDb();
-        const userId     = window.Auth?.getUser()?.id;
+        const userId     = window.Utils?.userId();
         const modal      = document.getElementById("report-modal");
         const questionId = modal?.dataset.questionId;
 
@@ -107,13 +109,14 @@
             const { error } = await db.from("reports").insert({
                 question_id: questionId,
                 user_id:     userId,
-                reason:      "Otro",
+                reason:      "otro",
                 details,
             });
 
             if (error) {
                 if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = "Enviar reporte"; }
                 if (error.code === "23505") {
+                    markAsReported(questionId);
                     showError("Ya has reportado esta pregunta anteriormente.");
                 } else {
                     showError("Error al enviar el reporte. Inténtalo de nuevo.");
@@ -144,11 +147,11 @@
             return;
         }
 
-        const db     = getDb();
-        const userId = window.Auth?.getUser()?.id;
+        const db     = window.Utils?.getDb();
+        const userId = window.Utils?.userId();
         const q      = window.QuizAPI?.getCurrentQuestion();
 
-        if (!db || !userId || !q?.id || typeof q.id !== "string") return;
+        if (!db || !userId || !q?.id || !UUID_RE.test(q.id)) return;
 
         const btn = document.getElementById("report-warning-confirm");
 
@@ -156,7 +159,7 @@
             const { error } = await db.from("reports").insert({
                 question_id: q.id,
                 user_id:     userId,
-                reason:      "Respuesta incorrecta",
+                reason:      "respuesta_incorrecta",
                 details:     "Confirmado por usuario adicional.",
             });
 
@@ -164,6 +167,13 @@
                 if (error.code === "23505") {
                     markAsReported(q.id);
                     if (btn) { btn.textContent = "Ya lo habías reportado"; btn.disabled = true; }
+                } else {
+                    console.error("[Reports] confirmReport error:", error);
+                    if (btn) {
+                        btn.textContent = "Error al reportar";
+                        btn.disabled = true;
+                        setTimeout(() => { btn.textContent = "Yo también veo un error"; btn.disabled = false; }, 2000);
+                    }
                 }
                 return;
             }

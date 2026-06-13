@@ -1,0 +1,438 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const { thread } = Astro.params;
+---
+
+<BaseLayout title="Hilo del foro • Tests UA">
+
+<!-- Loading -->
+<div id="thread-loading" class="flex flex-col items-center justify-center min-h-[60vh] gap-4">
+	<div class="w-8 h-8 border-2 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+	<p class="text-text-muted text-sm">Cargando hilo…</p>
+</div>
+
+<div id="thread-content" class="hidden max-w-3xl mx-auto px-4 sm:px-6 py-6 w-full space-y-4">
+
+	<!-- Back link + admin controls -->
+	<div class="flex items-center justify-between gap-3 flex-wrap">
+		<div id="back-link-wrapper">
+			<a id="back-link" href="/" class="inline-flex items-center gap-1.5 text-sm text-text-muted hover:text-text-main transition-colors no-underline">
+				<span class="material-icons" style="font-size:1.1rem;">arrow_back</span>
+				Volver al foro
+			</a>
+		</div>
+		<div id="admin-controls" class="hidden flex items-center gap-2">
+			<button id="admin-pin-btn" class="flex items-center gap-1 px-3 py-1.5 text-xs font-medium text-text-muted hover:text-amber-600 hover:bg-amber-50 dark:hover:bg-amber-900/20 border border-border-subtle hover:border-amber-400 rounded-lg transition-colors bg-transparent cursor-pointer">
+				<span class="material-icons text-[14px]">push_pin</span>
+				<span id="admin-pin-label">Fijar</span>
+			</button>
+			<button id="admin-lock-btn" class="flex items-center gap-1 px-3 py-1.5 text-xs font-medium text-text-muted hover:text-red-600 hover:bg-red-50 dark:hover:bg-red-900/20 border border-border-subtle hover:border-red-400 rounded-lg transition-colors bg-transparent cursor-pointer">
+				<span class="material-icons text-[14px]">lock</span>
+				<span id="admin-lock-label">Bloquear</span>
+			</button>
+		</div>
+	</div>
+
+	<!-- Thread header (first post) -->
+	<div id="thread-header" class="bg-surface border border-border-subtle rounded-2xl overflow-hidden">
+		<div class="p-5 sm:p-6">
+			<div class="flex items-start gap-2 mb-3 flex-wrap">
+				<span id="thread-pin-badge" style="display:none" class="inline-flex items-center gap-0.5 px-2 py-0.5 bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-300 rounded-full text-[0.65rem] font-semibold">
+					<span class="material-icons" style="font-size:0.75rem;">push_pin</span>Fijado
+				</span>
+				<span id="thread-lock-badge" style="display:none" class="inline-flex items-center gap-0.5 px-2 py-0.5 bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-400 rounded-full text-[0.65rem] font-semibold">
+					<span class="material-icons" style="font-size:0.75rem;">lock</span>Cerrado
+				</span>
+			</div>
+			<h1 id="thread-title" class="font-heading font-bold text-text-main text-xl sm:text-2xl m-0 mb-4 leading-snug"></h1>
+			<div id="first-post" class="space-y-3"></div>
+		</div>
+	</div>
+
+	<!-- Replies section -->
+	<div class="flex items-center gap-3 pt-2">
+		<div class="flex-1 h-px bg-border-subtle"></div>
+		<span id="replies-count-label" class="text-xs text-text-muted font-semibold uppercase tracking-wider">0 respuestas</span>
+		<div class="flex-1 h-px bg-border-subtle"></div>
+	</div>
+
+	<div id="replies-list" class="space-y-4"></div>
+	<div id="replies-empty" class="hidden py-10 text-center text-text-muted text-sm">Sin respuestas todavía. ¡Sé el primero!</div>
+
+	<!-- Reply form -->
+	<div id="reply-section" class="bg-surface border border-border-subtle rounded-2xl p-5 sm:p-6 space-y-4">
+		<h3 class="font-heading font-semibold text-text-main text-base m-0">Tu respuesta</h3>
+
+		<div id="reply-login-msg" class="hidden p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-300 dark:border-blue-700 rounded-lg text-blue-700 dark:text-blue-300 text-sm text-center">
+			<span class="material-icons align-middle mr-1" style="font-size:1rem;">lock</span>
+			Debes <a href="/login" class="font-semibold underline">iniciar sesión</a> para responder.
+		</div>
+
+		<div id="thread-locked-msg" class="hidden p-4 bg-slate-50 dark:bg-slate-800/50 border border-slate-300 dark:border-slate-700 rounded-lg text-slate-600 dark:text-slate-400 text-sm text-center">
+			<span class="material-icons align-middle mr-1" style="font-size:1rem;">lock</span>
+			Este hilo está cerrado. No se pueden añadir más respuestas.
+		</div>
+
+		<div id="reply-form">
+			<div id="reply-error" class="hidden mb-3 p-3 bg-red-50 dark:bg-red-900/20 border border-red-300 dark:border-red-700 rounded-lg text-red-700 dark:text-red-400 text-sm"></div>
+			<textarea id="reply-body" rows="4" placeholder="Escribe tu respuesta…"
+				class="w-full px-3 py-2.5 rounded-lg bg-background border border-border-subtle text-text-main text-sm focus:outline-none focus:border-blue-500 transition-colors resize-y mb-3"></textarea>
+			<div class="flex justify-end">
+				<button id="reply-submit" class="flex items-center gap-2 px-5 py-2 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors cursor-pointer border-none disabled:opacity-50 disabled:cursor-not-allowed">
+					<span class="material-icons text-[15px]">send</span>
+					Responder
+				</button>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<script is:inline define:vars={{ threadId: thread }}>
+(function () {
+    "use strict";
+
+    const THREAD_ID = threadId;
+    let _threadData = null;
+    let _userVotes = new Set();
+    let _currentUser = null;
+    let _isAdmin = false;
+    let _authors = {};
+
+    function getDb() { return window.SupabaseClient; }
+
+    function formatTimeAgo(iso) {
+        const diff = (Date.now() - new Date(iso).getTime()) / 1000;
+        if (diff < 60) return "Ahora";
+        if (diff < 3600) return `Hace ${Math.floor(diff / 60)} min`;
+        if (diff < 86400) return `Hace ${Math.floor(diff / 3600)} h`;
+        if (diff < 604800) return `Hace ${Math.floor(diff / 86400)} d`;
+        return new Date(iso).toLocaleDateString("es-ES", { day: "2-digit", month: "short", year: "numeric" });
+    }
+
+    // ── Load data ─────────────────────────────────────────────────────────────
+
+    async function loadThread() {
+        const db = getDb();
+        if (!db) return null;
+        const { data, error } = await db
+            .from("forum_threads")
+            .select("id, title, subject_id, is_pinned, is_locked, reply_count, created_at, user_id")
+            .eq("id", THREAD_ID)
+            .maybeSingle();
+        if (error) { console.error("[Thread]", error.message); return null; }
+        return data;
+    }
+
+    async function loadPosts() {
+        const db = getDb();
+        if (!db) return [];
+        const { data, error } = await db
+            .from("forum_posts")
+            .select("id, content, votes, user_id, created_at")
+            .eq("thread_id", THREAD_ID)
+            .order("created_at", { ascending: true });
+        if (error) { console.error("[Posts]", error.message); return []; }
+        return data || [];
+    }
+
+    /** Nombres y avatares vía la vista public_profiles. */
+    async function loadAuthors(userIds) {
+        const db = getDb();
+        const ids = [...new Set(userIds)].filter(Boolean);
+        if (!db || ids.length === 0) return {};
+        const { data } = await db.from("public_profiles").select("id, username, avatar_url").in("id", ids);
+        const map = {};
+        (data || []).forEach(p => { map[p.id] = p; });
+        return map;
+    }
+
+    async function loadUserVotes(userId) {
+        const db = getDb();
+        if (!db || !userId) return new Set();
+        const { data } = await db
+            .from("forum_votes")
+            .select("post_id")
+            .eq("user_id", userId);
+        return new Set((data || []).map(v => v.post_id));
+    }
+
+    // ── Render ────────────────────────────────────────────────────────────────
+
+    function avatarEl(profile, size = "w-9 h-9") {
+        const username = escapeHtml(profile?.username || "?");
+        if (profile?.avatar_url) {
+            return `<img src="${escapeHtml(profile.avatar_url)}" alt="" referrerpolicy="no-referrer" class="${size} rounded-full object-cover border border-border-subtle flex-shrink-0" />`;
+        }
+        return `<div class="${size} rounded-full bg-blue-100 dark:bg-blue-900/40 flex items-center justify-center flex-shrink-0 text-blue-600 dark:text-blue-300 font-bold text-sm">${username[0].toUpperCase()}</div>`;
+    }
+
+    function renderPost(post, isFirst = false) {
+        const profile = _authors[post.user_id] || null;
+        const username = escapeHtml(profile?.username || "Anónimo");
+        const voted = _userVotes.has(post.id);
+        const canVote = !!_currentUser && !isFirst;
+
+        return `
+            <div class="post-card flex items-start gap-3" data-post-id="${post.id}">
+                ${avatarEl(profile)}
+                <div class="flex-1 min-w-0">
+                    <div class="flex items-center gap-2 mb-2 flex-wrap">
+                        <span class="text-sm font-semibold text-text-main">@${username}</span>
+                        <span class="text-xs text-text-muted">${formatTimeAgo(post.created_at)}</span>
+                    </div>
+                    <div class="post-content text-text-main text-sm leading-relaxed whitespace-pre-wrap break-words">${escapeHtml(post.content)}</div>
+                    ${!isFirst ? `
+                    <div class="mt-3 flex items-center gap-3">
+                        <button class="vote-btn flex items-center gap-1.5 px-2.5 py-1 text-xs font-medium rounded-lg border transition-colors cursor-pointer ${voted ? "bg-blue-50 dark:bg-blue-900/30 border-blue-400 text-blue-600 dark:text-blue-400" : "bg-transparent border-border-subtle text-text-muted hover:border-blue-400 hover:text-blue-500"} ${canVote ? "" : "opacity-50 cursor-not-allowed pointer-events-none"}"
+                            data-post-id="${post.id}" ${!canVote ? "disabled" : ""} title="${canVote ? "Votar" : "Inicia sesión para votar"}">
+                            <span class="material-icons" style="font-size:0.9rem;">thumb_up</span>
+                            <span class="vote-count">${post.votes}</span>
+                        </button>
+                    </div>` : ""}
+                </div>
+            </div>
+        `;
+    }
+
+    function escapeHtml(str) {
+        return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+    }
+
+    function renderAll(thread, posts, subjectDisplayName) {
+        // Back link
+        const subjectLabel = subjectDisplayName || thread.subject_id.replace(/_/g, " ").replace(/-/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+        document.getElementById("back-link").href = `/foro/${thread.subject_id}`;
+        document.getElementById("back-link").innerHTML = `<span class="material-icons" style="font-size:1.1rem;">arrow_back</span> Foro ${subjectLabel}`;
+
+        // Title & badges
+        document.getElementById("thread-title").textContent = thread.title;
+        const pinBadge  = document.getElementById("thread-pin-badge");
+        const lockBadge = document.getElementById("thread-lock-badge");
+        if (pinBadge)  pinBadge.style.display  = thread.is_pinned  ? "inline-flex" : "none";
+        if (lockBadge) lockBadge.style.display = thread.is_locked ? "inline-flex" : "none";
+
+        // Admin controls
+        if (_isAdmin) {
+            document.getElementById("admin-controls")?.classList.remove("hidden");
+            document.getElementById("admin-pin-label").textContent = thread.is_pinned ? "Desfijar" : "Fijar";
+            document.getElementById("admin-lock-label").textContent = thread.is_locked ? "Desbloquear" : "Bloquear";
+        }
+
+        // First post
+        const [firstPost, ...replies] = posts;
+        const firstPostEl = document.getElementById("first-post");
+        if (firstPost && firstPostEl) {
+            const profile = _authors[thread.user_id] || null;
+            const username = escapeHtml(profile?.username || "Anónimo");
+            firstPostEl.innerHTML = `
+                <div class="flex items-center gap-2 mb-3">
+                    ${avatarEl(profile, "w-8 h-8")}
+                    <span class="text-sm font-semibold text-text-main">@${username}</span>
+                    <span class="text-xs text-text-muted">${formatTimeAgo(thread.created_at)}</span>
+                </div>
+                <div class="text-text-main text-sm leading-relaxed whitespace-pre-wrap break-words">${escapeHtml(firstPost.content)}</div>
+            `;
+        }
+
+        // Replies
+        const repliesCount = replies.length;
+        document.getElementById("replies-count-label").textContent = `${repliesCount} ${repliesCount === 1 ? "respuesta" : "respuestas"}`;
+
+        const repliesList = document.getElementById("replies-list");
+        if (replies.length === 0) {
+            document.getElementById("replies-empty")?.classList.remove("hidden");
+        } else if (repliesList) {
+            repliesList.innerHTML = replies.map(p => renderPost(p)).join('<div class="border-t border-border-subtle my-1"></div>');
+            // Wire vote buttons
+            repliesList.querySelectorAll(".vote-btn").forEach(btn => {
+                btn.addEventListener("click", () => handleVote(btn.dataset.postId, btn));
+            });
+        }
+
+        // Reply form state
+        if (!_currentUser) {
+            document.getElementById("reply-login-msg")?.classList.remove("hidden");
+            document.getElementById("reply-form")?.classList.add("hidden");
+        } else if (thread.is_locked) {
+            document.getElementById("thread-locked-msg")?.classList.remove("hidden");
+            document.getElementById("reply-form")?.classList.add("hidden");
+        }
+    }
+
+    // ── Vote ─────────────────────────────────────────────────────────────────
+
+    async function handleVote(postId, btn) {
+        if (!_currentUser) return;
+        const db = getDb();
+        const { data: newVotes, error } = await db.rpc("toggle_forum_vote", { p_post_id: postId });
+        if (error) { console.error("[Vote]", error.message); return; }
+
+        if (_userVotes.has(postId)) {
+            _userVotes.delete(postId);
+            btn.classList.remove("bg-blue-50", "dark:bg-blue-900/30", "border-blue-400", "text-blue-600", "dark:text-blue-400");
+            btn.classList.add("bg-transparent", "border-border-subtle", "text-text-muted", "hover:border-blue-400", "hover:text-blue-500");
+        } else {
+            _userVotes.add(postId);
+            btn.classList.add("bg-blue-50", "dark:bg-blue-900/30", "border-blue-400", "text-blue-600", "dark:text-blue-400");
+            btn.classList.remove("bg-transparent", "border-border-subtle", "text-text-muted", "hover:border-blue-400", "hover:text-blue-500");
+        }
+        btn.querySelector(".vote-count").textContent = newVotes ?? "";
+    }
+
+    // ── Reply ─────────────────────────────────────────────────────────────────
+
+    async function submitReply() {
+        const body = document.getElementById("reply-body")?.value.trim();
+        if (!body || body.length < 4) {
+            const el = document.getElementById("reply-error");
+            if (el) { el.textContent = "La respuesta debe tener al menos 4 caracteres."; el.classList.remove("hidden"); }
+            return;
+        }
+        document.getElementById("reply-error")?.classList.add("hidden");
+
+        const db = getDb();
+        if (!db) return;
+
+        const btn = document.getElementById("reply-submit");
+        btn.disabled = true;
+        btn.innerHTML = `<div class="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div> Publicando…`;
+
+        const { data: post, error } = await db
+            .from("forum_posts")
+            .insert({
+                thread_id: THREAD_ID,
+                user_id: _currentUser.id,
+                content: body,
+            })
+            .select("id, content, votes, user_id, created_at")
+            .single();
+
+        // El autor de la respuesta es el usuario actual: lo añadimos al mapa.
+        if (!error && post && !_authors[post.user_id]) {
+            const ownProfile = window.Auth?.getProfile();
+            _authors[post.user_id] = {
+                id: post.user_id,
+                username: ownProfile?.username || "Tú",
+                avatar_url: ownProfile?.avatar_url || "",
+            };
+        }
+
+        btn.disabled = false;
+        btn.innerHTML = `<span class="material-icons text-[15px]">send</span> Responder`;
+
+        if (error) {
+            const el = document.getElementById("reply-error");
+            if (el) { el.textContent = error.message || "Error al publicar."; el.classList.remove("hidden"); }
+            return;
+        }
+
+        document.getElementById("reply-body").value = "";
+
+        // Append reply to list
+        const repliesList = document.getElementById("replies-list");
+        const emptyEl = document.getElementById("replies-empty");
+        emptyEl?.classList.add("hidden");
+        repliesList?.classList.remove("hidden");
+
+        const div = document.createElement("div");
+        div.innerHTML = `<div class="border-t border-border-subtle my-1"></div>` + renderPost(post);
+        repliesList?.appendChild(div);
+
+        // Update count
+        const countEl = document.getElementById("replies-count-label");
+        const cur = parseInt(countEl?.textContent) || 0;
+        if (countEl) countEl.textContent = `${cur + 1} ${(cur + 1) === 1 ? "respuesta" : "respuestas"}`;
+
+        // Wire new vote btn
+        div.querySelector(".vote-btn")?.addEventListener("click", (e) => {
+            handleVote(e.currentTarget.dataset.postId, e.currentTarget);
+        });
+
+        div.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    }
+
+    // ── Admin actions ─────────────────────────────────────────────────────────
+
+    async function togglePin() {
+        const db = getDb();
+        const newVal = !_threadData.is_pinned;
+        await db.from("forum_threads").update({ is_pinned: newVal }).eq("id", THREAD_ID);
+        _threadData.is_pinned = newVal;
+        document.getElementById("admin-pin-label").textContent = newVal ? "Desfijar" : "Fijar";
+        document.getElementById("thread-pin-badge")?.classList.toggle("hidden", !newVal);
+    }
+
+    async function toggleLock() {
+        const db = getDb();
+        const newVal = !_threadData.is_locked;
+        await db.from("forum_threads").update({ is_locked: newVal }).eq("id", THREAD_ID);
+        _threadData.is_locked = newVal;
+        document.getElementById("admin-lock-label").textContent = newVal ? "Desbloquear" : "Bloquear";
+        document.getElementById("thread-lock-badge")?.classList.toggle("hidden", !newVal);
+        if (newVal) {
+            document.getElementById("thread-locked-msg")?.classList.remove("hidden");
+            document.getElementById("reply-form")?.classList.add("hidden");
+        } else {
+            document.getElementById("thread-locked-msg")?.classList.add("hidden");
+            document.getElementById("reply-form")?.classList.remove("hidden");
+        }
+    }
+
+    // ── Main ─────────────────────────────────────────────────────────────────
+
+    async function main() {
+        await new Promise(resolve => window.Auth?.onReady((u, p) => { resolve(); _currentUser = u; _isAdmin = p?.role === "admin"; }));
+
+        const [thread, posts] = await Promise.all([loadThread(), loadPosts()]);
+
+        if (!thread) {
+            document.getElementById("thread-loading")?.classList.add("hidden");
+            document.body.innerHTML = `<div class="flex flex-col items-center justify-center min-h-[60vh] gap-4 text-center">
+                <span class="material-icons text-text-muted" style="font-size:3rem;">forum</span>
+                <p class="text-text-main font-semibold m-0">Hilo no encontrado</p>
+                <a href="/" class="text-blue-500 text-sm">Volver al inicio</a>
+            </div>`;
+            return;
+        }
+
+        _threadData = thread;
+
+        const db = getDb();
+        let subjectDisplayName = null;
+        if (db) {
+            const { data: subj } = await db.from("subjects").select("display_name").eq("id", thread.subject_id).maybeSingle();
+            subjectDisplayName = subj?.display_name || null;
+        }
+
+        const userIds = [thread.user_id, ...posts.map(p => p.user_id)];
+        [_authors, _userVotes] = await Promise.all([
+            loadAuthors(userIds),
+            _currentUser ? loadUserVotes(_currentUser.id) : Promise.resolve(new Set()),
+        ]);
+
+        document.getElementById("thread-loading")?.classList.add("hidden");
+        document.getElementById("thread-content")?.classList.remove("hidden");
+
+        renderAll(thread, posts, subjectDisplayName);
+
+        // Wire events
+        document.getElementById("reply-submit")?.addEventListener("click", submitReply);
+        document.getElementById("admin-pin-btn")?.addEventListener("click", togglePin);
+        document.getElementById("admin-lock-btn")?.addEventListener("click", toggleLock);
+
+        document.getElementById("reply-body")?.addEventListener("keydown", (e) => {
+            if (e.key === "Enter" && (e.ctrlKey || e.metaKey)) submitReply();
+        });
+    }
+
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", main);
+    } else {
+        main();
+    }
+})();
+</script>
+
+</BaseLayout>

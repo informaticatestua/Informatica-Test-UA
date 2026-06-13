@@ -1,0 +1,78 @@
+---
+// Esta página recibe el redirect de Google OAuth y completa el intercambio de código.
+// Supabase JS SDK lo hace automáticamente al detectar el hash/code en la URL.
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Iniciando sesión…">
+
+<div class="flex items-center justify-center min-h-[60vh] w-full">
+    <div class="flex flex-col items-center gap-4 text-text-muted">
+        <div class="callback-spinner"></div>
+        <p class="text-sm m-0" id="callback-msg">Completando el inicio de sesión…</p>
+    </div>
+</div>
+
+<script is:inline>
+(function () {
+    "use strict";
+
+    async function handleCallback() {
+        const db = window.SupabaseClient;
+        if (!db) {
+            document.getElementById("callback-msg").textContent = "Error: cliente no disponible.";
+            return;
+        }
+
+        // El SDK de Supabase detecta el `code` en la URL y hace el intercambio automáticamente.
+        // Esperamos a que la sesión esté lista escuchando onAuthStateChange.
+        const timeout = setTimeout(function () {
+            document.getElementById("callback-msg").textContent =
+                "Tardando más de lo esperado. Redirigiendo…";
+            window.location.replace("/");
+        }, 10000);
+
+        db.auth.onAuthStateChange(function (event, session) {
+            if (event === "SIGNED_IN" && session) {
+                clearTimeout(timeout);
+                // Redirigir a la página de origen si se guardó, si no al inicio
+                const returnTo = sessionStorage.getItem("auth_return_to") || "/";
+                sessionStorage.removeItem("auth_return_to");
+                window.location.replace(returnTo);
+            } else if (event === "SIGNED_OUT") {
+                clearTimeout(timeout);
+                window.location.replace("/login");
+            }
+        });
+
+        // También comprobar si ya había sesión activa (refresco de página en callback)
+        const { data: { session } } = await db.auth.getSession();
+        if (session) {
+            clearTimeout(timeout);
+            const returnTo = sessionStorage.getItem("auth_return_to") || "/";
+            sessionStorage.removeItem("auth_return_to");
+            window.location.replace(returnTo);
+        }
+    }
+
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", handleCallback);
+    } else {
+        handleCallback();
+    }
+})();
+</script>
+
+</BaseLayout>
+
+<style>
+.callback-spinner {
+    width: 36px;
+    height: 36px;
+    border: 3px solid rgb(var(--border-subtle));
+    border-top-color: rgb(59 130 246);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+</style>

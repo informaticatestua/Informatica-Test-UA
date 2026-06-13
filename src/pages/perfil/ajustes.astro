@@ -1,0 +1,505 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Ajustes de perfil • Tests UA">
+
+<!-- Loading -->
+<div id="ajustes-loading" class="flex flex-col items-center justify-center min-h-[60vh] gap-4">
+	<div class="w-8 h-8 border-2 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+	<p class="text-text-muted text-sm">Cargando ajustes…</p>
+</div>
+
+<div id="ajustes-content" class="hidden max-w-xl mx-auto px-4 sm:px-6 py-8 space-y-5 w-full">
+
+	<!-- ── Header ─────────────────────────────────────────────────────────── -->
+	<div class="flex items-center gap-3">
+		<a href="/perfil" class="p-1.5 text-text-muted hover:text-text-main hover:bg-surface-hover rounded-lg transition-colors no-underline">
+			<span class="material-icons" style="font-size:1.3rem;">arrow_back</span>
+		</a>
+		<div>
+			<h1 class="font-heading font-bold text-text-main text-xl m-0">Ajustes de perfil</h1>
+			<p class="text-text-muted text-sm m-0 mt-0.5">Personaliza tu cuenta</p>
+		</div>
+	</div>
+
+	<!-- ── Toast ──────────────────────────────────────────────────────────── -->
+	<div id="toast" class="hidden fixed bottom-6 left-1/2 -translate-x-1/2 z-50 flex items-center gap-2.5 px-4 py-3 bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 rounded-xl shadow-xl text-sm font-medium whitespace-nowrap">
+		<span id="toast-icon" class="material-icons text-[18px]"></span>
+		<span id="toast-msg"></span>
+	</div>
+
+	<!-- ── Apariencia ─────────────────────────────────────────────────────── -->
+	<div class="bg-surface border border-border-subtle rounded-2xl p-6 space-y-4">
+		<div>
+			<h2 class="font-heading font-semibold text-text-main text-base m-0">Apariencia</h2>
+			<p class="text-text-muted text-sm mt-1 m-0">Elige el tema de la aplicación. El cambio es inmediato.</p>
+		</div>
+		<div class="grid grid-cols-3 gap-2" id="theme-selector">
+			<button data-theme="system" class="theme-btn flex flex-col items-center gap-1.5 p-3 rounded-xl border text-sm font-medium text-text-main transition-all cursor-pointer bg-transparent">
+				<span class="material-icons text-text-muted">brightness_auto</span>
+				Sistema
+			</button>
+			<button data-theme="light" class="theme-btn flex flex-col items-center gap-1.5 p-3 rounded-xl border text-sm font-medium text-text-main transition-all cursor-pointer bg-transparent">
+				<span class="material-icons text-yellow-500">light_mode</span>
+				Claro
+			</button>
+			<button data-theme="dark" class="theme-btn flex flex-col items-center gap-1.5 p-3 rounded-xl border text-sm font-medium text-text-main transition-all cursor-pointer bg-transparent">
+				<span class="material-icons text-blue-400">dark_mode</span>
+				Oscuro
+			</button>
+		</div>
+	</div>
+
+	<!-- ── Nombre ─────────────────────────────────────────────────────────── -->
+	<div class="bg-surface border border-border-subtle rounded-2xl p-6 space-y-4">
+		<div>
+			<h2 class="font-heading font-semibold text-text-main text-base m-0">Nombre</h2>
+			<p class="text-text-muted text-sm mt-1 m-0">Es el nombre que verán otros usuarios. Puede contener letras, números y espacios.</p>
+		</div>
+		<div class="space-y-1.5">
+			<input
+				id="name-input"
+				type="text"
+				maxlength="50"
+				placeholder="Tu nombre…"
+				class="w-full px-4 py-2.5 rounded-lg bg-background border border-border-subtle text-text-main text-sm focus:outline-none focus:border-blue-500 transition-colors"
+				autocomplete="off"
+				spellcheck="false"
+			/>
+			<p id="name-error" class="hidden text-xs text-red-500"></p>
+			<p class="text-xs text-text-muted">Entre 2 y 50 caracteres.</p>
+		</div>
+	</div>
+
+	<!-- ── Claves de IA ───────────────────────────────────────────────────── -->
+	<div class="bg-surface border border-border-subtle rounded-2xl p-6 space-y-4">
+		<div>
+			<h2 class="font-heading font-semibold text-text-main text-base m-0">Claves de IA</h2>
+			<p class="text-text-muted text-sm mt-1 m-0">
+				Se guardan encriptadas en tu cuenta y se sincronizan entre dispositivos.
+			</p>
+		</div>
+
+		<!-- Groq -->
+		<div class="space-y-1.5">
+			<label class="block text-sm font-medium text-text-main" for="groq-key-input">
+				<span class="text-orange-500 font-bold mr-0.5">⚡</span>Groq API Key
+			</label>
+			<div class="relative">
+				<input
+					id="groq-key-input"
+					type="password"
+					placeholder="gsk_…"
+					class="w-full px-4 py-2.5 pr-10 rounded-lg bg-background border border-border-subtle text-text-main text-sm focus:outline-none focus:border-blue-500 transition-colors font-mono"
+					autocomplete="off"
+					spellcheck="false"
+				/>
+				<button type="button" class="key-toggle absolute right-3 top-1/2 -translate-y-1/2 text-text-muted hover:text-text-main bg-transparent border-none cursor-pointer p-0" data-target="groq-key-input">
+					<span class="material-icons" style="font-size:1.1rem;">visibility</span>
+				</button>
+			</div>
+		</div>
+
+		<!-- Gemini -->
+		<div class="space-y-1.5">
+			<label class="block text-sm font-medium text-text-main" for="gemini-key-input">
+				<span class="material-icons text-blue-500 mr-0.5" style="font-size:1rem;vertical-align:middle">auto_awesome</span>Gemini API Key
+			</label>
+			<div class="relative">
+				<input
+					id="gemini-key-input"
+					type="password"
+					placeholder="AIza…"
+					class="w-full px-4 py-2.5 pr-10 rounded-lg bg-background border border-border-subtle text-text-main text-sm focus:outline-none focus:border-blue-500 transition-colors font-mono"
+					autocomplete="off"
+					spellcheck="false"
+				/>
+				<button type="button" class="key-toggle absolute right-3 top-1/2 -translate-y-1/2 text-text-muted hover:text-text-main bg-transparent border-none cursor-pointer p-0" data-target="gemini-key-input">
+					<span class="material-icons" style="font-size:1.1rem;">visibility</span>
+				</button>
+			</div>
+		</div>
+
+		<p class="text-xs text-text-muted flex items-center gap-1 mt-1">
+			<span class="material-icons" style="font-size:0.9rem;">lock</span>
+			Encriptadas con AES-256. Nunca se comparten con terceros.
+		</p>
+	</div>
+
+	<!-- ── Personalización de IA ─────────────────────────────────────────── -->
+	<div class="bg-surface border border-border-subtle rounded-2xl p-6 space-y-5">
+		<div>
+			<div class="flex items-center gap-2 mb-1">
+				<span class="material-icons text-violet-500" style="font-size:1.1rem;">auto_awesome</span>
+				<h2 class="font-heading font-semibold text-text-main text-base m-0">Instrucciones de IA</h2>
+			</div>
+			<p class="text-text-muted text-sm m-0">
+				Dile exactamente a la IA cómo quieres que te explique las respuestas al pulsar "Explicar con IA". Si lo dejas vacío se usarán las instrucciones por defecto.
+			</p>
+		</div>
+
+		<!-- Preajustes rápidos -->
+		<div>
+			<p class="text-xs font-semibold text-text-muted uppercase tracking-wider mb-2.5">Preajustes rápidos</p>
+			<div class="flex flex-wrap gap-2" id="ai-preset-chips">
+				<button type="button" class="ai-preset-chip" data-preset="breve">
+					<span class="material-icons" style="font-size:0.85rem;">compress</span>Muy breve
+				</button>
+				<button type="button" class="ai-preset-chip" data-preset="ejemplos">
+					<span class="material-icons" style="font-size:0.85rem;">lightbulb</span>Con ejemplos
+				</button>
+				<button type="button" class="ai-preset-chip" data-preset="profundo">
+					<span class="material-icons" style="font-size:0.85rem;">school</span>En profundidad
+				</button>
+				<button type="button" class="ai-preset-chip" data-preset="codigo">
+					<span class="material-icons" style="font-size:0.85rem;">code</span>Con código
+				</button>
+				<button type="button" class="ai-preset-chip" data-preset="english">
+					<span class="material-icons" style="font-size:0.85rem;">language</span>In English
+				</button>
+				<button type="button" class="ai-preset-chip" data-preset="sencillo">
+					<span class="material-icons" style="font-size:0.85rem;">child_care</span>Lenguaje sencillo
+				</button>
+			</div>
+		</div>
+
+		<!-- Textarea -->
+		<div class="space-y-1.5">
+			<div class="flex items-center justify-between gap-2">
+				<label class="text-sm font-medium text-text-main" for="ai-instructions-input">
+					Instrucciones personalizadas
+				</label>
+				<button type="button" id="ai-instructions-reset" class="text-xs text-text-muted hover:text-red-500 bg-transparent border-none cursor-pointer p-0 transition-colors flex items-center gap-1">
+					<span class="material-icons" style="font-size:0.85rem;">restart_alt</span>
+					Restablecer
+				</button>
+			</div>
+			<textarea
+				id="ai-instructions-input"
+				maxlength="500"
+				placeholder="Ej: Explica en inglés usando ejemplos de código Python. Sé muy conciso y usa bullet points."
+				class="w-full px-4 py-3 rounded-xl bg-background border border-border-subtle text-text-main text-sm focus:outline-none focus:border-violet-500 transition-colors resize-none leading-relaxed"
+				rows="4"
+				spellcheck="true"
+			></textarea>
+			<div class="flex justify-between items-center text-xs text-text-muted">
+				<span>Las instrucciones reemplazan al prompt por defecto, pero el contexto de la pregunta siempre se incluye.</span>
+				<span id="ai-instructions-count" class="flex-shrink-0 ml-3 tabular-nums">0 / 500</span>
+			</div>
+		</div>
+	</div>
+
+	<!-- ── Acciones ───────────────────────────────────────────────────────── -->
+	<div class="flex items-center justify-between gap-4">
+		<a href="/perfil" class="text-sm text-text-muted hover:text-text-main transition-colors no-underline">
+			Cancelar
+		</a>
+		<button id="save-btn" class="flex items-center gap-2 px-6 py-2.5 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-xl transition-colors cursor-pointer border-none disabled:opacity-50 disabled:cursor-not-allowed">
+			<span class="material-icons text-[16px]">save</span>
+			Guardar cambios
+		</button>
+	</div>
+
+</div>
+
+<script is:inline>
+(function () {
+    "use strict";
+
+    let _userId = null;
+
+    function getDb() { return window.SupabaseClient; }
+
+    // ── Toast ─────────────────────────────────────────────────────────────────
+
+    function showToast(msg, type = "success") {
+        const toast = document.getElementById("toast");
+        const icon  = document.getElementById("toast-icon");
+        const msgEl = document.getElementById("toast-msg");
+        if (!toast) return;
+        icon.textContent  = type === "success" ? "check_circle" : "error";
+        icon.className    = `material-icons text-[18px] ${type === "success" ? "text-green-400" : "text-red-400"}`;
+        msgEl.textContent = msg;
+        toast.classList.remove("hidden");
+        setTimeout(() => toast.classList.add("hidden"), 3000);
+    }
+
+    // ── Theme ──────────────────────────────────────────────────────────────────
+
+    function getCurrentTheme() {
+        const s = localStorage.getItem("theme");
+        return (s === "dark" || s === "light") ? s : "system";
+    }
+
+    function applyTheme(theme) {
+        const el = document.documentElement;
+        if (theme === "dark") {
+            el.classList.add("dark");
+            localStorage.setItem("theme", "dark");
+        } else if (theme === "light") {
+            el.classList.remove("dark");
+            localStorage.setItem("theme", "light");
+        } else {
+            localStorage.removeItem("theme");
+            const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+            el.classList.toggle("dark", prefersDark);
+        }
+        // Sync navbar icon
+        const navIcon = document.getElementById("theme-icon");
+        if (navIcon) navIcon.innerText = el.classList.contains("dark") ? "dark_mode" : "light_mode";
+        updateThemeButtons(theme);
+    }
+
+    function updateThemeButtons(active) {
+        document.querySelectorAll(".theme-btn").forEach(btn => {
+            const isActive = btn.dataset.theme === active;
+            btn.classList.toggle("theme-btn-active", isActive);
+            btn.classList.toggle("border-border-subtle", !isActive);
+        });
+    }
+
+    function initTheme() {
+        updateThemeButtons(getCurrentTheme());
+        document.getElementById("theme-selector")?.addEventListener("click", e => {
+            const btn = e.target.closest(".theme-btn");
+            if (!btn) return;
+            applyTheme(btn.dataset.theme);
+            // Guardar en Supabase inmediatamente (sin esperar al botón "Guardar")
+            if (_userId) {
+                const dbTheme = btn.dataset.theme === "system" ? null : btn.dataset.theme;
+                getDb()?.from("profiles").update({ theme: dbTheme }).eq("id", _userId);
+            }
+        });
+    }
+
+    // ── AI Custom Instructions ────────────────────────────────────────────────
+
+    const AI_PRESETS = {
+        breve:    "Responde en máximo 3 frases. Sin rodeos, ve directo al punto.",
+        ejemplos: "Explica usando ejemplos prácticos y analogías del mundo real que sean fáciles de entender.",
+        profundo: "Explica en detalle todos los conceptos implicados, sin límite de extensión. Incluye matices y casos extremos.",
+        codigo:   "Incluye fragmentos de código o pseudocódigo siempre que ayude a ilustrar la explicación.",
+        english:  "Explain everything in English. Be clear, educational and concise.",
+        sencillo: "Explica de forma muy sencilla, como si fuera la primera vez que oigo hablar de informática. Nada de tecnicismos sin aclarar.",
+    };
+
+    function initAiInstructions(savedInstructions) {
+        const textarea = document.getElementById("ai-instructions-input");
+        const countEl  = document.getElementById("ai-instructions-count");
+        const resetBtn = document.getElementById("ai-instructions-reset");
+
+        if (!textarea) return;
+
+        textarea.value = savedInstructions ?? "";
+        updateCount();
+
+        textarea.addEventListener("input", updateCount);
+
+        document.getElementById("ai-preset-chips")?.addEventListener("click", (e) => {
+            const chip = e.target.closest(".ai-preset-chip");
+            if (!chip) return;
+            const preset = AI_PRESETS[chip.dataset.preset];
+            if (!preset) return;
+            textarea.value = preset;
+            updateCount();
+            textarea.focus();
+            setActiveChip(chip);
+        });
+
+        resetBtn?.addEventListener("click", () => {
+            textarea.value = "";
+            updateCount();
+            clearActiveChips();
+            textarea.focus();
+        });
+
+        function updateCount() {
+            const len = textarea.value.length;
+            if (countEl) countEl.textContent = `${len} / 500`;
+            const matched = Object.entries(AI_PRESETS).find(([, v]) => v === textarea.value.trim());
+            if (matched) {
+                const chip = document.querySelector(`.ai-preset-chip[data-preset="${matched[0]}"]`);
+                if (chip) setActiveChip(chip);
+            } else {
+                clearActiveChips();
+            }
+        }
+
+        function setActiveChip(active) {
+            document.querySelectorAll(".ai-preset-chip").forEach(c => c.classList.remove("ai-preset-chip--active"));
+            active.classList.add("ai-preset-chip--active");
+        }
+
+        function clearActiveChips() {
+            document.querySelectorAll(".ai-preset-chip").forEach(c => c.classList.remove("ai-preset-chip--active"));
+        }
+    }
+
+    // ── Visibility toggles ────────────────────────────────────────────────────
+
+    function initKeyToggles() {
+        document.querySelectorAll(".key-toggle").forEach(btn => {
+            btn.addEventListener("click", () => {
+                const input = document.getElementById(btn.dataset.target);
+                if (!input) return;
+                const nowText = input.type === "password";
+                input.type = nowText ? "text" : "password";
+                btn.querySelector(".material-icons").innerText = nowText ? "visibility_off" : "visibility";
+            });
+        });
+    }
+
+    // ── Validate ──────────────────────────────────────────────────────────────
+
+    function validateName(v) {
+        if (!v || v.trim().length < 2)  return "El nombre debe tener al menos 2 caracteres.";
+        if (v.trim().length > 50)        return "El nombre no puede superar 50 caracteres.";
+        return null;
+    }
+
+    // ── Load keys from DB ─────────────────────────────────────────────────────
+
+    async function loadApiKeys() {
+        const db = getDb();
+        const [{ data: groq }, { data: gemini }] = await Promise.all([
+            db.rpc("get_api_key", { p_provider: "groq" }),
+            db.rpc("get_api_key", { p_provider: "gemini" }),
+        ]);
+        if (groq)   document.getElementById("groq-key-input").value   = groq;
+        if (gemini) document.getElementById("gemini-key-input").value = gemini;
+    }
+
+    // ── Save ──────────────────────────────────────────────────────────────────
+
+    async function save() {
+        const db      = getDb();
+        const saveBtn = document.getElementById("save-btn");
+        const input   = document.getElementById("name-input");
+        const errorEl = document.getElementById("name-error");
+        const value   = input?.value?.trim();
+
+        const err = validateName(value);
+        if (err) {
+            if (errorEl) { errorEl.textContent = err; errorEl.classList.remove("hidden"); }
+            return;
+        }
+        errorEl?.classList.add("hidden");
+
+        saveBtn.disabled = true;
+        saveBtn.innerHTML = `<div class="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div> Guardando…`;
+
+        const groqKey            = (document.getElementById("groq-key-input")?.value ?? "").trim();
+        const geminiKey          = (document.getElementById("gemini-key-input")?.value ?? "").trim();
+        const customInstructions = (document.getElementById("ai-instructions-input")?.value ?? "").trim() || null;
+        const currentTheme       = getCurrentTheme();
+
+        const results = await Promise.all([
+            db.from("profiles").update({
+                username: value,
+                ai_custom_instructions: customInstructions,
+                theme: currentTheme === "system" ? null : currentTheme,
+            }).eq("id", _userId),
+            db.rpc("save_api_key", { p_provider: "groq",   p_key: groqKey }),
+            db.rpc("save_api_key", { p_provider: "gemini", p_key: geminiKey }),
+        ]);
+
+        saveBtn.disabled = false;
+        saveBtn.innerHTML = `<span class="material-icons text-[16px]">save</span> Guardar cambios`;
+
+        if (results.some(r => r.error)) {
+            showToast("Error al guardar. Inténtalo de nuevo.", "error");
+            return;
+        }
+
+        showToast("Ajustes guardados correctamente.");
+        setTimeout(() => { window.location.href = "/perfil"; }, 1200);
+    }
+
+    // ── Main ─────────────────────────────────────────────────────────────────
+
+    async function main() {
+        const { user, profile } = await new Promise(resolve =>
+            window.Auth?.onReady((u, p) => resolve({ user: u, profile: p }))
+        );
+
+        if (!user) {
+            window.location.replace("/login?redirect=/perfil/ajustes");
+            return;
+        }
+
+        _userId = user.id;
+
+        const input = document.getElementById("name-input");
+        if (input && profile?.username) input.value = profile.username;
+
+        initTheme();
+        initKeyToggles();
+        initAiInstructions(profile?.ai_custom_instructions ?? "");
+        await loadApiKeys();
+
+        document.getElementById("ajustes-loading")?.classList.add("hidden");
+        document.getElementById("ajustes-content")?.classList.remove("hidden");
+
+        document.getElementById("save-btn")?.addEventListener("click", save);
+        input?.addEventListener("keydown", e => { if (e.key === "Enter") save(); });
+        input?.addEventListener("input",   () => document.getElementById("name-error")?.classList.add("hidden"));
+    }
+
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", main);
+    } else {
+        main();
+    }
+})();
+</script>
+
+<style>
+    @reference "../../styles/global.css";
+
+    .theme-btn {
+        border-color: var(--color-border-subtle);
+    }
+    .theme-btn-active {
+        border-color: theme(colors.blue.500);
+        background-color: color-mix(in srgb, theme(colors.blue.500) 8%, transparent);
+    }
+    .theme-btn:hover:not(.theme-btn-active) {
+        border-color: theme(colors.blue.400);
+    }
+</style>
+
+<style is:global>
+    .ai-preset-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.3rem;
+        padding: 0.35rem 0.75rem;
+        border-radius: 9999px;
+        font-size: 0.78rem;
+        font-weight: 500;
+        cursor: pointer;
+        border: 1px solid var(--color-border-subtle);
+        background: transparent;
+        color: var(--color-text-muted);
+        transition: all 0.15s ease;
+    }
+    .ai-preset-chip:hover {
+        border-color: #7c3aed;
+        color: #7c3aed;
+        background: color-mix(in srgb, #7c3aed 8%, transparent);
+    }
+    .ai-preset-chip--active {
+        border-color: #7c3aed;
+        background: color-mix(in srgb, #7c3aed 12%, transparent);
+        color: #7c3aed;
+        font-weight: 600;
+    }
+    .dark .ai-preset-chip:hover,
+    .dark .ai-preset-chip--active {
+        border-color: #a78bfa;
+        color: #a78bfa;
+        background: color-mix(in srgb, #a78bfa 12%, transparent);
+    }
+</style>
+</BaseLayout>

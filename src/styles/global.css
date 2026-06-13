@@ -716,6 +716,16 @@ body.tools-sheet-body-lock {
   vertical-align: middle;
 }
 
+/* Online users counter bump animation */
+@keyframes online-bump {
+  0%   { transform: scale(1); }
+  40%  { transform: scale(1.12); }
+  100% { transform: scale(1); }
+}
+.online-counter--bump {
+  animation: online-bump 0.3s ease-out;
+}
+
 /* Unified modal entrance animation */
 .modal-enter {
   opacity: 0;

@@ -1,0 +1,393 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Mi perfil • Tests UA">
+
+<!-- Loading -->
+<div id="perfil-loading" class="flex flex-col items-center justify-center min-h-[60vh] gap-4">
+	<div class="w-8 h-8 border-2 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+	<p class="text-text-muted text-sm">Cargando perfil…</p>
+</div>
+
+<div id="perfil-content" class="hidden w-full">
+
+		<!-- ── Tabs + content ─────────────────────────────────────────────────── -->
+	<div class="max-w-3xl mx-auto px-4 sm:px-6 py-6 space-y-5">
+
+		<!-- ── Header de perfil ─────────────────────────────────────────── -->
+		<div class="bg-surface border border-border-subtle rounded-2xl shadow-subtle p-5 flex items-center gap-4">
+			<div class="relative flex-shrink-0">
+				<!-- Avatar con imagen o inicial como fallback -->
+				<div class="w-16 h-16 rounded-xl border-2 border-border-subtle overflow-hidden bg-blue-100 dark:bg-blue-900/40 flex items-center justify-center flex-shrink-0">
+					<img id="perfil-avatar" src="" alt="Avatar" class="hidden w-full h-full object-cover" />
+					<span id="perfil-avatar-initial" class="font-heading font-bold text-blue-600 dark:text-blue-300 text-2xl leading-none"></span>
+				</div>
+				<span id="perfil-admin-dot" style="display:none" class="absolute -top-1.5 -right-1.5 w-5 h-5 bg-purple-500 rounded-full border-2 border-surface flex items-center justify-center">
+					<span class="material-icons text-white" style="font-size:0.65rem;">star</span>
+				</span>
+			</div>
+			<div class="flex-1 min-w-0">
+				<div class="flex items-center gap-2 flex-wrap">
+					<h1 id="perfil-username" class="font-heading font-bold text-text-main text-xl m-0 truncate"></h1>
+					<span id="perfil-role-badge" style="display:none" class="inline-flex items-center gap-1 px-2 py-0.5 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded-full text-xs font-semibold">
+						<span class="material-icons" style="font-size:0.75rem;">admin_panel_settings</span>
+						Admin
+					</span>
+				</div>
+				<p id="perfil-email" class="text-text-muted text-sm mt-0.5 m-0 truncate"></p>
+				<div class="flex gap-4 mt-3">
+					<div>
+						<span id="stat-reportes" class="font-heading font-bold text-text-main text-lg">–</span>
+						<span class="text-text-muted text-xs ml-1">reportes</span>
+					</div>
+					<div class="w-px bg-border-subtle"></div>
+					<div>
+						<span id="stat-contribuciones" class="font-heading font-bold text-text-main text-lg">–</span>
+						<span class="text-text-muted text-xs ml-1">contribuciones</span>
+					</div>
+				</div>
+			</div>
+			<div class="flex flex-col sm:flex-row items-end sm:items-center gap-2 flex-shrink-0">
+				<a href="/perfil/ajustes" class="flex items-center gap-1.5 px-3 py-2 text-sm font-medium text-text-muted hover:text-text-main border border-border-subtle hover:bg-surface-hover rounded-lg transition-colors no-underline">
+					<span class="material-icons text-[16px]">settings</span>
+					<span class="hidden sm:inline">Ajustes</span>
+				</a>
+				<button id="perfil-logout-btn" class="flex items-center gap-1.5 px-3 py-2 text-sm font-medium text-red-500 hover:text-white hover:bg-red-500 border border-red-300 dark:border-red-800 hover:border-red-500 rounded-lg transition-colors cursor-pointer bg-transparent">
+					<span class="material-icons text-[16px]">logout</span>
+					<span class="hidden sm:inline">Salir</span>
+				</button>
+			</div>
+		</div>
+
+		<div class="flex gap-1 border-b border-border-subtle">
+			<button class="perfil-tab active" data-tab="reportes">
+				<span class="material-icons text-[15px]">flag</span>
+				Mis reportes
+			</button>
+			<button class="perfil-tab" data-tab="contribuciones">
+				<span class="material-icons text-[15px]">add_circle</span>
+				Mis contribuciones
+			</button>
+		</div>
+
+		<!-- Tab: Mis Reportes -->
+		<div id="tab-reportes" class="tab-panel">
+			<div id="reportes-loading" class="flex items-center gap-3 py-10 text-text-muted">
+				<div class="w-5 h-5 border-2 border-blue-500 border-t-transparent rounded-full animate-spin flex-shrink-0"></div>
+				<span class="text-sm">Cargando reportes…</span>
+			</div>
+			<div id="reportes-empty" class="hidden flex flex-col items-center justify-center py-16 gap-3 text-center">
+				<div class="w-14 h-14 rounded-2xl bg-surface-hover border border-border-subtle flex items-center justify-center">
+					<span class="material-icons text-text-muted" style="font-size:1.6rem;">flag</span>
+				</div>
+				<p class="text-text-main font-medium m-0">Sin reportes aún</p>
+				<p class="text-text-muted text-sm m-0">Cuando reportes una pregunta aparecerá aquí.</p>
+			</div>
+			<div id="reportes-list" class="hidden space-y-3"></div>
+		</div>
+
+		<!-- Tab: Mis Contribuciones -->
+		<div id="tab-contribuciones" class="tab-panel hidden">
+			<div id="contribs-loading" class="flex items-center gap-3 py-10 text-text-muted">
+				<div class="w-5 h-5 border-2 border-blue-500 border-t-transparent rounded-full animate-spin flex-shrink-0"></div>
+				<span class="text-sm">Cargando contribuciones…</span>
+			</div>
+			<div id="contribs-empty" class="hidden flex flex-col items-center justify-center py-16 gap-3 text-center">
+				<div class="w-14 h-14 rounded-2xl bg-surface-hover border border-border-subtle flex items-center justify-center">
+					<span class="material-icons text-text-muted" style="font-size:1.6rem;">add_circle</span>
+				</div>
+				<p class="text-text-main font-medium m-0">Sin contribuciones aún</p>
+				<p class="text-text-muted text-sm m-0">¿Conoces una pregunta que debería estar aquí?</p>
+				<a href="/contribuir" class="inline-flex items-center gap-1.5 mt-1 px-4 py-2 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors no-underline">
+					<span class="material-icons text-[15px]">add</span>
+					Contribuir pregunta
+				</a>
+			</div>
+			<div id="contribs-list" class="hidden space-y-3"></div>
+		</div>
+
+	</div>
+</div>
+
+<script is:inline>
+(function () {
+    "use strict";
+
+    // UUID pattern — si el username tiene este formato, es un ID sin username real
+    const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+
+    const STATUS_CFG = {
+        pendiente: { label: "Pendiente", icon: "schedule",     cls: "badge-pending" },
+        aceptado:  { label: "Aceptado",  icon: "check_circle", cls: "badge-accepted" },
+        aprobado:  { label: "Aprobado",  icon: "check_circle", cls: "badge-accepted" },
+        rechazado: { label: "Rechazado", icon: "do_not_disturb_on", cls: "badge-rejected" },
+    };
+
+    function badge(status) {
+        const cfg = STATUS_CFG[status];
+        if (!cfg) return "";
+        return `<span class="status-badge ${cfg.cls}"><span class="material-icons" style="font-size:0.8rem;line-height:1;">${cfg.icon}</span>${cfg.label}</span>`;
+    }
+
+    function formatDate(iso) {
+        return new Date(iso).toLocaleDateString("es-ES", { day: "2-digit", month: "short", year: "numeric" });
+    }
+
+    function truncate(str, n = 130) {
+        if (!str) return "";
+        return str.length > n ? str.slice(0, n) + "…" : str;
+    }
+
+    // ── Auth ─────────────────────────────────────────────────────────────────
+
+    function waitAuth() {
+        return new Promise(resolve => window.Auth?.onReady((u, p) => resolve({ user: u, profile: p })));
+    }
+
+    // ── Queries ───────────────────────────────────────────────────────────────
+
+    async function loadReportes(userId) {
+        const db = window.SupabaseClient;
+        if (!db) return [];
+        const { data } = await db
+            .from("reports")
+            .select("id, reason, details, status, admin_note, created_at, questions(content, subject_id)")
+            .eq("user_id", userId)
+            .order("created_at", { ascending: false })
+            .limit(50);
+        return data || [];
+    }
+
+    async function loadContribs(userId) {
+        const db = window.SupabaseClient;
+        if (!db) return [];
+        const { data } = await db
+            .from("contributions")
+            .select("id, content, section, status, rejection_reason, created_at, subject_id")
+            .eq("user_id", userId)
+            .order("created_at", { ascending: false })
+            .limit(50);
+        return data || [];
+    }
+
+    // ── Render ────────────────────────────────────────────────────────────────
+
+    function renderReportes(list) {
+        document.getElementById("reportes-loading")?.classList.add("hidden");
+
+        const container = document.getElementById("reportes-list");
+        const empty     = document.getElementById("reportes-empty");
+        if (!container) return;
+
+        if (list.length === 0) { empty?.classList.remove("hidden"); return; }
+
+        container.classList.remove("hidden");
+        container.innerHTML = list.map(r => `
+            <div class="report-card report-card--${r.status} bg-surface border border-border-subtle rounded-xl p-4 space-y-2">
+                <div class="flex flex-wrap items-start gap-2">
+                    ${badge(r.status)}
+                    <div class="flex flex-wrap gap-x-3 gap-y-0.5 text-xs text-text-muted items-center">
+                        <span>${r.reason}</span>
+                        <span class="opacity-50">·</span>
+                        <span>${formatDate(r.created_at)}</span>
+                        ${r.questions?.subject_id
+                            ? `<span class="opacity-50">·</span><a href="/${r.questions.subject_id}" class="text-blue-500 hover:underline no-underline font-medium">${r.questions.subject_id.toUpperCase()}</a>`
+                            : ""}
+                    </div>
+                </div>
+                <p class="text-text-main text-sm leading-snug m-0">${truncate(r.questions?.content || "Pregunta eliminada")}</p>
+                <p class="text-text-muted text-xs italic m-0 leading-relaxed">"${truncate(r.details, 200)}"</p>
+                ${r.status === "rechazado" && r.admin_note ? `
+                <div class="mt-1 px-3 py-2 bg-surface-hover border border-border-subtle rounded-lg text-xs text-text-muted">
+                    <span class="font-semibold">Nota del admin:</span> ${r.admin_note}
+                </div>` : ""}
+            </div>
+        `).join("");
+
+        document.getElementById("stat-reportes").textContent = list.length;
+    }
+
+    function renderContribs(list) {
+        document.getElementById("contribs-loading")?.classList.add("hidden");
+
+        const container = document.getElementById("contribs-list");
+        const empty     = document.getElementById("contribs-empty");
+        if (!container) return;
+
+        if (list.length === 0) { empty?.classList.remove("hidden"); return; }
+
+        container.classList.remove("hidden");
+        container.innerHTML = list.map(c => `
+            <div class="report-card report-card--${c.status} bg-surface border border-border-subtle rounded-xl p-4 space-y-2">
+                <div class="flex flex-wrap items-start gap-2">
+                    ${badge(c.status)}
+                    <div class="flex flex-wrap gap-x-3 gap-y-0.5 text-xs text-text-muted items-center">
+                        ${c.subject_id ? `<span class="font-medium">${c.subject_id.toUpperCase()}</span>` : ""}
+                        ${c.section ? `<span class="opacity-50">·</span><span>${c.section}</span>` : ""}
+                        <span class="opacity-50">·</span>
+                        <span>${formatDate(c.created_at)}</span>
+                    </div>
+                </div>
+                <p class="text-text-main text-sm leading-snug m-0">${truncate(c.content)}</p>
+                ${c.status === "rechazado" && c.rejection_reason ? `
+                <div class="mt-1 px-3 py-2 bg-surface-hover border border-border-subtle rounded-lg text-xs text-text-muted">
+                    <span class="font-semibold">Motivo:</span> ${c.rejection_reason}
+                </div>` : ""}
+            </div>
+        `).join("");
+
+        document.getElementById("stat-contribuciones").textContent = list.length;
+    }
+
+    // ── Tabs ─────────────────────────────────────────────────────────────────
+
+    function initTabs() {
+        document.querySelectorAll(".perfil-tab").forEach(btn => {
+            btn.addEventListener("click", () => {
+                document.querySelectorAll(".perfil-tab").forEach(b => b.classList.remove("active"));
+                document.querySelectorAll(".tab-panel").forEach(p => p.classList.add("hidden"));
+                btn.classList.add("active");
+                document.getElementById("tab-" + btn.dataset.tab)?.classList.remove("hidden");
+            });
+        });
+    }
+
+    // ── Main ─────────────────────────────────────────────────────────────────
+
+    async function main() {
+        const { user, profile } = await waitAuth();
+
+        if (!user) {
+            window.location.replace("/login?redirect=/perfil");
+            return;
+        }
+
+        // Avatar: imagen de Google o inicial
+        const avatarImg     = document.getElementById("perfil-avatar");
+        const avatarInitial = document.getElementById("perfil-avatar-initial");
+        if (profile?.avatar_url) {
+            if (avatarImg) { avatarImg.src = profile.avatar_url; avatarImg.classList.remove("hidden"); }
+            if (avatarInitial) avatarInitial.classList.add("hidden");
+        } else {
+            if (avatarInitial) avatarInitial.textContent = (profile?.username || user.email || "U")[0].toUpperCase();
+        }
+
+        const usernameEl = document.getElementById("perfil-username");
+        if (usernameEl) {
+            const uname = profile?.username || "";
+            // Si el username es un UUID (perfil creado manualmente), mostramos el email o un placeholder
+            usernameEl.textContent = UUID_RE.test(uname)
+                ? (user.email?.split("@")[0] || "Usuario")
+                : (uname || "Usuario");
+        }
+
+        const emailEl = document.getElementById("perfil-email");
+        if (emailEl) emailEl.textContent = user.email || "";
+
+        if (profile?.role === "admin") {
+            const badge = document.getElementById("perfil-role-badge");
+            const dot   = document.getElementById("perfil-admin-dot");
+            if (badge) badge.style.display = "inline-flex";
+            if (dot)   dot.style.display   = "flex";
+        }
+
+        document.getElementById("perfil-loading")?.classList.add("hidden");
+        document.getElementById("perfil-content")?.classList.remove("hidden");
+
+        document.getElementById("perfil-logout-btn")?.addEventListener("click", () => {
+            window.Auth?.logout();
+        });
+
+        initTabs();
+
+        const [reportes, contribs] = await Promise.all([
+            loadReportes(user.id),
+            loadContribs(user.id),
+        ]);
+
+        renderReportes(reportes);
+        renderContribs(contribs);
+
+        // Update stats defaults
+        if (document.getElementById("stat-reportes").textContent === "–")
+            document.getElementById("stat-reportes").textContent = "0";
+        if (document.getElementById("stat-contribuciones").textContent === "–")
+            document.getElementById("stat-contribuciones").textContent = "0";
+    }
+
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", main);
+    } else {
+        main();
+    }
+})();
+</script>
+
+<style>
+    @reference "../styles/global.css";
+
+    .perfil-tab {
+        @apply flex items-center gap-1.5 px-4 py-2.5 text-sm font-medium text-text-muted
+               border-b-2 border-transparent hover:text-text-main hover:border-border-subtle
+               cursor-pointer bg-transparent transition-colors -mb-px;
+    }
+    .perfil-tab.active {
+        @apply text-blue-600 border-blue-600;
+    }
+</style>
+
+<style is:global>
+    .status-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.25rem;
+        padding: 0.25rem 0.625rem;
+        border-radius: 9999px;
+        font-size: 0.7rem;
+        font-weight: 700;
+        flex-shrink: 0;
+        white-space: nowrap;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+    }
+    .badge-pending  {
+        background: rgba(234, 179, 8, 0.15);
+        color: #92400e;
+        border: 1px solid rgba(234, 179, 8, 0.35);
+    }
+    .badge-accepted {
+        background: rgba(34, 197, 94, 0.12);
+        color: #166534;
+        border: 1px solid rgba(34, 197, 94, 0.35);
+    }
+    .badge-rejected {
+        background: rgba(239, 68, 68, 0.12);
+        color: #991b1b;
+        border: 1px solid rgba(239, 68, 68, 0.3);
+    }
+    .dark .badge-pending  {
+        background: rgba(234, 179, 8, 0.15);
+        color: #fde68a;
+        border-color: rgba(234, 179, 8, 0.3);
+    }
+    .dark .badge-accepted {
+        background: rgba(34, 197, 94, 0.15);
+        color: #86efac;
+        border-color: rgba(34, 197, 94, 0.3);
+    }
+    .dark .badge-rejected {
+        background: rgba(239, 68, 68, 0.15);
+        color: #fca5a5;
+        border-color: rgba(239, 68, 68, 0.3);
+    }
+
+    .report-card {
+        border-left-width: 3px;
+    }
+    .report-card--pendiente  { border-left-color: #f59e0b; }
+    .report-card--aceptado,
+    .report-card--aprobado   { border-left-color: #22c55e; }
+    .report-card--rechazado  { border-left-color: #ef4444; }
+</style>
+</BaseLayout>

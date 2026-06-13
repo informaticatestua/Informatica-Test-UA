@@ -57,8 +57,8 @@ const supabaseAnonKey = import.meta.env.PUBLIC_SUPABASE_ANON_KEY ?? '';
 				</svg>
 			</a>
 
-			<a href="/" class="m-0 text-center flex-grow pl-[10px] flex items-center justify-center gap-3 flex-wrap no-underline hover:opacity-80 transition-opacity">
-				<span class="title-main font-heading font-extrabold tracking-wide text-text-main">
+			<a href="/" class="absolute left-1/2 -translate-x-1/2 flex items-center justify-center no-underline hover:opacity-80 transition-opacity pointer-events-auto">
+				<span class="title-main font-heading font-extrabold tracking-wide text-text-main whitespace-nowrap">
 					Ing. Informática Tests UA
 				</span>
 			</a>
@@ -66,6 +66,11 @@ const supabaseAnonKey = import.meta.env.PUBLIC_SUPABASE_ANON_KEY ?? '';
 
 
 			<nav aria-label="Navegación principal" class="ml-auto flex items-center gap-1">
+				<!-- ─── Usuarios online (tiempo real) ────────────────────── -->
+				<div id="online-counter" class="hidden flex items-center gap-1.5 px-2.5 py-1 mr-1 rounded-full text-xs font-medium text-text-muted border border-border-subtle mt-1 select-none transition-all duration-300" aria-live="polite" aria-label="Usuarios conectados ahora">
+					<span class="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse flex-shrink-0"></span>
+					<span id="online-count"></span>
+				</div>
 				<!-- ─── Notificaciones (solo visible con sesión) ──────────── -->
 				<div id="notif-wrapper" class="hidden relative mt-1">
 					<button id="notif-btn" class="relative p-2 text-text-muted hover:text-blue-500 bg-transparent border-none rounded-full transition-colors cursor-pointer flex items-center justify-center" aria-label="Notificaciones">
@@ -300,6 +305,7 @@ const supabaseAnonKey = import.meta.env.PUBLIC_SUPABASE_ANON_KEY ?? '';
 		<!-- ─── Supabase JS SDK (UMD, expone window.supabase) ─────────── -->
 		<script is:inline src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
 		<script is:inline src="/resources/js/supabase-client.js"></script>
+		<script is:inline src="/resources/js/online-users.js"></script>
 		<script is:inline src="/resources/js/utils.js"></script>
 		<script is:inline src="/resources/js/auth.js"></script>
 		<script is:inline src="/resources/js/quiz-data.js"></script>

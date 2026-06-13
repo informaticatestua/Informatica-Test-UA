@@ -39,8 +39,8 @@
     }
 
     async function add(questionId, quizKey) {
-        const db = getDb();
-        const uid = userId();
+        const db = window.Utils?.getDb();
+        const uid = window.Utils?.userId();
         if (!db || !uid || !isSyncable(questionId)) return;
 
         const row = { user_id: uid, question_id: questionId, subject_id: quizKey || null };
@@ -58,8 +58,8 @@
     }
 
     async function remove(questionId) {
-        const db = getDb();
-        const uid = userId();
+        const db = window.Utils?.getDb();
+        const uid = window.Utils?.userId();
         if (!db || !uid || !isSyncable(questionId)) return;
 
         const { error } = await db
