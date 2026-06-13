@@ -191,6 +191,7 @@
     // ─── Wiring ───────────────────────────────────────────────────────────────
 
     function init() {
+        document.getElementById("report-btn")?.addEventListener("click", openModal);
         document.getElementById("report-overlay")?.addEventListener("click", closeModal);
         document.getElementById("report-close")?.addEventListener("click", closeModal);
         document.getElementById("report-submit-btn")?.addEventListener("click", submitReport);
