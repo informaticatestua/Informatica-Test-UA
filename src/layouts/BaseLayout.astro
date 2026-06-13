@@ -58,8 +58,9 @@ const supabaseAnonKey = import.meta.env.PUBLIC_SUPABASE_ANON_KEY ?? '';
 			</a>
 
 			<a href="/" class="absolute left-1/2 -translate-x-1/2 flex items-center justify-center no-underline hover:opacity-80 transition-opacity pointer-events-auto">
-				<span class="title-main font-heading font-extrabold tracking-wide text-text-main whitespace-nowrap">
-					Ing. Informática Tests UA
+				<span class="title-main font-heading font-extrabold tracking-wide text-text-main">
+					<span class="sm:hidden">Tests UA</span>
+					<span class="hidden sm:inline whitespace-nowrap">Ing. Informática Tests UA</span>
 				</span>
 			</a>
 
@@ -89,9 +90,9 @@ const supabaseAnonKey = import.meta.env.PUBLIC_SUPABASE_ANON_KEY ?? '';
 					</div>
 				</div>
 				<!-- ─── Auth: botón login (visible si no hay sesión) ───────── -->
-				<a id="auth-login-btn" href="/login" class="hidden mt-1 ml-1 px-3 py-1.5 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors no-underline flex items-center gap-1.5">
+				<a id="auth-login-btn" href="/login" class="hidden mt-1 ml-1 px-2 sm:px-3 py-1.5 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors no-underline flex items-center gap-1.5">
 					<span class="material-icons mi-sm">login</span>
-					Entrar
+					<span class="hidden sm:inline">Entrar</span>
 				</a>
 
 				<!-- ─── Auth: avatar (visible si hay sesión) ──────────────── -->
