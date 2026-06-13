@@ -113,6 +113,13 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 			</section>
 			
 			<div id="action-buttons-container" class="quiz-actions">
+				<!-- Fila de stats solo visible en móvil (sincronizada desde JS) -->
+				<div id="quiz-mobile-stats" class="hidden sm:hidden flex items-center justify-center gap-2 text-xs text-text-muted pb-2 border-b border-border-subtle mb-1">
+					<span class="material-icons text-text-muted" style="font-size:0.9rem;">bar_chart</span>
+					<span id="mobile-total-preguntas" class="font-medium whitespace-nowrap"></span>
+					<span class="w-px h-3 bg-border-subtle flex-shrink-0" aria-hidden="true"></span>
+					<span id="mobile-contador" class="font-medium whitespace-nowrap"></span>
+				</div>
 				<div class="quiz-actions-primary">
 					<button id="volver-pregunta" class="quiz-nav-btn hidden" aria-label="Pregunta anterior">
 						<span class="material-icons" aria-hidden="true">chevron_left</span>
@@ -596,6 +603,38 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 <script is:inline src="/resources/js/main.js"></script>
 <script is:inline src="/resources/js/reports.js"></script>
 <script is:inline src="/resources/js/ai-generate.js"></script>
+
+<script is:inline>
+(function () {
+    "use strict";
+    function syncMobileStats() {
+        var sp  = document.getElementById("stats-panel");
+        var row = document.getElementById("quiz-mobile-stats");
+        if (!sp || !row) return;
+        var visible = !sp.classList.contains("hidden");
+        row.classList.toggle("hidden", !visible);
+        if (visible) {
+            var tp = document.getElementById("total-preguntas");
+            var ct = document.getElementById("contador");
+            var mtp = document.getElementById("mobile-total-preguntas");
+            var mct = document.getElementById("mobile-contador");
+            if (tp && mtp) mtp.textContent = tp.textContent;
+            if (ct && mct) mct.textContent = ct.textContent;
+        }
+    }
+    function init() {
+        var sp = document.getElementById("stats-panel");
+        if (!sp) return;
+        var obs = new MutationObserver(syncMobileStats);
+        obs.observe(sp, { subtree: true, childList: true, attributes: true, attributeFilter: ["class"] });
+    }
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", init);
+    } else {
+        init();
+    }
+})();
+</script>
 </BaseLayout>
 
 <style>
@@ -666,7 +705,11 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 			box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.25);
 		}
 		.quiz-nav-btn-label {
-			@apply inline;
+			@apply hidden;
+		}
+		/* El panel flotante de stats se oculta en móvil; las stats van dentro de la barra */
+		#stats-panel {
+			display: none !important;
 		}
 	}
 
