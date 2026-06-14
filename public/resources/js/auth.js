@@ -29,7 +29,7 @@
         if (!db) return null;
         const { data, error } = await db
             .from("profiles")
-            .select("id, username, avatar_url, role, banned, ai_custom_instructions, theme, ai_provider, ai_gemini_model, ai_groq_model, ai_deepseek_model")
+            .select("id, username, avatar_url, role, banned, ai_custom_instructions, theme, ai_provider, ai_gemini_model, ai_groq_model")
             .eq("id", userId)
             .single();
         if (error) {
@@ -45,10 +45,9 @@
         if (profile.theme) localStorage.setItem("theme", profile.theme);
         else               localStorage.removeItem("theme");
         // AI preferences
-        if (profile.ai_provider)      localStorage.setItem("ai_provider",      profile.ai_provider);
-        if (profile.ai_gemini_model)  localStorage.setItem("ai_gemini_model",  profile.ai_gemini_model);
-        if (profile.ai_groq_model)    localStorage.setItem("ai_groq_model",    profile.ai_groq_model);
-        if (profile.ai_deepseek_model)localStorage.setItem("ai_deepseek_model",profile.ai_deepseek_model);
+        if (profile.ai_provider)     localStorage.setItem("ai_provider",     profile.ai_provider);
+        if (profile.ai_gemini_model) localStorage.setItem("ai_gemini_model", profile.ai_gemini_model);
+        if (profile.ai_groq_model)   localStorage.setItem("ai_groq_model",   profile.ai_groq_model);
     }
 
     function updateNavbar() {

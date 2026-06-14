@@ -141,12 +141,19 @@ const supabaseAnonKey = import.meta.env.PUBLIC_SUPABASE_ANON_KEY ?? '';
 
 					<!-- Aviso sin clave configurada -->
 					<div id="ai-settings-no-key-msg" class="hidden mb-4 p-3 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-300 dark:border-yellow-700 rounded-lg text-yellow-800 dark:text-yellow-300 text-sm">
-						Configura una API Key para usar las explicaciones de IA.
+						Configura tu API Key en <a href="/perfil/ajustes" class="font-semibold underline">Ajustes de perfil</a> para usar las explicaciones de IA.
 					</div>
+
+					<!-- Nota claves -->
+					<a href="/perfil/ajustes" class="flex items-center gap-2 mb-5 p-3 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg text-sm text-blue-800 dark:text-blue-300 no-underline hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-colors">
+						<span class="material-icons shrink-0" style="font-size:1rem;">lock</span>
+						<span>Las claves de API se gestionan en <strong>Ajustes de perfil → Claves de IA</strong></span>
+						<span class="material-icons ml-auto shrink-0 text-blue-400" style="font-size:1rem;">open_in_new</span>
+					</a>
 
 					<!-- Selección de proveedor -->
 					<p class="text-text-muted text-xs font-semibold uppercase tracking-wider mb-3">Proveedor activo</p>
-					<div class="grid grid-cols-3 gap-2 mb-5">
+					<div class="grid grid-cols-2 gap-2 mb-5">
 						<label class="ai-provider-card">
 							<input type="radio" name="ai-provider" value="gemini" class="sr-only">
 							<span class="material-icons text-blue-500" style="font-size:1.5rem;">auto_awesome</span>
@@ -157,21 +164,12 @@ const supabaseAnonKey = import.meta.env.PUBLIC_SUPABASE_ANON_KEY ?? '';
 							<span class="text-orange-500 font-bold leading-none" style="font-size:1.5rem;">⚡</span>
 							<span class="text-xs font-semibold text-text-main">Groq</span>
 						</label>
-						<label class="ai-provider-card">
-							<input type="radio" name="ai-provider" value="deepseek" class="sr-only">
-							<span class="text-blue-400 font-bold leading-none" style="font-size:1.5rem;">🐋</span>
-							<span class="text-xs font-semibold text-text-main">DeepSeek</span>
-						</label>
 					</div>
 
 					<!-- Gemini config -->
 					<div id="ai-gemini-config" class="space-y-3">
 						<div>
-							<label class="block text-sm font-medium text-text-main mb-1" for="ai-gemini-key">API Key de Google Gemini</label>
-							<input id="ai-gemini-key" type="password" placeholder="AIza..." class="ai-input" autocomplete="off" />
-						</div>
-						<div>
-							<label class="block text-sm font-medium text-text-main mb-1" for="ai-gemini-model">Modelo</label>
+							<label class="block text-sm font-medium text-text-main mb-1" for="ai-gemini-model">Modelo Gemini</label>
 							<select id="ai-gemini-model" class="ai-select">
 								<option value="gemini-2.0-flash">gemini-2.0-flash</option>
 								<option value="gemini-2.5-flash">gemini-2.5-flash</option>
@@ -183,30 +181,11 @@ const supabaseAnonKey = import.meta.env.PUBLIC_SUPABASE_ANON_KEY ?? '';
 					<!-- Groq config -->
 					<div id="ai-groq-config" class="hidden space-y-3">
 						<div>
-							<label class="block text-sm font-medium text-text-main mb-1" for="ai-groq-key">API Key de Groq</label>
-							<input id="ai-groq-key" type="password" placeholder="gsk_..." class="ai-input" autocomplete="off" />
-						</div>
-						<div>
-							<label class="block text-sm font-medium text-text-main mb-1" for="ai-groq-model">Modelo</label>
+							<label class="block text-sm font-medium text-text-main mb-1" for="ai-groq-model">Modelo Groq</label>
 							<select id="ai-groq-model" class="ai-select">
 								<option value="llama-3.3-70b-versatile">llama-3.3-70b-versatile</option>
 								<option value="deepseek-r1-distill-llama-70b">deepseek-r1-distill-llama-70b</option>
 								<option value="llama-3.1-8b-instant">llama-3.1-8b-instant (rápido)</option>
-							</select>
-						</div>
-					</div>
-
-					<!-- DeepSeek config -->
-					<div id="ai-deepseek-config" class="hidden space-y-3">
-						<div>
-							<label class="block text-sm font-medium text-text-main mb-1" for="ai-deepseek-key">API Key de DeepSeek</label>
-							<input id="ai-deepseek-key" type="password" placeholder="sk-..." class="ai-input" autocomplete="off" />
-						</div>
-						<div>
-							<label class="block text-sm font-medium text-text-main mb-1" for="ai-deepseek-model">Modelo</label>
-							<select id="ai-deepseek-model" class="ai-select">
-								<option value="deepseek-chat">deepseek-chat</option>
-								<option value="deepseek-reasoner">deepseek-reasoner</option>
 							</select>
 						</div>
 					</div>

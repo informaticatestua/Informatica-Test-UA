@@ -1,11 +1,9 @@
 /**
  * ai-features.js — Panel de configuración de IA y explicación de respuestas.
  *
- * Proveedores soportados: Google Gemini, Groq, Ollama (local).
- * Toda la configuración persiste en localStorage.
- * Se expone `window.AIFeatures` con dos métodos públicos:
- *   - openSettings()    → abre el modal de ajustes
- *   - showExplanation() → abre el drawer con la explicación de la pregunta activa
+ * Proveedores soportados: Google Gemini, Groq.
+ * Las API keys se leen desde Supabase (encriptadas) al iniciar sesión.
+ * Las preferencias de proveedor/modelo persisten en localStorage.
  */
 (function () {
     "use strict";
@@ -15,13 +13,9 @@
     // ─────────────────────────────────────────────────────────────────────
 
     const LS = Object.freeze({
-        PROVIDER:        "ai_provider",
-        GEMINI_KEY:      "ai_gemini_key",
-        GEMINI_MODEL:    "ai_gemini_model",
-        GROQ_KEY:        "ai_groq_key",
-        GROQ_MODEL:      "ai_groq_model",
-        DEEPSEEK_KEY:    "ai_deepseek_key",
-        DEEPSEEK_MODEL:  "ai_deepseek_model",
+        PROVIDER:     "ai_provider",
+        GEMINI_MODEL: "ai_gemini_model",
+        GROQ_MODEL:   "ai_groq_model",
     });
 
     const DEFAULT_INSTRUCTIONS =
@@ -29,34 +23,64 @@
         "Explica brevemente (máximo 180 palabras) por qué la respuesta correcta es correcta " +
         "y por qué cada opción incorrecta es incorrecta. Sé directo y educativo; no repitas el enunciado.";
 
-    const GEMINI_MODELS    = ["gemini-2.0-flash", "gemini-2.5-flash", "gemini-1.5-pro"];
-    const GROQ_MODELS      = [
+    const GEMINI_MODELS = ["gemini-2.0-flash", "gemini-2.5-flash", "gemini-1.5-pro"];
+    const GROQ_MODELS   = [
         "llama-3.3-70b-versatile",
         "deepseek-r1-distill-llama-70b",
         "llama-3.1-8b-instant",
     ];
-    const DEEPSEEK_MODELS  = ["deepseek-chat", "deepseek-reasoner"];
 
-    const LETTERS = ["A", "B", "C", "D", "E", "F"];
+    const LETTERS    = ["A", "B", "C", "D", "E", "F"];
     const MAX_TOKENS = 600;
 
     // ─────────────────────────────────────────────────────────────────────
-    // 2. HELPERS DE STORAGE Y DOM
+    // 2. ESTADO EN MEMORIA
     // ─────────────────────────────────────────────────────────────────────
 
-    const get  = (key, def = "") => localStorage.getItem(key) ?? def;
-    const save = (key, val)      => localStorage.setItem(key, val);
+    // API keys cargadas desde Supabase al iniciar sesión. Nunca van a localStorage.
+    const _keys = { gemini: "", groq: "" };
+
+    async function loadApiKeys() {
+        const db = window.Utils?.getDb();
+        if (!db) return;
+        try {
+            const [{ data: gemini }, { data: groq }] = await Promise.all([
+                db.rpc("get_api_key", { p_provider: "gemini" }),
+                db.rpc("get_api_key", { p_provider: "groq" }),
+            ]);
+            _keys.gemini = gemini ?? "";
+            _keys.groq   = groq   ?? "";
+        } catch (e) {
+            console.error("[AIFeatures] loadApiKeys:", e);
+        }
+    }
+
+    // ─────────────────────────────────────────────────────────────────────
+    // 3. HELPERS DE STORAGE Y DOM
+    // ─────────────────────────────────────────────────────────────────────
+
+    const getPref  = (key, def = "") => localStorage.getItem(key) ?? def;
+    const savePref = (key, val)     => localStorage.setItem(key, val);
+
+    function persistProviderModel(provider, model) {
+        const userId = window.Auth?.getUser()?.id;
+        const db     = window.Utils?.getDb();
+        if (!userId || !db) return;
+        const update = { ai_provider: provider };
+        if (model) update[provider === "gemini" ? "ai_gemini_model" : "ai_groq_model"] = model;
+        db.from("profiles").update(update).eq("id", userId);
+    }
 
     const $    = (id) => document.getElementById(id);
     const val  = (id) => ($( id)?.value?.trim() ?? "");
     const setV = (id, v) => { const el = $(id); if (el) el.value = v; };
 
     // ─────────────────────────────────────────────────────────────────────
-    // 3. MODAL DE AJUSTES
+    // 4. MODAL DE AJUSTES
     // ─────────────────────────────────────────────────────────────────────
 
     function openSettingsModal() {
-        loadFormFromStorage();
+        loadFormFromPrefs();
         $("ai-settings-modal")?.classList.remove("hidden");
         $("ai-settings-overlay")?.classList.remove("hidden");
         document.body.classList.add("overflow-hidden");
@@ -68,45 +92,35 @@
         document.body.classList.remove("overflow-hidden");
     }
 
-    function loadFormFromStorage() {
-        const provider = get(LS.PROVIDER, "gemini");
+    function loadFormFromPrefs() {
+        const provider = getPref(LS.PROVIDER, "gemini");
         const radio = document.querySelector(`input[name="ai-provider"][value="${provider}"]`);
         if (radio) radio.checked = true;
 
-        setV("ai-gemini-key",      get(LS.GEMINI_KEY));
-        setV("ai-gemini-model",    get(LS.GEMINI_MODEL, "gemini-2.0-flash"));
-        setV("ai-groq-key",        get(LS.GROQ_KEY));
-        setV("ai-groq-model",      get(LS.GROQ_MODEL, "llama-3.3-70b-versatile"));
-        setV("ai-deepseek-key",    get(LS.DEEPSEEK_KEY));
-        setV("ai-deepseek-model",  get(LS.DEEPSEEK_MODEL, "deepseek-chat"));
+        setV("ai-gemini-model", getPref(LS.GEMINI_MODEL, "gemini-2.0-flash"));
+        setV("ai-groq-model",   getPref(LS.GROQ_MODEL,   "llama-3.3-70b-versatile"));
 
         updateProviderSections();
     }
 
     function saveSettings() {
-        const provider     = document.querySelector('input[name="ai-provider"]:checked')?.value ?? "gemini";
-        const geminiModel  = val("ai-gemini-model")  || "gemini-2.0-flash";
-        const groqModel    = val("ai-groq-model")    || "llama-3.3-70b-versatile";
-        const deepseekModel= val("ai-deepseek-model") || "deepseek-chat";
+        const provider    = document.querySelector('input[name="ai-provider"]:checked')?.value ?? "gemini";
+        const geminiModel = val("ai-gemini-model") || "gemini-2.0-flash";
+        const groqModel   = val("ai-groq-model")   || "llama-3.3-70b-versatile";
 
-        save(LS.PROVIDER,       provider);
-        save(LS.GEMINI_KEY,     val("ai-gemini-key"));
-        save(LS.GEMINI_MODEL,   geminiModel);
-        save(LS.GROQ_KEY,       val("ai-groq-key"));
-        save(LS.GROQ_MODEL,     groqModel);
-        save(LS.DEEPSEEK_KEY,   val("ai-deepseek-key"));
-        save(LS.DEEPSEEK_MODEL, deepseekModel);
+        savePref(LS.PROVIDER,     provider);
+        savePref(LS.GEMINI_MODEL, geminiModel);
+        savePref(LS.GROQ_MODEL,   groqModel);
 
-        // Persistir proveedor y modelos en Supabase si el usuario está autenticado
+        // Persistir preferencias en Supabase
         const userId = window.Auth?.getUser()?.id;
-        const db     = window.SupabaseClient;
+        const db     = window.Utils?.getDb();
         if (userId && db) {
             db.from("profiles").update({
-                ai_provider:       provider,
-                ai_gemini_model:   geminiModel,
-                ai_groq_model:     groqModel,
-                ai_deepseek_model: deepseekModel,
-            }).eq("id", userId); // fire-and-forget
+                ai_provider:     provider,
+                ai_gemini_model: geminiModel,
+                ai_groq_model:   groqModel,
+            }).eq("id", userId);
         }
 
         const btn = $("ai-settings-save");
@@ -122,7 +136,7 @@
 
     function updateProviderSections() {
         const provider = document.querySelector('input[name="ai-provider"]:checked')?.value ?? "gemini";
-        ["gemini", "groq", "deepseek"].forEach((p) => {
+        ["gemini", "groq"].forEach((p) => {
             $(`ai-${p}-config`)?.classList.toggle("hidden", p !== provider);
         });
     }
@@ -137,7 +151,6 @@
             r.addEventListener("change", updateProviderSections);
         });
 
-        // Cerrar con Escape
         document.addEventListener("keydown", (e) => {
             if (e.key === "Escape" && !$("ai-settings-modal")?.classList.contains("hidden")) {
                 closeSettingsModal();
@@ -146,7 +159,7 @@
     }
 
     // ─────────────────────────────────────────────────────────────────────
-    // 4. DRAWER DE EXPLICACIÓN
+    // 5. DRAWER DE EXPLICACIÓN
     // ─────────────────────────────────────────────────────────────────────
 
     let abortCtrl     = null;
@@ -172,7 +185,7 @@
     }
 
     function syncDrawerSelects() {
-        const provider = get(LS.PROVIDER, "gemini");
+        const provider = getPref(LS.PROVIDER, "gemini");
         const provSel = $("ai-drawer-provider");
         if (provSel) {
             provSel.value = provider;
@@ -185,19 +198,10 @@
         if (!modelSel) return;
         modelSel.innerHTML = "";
 
-        let models = [];
-        let currentModel = "";
-
-        if (provider === "gemini") {
-            models = GEMINI_MODELS;
-            currentModel = get(LS.GEMINI_MODEL, "gemini-2.0-flash");
-        } else if (provider === "groq") {
-            models = GROQ_MODELS;
-            currentModel = get(LS.GROQ_MODEL, "llama-3.3-70b-versatile");
-        } else {
-            models = DEEPSEEK_MODELS;
-            currentModel = get(LS.DEEPSEEK_MODEL, "deepseek-chat");
-        }
+        const models      = provider === "gemini" ? GEMINI_MODELS : GROQ_MODELS;
+        const currentModel = provider === "gemini"
+            ? getPref(LS.GEMINI_MODEL, "gemini-2.0-flash")
+            : getPref(LS.GROQ_MODEL,   "llama-3.3-70b-versatile");
 
         models.forEach((m) => {
             const opt = document.createElement("option");
@@ -213,13 +217,19 @@
         $("ai-drawer-backdrop")?.addEventListener("click", closeDrawer);
 
         $("ai-drawer-provider")?.addEventListener("change", function () {
-            populateModelSelect(this.value);
-            // Auto-regenerar al cambiar proveedor
+            const provider = this.value;
+            savePref(LS.PROVIDER, provider);
+            persistProviderModel(provider, null);
+            populateModelSelect(provider);
             if (!$("ai-drawer")?.classList.contains("ai-drawer--open")) return;
             requestExplanation();
         });
 
-        $("ai-drawer-model")?.addEventListener("change", () => {
+        $("ai-drawer-model")?.addEventListener("change", function () {
+            const provider = $("ai-drawer-provider")?.value ?? getPref(LS.PROVIDER, "gemini");
+            const model    = this.value;
+            savePref(provider === "gemini" ? LS.GEMINI_MODEL : LS.GROQ_MODEL, model);
+            persistProviderModel(provider, model);
             if (!$("ai-drawer")?.classList.contains("ai-drawer--open")) return;
             requestExplanation();
         });
@@ -269,15 +279,15 @@
     }
 
     // ─────────────────────────────────────────────────────────────────────
-    // 5. DATOS DE LA PREGUNTA ACTIVA (leídos del DOM)
+    // 6. DATOS DE LA PREGUNTA ACTIVA (leídos del DOM)
     // ─────────────────────────────────────────────────────────────────────
 
     function getQuestionData() {
         const pregunta = $("pregunta")?.innerText?.trim() ?? "";
         const labels = document.querySelectorAll("form#opciones label");
         const opciones = Array.from(labels).map((lbl) => ({
-            text:      lbl.querySelector(".opcion-label")?.innerText?.trim() ?? "",
-            isCorrect: lbl.classList.contains("correct"),
+            text:       lbl.querySelector(".opcion-label")?.innerText?.trim() ?? "",
+            isCorrect:  lbl.classList.contains("correct"),
             isSelected: lbl.classList.contains("incorrect"),
         }));
         return { pregunta, opciones };
@@ -305,7 +315,7 @@
     }
 
     // ─────────────────────────────────────────────────────────────────────
-    // 6. LLAMADAS A LA IA
+    // 7. LLAMADAS A LA IA
     // ─────────────────────────────────────────────────────────────────────
 
     function buildPrompt(data) {
@@ -323,7 +333,7 @@
     }
 
     async function requestExplanation() {
-        const provider  = $("ai-drawer-provider")?.value ?? get(LS.PROVIDER, "gemini");
+        const provider  = $("ai-drawer-provider")?.value ?? getPref(LS.PROVIDER, "gemini");
         const model     = $("ai-drawer-model")?.value ?? "";
         const data      = getQuestionData();
         const prompt    = buildPrompt(data);
@@ -335,7 +345,6 @@
 
         resetChat();
 
-        // Reiniciar estado visual
         loadingEl?.classList.remove("hidden");
         errorEl?.classList.add("hidden");
         retryBtn?.classList.add("hidden");
@@ -347,10 +356,8 @@
         try {
             if (provider === "gemini") {
                 await callGemini(prompt, model, textEl);
-            } else if (provider === "groq") {
-                await callGroq(prompt, model, textEl);
             } else {
-                await callDeepSeek(prompt, model, textEl);
+                await callGroq(prompt, model, textEl);
             }
         } catch (err) {
             if (err.name === "AbortError") return;
@@ -366,7 +373,6 @@
         showChatSection();
     }
 
-    // Añade texto al output de forma segura (XSS-safe + markdown mínimo)
     function appendText(el, chunk) {
         if (!el) return;
         const raw = (el.getAttribute("data-raw") ?? "") + chunk;
@@ -426,10 +432,10 @@
     // ── Gemini (SSE streaming) ──────────────────────────────────────────
 
     async function callGemini(prompt, modelOverride, outputEl) {
-        const apiKey = get(LS.GEMINI_KEY);
-        if (!apiKey) throw new Error("No has configurado tu API Key de Google Gemini.");
+        const apiKey = _keys.gemini;
+        if (!apiKey) throw new Error("No has configurado tu API Key de Google Gemini en Ajustes de perfil.");
 
-        const model = modelOverride || get(LS.GEMINI_MODEL, "gemini-2.0-flash");
+        const model = modelOverride || getPref(LS.GEMINI_MODEL, "gemini-2.0-flash");
         const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:streamGenerateContent?key=${apiKey}&alt=sse`;
 
         const res = await fetch(url, {
@@ -450,10 +456,10 @@
     // ── Groq (OpenAI-compatible SSE streaming) ──────────────────────────
 
     async function callGroq(prompt, modelOverride, outputEl) {
-        const apiKey = get(LS.GROQ_KEY);
-        if (!apiKey) throw new Error("No has configurado tu API Key de Groq.");
+        const apiKey = _keys.groq;
+        if (!apiKey) throw new Error("No has configurado tu API Key de Groq en Ajustes de perfil.");
 
-        const model = modelOverride || get(LS.GROQ_MODEL, "llama-3.3-70b-versatile");
+        const model = modelOverride || getPref(LS.GROQ_MODEL, "llama-3.3-70b-versatile");
 
         const res = await fetch("https://api.groq.com/openai/v1/chat/completions", {
             method: "POST",
@@ -478,39 +484,8 @@
         await consumeSSE(res, (json) => json?.choices?.[0]?.delta?.content ?? "", outputEl);
     }
 
-    // ── DeepSeek (OpenAI-compatible SSE streaming) ─────────────────────
-
-    async function callDeepSeek(prompt, modelOverride, outputEl) {
-        const apiKey = get(LS.DEEPSEEK_KEY);
-        if (!apiKey) throw new Error("No has configurado tu API Key de DeepSeek.");
-
-        const model = modelOverride || get(LS.DEEPSEEK_MODEL, "deepseek-chat");
-
-        const res = await fetch("https://api.deepseek.com/v1/chat/completions", {
-            method: "POST",
-            headers: {
-                "Authorization": `Bearer ${apiKey}`,
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-                model,
-                messages: [{ role: "user", content: prompt }],
-                stream: true,
-                max_tokens: MAX_TOKENS,
-            }),
-            signal: abortCtrl.signal,
-        });
-
-        if (!res.ok) {
-            const err = await res.json().catch(() => ({}));
-            throw new Error(err?.error?.message ?? `DeepSeek error ${res.status}`);
-        }
-
-        await consumeSSE(res, (json) => json?.choices?.[0]?.delta?.content ?? "", outputEl);
-    }
-
     // ─────────────────────────────────────────────────────────────────────
-    // 7. CHAT DE SEGUIMIENTO
+    // 8. CHAT DE SEGUIMIENTO
     // ─────────────────────────────────────────────────────────────────────
 
     function resetChat() {
@@ -568,9 +543,9 @@
         }
 
         return [
-            { role: "system",    content: systemContent },
+            { role: "system", content: systemContent },
             ...chatHistory,
-            { role: "user",      content: userMessage },
+            { role: "user",   content: userMessage },
         ];
     }
 
@@ -587,7 +562,7 @@
 
         const aiBubble = appendChatBubble("assistant", true);
 
-        const provider = $("ai-drawer-provider")?.value ?? get(LS.PROVIDER, "gemini");
+        const provider = $("ai-drawer-provider")?.value ?? getPref(LS.PROVIDER, "gemini");
         const model    = $("ai-drawer-model")?.value ?? "";
         const qData    = getQuestionData();
         const messages = buildChatMessages(userMsg, qData, provider);
@@ -595,7 +570,7 @@
         if (chatAbortCtrl) chatAbortCtrl.abort();
         chatAbortCtrl = new AbortController();
 
-        let fullText  = "";
+        let fullText   = "";
         let firstChunk = true;
 
         const onChunk = (chunk) => {
@@ -607,12 +582,11 @@
         };
 
         try {
-            if (provider === "gemini")        await callGeminiChat(messages, model, onChunk);
-            else if (provider === "groq")     await callGroqChat(messages, model, onChunk);
-            else                              await callDeepSeekChat(messages, model, onChunk);
+            if (provider === "gemini") await callGeminiChat(messages, model, onChunk);
+            else                       await callGroqChat(messages, model, onChunk);
 
             chatHistory.push({ role: "user",      content: userMsg  });
-            chatHistory.push({ role: "assistant",  content: fullText });
+            chatHistory.push({ role: "assistant", content: fullText });
         } catch (err) {
             if (err.name === "AbortError") return;
             if (aiBubble) aiBubble.innerHTML = `<span style="color:#f87171;">Error: ${esc(err.message ?? "Error desconocido.")}</span>`;
@@ -648,9 +622,9 @@
     }
 
     async function callGeminiChat(messages, modelOverride, onChunk) {
-        const apiKey = get(LS.GEMINI_KEY);
-        if (!apiKey) throw new Error("No has configurado tu API Key de Google Gemini.");
-        const model = modelOverride || get(LS.GEMINI_MODEL, "gemini-2.0-flash");
+        const apiKey = _keys.gemini;
+        if (!apiKey) throw new Error("No has configurado tu API Key de Google Gemini en Ajustes de perfil.");
+        const model = modelOverride || getPref(LS.GEMINI_MODEL, "gemini-2.0-flash");
         const url   = `https://generativelanguage.googleapis.com/v1beta/models/${model}:streamGenerateContent?key=${apiKey}&alt=sse`;
 
         const res = await fetch(url, {
@@ -669,9 +643,9 @@
     }
 
     async function callGroqChat(messages, modelOverride, onChunk) {
-        const apiKey = get(LS.GROQ_KEY);
-        if (!apiKey) throw new Error("No has configurado tu API Key de Groq.");
-        const model  = modelOverride || get(LS.GROQ_MODEL, "llama-3.3-70b-versatile");
+        const apiKey = _keys.groq;
+        if (!apiKey) throw new Error("No has configurado tu API Key de Groq en Ajustes de perfil.");
+        const model  = modelOverride || getPref(LS.GROQ_MODEL, "llama-3.3-70b-versatile");
 
         const res = await fetch("https://api.groq.com/openai/v1/chat/completions", {
             method: "POST",
@@ -688,45 +662,22 @@
         await consumeSSEChat(res, (json) => json?.choices?.[0]?.delta?.content ?? "", onChunk);
     }
 
-    async function callDeepSeekChat(messages, modelOverride, onChunk) {
-        const apiKey = get(LS.DEEPSEEK_KEY);
-        if (!apiKey) throw new Error("No has configurado tu API Key de DeepSeek.");
-        const model  = modelOverride || get(LS.DEEPSEEK_MODEL, "deepseek-chat");
-
-        const res = await fetch("https://api.deepseek.com/v1/chat/completions", {
-            method: "POST",
-            headers: { "Authorization": `Bearer ${apiKey}`, "Content-Type": "application/json" },
-            body: JSON.stringify({ model, messages, stream: true, max_tokens: MAX_TOKENS }),
-            signal: chatAbortCtrl.signal,
-        });
-
-        if (!res.ok) {
-            const err = await res.json().catch(() => ({}));
-            throw new Error(err?.error?.message ?? `DeepSeek error ${res.status}`);
-        }
-
-        await consumeSSEChat(res, (json) => json?.choices?.[0]?.delta?.content ?? "", onChunk);
-    }
-
     // ─────────────────────────────────────────────────────────────────────
-    // 8. PUNTO DE ENTRADA PÚBLICO
+    // 9. PUNTO DE ENTRADA PÚBLICO
     // ─────────────────────────────────────────────────────────────────────
 
     function showExplanation() {
         if (!$("ai-drawer")) return;
 
-        const provider = get(LS.PROVIDER, "gemini");
-        const hasCredential =
-            provider === "gemini"   ? get(LS.GEMINI_KEY) :
-            provider === "groq"     ? get(LS.GROQ_KEY) :
-            get(LS.DEEPSEEK_KEY);
+        const provider = getPref(LS.PROVIDER, "gemini");
+        const hasCredential = provider === "gemini" ? _keys.gemini : _keys.groq;
 
         if (!hasCredential) {
             openSettingsModal();
             const msg = $("ai-settings-no-key-msg");
             if (msg) {
                 msg.classList.remove("hidden");
-                setTimeout(() => msg.classList.add("hidden"), 5000);
+                setTimeout(() => msg.classList.add("hidden"), 6000);
             }
             return;
         }
@@ -746,9 +697,19 @@
     }
 
     function init() {
+        // Limpiar claves antiguas del localStorage (ya no se usan)
+        ["ai_gemini_key", "ai_groq_key", "ai_deepseek_key", "ai_deepseek_model"].forEach(
+            (k) => localStorage.removeItem(k)
+        );
+
         initSettingsModal();
         initDrawer();
         $("explicar-ia-btn")?.addEventListener("click", showExplanation);
+
+        // Cargar las API keys desde Supabase cuando el usuario esté autenticado
+        window.Auth?.onReady((user) => {
+            if (user) loadApiKeys();
+        });
     }
 
     if (document.readyState === "loading") {
