@@ -7,7 +7,7 @@
 (function () {
     "use strict";
 
-    const getDb = () => window.SupabaseClient?.getClient();
+    const getDb = () => window.SupabaseClient;
     const userId = () => window.Auth?.getUser()?.id ?? null;
 
     // Escape HTML entities para evitar XSS
