@@ -748,6 +748,7 @@
     function init() {
         initSettingsModal();
         initDrawer();
+        $("explicar-ia-btn")?.addEventListener("click", showExplanation);
     }
 
     if (document.readyState === "loading") {
