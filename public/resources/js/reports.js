@@ -109,7 +109,6 @@
             const { error } = await db.from("reports").insert({
                 question_id: questionId,
                 user_id:     userId,
-                reason:      "otro",
                 details,
             });
 
@@ -159,7 +158,6 @@
             const { error } = await db.from("reports").insert({
                 question_id: q.id,
                 user_id:     userId,
-                reason:      "respuesta_incorrecta",
                 details:     "Confirmado por usuario adicional.",
             });
 
