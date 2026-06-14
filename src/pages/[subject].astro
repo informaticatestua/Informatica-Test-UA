@@ -113,8 +113,8 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 			</section>
 			
 			<div id="action-buttons-container" class="quiz-actions">
-				<!-- Fila de stats solo visible en móvil (sincronizada desde JS) -->
-				<div id="quiz-mobile-stats" class="hidden sm:hidden flex items-center justify-center gap-2 text-xs text-text-muted pb-2 border-b border-border-subtle mb-1">
+				<!-- Fila de stats en la barra de acciones (sincronizada desde JS) -->
+				<div id="quiz-mobile-stats" class="hidden flex items-center justify-center gap-2 text-xs text-text-muted pb-2 border-b border-border-subtle mb-1">
 					<span class="material-icons text-text-muted" style="font-size:0.9rem;">bar_chart</span>
 					<span id="mobile-total-preguntas" class="font-medium whitespace-nowrap"></span>
 					<span class="w-px h-3 bg-border-subtle flex-shrink-0" aria-hidden="true"></span>
@@ -707,10 +707,11 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 		.quiz-nav-btn-label {
 			@apply hidden;
 		}
-		/* El panel flotante de stats se oculta en móvil; las stats van dentro de la barra */
-		#stats-panel {
-			display: none !important;
-		}
+	}
+
+	/* El panel flotante de stats queda reemplazado por la fila integrada en la barra de acciones */
+	#stats-panel {
+		display: none !important;
 	}
 
 	/* ── Modal Examen / Retomar: entrada animada ─────────────────────── */
