@@ -126,16 +126,10 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 						<span class="quiz-nav-btn-label">Anterior</span>
 					</button>
 					<button id="verificar" class="hidden quiz-verify-btn" disabled>Verificar / Continuar</button>
-					<div class="contents">
-						<div id="tools-trigger-wrap" class="w-full sm:w-auto">
-							<button id="more-options-btn" class="quiz-nav-btn w-full sm:w-auto" aria-haspopup="dialog" aria-expanded="false" aria-controls="tools-sheet-panel">
-								<span class="material-icons" aria-hidden="true">apps</span>
-								<span class="quiz-nav-btn-label">Herramientas</span>
-							</button>
-						</div>
-						<button id="exam-finish-btn" class="hidden quiz-nav-btn w-full sm:w-auto text-amber-700 dark:text-amber-400 border-amber-500/40 hover:bg-amber-50 dark:hover:bg-amber-900/20 hover:border-amber-500 hover:text-amber-800 dark:hover:text-amber-300" aria-label="Finalizar examen">
-							<span class="material-icons" aria-hidden="true">send</span>
-							<span class="quiz-nav-btn-label">Finalizar</span>
+					<div id="tools-trigger-wrap" class="w-full sm:w-auto">
+						<button id="more-options-btn" class="quiz-nav-btn w-full sm:w-auto" aria-haspopup="dialog" aria-expanded="false" aria-controls="tools-sheet-panel">
+							<span class="material-icons" aria-hidden="true">apps</span>
+							<span class="quiz-nav-btn-label">Herramientas</span>
 						</button>
 					</div>
 				</div>
@@ -227,6 +221,12 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 		<span id="exam-timer-label">0:00</span>
 	</div>
 
+	<!-- Botón Finalizar examen (solo móvil, en PC aparece en el panel de navegación) -->
+	<button id="exam-finish-mobile" class="hidden fixed z-40 flex items-center gap-1.5 bg-surface border border-amber-500/50 text-amber-700 dark:text-amber-400 text-[13px] px-3 py-[7px] rounded-full shadow-sm shadow-black/10 font-semibold backdrop-blur-sm" style="top: 126px; right: 10px;" aria-label="Finalizar examen">
+		<span class="material-icons" style="font-size:1rem;">send</span>
+		<span>Finalizar</span>
+	</button>
+
 	<!-- Panel de navegación del examen (solo PC) -->
 	<div id="exam-nav-panel" class="hidden fixed right-[10px] z-40 w-[196px] max-h-[calc(100vh-146px)] overflow-y-auto bg-surface border border-border-subtle rounded-2xl shadow-lg" style="top: 126px;">
 		<div class="px-3 py-2 border-b border-border-subtle flex items-center gap-1.5">
@@ -235,10 +235,14 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 		</div>
 		<div class="p-3">
 			<div id="exam-nav-grid" class="grid grid-cols-5 gap-1 mb-3"></div>
-			<div class="text-[0.72rem] text-text-muted text-center mb-2.5 flex items-center justify-center gap-1.5">
+			<div class="text-[0.72rem] text-text-muted text-center mb-2 flex items-center justify-center gap-1.5">
 				<span class="inline-block w-2.5 h-2.5 rounded-sm bg-amber-500/60 flex-shrink-0"></span>
 				<span><span id="exam-nav-answered">0</span> / <span id="exam-nav-total">0</span> respondidas</span>
 			</div>
+			<button id="exam-finish-btn" class="w-full py-2 rounded-lg text-[0.82rem] font-semibold text-white bg-amber-600 hover:bg-amber-700 active:bg-amber-800 transition-colors cursor-pointer border-none flex items-center justify-center gap-1.5 mt-1">
+				<span class="material-icons" style="font-size:0.95rem;">send</span>
+				Finalizar examen
+			</button>
 		</div>
 	</div>
 
@@ -737,6 +741,10 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 	/* Panel de navegación del examen: solo visible en pantallas medianas y grandes */
 	@media (max-width: 767px) {
 		#exam-nav-panel { display: none !important; }
+	}
+	/* Botón Finalizar móvil: solo visible en móvil (en PC lo muestra el panel) */
+	@media (min-width: 768px) {
+		#exam-finish-mobile { display: none !important; }
 	}
 
 	/* Botones de número de pregunta en el panel de examen */

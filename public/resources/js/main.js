@@ -450,16 +450,16 @@
     // 5b. MODO EXAMEN REAL
     // ─────────────────────────────────────────────────────────────────────
 
-    /** Alterna la UI exclusiva del examen (cronómetro, Finalizar, panel de navegación). */
+    /** Alterna la UI exclusiva del examen (cronómetro, panel de navegación, botón móvil). */
     function toggleExamUI(active) {
-        const finishBtn = $("exam-finish-btn");
         const timerChip = $("exam-timer-chip");
         const explicarBtn = $("explicar-ia-btn");
         const navPanel = $("exam-nav-panel");
+        const mobileFinishBtn = $("exam-finish-mobile");
 
-        if (finishBtn) finishBtn.classList.toggle("hidden", !active);
         if (timerChip) timerChip.classList.toggle("hidden", !active);
         if (navPanel) navPanel.classList.toggle("hidden", !active);
+        if (mobileFinishBtn) mobileFinishBtn.classList.toggle("hidden", !active);
         // Sin feedback durante el examen → sin explicaciones de IA.
         if (explicarBtn) explicarBtn.classList.toggle("hidden", active);
         // El menú "Más opciones" cambiaría el estado del examen: fuera.
@@ -1750,6 +1750,7 @@
         $("exam-overlay")?.addEventListener("click", cerrarModalExamen);
         $("exam-start-btn")?.addEventListener("click", confirmarConfigExamen);
         $("exam-finish-btn")?.addEventListener("click", finalizarExamen);
+        $("exam-finish-mobile")?.addEventListener("click", finalizarExamen);
         $("exam-exit-btn")?.addEventListener("click", salirModoExamen);
         $("exam-retry-btn")?.addEventListener("click", () => {
             hideElement("exam-results");
