@@ -450,14 +450,16 @@
     // 5b. MODO EXAMEN REAL
     // ─────────────────────────────────────────────────────────────────────
 
-    /** Alterna la UI exclusiva del examen (cronómetro, Finalizar, etc.). */
+    /** Alterna la UI exclusiva del examen (cronómetro, Finalizar, panel de navegación). */
     function toggleExamUI(active) {
         const finishBtn = $("exam-finish-btn");
         const timerChip = $("exam-timer-chip");
         const explicarBtn = $("explicar-ia-btn");
+        const navPanel = $("exam-nav-panel");
 
         if (finishBtn) finishBtn.classList.toggle("hidden", !active);
         if (timerChip) timerChip.classList.toggle("hidden", !active);
+        if (navPanel) navPanel.classList.toggle("hidden", !active);
         // Sin feedback durante el examen → sin explicaciones de IA.
         if (explicarBtn) explicarBtn.classList.toggle("hidden", active);
         // El menú "Más opciones" cambiaría el estado del examen: fuera.
@@ -480,6 +482,7 @@
         actualizarTotalPreguntasLabel();
         actualizarBotonRepaso();
         toggleExamUI(true);
+        renderExamNavPanel();
         mostrarPregunta();
 
         window.ExamMode?.startTimer((label) => {
@@ -492,11 +495,9 @@
     function examAdvance() {
         guardarEstadoActual();
         const siguiente = state.preguntaActual + 1;
-        if (siguiente >= state.preguntas.length) {
-            finalizarExamen();
-            return;
-        }
-        state.preguntaActual = siguiente;
+        // Cuando se llega a la última pregunta se vuelve al inicio para permitir
+        // revisar o responder las omitidas. El usuario finaliza con el botón "Finalizar".
+        state.preguntaActual = siguiente < state.preguntas.length ? siguiente : 0;
         mostrarPregunta();
         restaurarEstadoActual();
         actualizarContador();
@@ -612,6 +613,61 @@
         toggleQuizUtilityButtons(true);
         showElement("stats-panel");
         mostrarPregunta();
+    }
+
+    /** Construye el grid de números del panel de navegación del examen. */
+    function renderExamNavPanel() {
+        const grid = $("exam-nav-grid");
+        const totalEl = $("exam-nav-total");
+        if (!grid) return;
+
+        grid.innerHTML = "";
+        if (totalEl) totalEl.textContent = String(state.preguntas.length);
+
+        state.preguntas.forEach((pregunta, i) => {
+            const btn = document.createElement("button");
+            btn.type = "button";
+            btn.className = "exam-nav-q-btn";
+            btn.textContent = String(i + 1);
+            btn.setAttribute("data-exam-q-idx", String(i));
+            btn.addEventListener("click", () => {
+                guardarEstadoActual();
+                state.preguntaActual = i;
+                mostrarPregunta();
+                restaurarEstadoActual();
+                actualizarContador();
+            });
+            grid.appendChild(btn);
+        });
+
+        updateExamNavPanel();
+    }
+
+    /** Actualiza el estado visual (respondida / actual) de los botones del panel. */
+    function updateExamNavPanel() {
+        const grid = $("exam-nav-grid");
+        const answeredEl = $("exam-nav-answered");
+        if (!grid) return;
+
+        let answered = 0;
+        grid.querySelectorAll("[data-exam-q-idx]").forEach((btn) => {
+            const idx = parseInt(btn.getAttribute("data-exam-q-idx"), 10);
+            const pregunta = state.preguntas[idx];
+            const sel = pregunta ? (state.estadosPreguntas[pregunta.id]?.seleccionadas || []) : [];
+            const isAnswered = sel.length > 0;
+            const isCurrent = idx === state.preguntaActual;
+
+            btn.classList.remove("exam-nav-q-btn--answered", "exam-nav-q-btn--current");
+            if (isCurrent) {
+                btn.classList.add("exam-nav-q-btn--current");
+            } else if (isAnswered) {
+                btn.classList.add("exam-nav-q-btn--answered");
+            }
+
+            if (isAnswered) answered++;
+        });
+
+        if (answeredEl) answeredEl.textContent = String(answered);
     }
 
     /** Abre el modal de configuración del examen. */
@@ -1157,6 +1213,8 @@
 
         if (state.preguntaActual > 0) showElement("volver-pregunta");
         else hideElement("volver-pregunta");
+
+        if (state.modoExamen) updateExamNavPanel();
     }
 
     /**
@@ -1216,6 +1274,8 @@
         // En examen nada queda "verificado": solo se conserva la selección.
         const isVerified = !state.modoExamen && $("verificar")?.innerText === "Siguiente";
         state.estadosPreguntas[getPreguntaStateKey()] = { seleccionadas, isVerified };
+
+        if (state.modoExamen) updateExamNavPanel();
     }
 
     /**

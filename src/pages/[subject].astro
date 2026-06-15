@@ -126,10 +126,16 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 						<span class="quiz-nav-btn-label">Anterior</span>
 					</button>
 					<button id="verificar" class="hidden quiz-verify-btn" disabled>Verificar / Continuar</button>
-					<div id="tools-trigger-wrap" class="w-full sm:w-auto">
-						<button id="more-options-btn" class="quiz-nav-btn w-full sm:w-auto" aria-haspopup="dialog" aria-expanded="false" aria-controls="tools-sheet-panel">
-							<span class="material-icons" aria-hidden="true">apps</span>
-							<span class="quiz-nav-btn-label">Herramientas</span>
+					<div class="contents">
+						<div id="tools-trigger-wrap" class="w-full sm:w-auto">
+							<button id="more-options-btn" class="quiz-nav-btn w-full sm:w-auto" aria-haspopup="dialog" aria-expanded="false" aria-controls="tools-sheet-panel">
+								<span class="material-icons" aria-hidden="true">apps</span>
+								<span class="quiz-nav-btn-label">Herramientas</span>
+							</button>
+						</div>
+						<button id="exam-finish-btn" class="hidden quiz-nav-btn w-full sm:w-auto text-amber-700 dark:text-amber-400 border-amber-500/40 hover:bg-amber-50 dark:hover:bg-amber-900/20 hover:border-amber-500 hover:text-amber-800 dark:hover:text-amber-300" aria-label="Finalizar examen">
+							<span class="material-icons" aria-hidden="true">send</span>
+							<span class="quiz-nav-btn-label">Finalizar</span>
 						</button>
 					</div>
 				</div>
@@ -219,6 +225,21 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 	<div id="exam-timer-chip" class="hidden fixed top-[80px] right-[10px] z-50 flex items-center gap-2 bg-amber-500/95 text-white text-[14px] px-[14px] py-[8px] rounded-full shadow-md shadow-black/15 backdrop-blur-sm font-semibold tabular-nums">
 		<span class="material-icons text-[17px]">timer</span>
 		<span id="exam-timer-label">0:00</span>
+	</div>
+
+	<!-- Panel de navegación del examen (solo PC) -->
+	<div id="exam-nav-panel" class="hidden fixed right-[10px] z-40 w-[196px] max-h-[calc(100vh-146px)] overflow-y-auto bg-surface border border-border-subtle rounded-2xl shadow-lg" style="top: 126px;">
+		<div class="px-3 py-2 border-b border-border-subtle flex items-center gap-1.5">
+			<span class="material-icons text-amber-500" style="font-size:0.9rem;">grid_view</span>
+			<h4 class="text-[0.68rem] font-bold uppercase tracking-wider text-text-muted m-0">Navegación</h4>
+		</div>
+		<div class="p-3">
+			<div id="exam-nav-grid" class="grid grid-cols-5 gap-1 mb-3"></div>
+			<div class="text-[0.72rem] text-text-muted text-center mb-2.5 flex items-center justify-center gap-1.5">
+				<span class="inline-block w-2.5 h-2.5 rounded-sm bg-amber-500/60 flex-shrink-0"></span>
+				<span><span id="exam-nav-answered">0</span> / <span id="exam-nav-total">0</span> respondidas</span>
+			</div>
+		</div>
 	</div>
 
 	<!-- ─── AI Generate overlay ─────────────────────────────────────────── -->
@@ -711,6 +732,26 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 	/* El panel flotante de stats queda reemplazado por la fila integrada en la barra de acciones */
 	#stats-panel {
 		display: none !important;
+	}
+
+	/* Panel de navegación del examen: solo visible en pantallas medianas y grandes */
+	@media (max-width: 767px) {
+		#exam-nav-panel { display: none !important; }
+	}
+
+	/* Botones de número de pregunta en el panel de examen */
+	:global(.exam-nav-q-btn) {
+		@apply w-full aspect-square text-[0.72rem] font-semibold rounded-md border border-border-subtle
+			   bg-surface text-text-muted hover:bg-surface-hover hover:text-text-main
+			   cursor-pointer transition-colors p-0 flex items-center justify-center;
+	}
+	:global(.exam-nav-q-btn--answered) {
+		@apply bg-amber-500/15 border-amber-500/50 text-amber-700 dark:text-amber-400;
+	}
+	:global(.exam-nav-q-btn--current) {
+		background: rgb(37 99 235) !important;
+		border-color: rgb(37 99 235) !important;
+		color: white !important;
 	}
 
 	/* ── Modal Examen / Retomar: entrada animada ─────────────────────── */
