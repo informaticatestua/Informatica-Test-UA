@@ -44,6 +44,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 		redes_parent: { id: "redes_full", display_name: "REDES FULL" },
 	};
 
+	/** IDs de asignaturas marcadas como deprecadas (muestran badge). */
+	const DEPRECATED_SUBJECTS = new Set(["hada"]);
+
 	// ─── Renderizado ─────────────────────────────────────────────────────────
 
 	function buildSublist(subject, children) {
@@ -195,7 +198,20 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 		const btn = document.createElement("button");
 		btn.id = subject.id;
 		btn.className = "btn";
-		btn.textContent = subject.display_name;
+
+		if (DEPRECATED_SUBJECTS.has(subject.id)) {
+			btn.className += " btn--deprecated";
+			const nameSpan = document.createElement("span");
+			nameSpan.textContent = subject.display_name;
+			const badge = document.createElement("span");
+			badge.className = "deprecated-badge";
+			badge.title = "Esta asignatura ya no se imparte o ha sido reemplazada";
+			badge.textContent = "Deprecado";
+			btn.appendChild(nameSpan);
+			btn.appendChild(badge);
+		} else {
+			btn.textContent = subject.display_name;
+		}
 
 		if (!hasChildren) {
 			btn.addEventListener("click", () => { window.location.href = `/${subject.id}`; });
@@ -246,6 +262,44 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 <style is:global>
 	@reference "../styles/global.css";
+
+	.btn--deprecated {
+		@apply relative flex items-center gap-2;
+		opacity: 0.82;
+	}
+	.btn--deprecated:hover {
+		opacity: 1;
+	}
+	.btn--deprecated > span:first-child {
+		text-decoration: line-through;
+		text-decoration-color: currentColor;
+		text-decoration-thickness: 1.5px;
+		opacity: 0.7;
+	}
+
+	.deprecated-badge {
+		display: inline-flex;
+		align-items: center;
+		gap: 3px;
+		font-size: 0.58rem;
+		font-weight: 800;
+		letter-spacing: 0.07em;
+		text-transform: uppercase;
+		padding: 2px 7px 2px 5px;
+		border-radius: 999px;
+		background: linear-gradient(135deg, rgba(245,158,11,0.15), rgba(239,68,68,0.1));
+		color: rgb(180, 83, 9);
+		border: 1px solid rgba(245, 158, 11, 0.4);
+		line-height: 1.5;
+		flex-shrink: 0;
+		box-shadow: 0 1px 3px rgba(245,158,11,0.15);
+	}
+:global(.dark) .deprecated-badge {
+		background: linear-gradient(135deg, rgba(245,158,11,0.18), rgba(239,68,68,0.12));
+		color: rgb(251, 191, 36);
+		border-color: rgba(245, 158, 11, 0.35);
+		box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+	}
 
 	.index-spinner {
 		width: 28px;
