@@ -27,7 +27,7 @@ Tenemos tres actividades: A, B y C. A precede a B. Las holguras totales son: HT(
 - Intervivos
 
 En el caso de que hayamos desarrollado un software de gestion de autonomos en forma de servicio web. ¿Quien deberia encargarse del cumplimiento del cumplimiento de la legislacion a nvel de proteccion de datos?
-2
+3
 - No seria necesario al no tratarse de una aplicacion de escritorio
 - Nosotros como desarrolladores de la aplicacion
 - Los vendedores del servicio
