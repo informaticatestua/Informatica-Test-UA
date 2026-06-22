@@ -446,6 +446,16 @@
         mostrarPregunta();
     }
 
+    /**
+     * Restaura el banco completo tras salir de un subconjunto temporal
+     * como el modo examen, evitando que queden "pegadas" sus preguntas.
+     */
+    function restaurarBancoCompleto({ reshuffle = true } = {}) {
+        state.preguntas = [...state.todasLasPreguntas];
+        if (reshuffle) shuffle(state.preguntas);
+        state.todasLasPreguntas = [...state.preguntas];
+    }
+
     // ─────────────────────────────────────────────────────────────────────
     // 5b. MODO EXAMEN REAL
     // ─────────────────────────────────────────────────────────────────────
@@ -603,9 +613,7 @@
         toggleExamUI(false);
         $("tools-trigger-wrap")?.classList.remove("hidden");
 
-        state.preguntas = [...state.todasLasPreguntas];
-        shuffle(state.preguntas);
-        state.todasLasPreguntas = [...state.preguntas];
+        restaurarBancoCompleto();
         resetQuizProgress();
         actualizarTotalPreguntasLabel();
         actualizarBotonRepaso();
@@ -1809,6 +1817,25 @@
         bindExamButtons();
         bindCommunityButtons();
         bindReportEvents();
+
+        window.addEventListener("pageshow", (event) => {
+            if (!event.persisted || !state.modoExamen || state.todasLasPreguntas.length === 0) return;
+
+            state.modoExamen = false;
+            state.sessionFinished = false;
+            window.ExamMode?.stopTimer();
+            hideElement("exam-results");
+            toggleExamUI(false);
+            $("tools-trigger-wrap")?.classList.remove("hidden");
+            restaurarBancoCompleto();
+            resetQuizProgress();
+            actualizarTotalPreguntasLabel();
+            actualizarBotonRepaso();
+            toggleQuizQuestionUI(true);
+            toggleQuizUtilityButtons(true);
+            showElement("stats-panel");
+            mostrarPregunta();
+        });
     }
 
     /** Punto de entrada: lee el slug de la URL y arranca si procede. */
