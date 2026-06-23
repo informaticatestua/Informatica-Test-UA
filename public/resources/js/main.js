@@ -1819,12 +1819,26 @@
         bindReportEvents();
 
         window.addEventListener("pageshow", (event) => {
-            if (!event.persisted || !state.modoExamen || state.todasLasPreguntas.length === 0) return;
+            if (!event.persisted || state.todasLasPreguntas.length === 0) return;
+
+            // Al regresar desde el back/forward cache (bfcache) el navegador
+            // restaura la página con el estado en memoria "congelado". Si ese
+            // estado era un subconjunto temporal (examen, repaso) o la pantalla
+            // final de resultados, quedarían pegadas las preguntas de la sesión
+            // anterior (p. ej. las del modo examen) en lugar del banco completo.
+            const estadoCongelado =
+                state.modoExamen ||
+                state.modoRepaso ||
+                state.sessionFinished ||
+                state.preguntas.length !== state.todasLasPreguntas.length;
+            if (!estadoCongelado) return;
 
             state.modoExamen = false;
+            state.modoRepaso = false;
             state.sessionFinished = false;
             window.ExamMode?.stopTimer();
             hideElement("exam-results");
+            ocultarResultadosSesion();
             toggleExamUI(false);
             $("tools-trigger-wrap")?.classList.remove("hidden");
             restaurarBancoCompleto();
