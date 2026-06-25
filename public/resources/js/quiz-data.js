@@ -51,21 +51,43 @@
     }
 
     /**
-     * Carga preguntas de uno o varios subject_id en una sola llamada.
-     * Devuelve null si hay error o no hay resultados.
+     * Carga preguntas de uno o varios subject_id.
+     *
+     * PostgREST limita cada respuesta a 1000 filas, así que paginamos con
+     * `.range()` hasta agotar los resultados. Imprescindible para grupos
+     * grandes (p. ej. "redes_full" supera las 1500 preguntas); sin paginar
+     * solo llegarían las primeras 1000. Ordenamos por `id` para que el
+     * paginado sea estable (el barajado real lo hace main.js después).
+     *
+     * Devuelve null si hay error en la primera página o no hay resultados.
      */
     async function fetchBySubjectIds(subjectIds) {
         const db = window.SupabaseClient;
         if (!db) return null;
 
-        const { data, error } = await db
-            .from("questions")
-            .select("id, content, is_multiple, report_count, options(id, content, is_correct, is_no_marcar, position)")
-            .in("subject_id", subjectIds);
+        const PAGE = 1000;
+        const filas = [];
 
-        if (error || !data || data.length === 0) return null;
+        for (let desde = 0; ; desde += PAGE) {
+            const { data, error } = await db
+                .from("questions")
+                .select("id, content, is_multiple, report_count, options(id, content, is_correct, is_no_marcar, position)")
+                .in("subject_id", subjectIds)
+                .order("id", { ascending: true })
+                .range(desde, desde + PAGE - 1);
 
-        return data.map(transformQuestion);
+            if (error) {
+                console.warn("[QuizData] fetchBySubjectIds error:", error.message);
+                return filas.length > 0 ? filas.map(transformQuestion) : null;
+            }
+            if (!data || data.length === 0) break;
+            filas.push(...data);
+            if (data.length < PAGE) break;
+        }
+
+        if (filas.length === 0) return null;
+
+        return filas.map(transformQuestion);
     }
 
     /**

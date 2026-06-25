@@ -47,6 +47,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 	/** IDs de asignaturas marcadas como deprecadas (muestran badge). */
 	const DEPRECATED_SUBJECTS = new Set(["hada"]);
 
+	/**
+	 * IDs de asignaturas que NO se muestran como botón propio, pero siguen
+	 * existiendo en BD y agregándose en su "FULL" sintético. P. ej.
+	 * "redesGeneral" es el banco completo de redes: se accede vía "Redes full",
+	 * sin botón individual.
+	 */
+	const HIDDEN_SUBJECTS = new Set(["redesGeneral"]);
+
 	// ─── Renderizado ─────────────────────────────────────────────────────────
 
 	function buildSublist(subject, children) {
@@ -74,6 +82,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 		}
 
 		for (const child of children) {
+			if (HIDDEN_SUBJECTS.has(child.id)) continue;
 			const btn = document.createElement("button");
 			btn.id = child.id;
 			btn.className = "btn-primary";
