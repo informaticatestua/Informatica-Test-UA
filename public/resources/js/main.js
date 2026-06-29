@@ -38,6 +38,7 @@
         "ac_CT3-4": "ac_CT3-4_Preguntas.txt",
         "sti-oficial": "stiPreguntas.txt",
         "stiEnero26": "stiEnero26.txt",
+        "stiJulio26": "stiJulio26.txt",
     });
 
     /**
