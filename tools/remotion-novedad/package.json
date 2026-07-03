@@ -1,0 +1,16 @@
+{
+  "name": "esquemas-remotion",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "studio": "remotion studio",
+    "render": "remotion render CoinChange out/coin-change.mp4",
+    "still": "remotion still CoinChange out/poster.png --frame=90"
+  },
+  "dependencies": {
+    "@remotion/cli": "^4.0.484",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "remotion": "^4.0.484"
+  }
+}

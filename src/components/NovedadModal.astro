@@ -1,0 +1,162 @@
+---
+// NovedadModal.astro
+// Diálogo de "novedad" que se muestra UNA vez al entrar en la web para
+// anunciar la nueva web de Esquemas Interactivos (AlgoVisual / ADA).
+// El vídeo de preview está generado con Remotion (algoritmo Cambio de Monedas).
+const ESQUEMAS_URL = "https://informatica-esquemas-ua.vercel.app/index.html";
+// Clave versionada: sube el número para volver a mostrar el diálogo en el futuro.
+const STORAGE_KEY = "novedad:esquemas-interactivos:v1";
+---
+
+<!-- ─── Overlay ─────────────────────────────────────────────────────── -->
+<div id="novedad-overlay" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[95] hidden transition-opacity duration-300"></div>
+
+<!-- ─── Modal ───────────────────────────────────────────────────────── -->
+<div id="novedad-modal" class="fixed inset-0 z-[105] hidden flex items-center justify-center p-4 pointer-events-none"
+     role="dialog" aria-modal="true" aria-labelledby="novedad-title">
+  <div class="modal-box bg-surface border border-border-subtle rounded-2xl shadow-2xl w-full max-w-[560px] pointer-events-auto overflow-hidden relative">
+
+    <!-- Botón cerrar -->
+    <button id="novedad-close" type="button" aria-label="Cerrar"
+            class="absolute top-3 right-3 z-10 w-9 h-9 flex items-center justify-center rounded-full bg-black/45 hover:bg-black/65 text-white transition-colors cursor-pointer border-none">
+      <span class="material-icons" style="font-size:20px">close</span>
+    </button>
+
+    <!-- Vídeo preview (generado con Remotion) -->
+    <div class="relative bg-slate-900">
+      <span class="novedad-badge">
+        <span class="material-icons" style="font-size:15px">auto_awesome</span>
+        ¡Novedad!
+      </span>
+      <video id="novedad-video"
+             class="block w-full aspect-[16/10] object-cover"
+             poster="/resources/videos/novedad-esquemas.jpg"
+             muted autoplay loop playsinline preload="metadata">
+        <source src="/resources/videos/novedad-esquemas.mp4" type="video/mp4" />
+      </video>
+    </div>
+
+    <!-- Contenido -->
+    <div class="px-6 py-5 flex flex-col gap-3">
+      <h3 id="novedad-title" class="text-[1.25em] font-bold text-text-main flex items-center gap-2 m-0">
+        <span class="material-icons text-blue-500" style="font-size:22px">schema</span>
+        Esquemas interactivos
+      </h3>
+      <p class="text-text-muted text-[0.95em] leading-relaxed m-0">
+        Estrena nueva web para <strong class="text-text-main">visualizar algoritmos paso a paso</strong>.
+        Este es el <strong class="text-text-main">Cambio de Monedas (Voraz)</strong>: dale al play y velo
+        resolverse solo. Ordenación, grafos, backtracking y mucho más, animado.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-2 mt-2">
+        <a id="novedad-cta" href={ESQUEMAS_URL} target="_blank" rel="noopener noreferrer"
+           class="btn-primary flex-1 inline-flex items-center justify-center gap-2 no-underline">
+          <span class="material-icons" style="font-size:18px">open_in_new</span>
+          Explorar esquemas
+        </a>
+        <button id="novedad-later" type="button" class="btn-ghost sm:flex-none">
+          Ahora no
+        </button>
+      </div>
+
+      <p class="text-[0.72em] text-text-muted/70 text-center mt-1 m-0">
+        Este aviso solo se muestra una vez.
+      </p>
+    </div>
+  </div>
+</div>
+
+<style is:global>
+  #novedad-modal.modal-visible .modal-box {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  #novedad-overlay.overlay-visible {
+    opacity: 1;
+  }
+  .novedad-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 5;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 11px 5px 9px;
+    border-radius: 999px;
+    font-size: 0.74rem;
+    font-weight: 800;
+    letter-spacing: 0.03em;
+    color: #fff;
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+    box-shadow: 0 4px 12px rgba(29, 78, 216, 0.4);
+  }
+  @media (max-height: 720px) {
+    #novedad-modal .modal-box { max-height: 92vh; overflow-y: auto; }
+  }
+</style>
+
+<script is:inline define:vars={{ STORAGE_KEY }}>
+  (function () {
+    "use strict";
+
+    // No mostrar si ya se vio en este navegador.
+    let seen = false;
+    try { seen = localStorage.getItem(STORAGE_KEY) === "1"; } catch (e) {}
+    if (seen) return;
+
+    const overlay = document.getElementById("novedad-overlay");
+    const modal   = document.getElementById("novedad-modal");
+    const video   = document.getElementById("novedad-video");
+    if (!overlay || !modal) return;
+
+    const U = window.Utils;
+
+    function markSeen() {
+      try { localStorage.setItem(STORAGE_KEY, "1"); } catch (e) {}
+    }
+
+    function open() {
+      overlay.classList.remove("hidden");
+      modal.classList.remove("hidden");
+      // forzar reflow para animar
+      void modal.offsetWidth;
+      overlay.classList.add("overlay-visible");
+      modal.classList.add("modal-visible");
+      if (U && U.lockBody) U.lockBody(); else document.body.style.overflow = "hidden";
+      if (video && video.play) { const p = video.play(); if (p && p.catch) p.catch(() => {}); }
+      const closeBtn = document.getElementById("novedad-close");
+      if (closeBtn) closeBtn.focus();
+      document.addEventListener("keydown", onKey);
+    }
+
+    function close() {
+      markSeen();
+      overlay.classList.remove("overlay-visible");
+      modal.classList.remove("modal-visible");
+      document.removeEventListener("keydown", onKey);
+      if (video && video.pause) video.pause();
+      setTimeout(function () {
+        overlay.classList.add("hidden");
+        modal.classList.add("hidden");
+        if (U && U.unlockBody) U.unlockBody(); else document.body.style.overflow = "";
+      }, 300);
+    }
+
+    function onKey(e) { if (e.key === "Escape") close(); }
+
+    document.getElementById("novedad-close")?.addEventListener("click", close);
+    document.getElementById("novedad-later")?.addEventListener("click", close);
+    overlay.addEventListener("click", close);
+    // El CTA abre el enlace en otra pestaña y marca como visto.
+    document.getElementById("novedad-cta")?.addEventListener("click", markSeen);
+
+    // Mostrar tras un pequeño retardo para que la página asiente.
+    const show = () => setTimeout(open, 650);
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", show);
+    } else {
+      show();
+    }
+  })();
+</script>

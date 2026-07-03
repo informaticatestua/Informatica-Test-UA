@@ -31,6 +31,18 @@
       "sourceType": "autoskills-registry",
       "computedHash": "7361ab02fb6b09913e3bdd9cf61c629ed6c17de9485e6a781054e5d437ccfc29"
     },
+    "remotion": {
+      "source": "google-labs-code/stitch-skills",
+      "sourceType": "github",
+      "skillPath": "plugins/stitch-build/skills/remotion/SKILL.md",
+      "computedHash": "e117a6fd18d8bef4774034300c1d0b3db71e39c94d935227b03793f8ee1f6e49"
+    },
+    "remotion-best-practices": {
+      "source": "remotion-dev/skills",
+      "sourceType": "github",
+      "skillPath": "skills/remotion/SKILL.md",
+      "computedHash": "664bd31140897056bd575ef57a15f22f517bd576c6b81df429c1f4ed6453e312"
+    },
     "seo": {
       "source": "addyosmani/web-quality-skills",
       "sourceType": "autoskills-registry",
