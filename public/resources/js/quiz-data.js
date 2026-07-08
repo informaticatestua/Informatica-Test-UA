@@ -59,9 +59,13 @@
      * solo llegarían las primeras 1000. Ordenamos por `id` para que el
      * paginado sea estable (el barajado real lo hace main.js después).
      *
+     * Si se indica `sourceFile`, restringe además a las preguntas de esa
+     * sección (columna `source_file`). Útil para asignaturas con varios
+     * conjuntos de preguntas bajo el mismo `subject_id` (p. ej. HADA).
+     *
      * Devuelve null si hay error en la primera página o no hay resultados.
      */
-    async function fetchBySubjectIds(subjectIds) {
+    async function fetchBySubjectIds(subjectIds, sourceFile) {
         const db = window.SupabaseClient;
         if (!db) return null;
 
@@ -69,10 +73,14 @@
         const filas = [];
 
         for (let desde = 0; ; desde += PAGE) {
-            const { data, error } = await db
+            let query = db
                 .from("questions")
                 .select("id, content, is_multiple, report_count, options(id, content, is_correct, is_no_marcar, position)")
-                .in("subject_id", subjectIds)
+                .in("subject_id", subjectIds);
+
+            if (sourceFile) query = query.eq("source_file", sourceFile);
+
+            const { data, error } = await query
                 .order("id", { ascending: true })
                 .range(desde, desde + PAGE - 1);
 
@@ -114,12 +122,15 @@
      *  2. Grupo mapeado → `GROUP_PARENT_MAP[slug]` → busca hijos por parent_id
      *  3. Slug = parent_id → busca hijos con `subjects WHERE parent_id = slug`
      *  4. Devuelve null → main.js usa el fallback de archivos .txt
+     *
+     * `sourceFile` (opcional) filtra por sección dentro de un mismo
+     * subject_id; solo aplica a la coincidencia directa (paso 1).
      */
-    async function getQuestions(slug) {
+    async function getQuestions(slug, sourceFile) {
         if (!window.SupabaseClient) return null;
 
         // 1. Coincidencia directa con subject_id
-        const direct = await fetchBySubjectIds([slug]);
+        const direct = await fetchBySubjectIds([slug], sourceFile);
         if (direct !== null) return direct;
 
         // 2. Grupo con parent_id mapeado explícitamente

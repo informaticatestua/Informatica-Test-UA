@@ -1484,14 +1484,14 @@
      *  2. Si Supabase no responde o no hay datos, cae al fallback
      *     de archivos .txt (grupos multi-archivo o convención estándar).
      */
-    async function cargarDesdeUrl(id) {
+    async function cargarDesdeUrl(id, sourceFile) {
         state.quizKey = id;
 
         // ── 1. Fuente Supabase ──────────────────────────────────────────
         if (window.QuizData) {
             let preguntas = null;
             try {
-                preguntas = await window.QuizData.getQuestions(id);
+                preguntas = await window.QuizData.getQuestions(id, sourceFile);
             } catch (err) {
                 console.warn("[QuizData] Error al consultar Supabase:", err);
             }
@@ -1860,8 +1860,12 @@
         const path = window.location.pathname;
         const asignaturaId = path.substring(1).replace(/\/$/, "");
 
+        // Sección concreta dentro de la asignatura (columna source_file).
+        // Se pasa como query param, p. ej. /hada?src=HADA%20Julio%202026
+        const sourceFile = new URLSearchParams(window.location.search).get("src") || undefined;
+
         if (asignaturaId && path !== "/" && path !== "/index.html") {
-            cargarDesdeUrl(asignaturaId);
+            cargarDesdeUrl(asignaturaId, sourceFile);
         }
     }
 

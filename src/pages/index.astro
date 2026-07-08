@@ -58,8 +58,21 @@ import NovedadModal from '../components/NovedadModal.astro';
 		redes_parent: { id: "redes_full", display_name: "Redes full" },
 	};
 
+	/**
+	 * Secciones dentro de un mismo subject_id (columna `source_file`).
+	 * Cada botón navega a `/{id}?src=<source_file>`, y el motor del quiz
+	 * (main.js → QuizData) carga solo las preguntas de esa sección.
+	 * El nº de preguntas se obtiene por consulta (no hardcodeado).
+	 */
+	const SECTION_BUTTONS = {
+		hada: [
+			{ label: "HADA Julio 2026", src: "HADA Julio 2026" },
+			{ label: "HADA full",       src: "hadaPreguntas.txt" },
+		],
+	};
+
 	/** IDs de asignaturas marcadas como deprecadas (muestran badge). */
-	const DEPRECATED_SUBJECTS = new Set(["hada"]);
+	const DEPRECATED_SUBJECTS = new Set([]);
 
 	/**
 	 * IDs de asignaturas que NO se muestran como botón propio, pero siguen
@@ -103,6 +116,20 @@ import NovedadModal from '../components/NovedadModal.astro';
 			btn.textContent = child.display_name;
 			btn.addEventListener("click", () => { window.location.href = `/${child.id}`; });
 			row.appendChild(btn);
+		}
+
+		// Botones de sección (source_file dentro del mismo subject_id).
+		const sections = SECTION_BUTTONS[subject.id];
+		if (sections) {
+			for (const sec of sections) {
+				const btn = document.createElement("button");
+				btn.className = "btn-primary";
+				btn.textContent = sec.label;
+				btn.addEventListener("click", () => {
+					window.location.href = `/${subject.id}?src=${encodeURIComponent(sec.src)}`;
+				});
+				row.appendChild(btn);
+			}
 		}
 
 		div.appendChild(row);
@@ -189,7 +216,8 @@ import NovedadModal from '../components/NovedadModal.astro';
 			for (const s of tops) {
 				const kids = children[s.id] || [];
 				const hasSynth = !!SYNTHETIC_FULL[s.id];
-				if (kids.length > 0 || hasSynth) {
+				const hasSections = !!SECTION_BUTTONS[s.id];
+				if (kids.length > 0 || hasSynth || hasSections) {
 					container.appendChild(buildSublist(s, kids));
 				}
 			}
@@ -216,7 +244,8 @@ import NovedadModal from '../components/NovedadModal.astro';
 	function makeTopBtn(subject, children) {
 		const kids = children[subject.id] || [];
 		const hasSynth = !!SYNTHETIC_FULL[subject.id];
-		const hasChildren = kids.length > 0 || hasSynth;
+		const hasSections = !!SECTION_BUTTONS[subject.id];
+		const hasChildren = kids.length > 0 || hasSynth || hasSections;
 
 		const btn = document.createElement("button");
 		btn.id = subject.id;
