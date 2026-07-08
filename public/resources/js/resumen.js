@@ -252,6 +252,39 @@
         return { files: [archivo], isMultiple: false };
     }
 
+    /**
+     * Convierte las preguntas de Supabase (formato de QuizData) al formato
+     * interno del resumen `{ pregunta, opciones: [{ texto, correcta }] }`.
+     */
+    function fromSupabase(preguntas) {
+        return preguntas.map((q) => ({
+            pregunta: q.pregunta,
+            opciones: (q.opciones || []).map((texto, i) => ({
+                texto,
+                correcta: (q.respuestas || []).includes(i + 1),
+            })),
+        }));
+    }
+
+    /**
+     * Carga el resumen desde Supabase (misma fuente que el quiz). Si se
+     * pasa `sourceFile`, restringe a esa sección (columna source_file).
+     * Devuelve true si pintó algo; false si no hay datos (para el fallback).
+     */
+    async function cargarResumenDesdeSupabase(id, sourceFile) {
+        if (!window.QuizData) return false;
+        try {
+            const preguntas = await window.QuizData.getQuestions(id, sourceFile);
+            if (preguntas && preguntas.length > 0) {
+                renderizarResumen(fromSupabase(preguntas));
+                return true;
+            }
+        } catch (error) {
+            console.warn("[Resumen] Error cargando desde Supabase:", error);
+        }
+        return false;
+    }
+
     /** Carga, parsea y pinta el resumen para el slug `id`. */
     async function cargarResumenDesdeId(id) {
         const resolucion = resolverArchivos(id);
@@ -277,10 +310,18 @@
     }
 
     /** Punto de entrada: extrae el slug del primer segmento de la ruta. */
-    function init() {
+    async function init() {
         const pathParts = window.location.pathname.split("/").filter(Boolean);
         if (pathParts.length === 0) return;
-        cargarResumenDesdeId(pathParts[0]);
+
+        const id = pathParts[0];
+        // Sección concreta dentro de la asignatura (columna source_file),
+        // p. ej. /hada/resumen?src=HADA%20Julio%202026
+        const sourceFile = new URLSearchParams(window.location.search).get("src") || undefined;
+
+        // 1. Supabase (misma fuente que el quiz). 2. Fallback a archivos .txt.
+        const ok = await cargarResumenDesdeSupabase(id, sourceFile);
+        if (!ok) cargarResumenDesdeId(id);
     }
 
     if (document.readyState === "loading") {

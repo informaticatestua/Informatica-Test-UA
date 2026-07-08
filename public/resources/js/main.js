@@ -1569,7 +1569,9 @@
                 );
             }
 
-            window.location.href = currentPath + "/resumen";
+            // Preservamos la query (p. ej. ?src=…) para que el resumen
+            // cargue la misma sección que se está practicando.
+            window.location.href = currentPath + "/resumen" + window.location.search;
         });
     }
 

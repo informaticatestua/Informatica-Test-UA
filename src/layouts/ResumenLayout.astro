@@ -5,6 +5,11 @@ interface Props {
 	title?: string;
 }
 const { title = "Ing. Informática Tests UA" } = Astro.props;
+
+// Credenciales Supabase (anon key pública) para que el resumen pueda
+// cargar las preguntas desde la BD, igual que el quiz.
+const supabaseUrl     = import.meta.env.PUBLIC_SUPABASE_URL     ?? '';
+const supabaseAnonKey = import.meta.env.PUBLIC_SUPABASE_ANON_KEY ?? '';
 ---
 
 <!doctype html>
@@ -95,6 +100,16 @@ const { title = "Ing. Informática Tests UA" } = Astro.props;
 		<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.0/katex.min.js" crossorigin="anonymous"></script>
 		<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.0/contrib/auto-render.min.js" crossorigin="anonymous"></script>
 		<script is:inline src="/resources/js/prism.js"></script>
+
+		<!-- ─── Supabase (misma fuente de datos que el quiz) ───────────── -->
+		<script is:inline define:vars={{ supabaseUrl, supabaseAnonKey }}>
+			window.SUPABASE_URL      = supabaseUrl;
+			window.SUPABASE_ANON_KEY = supabaseAnonKey;
+		</script>
+		<script is:inline src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+		<script is:inline src="/resources/js/supabase-client.js"></script>
+		<script is:inline src="/resources/js/quiz-data.js"></script>
+
 		<script is:inline src="/resources/js/formatters.js"></script>
 		<!-- NO cargamos main.js aquí para evitar el conflicto de rutas en la página de resumen -->
 		</body>
