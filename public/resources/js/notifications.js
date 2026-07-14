@@ -68,8 +68,6 @@
         const icons = {
             report_accepted:        "check_circle",
             report_rejected:        "do_not_disturb_on",
-            contribution_accepted:  "star",
-            contribution_rejected:  "block",
             announcement:           "campaign",
         };
         return icons[type] || "notifications";

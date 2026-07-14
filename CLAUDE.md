@@ -3,7 +3,7 @@
 ## 1. Project Overview (Descripción del Proyecto)
 
 **DCA Test UA** es una plataforma web interactiva para que estudiantes de Ingeniería Informática de la Universidad de Alicante (UA) practiquen con baterías de preguntas de exámenes y simulacros.
-Incluye autenticación con Google, progreso persistente, sistema de reportes y contribuciones, notificaciones en tiempo real, panel de administración y explicaciones de respuestas con IA.
+Incluye autenticación con Google, progreso persistente, sistema de reportes, notificaciones en tiempo real, panel de administración y explicaciones de respuestas con IA.
 
 ## 2. Tech Stack (Tecnologías)
 
@@ -33,10 +33,9 @@ Incluye autenticación con Google, progreso persistente, sistema de reportes y c
 - `src/pages/[subject]/resumen.astro`: Resumen/temario de la asignatura.
 - `src/pages/login.astro`: Autenticación con Google.
 - `src/pages/auth/callback.astro`: Callback OAuth de Supabase.
-- `src/pages/perfil.astro`: Perfil del usuario (reportes, contribuciones).
+- `src/pages/perfil.astro`: Perfil del usuario (reportes).
 - `src/pages/perfil/ajustes.astro`: Ajustes (nombre, tema, API keys de IA, instrucciones de IA).
-- `src/pages/admin.astro`: Panel de administración (reportes, contribuciones, usuarios, anuncios).
-- `src/pages/contribuir.astro`: Formulario para contribuir preguntas.
+- `src/pages/admin.astro`: Panel de administración (reportes, usuarios, anuncios).
 - `src/styles/global.css`: Variables CSS semánticas y configuración base de Tailwind.
 
 ### JS Modules (`public/resources/js/`)
@@ -68,12 +67,12 @@ El orden de carga de los módulos importa y está definido en `BaseLayout.astro`
 - `profiles`: Usuario (username, avatar_url, role, banned, **ai_custom_instructions**).
 - `subjects`: Asignaturas disponibles.
 - `sections`: Secciones/bloques de preguntas por asignatura.
-- `questions`: Preguntas (con soporte para contribuciones de usuarios).
+- `questions`: Preguntas.
 - `options`: Opciones de respuesta por pregunta.
 - `reports`: Reportes de errores en preguntas (pendiente / aceptado / rechazado).
 - `user_failures`: Preguntas falladas por usuario.
 - `test_progress`: Progreso guardado por sección.
-- `notifications`: Notificaciones (report_accepted, report_rejected, contribution_accepted, contribution_rejected, announcement).
+- `notifications`: Notificaciones (report_accepted, report_rejected, announcement).
 - `api_keys_encrypted`: Claves de API de IA encriptadas con AES-256.
 
 ## 6. Coding Conventions (Convenciones de Código)

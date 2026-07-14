@@ -1778,13 +1778,6 @@
         });
     }
 
-    /** Enlace a contribuir pregunta de la asignatura actual. */
-    function bindCommunityButtons() {
-        $("contribute-btn")?.addEventListener("click", () => {
-            window.location.href = "/contribuir?subject=" + encodeURIComponent(state.quizKey || "");
-        });
-    }
-
     /** Refresca el aviso de reportes cuando el usuario reporta la pregunta. */
     function bindReportEvents() {
         document.addEventListener("question-reported", (e) => {
@@ -1815,7 +1808,6 @@
         bindSessionResultsButtons();
         bindKeyboardShortcuts();
         bindExamButtons();
-        bindCommunityButtons();
         bindReportEvents();
 
         window.addEventListener("pageshow", (event) => {

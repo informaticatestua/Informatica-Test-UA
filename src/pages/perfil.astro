@@ -41,11 +41,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 						<span id="stat-reportes" class="font-heading font-bold text-text-main text-lg">–</span>
 						<span class="text-text-muted text-xs ml-1">reportes</span>
 					</div>
-					<div class="w-px bg-border-subtle"></div>
-					<div>
-						<span id="stat-contribuciones" class="font-heading font-bold text-text-main text-lg">–</span>
-						<span class="text-text-muted text-xs ml-1">contribuciones</span>
-					</div>
 				</div>
 			</div>
 			<div class="flex flex-col sm:flex-row items-end sm:items-center gap-2 flex-shrink-0">
@@ -65,10 +60,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 				<span class="material-icons text-[15px]">flag</span>
 				Mis reportes
 			</button>
-			<button class="perfil-tab" data-tab="contribuciones">
-				<span class="material-icons text-[15px]">add_circle</span>
-				Mis contribuciones
-			</button>
 		</div>
 
 		<!-- Tab: Mis Reportes -->
@@ -85,26 +76,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 				<p class="text-text-muted text-sm m-0">Cuando reportes una pregunta aparecerá aquí.</p>
 			</div>
 			<div id="reportes-list" class="hidden space-y-3"></div>
-		</div>
-
-		<!-- Tab: Mis Contribuciones -->
-		<div id="tab-contribuciones" class="tab-panel hidden">
-			<div id="contribs-loading" class="flex items-center gap-3 py-10 text-text-muted">
-				<div class="w-5 h-5 border-2 border-blue-500 border-t-transparent rounded-full animate-spin flex-shrink-0"></div>
-				<span class="text-sm">Cargando contribuciones…</span>
-			</div>
-			<div id="contribs-empty" class="hidden flex flex-col items-center justify-center py-16 gap-3 text-center">
-				<div class="w-14 h-14 rounded-2xl bg-surface-hover border border-border-subtle flex items-center justify-center">
-					<span class="material-icons text-text-muted" style="font-size:1.6rem;">add_circle</span>
-				</div>
-				<p class="text-text-main font-medium m-0">Sin contribuciones aún</p>
-				<p class="text-text-muted text-sm m-0">¿Conoces una pregunta que debería estar aquí?</p>
-				<a href="/contribuir" class="inline-flex items-center gap-1.5 mt-1 px-4 py-2 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors no-underline">
-					<span class="material-icons text-[15px]">add</span>
-					Contribuir pregunta
-				</a>
-			</div>
-			<div id="contribs-list" class="hidden space-y-3"></div>
 		</div>
 
 	</div>
@@ -159,18 +130,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         return data || [];
     }
 
-    async function loadContribs(userId) {
-        const db = window.SupabaseClient;
-        if (!db) return [];
-        const { data } = await db
-            .from("contributions")
-            .select("id, content, section, status, rejection_reason, created_at, subject_id")
-            .eq("user_id", userId)
-            .order("created_at", { ascending: false })
-            .limit(50);
-        return data || [];
-    }
-
     // ── Render ────────────────────────────────────────────────────────────────
 
     function renderReportes(list) {
@@ -206,38 +165,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         `).join("");
 
         document.getElementById("stat-reportes").textContent = list.length;
-    }
-
-    function renderContribs(list) {
-        document.getElementById("contribs-loading")?.classList.add("hidden");
-
-        const container = document.getElementById("contribs-list");
-        const empty     = document.getElementById("contribs-empty");
-        if (!container) return;
-
-        if (list.length === 0) { empty?.classList.remove("hidden"); return; }
-
-        container.classList.remove("hidden");
-        container.innerHTML = list.map(c => `
-            <div class="report-card report-card--${c.status} bg-surface border border-border-subtle rounded-xl p-4 space-y-2">
-                <div class="flex flex-wrap items-start gap-2">
-                    ${badge(c.status)}
-                    <div class="flex flex-wrap gap-x-3 gap-y-0.5 text-xs text-text-muted items-center">
-                        ${c.subject_id ? `<span class="font-medium">${c.subject_id.toUpperCase()}</span>` : ""}
-                        ${c.section ? `<span class="opacity-50">·</span><span>${c.section}</span>` : ""}
-                        <span class="opacity-50">·</span>
-                        <span>${formatDate(c.created_at)}</span>
-                    </div>
-                </div>
-                <p class="text-text-main text-sm leading-snug m-0">${truncate(c.content)}</p>
-                ${c.status === "rechazado" && c.rejection_reason ? `
-                <div class="mt-1 px-3 py-2 bg-surface-hover border border-border-subtle rounded-lg text-xs text-text-muted">
-                    <span class="font-semibold">Motivo:</span> ${c.rejection_reason}
-                </div>` : ""}
-            </div>
-        `).join("");
-
-        document.getElementById("stat-contribuciones").textContent = list.length;
     }
 
     // ── Tabs ─────────────────────────────────────────────────────────────────
@@ -301,19 +228,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
         initTabs();
 
-        const [reportes, contribs] = await Promise.all([
-            loadReportes(user.id),
-            loadContribs(user.id),
-        ]);
-
+        const reportes = await loadReportes(user.id);
         renderReportes(reportes);
-        renderContribs(contribs);
 
         // Update stats defaults
         if (document.getElementById("stat-reportes").textContent === "–")
             document.getElementById("stat-reportes").textContent = "0";
-        if (document.getElementById("stat-contribuciones").textContent === "–")
-            document.getElementById("stat-contribuciones").textContent = "0";
     }
 
     if (document.readyState === "loading") {
