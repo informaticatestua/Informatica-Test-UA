@@ -48,14 +48,14 @@
      */
     const MULTI_FILE_GROUPS = Object.freeze({
         redes_full: {
-            displayName: "Redes full",
+            displayName: "Redes Full",
             files: [
                 "redesPreguntas.txt",
                 "redesEnero2526Preguntas.txt",
             ],
         },
         sdsfull: {
-            displayName: "SDSFULL",
+            displayName: "SDS Full",
             files: [
                 "sds01-presentacionPreguntas.txt",
                 "sds02-introgoPreguntas.txt",

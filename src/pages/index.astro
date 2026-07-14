@@ -54,8 +54,8 @@ import NovedadModal from '../components/NovedadModal.astro';
 	 * Se inserta como primer hijo en la sublista de su parent_id.
 	 */
 	const SYNTHETIC_FULL = {
-		sds:          { id: "sdsfull",    display_name: "SDS FULL" },
-		redes_parent: { id: "redes_full", display_name: "Redes full" },
+		sds:          { id: "sdsfull",    display_name: "SDS Full" },
+		redes_parent: { id: "redes_full", display_name: "Redes Full" },
 	};
 
 	/**
@@ -67,12 +67,12 @@ import NovedadModal from '../components/NovedadModal.astro';
 	const SECTION_BUTTONS = {
 		hada: [
 			{ label: "HADA Julio 2026", src: "HADA Julio 2026" },
-			{ label: "HADA full",       src: "hadaPreguntas.txt" },
+			{ label: "HADA Full",       src: "hadaPreguntas.txt" },
 		],
 		ped: [
 			{ label: "PED Junio 2025", src: "Junio 2025" },
 			{ label: "PED Junio 2026", src: "Junio 2026" },
-			{ label: "PED full",       src: "PED full" },
+			{ label: "PED Full",       src: "PED Full" },
 		],
 	};
 
@@ -82,7 +82,7 @@ import NovedadModal from '../components/NovedadModal.astro';
 	/**
 	 * IDs de asignaturas que NO se muestran como botón propio, pero siguen
 	 * existiendo en BD y agregándose en su "FULL" sintético. P. ej.
-	 * "redesGeneral" es el banco completo de redes: se accede vía "Redes full",
+	 * "redesGeneral" es el banco completo de redes: se accede vía "Redes Full",
 	 * sin botón individual.
 	 */
 	const HIDDEN_SUBJECTS = new Set(["redesGeneral"]);
