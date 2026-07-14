@@ -70,7 +70,6 @@
             report_rejected:        "do_not_disturb_on",
             contribution_accepted:  "star",
             contribution_rejected:  "block",
-            forum_reply:            "forum",
             announcement:           "campaign",
         };
         return icons[type] || "notifications";

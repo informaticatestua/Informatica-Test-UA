@@ -1778,13 +1778,10 @@
         });
     }
 
-    /** Enlaces a contribuir pregunta y al foro de la asignatura actual. */
+    /** Enlace a contribuir pregunta de la asignatura actual. */
     function bindCommunityButtons() {
         $("contribute-btn")?.addEventListener("click", () => {
             window.location.href = "/contribuir?subject=" + encodeURIComponent(state.quizKey || "");
-        });
-        $("forum-btn")?.addEventListener("click", () => {
-            window.location.href = "/foro/" + encodeURIComponent(state.quizKey || "");
         });
     }
 

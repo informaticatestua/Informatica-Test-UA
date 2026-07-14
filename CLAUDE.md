@@ -3,7 +3,7 @@
 ## 1. Project Overview (Descripción del Proyecto)
 
 **DCA Test UA** es una plataforma web interactiva para que estudiantes de Ingeniería Informática de la Universidad de Alicante (UA) practiquen con baterías de preguntas de exámenes y simulacros.
-Incluye autenticación con Google, progreso persistente, foro por asignatura, sistema de reportes y contribuciones, notificaciones en tiempo real, panel de administración y explicaciones de respuestas con IA.
+Incluye autenticación con Google, progreso persistente, sistema de reportes y contribuciones, notificaciones en tiempo real, panel de administración y explicaciones de respuestas con IA.
 
 ## 2. Tech Stack (Tecnologías)
 
@@ -36,8 +36,6 @@ Incluye autenticación con Google, progreso persistente, foro por asignatura, si
 - `src/pages/perfil.astro`: Perfil del usuario (reportes, contribuciones).
 - `src/pages/perfil/ajustes.astro`: Ajustes (nombre, tema, API keys de IA, instrucciones de IA).
 - `src/pages/admin.astro`: Panel de administración (reportes, contribuciones, usuarios, anuncios).
-- `src/pages/foro/[subject].astro`: Foro de la asignatura.
-- `src/pages/foro/hilo/[thread].astro`: Hilo individual del foro.
 - `src/pages/contribuir.astro`: Formulario para contribuir preguntas.
 - `src/styles/global.css`: Variables CSS semánticas y configuración base de Tailwind.
 
@@ -75,10 +73,7 @@ El orden de carga de los módulos importa y está definido en `BaseLayout.astro`
 - `reports`: Reportes de errores en preguntas (pendiente / aceptado / rechazado).
 - `user_failures`: Preguntas falladas por usuario.
 - `test_progress`: Progreso guardado por sección.
-- `notifications`: Notificaciones (report_accepted, report_rejected, contribution_accepted, contribution_rejected, forum_reply, announcement).
-- `forum_threads`: Hilos del foro.
-- `forum_posts`: Respuestas del foro (con votos).
-- `forum_votes`: Votos de posts del foro.
+- `notifications`: Notificaciones (report_accepted, report_rejected, contribution_accepted, contribution_rejected, announcement).
 - `api_keys_encrypted`: Claves de API de IA encriptadas con AES-256.
 
 ## 6. Coding Conventions (Convenciones de Código)
