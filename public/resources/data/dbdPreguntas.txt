@@ -5,3 +5,10 @@ Debemos iniciarlo definiendo el esquema conceptual para asegurar que no habrá r
 Hay que tener en cuenta desde el principio el SGBD que se va a utilizar.
 Debemos hacer en paralelo el diseño conceptual y su implementación física para saber desde el principio los índices que se puedan necesitar.
 
+Un SGBD relacional ha sido configurado para realizar copias de seguridad completas cada noche a las 01:00h. Si hay un problema al día siguiente a las 12:00h, estas copias (1 punto)
+1
+Permiten recuperar la base de datos con las operaciones realizadas hasta las 01:00h y las realizadas entre las 01:00h y las 12:00h deben ser repetidas nuevamente por los usuarios.
+Permiten recuperar la base de datos con las operaciones realizadas hasta las 01:00h y las realizadas entre las 01:00h y las 12:00h se pueden extraer de la memoria del servidor.
+Permiten recuperar la base de datos completamente hasta las operaciones realizadas en el instante anterior al problema.
+Permiten recuperar la base de datos gracias a las propiedades ACID de las transacciones.
+
