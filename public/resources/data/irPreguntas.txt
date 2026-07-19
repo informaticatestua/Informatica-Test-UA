@@ -1,0 +1,392 @@
+¿Cuál es el objetivo principal de un sistema de recuperación de información (IR)?
+3
+Almacenar documentos de forma eficiente para minimizar el espacio en disco.
+Ordenar documentos por fecha de creación para facilitar su acceso cronológico.
+Encontrar los documentos relevantes que satisfacen una necesidad de información del usuario.
+Indexar todos los documentos disponibles en una base de datos relacional.
+
+En el modelo booleano de recuperación, una consulta se expresa como:
+2
+Una lista de palabras clave ordenadas por peso de importancia.
+Una expresión booleana de términos combinados con operadores AND, OR y NOT.
+Un vector de pesos que representa la relevancia de cada término del vocabulario.
+Una secuencia de palabras que se comparan con el texto completo de los documentos.
+
+Un índice invertido asocia cada término del vocabulario a:
+1
+Una lista de postings con los identificadores de los documentos que lo contienen.
+Un vector de pesos normalizados con respecto al corpus completo.
+Una tabla hash con la frecuencia de aparición en cada párrafo del documento.
+Una secuencia de posiciones absolutas en el fichero de texto original.
+
+La principal limitación del modelo booleano de recuperación de información es:
+4
+No permite combinar términos mediante operadores lógicos.
+Requiere un índice invertido que ocupa demasiado espacio en memoria.
+Solo funciona con documentos escritos en inglés.
+No permite ordenar los documentos por grado de relevancia; el resultado de pertenencia al conjunto es binario.
+
+¿Qué es un «posting» en el contexto de un índice invertido?
+2
+Un registro que almacena el tamaño en bytes de cada documento del corpus.
+Un registro que indica que un término aparece en un documento concreto, incluyendo su identificador.
+Una lista de sinónimos de un término indexado para expansión de consultas.
+Un contador del número total de veces que aparece un término en el corpus completo.
+
+En el procesamiento de texto para la construcción de un índice, la «tokenización» consiste en:
+1
+Dividir el texto en unidades léxicas individuales denominadas tokens.
+Eliminar las palabras vacías (stop words) del documento procesado.
+Reducir cada palabra a su raíz morfológica mediante técnicas de stemming.
+Asignar a cada token un peso TF-IDF normalizado según el corpus.
+
+El operador AND en el modelo booleano recupera exclusivamente:
+3
+Los documentos que contienen al menos uno de los términos de la consulta.
+Los documentos que NO contienen ninguno de los términos de la consulta.
+Los documentos que contienen todos y cada uno de los términos de la consulta simultáneamente.
+Los documentos ordenados por el número de términos de la consulta que contienen.
+
+En el contexto de IR, la «necesidad de información» se diferencia de la «consulta» en que:
+4
+La necesidad de información es siempre más corta que la consulta expresada.
+La consulta puede contener operadores booleanos pero la necesidad de información no.
+La necesidad de información se expresa siempre en lenguaje formal de lógica proposicional.
+La necesidad de información es la motivación real del usuario, mientras que la consulta es su formulación imperfecta en el sistema.
+
+El operador NOT en el modelo booleano, cuando se aplica a un término t, recupera:
+2
+Únicamente los documentos que contienen t en sus primeros párrafos.
+Todos los documentos del corpus que no contienen el término t.
+Los documentos donde t aparece menos de dos veces.
+Los documentos donde t aparece solo en el título pero no en el cuerpo.
+
+En la construcción de un índice invertido, la «lista de postings» para el término t se ordena habitualmente por:
+1
+Identificador de documento (doc ID) de forma ascendente para facilitar la intersección eficiente.
+Frecuencia de aparición de t en el documento, de mayor a menor.
+Longitud del documento en número de tokens, de menor a mayor.
+Fecha de creación del documento, de más antiguo a más reciente.
+
+En el modelo de espacio vectorial (VSM), cada documento se representa como:
+2
+Una lista ordenada de términos por frecuencia de aparición en el documento.
+Un vector en un espacio multidimensional donde cada dimensión corresponde a un término del vocabulario.
+Un grafo de dependencias entre los términos que co-ocurren en el documento.
+Una matriz dispersa de bigramas extraídos del texto preprocesado.
+
+El peso TF-IDF de un término en un documento combina:
+1
+La frecuencia del término en el documento (TF) y la frecuencia inversa del término en el corpus (IDF).
+La frecuencia del término en el corpus y la frecuencia inversa del término en el documento.
+La posición del término en el documento y su longitud en caracteres.
+El número de documentos del corpus y la longitud media de los documentos.
+
+El IDF (Inverse Document Frequency) de un término t se define formalmente como:
+3
+El logaritmo del número de veces que aparece t en el corpus dividido entre el número de documentos.
+La raíz cuadrada de la frecuencia del término normalizada por la longitud del documento.
+El logaritmo del número total de documentos N dividido entre el número de documentos que contienen t (df_t): log(N/df_t).
+El número total de documentos menos el número de documentos que contienen el término t.
+
+La similitud coseno entre el vector de una consulta q y el vector de un documento d:
+4
+Es 1 cuando los vectores son ortogonales y 0 cuando son idénticos en dirección.
+Es siempre un valor negativo si los documentos comparten pocos términos con la consulta.
+Crece linealmente con la longitud total de los documentos del corpus.
+Es máxima (1) cuando los vectores apuntan en la misma dirección y mínima (0) cuando son ortogonales (ningún término compartido).
+
+¿Por qué se normaliza el vector documento a longitud unitaria en el modelo vectorial?
+1
+Para evitar que documentos más largos tengan ventaja injusta por acumular más ocurrencias de los mismos términos.
+Para que todos los pesos sean enteros y facilitar el cálculo con aritmética de precisión exacta.
+Porque el IDF ya incluye un factor de normalización que debe compensarse explícitamente.
+Porque la similitud coseno solo está matemáticamente definida para vectores unitarios.
+
+Un término que aparece en todos los documentos del corpus tendrá un IDF:
+2
+Máximo, porque la frecuencia total en el corpus es muy alta.
+Igual a 0, lo que le otorga nula capacidad discriminante entre documentos.
+Proporcional al número de documentos, convirtiéndolo en muy relevante para la recuperación.
+Negativo, lo que penaliza la relevancia de cualquier documento que lo contenga.
+
+En el esquema de pesado SMART «lnc.ltc», el subíndice «n» aplicado al vector documento indica:
+3
+Que se aplica normalización por la longitud del término en caracteres.
+Que el peso del término se normaliza restando la media del corpus completo.
+Que no se aplica ponderación IDF en el lado del documento (solo se usa TF logarítmico).
+Que se usa logaritmo natural en lugar de logaritmo en base 10 para el cálculo.
+
+En la notación SMART, el componente «ltc» aplicado a la consulta usa, en este orden:
+4
+Frecuencia cruda, IDF estándar y sin normalización.
+Frecuencia logarítmica, sin IDF y normalización coseno.
+Frecuencia binaria, IDF suavizado y normalización pivotada.
+Frecuencia logarítmica, IDF estándar y normalización coseno.
+
+La Precisión (Precision) en evaluación de sistemas IR se define como:
+1
+La fracción de documentos recuperados que son relevantes: |Recuperados ∩ Relevantes| / |Recuperados|.
+La fracción de documentos relevantes que han sido recuperados por el sistema.
+La media armónica de precisión y recall ponderada por el parámetro β.
+El número total de documentos relevantes presentes en la colección de prueba.
+
+El Recall (exhaustividad) en evaluación de sistemas IR se define como:
+2
+La fracción de documentos recuperados que son relevantes.
+La fracción de documentos relevantes del corpus que han sido recuperados: |Recuperados ∩ Relevantes| / |Relevantes|.
+La medida F1 que combina precisión y recall con ponderación igual.
+El porcentaje de documentos irrelevantes que el sistema no recupera (especificidad).
+
+La medida F1 (F-measure con β=1) es:
+4
+La media aritmética de precisión y recall.
+La media geométrica de precisión y recall.
+El cuadrado de la precisión dividido entre el valor de recall.
+La media armónica de precisión y recall, que da igual importancia a ambas medidas.
+
+Cuando β > 1 en la medida F_β, significa que:
+3
+La precisión tiene mayor peso que el recall en la puntuación final.
+Ambas medidas tienen exactamente el mismo peso independientemente del valor.
+El recall tiene mayor peso que la precisión en la puntuación final.
+La medida F se calcula como media aritmética en lugar de media armónica.
+
+La MAP (Mean Average Precision) se calcula como:
+3
+La máxima precisión obtenida en cualquier punto del ranking para el conjunto de consultas de prueba.
+La precisión medida en un único punto de corte (p. ej., top-10) promediada sobre todas las consultas.
+La media de las Average Precisions calculadas para cada consulta individual del conjunto de prueba.
+La media armónica de la precisión en los primeros 10 y los primeros 20 documentos recuperados.
+
+La Average Precision (AP) para una única consulta se calcula como:
+1
+La media de las precisiones evaluadas en cada posición del ranking donde aparece un documento relevante.
+La precisión al recuperar el último documento relevante del corpus completo.
+El número de documentos relevantes recuperados dividido entre el total de documentos relevantes en el corpus.
+La suma de las precisiones en las posiciones impares del ranking dividida entre el número de consultas.
+
+En la curva de precisión-recall interpolada, la precisión en un nivel de recall r se define como:
+1
+La máxima precisión obtenida en cualquier punto del ranking con recall igual o superior a r.
+La precisión media entre los puntos de recall inmediatamente anteriores y posteriores a r.
+La precisión obtenida exactamente en el documento en que el recall alcanza el valor r.
+La raíz cuadrada de las precisiones en los dos puntos de recall adyacentes al nivel r.
+
+El algoritmo de retroalimentación de relevancia de Rocchio modifica el vector de consulta:
+2
+Añadiendo todos los términos de los documentos recuperados en el primer ranking sin distinción.
+Desplazando el vector hacia los documentos marcados como relevantes y alejándolo de los no relevantes.
+Eliminando de la consulta todos los términos que aparezcan en algún documento no relevante.
+Incrementando el peso de los términos originales de la consulta en proporción al número de documentos recuperados.
+
+El NDCG (Normalized Discounted Cumulative Gain) se diferencia de la precisión convencional en que:
+4
+Solo evalúa el primer documento del ranking, ignorando los demás resultados.
+Requiere anotaciones de relevancia binaria, al igual que la precisión estándar.
+Penaliza más los errores en posiciones finales del ranking que en posiciones iniciales.
+Admite relevancia graduada (varios niveles, no solo binario) y penaliza los documentos relevantes situados en posiciones bajas del ranking.
+
+¿Qué es la «pseudo-retroalimentación de relevancia» (pseudo relevance feedback)?
+1
+Asumir automáticamente que los k primeros documentos recuperados son relevantes y usarlos para expandir la consulta sin intervención del usuario.
+Pedir al usuario que marque explícitamente los documentos relevantes antes de lanzar la primera consulta.
+Usar los documentos marcados como no relevantes para eliminar términos irrelevantes de la consulta.
+Calcular la relevancia de los documentos a partir de sus metadatos sin analizar su contenido textual.
+
+El algoritmo PageRank asigna importancia a una página web basándose fundamentalmente en:
+3
+El número de palabras clave relevantes que contiene el texto de la página.
+La frecuencia con que los usuarios visitan la página directamente desde la URL.
+El número y la calidad (PageRank) de las páginas que enlazan hacia ella mediante hipervínculos.
+La antigüedad del dominio y la frecuencia de actualización del contenido de la página.
+
+El factor de amortiguamiento d (damping factor) en la fórmula de PageRank modela:
+2
+La penalización de las páginas con muchos enlaces salientes (outlinks) respecto al total.
+La probabilidad de que un usuario siga un enlace en lugar de saltar aleatoriamente a otra página del grafo.
+El incremento de PageRank de las páginas con pocas páginas que les enlazan directamente.
+La normalización de la suma total de todos los PageRanks del grafo web a exactamente 1.
+
+¿Qué valor se utiliza habitualmente para el factor de amortiguamiento d en PageRank?
+1
+Aproximadamente 0.85, lo que implica que el usuario sigue un enlace el 85% de las veces.
+Exactamente 0.5, distribuyendo la probabilidad por igual entre seguir un enlace y saltar aleatoriamente.
+Un valor variable que depende del número de nodos del grafo web en cada iteración.
+Exactamente 1.0 en grafos conexos sin nodos colgantes (dangling nodes).
+
+¿Qué problema plantean los «dangling nodes» (nodos sin enlaces salientes) en el cálculo de PageRank?
+4
+Aumentan exponencialmente el número de iteraciones necesarias para que el algoritmo converja.
+Generan ciclos infinitos que impiden la convergencia de la distribución estacionaria.
+Hacen que su propio PageRank sea siempre igual a 0 independientemente de los enlaces entrantes.
+Absorben PageRank de otras páginas sin redistribuirlo, causando que la masa de rank se «pierda» del sistema.
+
+El algoritmo HITS (Hyperlink-Induced Topic Search) distingue entre:
+1
+Hubs (páginas que apuntan a muchas buenas autoridades) y autoridades (páginas apuntadas por muchos buenos hubs).
+Páginas fuente (con muchos outlinks) y páginas destino (con muchos inlinks) sin considerar su calidad.
+Páginas de contenido y páginas de índice, según si contienen texto original o solo hipervínculos.
+Páginas con relevancia temática alta y páginas con relevancia estructural alta, según su posición en el grafo.
+
+En el algoritmo HITS, las puntuaciones de hub y autoridad se actualizan de forma:
+2
+Independiente, calculando primero todos los scores de hub y luego los de autoridad sin retroalimentación mutua.
+Mutuamente reforzada: una página es buena autoridad si la enlazan buenos hubs, y buen hub si enlaza a buenas autoridades.
+Proporcional al número absoluto de inlinks y outlinks sin considerar la calidad de las páginas vecinas.
+Basada únicamente en la relevancia textual del contenido de cada página respecto a la consulta.
+
+¿Qué es el «anchor text» en el contexto de la recuperación web?
+3
+El texto oculto que los motores de búsqueda usan para detectar y penalizar páginas con spam de enlaces.
+El título HTML de la página destino del enlace, usado para indexar sus palabras clave principales.
+El texto visible del hipervínculo, que describe el contenido de la página destino y enriquece su indexación.
+El atributo «alt» de las imágenes incluidas dentro de los hipervínculos, usado para búsquedas de imagen.
+
+Un web crawler realiza su función:
+4
+Descargando únicamente los documentos especificados manualmente por el administrador del motor de búsqueda.
+Monitorizando en tiempo real los cambios en páginas web mediante notificaciones push del servidor.
+Consultando directamente los servidores DNS para obtener la lista completa de todos los dominios activos.
+Partiendo de URLs semilla, siguiendo los hipervínculos de las páginas descubiertas y descargando el contenido sistemáticamente.
+
+El protocolo de exclusión de robots (robots.txt) indica a los crawlers:
+1
+Qué partes del sitio web no deben ser rastreadas o indexadas por los robots.
+La velocidad máxima a la que el crawler puede descargar páginas del servidor.
+La lista de palabras clave que el webmaster considera más importantes para el SEO.
+El orden de prioridad en que deben indexarse las páginas del sitio web.
+
+El objetivo de la eliminación de «stop words» durante el preprocesamiento es:
+1
+Reducir el tamaño del índice eliminando palabras muy frecuentes con escasa capacidad discriminante.
+Mejorar la precisión del sistema asignando pesos mayores a las palabras de contenido más frecuentes.
+Transformar cada palabra a su forma base para reducir las variantes morfológicas en el índice.
+Eliminar las palabras con caracteres especiales que no pueden indexarse correctamente.
+
+El stemming y la lematización son técnicas de normalización que difieren principalmente en que:
+2
+El stemming solo funciona para el inglés, mientras que la lematización es independiente del idioma.
+El stemming aplica reglas heurísticas de recorte de sufijos; la lematización devuelve la forma canónica del diccionario.
+El stemming es siempre más preciso que la lematización, aunque requiere más recursos computacionales.
+La lematización elimina las stop words además de reducir las palabras a su forma base.
+
+El algoritmo de stemming de Porter opera mediante:
+3
+Un diccionario que mapea cada forma flexionada a su lema morfológico correspondiente.
+Un modelo de lenguaje entrenado sobre un gran corpus para predecir la raíz de cada palabra.
+Una serie de reglas de eliminación de sufijos aplicadas de forma secuencial sobre la palabra.
+Un parser morfológico que analiza la estructura interna de cada palabra mediante gramáticas formales.
+
+El algoritmo BSBI (Block Sort-Based Indexing) para la construcción de índices a gran escala divide el proceso en bloques para:
+4
+Paralelizar la tokenización distribuyendo el corpus entre varios núcleos de procesador.
+Garantizar que el índice final esté ordenado alfabéticamente de forma más eficiente que en memoria.
+Permitir la actualización incremental del índice sin reconstruirlo desde cero al añadir nuevos documentos.
+Manejar corpus que no caben en memoria principal, ordenando pares (termID, docID) por bloques y fusionándolos externamente.
+
+Un «positional index» (índice posicional) extiende el índice invertido almacenando adicionalmente:
+1
+La posición de cada ocurrencia del término dentro del documento, expresada como número de token.
+El número de párrafos en que aparece el término dentro de cada documento.
+El nivel de encabezado HTML (h1, h2…) en que aparece el término en documentos web.
+La distancia en caracteres entre cada ocurrencia del término y el comienzo del documento.
+
+Las «consultas de frase» (phrase queries) como "recuperación de información" requieren necesariamente:
+2
+Un índice bigramático que almacena todos los pares de palabras adyacentes del corpus.
+Un índice posicional que permita verificar que los términos de la frase aparecen en posiciones consecutivas.
+Un índice de campo que registre en qué campo HTML aparece cada término del documento.
+Un índice de sinónimos para expandir automáticamente la consulta con variantes de la frase objetivo.
+
+Las «wildcard queries» (consultas con comodín) como «recup*» se procesan eficientemente mediante:
+3
+El índice posicional, buscando las posiciones donde aparece el prefijo especificado.
+El índice bigramático, combinando todos los bigramas que comienzan por el prefijo dado.
+Un árbol B (B-tree) o árbol de permuterm que permite buscar términos por prefijo o sufijo.
+El índice de campo, filtrando los documentos por el tipo de campo donde aparece el término.
+
+En el modelo probabilístico de recuperación de información, la relevancia de un documento D para una consulta Q se estima mediante:
+3
+La frecuencia relativa de los términos de Q en D respecto al total de términos de D.
+La distancia coseno entre los vectores de Q y D en el espacio de términos del vocabulario.
+P(R=1|D,Q), la probabilidad de que el documento sea relevante dado el documento y la consulta.
+El logaritmo del número de términos de la consulta que aparecen al menos una vez en el documento.
+
+El modelo BM25 mejora el TF-IDF clásico principalmente introduciendo:
+4
+Un grafo de conocimiento para expandir automáticamente los términos de la consulta.
+La incorporación de información de la posición de los términos en el documento.
+Un mecanismo de retroalimentación de relevancia implícita basado en el historial de clics.
+Saturación de la frecuencia de término (TF) y normalización por longitud del documento mediante parámetros ajustables k1 y b.
+
+En el parámetro b de BM25, cuando b = 0:
+1
+La longitud del documento no afecta al score (no se aplica ninguna normalización por longitud).
+Se aplica la normalización por longitud de forma completa, equivalente al TF-IDF normalizado.
+El parámetro k1 pierde su efecto y la frecuencia del término se comporta como frecuencia binaria.
+El término con mayor IDF recibe el mismo peso que el término con menor IDF en el ranking.
+
+En el enfoque de modelos de lenguaje para IR (Language Models for IR), cada documento D se modela como:
+1
+Una distribución de probabilidad sobre palabras del vocabulario, de la que se asume que surge la consulta.
+Un vector en el espacio de términos normalizado mediante la transformada discreta de coseno.
+Una red bayesiana que codifica las dependencias entre los términos del vocabulario.
+Un autómata finito que acepta exactamente las consultas relevantes para ese documento.
+
+El principal problema del estimador de máxima verosimilitud (MLE) en los modelos de lenguaje de documentos es:
+4
+Es computacionalmente intratable para corpus grandes con vocabularios extensos.
+Sobreestima la importancia de los términos con baja frecuencia de aparición en el documento.
+Requiere que todos los documentos del corpus tengan la misma longitud para ser comparables.
+Asigna probabilidad cero a términos de la consulta que no aparecen en el documento, impidiendo recuperar documentos que no contienen todos los términos.
+
+El suavizado de Jelinek-Mercer (interpolación lineal) en los modelos de lenguaje para IR calcula la probabilidad de un término w como:
+3
+El producto de la probabilidad del término en el documento y en el corpus, debidamente normalizado.
+La probabilidad máxima entre la del modelo del documento y la del modelo del corpus.
+Una combinación lineal: λ·P(w|Md) + (1-λ)·P(w|Mc), interpolando el modelo del documento con el del corpus.
+La probabilidad bayesiana del término condicionada al autor y la fecha de creación del documento.
+
+El suavizado de Dirichlet en los modelos de lenguaje para IR sirve fundamentalmente para:
+2
+Reducir el sobreajuste del modelo aumentando la penalización sobre los términos muy frecuentes.
+Asignar probabilidad no nula a términos de la consulta que no aparecen en el documento, mezclando el modelo del documento con el del corpus mediante un prior.
+Normalizar la distribución de probabilidad para que la suma de todos los términos sea exactamente 1.
+Aumentar el peso de los términos que aparecen en las primeras posiciones del documento.
+
+En el Binary Independence Model (BIM), los documentos se representan como:
+1
+Vectores binarios que indican la presencia o ausencia de cada término, asumiendo independencia entre términos.
+Vectores de frecuencias de términos normalizadas por la longitud del documento.
+Distribuciones de probabilidad sobre el vocabulario obtenidas por máxima verosimilitud.
+Grafos de dependencias entre términos que co-ocurren con frecuencia en el corpus.
+
+La función RSV (Retrieval Status Value) en el BIM se calcula como:
+2
+La diferencia entre la probabilidad de que el documento sea relevante y la de que no lo sea.
+La suma de los logaritmos de los ratios de verosimilitud (log-likelihood ratios) para cada término de la consulta presente en el documento.
+El producto de las probabilidades condicionales de cada término de la consulta dado el documento.
+La suma de los pesos TF-IDF de cada término de la consulta presente en el documento.
+
+¿Qué asume el modelo de «independencia» en el BIM (Binary Independence Model)?
+4
+Que todos los documentos del corpus tienen la misma probabilidad a priori de ser relevantes.
+Que los términos de la consulta son independientes entre sí pero no de los documentos.
+Que la relevancia de un documento depende solo del primer término de la consulta que aparece en él.
+Que la presencia o ausencia de cada término en un documento es condicionalmente independiente de los demás términos dado que se conoce la relevancia del documento.
+
+En la evaluación de sistemas IR mediante colecciones de prueba (test collections), los «juicios de relevancia» (relevance judgments):
+3
+Son generados automáticamente por el sistema de recuperación durante la fase de indexación.
+Se obtienen midiendo el tiempo que tarda un usuario en encontrar la información buscada.
+Son anotaciones realizadas por asesores humanos que indican si cada documento es relevante para cada consulta.
+Se calculan a partir de la similitud coseno entre el vector de la consulta y los vectores de los documentos.
+
+El conjunto de evaluación TREC (Text REtrieval Conference) es relevante para IR porque:
+1
+Proporciona colecciones de documentos, consultas y juicios de relevancia estandarizados para evaluar sistemas de forma comparable.
+Define el estándar de codificación para los archivos de texto usados en sistemas de recuperación modernos.
+Es el algoritmo de indexación más utilizado industrialmente para construir motores de búsqueda comerciales.
+Establece el límite máximo de documentos que puede recuperar un sistema de IR por consulta.
+

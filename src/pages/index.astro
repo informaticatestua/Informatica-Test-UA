@@ -80,7 +80,7 @@ import NovedadModal from '../components/NovedadModal.astro';
 	const DEPRECATED_SUBJECTS = new Set([]);
 
 	/** IDs de asignaturas con badge "Nuevo" superpuesto. */
-	const NEW_SUBJECTS = new Set(["p2", "si"]);
+	const NEW_SUBJECTS = new Set(["p2", "si", "ir"]);
 
 	/**
 	 * IDs de asignaturas que NO se muestran como botón propio, pero siguen
@@ -264,11 +264,16 @@ import NovedadModal from '../components/NovedadModal.astro';
 				headerRow.appendChild(dropWrap);
 				container.appendChild(headerRow);
 
-				// Wrapper para los subjects (visible por defecto)
+				// Wrapper para los subjects de Software (visible por defecto)
 				const subjectsWrap = document.createElement("div");
 				subjectsWrap.id = "software-subjects-wrap";
 
-				// Placeholder "Próximamente" (oculto por defecto)
+				// Wrapper para los subjects de Tecnologías de la Información (oculto por defecto)
+				const tiWrap = document.createElement("div");
+				tiWrap.id = "ti-subjects-wrap";
+				tiWrap.className = "hidden";
+
+				// Placeholder "Próximamente" para ramas sin contenido (oculto por defecto)
 				const placeholder = document.createElement("div");
 				placeholder.id = "software-placeholder";
 				placeholder.className = "hidden rama-placeholder";
@@ -298,9 +303,15 @@ import NovedadModal from '../components/NovedadModal.astro';
 
 					if (selected === "Software") {
 						subjectsWrap.classList.remove("hidden");
+						tiWrap.classList.add("hidden");
+						placeholder.classList.add("hidden");
+					} else if (selected === "Tecnologías de Información") {
+						subjectsWrap.classList.add("hidden");
+						tiWrap.classList.remove("hidden");
 						placeholder.classList.add("hidden");
 					} else {
 						subjectsWrap.classList.add("hidden");
+						tiWrap.classList.add("hidden");
 						placeholder.classList.remove("hidden");
 						placeholder.innerHTML = `
 							<div class="rama-placeholder-inner">
@@ -311,9 +322,16 @@ import NovedadModal from '../components/NovedadModal.astro';
 					}
 				});
 
-				// Render subjects dentro del wrapper
+				// Render subjects de Software dentro de su wrapper
 				renderCategoryGrid(tops, children, subjectsWrap);
 				container.appendChild(subjectsWrap);
+
+				// Render subjects de Tecnologías de la Información dentro de su wrapper
+				const tiTops = topLevel["ti"] || [];
+				if (tiTops.length > 0) {
+					renderCategoryGrid(tiTops, children, tiWrap);
+				}
+				container.appendChild(tiWrap);
 				container.appendChild(placeholder);
 
 			} else {
