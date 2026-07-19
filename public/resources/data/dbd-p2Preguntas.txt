@@ -1,0 +1,7 @@
+Indica cuál de los siguientes esquemas ER sería el diseño más correcto si necesitáramos almacenar información sobre un restaurante con los requisitos que se indican a continuación. En este restaurante, es necesario almacenar los platos que pueden pedir los clientes de los que se guardará su nombre (identifica) y precio base. También se guardará información sobre los ingredientes que pueden componer cada plato, guardando para cada uno de ellos el nombre (identifica) y el precio que se ha de añadir al precio base del plato al utilizar dicho ingrediente. Es importante destacar que el mismo ingrediente no siempre se utiliza en los distintos plato en la misma cantidad, por lo que se guardará la cantidad recomendada de cada ingrediente en cada plato. En este restaurante cada cliente puede elegir qué ingredientes quiere de entre los posibles de un plato. Se llevará un registro de qué plato y con qué ingredientes, ha elegido cada cliente, guardando la fecha y teniendo en cuenta que un mismo cliente podría pedir el mismo plato con los mismos ingredientes en diferentes fechas. Para cada cliente se guardará su dni y las alergias si las tiene.
+2
+![Esquema a](/resources/images/dbd-p2-restaurante-a.png){width=857 height=497}
+![Esquema b](/resources/images/dbd-p2-restaurante-b.png){width=856 height=502}
+![Esquema c](/resources/images/dbd-p2-restaurante-c.png){width=862 height=520}
+![Esquema d](/resources/images/dbd-p2-restaurante-d.png){width=856 height=492}
+
