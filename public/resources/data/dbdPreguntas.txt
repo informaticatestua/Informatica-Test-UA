@@ -12,3 +12,17 @@ Permiten recuperar la base de datos con las operaciones realizadas hasta las 01:
 Permiten recuperar la base de datos completamente hasta las operaciones realizadas en el instante anterior al problema.
 Permiten recuperar la base de datos gracias a las propiedades ACID de las transacciones.
 
+¿Cuál es la relación entre BD y SGBD?
+2
+No existe relación entre ambos conceptos
+SGBD es el software que permite la creación y manipulación de una BD
+SGBD es el modelo que permite determinar cómo estructurar los datos en una BD
+Ambos conceptos representan lo mismo
+
+Atendiendo al siguiente esquema ER, indica cuáles de las siguientes afirmaciones son verdaderas: \n![Diagrama](/resources/images/dbd-er-deportista-prueba.png){width=685 height=186}
+2,3
+Todo deportista tiene que haber participado, al menos, en una prueba
+Un deportista puede no haber participado en ninguna prueba
+Un deportista puede participar en la misma prueba varias veces con tiempos diferentes
+Un deportista solo puede participar una vez en cada prueba con un tiempo único
+
