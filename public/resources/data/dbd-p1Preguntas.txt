@@ -12,3 +12,10 @@ Un deportista puede no haber participado en ninguna prueba
 Un deportista puede participar en la misma prueba varias veces con tiempos diferentes
 Un deportista solo puede participar una vez en cada prueba con un tiempo único
 
+Si queremos almacenar información sobre los alimentos, de los que se ha de conocer el nombre, el aporte de proteínas y el aporte de carbohidratos; sobre las personas que los consumen, de las que se guardará su dni, nombre completo y peso corporal, así como la cantidad y la fecha en la que una persona consume un alimento, ¿cuál de los siguientes esquemas ER sería el más adecuado para representar estas necesidades de información?
+2
+![Esquema a](/resources/images/dbd-p1-alimentos-a.png){width=952 height=262}
+![Esquema b](/resources/images/dbd-p1-alimentos-b.png){width=941 height=271}
+![Esquema c](/resources/images/dbd-p1-alimentos-c.png){width=942 height=247}
+![Esquema d](/resources/images/dbd-p1-alimentos-d.png){width=942 height=281}
+
