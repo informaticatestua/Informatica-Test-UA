@@ -1,0 +1,7 @@
+Cuando abordamos el proceso de diseño de una base de datos (1 punto)
+2
+Podemos iniciarlo directamente definiendo el esquema relacional puesto que ningún SGBD implementa el modelo EER.
+Debemos iniciarlo definiendo el esquema conceptual para asegurar que no habrá redundancias de información.
+Hay que tener en cuenta desde el principio el SGBD que se va a utilizar.
+Debemos hacer en paralelo el diseño conceptual y su implementación física para saber desde el principio los índices que se puedan necesitar.
+
