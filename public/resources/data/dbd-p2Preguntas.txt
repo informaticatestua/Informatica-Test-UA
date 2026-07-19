@@ -5,3 +5,10 @@ Indica cuál de los siguientes esquemas ER sería el diseño más correcto si ne
 ![Esquema c](/resources/images/dbd-p2-restaurante-c.png){width=862 height=520}
 ![Esquema d](/resources/images/dbd-p2-restaurante-d.png){width=856 height=492}
 
+Indica si los dos esquemas ER siguientes representan lo mismo: \n![Esquemas](/resources/images/dbd-p2-calidad-esquemas.png){width=831 height=322}
+2
+No, la única diferencia es que en el esquema 1 todos los platos con un mismo nivel de calidad tienen el mismo precio y en el esquema 2 cada plato tiene su precio y un nivel de calidad
+No, en el esquema 1 todos los platos con un mismo nivel de calidad tienen el mismo precio y en el esquema 2 cada plato tiene su precio y un nivel de calidad, y además, en el esquema 1 no todos los platos tienen asignado un nivel de calidad (baja o alta), mientras que en el esquema 2 sí
+Sí, si no fuera porque en el esquema 1 hay platos que pueden no tener nivel de calidad asignado mientras que en el esquema 2 todos los platos tienen nivel de calidad asignado.
+Sí, en ambos casos cada plato tiene su precio y la calidad asignada
+
