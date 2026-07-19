@@ -79,6 +79,9 @@ import NovedadModal from '../components/NovedadModal.astro';
 	/** IDs de asignaturas marcadas como deprecadas (muestran badge). */
 	const DEPRECATED_SUBJECTS = new Set([]);
 
+	/** IDs de asignaturas con badge "Nuevo" superpuesto. */
+	const NEW_SUBJECTS = new Set(["p2", "si"]);
+
 	/**
 	 * IDs de asignaturas que NO se muestran como botón propio, pero siguen
 	 * existiendo en BD y agregándose en su "FULL" sintético. P. ej.
@@ -116,9 +119,18 @@ import NovedadModal from '../components/NovedadModal.astro';
 		for (const child of children) {
 			if (HIDDEN_SUBJECTS.has(child.id)) continue;
 			const btn = document.createElement("button");
+			// Solo mostrar badge en el hijo si el padre NO ya es IA (evita redundancia)
+			const showBadge = child.is_ai_generated && !subject.is_ai_generated;
 			btn.id = child.id;
-			btn.className = "btn-primary";
-			btn.textContent = child.display_name;
+			btn.className = "btn-primary" + (showBadge ? " btn-primary--ai" : "");
+			if (showBadge) {
+				const nameSpan = document.createElement("span");
+				nameSpan.textContent = child.display_name;
+				btn.appendChild(nameSpan);
+				btn.appendChild(makeAiBadge());
+			} else {
+				btn.textContent = child.display_name;
+			}
 			btn.addEventListener("click", () => { window.location.href = `/${child.id}`; });
 			row.appendChild(btn);
 		}
@@ -139,6 +151,56 @@ import NovedadModal from '../components/NovedadModal.astro';
 
 		div.appendChild(row);
 		return div;
+	}
+
+	function renderCategoryGrid(tops, children, target) {
+		const hasManyButtons = tops.length > 1;
+
+		if (!hasManyButtons) {
+			const centered = document.createElement("div");
+			centered.className = "flex justify-center w-full mb-[20px]";
+			centered.appendChild(makeTopBtn(tops[0], children));
+			target.appendChild(centered);
+		} else {
+			const hasExplicit = tops.some((s) => s.semester !== null && s.semester !== undefined);
+			let leftGroup, rightGroup;
+			if (hasExplicit) {
+				leftGroup  = tops.filter((s) => s.semester !== 2);
+				rightGroup = tops.filter((s) => s.semester === 2);
+			} else {
+				const mid = Math.ceil(tops.length / 2);
+				leftGroup  = tops.slice(0, mid);
+				rightGroup = tops.slice(mid);
+			}
+
+			const grid = document.createElement("div");
+			grid.className = "asignaturas grid grid-cols-[auto_2px_auto] gap-[20px] mx-auto mb-[20px] items-center";
+
+			const leftDiv = document.createElement("div");
+			leftDiv.className = "group-left flex justify-end gap-[10px] flex-wrap";
+			for (const s of leftGroup) leftDiv.appendChild(makeTopBtn(s, children));
+
+			const sep = document.createElement("div");
+			sep.className = "separator w-[2px] h-[35px] bg-border-subtle mx-auto";
+
+			const rightDiv = document.createElement("div");
+			rightDiv.className = "group-right flex justify-start gap-[10px] flex-wrap";
+			for (const s of rightGroup) rightDiv.appendChild(makeTopBtn(s, children));
+
+			grid.appendChild(leftDiv);
+			grid.appendChild(sep);
+			grid.appendChild(rightDiv);
+			target.appendChild(grid);
+		}
+
+		for (const s of tops) {
+			const kids = children[s.id] || [];
+			const hasSynth = !!SYNTHETIC_FULL[s.id];
+			const hasSections = !!SECTION_BUTTONS[s.id];
+			if (kids.length > 0 || hasSynth || hasSections) {
+				target.appendChild(buildSublist(s, kids));
+			}
+		}
 	}
 
 	function renderSubjects(subjects) {
@@ -168,63 +230,98 @@ import NovedadModal from '../components/NovedadModal.astro';
 			const tops = topLevel[cat];
 
 			// ── Título de sección ──────────────────────────────────────────
-			const h3 = document.createElement("h3");
-			h3.className = "text-[1.2em] font-heading font-semibold mt-6 mb-2";
-			h3.textContent = CATEGORY_LABELS[cat] || cat;
-			container.appendChild(h3);
+			if (cat === "software") {
+				// Header especial con dropdown de ramas
+				const headerRow = document.createElement("div");
+				headerRow.className = "flex justify-center mt-6 mb-2";
 
-			// ── Fila principal con grid [1fr_2px_1fr] o centrado ──────────
-			const hasManyButtons = tops.length > 1;
+				// Dropdown de ramas
+				const RAMAS = [
+					{ label: "Software",                 icon: "code" },
+					{ label: "Tecnologías de Información", icon: "wifi" },
+				];
+				const dropWrap = document.createElement("div");
+				dropWrap.className = "rama-drop-wrap";
 
-			if (!hasManyButtons) {
-				// Un solo botón → centrado (como STI en el original)
-				const centered = document.createElement("div");
-				centered.className = "flex justify-center w-full mb-[20px]";
-				const btn = makeTopBtn(tops[0], children);
-				centered.appendChild(btn);
-				container.appendChild(centered);
+				const trigger = document.createElement("button");
+				trigger.type = "button";
+				trigger.className = "rama-drop-trigger";
+				trigger.innerHTML = `<span class="material-icons rama-drop-icon" aria-hidden="true">code</span><span class="rama-drop-label">Software</span><span class="material-icons rama-drop-chev" aria-hidden="true">expand_more</span>`;
+				dropWrap.appendChild(trigger);
+
+				const menu = document.createElement("div");
+				menu.className = "rama-drop-menu hidden";
+				for (const rama of RAMAS) {
+					const item = document.createElement("button");
+					item.type = "button";
+					item.dataset.icon  = rama.icon;
+					item.dataset.label = rama.label;
+					item.className = "rama-drop-item" + (rama.label === "Software" ? " is-active" : "");
+					item.innerHTML = `<span class="material-icons rama-item-icon" aria-hidden="true">${rama.icon}</span><span>${rama.label}</span>`;
+					menu.appendChild(item);
+				}
+				dropWrap.appendChild(menu);
+				headerRow.appendChild(dropWrap);
+				container.appendChild(headerRow);
+
+				// Wrapper para los subjects (visible por defecto)
+				const subjectsWrap = document.createElement("div");
+				subjectsWrap.id = "software-subjects-wrap";
+
+				// Placeholder "Próximamente" (oculto por defecto)
+				const placeholder = document.createElement("div");
+				placeholder.id = "software-placeholder";
+				placeholder.className = "hidden rama-placeholder";
+
+				// ── Lógica del dropdown ────────────────────────────
+				trigger.addEventListener("click", function (e) {
+					e.stopPropagation();
+					menu.classList.toggle("hidden");
+					trigger.classList.toggle("is-open", !menu.classList.contains("hidden"));
+				});
+				document.addEventListener("click", function () {
+					menu.classList.add("hidden");
+					trigger.classList.remove("is-open");
+				});
+				menu.addEventListener("click", function (e) {
+					const item = e.target.closest(".rama-drop-item");
+					if (!item) return;
+					const labelText = item.dataset.label;
+					const iconText  = item.dataset.icon;
+					trigger.querySelector(".rama-drop-label").textContent = labelText;
+					trigger.querySelector(".rama-drop-icon").textContent = iconText;
+					const selected = labelText;
+					menu.querySelectorAll(".rama-drop-item").forEach((i) => i.classList.remove("is-active"));
+					item.classList.add("is-active");
+					menu.classList.add("hidden");
+					trigger.classList.remove("is-open");
+
+					if (selected === "Software") {
+						subjectsWrap.classList.remove("hidden");
+						placeholder.classList.add("hidden");
+					} else {
+						subjectsWrap.classList.add("hidden");
+						placeholder.classList.remove("hidden");
+						placeholder.innerHTML = `
+							<div class="rama-placeholder-inner">
+								<span class="material-icons">construction</span>
+								<p class="rama-placeholder-title">${selected}</p>
+								<p class="rama-placeholder-sub">Próximamente</p>
+							</div>`;
+					}
+				});
+
+				// Render subjects dentro del wrapper
+				renderCategoryGrid(tops, children, subjectsWrap);
+				container.appendChild(subjectsWrap);
+				container.appendChild(placeholder);
+
 			} else {
-				// Varios botones → grid izq | separador | der
-				// Si algún subject tiene left_group explícito, usarlo; si no, auto-split
-				const hasExplicit = tops.some((s) => s.semester !== null && s.semester !== undefined);
-				let leftGroup, rightGroup;
-				if (hasExplicit) {
-					leftGroup  = tops.filter((s) => s.semester !== 2);
-					rightGroup = tops.filter((s) => s.semester === 2);
-				} else {
-					const mid = Math.ceil(tops.length / 2);
-					leftGroup  = tops.slice(0, mid);
-					rightGroup = tops.slice(mid);
-				}
-
-				const grid = document.createElement("div");
-				grid.className = "asignaturas grid grid-cols-[auto_2px_auto] gap-[20px] mx-auto mb-[20px] items-center";
-
-				const leftDiv = document.createElement("div");
-				leftDiv.className = "group-left flex justify-end gap-[10px] flex-wrap";
-				for (const s of leftGroup) leftDiv.appendChild(makeTopBtn(s, children));
-
-				const sep = document.createElement("div");
-				sep.className = "separator w-[2px] h-[35px] bg-border-subtle mx-auto";
-
-				const rightDiv = document.createElement("div");
-				rightDiv.className = "group-right flex justify-start gap-[10px] flex-wrap";
-				for (const s of rightGroup) rightDiv.appendChild(makeTopBtn(s, children));
-
-				grid.appendChild(leftDiv);
-				grid.appendChild(sep);
-				grid.appendChild(rightDiv);
-				container.appendChild(grid);
-			}
-
-			// ── Sublistas (ocultas, una por cada padre con hijos) ─────────
-			for (const s of tops) {
-				const kids = children[s.id] || [];
-				const hasSynth = !!SYNTHETIC_FULL[s.id];
-				const hasSections = !!SECTION_BUTTONS[s.id];
-				if (kids.length > 0 || hasSynth || hasSections) {
-					container.appendChild(buildSublist(s, kids));
-				}
+				const h3 = document.createElement("h3");
+				h3.className = "text-[1.2em] font-heading font-semibold mt-6 mb-2";
+				h3.textContent = CATEGORY_LABELS[cat] || cat;
+				container.appendChild(h3);
+				renderCategoryGrid(tops, children, container);
 			}
 		}
 
@@ -245,6 +342,15 @@ import NovedadModal from '../components/NovedadModal.astro';
 		});
 	}
 
+	/** Badge "No oficial · IA" reutilizable con tooltip. */
+	function makeAiBadge() {
+		const badge = document.createElement("span");
+		badge.className = "ai-badge";
+		badge.setAttribute("aria-label", "Preguntas generadas con IA, no provienen de exámenes reales");
+		badge.innerHTML = `<span class="material-icons ai-badge-icon" aria-hidden="true">auto_awesome</span>IA`;
+		return badge;
+	}
+
 	/** Crea el botón raíz: si tiene hijos, abre sublist; si no, navega. */
 	function makeTopBtn(subject, children) {
 		const kids = children[subject.id] || [];
@@ -254,9 +360,15 @@ import NovedadModal from '../components/NovedadModal.astro';
 
 		const btn = document.createElement("button");
 		btn.id = subject.id;
-		btn.className = "btn";
+		btn.className = "btn" + (NEW_SUBJECTS.has(subject.id) ? " btn--new" : "");
 
-		if (DEPRECATED_SUBJECTS.has(subject.id)) {
+		if (NEW_SUBJECTS.has(subject.id)) {
+			btn.textContent = subject.display_name;
+			const newBadge = document.createElement("span");
+			newBadge.className = "new-badge";
+			newBadge.textContent = "Nuevo";
+			btn.appendChild(newBadge);
+		} else if (DEPRECATED_SUBJECTS.has(subject.id)) {
 			btn.className += " btn--deprecated";
 			const nameSpan = document.createElement("span");
 			nameSpan.textContent = subject.display_name;
@@ -266,6 +378,12 @@ import NovedadModal from '../components/NovedadModal.astro';
 			badge.textContent = "Antiguo";
 			btn.appendChild(nameSpan);
 			btn.appendChild(badge);
+		} else if (subject.is_ai_generated) {
+			btn.className += " btn--ai";
+			const nameSpan = document.createElement("span");
+			nameSpan.textContent = subject.display_name;
+			btn.appendChild(nameSpan);
+			btn.appendChild(makeAiBadge());
 		} else {
 			btn.textContent = subject.display_name;
 		}
@@ -293,7 +411,7 @@ import NovedadModal from '../components/NovedadModal.astro';
 		try {
 			const { data, error } = await db
 				.from("subjects")
-				.select("id, display_name, category, parent_id, sort_order, semester")
+				.select("id, display_name, category, parent_id, sort_order, semester, is_ai_generated")
 				.order("sort_order", { ascending: true });
 
 			if (error) throw error;
@@ -319,6 +437,222 @@ import NovedadModal from '../components/NovedadModal.astro';
 
 <style is:global>
 	@reference "../styles/global.css";
+
+	/* ── Badge "Nuevo" superpuesto ──────────────────────────── */
+	.btn--new {
+		position: relative;
+	}
+	.new-badge {
+		position: absolute;
+		top: -8px;
+		right: -18px;
+		padding: 2px 7px;
+		border-radius: 999px;
+		background: linear-gradient(135deg, #3b82f6, #2563eb);
+		color: #fff;
+		font-size: 0.58rem;
+		font-weight: 800;
+		letter-spacing: 0.07em;
+		text-transform: uppercase;
+		line-height: 1.5;
+		box-shadow: 0 2px 6px rgba(59, 130, 246, 0.45);
+		pointer-events: none;
+	}
+
+	/* ── Badge "No oficial · IA" ────────────────────────────── */
+	.btn--ai,
+	.btn-primary--ai {
+		display: inline-flex;
+		align-items: center;
+		gap: 6px;
+	}
+	.btn-primary--ai .ai-badge {
+		background: rgba(255, 255, 255, 0.18);
+		color: #fff;
+		border-color: rgba(255, 255, 255, 0.35);
+	}
+
+	.ai-badge {
+		position: relative;
+		display: inline-flex;
+		align-items: center;
+		gap: 3px;
+		padding: 2px 7px 2px 5px;
+		border-radius: 999px;
+		background: rgba(139, 92, 246, 0.13);
+		color: #7c3aed;
+		border: 1px solid rgba(139, 92, 246, 0.3);
+		font-size: 0.6rem;
+		font-weight: 700;
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+		line-height: 1.5;
+		white-space: nowrap;
+		cursor: help;
+	}
+	:global(.dark) .ai-badge {
+		background: rgba(167, 139, 250, 0.15);
+		color: #c4b5fd;
+		border-color: rgba(167, 139, 250, 0.3);
+	}
+	.ai-badge-icon {
+		font-size: 0.65rem !important;
+	}
+
+	/* Tooltip */
+	.ai-badge::after {
+		content: "Preguntas generadas con IA — no provienen de exámenes reales";
+		position: absolute;
+		bottom: calc(100% + 8px);
+		left: 50%;
+		transform: translateX(-50%);
+		width: 210px;
+		padding: 7px 10px;
+		border-radius: 8px;
+		background: rgb(var(--bg-surface));
+		color: rgb(var(--text-main));
+		border: 1px solid rgb(var(--border-subtle));
+		box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+		font-size: 0.75rem;
+		font-weight: 500;
+		letter-spacing: 0;
+		text-transform: none;
+		line-height: 1.4;
+		text-align: center;
+		pointer-events: none;
+		opacity: 0;
+		transition: opacity 150ms ease;
+		z-index: 50;
+	}
+	.ai-badge:hover::after {
+		opacity: 1;
+	}
+
+	/* ── Rama dropdown ───────────────────────────────────────── */
+	.rama-drop-wrap {
+		position: relative;
+	}
+	.rama-drop-trigger {
+		display: inline-flex;
+		align-items: center;
+		gap: 6px;
+		padding: 6px 12px 6px 14px;
+		border: 1px solid rgb(var(--border-subtle));
+		border-radius: 999px;
+		background: rgb(var(--bg-surface));
+		color: rgb(var(--text-main));
+		font-family: var(--font-heading, "Outfit", sans-serif);
+		font-size: 0.95rem;
+		font-weight: 600;
+		cursor: pointer;
+		box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+		transition: border-color 150ms ease, box-shadow 150ms ease, background-color 150ms ease;
+	}
+	.rama-drop-trigger:hover,
+	.rama-drop-trigger.is-open {
+		border-color: rgba(59, 130, 246, 0.5);
+		box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.12);
+	}
+	.rama-drop-icon {
+		font-size: 1rem !important;
+		color: rgb(var(--text-muted));
+	}
+	.rama-drop-chev {
+		font-size: 1rem !important;
+		color: rgb(var(--text-muted));
+		transition: transform 200ms ease;
+	}
+	.rama-drop-trigger.is-open .rama-drop-chev {
+		transform: rotate(180deg);
+	}
+	.rama-drop-menu {
+		position: absolute;
+		top: calc(100% + 6px);
+		left: 50%;
+		transform: translateX(-50%);
+		min-width: 220px;
+		background: rgb(var(--bg-surface));
+		border: 1px solid rgb(var(--border-subtle));
+		border-radius: 14px;
+		box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+		padding: 6px;
+		z-index: 100;
+		display: flex;
+		flex-direction: column;
+		gap: 2px;
+	}
+	.rama-drop-menu.hidden { display: none; }
+	.dark .rama-drop-menu {
+		box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+	}
+	.rama-drop-item {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		width: 100%;
+		padding: 8px 12px;
+		border: none;
+		border-radius: 9px;
+		background: transparent;
+		color: rgb(var(--text-main));
+		font-size: 0.875rem;
+		font-weight: 500;
+		text-align: left;
+		cursor: pointer;
+		transition: background-color 120ms ease;
+	}
+	.rama-drop-item:hover {
+		background: rgb(var(--bg-surface-hover));
+	}
+	.rama-drop-item.is-active {
+		background: rgba(59, 130, 246, 0.1);
+		color: #2563eb;
+		font-weight: 600;
+	}
+	:global(.dark) .rama-drop-item.is-active {
+		background: rgba(96, 165, 250, 0.15);
+		color: #60a5fa;
+	}
+	.rama-item-icon {
+		font-size: 1rem !important;
+		color: rgb(var(--text-muted));
+		flex-shrink: 0;
+	}
+	.rama-drop-item.is-active .rama-item-icon {
+		color: #2563eb;
+	}
+	:global(.dark) .rama-drop-item.is-active .rama-item-icon {
+		color: #60a5fa;
+	}
+	/* ── Placeholder "Próximamente" ──────────────────────────── */
+	.rama-placeholder {
+		margin-bottom: 20px;
+	}
+	.rama-placeholder.hidden { display: none; }
+	.rama-placeholder-inner {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 6px;
+		padding: 32px 20px;
+		border: 1px dashed rgb(var(--border-subtle));
+		border-radius: 12px;
+		color: rgb(var(--text-muted));
+	}
+	.rama-placeholder-inner .material-icons {
+		font-size: 2rem;
+		opacity: 0.5;
+	}
+	.rama-placeholder-title {
+		margin: 0;
+		font-weight: 600;
+		font-size: 0.95rem;
+		color: rgb(var(--text-main));
+	}
+	.rama-placeholder-sub {
+		margin: 0;
+		font-size: 0.82rem;
+	}
 
 	.btn--deprecated {
 		@apply relative flex items-center gap-2;
