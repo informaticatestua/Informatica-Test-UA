@@ -33,10 +33,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 				<span class="material-icons text-[16px]">group</span>
 				Usuarios
 			</button>
-			<button class="admin-tab" data-tab="preguntas">
-				<span class="material-icons text-[16px]">quiz</span>
-				Preguntas
-			</button>
 			<button class="admin-tab" data-tab="anuncios">
 				<span class="material-icons text-[16px]">campaign</span>
 				Anuncios
@@ -70,25 +66,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 				<span id="user-count"></span>
 			</div>
 			<div id="user-list" class="space-y-3"></div>
-		</div>
-
-		<!-- ── Tab: Preguntas ───────────────────────────────────────── -->
-		<div id="tab-preguntas" class="admin-panel hidden space-y-4">
-			<div class="flex gap-3 items-center flex-wrap">
-				<input id="q-search" type="text" placeholder="Buscar por texto de la pregunta…" class="flex-1 min-w-[180px] px-3 py-2 rounded-lg border border-border-subtle bg-background text-text-main text-sm focus:outline-none focus:border-blue-500 transition-colors" />
-				<select id="q-subject" class="px-3 py-2 rounded-lg border border-border-subtle bg-background text-text-main text-sm focus:outline-none focus:border-blue-500 cursor-pointer transition-colors">
-					<option value="">Todas las asignaturas</option>
-				</select>
-				<button id="q-search-btn" class="px-4 py-2 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors border-none cursor-pointer">Buscar</button>
-			</div>
-			<div id="q-loading" class="hidden text-text-muted text-sm flex items-center gap-2">
-				<div class="w-4 h-4 border-2 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
-				Buscando…
-			</div>
-			<div id="q-count-row" class="hidden flex items-center text-xs text-text-muted pb-1 border-b border-border-subtle">
-				<span id="q-count"></span>
-			</div>
-			<div id="q-list" class="space-y-4"></div>
 		</div>
 
 		<!-- ── Tab: Anuncios ─────────────────────────────────────── -->
@@ -417,164 +394,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         });
     }
 
-    // ── Questions ─────────────────────────────────────────────────────────────
-
-    async function loadSubjectsDropdown() {
-        const db = getDb();
-        const { data } = await db
-            .from("questions")
-            .select("subject_id")
-            .not("subject_id", "is", null);
-        if (!data) return;
-        const subjects = [...new Set(data.map(r => r.subject_id))].sort();
-        const sel = document.getElementById("q-subject");
-        if (!sel) return;
-        subjects.forEach(s => {
-            const opt = document.createElement("option");
-            opt.value = s;
-            opt.textContent = s.toUpperCase();
-            sel.appendChild(opt);
-        });
-    }
-
-    async function searchQuestions(query, subjectId) {
-        const db = getDb();
-        let req = db
-            .from("questions")
-            .select("id, content, subject_id, options(id, content, is_correct, position)")
-            .order("subject_id")
-            .limit(40);
-        if (query)     req = req.ilike("content", `%${query}%`);
-        if (subjectId) req = req.eq("subject_id", subjectId);
-        const { data } = await req;
-        return data || [];
-    }
-
-    function renderQuestions(questions) {
-        const list     = document.getElementById("q-list");
-        const countRow = document.getElementById("q-count-row");
-        const countEl  = document.getElementById("q-count");
-        if (!list) return;
-
-        if (countEl) countEl.textContent = `${questions.length} pregunta${questions.length !== 1 ? "s" : ""} encontrada${questions.length !== 1 ? "s" : ""}`;
-        if (countRow) countRow.classList[questions.length > 0 ? "remove" : "add"]("hidden");
-
-        if (questions.length === 0) {
-            list.innerHTML = `<p class="text-text-muted text-sm text-center py-6">Sin resultados.</p>`;
-            return;
-        }
-
-        list.innerHTML = questions.map(q => {
-            const opts = (q.options || []).sort((a, b) => a.position - b.position);
-            const optionsHtml = opts.map(o => `
-                <div class="q-opt-row flex items-start gap-2 p-2.5 rounded-lg border-2 transition-colors ${o.is_correct ? "border-green-500 bg-green-50 dark:bg-green-900/20" : "border-border-subtle"}" data-opt-id="${o.id}">
-                    <input type="radio" name="qcorrect-${q.id}" value="${o.id}" ${o.is_correct ? "checked" : ""} class="mt-0.5 flex-shrink-0 accent-green-600 cursor-pointer" />
-                    <textarea class="q-opt-text flex-1 text-sm text-text-main bg-transparent border-none outline-none resize-none leading-relaxed cursor-default" rows="2" readonly tabindex="-1">${esc(o.content)}</textarea>
-                </div>
-            `).join("");
-
-            return `
-            <div class="q-card bg-surface border border-border-subtle rounded-2xl overflow-hidden" data-qid="${q.id}">
-                <div class="px-4 py-2.5 flex items-center gap-3 bg-surface-hover border-b border-border-subtle">
-                    <span class="text-xs font-bold text-text-muted uppercase tracking-wider">${esc(q.subject_id || "–")}</span>
-                    <div class="flex gap-2 ml-auto">
-                        <button class="q-edit-btn text-xs font-semibold px-3 py-1.5 text-blue-600 border border-blue-300 dark:border-blue-700 hover:bg-blue-50 dark:hover:bg-blue-900/20 rounded-lg transition-colors cursor-pointer bg-transparent">Editar</button>
-                        <button class="q-save-btn hidden text-xs font-semibold px-3 py-1.5 text-white bg-green-600 hover:bg-green-700 rounded-lg transition-colors border-none cursor-pointer">Guardar</button>
-                        <button class="q-cancel-btn hidden text-xs font-medium px-3 py-1.5 text-text-muted border border-border-subtle hover:bg-surface-hover rounded-lg transition-colors cursor-pointer bg-transparent">Cancelar</button>
-                    </div>
-                </div>
-                <div class="p-4 space-y-3">
-                    <div>
-                        <p class="text-[0.68rem] font-semibold text-text-muted uppercase tracking-wider mb-1.5">Pregunta</p>
-                        <textarea class="q-content w-full text-sm text-text-main bg-surface-hover border border-border-subtle rounded-lg px-3 py-2 resize-none focus:outline-none focus:border-blue-500 transition-colors cursor-default" rows="3" readonly>${esc(q.content)}</textarea>
-                    </div>
-                    <div>
-                        <p class="text-[0.68rem] font-semibold text-text-muted uppercase tracking-wider mb-1.5">Opciones — selecciona la correcta y edita el texto si hace falta</p>
-                        <div class="q-opts-list space-y-2">${optionsHtml}</div>
-                    </div>
-                </div>
-            </div>`;
-        }).join("");
-
-        list.querySelectorAll(".q-card").forEach(card => {
-            const qid       = card.dataset.qid;
-            const editBtn   = card.querySelector(".q-edit-btn");
-            const saveBtn   = card.querySelector(".q-save-btn");
-            const cancelBtn = card.querySelector(".q-cancel-btn");
-            const contentTA = card.querySelector(".q-content");
-            const optTAs    = card.querySelectorAll(".q-opt-text");
-
-            let origContent  = contentTA?.value ?? "";
-            let origOptTexts = [...optTAs].map(t => t.value);
-
-            function enterEdit() {
-                editBtn.classList.add("hidden");
-                saveBtn.classList.remove("hidden");
-                cancelBtn.classList.remove("hidden");
-                if (contentTA) { contentTA.removeAttribute("readonly"); contentTA.style.cursor = ""; }
-                optTAs.forEach(t => { t.removeAttribute("readonly"); t.removeAttribute("tabindex"); t.style.cursor = ""; });
-            }
-            function exitEdit() {
-                editBtn.classList.remove("hidden");
-                saveBtn.classList.add("hidden");
-                cancelBtn.classList.add("hidden");
-                if (contentTA) { contentTA.setAttribute("readonly", ""); contentTA.style.cursor = "default"; }
-                optTAs.forEach(t => { t.setAttribute("readonly", ""); t.setAttribute("tabindex", "-1"); t.style.cursor = "default"; });
-            }
-
-            editBtn.addEventListener("click", () => {
-                origContent  = contentTA?.value ?? "";
-                origOptTexts = [...optTAs].map(t => t.value);
-                enterEdit();
-            });
-            cancelBtn.addEventListener("click", () => {
-                if (contentTA) contentTA.value = origContent;
-                optTAs.forEach((t, i) => { t.value = origOptTexts[i]; });
-                exitEdit();
-            });
-
-            saveBtn.addEventListener("click", async () => {
-                const db         = getDb();
-                const newContent = contentTA?.value?.trim();
-                const correctId  = card.querySelector(`input[name="qcorrect-${qid}"]:checked`)?.value;
-                if (!newContent) { alert("El texto de la pregunta no puede estar vacío."); return; }
-
-                saveBtn.disabled = true;
-                saveBtn.textContent = "Guardando…";
-                try {
-                    if (newContent !== origContent) {
-                        const { error } = await db.from("questions").update({ content: newContent }).eq("id", qid);
-                        if (error) throw error;
-                    }
-                    const optRows = card.querySelectorAll(".q-opt-row");
-                    for (let i = 0; i < optRows.length; i++) {
-                        const optId  = optRows[i].dataset.optId;
-                        const optTA  = optRows[i].querySelector(".q-opt-text");
-                        if (optTA && optTA.value.trim() !== origOptTexts[i]) {
-                            const { error } = await db.from("options").update({ content: optTA.value.trim() }).eq("id", optId);
-                            if (error) throw error;
-                        }
-                    }
-                    if (correctId) {
-                        await db.from("options").update({ is_correct: false }).eq("question_id", qid);
-                        await db.from("options").update({ is_correct: true }).eq("id", correctId);
-                        optRows.forEach(row => {
-                            const isC = row.dataset.optId === correctId;
-                            row.className = `q-opt-row flex items-start gap-2 p-2.5 rounded-lg border-2 transition-colors ${isC ? "border-green-500 bg-green-50 dark:bg-green-900/20" : "border-border-subtle"}`;
-                        });
-                    }
-                    origContent  = newContent;
-                    origOptTexts = [...optTAs].map(t => t.value);
-                    saveBtn.textContent = "Guardado ✓";
-                    setTimeout(() => { saveBtn.disabled = false; saveBtn.textContent = "Guardar"; exitEdit(); }, 1500);
-                } catch (err) {
-                    alert("Error al guardar: " + err.message);
-                    saveBtn.disabled = false;
-                    saveBtn.textContent = "Guardar";
-                }
-            });
-        });
-    }
     // ── Tabs ─────────────────────────────────────────────────────────────────
 
     function initTabs() {
@@ -612,23 +431,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
         document.getElementById("user-search")?.addEventListener("keydown", (e) => {
             if (e.key === "Enter") document.getElementById("user-search-btn")?.click();
-        });
-
-        // ── Preguntas ─────────────────────────────────────────────────────────
-        document.getElementById("q-search-btn")?.addEventListener("click", async () => {
-            const query   = document.getElementById("q-search")?.value.trim();
-            const subject = document.getElementById("q-subject")?.value;
-            if (!query && !subject) {
-                alert("Introduce un texto de búsqueda o selecciona una asignatura.");
-                return;
-            }
-            document.getElementById("q-loading")?.classList.remove("hidden");
-            const questions = await searchQuestions(query, subject);
-            document.getElementById("q-loading")?.classList.add("hidden");
-            renderQuestions(questions);
-        });
-        document.getElementById("q-search")?.addEventListener("keydown", (e) => {
-            if (e.key === "Enter") document.getElementById("q-search-btn")?.click();
         });
 
         // ── Anuncios ──────────────────────────────────────────────────────────
@@ -688,7 +490,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         document.getElementById("admin-content")?.classList.remove("hidden");
 
         initTabs();
-        loadSubjectsDropdown();
 
         const reports = await loadReports();
         renderReports(reports);
