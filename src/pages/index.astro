@@ -381,11 +381,15 @@ import NovedadModal from '../components/NovedadModal.astro';
 		btn.className = "btn" + (NEW_SUBJECTS.has(subject.id) ? " btn--new" : "");
 
 		if (NEW_SUBJECTS.has(subject.id)) {
-			btn.textContent = subject.display_name;
+			if (subject.is_ai_generated) btn.className += " btn--ai";
+			const nameSpan = document.createElement("span");
+			nameSpan.textContent = subject.display_name;
+			btn.appendChild(nameSpan);
 			const newBadge = document.createElement("span");
 			newBadge.className = "new-badge";
 			newBadge.textContent = "Nuevo";
 			btn.appendChild(newBadge);
+			if (subject.is_ai_generated) btn.appendChild(makeAiBadge());
 		} else if (DEPRECATED_SUBJECTS.has(subject.id)) {
 			btn.className += " btn--deprecated";
 			const nameSpan = document.createElement("span");

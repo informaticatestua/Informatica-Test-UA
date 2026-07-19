@@ -390,3 +390,291 @@ Define el estándar de codificación para los archivos de texto usados en sistem
 Es el algoritmo de indexación más utilizado industrialmente para construir motores de búsqueda comerciales.
 Establece el límite máximo de documentos que puede recuperar un sistema de IR por consulta.
 
+La ley de Zipf sobre la distribución de términos en un corpus establece que:
+2
+Todos los términos del vocabulario tienen aproximadamente la misma frecuencia de aparición en el corpus.
+La frecuencia de un término es inversamente proporcional a su rango en el ordenamiento por frecuencia: freq ∝ 1/rango.
+El número de términos únicos crece linealmente con el tamaño del corpus.
+Los términos más frecuentes son siempre los que aportan mayor capacidad discriminante para la recuperación.
+
+La ley de Heaps describe el crecimiento del vocabulario en función del tamaño del corpus. ¿Cuál es la relación correcta?
+3
+El vocabulario crece exponencialmente con el número de tokens del corpus.
+El vocabulario permanece constante una vez que el corpus supera un tamaño umbral determinado.
+El vocabulario crece de forma sublineal (aproximadamente como una potencia del número de tokens), lo que implica que siempre aparecen términos nuevos.
+El vocabulario es proporcional al cuadrado del número de tokens del corpus.
+
+Al calcular la intersección de dos listas de postings con el operador AND, el algoritmo más eficiente:
+1
+Recorre ambas listas de forma paralela con dos punteros, comparando doc IDs y avanzando el puntero del menor.
+Ordena ambas listas por frecuencia de documento antes de recorrerlas.
+Genera todos los pares posibles de doc IDs y filtra los que coinciden en ambas listas.
+Carga ambas listas en un conjunto hash y calcula su intersección en tiempo O(n²).
+
+En la optimización de consultas booleanas con AND de múltiples términos, la estrategia más eficiente consiste en:
+4
+Procesar los términos de la consulta en el orden en que aparecen en el texto original del usuario.
+Procesar primero los términos con las listas de postings más largas para reducir el espacio de búsqueda.
+Procesar todos los términos simultáneamente usando una tabla hash de frecuencias acumuladas.
+Procesar primero los términos con las listas de postings más cortas, ya que el resultado parcial es más pequeño en cada paso.
+
+Los «skip pointers» (punteros de salto) en las listas de postings sirven para:
+2
+Comprimir las listas de postings almacenando solo las diferencias entre doc IDs consecutivos.
+Acelerar la intersección de listas largas permitiendo saltar bloques de entradas cuando el doc ID buscado es mayor que el destino del salto.
+Permitir la búsqueda de frases sin necesidad de un índice posicional completo.
+Ordenar dinámicamente las listas de postings según la relevancia de los documentos en tiempo de consulta.
+
+En la evaluación de IR, la medida P@k (Precision at k) mide:
+3
+La precisión media sobre todos los puntos de recall del ranking de documentos.
+El número total de documentos relevantes recuperados entre las k primeras posiciones.
+La proporción de documentos relevantes entre los k primeros documentos del ranking.
+La posición media del primer documento relevante en el ranking de resultados.
+
+La medida R-Precision se define como:
+1
+La precisión en la posición R del ranking, donde R es el número total de documentos relevantes para esa consulta.
+La precisión máxima alcanzada en cualquier punto del ranking donde el recall supera el 50%.
+La media de la precisión en los puntos de recall 0.1, 0.2, …, 1.0 de la curva interpolada.
+El recall medido cuando la precisión del sistema cae por debajo del umbral definido por el parámetro R.
+
+El MRR (Mean Reciprocal Rank) evalúa sistemas de IR donde:
+4
+Se necesita recuperar el mayor número posible de documentos relevantes sin importar el orden.
+Todos los documentos relevantes tienen el mismo grado de importancia para el usuario.
+La evaluación se realiza únicamente sobre el primer documento irrelevante de cada consulta.
+Solo interesa la posición del primer documento relevante, típico en escenarios de preguntas-respuestas o búsqueda de hechos concretos.
+
+En el pooling de TREC, la construcción del pool de documentos a evaluar consiste en:
+2
+Evaluar la relevancia de todos los documentos del corpus para cada consulta de prueba.
+Tomar los top-k documentos de múltiples sistemas participantes y unirlos para que los asesores los juzguen.
+Seleccionar aleatoriamente documentos del corpus y asignarlos a distintos asesores humanos.
+Calcular automáticamente la relevancia mediante similitud coseno con un documento de referencia.
+
+La TF logarítmica de un término t en un documento d se define como:
+3
+El logaritmo del número total de documentos dividido entre el número de documentos que contienen t.
+La raíz cuadrada de la frecuencia cruda de t en d, para reducir el efecto de las frecuencias extremas.
+1 + log(tf_t,d) si tf_t,d > 0, o 0 si el término no aparece en el documento.
+El logaritmo del producto de la frecuencia cruda de t en d por el IDF de t en el corpus.
+
+El «TF aumentado» (augmented TF) normaliza la frecuencia bruta de un término dividiendo entre:
+1
+La frecuencia máxima de cualquier término en ese mismo documento, obteniendo valores en [0.5, 1].
+El número total de términos únicos del vocabulario completo del corpus.
+La longitud del documento expresada en número de oraciones, no de tokens.
+La frecuencia media de todos los términos en el corpus completo.
+
+En la matriz documento-término (document-term matrix) del modelo vectorial:
+4
+Cada fila representa un término y cada columna representa un documento del corpus.
+La matriz es siempre cuadrada porque el número de términos iguala el número de documentos.
+Los valores de la matriz son siempre enteros que representan frecuencias crudas.
+Cada fila representa un documento y cada columna representa un término del vocabulario; la matriz es típicamente muy dispersa.
+
+¿Cuál de las siguientes afirmaciones sobre la similitud coseno es correcta?
+2
+La similitud coseno entre dos documentos puede ser negativa si comparten pocos términos.
+La similitud coseno no se ve afectada por la magnitud (longitud) de los vectores, solo por su dirección.
+La similitud coseno equivale a la distancia euclídea normalizada entre los dos vectores.
+La similitud coseno entre un documento y una consulta siempre aumenta al añadir más términos a la consulta.
+
+En PageRank, si una página P tiene N enlaces salientes y su PageRank es PR(P), cada página que P enlaza recibe una contribución de:
+1
+PR(P) / N, dividiendo el PageRank uniformemente entre todos los destinos de los enlaces.
+PR(P) × N, multiplicando el PageRank por el número de páginas enlazadas.
+PR(P) − (1/N), restando una fracción uniforme por cada enlace saliente.
+PR(P)², ya que PageRank se amplifica al ser transferido a páginas de mayor autoridad.
+
+La fórmula iterativa de PageRank de una página i es PR(i) = (1-d)/N + d·Σ(PR(j)/C(j)). En esta fórmula, C(j) representa:
+3
+El número de veces que la página j ha sido visitada por el crawler en la última iteración.
+El PageRank de la página j en la iteración anterior del algoritmo.
+El número de enlaces salientes (outlinks) de la página j que apuntan a otras páginas.
+El número de enlaces entrantes (inlinks) que recibe la página i procedentes de la página j.
+
+PageRank converge cuando:
+4
+La suma total de todos los PageRanks del grafo alcanza exactamente el valor 1.
+Ninguna página nueva es descubierta por el crawler en la última iteración de rastreo.
+El PageRank de la página con mayor puntuación deja de aumentar entre iteraciones.
+Los valores de PageRank de todas las páginas dejan de cambiar significativamente entre iteraciones sucesivas.
+
+La diferencia fundamental entre PageRank e HITS radica en que:
+2
+PageRank distingue entre hubs y autoridades, mientras que HITS asigna una única puntuación global.
+PageRank es independiente de la consulta (se calcula offline sobre el grafo completo), mientras que HITS es dependiente de la consulta (se aplica a un subgrafo de páginas relacionadas con la consulta).
+HITS requiere el grafo completo de la web, mientras que PageRank opera sobre subgrafos locales.
+PageRank solo considera los inlinks, mientras que HITS solo considera los outlinks de cada página.
+
+En la detección de páginas web casi-duplicadas, la técnica de «shingling» consiste en:
+1
+Representar cada documento como un conjunto de secuencias de k tokens consecutivos (k-shingles) y comparar esos conjuntos para estimar similitud.
+Dividir el documento en bloques de igual tamaño y calcular el hash de cada bloque para detectar bloques idénticos.
+Extraer las URLs de los documentos enlazados y comparar los conjuntos de outlinks entre páginas.
+Calcular el TF-IDF de cada documento y comparar los vectores resultantes mediante similitud coseno.
+
+El índice de k-gramas (k-gram index) se usa principalmente para:
+3
+Acelerar la intersección de listas de postings en consultas booleanas con muchos términos.
+Almacenar las posiciones de cada término dentro de los documentos con menor coste de espacio.
+Resolver consultas con comodín (wildcard queries) y corregir errores ortográficos, indexando substrings de longitud k de cada término.
+Comprimir las listas de postings almacenando solo las diferencias entre identificadores consecutivos.
+
+La corrección ortográfica en IR basada en «distancia de edición» (edit distance) mide:
+4
+El número de términos intermedios del vocabulario entre la palabra escrita y la corrección sugerida.
+La distancia en el espacio vectorial TF-IDF entre la palabra errónea y su posible corrección.
+El número de bigramas compartidos entre la palabra errónea y cada candidato de corrección.
+El número mínimo de operaciones de inserción, borrado y sustitución de caracteres necesarias para transformar una cadena en otra.
+
+La codificación de longitud variable (Variable Byte encoding, VB) para comprimir listas de postings:
+2
+Asigna a cada doc ID un código de longitud fija basado en el número total de documentos del corpus.
+Codifica las diferencias entre doc IDs consecutivos (gaps) usando el mínimo número de bytes necesario, reservando el bit más significativo para indicar fin de código.
+Requiere conocer previamente la distribución de frecuencias de los doc IDs para construir la tabla de códigos óptima.
+Solo funciona eficientemente cuando las listas de postings están ordenadas por frecuencia de documento.
+
+El algoritmo SPIMI (Single-Pass In-Memory Indexing) para construir índices a gran escala se diferencia de BSBI en que:
+1
+SPIMI no convierte los tokens a IDs numéricos y añade los postings directamente al diccionario en memoria, evitando la fase de ordenación de pares.
+SPIMI procesa el corpus en múltiples pasadas para garantizar la consistencia del índice final.
+SPIMI requiere conocer el tamaño total del corpus antes de comenzar la indexación.
+SPIMI construye el índice de forma distribuida entre varios nodos del clúster de procesamiento.
+
+La normalización fonética mediante Soundex agrupa palabras que:
+3
+Son sinónimos semánticos en el mismo dominio de conocimiento.
+Comparten el mismo prefijo de los tres primeros caracteres en el idioma inglés.
+Suenan de forma similar al pronunciarlas, codificando la consonante inicial y las consonantes relevantes restantes.
+Tienen la misma raíz morfológica según el algoritmo de stemming de Porter.
+
+En el índice invertido, almacenar las listas de postings como listas de «gaps» (diferencias entre doc IDs consecutivos) en lugar de doc IDs absolutos sirve para:
+4
+Acelerar la búsqueda booleana al reducir el número de comparaciones necesarias durante la intersección.
+Permitir la actualización incremental del índice sin necesidad de reconstruirlo completamente.
+Facilitar la extensión del índice con información posicional sin aumentar el tamaño de las entradas.
+Reducir los valores numéricos almacenados (los gaps son menores que los IDs absolutos) y así comprimir más eficientemente con codificaciones de longitud variable.
+
+En el modelo de lenguaje de consulta (Query Likelihood Model), el ranking de documentos se basa en:
+1
+P(Q|Md), la probabilidad de que la consulta Q sea generada por el modelo de lenguaje del documento d.
+P(Md|Q), la probabilidad posterior del modelo del documento dada la consulta observada.
+P(Q)·P(Md), el producto de la probabilidad marginal de la consulta y la del modelo del documento.
+P(relevante|Q,d), la probabilidad directa de relevancia estimada mediante clasificación bayesiana.
+
+En el suavizado de Dirichlet, el parámetro μ (mu) controla:
+3
+La proporción de términos del corpus que se añaden al vocabulario de cada documento durante el suavizado.
+La velocidad de convergencia del modelo de lenguaje hacia la distribución del corpus de referencia.
+La cantidad de masa de probabilidad transferida desde el modelo del corpus al documento: documentos cortos reciben más suavizado que los largos.
+El número mínimo de ocurrencias que debe tener un término en el corpus para ser incluido en el modelo.
+
+El modelo de divergencia de Kullback-Leibler (KL-divergence) en IR ordena los documentos según:
+2
+La similitud coseno entre los vectores de probabilidades del documento y la consulta.
+La divergencia KL entre el modelo de lenguaje de la consulta y el del documento, buscando los documentos con menor divergencia (mayor similitud).
+El número de términos de la consulta cuya probabilidad en el modelo del documento supera un umbral fijo.
+La entropía cruzada entre el modelo del corpus y el modelo del documento, sin considerar la consulta.
+
+En el suavizado por descuento absoluto (Absolute Discounting), la probabilidad suavizada de un término w en un documento d:
+4
+Se obtiene multiplicando la probabilidad de máxima verosimilitud por un factor de descuento constante δ.
+Se calcula como la raíz cuadrada de la probabilidad de MLE, redistribuyendo la masa de probabilidad uniformente.
+Es siempre igual a la del modelo del corpus cuando el término no aparece en el documento.
+Resta una cantidad fija δ a la probabilidad MLE de los términos presentes y redistribuye esa masa entre los términos ausentes mediante el modelo del corpus.
+
+El modelo de dos Poisson (two-Poisson model) para el pesado de términos propone que:
+1
+Los términos de contenido (topic words) tienen una distribución de Poisson con media mayor en documentos relevantes que en no relevantes, mientras los términos funcionales siguen una distribución similar en ambos.
+Todos los términos del vocabulario siguen exactamente la misma distribución de Poisson independientemente de si el documento es relevante.
+El IDF de un término puede calcularse directamente a partir del parámetro λ de su distribución de Poisson en el corpus.
+La frecuencia de cualquier término en documentos relevantes es siempre el doble de su frecuencia en documentos no relevantes.
+
+En la expansión de consultas mediante tesauros, el objetivo es:
+3
+Reducir el tamaño de la consulta eliminando los términos con menor peso TF-IDF.
+Traducir automáticamente la consulta al idioma del corpus cuando ambos difieren.
+Añadir términos sinónimos o relacionados semánticamente para mejorar el recall de la consulta.
+Dividir la consulta en subconsultas independientes que se ejecutan en paralelo sobre el índice.
+
+El índice de bloques (block-level index) es una variante del índice invertido que:
+2
+Almacena solo las posiciones de los términos al principio de cada bloque de texto del documento.
+Registra en qué bloque o sección del documento aparece cada término, permitiendo restricciones de proximidad entre términos de la consulta.
+Agrupa los términos del mismo documento en bloques de igual tamaño para comprimir el índice.
+Sustituye las listas de postings por vectores de bits de longitud fija igual al número de documentos del corpus.
+
+En la evaluación de IR, el concepto de «relevancia tópica» (topical relevance) se refiere a:
+1
+La relación entre el contenido del documento y la necesidad de información expresada por la consulta.
+La importancia estructural del documento dentro del grafo de hipervínculos de la web.
+La frecuencia con que el documento ha sido recuperado en evaluaciones anteriores del sistema.
+La antigüedad del documento en relación con la fecha en que se formuló la consulta.
+
+¿Cuál de las siguientes afirmaciones sobre la retroalimentación de relevancia explícita es correcta?
+4
+Siempre mejora los resultados de la recuperación porque el usuario proporciona información perfecta.
+Puede empeorar la recuperación si el usuario proporciona pocos documentos de retroalimentación.
+Solo funciona con el modelo vectorial y no puede aplicarse a modelos probabilísticos.
+Requiere la participación activa del usuario para marcar documentos relevantes y no relevantes, lo que puede ser costoso en escenarios de uso real.
+
+La «deriva de consulta» (query drift) es un problema que puede ocurrir en:
+2
+Los sistemas de recuperación booleana cuando la consulta contiene demasiados operadores OR.
+La retroalimentación de relevancia iterativa, cuando la consulta expandida se aleja progresivamente de la necesidad de información original.
+Los sistemas que usan índices posicionales para resolver consultas de frase con más de cuatro términos.
+La construcción del índice invertido cuando el corpus contiene documentos en varios idiomas simultáneamente.
+
+En el contexto de IR web, el «problema de vocabulario» (vocabulary mismatch) se refiere a:
+3
+La dificultad de indexar documentos en idiomas con alfabetos no latinos.
+El excesivo número de términos del vocabulario que hace inmanejable el índice invertido.
+La diferencia entre los términos que usa el usuario en su consulta y los términos que usa el autor del documento relevante.
+La colisión de términos homógrafos que tienen significados distintos según el contexto del documento.
+
+El modelo de espacio vectorial latente (LSI/LSA) resuelve parcialmente el problema del vocabulario mediante:
+1
+La descomposición en valores singulares (SVD) de la matriz documento-término, proyectando documentos y consultas en un espacio semántico de menor dimensión.
+La expansión automática de la consulta con sinónimos extraídos de un tesauro externo construido manualmente.
+La eliminación de los términos con baja frecuencia de documento (df), que son los más propensos a causar desajustes de vocabulario.
+La normalización de los vectores documento mediante la longitud media del corpus para compensar las diferencias de estilo entre autores.
+
+En la recuperación de información, la «especificidad» (specificity) de un término hace referencia a:
+4
+La posición del término en la estructura gramatical de la oración dentro del documento.
+El número total de documentos del corpus en los que aparece el término.
+La longitud en caracteres del término, que determina su capacidad para discriminar documentos.
+La capacidad del término para discriminar entre documentos relevantes e irrelevantes, inversamente relacionada con su frecuencia de documento (df).
+
+El «modelo de mezcla» (mixture model) en IR asume que la distribución de palabras de un documento se genera como:
+2
+La media aritmética de la distribución del documento y la distribución uniforme sobre el vocabulario.
+Una mezcla de la distribución del tópico del documento y la distribución general del corpus, con coeficientes que indican la proporción de cada componente.
+El producto normalizado de las distribuciones de cada oración del documento.
+La distribución condicionada al autor del documento, modelada mediante un prior bayesiano.
+
+La «indexación dinámica» (dynamic indexing) en sistemas de IR en producción:
+3
+Requiere reconstruir completamente el índice cada vez que se añade un nuevo documento al corpus.
+Solo es posible con sistemas distribuidos que usan múltiples réplicas del índice.
+Mantiene un índice auxiliar pequeño para los documentos nuevos y lo fusiona periódicamente con el índice principal, evitando reconstrucciones costosas.
+Almacena los documentos nuevos sin indexar hasta que el sistema detecta una caída en el tráfico de consultas.
+
+En la recuperación de información multilingüe (cross-lingual IR), el enfoque de «traducción de consulta» consiste en:
+1
+Traducir la consulta del idioma del usuario al idioma de los documentos antes de lanzar la búsqueda sobre el índice.
+Indexar todos los documentos en un idioma pivote común (habitualmente inglés) independientemente de su idioma original.
+Construir índices separados para cada idioma y fusionar sus resultados mediante un mecanismo de rank fusion.
+Usar un modelo de lenguaje entrenado en múltiples idiomas para comparar directamente consultas y documentos en distintos idiomas.
+
+La medida «bpref» (binary preference) se usa en evaluación de IR cuando:
+4
+Se dispone de juicios de relevancia graduados con más de dos niveles de relevancia.
+El corpus de evaluación es demasiado pequeño para calcular métricas estándar como MAP o NDCG.
+Todos los documentos del corpus han sido juzgados, sin documentos sin juzgar en el ranking.
+Los juicios de relevancia son incompletos (no todos los documentos han sido juzgados), penalizando los documentos no relevantes recuperados antes de los relevantes.
+
+
