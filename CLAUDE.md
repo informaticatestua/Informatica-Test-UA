@@ -19,7 +19,7 @@ Incluye autenticación con Google, progreso persistente, sistema de reportes, no
 - **Motor de Quiz (`main.js`)**: Carga asíncrona de `.txt`, parseo, shuffle y validación. Coordina todos los módulos JS vía `window.*`.
 - **Módulos JS globales**: Cada fichero en `public/resources/js/` expone un singleton en `window.*`. El orden de carga importa (ver `BaseLayout.astro`). Módulos: `SupabaseClient`, `Auth`, `Failures`, `TestProgress`, `ExamMode`, `Reports`, `AIFeatures`, `AIGenerate`, `Notifications`.
 - **Estado Persistente del Quiz**: `estadosPreguntas` guarda selecciones del usuario para navegar sin pérdida de datos.
-- **Data Protocol**: Preguntas en `public/resources/data/*.txt`. Soporte nativo para Markdown, código (`` ` ``), LaTeX (`$$ ... $$`) e imágenes `![Alt](URL){width=X height=Y}`.
+- **Data Protocol**: La web **siempre consulta primero Supabase** (`quiz-data.js → window.QuizData.getQuestions()`, tablas `questions`/`options`) para obtener las preguntas de una asignatura. Solo si Supabase no devuelve filas (o falla la consulta) se cae al fallback de `public/resources/data/*.txt` (fetch + parseo con `quiz-parser-core.js`). Por eso, **al añadir o modificar preguntas hay que subirlas tanto a Supabase (`questions`/`options`) como al `.txt` correspondiente** — el `.txt` es la copia "por si acaso" (Supabase caído, migración incompleta, etc.), no una fuente alternativa que se use en paralelo. Soporte nativo para Markdown, código (`` ` ``), LaTeX (`$$ ... $$`) e imágenes `![Alt](URL){width=X height=Y}` (en Supabase, la URL de imagen debe ser la pública del bucket `question-images`; en el `.txt`, la ruta local `/resources/images/...`).
 - **Rutas Dinámicas**: `src/pages/[subject].astro` inyecta el ID de asignatura al motor JS.
 - **Persistencia**: **TODA** la persistencia de datos y preferencias de usuario va a Supabase. El `localStorage` solo actúa como **caché de arranque** para evitar flash visual (FOUC) al cargar la página — se rellena automáticamente desde el perfil Supabase en cada inicio de sesión vía `auth.js → syncPrefsToLocalStorage()`. Nunca se escribe directamente a `localStorage` como fuente de verdad.
 
@@ -65,15 +65,16 @@ El orden de carga de los módulos importa y está definido en `BaseLayout.astro`
 ## 5. Database Schema (Tablas Supabase)
 
 - `profiles`: Usuario (username, avatar_url, role, banned, **ai_custom_instructions**).
-- `subjects`: Asignaturas disponibles.
-- `sections`: Secciones/bloques de preguntas por asignatura.
-- `questions`: Preguntas.
-- `options`: Opciones de respuesta por pregunta.
+- `subjects`: Asignaturas disponibles (`id` = slug de URL, `display_name`, `parent_id` para grupos con sub-asignaturas como `dbd` → `dbd-p1`/`dbd-p2`/`dbd-full`, `category`, `sort_order`, `semester`, `is_ai_generated`).
+- `questions`: Preguntas — fuente de verdad que consulta la web. Columnas: `subject_id`, `content`, `is_multiple`, `has_code`/`has_image`/`has_latex`, `report_count`, `source_file` (nombre del `.txt` de origen), `position_in_file`, `content_hash`.
+- `options`: Opciones de respuesta. Columnas: `question_id`, `content`, `is_correct`, `is_no_marcar` (oculta la opción sin borrarla), `position`.
 - `reports`: Reportes de errores en preguntas (pendiente / aceptado / rechazado).
-- `user_failures`: Preguntas falladas por usuario.
-- `test_progress`: Progreso guardado por sección.
+- `saved_errors`: Preguntas falladas por usuario (equivalente a lo que antes era `user_failures`).
+- `test_progress`: Progreso guardado por sección/quiz.
 - `notifications`: Notificaciones (report_accepted, report_rejected, announcement).
-- `api_keys_encrypted`: Claves de API de IA encriptadas con AES-256.
+- `api_keys_encrypted` (vía columnas `*_key_enc` en `profiles`): Claves de API de IA encriptadas con AES-256.
+
+> Nota: `sections` y `user_failures` (nombres usados en versiones antiguas de este documento) ya no existen como tablas; no asumas su presencia.
 
 ## 6. Coding Conventions (Convenciones de Código)
 
