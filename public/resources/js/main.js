@@ -221,16 +221,36 @@
     function actualizarTotalPreguntasLabel() {
         const totalEl = $("total-preguntas");
         if (!totalEl) return;
-        const prefix = state.modoExamen ? "Examen" : state.modoRepaso ? "Repaso" : "Total";
-        totalEl.innerText = `${prefix}: ${state.preguntas.length}`;
+        const total = state.preguntas.length;
+        const current = Math.min(Math.max(state.preguntaActual + 1, 1), Math.max(total, 1));
+        totalEl.innerHTML = `<span class="stat-chip stat-chip--progress"><span class="material-icons">list_alt</span><b>${current}</b><span class="stat-chip-sep">/</span>${total}</span>`;
     }
 
     /** Sincroniza visibilidad y texto del botón de repaso. */
     function actualizarBotonRepaso() {
+        const totalErrores = getReviewQuestionIds().size;
+
+        // Card del selector de modo (si está visible).
+        const cardBtn   = $("mode-card-review");
+        const cardCount = $("mode-card-review-count");
+        const cardDesc  = $("mode-card-review-desc");
+        if (cardBtn && cardCount && cardDesc) {
+            if (totalErrores === 0) {
+                cardBtn.disabled = true;
+                cardCount.classList.add("hidden");
+                cardCount.textContent = "";
+                cardDesc.textContent = "Aún no tienes preguntas falladas";
+            } else {
+                cardBtn.disabled = false;
+                cardCount.classList.remove("hidden");
+                cardCount.textContent = String(totalErrores);
+                cardDesc.textContent = "Vuelve solo sobre lo que fallaste";
+            }
+        }
+
         const reviewBtn = $("review-errors-btn");
         if (!reviewBtn) return;
 
-        const totalErrores = getReviewQuestionIds().size;
         if (state.preguntas.length === 0 && totalErrores === 0) {
             reviewBtn.style.display = "none";
             reviewBtn.disabled = true;
@@ -488,6 +508,7 @@
         state.modoRepaso = false;
         state.preguntas = banco.slice(0, config.count);
         resetQuizProgress();
+        mostrarUIQuiz();
         hideElement("exam-results");
 
         actualizarTotalPreguntasLabel();
@@ -873,6 +894,7 @@
         state.totalPreguntas = prog.answered_count || 0;
         state.preguntaActual = Math.min(Math.max(prog.current_index || 0, 0), ordered.length - 1);
 
+        mostrarUIQuiz();
         actualizarTotalPreguntasLabel();
         actualizarContador();
         mostrarPregunta();
@@ -1013,17 +1035,25 @@
                 const sel = state.estadosPreguntas[p.id]?.seleccionadas;
                 return sel && sel.length > 0 ? n + 1 : n;
             }, 0);
-            contador.innerText = `Respondidas: ${respondidas} / ${state.preguntas.length}`;
+            contador.innerHTML = `<span class="stat-chip stat-chip--exam"><span class="material-icons">edit_note</span><b>${respondidas}</b>/${state.preguntas.length} respondidas</span>`;
             return;
         }
 
-        const porcentaje =
-            state.totalPreguntas !== 0
-                ? `| ${Math.round((state.preguntasCorrectas / state.totalPreguntas) * 100)}%`
-                : "";
+        const correctas   = state.preguntasCorrectas;
+        const contestadas = state.totalPreguntas;
+        const incorrectas = Math.max(contestadas - correctas, 0);
+        const pct = contestadas > 0 ? Math.round((correctas / contestadas) * 100) : null;
 
-        const modo = state.modoRepaso ? " | Modo repaso" : "";
-        contador.innerText = `Correctas: ${state.preguntasCorrectas} | Contestadas: ${state.totalPreguntas} ${porcentaje}${modo}`;
+        let html = `<span class="stat-chip stat-chip--correct"><span class="material-icons">check</span><b>${correctas}</b></span>`
+                 + `<span class="stat-chip stat-chip--wrong"><span class="material-icons">close</span><b>${incorrectas}</b></span>`;
+        if (pct !== null) {
+            const tone = pct >= 70 ? "stat-chip--pct-good" : pct >= 50 ? "stat-chip--pct-mid" : "stat-chip--pct-low";
+            html += `<span class="stat-chip ${tone}"><b>${pct}%</b></span>`;
+        }
+        if (state.modoRepaso) {
+            html += `<span class="stat-chip stat-chip--repaso"><span class="material-icons">restart_alt</span>Repaso</span>`;
+        }
+        contador.innerHTML = html;
     }
 
     /**
@@ -1415,11 +1445,68 @@
 
     /** Muestra los controles del quiz tras pasar del menú a una asignatura. */
     function mostrarUIQuiz() {
+        document.body.classList.remove("mode-selector-active");
         hideElement("asignaturas-container");
         hideElement("app-title");
+        hideElement("mode-selector");
         showElement("verificar");
         showElement("volver");
         showElement("stats-panel");
+        toggleQuizQuestionUI(true);
+        toggleQuizUtilityButtons(true);
+        if (!state.modoExamen) $("explicar-ia-btn")?.classList.remove("hidden");
+    }
+
+    /**
+     * Muestra la pantalla de selección de modo tras cargar las preguntas de
+     * una asignatura. Oculta la UI del quiz hasta que el usuario elige uno
+     * de los modos (Practicar, Modo examen, Repasar, Quiz IA).
+     */
+    function mostrarSelectorModo() {
+        const selector = $("mode-selector");
+        if (!selector) return;
+
+        // Oculta el resto de la UI del quiz mientras se elige el modo.
+        // Usamos una clase en <body> porque los estilos scoped de Astro
+        // (.quiz-nav-btn, .quiz-actions) tienen mayor especificidad que
+        // Tailwind .hidden y no siempre ganan la cascada.
+        document.body.classList.add("mode-selector-active");
+        toggleQuizQuestionUI(false);
+        toggleQuizUtilityButtons(false);
+        hideElement("stats-panel");
+        hideElement("explicar-ia-btn");
+        hideElement("asignaturas-container");
+        hideElement("app-title");
+        ocultarResultadosSesion();
+
+        // Título con el nombre de la asignatura.
+        const titleEl = $("mode-selector-title");
+        if (titleEl) {
+            const raw = state.archivoActual || state.quizKey || "";
+            const clean = String(raw).replace(/Preguntas\.txt$/i, "").replace(/-/g, " ");
+            titleEl.innerText = clean.toUpperCase() || "TEST";
+        }
+
+        // Actualiza card "Repasar fallos" según haya errores disponibles.
+        const reviewBtn   = $("mode-card-review");
+        const reviewCount = $("mode-card-review-count");
+        const reviewDesc  = $("mode-card-review-desc");
+        if (reviewBtn && reviewCount && reviewDesc) {
+            const totalErrores = getReviewQuestionIds().size;
+            if (totalErrores === 0) {
+                reviewBtn.disabled = true;
+                reviewCount.classList.add("hidden");
+                reviewCount.textContent = "";
+                reviewDesc.textContent = "Aún no tienes preguntas falladas";
+            } else {
+                reviewBtn.disabled = false;
+                reviewCount.classList.remove("hidden");
+                reviewCount.textContent = String(totalErrores);
+                reviewDesc.textContent = "Vuelve solo sobre lo que fallaste";
+            }
+        }
+
+        selector.classList.remove("hidden");
     }
 
     /**
@@ -1446,14 +1533,12 @@
             actualizarTotalPreguntasLabel();
             actualizarBotonRepaso();
 
-            mostrarPregunta();
+            mostrarSelectorModo();
         } catch (error) {
             console.warn("URL inválida o asignatura no encontrada:", error);
             window.location.href = "/";
             return;
         }
-
-        mostrarUIQuiz();
     }
 
     /** Variante de inicio para grupos multi-archivo (REDESFULL, SDSFULL). */
@@ -1473,8 +1558,7 @@
         state.todasLasPreguntas = [...state.preguntas];
         actualizarTotalPreguntasLabel();
         actualizarBotonRepaso();
-        mostrarPregunta();
-        mostrarUIQuiz();
+        mostrarSelectorModo();
     }
 
     /**
@@ -1521,8 +1605,7 @@
                 state.todasLasPreguntas = [...state.preguntas];
                 actualizarTotalPreguntasLabel();
                 actualizarBotonRepaso();
-                mostrarPregunta();
-                mostrarUIQuiz();
+                mostrarSelectorModo();
 
                 // Fallos remotos + posible test a medias (requieren sesión).
                 mergeRemoteFailures();
@@ -1790,6 +1873,25 @@
         });
     }
 
+    /** Wiring de la pantalla de selección de modo. */
+    function bindModeSelector() {
+        $("mode-card-practice")?.addEventListener("click", () => {
+            mostrarUIQuiz();
+            mostrarPregunta();
+        });
+        $("mode-card-exam")?.addEventListener("click", () => {
+            abrirModalExamen();
+        });
+        $("mode-card-review")?.addEventListener("click", (e) => {
+            if (e.currentTarget.disabled) return;
+            iniciarModoRepaso();
+            mostrarUIQuiz();
+        });
+        $("mode-card-aigen")?.addEventListener("click", () => {
+            $("aigen-open-btn")?.click();
+        });
+    }
+
     /**
      * Conecta los listeners persistentes (no dependen de la pregunta
      * visible). Los listeners por pregunta se configuran en mostrarPregunta().
@@ -1809,6 +1911,7 @@
         bindKeyboardShortcuts();
         bindExamButtons();
         bindReportEvents();
+        bindModeSelector();
 
         window.addEventListener("pageshow", (event) => {
             if (!event.persisted || state.todasLasPreguntas.length === 0) return;
@@ -1898,6 +2001,7 @@
             resetQuizProgress();
             actualizarTotalPreguntasLabel();
             actualizarBotonRepaso();
+            mostrarUIQuiz();
             mostrarPregunta();
             setVerificarMode("verificar");
         },

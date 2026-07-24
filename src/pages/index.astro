@@ -8,7 +8,7 @@ import NovedadModal from '../components/NovedadModal.astro';
 <NovedadModal />
 
 <div id="main-container" class="flex flex-col items-center justify-center m-auto w-full">
-	<div id="app" class="relative w-max max-w-[95vw] text-center bg-surface shadow-md shadow-black/5 rounded-[5px] px-[40px] py-[30px] mx-auto my-[20px] box-border border border-border-subtle">
+	<div id="app" class="relative w-max max-w-[95vw] text-center bg-surface shadow-lg shadow-black/5 rounded-2xl px-[40px] py-[30px] mx-auto my-[20px] box-border border border-border-subtle">
 
 		<!-- Estado de carga -->
 		<div id="subjects-loading" class="flex flex-col items-center gap-3 py-10 text-text-muted">
@@ -22,7 +22,7 @@ import NovedadModal from '../components/NovedadModal.astro';
 	</div>
 
 	<!-- Card de contacto -->
-	<div class="w-max max-w-[95vw] bg-surface shadow-md shadow-black/5 rounded-[5px] px-[30px] py-[20px] mx-auto mb-[20px] box-border border border-border-subtle">
+	<div class="w-max max-w-[95vw] bg-surface shadow-lg shadow-black/5 rounded-2xl px-[30px] py-[20px] mx-auto mb-[20px] box-border border border-border-subtle">
 		<div class="flex items-center justify-center gap-3 text-center flex-wrap">
 			<span class="material-icons mi-md text-[rgb(var(--color-primary-rgb))]" aria-hidden="true">mail_outline</span>
 			<p class="text-sm text-text-muted m-0">
@@ -95,15 +95,15 @@ import NovedadModal from '../components/NovedadModal.astro';
 	function buildSublist(subject, children) {
 		const div = document.createElement("div");
 		div.id = `${subject.id}-sublist`;
-		div.className = "hidden bg-surface-hover p-[20px] rounded-[8px] border border-border-subtle shadow-sm flex flex-col items-center mb-[20px] transition-all";
+		div.className = "hidden sublist-panel flex flex-col items-center";
 
 		const h4 = document.createElement("h4");
-		h4.className = "mt-0 mb-[15px] font-semibold text-text-muted";
+		h4.className = "mt-0 mb-4 text-[0.68rem] font-bold tracking-[0.1em] uppercase text-text-muted";
 		h4.textContent = `Exámenes ${subject.display_name}`;
 		div.appendChild(h4);
 
 		const row = document.createElement("div");
-		row.className = "asignaturas listaoculta flex justify-center items-center flex-wrap gap-[15px] w-full max-w-[800px]";
+		row.className = "asignaturas listaoculta flex justify-center items-center flex-wrap gap-3 w-full max-w-[800px]";
 
 		// Botón FULL sintético (primero)
 		const synth = SYNTHETIC_FULL[subject.id];
@@ -336,7 +336,7 @@ import NovedadModal from '../components/NovedadModal.astro';
 
 			} else {
 				const h3 = document.createElement("h3");
-				h3.className = "text-[1.2em] font-heading font-semibold mt-6 mb-2";
+				h3.className = "text-[0.68rem] font-heading font-bold mt-8 mb-4 tracking-[0.12em] uppercase text-text-muted";
 				h3.textContent = CATEGORY_LABELS[cat] || cat;
 				container.appendChild(h3);
 				renderCategoryGrid(tops, children, container);
@@ -350,11 +350,25 @@ import NovedadModal from '../components/NovedadModal.astro';
 			const sublistId = btn.id + "-sublist";
 			const sublist = document.getElementById(sublistId);
 			if (sublist) {
-				// Toggle propio, cierra los demás
+				const isOpen = !sublist.classList.contains("hidden");
 				container.querySelectorAll('[id$="-sublist"]').forEach((sl) => {
-					if (sl.id !== sublistId) sl.classList.add("hidden");
+					if (sl.id !== sublistId) {
+						sl.classList.add("hidden");
+						sl.classList.remove("sublist-open");
+					}
 				});
-				sublist.classList.toggle("hidden");
+				container.querySelectorAll("button.subject-open").forEach((b) => {
+					if (b !== btn) b.classList.remove("subject-open");
+				});
+				if (isOpen) {
+					sublist.classList.remove("sublist-open");
+					sublist.classList.add("hidden");
+					btn.classList.remove("subject-open");
+				} else {
+					sublist.classList.remove("hidden");
+					btn.classList.add("subject-open");
+					requestAnimationFrame(() => requestAnimationFrame(() => sublist.classList.add("sublist-open")));
+				}
 			}
 			// Si no tiene sublist, la navegación ya está en el listener del btn
 		});
@@ -410,10 +424,15 @@ import NovedadModal from '../components/NovedadModal.astro';
 			btn.textContent = subject.display_name;
 		}
 
-		if (!hasChildren) {
+		if (hasChildren) {
+			const chev = document.createElement("span");
+			chev.className = "material-icons subject-chevron";
+			chev.setAttribute("aria-hidden", "true");
+			chev.textContent = "expand_more";
+			btn.appendChild(chev);
+		} else {
 			btn.addEventListener("click", () => { window.location.href = `/${subject.id}`; });
 		}
-		// Si tiene hijos, el clic lo gestiona el listener delegado del container
 
 		return btn;
 	}
@@ -460,6 +479,113 @@ import NovedadModal from '../components/NovedadModal.astro';
 <style is:global>
 	@reference "../styles/global.css";
 
+	/* ── Chevron en botones con submódulos ─────────────────── */
+	.subject-chevron {
+		margin-left: 6px;
+		font-size: 1.05rem !important;
+		color: rgb(var(--text-muted));
+		vertical-align: middle;
+		transition: transform 220ms cubic-bezier(0.16, 1, 0.3, 1), color 180ms ease;
+	}
+	button.subject-open .subject-chevron {
+		transform: rotate(180deg);
+		color: #2563eb;
+	}
+	:global(.dark) button.subject-open .subject-chevron {
+		color: #93c5fd;
+	}
+
+	/* ── Botón de asignatura seleccionada (sublist abierto) ── */
+	#asignaturas-container .btn.subject-open {
+		background: rgba(59, 130, 246, 0.1);
+		border-color: rgba(59, 130, 246, 0.5);
+		color: #1d4ed8;
+		box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.12), 0 2px 8px rgba(59, 130, 246, 0.18);
+		transform: translateY(-1px);
+	}
+	:global(.dark) #asignaturas-container .btn.subject-open {
+		background: rgba(96, 165, 250, 0.14);
+		border-color: rgba(96, 165, 250, 0.5);
+		color: #93c5fd;
+		box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.15), 0 2px 8px rgba(96, 165, 250, 0.2);
+	}
+
+	/* ── Sublist panel ──────────────────────────────────────── */
+	.sublist-panel {
+		position: relative;
+		margin-bottom: 20px;
+		padding: 20px 24px 24px;
+		background: rgb(var(--bg-surface));
+		border: 1px solid rgb(var(--border-subtle));
+		border-radius: 20px;
+		box-shadow: 0 8px 28px rgba(0,0,0,0.07), 0 2px 6px rgba(0,0,0,0.04);
+	}
+	:global(.dark) .sublist-panel {
+		box-shadow: 0 8px 28px rgba(0,0,0,0.4), 0 2px 6px rgba(0,0,0,0.2);
+	}
+	.sublist-panel::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 52px;
+		height: 3px;
+		background: linear-gradient(90deg, #3b82f6, #60a5fa);
+		border-radius: 0 0 4px 4px;
+	}
+	.sublist-panel h4 {
+		width: 100%;
+		text-align: center;
+		padding-bottom: 14px;
+		margin-bottom: 18px !important;
+		border-bottom: 1px solid rgb(var(--border-subtle));
+	}
+	.sublist-panel.sublist-open {
+		animation: sublist-in 0.28s cubic-bezier(0.16, 1, 0.3, 1) both;
+	}
+	@keyframes sublist-in {
+		from { opacity: 0; transform: translateY(-10px) scale(0.985); }
+		to   { opacity: 1; transform: translateY(0)     scale(1); }
+	}
+
+	/* Botones dentro del sublist */
+	.listaoculta .btn-primary {
+		min-width: 115px;
+		padding: 0.65em 1.5em;
+		border-radius: 12px;
+		box-shadow: 0 2px 8px rgba(37, 99, 235, 0.18);
+		transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+	}
+	.listaoculta .btn-primary:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 5px 16px rgba(37, 99, 235, 0.32);
+	}
+	.listaoculta .btn {
+		min-width: 115px;
+		border-radius: 12px;
+		transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+	}
+	.listaoculta .btn:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 4px 12px rgba(0,0,0,0.09);
+	}
+
+	/* ── Modernized index buttons ───────────────────────────── */
+	#asignaturas-container .btn,
+	#asignaturas-container .btn-primary {
+		border-radius: 12px;
+		transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
+	}
+	#asignaturas-container .btn:hover {
+		transform: translateY(-1px);
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.09);
+	}
+	#asignaturas-container .btn-primary:hover {
+		transform: translateY(-1px);
+		box-shadow: 0 4px 14px rgba(37, 99, 235, 0.28);
+	}
+
 	/* ── Badge "Nuevo" superpuesto ──────────────────────────── */
 	.btn--new {
 		position: relative;
@@ -501,9 +627,9 @@ import NovedadModal from '../components/NovedadModal.astro';
 		gap: 3px;
 		padding: 2px 7px 2px 5px;
 		border-radius: 999px;
-		background: rgba(139, 92, 246, 0.13);
-		color: #7c3aed;
-		border: 1px solid rgba(139, 92, 246, 0.3);
+		background: rgba(59, 130, 246, 0.13);
+		color: #2563eb;
+		border: 1px solid rgba(59, 130, 246, 0.3);
 		font-size: 0.6rem;
 		font-weight: 700;
 		letter-spacing: 0.05em;
@@ -513,9 +639,9 @@ import NovedadModal from '../components/NovedadModal.astro';
 		cursor: help;
 	}
 	:global(.dark) .ai-badge {
-		background: rgba(167, 139, 250, 0.15);
-		color: #c4b5fd;
-		border-color: rgba(167, 139, 250, 0.3);
+		background: rgba(96, 165, 250, 0.15);
+		color: #93c5fd;
+		border-color: rgba(96, 165, 250, 0.3);
 	}
 	.ai-badge-icon {
 		font-size: 0.65rem !important;
@@ -739,7 +865,7 @@ import NovedadModal from '../components/NovedadModal.astro';
 			@apply m-[5px]! px-[12px]! py-[8px]! text-[0.9em]! min-w-[80px]!;
 		}
 		#app {
-			@apply w-[95%]! p-[15px]! mt-[70px]!;
+			@apply w-[95%]! p-[15px]! mt-[70px]! rounded-2xl!;
 		}
 	}
 

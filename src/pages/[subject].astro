@@ -8,20 +8,63 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 
 <BaseLayout title={`${subjectTitle} • Tests UA`}>
 	<div id="main-container" class="flex flex-col items-center justify-center m-auto w-full">
-		<div id="app" class="relative w-max max-w-[95vw] text-center bg-surface shadow-md shadow-black/5 rounded-[5px] px-[40px] py-[30px] mx-auto my-[20px] box-border border border-border-subtle">
+		<div id="app" class="relative w-max max-w-[95vw] text-center bg-surface shadow-lg shadow-black/5 rounded-2xl px-[40px] py-[30px] mx-auto my-[20px] box-border border border-border-subtle">
 			
 			<div class="absolute top-[10px] right-[10px] sm:top-[15px] sm:right-[15px] flex items-center justify-end gap-1.5 z-10 w-full sm:w-auto pr-[10px] sm:pr-0 pl-[40px] pointer-events-none">
-				<button id="explicar-ia-btn"  class="pointer-events-auto p-[7px] bg-gradient-to-br from-blue-500 to-violet-600 text-white rounded-[8px] shadow-sm hover:shadow-md hover:-translate-y-px transition-all flex items-center justify-center cursor-pointer border-none disabled:opacity-40 disabled:cursor-not-allowed" title="Explicar con IA" disabled>
+				<button id="explicar-ia-btn"  class="pointer-events-auto p-[8px] bg-gradient-to-br from-blue-500 to-violet-600 text-white rounded-xl shadow-sm hover:shadow-md hover:-translate-y-px transition-all flex items-center justify-center cursor-pointer border-none disabled:opacity-40 disabled:cursor-not-allowed" title="Explicar con IA" disabled>
 					<span class="material-icons mi-sm">auto_awesome</span>
 				</button>
-				<button id="report-btn"  class="pointer-events-auto p-[7px] bg-surface border border-border-subtle rounded-[8px] text-text-muted hover:text-red-500 hover:border-red-500 hover:bg-red-50 dark:hover:bg-red-900/20 transition-colors flex items-center justify-center group cursor-pointer" title="Reportar un error en esta pregunta">
+				<button id="report-btn"  class="pointer-events-auto p-[8px] bg-surface border border-border-subtle rounded-xl text-text-muted hover:text-red-500 hover:border-red-500 hover:bg-red-50 dark:hover:bg-red-900/20 hover:-translate-y-px transition-all flex items-center justify-center group cursor-pointer" title="Reportar un error en esta pregunta">
 					<span class="material-icons mi-sm group-hover:text-red-500 transition-colors">flag</span>
 				</button>
-				<button id="copyButton" class="pointer-events-auto p-[7px] bg-surface z-10 border border-border-subtle rounded-[8px] text-text-muted hover:text-text-main hover:bg-surface-hover transition-colors flex items-center justify-center cursor-pointer" class="hidden" title="Copiar pregunta">
+				<button id="copyButton" class="pointer-events-auto p-[8px] bg-surface z-10 border border-border-subtle rounded-xl text-text-muted hover:text-text-main hover:bg-surface-hover hover:-translate-y-px transition-all flex items-center justify-center cursor-pointer" class="hidden" title="Copiar pregunta">
 					<span class="material-icons mi-sm">content_copy</span>
 					<span id="copyText" class="sr-only">Copiar</span>
 				</button>
 			</div>
+
+			<!-- ── Selector de modo (al entrar en una asignatura) ──────── -->
+			<section id="mode-selector" class="hidden text-left mt-6 mb-2">
+				<header class="mode-selector-header">
+					<p class="mode-selector-eyebrow">Asignatura</p>
+					<h2 id="mode-selector-title" class="mode-selector-title"></h2>
+					<p id="mode-selector-subtitle" class="mode-selector-subtitle">Elige cómo quieres estudiar</p>
+				</header>
+				<div class="mode-cards">
+					<button type="button" id="mode-card-practice" class="mode-card mode-card--primary">
+						<span class="mode-card-icon"><span class="material-icons">school</span></span>
+						<span class="mode-card-body">
+							<span class="mode-card-title">Practicar</span>
+							<span class="mode-card-desc">Estudio libre con feedback tras cada respuesta</span>
+						</span>
+						<span class="mode-card-arrow material-icons">arrow_forward</span>
+					</button>
+					<button type="button" id="mode-card-exam" class="mode-card mode-card--exam">
+						<span class="mode-card-icon"><span class="material-icons">timer</span></span>
+						<span class="mode-card-body">
+							<span class="mode-card-title">Modo examen</span>
+							<span class="mode-card-desc">Simulacro cronometrado con nota final</span>
+						</span>
+						<span class="mode-card-arrow material-icons">arrow_forward</span>
+					</button>
+					<button type="button" id="mode-card-review" class="mode-card mode-card--review">
+						<span class="mode-card-icon"><span class="material-icons">refresh</span></span>
+						<span class="mode-card-body">
+							<span class="mode-card-title">Repasar fallos <span id="mode-card-review-count" class="mode-card-count hidden"></span></span>
+							<span id="mode-card-review-desc" class="mode-card-desc">Vuelve solo sobre lo que fallaste</span>
+						</span>
+						<span class="mode-card-arrow material-icons">arrow_forward</span>
+					</button>
+					<button type="button" id="mode-card-aigen" class="mode-card mode-card--aigen">
+						<span class="mode-card-icon"><span class="material-icons">auto_awesome</span></span>
+						<span class="mode-card-body">
+							<span class="mode-card-title">Quiz con IA</span>
+							<span class="mode-card-desc">Preguntas nuevas generadas al momento</span>
+						</span>
+						<span class="mode-card-arrow material-icons">arrow_forward</span>
+					</button>
+				</div>
+			</section>
 
 			<div id="pregunta" class="text-left text-[0.95em] md:text-[1em] mb-[15px] mt-[25px] sm:mt-[5px] sm:pr-[180px]"></div>
 
@@ -114,11 +157,9 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 			
 			<div id="action-buttons-container" class="quiz-actions">
 				<!-- Fila de stats en la barra de acciones (sincronizada desde JS) -->
-				<div id="quiz-mobile-stats" class="hidden flex items-center justify-center gap-2 text-xs text-text-muted pb-2 border-b border-border-subtle mb-1">
-					<span class="material-icons text-text-muted" style="font-size:0.9rem;">bar_chart</span>
-					<span id="mobile-total-preguntas" class="font-medium whitespace-nowrap"></span>
-					<span class="w-px h-3 bg-border-subtle flex-shrink-0" aria-hidden="true"></span>
-					<span id="mobile-contador" class="font-medium whitespace-nowrap"></span>
+				<div id="quiz-mobile-stats" class="hidden flex items-center justify-center flex-wrap gap-1.5 pb-2.5 border-b border-border-subtle mb-1">
+					<span id="mobile-total-preguntas" class="inline-flex items-center gap-1.5 flex-wrap justify-center"></span>
+					<span id="mobile-contador" class="inline-flex items-center gap-1.5 flex-wrap justify-center"></span>
 				</div>
 				<div class="quiz-actions-primary">
 					<button id="volver-pregunta" class="quiz-nav-btn hidden" aria-label="Pregunta anterior">
@@ -126,67 +167,21 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 						<span class="quiz-nav-btn-label">Anterior</span>
 					</button>
 					<button id="verificar" class="hidden quiz-verify-btn" disabled>Verificar / Continuar</button>
-					<div id="tools-trigger-wrap" class="w-full sm:w-auto">
-						<button id="more-options-btn" class="quiz-nav-btn w-full sm:w-auto" aria-haspopup="dialog" aria-expanded="false" aria-controls="tools-sheet-panel">
-							<span class="material-icons" aria-hidden="true">apps</span>
-							<span class="quiz-nav-btn-label">Herramientas</span>
-						</button>
-					</div>
+					<button id="resumenBtn" class="quiz-nav-btn w-full sm:w-auto" aria-label="Ver resumen de la asignatura">
+						<span class="material-icons" aria-hidden="true">summarize</span>
+						<span class="quiz-nav-btn-label">Resumen</span>
+					</button>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<!-- Panel de herramientas: rejilla fija, sin scroll de página -->
-	<div id="tools-sheet" class="tools-sheet" aria-hidden="true">
-		<div id="tools-sheet-backdrop" class="tools-sheet-backdrop"></div>
-		<div id="tools-sheet-panel" class="tools-sheet-panel" role="dialog" aria-modal="true" aria-labelledby="tools-sheet-title">
-			<div class="tools-sheet-handle" aria-hidden="true"></div>
-			<header class="tools-sheet-header">
-				<div>
-					<h3 id="tools-sheet-title" class="tools-sheet-title">Herramientas del test</h3>
-					<p class="tools-sheet-subtitle">Modos de estudio y accesos rápidos</p>
-				</div>
-				<button id="tools-sheet-close" type="button" class="tools-sheet-close" aria-label="Cerrar herramientas">
-					<span class="material-icons">close</span>
-				</button>
-			</header>
-			<div class="tools-sheet-body">
-				<div id="tools-quiz-section" class="tools-sheet-section">
-					<p class="tools-sheet-section-label">Estudio</p>
-					<div class="tools-sheet-grid">
-						<button id="resumenBtn" type="button" class="tools-sheet-item" class="hidden">
-							<span class="tools-sheet-icon tools-sheet-icon--blue"><span class="material-icons">summarize</span></span>
-							<span class="tools-sheet-item-text">
-								<span class="tools-sheet-item-label">Resumen</span>
-								<span class="tools-sheet-item-desc">Todas las preguntas</span>
-							</span>
-						</button>
-						<button id="review-errors-btn" type="button" class="tools-sheet-item" class="hidden">
-							<span class="tools-sheet-icon tools-sheet-icon--amber"><span class="material-icons">refresh</span></span>
-							<span class="tools-sheet-item-text">
-								<span id="review-errors-label" class="tools-sheet-item-label">Repasar fallos</span>
-								<span class="tools-sheet-item-desc">Solo las incorrectas</span>
-							</span>
-						</button>
-						<button id="aigen-open-btn" type="button" class="tools-sheet-item tools-sheet-item--accent" class="hidden" aria-label="Generar quiz con IA">
-							<span class="tools-sheet-icon tools-sheet-icon--violet"><span class="material-icons">psychology</span></span>
-							<span class="tools-sheet-item-text">
-								<span class="tools-sheet-item-label">Quiz con IA</span>
-								<span class="tools-sheet-item-desc">Preguntas nuevas</span>
-							</span>
-						</button>
-						<button id="exam-open-btn" type="button" class="tools-sheet-item tools-sheet-item--accent" class="hidden" aria-label="Modo examen real">
-							<span class="tools-sheet-icon tools-sheet-icon--orange"><span class="material-icons">timer</span></span>
-							<span class="tools-sheet-item-text">
-								<span class="tools-sheet-item-label">Modo examen</span>
-								<span class="tools-sheet-item-desc">Simulacro real</span>
-							</span>
-						</button>
-					</div>
-				</div>
-			</div>
-		</div>
+	<!-- Triggers ocultos: ai-generate.js y bindExamButtons esperan estos
+	     IDs para inicializar sus modales. Los botones visibles del modo
+	     están en el selector de modo (mode-card-aigen, mode-card-exam). -->
+	<div class="hidden" aria-hidden="true">
+		<button id="aigen-open-btn" type="button"></button>
+		<button id="exam-open-btn" type="button"></button>
 	</div>
 
 	<div id="stats-panel" class="hidden fixed bottom-[80px] sm:bottom-[10px] right-[10px] z-50 flex items-center gap-2.5 bg-surface/90 text-text-main text-[13px] px-[14px] py-[8px] rounded-full border border-border-subtle shadow-md shadow-black/10 backdrop-blur-sm">
@@ -457,6 +452,24 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 		</div>
 	</div>
 <style is:global>
+  /* Cuando el selector de modo está visible, ocultar toda la UI del test
+     con !important para sobreescribir cualquier estilo scoped de Astro. */
+  body.mode-selector-active #action-buttons-container,
+  body.mode-selector-active #stats-panel,
+  body.mode-selector-active #quiz-mobile-stats,
+  body.mode-selector-active #explicar-ia-btn,
+  body.mode-selector-active #report-btn,
+  body.mode-selector-active #copyButton,
+  body.mode-selector-active #volver-pregunta,
+  body.mode-selector-active #verificar,
+  body.mode-selector-active #resumenBtn,
+  body.mode-selector-active #pregunta,
+  body.mode-selector-active #opciones,
+  body.mode-selector-active #resultado,
+  body.mode-selector-active #report-warning {
+    display: none !important;
+  }
+
   .ai-chat-bubble-user {
     max-width: 85%;
     padding: 0.5rem 0.75rem;
@@ -623,8 +636,8 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
             var ct = document.getElementById("contador");
             var mtp = document.getElementById("mobile-total-preguntas");
             var mct = document.getElementById("mobile-contador");
-            if (tp && mtp) mtp.textContent = tp.textContent;
-            if (ct && mct) mct.textContent = ct.textContent;
+            if (tp && mtp) mtp.innerHTML = tp.innerHTML;
+            if (ct && mct) mct.innerHTML = ct.innerHTML;
         }
     }
     function init() {
@@ -646,19 +659,19 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 	@reference "../styles/global.css";
 	
 	.btn {
-		@apply mt-[1em] px-[1.2em] py-[0.6em] text-[1em] border border-border-subtle text-text-main rounded-[5px] cursor-pointer whitespace-nowrap bg-surface hover:bg-surface-hover transition-colors shadow-subtle hover:shadow-sm font-medium;
+		@apply mt-[1em] px-[1.2em] py-[0.6em] text-[1em] border border-border-subtle text-text-main rounded-xl cursor-pointer whitespace-nowrap bg-surface hover:bg-surface-hover transition-all shadow-subtle hover:shadow-md hover:-translate-y-px font-medium;
 	}
 	.btn-primary {
-		@apply mt-[1em] px-[1.2em] py-[0.6em] text-[1em] border-none text-white rounded-[5px] cursor-pointer whitespace-nowrap bg-blue-600 hover:bg-blue-700 transition-colors shadow-sm hover:shadow font-medium disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-blue-600 disabled:hover:shadow-none;
+		@apply mt-[1em] px-[1.2em] py-[0.6em] text-[1em] border-none text-white rounded-xl cursor-pointer whitespace-nowrap bg-blue-600 hover:bg-blue-700 transition-all shadow-sm hover:shadow-md hover:-translate-y-px font-medium disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-blue-600 disabled:hover:shadow-none;
 	}
 	.btn-secondary {
-		@apply px-[1.2em] py-[0.6em] text-[1em] border-2 border-border-subtle text-text-main rounded-[5px] cursor-pointer whitespace-nowrap bg-transparent hover:bg-surface-hover transition-colors font-medium;
+		@apply px-[1.2em] py-[0.6em] text-[1em] border border-border-subtle text-text-main rounded-xl cursor-pointer whitespace-nowrap bg-transparent hover:bg-surface-hover transition-all hover:-translate-y-px font-medium;
 	}
 	.btn-tertiary {
-		@apply px-[1.2em] py-[0.6em] text-[1em] border-none text-text-muted hover:text-text-main rounded-[5px] cursor-pointer whitespace-nowrap bg-transparent hover:bg-surface-hover transition-colors font-medium;
+		@apply px-[1.2em] py-[0.6em] text-[1em] border-none text-text-muted hover:text-text-main rounded-xl cursor-pointer whitespace-nowrap bg-transparent hover:bg-surface-hover transition-colors font-medium;
 	}
 	.btn-ghost {
-		@apply px-[1em] py-[0.5em] text-[0.9em] border-none text-text-muted hover:text-text-main rounded-[5px] cursor-pointer whitespace-nowrap bg-transparent hover:bg-surface-hover transition-colors font-medium;
+		@apply px-[1em] py-[0.5em] text-[0.9em] border-none text-text-muted hover:text-text-main rounded-xl cursor-pointer whitespace-nowrap bg-transparent hover:bg-surface-hover transition-colors font-medium;
 	}
 
 	/* ── Barra de acciones del quiz ─────────────────────────────────── */
@@ -686,10 +699,6 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 			   bg-blue-600 hover:bg-blue-700 transition-colors shadow-sm font-semibold
 			   min-h-[48px] disabled:opacity-50 disabled:cursor-not-allowed
 			   disabled:hover:bg-blue-600;
-	}
-
-	#tools-quiz-section:not(:has(.tools-sheet-item[style*="flex"])) {
-		display: none;
 	}
 
 	@media (min-width: 640px) {
@@ -795,13 +804,13 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 
 	@media (max-width: 767px) {
 		#app {
-			@apply w-[95%]! p-[15px]! pb-[8px]! mt-[70px]!;
+			@apply w-[95%]! p-[15px]! pb-[8px]! mt-[70px]! rounded-2xl!;
 		}
 		.btn, .btn-secondary, .btn-tertiary, .btn-ghost {
 			@apply m-[5px]! px-[12px]! py-[8px]! text-[0.9em]!;
 		}
 		.btn-primary {
-			@apply w-full! m-0! mb-[8px]! min-h-[52px]! text-[1.05em]! rounded-[8px]!;
+			@apply w-full! m-0! mb-[8px]! min-h-[52px]! text-[1.05em]! rounded-xl!;
 		}
 	}
 	
@@ -941,12 +950,321 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 	:global(.dark) .aigen-range-badge--std   { background: rgba(96, 165, 250, 0.15);  color: #60a5fa; }
 	:global(.dark) .aigen-range-badge--large { background: rgba(251, 191, 36, 0.15);  color: #fbbf24; }
 
+	/* ── Selector de modo (pantalla de bienvenida al test) ───────── */
+	#mode-selector {
+		animation: mode-selector-in 0.32s cubic-bezier(0.16, 1, 0.3, 1) both;
+	}
+	@keyframes mode-selector-in {
+		from { opacity: 0; transform: translateY(8px); }
+		to   { opacity: 1; transform: translateY(0); }
+	}
+	.mode-selector-header {
+		text-align: center;
+		margin-bottom: 22px;
+	}
+	.mode-selector-eyebrow {
+		margin: 0 0 4px;
+		font-size: 0.66rem;
+		font-weight: 700;
+		letter-spacing: 0.14em;
+		text-transform: uppercase;
+		color: rgb(var(--text-muted));
+	}
+	.mode-selector-title {
+		margin: 0 0 6px;
+		font-family: var(--font-heading, "Outfit", sans-serif);
+		font-size: 1.6rem;
+		font-weight: 700;
+		letter-spacing: -0.01em;
+		color: rgb(var(--text-main));
+		line-height: 1.15;
+	}
+	@media (min-width: 640px) {
+		.mode-selector-title { font-size: 1.9rem; }
+	}
+	.mode-selector-subtitle {
+		margin: 0;
+		font-size: 0.9rem;
+		color: rgb(var(--text-muted));
+	}
+
+	.mode-cards {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 12px;
+		max-width: 620px;
+		margin: 0 auto;
+	}
+	@media (max-width: 640px) {
+		.mode-cards { grid-template-columns: 1fr; }
+	}
+
+	.mode-card {
+		display: flex;
+		align-items: center;
+		gap: 14px;
+		padding: 16px 18px;
+		background: rgb(var(--bg-surface));
+		border: 1px solid rgb(var(--border-subtle));
+		border-radius: 16px;
+		text-align: left;
+		cursor: pointer;
+		width: 100%;
+		font-family: inherit;
+		color: inherit;
+		box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+		transition: transform 200ms cubic-bezier(0.16, 1, 0.3, 1),
+					box-shadow 200ms ease,
+					border-color 200ms ease,
+					background-color 200ms ease;
+	}
+	.mode-card:hover:not(:disabled) {
+		transform: translateY(-2px);
+		box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+	}
+	.mode-card:disabled {
+		opacity: 0.55;
+		cursor: not-allowed;
+	}
+	.mode-card:focus-visible {
+		outline: none;
+		box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.35);
+	}
+
+	.mode-card-icon {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 44px;
+		height: 44px;
+		border-radius: 12px;
+		flex-shrink: 0;
+	}
+	.mode-card-icon .material-icons { font-size: 1.4rem; }
+
+	.mode-card-body {
+		display: flex;
+		flex-direction: column;
+		gap: 2px;
+		flex: 1;
+		min-width: 0;
+	}
+	.mode-card-title {
+		display: inline-flex;
+		align-items: center;
+		gap: 6px;
+		font-size: 0.98rem;
+		font-weight: 700;
+		color: rgb(var(--text-main));
+		line-height: 1.25;
+	}
+	.mode-card-desc {
+		font-size: 0.78rem;
+		color: rgb(var(--text-muted));
+		line-height: 1.4;
+	}
+	.mode-card-count {
+		display: inline-flex;
+		align-items: center;
+		padding: 1px 8px;
+		border-radius: 999px;
+		background: rgb(var(--bg-surface-hover));
+		color: rgb(var(--text-muted));
+		font-size: 0.7rem;
+		font-weight: 700;
+		line-height: 1.4;
+	}
+	.mode-card-count.hidden { display: none; }
+	.mode-card-arrow {
+		font-size: 1.15rem !important;
+		color: rgb(var(--text-muted));
+		opacity: 0;
+		transform: translateX(-4px);
+		transition: opacity 200ms ease, transform 200ms ease, color 200ms ease;
+		flex-shrink: 0;
+	}
+	.mode-card:hover:not(:disabled) .mode-card-arrow {
+		opacity: 1;
+		transform: translateX(0);
+	}
+
+	/* Card variants */
+	.mode-card--primary .mode-card-icon {
+		background: rgba(59, 130, 246, 0.14);
+		color: #2563eb;
+	}
+	.mode-card--primary:hover:not(:disabled) {
+		border-color: rgba(59, 130, 246, 0.45);
+		box-shadow: 0 10px 22px rgba(59, 130, 246, 0.16);
+	}
+	.mode-card--primary .mode-card-arrow { color: #2563eb; }
+	:global(.dark) .mode-card--primary .mode-card-icon {
+		background: rgba(96, 165, 250, 0.2);
+		color: #60a5fa;
+	}
+	:global(.dark) .mode-card--primary .mode-card-arrow { color: #60a5fa; }
+
+	.mode-card--exam .mode-card-icon {
+		background: rgba(245, 158, 11, 0.14);
+		color: #d97706;
+	}
+	.mode-card--exam:hover:not(:disabled) {
+		border-color: rgba(245, 158, 11, 0.5);
+		box-shadow: 0 10px 22px rgba(245, 158, 11, 0.16);
+	}
+	.mode-card--exam .mode-card-arrow { color: #d97706; }
+	:global(.dark) .mode-card--exam .mode-card-icon {
+		background: rgba(251, 191, 36, 0.18);
+		color: #fbbf24;
+	}
+	:global(.dark) .mode-card--exam .mode-card-arrow { color: #fbbf24; }
+
+	.mode-card--review .mode-card-icon {
+		background: rgba(34, 197, 94, 0.14);
+		color: #16a34a;
+	}
+	.mode-card--review:hover:not(:disabled) {
+		border-color: rgba(34, 197, 94, 0.45);
+		box-shadow: 0 10px 22px rgba(34, 197, 94, 0.15);
+	}
+	.mode-card--review .mode-card-arrow { color: #16a34a; }
+	.mode-card--review .mode-card-count {
+		background: rgba(34, 197, 94, 0.16);
+		color: #15803d;
+	}
+	:global(.dark) .mode-card--review .mode-card-icon {
+		background: rgba(74, 222, 128, 0.2);
+		color: #4ade80;
+	}
+	:global(.dark) .mode-card--review .mode-card-arrow { color: #4ade80; }
+	:global(.dark) .mode-card--review .mode-card-count {
+		background: rgba(74, 222, 128, 0.22);
+		color: #86efac;
+	}
+
+	.mode-card--aigen .mode-card-icon {
+		background: rgba(124, 58, 237, 0.14);
+		color: #7c3aed;
+	}
+	.mode-card--aigen:hover:not(:disabled) {
+		border-color: rgba(124, 58, 237, 0.45);
+		box-shadow: 0 10px 22px rgba(124, 58, 237, 0.15);
+	}
+	.mode-card--aigen .mode-card-arrow { color: #7c3aed; }
+	:global(.dark) .mode-card--aigen .mode-card-icon {
+		background: rgba(167, 139, 250, 0.22);
+		color: #a78bfa;
+	}
+	:global(.dark) .mode-card--aigen .mode-card-arrow { color: #a78bfa; }
+
+	/* ── Stat chips (barra superior del test) ─────────────────────── */
+	:global(.stat-chip) {
+		display: inline-flex;
+		align-items: center;
+		gap: 4px;
+		padding: 3px 9px;
+		border-radius: 999px;
+		font-size: 0.72rem;
+		font-weight: 600;
+		line-height: 1.35;
+		border: 1px solid transparent;
+		font-variant-numeric: tabular-nums;
+		white-space: nowrap;
+		transition: background-color 150ms ease, border-color 150ms ease;
+	}
+	:global(.stat-chip b) {
+		font-weight: 700;
+		font-size: 0.78rem;
+	}
+	:global(.stat-chip .material-icons) {
+		font-size: 0.9rem;
+	}
+	:global(.stat-chip-sep) {
+		opacity: 0.5;
+		margin: 0 1px;
+	}
+
+	:global(.stat-chip--progress) {
+		background: rgb(var(--bg-surface-hover));
+		border-color: rgb(var(--border-subtle));
+		color: rgb(var(--text-main));
+	}
+	:global(.stat-chip--progress .material-icons) {
+		color: rgb(var(--text-muted));
+	}
+
+	:global(.stat-chip--correct) {
+		background: rgba(34, 197, 94, 0.11);
+		border-color: rgba(34, 197, 94, 0.28);
+		color: rgb(21, 128, 61);
+	}
+	:global(.dark .stat-chip--correct) {
+		background: rgba(34, 197, 94, 0.15);
+		border-color: rgba(34, 197, 94, 0.35);
+		color: rgb(134, 239, 172);
+	}
+
+	:global(.stat-chip--wrong) {
+		background: rgba(239, 68, 68, 0.1);
+		border-color: rgba(239, 68, 68, 0.28);
+		color: rgb(185, 28, 28);
+	}
+	:global(.dark .stat-chip--wrong) {
+		background: rgba(239, 68, 68, 0.15);
+		border-color: rgba(239, 68, 68, 0.35);
+		color: rgb(252, 165, 165);
+	}
+
+	:global(.stat-chip--pct-good) {
+		background: rgba(34, 197, 94, 0.11);
+		border-color: rgba(34, 197, 94, 0.28);
+		color: rgb(21, 128, 61);
+	}
+	:global(.dark .stat-chip--pct-good) {
+		background: rgba(34, 197, 94, 0.15);
+		border-color: rgba(34, 197, 94, 0.35);
+		color: rgb(134, 239, 172);
+	}
+	:global(.stat-chip--pct-mid) {
+		background: rgba(59, 130, 246, 0.1);
+		border-color: rgba(59, 130, 246, 0.28);
+		color: rgb(29, 78, 216);
+	}
+	:global(.dark .stat-chip--pct-mid) {
+		background: rgba(96, 165, 250, 0.15);
+		border-color: rgba(96, 165, 250, 0.35);
+		color: rgb(147, 197, 253);
+	}
+	:global(.stat-chip--pct-low) {
+		background: rgba(245, 158, 11, 0.12);
+		border-color: rgba(245, 158, 11, 0.32);
+		color: rgb(180, 83, 9);
+	}
+	:global(.dark .stat-chip--pct-low) {
+		background: rgba(245, 158, 11, 0.15);
+		border-color: rgba(245, 158, 11, 0.35);
+		color: rgb(252, 211, 77);
+	}
+
+	:global(.stat-chip--repaso),
+	:global(.stat-chip--exam) {
+		background: rgba(245, 158, 11, 0.11);
+		border-color: rgba(245, 158, 11, 0.3);
+		color: rgb(180, 83, 9);
+	}
+	:global(.dark .stat-chip--repaso),
+	:global(.dark .stat-chip--exam) {
+		background: rgba(245, 158, 11, 0.15);
+		border-color: rgba(245, 158, 11, 0.32);
+		color: rgb(252, 211, 77);
+	}
+
 	/* ── Tarjetas de opción múltiple ──────────────────────────────── */
 	:global(form#opciones label) {
 		@apply flex items-center mb-0! cursor-pointer text-[0.95em] md:text-[1em]
-			   p-[12px] sm:px-[16px] rounded-[8px] border-2 border-border-subtle
-			   bg-surface gap-[12px] min-h-[52px] select-none;
-		transition: border-color 150ms ease, background-color 150ms ease, box-shadow 150ms ease;
+			   p-[14px] sm:px-[18px] rounded-xl border border-border-subtle
+			   bg-surface gap-[12px] min-h-[54px] select-none shadow-subtle;
+		transition: border-color 180ms ease, background-color 180ms ease, box-shadow 180ms ease, transform 180ms cubic-bezier(0.16, 1, 0.3, 1);
 	}
 	/* Focus-visible: outline claro para navegación con teclado */
 	:global(form#opciones label:focus-within) {
@@ -955,18 +1273,23 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 	/* Hover: solo si la tarjeta no tiene estado definitivo */
 	:global(form#opciones label:not(.selected):not(.correct):not(.incorrect):hover) {
 		@apply border-blue-400 bg-surface-hover;
+		transform: translateY(-1px);
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 	}
 	/* Seleccionada */
 	:global(form#opciones label.selected) {
-		@apply border-blue-600 bg-blue-50 dark:bg-blue-900/30;
+		@apply border-blue-500 bg-blue-50 dark:bg-blue-900/30;
+		box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15), 0 4px 14px rgba(59, 130, 246, 0.14);
 	}
 	/* Correcta (tras verificar) */
 	:global(form#opciones label.correct) {
-		@apply border-green-600 bg-green-50 dark:bg-green-900/30 cursor-default;
+		@apply border-green-500 bg-green-50 dark:bg-green-900/30 cursor-default;
+		box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.15), 0 4px 14px rgba(34, 197, 94, 0.14);
 	}
 	/* Incorrecta (tras verificar) */
 	:global(form#opciones label.incorrect) {
-		@apply border-red-600 bg-red-50 dark:bg-red-900/30 cursor-default;
+		@apply border-red-500 bg-red-50 dark:bg-red-900/30 cursor-default;
+		box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.15), 0 4px 14px rgba(239, 68, 68, 0.14);
 	}
 	/* Radio / Checkbox nativo */
 	:global(form#opciones input[type="radio"]),
