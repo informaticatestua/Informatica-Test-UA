@@ -45,7 +45,7 @@
       <!-- Descripción -->
       <div class="flex flex-col gap-1.5">
         <label class="text-[0.8em] font-semibold text-text-muted uppercase tracking-wide" for="suggest-descripcion">
-          Tu sugerencia <span class="text-red-500">*</span>
+          Tu sugerencia <span class="text-danger-text">*</span>
         </label>
         <textarea
           id="suggest-descripcion"
@@ -53,14 +53,14 @@
           placeholder="Cuéntanos qué mejorarías: funcionalidad nueva, diseño, asignaturas que añadir…"
           class="px-3 py-2 rounded-md bg-background border border-border-subtle text-text-main text-[0.95em] focus:outline-none focus:border-blue-500 transition-colors resize-y min-h-[90px]"
         ></textarea>
-        <p id="suggest-error-descripcion" class="hidden text-red-500 text-[0.82em]"></p>
+        <p id="suggest-error-descripcion" role="alert" class="hidden text-danger-text text-[0.82em]"></p>
       </div>
 
       <!-- Estado -->
       <p id="suggest-success" class="hidden text-green-600 dark:text-green-400 text-[0.9em] font-medium">
         ✅ ¡Gracias! Tu sugerencia ha sido enviada.
       </p>
-      <p id="suggest-error-msg" class="hidden text-red-500 text-[0.9em] font-medium"></p>
+      <p id="suggest-error-msg" role="alert" class="hidden text-danger-text text-[0.9em] font-medium"></p>
 
       <!-- Botones -->
       <div class="flex gap-3 justify-end pt-1">

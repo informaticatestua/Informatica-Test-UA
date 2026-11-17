@@ -55,7 +55,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 		<!-- ── Tab: Usuarios ────────────────────────────────────────── -->
 		<div id="tab-usuarios" class="admin-panel hidden space-y-4">
 			<div class="flex gap-3 items-center">
-				<input id="user-search" type="text" placeholder="Filtrar por nombre de usuario…" class="flex-1 px-3 py-2 rounded-lg border border-border-subtle bg-background text-text-main text-sm focus:outline-none focus:border-blue-500 transition-colors" />
+				<input id="user-search" type="search" aria-label="Filtrar usuarios por nombre" autocomplete="off" placeholder="Filtrar por nombre de usuario…" class="flex-1 px-3 py-2 rounded-lg border border-border-subtle bg-background text-text-main text-sm focus:outline-none focus:border-blue-500 transition-colors" />
 				<button id="user-search-btn" class="px-4 py-2 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors border-none cursor-pointer">Buscar</button>
 			</div>
 			<div id="user-loading" class="hidden text-text-muted text-sm flex items-center gap-2">
@@ -204,9 +204,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
         // Group by question
         const byQuestion = {};
+        const questionsById = {};
         for (const r of reports) {
             const qid = r.questions?.id || r.id;
             if (!byQuestion[qid]) byQuestion[qid] = { question: r.questions, reports: [] };
+            if (r.questions) questionsById[qid] = r.questions;
             byQuestion[qid].reports.push(r);
         }
 
@@ -216,7 +218,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             const optionsHtml = opts.map(o => `
                 <label class="flex items-center gap-2 cursor-pointer p-2 rounded-lg border-2 ${o.is_correct ? "border-green-500 bg-green-50 dark:bg-green-900/20" : "border-border-subtle"} transition-colors">
                     <input type="radio" name="correct-opt-${question.id}" value="${o.id}" ${o.is_correct ? "checked" : ""} class="accent-green-600 flex-shrink-0" />
-                    <span class="text-sm text-text-main">${esc(o.content)}</span>
+                    <span class="rep-opt-text text-sm text-text-main" data-opt-id="${o.id}">${esc(o.content)}</span>
                 </label>
             `).join("");
 
@@ -229,10 +231,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             `).join("");
 
             return `
-                <div class="bg-surface border border-border-subtle rounded-2xl p-5 space-y-4" data-question-id="${question.id}" data-user-ids="${rs.map(r => r.user_id).join(",")}">
+                <div class="bg-surface border border-border-subtle rounded-2xl shadow-subtle p-5 space-y-4" data-question-id="${question.id}" data-user-ids="${rs.map(r => r.user_id).join(",")}">
                     <div class="flex items-start justify-between gap-3">
                         <div class="flex-1">
-                            <p class="text-text-main text-sm font-medium m-0 leading-snug">${truncate(esc(question.content))}</p>
+                            <p class="rep-q-text text-text-main text-sm font-medium m-0 leading-snug">${esc(truncate(question.content))}</p>
                             ${question.subject_id ? `<span class="text-xs text-text-muted mt-1 block">${esc(question.subject_id).toUpperCase()}</span>` : ""}
                         </div>
                         <span class="flex-shrink-0 inline-flex items-center gap-1 px-2.5 py-1 bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300 rounded-full text-xs font-semibold">
@@ -252,6 +254,27 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                         <div class="space-y-2">${optionsHtml}</div>
                     </div>
 
+                    <!-- Edición del texto (enunciado y opciones) -->
+                    <div class="rep-edit-panel hidden space-y-3 p-4 rounded-xl border border-blue-500/40 bg-blue-50/60 dark:bg-blue-900/10">
+                        <p class="text-xs font-semibold text-text-muted uppercase tracking-wider m-0">Editar texto de la pregunta</p>
+                        <div>
+                            <label class="block text-xs font-medium text-text-main mb-1" for="edit-q-${question.id}">Enunciado</label>
+                            <textarea id="edit-q-${question.id}" rows="5" class="rep-edit-content w-full px-3 py-2 rounded-lg border border-border-subtle bg-background text-text-main text-sm font-mono leading-relaxed resize-y">${esc(question.content)}</textarea>
+                        </div>
+                        <div class="space-y-2">
+                            ${opts.map((o, i) => `
+                                <div>
+                                    <label class="block text-xs font-medium text-text-muted mb-1" for="edit-o-${o.id}">Opción ${i + 1}</label>
+                                    <textarea id="edit-o-${o.id}" rows="2" data-opt-id="${o.id}" class="rep-edit-opt w-full px-3 py-2 rounded-lg border border-border-subtle bg-background text-text-main text-sm font-mono leading-relaxed resize-y">${esc(o.content)}</textarea>
+                                </div>`).join("")}
+                        </div>
+                        <p class="rep-edit-error hidden text-xs text-danger-text m-0" role="alert"></p>
+                        <div class="flex justify-end gap-2">
+                            <button type="button" class="rep-edit-cancel px-3 py-1.5 text-xs font-medium text-text-muted hover:text-text-main bg-transparent border border-border-subtle hover:bg-surface-hover rounded-lg transition-colors cursor-pointer">Cancelar</button>
+                            <button type="button" class="rep-edit-save px-3 py-1.5 text-xs font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors border-none cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed">Guardar texto</button>
+                        </div>
+                    </div>
+
                     <!-- Acciones -->
                     <div class="flex flex-wrap gap-2 pt-2 border-t border-border-subtle">
                         <button class="rep-accept-btn flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-white bg-green-600 hover:bg-green-700 rounded-lg transition-colors border-none cursor-pointer">
@@ -260,7 +283,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                         <button class="rep-reject-btn flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-white bg-red-600 hover:bg-red-700 rounded-lg transition-colors border-none cursor-pointer">
                             <span class="material-icons text-[14px]">close</span> Rechazar
                         </button>
-                        <button class="rep-delete-btn flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-text-muted hover:text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20 border border-border-subtle hover:border-red-400 rounded-lg transition-colors bg-transparent cursor-pointer">
+                        <button class="rep-edit-btn flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-blue-700 dark:text-blue-300 bg-blue-50 dark:bg-blue-900/20 hover:bg-blue-100 dark:hover:bg-blue-900/30 border border-blue-200 dark:border-blue-800 rounded-lg transition-colors cursor-pointer">
+                            <span class="material-icons text-[14px]">edit</span> Editar texto
+                        </button>
+                        <button class="rep-delete-btn flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-text-muted hover:text-danger-text hover:bg-red-50 dark:hover:bg-red-900/20 border border-border-subtle hover:border-red-400 rounded-lg transition-colors bg-transparent cursor-pointer">
                             <span class="material-icons text-[14px]">delete</span> Eliminar pregunta
                         </button>
                     </div>
@@ -272,13 +298,104 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         list.querySelectorAll("[data-question-id]").forEach(card => {
             const questionId = card.dataset.questionId;
 
+            // ── Editar texto de la pregunta / opciones ──────────────────────
+            const panel     = card.querySelector(".rep-edit-panel");
+            const contentEl = card.querySelector(".rep-edit-content");
+            const errorEl   = card.querySelector(".rep-edit-error");
+            const saveBtn   = card.querySelector(".rep-edit-save");
+            const question  = questionsById[questionId];
+
+            const resetEditForm = () => {
+                contentEl.value = question.content;
+                card.querySelectorAll(".rep-edit-opt").forEach(t => {
+                    t.value = (question.options || []).find(o => o.id === t.dataset.optId)?.content ?? "";
+                });
+                errorEl.classList.add("hidden");
+            };
+            const closeEdit = () => panel.classList.add("hidden");
+
+            card.querySelector(".rep-edit-btn")?.addEventListener("click", () => {
+                const opening = panel.classList.contains("hidden");
+                if (opening) { resetEditForm(); panel.classList.remove("hidden"); contentEl.focus(); }
+                else closeEdit();
+            });
+            card.querySelector(".rep-edit-cancel")?.addEventListener("click", closeEdit);
+
+            const showEditError = (msg) => { errorEl.textContent = msg; errorEl.classList.remove("hidden"); };
+
+            // Lee el formulario: { error } | { content, opts, changed }. Solo cuentan las
+            // opciones cuyo texto ha cambiado.
+            const readEdit = () => {
+                const content = contentEl.value.trim();
+                if (!content) return { error: "El enunciado no puede estar vacío." };
+                const opts = [];
+                for (const t of card.querySelectorAll(".rep-edit-opt")) {
+                    const val  = t.value.trim();
+                    const orig = (question.options || []).find(o => o.id === t.dataset.optId);
+                    if (!val) return { error: "El texto de una opción no puede estar vacío." };
+                    if (orig && val !== orig.content) opts.push({ id: orig.id, content: val });
+                }
+                return { content, opts, changed: content !== question.content || opts.length > 0 };
+            };
+            // Guarda la edición abierta. Devuelve true si se guardó o no había nada
+            // pendiente, y false si falló (el error queda visible en el panel).
+            const saveEdits = async () => {
+                if (panel.classList.contains("hidden")) return true;
+                const edit = readEdit();
+                if (edit.error) { showEditError(edit.error); return false; }
+                if (!edit.changed) return true;
+
+                saveBtn.disabled = true;
+                saveBtn.textContent = "Guardando…";
+                errorEl.classList.add("hidden");
+
+                const { error } = await getDb().rpc("admin_update_question", {
+                    p_question_id: questionId,
+                    p_content: edit.content,
+                    p_options: edit.opts.length ? edit.opts : null,
+                });
+
+                saveBtn.disabled = false;
+                saveBtn.textContent = "Guardar texto";
+                if (error) {
+                    showEditError(/admin_update_question|schema cache/i.test(error.message)
+                        ? "Falta aplicar la migración 018_admin_update_question.sql en Supabase."
+                        : "Error al guardar: " + error.message);
+                    return false;
+                }
+
+                // Refleja los cambios en la tarjeta y en los datos en memoria.
+                question.content = edit.content;
+                card.querySelector(".rep-q-text").textContent = truncate(edit.content);
+                for (const c of edit.opts) {
+                    const o = (question.options || []).find(x => x.id === c.id);
+                    if (o) o.content = c.content;
+                    const span = card.querySelector(`.rep-opt-text[data-opt-id="${c.id}"]`);
+                    if (span) span.textContent = c.content;
+                }
+                return true;
+            };
+
+            saveBtn?.addEventListener("click", async () => {
+                if (await saveEdits()) closeEdit();
+            });
+
             card.querySelector(".rep-accept-btn")?.addEventListener("click", () => {
                 const selected = card.querySelector(`input[name="correct-opt-${questionId}"]:checked`)?.value;
                 if (!selected) { alert("Selecciona la opción correcta primero."); return; }
+                // Edición abierta: se valida ya y, si hay cambios, se guardarán al confirmar.
+                const edit = panel.classList.contains("hidden") ? null : readEdit();
+                if (edit?.error) { showEditError(edit.error); return; }
+                const pending = !!edit?.changed;
                 openConfirm(
-                    "¿Aceptar el reporte y actualizar la respuesta correcta?",
+                    pending
+                        ? "¿Aceptar el reporte? Se guardará también el texto que has editado y se actualizará la respuesta correcta."
+                        : "¿Aceptar el reporte y actualizar la respuesta correcta?",
                     "Aceptar y corregir", "bg-green-600 hover:bg-green-700",
                     async () => {
+                        // Primero el texto editado: si falla, no se acepta el reporte.
+                        if (!(await saveEdits())) return;
+                        closeEdit();
                         const db = getDb();
                         const { error } = await db.rpc("accept_report", { p_question_id: questionId, p_correct_option_id: selected });
                         if (error) { alert("Error al aceptar el reporte: " + error.message); return; }

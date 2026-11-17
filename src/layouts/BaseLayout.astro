@@ -17,6 +17,8 @@ const supabaseAnonKey = import.meta.env.PUBLIC_SUPABASE_ANON_KEY ?? '';
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+		<meta name="theme-color" content="#f8fafc" media="(prefers-color-scheme: light)" />
+		<meta name="theme-color" content="#020617" media="(prefers-color-scheme: dark)" />
 		<title>{title}</title>
 		<link rel="icon" type="image/png" href="/resources/images/logo.png" />
 		
@@ -48,23 +50,24 @@ const supabaseAnonKey = import.meta.env.PUBLIC_SUPABASE_ANON_KEY ?? '';
 		</script>
 	</head>
 	<body class="min-h-screen bg-background text-text-main flex justify-center pt-[90px] pb-[40px] m-0 box-border">
+		<a href="#main" class="skip-link">Saltar al contenido</a>
 		<div id="app-shell" class="w-full">
-		<header class="fixed top-0 left-0 right-0 z-50 flex justify-between items-center bg-surface px-5 py-2.5 shadow-sm border-b border-border-subtle transition-colors backdrop-blur-md bg-opacity-90">
+		<header class="fixed top-0 left-0 right-0 z-50 flex justify-between items-center bg-surface/75 backdrop-blur-xl backdrop-saturate-150 px-5 py-2.5 border-b border-border-subtle/70 transition-colors">
 			
-			<a href="https://github.com/informaticatestua/Informatica-Test-UA" class="inline-block p-2 mr-2 text-text-muted hover:text-text-main hover:bg-surface-hover rounded-full transition-colors" target="_blank" rel="noopener noreferrer">
+			<a href="https://github.com/informaticatestua/Informatica-Test-UA" aria-label="Repositorio en GitHub" class="inline-flex p-2.5 mr-1 text-text-muted hover:text-text-main hover:bg-surface-hover rounded-full transition-colors" target="_blank" rel="noopener noreferrer">
 				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
 					<path d="M12 1.27a11 11 0 00-3.48 21.46c.55.09.73-.28.73-.55v-1.84c-3.03.64-3.67-1.46-3.67-1.46-.55-1.29-1.28-1.65-1.28-1.65-.92-.65.1-.65.1-.65 1.1 0 1.73 1.1 1.73 1.1.92 1.65 2.57 1.2 3.21.92a2 2 0 01.64-1.47c-2.47-.27-5.04-1.19-5.04-5.5 0-1.1.46-2.1 1.2-2.84a3.76 3.76 0 010-2.93s.91-.28 3.11 1.1c1.8-.49 3.7-.49 5.5 0 2.1-1.38 3.02-1.1 3.02-1.1a3.76 3.76 0 010 2.93c.83.74 1.2 1.74 1.2 2.94 0 4.21-2.57 5.13-5.04 5.4.45.37.82.92.82 2.02v3.03c0 .27.1.64.73.55A11 11 0 0012 1.27"></path>
 				</svg>
 			</a>
 
-			<a href="https://discord.gg/8JUteVuTu" class="inline-block p-2 mr-2 text-text-muted hover:text-text-main hover:bg-surface-hover rounded-full transition-colors" target="_blank" rel="noopener noreferrer" aria-label="Discord">
+			<a href="https://discord.gg/8JUteVuTu" class="inline-flex p-2.5 mr-1 text-text-muted hover:text-text-main hover:bg-surface-hover rounded-full transition-colors" target="_blank" rel="noopener noreferrer" aria-label="Discord">
 				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
 					<path d="M20.32 4.37a19.8 19.8 0 00-4.89-1.52.07.07 0 00-.08.04c-.21.38-.45.86-.61 1.25a18.27 18.27 0 00-5.48 0 12.6 12.6 0 00-.62-1.25.08.08 0 00-.08-.04c-1.7.3-3.35.81-4.89 1.52a.07.07 0 00-.03.03C.53 9.05-.32 13.58.1 18.06a.08.08 0 00.03.06 19.9 19.9 0 006 3.03.08.08 0 00.09-.03c.46-.63.87-1.3 1.23-2a.08.08 0 00-.04-.11 13.1 13.1 0 01-1.87-.9.08.08 0 01-.01-.13c.13-.09.25-.19.37-.28a.08.08 0 01.08-.01c3.93 1.8 8.18 1.8 12.06 0a.08.08 0 01.08.01c.12.1.24.19.37.28a.08.08 0 010 .13c-.6.35-1.22.65-1.87.9a.08.08 0 00-.04.12c.36.7.78 1.36 1.23 2a.08.08 0 00.09.03 19.85 19.85 0 006.01-3.03.08.08 0 00.03-.06c.5-5.18-.84-9.67-3.55-13.66a.06.06 0 00-.03-.03zM8.02 15.33c-1.18 0-2.16-1.08-2.16-2.42 0-1.33.96-2.42 2.16-2.42 1.21 0 2.18 1.1 2.16 2.42 0 1.34-.96 2.42-2.16 2.42zm7.97 0c-1.18 0-2.16-1.08-2.16-2.42 0-1.33.96-2.42 2.16-2.42 1.21 0 2.18 1.1 2.16 2.42 0 1.34-.95 2.42-2.16 2.42z"></path>
 				</svg>
 			</a>
 
 			<a href="/" class="absolute left-1/2 -translate-x-1/2 flex items-center justify-center no-underline hover:opacity-80 transition-opacity pointer-events-auto">
-				<span class="title-main font-heading font-extrabold tracking-wide text-text-main">
+				<span class="title-main font-heading font-extrabold tracking-tight text-text-main">
 					<span class="sm:hidden">Tests UA</span>
 					<span class="hidden sm:inline whitespace-nowrap">Ing. Informática Tests UA</span>
 				</span>
@@ -80,8 +83,8 @@ const supabaseAnonKey = import.meta.env.PUBLIC_SUPABASE_ANON_KEY ?? '';
 				</div>
 				<!-- ─── Notificaciones (solo visible con sesión) ──────────── -->
 				<div id="notif-wrapper" class="hidden relative mt-1">
-					<button id="notif-btn" class="relative p-2 text-text-muted hover:text-blue-500 bg-transparent border-none rounded-full transition-colors cursor-pointer flex items-center justify-center" aria-label="Notificaciones">
-						<span class="material-icons mi-md">notifications</span>
+					<button id="notif-btn" type="button" class="relative p-2.5 text-text-muted hover:text-accent-text bg-transparent border-none rounded-full transition-colors cursor-pointer flex items-center justify-center" aria-label="Notificaciones" aria-haspopup="true" aria-expanded="false" aria-controls="notif-dropdown">
+						<span class="material-icons mi-md" aria-hidden="true">notifications</span>
 						<span id="notif-badge" class="hidden absolute top-1 right-1 min-w-[16px] h-4 px-1 bg-red-500 rounded-full border-2 border-surface flex items-center justify-center">
 							<span id="notif-count" class="text-white font-bold leading-none" style="font-size:0.55rem;">0</span>
 						</span>
@@ -90,36 +93,36 @@ const supabaseAnonKey = import.meta.env.PUBLIC_SUPABASE_ANON_KEY ?? '';
 					<div id="notif-dropdown" class="hidden absolute right-0 top-full mt-2 w-80 bg-surface border border-border-subtle rounded-xl shadow-lg z-[200] overflow-hidden">
 						<div class="px-4 py-3 border-b border-border-subtle flex items-center justify-between">
 							<span class="font-heading font-semibold text-text-main text-sm">Notificaciones</span>
-							<button id="notif-mark-all-btn" class="text-xs text-blue-500 hover:text-blue-600 bg-transparent border-none cursor-pointer p-0 font-medium transition-colors">Marcar todos como leídos</button>
+							<button id="notif-mark-all-btn" class="text-xs text-accent-text hover:underline bg-transparent border-none cursor-pointer p-0 font-medium transition-colors">Marcar todos como leídos</button>
 						</div>
 						<div id="notif-list" class="max-h-72 overflow-y-auto divide-y divide-border-subtle"></div>
 					</div>
 				</div>
 				<!-- ─── Auth: botón login (visible si no hay sesión) ───────── -->
-				<a id="auth-login-btn" href="/login" class="hidden mt-1 ml-1 px-2 sm:px-3 py-1.5 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors no-underline flex items-center gap-1.5">
-					<span class="material-icons mi-sm">login</span>
-					<span class="hidden sm:inline">Entrar</span>
+				<a id="auth-login-btn" href="/login" aria-label="Entrar" class="hidden mt-1 ml-1 px-3 py-1.5 min-h-[40px] text-sm font-semibold text-white bg-[rgb(var(--btn-primary))] hover:bg-[rgb(var(--btn-primary-hover))] rounded-lg transition-colors no-underline flex items-center gap-1.5">
+					<span class="material-icons mi-sm" aria-hidden="true">login</span>
+					<span class="hidden sm:inline" aria-hidden="true">Entrar</span>
 				</a>
 
 				<!-- ─── Auth: avatar (visible si hay sesión) ──────────────── -->
 				<div id="auth-user-btn" class="hidden relative mt-1 ml-1">
-					<button id="auth-avatar-trigger" class="flex items-center justify-center w-8 h-8 rounded-full overflow-hidden border-2 border-border-subtle hover:border-blue-400 transition-colors cursor-pointer bg-surface-hover p-0" aria-label="Mi cuenta">
-						<img id="auth-user-avatar" src="" alt="Avatar" class="hidden w-full h-full object-cover" />
+					<button id="auth-avatar-trigger" type="button" class="flex items-center justify-center w-10 h-10 rounded-full overflow-hidden border-2 border-border-subtle hover:border-accent transition-colors cursor-pointer bg-surface-hover p-0" aria-label="Mi cuenta" aria-haspopup="menu" aria-expanded="false" aria-controls="auth-dropdown">
+						<img id="auth-user-avatar" src="" alt="" class="hidden w-full h-full object-cover" />
 						<span id="auth-user-initial" class="text-text-main font-bold text-sm leading-none hidden"></span>
 					</button>
 					<!-- Dropdown -->
-					<div id="auth-dropdown" class="hidden absolute right-0 top-full mt-2 w-48 bg-surface border border-border-subtle rounded-xl shadow-lg z-[200] overflow-hidden py-1">
-						<a href="/perfil" class="flex items-center gap-2 px-4 py-2.5 text-sm text-text-main hover:bg-surface-hover transition-colors no-underline">
-							<span class="material-icons mi-sm text-text-muted">person</span>
+					<div id="auth-dropdown" role="menu" aria-label="Cuenta" class="hidden absolute right-0 top-full mt-2 w-52 bg-surface border border-border-subtle rounded-xl shadow-lg z-[200] overflow-hidden py-1">
+						<a href="/perfil" role="menuitem" class="flex items-center gap-2 px-4 py-3 text-sm text-text-main hover:bg-surface-hover focus-visible:bg-surface-hover transition-colors no-underline">
+							<span class="material-icons mi-sm text-text-muted" aria-hidden="true">person</span>
 							Mi perfil
 						</a>
-						<a id="auth-admin-link" href="/admin" class="hidden items-center gap-2 px-4 py-2.5 text-sm text-purple-600 dark:text-purple-400 hover:bg-surface-hover transition-colors no-underline">
-							<span class="material-icons mi-sm">admin_panel_settings</span>
+						<a id="auth-admin-link" href="/admin" role="menuitem" class="hidden items-center gap-2 px-4 py-3 text-sm text-purple-700 dark:text-purple-300 hover:bg-surface-hover focus-visible:bg-surface-hover transition-colors no-underline">
+							<span class="material-icons mi-sm" aria-hidden="true">admin_panel_settings</span>
 							Panel admin
 						</a>
-						<hr class="border-border-subtle my-1 mx-2" />
-						<button id="auth-logout-btn" class="w-full flex items-center gap-2 px-4 py-2.5 text-sm text-red-500 hover:bg-surface-hover transition-colors bg-transparent border-none cursor-pointer text-left">
-							<span class="material-icons mi-sm">logout</span>
+						<hr class="border-border-subtle my-1 mx-2" role="separator" />
+						<button id="auth-logout-btn" type="button" role="menuitem" class="w-full flex items-center gap-2 px-4 py-3 text-sm text-danger-text hover:bg-surface-hover focus-visible:bg-surface-hover transition-colors bg-transparent border-none cursor-pointer text-left">
+							<span class="material-icons mi-sm" aria-hidden="true">logout</span>
 							Cerrar sesión
 						</button>
 					</div>
@@ -131,16 +134,16 @@ const supabaseAnonKey = import.meta.env.PUBLIC_SUPABASE_ANON_KEY ?? '';
 		<div id="ai-settings-overlay" class="hidden fixed inset-0 z-[300] bg-black/60 backdrop-blur-sm"></div>
 
 		<!-- ─── AI Settings modal ────────────────────────────────────────────── -->
-		<div id="ai-settings-modal" class="hidden fixed inset-0 z-[301] flex items-center justify-center p-4">
+		<div id="ai-settings-modal" class="hidden fixed inset-0 z-[301] flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="ai-settings-title">
 			<div class="ai-settings-box w-full max-w-md bg-surface rounded-2xl shadow-2xl border border-border-subtle overflow-hidden">
 				<div class="h-1 w-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"></div>
 				<div class="p-6">
 					<div class="flex items-center justify-between mb-5">
 						<div class="flex items-center gap-2">
 							<span class="material-icons text-blue-500">auto_awesome</span>
-							<h3 class="font-heading font-bold text-text-main text-lg m-0">Configuración de IA</h3>
+							<h3 id="ai-settings-title" class="font-heading font-bold text-text-main text-lg m-0">Configuración de IA</h3>
 						</div>
-						<button id="ai-settings-close" class="p-1 text-text-muted hover:text-text-main rounded-full hover:bg-surface-hover transition-colors cursor-pointer border-none bg-transparent" aria-label="Cerrar">
+						<button id="ai-settings-close" type="button" class="p-2 text-text-muted hover:text-text-main rounded-full hover:bg-surface-hover transition-colors cursor-pointer border-none bg-transparent" aria-label="Cerrar">
 							<span class="material-icons">close</span>
 						</button>
 					</div>
@@ -205,84 +208,6 @@ const supabaseAnonKey = import.meta.env.PUBLIC_SUPABASE_ANON_KEY ?? '';
 			</div>
 		</div>
 
-		<!-- ─── AI Onboarding overlay ──────────────────────────────────────── -->
-		<div id="ai-onboarding-overlay" class="hidden fixed inset-0 z-[400] bg-black/70 backdrop-blur-sm"></div>
-
-		<!-- ─── AI Onboarding modal ────────────────────────────────────────── -->
-		<div id="ai-onboarding-modal" class="hidden fixed inset-0 z-[401] flex items-center justify-center p-4">
-			<div class="w-full max-w-md bg-surface rounded-2xl shadow-2xl border border-border-subtle overflow-hidden">
-				<div class="h-1 w-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"></div>
-				<div class="p-6">
-
-					<!-- Cabecera -->
-					<div class="flex items-start justify-between mb-4">
-						<div class="flex items-center gap-3">
-							<div class="flex items-center justify-center w-10 h-10 rounded-xl bg-blue-100 dark:bg-blue-900/40 flex-shrink-0">
-								<span class="material-icons text-blue-500">auto_awesome</span>
-							</div>
-							<div>
-								<h3 class="font-heading font-bold text-text-main text-base m-0 leading-tight">Nueva funcionalidad: Explicaciones con IA</h3>
-								<p class="text-text-muted text-xs mt-0.5 m-0">Obtén explicaciones detalladas de cada respuesta</p>
-							</div>
-						</div>
-						<button id="ai-onboarding-close" class="p-1 text-text-muted hover:text-text-main rounded-full hover:bg-surface-hover transition-colors cursor-pointer border-none bg-transparent flex-shrink-0" aria-label="Cerrar">
-							<span class="material-icons">close</span>
-						</button>
-					</div>
-
-					<!-- Pasos -->
-					<ol class="space-y-3 mb-6">
-						<li class="flex items-start gap-3">
-							<span class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-600 text-white text-xs font-bold flex items-center justify-center mt-0.5">1</span>
-							<div>
-								<p class="text-text-main text-sm font-medium m-0">Abre la configuración de IA</p>
-								<p class="text-text-muted text-xs mt-0.5 m-0">Pulsa el icono <span class="material-icons align-middle text-blue-500" style="font-size:0.95rem;">auto_awesome</span> en la barra superior.</p>
-							</div>
-						</li>
-						<li class="flex items-start gap-3">
-							<span class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-600 text-white text-xs font-bold flex items-center justify-center mt-0.5">2</span>
-							<div>
-								<p class="text-text-main text-sm font-medium m-0">Elige un proveedor</p>
-								<p class="text-text-muted text-xs mt-0.5 m-0">Selecciona <strong>Gemini</strong>, <strong>Groq</strong> o <strong>DeepSeek</strong>. Los tres ofrecen planes gratuitos.</p>
-							</div>
-						</li>
-						<li class="flex items-start gap-3">
-							<span class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-600 text-white text-xs font-bold flex items-center justify-center mt-0.5">3</span>
-							<div>
-								<p class="text-text-main text-sm font-medium m-0">Obtén una API Key gratuita</p>
-								<p class="text-text-muted text-xs mt-0.5 m-0">Regístrate en la web del proveedor y genera una clave. Pégala en el campo correspondiente.</p>
-							</div>
-						</li>
-						<li class="flex items-start gap-3">
-							<span class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-600 text-white text-xs font-bold flex items-center justify-center mt-0.5">4</span>
-							<div>
-								<p class="text-text-main text-sm font-medium m-0">Guarda y aplica</p>
-								<p class="text-text-muted text-xs mt-0.5 m-0">Haz clic en <strong>Guardar y aplicar</strong>. La configuración se guarda en tu navegador.</p>
-							</div>
-						</li>
-						<li class="flex items-start gap-3">
-							<span class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-600 text-white text-xs font-bold flex items-center justify-center mt-0.5">5</span>
-							<div>
-								<p class="text-text-main text-sm font-medium m-0">¡Úsala al responder!</p>
-								<p class="text-text-muted text-xs mt-0.5 m-0">Tras contestar una pregunta, pulsa el botón <strong>Explicar con IA</strong> para recibir una explicación detallada.</p>
-							</div>
-						</li>
-					</ol>
-
-					<!-- Pie -->
-					<div class="flex items-center justify-between gap-3">
-						<label class="flex items-center gap-2 cursor-pointer select-none">
-							<input id="ai-onboarding-no-show" type="checkbox" class="w-4 h-4 accent-blue-600 rounded cursor-pointer" />
-							<span class="text-text-muted text-xs">No volver a mostrar</span>
-						</label>
-						<button id="ai-onboarding-ok" class="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm font-semibold transition-colors cursor-pointer border-none">
-							¡Entendido!
-						</button>
-					</div>
-				</div>
-			</div>
-		</div>
-
 		<!-- ─── Credenciales Supabase (anon key pública, seguro exponer) ── -->
 		<script is:inline define:vars={{ supabaseUrl, supabaseAnonKey }}>
 			window.SUPABASE_URL      = supabaseUrl;
@@ -296,84 +221,80 @@ const supabaseAnonKey = import.meta.env.PUBLIC_SUPABASE_ANON_KEY ?? '';
 		<script is:inline src="/resources/js/auth.js"></script>
 		<script is:inline src="/resources/js/quiz-data.js"></script>
 
-		<main class="w-full">
+		<main id="main" tabindex="-1" class="w-full">
 			<slot />
 		</main>
 		</div>
 
 		
-		<script is:inline>
-			(function () {
-				const LS_KEY = "ai_onboarding_seen_v1";
-				const $ = (id) => document.getElementById(id);
-
-				function close(persist) {
-					$("ai-onboarding-modal")?.classList.add("hidden");
-					$("ai-onboarding-overlay")?.classList.add("hidden");
-					document.body.classList.remove("overflow-hidden");
-					if (persist) localStorage.setItem(LS_KEY, "1");
-				}
-
-				function init() {
-					if (localStorage.getItem(LS_KEY)) return;
-					$("ai-onboarding-modal")?.classList.remove("hidden");
-					$("ai-onboarding-overlay")?.classList.remove("hidden");
-					document.body.classList.add("overflow-hidden");
-
-					$("ai-onboarding-ok")?.addEventListener("click", function () {
-						const noShow = $("ai-onboarding-no-show")?.checked;
-						close(noShow);
-					});
-					$("ai-onboarding-close")?.addEventListener("click", function () {
-						close(false);
-					});
-					$("ai-onboarding-overlay")?.addEventListener("click", function () {
-						close(false);
-					});
-					document.addEventListener("keydown", function (e) {
-						if (e.key === "Escape" && !$("ai-onboarding-modal")?.classList.contains("hidden")) {
-							close(false);
-						}
-					});
-				}
-
-				if (document.readyState === "loading") {
-					document.addEventListener("DOMContentLoaded", init);
-				} else {
-					init();
-				}
-			})();
-		</script>
-
-		<!-- ─── Auth dropdown ───────────────────────────────────────────────── -->
+		<!-- ─── Menús de cabecera (cuenta + notificaciones): ARIA, Escape y teclado ───── -->
 		<script is:inline>
 		(function () {
 			"use strict";
-			function initAuthDropdown() {
-				const trigger  = document.getElementById("auth-avatar-trigger");
-				const dropdown = document.getElementById("auth-dropdown");
+			function initHeaderMenus() {
+				const trigger   = document.getElementById("auth-avatar-trigger");
+				const dropdown  = document.getElementById("auth-dropdown");
 				const logoutBtn = document.getElementById("auth-logout-btn");
+				const bell      = document.getElementById("notif-btn");
+				const notifDrop = document.getElementById("notif-dropdown");
 
-				if (!trigger || !dropdown) return;
+				// aria-expanded siempre refleja el estado real del panel, lo abra quien lo abra
+				function mirrorExpanded(btn, panel) {
+					if (!btn || !panel) return;
+					const sync = () => btn.setAttribute("aria-expanded", String(!panel.classList.contains("hidden")));
+					new MutationObserver(sync).observe(panel, { attributes: true, attributeFilter: ["class"] });
+					sync();
+				}
+				mirrorExpanded(trigger, dropdown);
+				mirrorExpanded(bell, notifDrop);
 
-				trigger.addEventListener("click", function (e) {
-					e.stopPropagation();
-					dropdown.classList.toggle("hidden");
-				});
+				if (trigger && dropdown) {
+					const items = () => [...dropdown.querySelectorAll('[role="menuitem"]')].filter(el => el.offsetParent !== null);
+					const close = (returnFocus) => {
+						dropdown.classList.add("hidden");
+						if (returnFocus) trigger.focus();
+					};
+					trigger.addEventListener("click", function (e) {
+						e.stopPropagation();
+						dropdown.classList.toggle("hidden");
+					});
+					trigger.addEventListener("keydown", function (e) {
+						if (e.key === "ArrowDown") {
+							e.preventDefault();
+							dropdown.classList.remove("hidden");
+							items()[0]?.focus();
+						}
+					});
+					dropdown.addEventListener("keydown", function (e) {
+						const list = items();
+						const i = list.indexOf(document.activeElement);
+						if (e.key === "ArrowDown") { e.preventDefault(); list[(i + 1) % list.length]?.focus(); }
+						else if (e.key === "ArrowUp") { e.preventDefault(); list[(i - 1 + list.length) % list.length]?.focus(); }
+						else if (e.key === "Home") { e.preventDefault(); list[0]?.focus(); }
+						else if (e.key === "End") { e.preventDefault(); list[list.length - 1]?.focus(); }
+						else if (e.key === "Tab") { close(false); }
+					});
+					document.addEventListener("click", function () { close(false); });
+					logoutBtn?.addEventListener("click", function () { window.Auth?.logout(); });
+				}
 
-				document.addEventListener("click", function () {
-					dropdown.classList.add("hidden");
-				});
-
-				logoutBtn?.addEventListener("click", function () {
-					window.Auth?.logout();
+				// Escape cierra cualquiera de los dos menús y devuelve el foco a su botón
+				document.addEventListener("keydown", function (e) {
+					if (e.key !== "Escape") return;
+					if (dropdown && !dropdown.classList.contains("hidden")) {
+						dropdown.classList.add("hidden");
+						trigger?.focus();
+					} else if (notifDrop && !notifDrop.classList.contains("hidden")) {
+						notifDrop.classList.add("hidden");
+						bell?.focus();
+					}
 				});
 			}
 
 			if (document.readyState === "loading") {
-				document.addEventListener("DOMContentLoaded", initAuthDropdown);
+				document.addEventListener("DOMContentLoaded", initHeaderMenus);
 			} else {
-				initAuthDropdown();
+				initHeaderMenus();
 			}
 		})();
 		</script>

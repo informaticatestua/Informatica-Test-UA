@@ -8,19 +8,29 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 
 <BaseLayout title={`${subjectTitle} • Tests UA`}>
 	<div id="main-container" class="flex flex-col items-center justify-center m-auto w-full">
-		<div id="app" class="relative w-max max-w-[95vw] text-center bg-surface shadow-lg shadow-black/5 rounded-2xl px-[40px] py-[30px] mx-auto my-[20px] box-border border border-border-subtle">
-			
-			<div class="absolute top-[10px] right-[10px] sm:top-[15px] sm:right-[15px] flex items-center justify-end gap-1.5 z-10 w-full sm:w-auto pr-[10px] sm:pr-0 pl-[40px] pointer-events-none">
-				<button id="explicar-ia-btn"  class="pointer-events-auto p-[8px] bg-gradient-to-br from-blue-500 to-violet-600 text-white rounded-xl shadow-sm hover:shadow-md hover:-translate-y-px transition-all flex items-center justify-center cursor-pointer border-none disabled:opacity-40 disabled:cursor-not-allowed" title="Explicar con IA" disabled>
-					<span class="material-icons mi-sm">auto_awesome</span>
-				</button>
-				<button id="report-btn"  class="pointer-events-auto p-[8px] bg-surface border border-border-subtle rounded-xl text-text-muted hover:text-red-500 hover:border-red-500 hover:bg-red-50 dark:hover:bg-red-900/20 hover:-translate-y-px transition-all flex items-center justify-center group cursor-pointer" title="Reportar un error en esta pregunta">
-					<span class="material-icons mi-sm group-hover:text-red-500 transition-colors">flag</span>
-				</button>
-				<button id="copyButton" class="pointer-events-auto p-[8px] bg-surface z-10 border border-border-subtle rounded-xl text-text-muted hover:text-text-main hover:bg-surface-hover hover:-translate-y-px transition-all flex items-center justify-center cursor-pointer" class="hidden" title="Copiar pregunta">
-					<span class="material-icons mi-sm">content_copy</span>
-					<span id="copyText" class="sr-only">Copiar</span>
-				</button>
+	<h1 class="sr-only">{subjectTitle} · Test de práctica</h1>
+		<div id="app" class="relative w-full max-w-[780px] text-center bg-surface shadow-lg shadow-black/5 rounded-2xl px-[40px] pt-[26px] pb-[30px] mx-auto my-[20px] box-border border border-border-subtle overflow-hidden">
+
+			<!-- Barra de progreso (se actualiza desde main.js → actualizarTotalPreguntasLabel) -->
+			<div id="quiz-progress" class="quiz-progress" role="progressbar" aria-label="Progreso del test" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+				<div id="quiz-progress-bar" class="quiz-progress-bar"></div>
+			</div>
+
+			<!-- Barra superior: posición actual + acciones sobre la pregunta -->
+			<div id="quiz-toolbar" class="quiz-toolbar">
+				<span id="quiz-progress-label" class="quiz-progress-label" aria-live="polite"></span>
+				<div class="quiz-toolbar-actions">
+					<button id="explicar-ia-btn" class="quiz-tool-btn quiz-tool-btn--ai" title="Explicar con IA" aria-label="Explicar con IA" disabled>
+						<span class="material-icons mi-sm">auto_awesome</span>
+					</button>
+					<button id="report-btn" class="quiz-tool-btn quiz-tool-btn--danger" title="Reportar un error en esta pregunta" aria-label="Reportar un error en esta pregunta">
+						<span class="material-icons mi-sm">flag</span>
+					</button>
+					<button id="copyButton" class="quiz-tool-btn" title="Copiar pregunta" aria-label="Copiar pregunta">
+						<span class="material-icons mi-sm">content_copy</span>
+						<span id="copyText" class="sr-only">Copiar</span>
+					</button>
+				</div>
 			</div>
 
 			<!-- ── Selector de modo (al entrar en una asignatura) ──────── -->
@@ -66,13 +76,13 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 				</div>
 			</section>
 
-			<div id="pregunta" class="text-left text-[0.95em] md:text-[1em] mb-[15px] mt-[25px] sm:mt-[5px] sm:pr-[180px]"></div>
+			<div id="pregunta" class="quiz-question text-left"></div>
 
 			<div id="report-warning" class="report-warning hidden" role="status" aria-live="polite" aria-atomic="true"></div>
 
 			<form id="opciones" class="text-left flex flex-col mt-[1em] w-full gap-[10px] sm:gap-[12px] min-w-[300px]"></form>
 
-			<div id="resultado" class="mt-[15px] font-semibold text-center min-h-[24px]"></div>
+			<div id="resultado" class="mt-3 font-semibold text-center min-h-[24px]"></div>
 
 			<section id="session-results" class="hidden text-left">
 				<div class="results-hero">
@@ -301,9 +311,9 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 					</div>
 
 					<!-- Error -->
-					<div id="aigen-error-box" class="hidden mb-4 p-3 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-700/60 rounded-xl">
+					<div id="aigen-error-box" role="alert" class="hidden mb-4 p-3 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-700/60 rounded-xl">
 						<div class="flex items-start gap-2">
-							<span class="material-icons text-red-500 flex-shrink-0 mt-0.5" style="font-size:1rem;">error_outline</span>
+							<span class="material-icons text-danger-text flex-shrink-0 mt-0.5" style="font-size:1rem;">error_outline</span>
 							<p id="aigen-error-msg" class="text-red-700 dark:text-red-400 text-xs m-0 leading-relaxed"></p>
 						</div>
 					</div>
@@ -406,9 +416,9 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 				</div>
 
 				<!-- Error -->
-				<div id="ai-error" class="hidden p-4 bg-red-50 dark:bg-red-900/20 border border-red-300 dark:border-red-700 rounded-xl mb-3">
+				<div id="ai-error" role="alert" class="hidden p-4 bg-red-50 dark:bg-red-900/20 border border-red-300 dark:border-red-700 rounded-xl mb-3">
 					<div class="flex items-center gap-2 mb-1">
-						<span class="material-icons text-red-500" style="font-size:1rem;">error_outline</span>
+						<span class="material-icons text-danger-text" style="font-size:1rem;">error_outline</span>
 						<span class="font-semibold text-red-700 dark:text-red-400 text-sm">Error al generar la explicación</span>
 					</div>
 					<p id="ai-error-msg" class="text-red-600 dark:text-red-400 text-xs m-0 leading-relaxed"></p>
@@ -435,6 +445,7 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 						<textarea
 							id="ai-chat-input"
 							rows="2"
+							aria-label="Pregunta de seguimiento sobre la explicación"
 							placeholder="¿Tienes alguna duda sobre la explicación?"
 							class="flex-1 px-3 py-2 rounded-lg bg-background border border-border-subtle text-text-main text-sm focus:outline-none focus:border-blue-500 transition-colors resize-none"
 						></textarea>
@@ -443,7 +454,7 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 							class="flex-shrink-0 p-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors cursor-pointer border-none disabled:opacity-50 disabled:cursor-not-allowed"
 							aria-label="Enviar pregunta"
 						>
-							<span class="material-icons" style="font-size:1.1rem;">send</span>
+							<span class="material-icons" style="font-size:1.1rem;" aria-hidden="true">send</span>
 						</button>
 					</div>
 				</div>
@@ -457,6 +468,8 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
   body.mode-selector-active #action-buttons-container,
   body.mode-selector-active #stats-panel,
   body.mode-selector-active #quiz-mobile-stats,
+  body.mode-selector-active #quiz-toolbar,
+  body.mode-selector-active #quiz-progress,
   body.mode-selector-active #explicar-ia-btn,
   body.mode-selector-active #report-btn,
   body.mode-selector-active #copyButton,
@@ -528,7 +541,7 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 					</label>
 					<input id="exam-question-count" type="number" min="1" step="1" value="20" class="w-full px-3 py-2.5 rounded-lg bg-background border border-border-subtle text-text-main text-sm focus:outline-none focus:border-amber-500 transition-colors" />
 				</div>
-				<div id="exam-config-error" class="hidden p-3 bg-red-50 dark:bg-red-900/20 border border-red-300 dark:border-red-700 rounded-lg text-red-700 dark:text-red-400 text-sm"></div>
+				<div id="exam-config-error" role="alert" class="hidden p-3 bg-red-50 dark:bg-red-900/20 border border-red-300 dark:border-red-700 rounded-lg text-red-700 dark:text-red-400 text-sm"></div>
 			</div>
 
 			<button id="exam-start-btn" class="mt-6 w-full py-3 rounded-xl text-sm font-semibold cursor-pointer border-none flex items-center justify-center gap-2 transition-all text-white bg-amber-600 hover:bg-amber-700 shadow-sm">
@@ -571,7 +584,7 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 		<div class="p-5 sm:p-6">
 			<div class="flex items-center justify-between mb-5">
 				<div class="flex items-center gap-2">
-					<span class="material-icons text-red-500">flag</span>
+					<span class="material-icons text-danger-text">flag</span>
 					<h3 id="report-modal-title" class="font-heading font-bold text-text-main text-lg m-0">Reportar pregunta</h3>
 				</div>
 				<button id="report-close" class="p-1 text-text-muted hover:text-text-main rounded-full hover:bg-surface-hover transition-colors cursor-pointer border-none bg-transparent" aria-label="Cerrar">
@@ -581,10 +594,10 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 
 			<!-- Formulario -->
 			<div id="report-form-body" class="space-y-4">
-				<div id="report-error" class="hidden p-3 bg-red-50 dark:bg-red-900/20 border border-red-300 dark:border-red-700 rounded-lg text-red-700 dark:text-red-400 text-sm"></div>
+				<div id="report-error" role="alert" class="hidden p-3 bg-red-50 dark:bg-red-900/20 border border-red-300 dark:border-red-700 rounded-lg text-red-700 dark:text-red-400 text-sm"></div>
 
 				<div>
-					<label class="block text-sm font-medium text-text-main mb-1.5" for="report-details">Describe el problema <span class="text-red-500">*</span></label>
+					<label class="block text-sm font-medium text-text-main mb-1.5" for="report-details">Describe el problema <span class="text-danger-text">*</span></label>
 					<textarea id="report-details" rows="4" placeholder="Explica el problema con detalle…" class="w-full px-3 py-2.5 rounded-lg bg-background border border-border-subtle text-text-main text-sm focus:outline-none focus:border-blue-500 transition-colors resize-none"></textarea>
 				</div>
 
@@ -674,9 +687,105 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 		@apply px-[1em] py-[0.5em] text-[0.9em] border-none text-text-muted hover:text-text-main rounded-xl cursor-pointer whitespace-nowrap bg-transparent hover:bg-surface-hover transition-colors font-medium;
 	}
 
+	/* ── Progreso + barra superior del quiz ─────────────────────────── */
+	.quiz-progress {
+		@apply absolute top-0 left-0 right-0 h-[3px] bg-border-subtle/70;
+	}
+	.quiz-progress-bar {
+		@apply h-full rounded-r-full;
+		width: 0;
+		background: linear-gradient(90deg, rgb(var(--accent)), rgb(124 58 237));
+		transition: width 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+	}
+	.quiz-toolbar {
+		@apply flex items-center justify-between gap-3 mb-4 min-h-[36px];
+	}
+	.quiz-progress-label {
+		@apply text-[0.78rem] font-semibold tracking-wide text-text-muted tabular-nums;
+	}
+	.quiz-progress-label b {
+		@apply text-text-main font-bold;
+	}
+	.quiz-toolbar-actions {
+		@apply flex items-center gap-1.5 ml-auto;
+	}
+	.quiz-tool-btn {
+		@apply inline-flex items-center justify-center w-9 h-9 rounded-xl cursor-pointer
+			   border border-border-subtle bg-surface text-text-muted
+			   transition-all duration-200 hover:text-text-main hover:bg-surface-hover hover:-translate-y-px;
+	}
+	.quiz-tool-btn.hidden {
+		display: none;
+	}
+	.quiz-tool-btn--danger:hover {
+		@apply text-danger-text border-red-500/60 bg-red-500/10;
+	}
+	.quiz-tool-btn--ai {
+		@apply border-transparent text-white shadow-sm;
+		background: linear-gradient(135deg, rgb(var(--accent)), rgb(124 58 237));
+	}
+	.quiz-tool-btn--ai:hover {
+		@apply text-white shadow-md;
+		background: linear-gradient(135deg, rgb(var(--accent)), rgb(124 58 237));
+	}
+	.quiz-tool-btn--ai:disabled {
+		@apply opacity-40 cursor-not-allowed shadow-none hover:translate-y-0;
+	}
+
+
+	/* ── Transición entre preguntas y feedback de respuesta ─────────── */
+	:global(.quiz-enter) {
+		animation: quiz-enter 0.32s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+	}
+	@keyframes quiz-enter {
+		from { opacity: 0; transform: translateY(8px); }
+		to   { opacity: 1; transform: translateY(0); }
+	}
+	/* Las opciones entran en cascada corta */
+	:global(form#opciones.quiz-enter label) {
+		animation: quiz-enter 0.34s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+	}
+	:global(form#opciones.quiz-enter label:nth-child(2)) { animation-delay: 40ms; }
+	:global(form#opciones.quiz-enter label:nth-child(3)) { animation-delay: 80ms; }
+	:global(form#opciones.quiz-enter label:nth-child(4)) { animation-delay: 120ms; }
+	:global(form#opciones.quiz-enter label:nth-child(n+5)) { animation-delay: 160ms; }
+
+	:global(form#opciones label.correct .status-icon) {
+		animation: opt-pop 0.38s cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
+	}
+	:global(form#opciones label.incorrect) {
+		animation: opt-shake 0.36s ease-in-out backwards;
+	}
+	@keyframes opt-pop {
+		from { transform: scale(0.3); opacity: 0; }
+		to   { transform: scale(1);   opacity: 1; }
+	}
+	@keyframes opt-shake {
+		0%, 100% { transform: translateX(0); }
+		25%      { transform: translateX(-4px); }
+		75%      { transform: translateX(4px); }
+	}
+
+	/* Objetivos táctiles de 44px en pantallas táctiles */
+	@media (pointer: coarse) {
+		.quiz-tool-btn {
+			@apply w-11 h-11;
+		}
+	}
+
+	/* Enunciado: más protagonismo que las opciones */
+	.quiz-question {
+		@apply mb-5 text-[1.05rem] sm:text-[1.15rem] font-medium leading-relaxed text-text-main;
+		letter-spacing: -0.005em;
+	}
+
 	/* ── Barra de acciones del quiz ─────────────────────────────────── */
 	.quiz-actions {
-		@apply flex flex-col gap-3 mt-6 w-full pt-5 border-t border-border-subtle;
+		@apply flex flex-col gap-3 mt-5 w-full pt-4 border-t border-border-subtle;
+	}
+	/* El progreso vive ahora en la barra superior: se oculta el chip duplicado */
+	#mobile-total-preguntas {
+		display: none !important;
 	}
 	.quiz-actions-primary {
 		@apply grid gap-2 w-full;
@@ -695,10 +804,14 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 		@apply hidden sm:inline;
 	}
 	.quiz-verify-btn {
-		@apply px-4 py-2.5 text-[1em] border-none text-white rounded-lg cursor-pointer
-			   bg-blue-600 hover:bg-blue-700 transition-colors shadow-sm font-semibold
-			   min-h-[48px] disabled:opacity-50 disabled:cursor-not-allowed
-			   disabled:hover:bg-blue-600;
+		@apply px-4 py-2.5 text-[1em] border border-transparent text-white rounded-lg cursor-pointer
+			   bg-blue-600 hover:bg-blue-700 hover:-translate-y-px transition-all font-semibold
+			   min-h-[48px];
+		box-shadow: 0 6px 18px -6px rgb(37 99 235 / 0.55);
+	}
+	/* Deshabilitado: claramente inactivo (gris), no un azul "apagado" */
+	.quiz-verify-btn:disabled {
+		@apply bg-surface-hover text-text-muted border-border-subtle cursor-not-allowed shadow-none translate-y-0;
 	}
 
 	@media (min-width: 640px) {
@@ -712,7 +825,7 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 
 	@media (max-width: 767px) {
 		.quiz-actions {
-			@apply sticky bottom-0 z-30 -mx-[15px] -mb-[15px] px-[15px] py-3 mt-5
+			@apply sticky bottom-0 z-30 w-auto -mx-[15px] -mb-[15px] px-[15px] py-3 mt-5 rounded-b-2xl
 				   bg-surface/95 backdrop-blur-md border-t border-border-subtle shadow-[0_-4px_24px_rgba(0,0,0,0.06)];
 		}
 		:global(.dark) .quiz-actions {
@@ -944,7 +1057,7 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 		transition: background-color 0.2s ease, color 0.2s ease;
 	}
 	.aigen-range-badge--fast  { background: rgba(124, 58, 237, 0.1); color: #7c3aed; }
-	.aigen-range-badge--std   { background: rgba(59, 130, 246, 0.1); color: #3b82f6; }
+	.aigen-range-badge--std   { background: rgb(var(--accent) / 0.1); color: #3b82f6; }
 	.aigen-range-badge--large { background: rgba(245, 158, 11, 0.1); color: #d97706; }
 	:global(.dark) .aigen-range-badge--fast  { background: rgba(167, 139, 250, 0.15); color: #a78bfa; }
 	:global(.dark) .aigen-range-badge--std   { background: rgba(96, 165, 250, 0.15);  color: #60a5fa; }
@@ -964,7 +1077,7 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 	}
 	.mode-selector-eyebrow {
 		margin: 0 0 4px;
-		font-size: 0.66rem;
+		font-size: 0.74rem;
 		font-weight: 700;
 		letter-spacing: 0.14em;
 		text-transform: uppercase;
@@ -1028,7 +1141,7 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 	}
 	.mode-card:focus-visible {
 		outline: none;
-		box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.35);
+		box-shadow: 0 0 0 3px rgb(var(--accent) / 0.35);
 	}
 
 	.mode-card-icon {
@@ -1059,7 +1172,7 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 		line-height: 1.25;
 	}
 	.mode-card-desc {
-		font-size: 0.78rem;
+		font-size: 0.82rem;
 		color: rgb(var(--text-muted));
 		line-height: 1.4;
 	}
@@ -1090,12 +1203,12 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 
 	/* Card variants */
 	.mode-card--primary .mode-card-icon {
-		background: rgba(59, 130, 246, 0.14);
+		background: rgb(var(--accent) / 0.14);
 		color: #2563eb;
 	}
 	.mode-card--primary:hover:not(:disabled) {
-		border-color: rgba(59, 130, 246, 0.45);
-		box-shadow: 0 10px 22px rgba(59, 130, 246, 0.16);
+		border-color: rgb(var(--accent) / 0.45);
+		box-shadow: 0 10px 22px rgb(var(--accent) / 0.16);
 	}
 	.mode-card--primary .mode-card-arrow { color: #2563eb; }
 	:global(.dark) .mode-card--primary .mode-card-icon {
@@ -1161,10 +1274,10 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 	:global(.stat-chip) {
 		display: inline-flex;
 		align-items: center;
-		gap: 4px;
-		padding: 3px 9px;
+		gap: 5px;
+		padding: 4px 12px;
 		border-radius: 999px;
-		font-size: 0.72rem;
+		font-size: 0.8rem;
 		font-weight: 600;
 		line-height: 1.35;
 		border: 1px solid transparent;
@@ -1174,10 +1287,10 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 	}
 	:global(.stat-chip b) {
 		font-weight: 700;
-		font-size: 0.78rem;
+		font-size: 0.9rem;
 	}
 	:global(.stat-chip .material-icons) {
-		font-size: 0.9rem;
+		font-size: 1rem;
 	}
 	:global(.stat-chip-sep) {
 		opacity: 0.5;
@@ -1226,8 +1339,8 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 		color: rgb(134, 239, 172);
 	}
 	:global(.stat-chip--pct-mid) {
-		background: rgba(59, 130, 246, 0.1);
-		border-color: rgba(59, 130, 246, 0.28);
+		background: rgb(var(--accent) / 0.1);
+		border-color: rgb(var(--accent) / 0.28);
 		color: rgb(29, 78, 216);
 	}
 	:global(.dark .stat-chip--pct-mid) {
@@ -1279,7 +1392,7 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 	/* Seleccionada */
 	:global(form#opciones label.selected) {
 		@apply border-blue-500 bg-blue-50 dark:bg-blue-900/30;
-		box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15), 0 4px 14px rgba(59, 130, 246, 0.14);
+		box-shadow: 0 0 0 3px rgb(var(--accent) / 0.15), 0 4px 14px rgb(var(--accent) / 0.14);
 	}
 	/* Correcta (tras verificar) */
 	:global(form#opciones label.correct) {
@@ -1294,7 +1407,44 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 	/* Radio / Checkbox nativo */
 	:global(form#opciones input[type="radio"]),
 	:global(form#opciones input[type="checkbox"]) {
-		@apply flex-shrink-0 w-[20px] h-[20px] accent-blue-600 focus:outline-none cursor-pointer;
+		@apply flex-shrink-0 w-[20px] h-[20px] focus:outline-none cursor-pointer;
+		appearance: none;
+		-webkit-appearance: none;
+		margin: 0;
+		border: 2px solid rgb(var(--text-muted) / 0.55);
+		background: transparent center / 12px 12px no-repeat;
+		transition: background-color 150ms ease, border-color 150ms ease, box-shadow 150ms ease;
+	}
+	:global(form#opciones input[type="radio"]) {
+		border-radius: 999px;
+	}
+	:global(form#opciones input[type="checkbox"]) {
+		border-radius: 6px;
+	}
+	:global(form#opciones input[type="radio"]:checked) {
+		border-color: rgb(37 99 235);
+		background-color: rgb(37 99 235);
+		box-shadow: inset 0 0 0 3px rgb(var(--bg-surface));
+	}
+	:global(form#opciones input[type="checkbox"]:checked) {
+		border-color: rgb(37 99 235);
+		background-color: rgb(37 99 235);
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E");
+	}
+	/* Atajo de teclado visible (1-5) solo en dispositivos con ratón */
+	:global(form#opciones) {
+		counter-reset: opt;
+	}
+	@media (hover: hover) and (min-width: 768px) {
+		:global(form#opciones label) {
+			counter-increment: opt;
+		}
+		:global(form#opciones label:not(.correct):not(.incorrect)::after) {
+			content: counter(opt);
+			@apply flex-shrink-0 inline-flex items-center justify-center w-[22px] h-[22px] rounded-md
+				   border border-border-subtle bg-surface-hover text-text-muted text-[0.7rem] font-semibold;
+			opacity: 0.7;
+		}
 	}
 	:global(form#opciones label.correct input),
 	:global(form#opciones label.incorrect input) {

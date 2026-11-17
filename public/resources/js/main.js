@@ -219,10 +219,21 @@
 
     /** Ajusta el contador de preguntas según el modo actual. */
     function actualizarTotalPreguntasLabel() {
-        const totalEl = $("total-preguntas");
-        if (!totalEl) return;
         const total = state.preguntas.length;
         const current = Math.min(Math.max(state.preguntaActual + 1, 1), Math.max(total, 1));
+
+        // Barra de progreso y etiqueta de la barra superior del quiz.
+        const labelEl = $("quiz-progress-label");
+        if (labelEl) labelEl.innerHTML = total > 0 ? `Pregunta <b>${current}</b> de ${total}` : "";
+        const barEl = $("quiz-progress-bar");
+        if (barEl) {
+            const pct = total > 0 ? (current / total) * 100 : 0;
+            barEl.style.width = `${pct.toFixed(1)}%`;
+            $("quiz-progress")?.setAttribute("aria-valuenow", String(Math.round(pct)));
+        }
+
+        const totalEl = $("total-preguntas");
+        if (!totalEl) return;
         totalEl.innerHTML = `<span class="stat-chip stat-chip--progress"><span class="material-icons">list_alt</span><b>${current}</b><span class="stat-chip-sep">/</span>${total}</span>`;
     }
 
@@ -1226,6 +1237,9 @@
             progressLabel.textContent = `${actual} / ${total}`;
         }
 
+        // Barra de progreso y etiqueta "Pregunta X de N" del quiz.
+        actualizarTotalPreguntasLabel();
+
         // Badge opcional con el tema (si los datos lo incluyen en el futuro).
         const badgeTema = $("badge-tema");
         if (badgeTema) badgeTema.textContent = pregunta.tema || "Tema";
@@ -1239,6 +1253,14 @@
 
         renderOpciones(pregunta, contenedorOpciones);
         bindOpcionesChangeHandler(contenedorOpciones);
+
+        // Entrada suave de la pregunta y las opciones (reinicia la animación CSS).
+        [contenedorPregunta, contenedorOpciones].forEach((el) => {
+            if (!el) return;
+            el.classList.remove("quiz-enter");
+            void el.offsetWidth;
+            el.classList.add("quiz-enter");
+        });
 
         // KaTeX requiere correr después de inyectar el HTML.
         renderMath(contenedorPregunta);

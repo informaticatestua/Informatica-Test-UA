@@ -10,13 +10,18 @@
   --color-text-main: rgb(var(--text-main));
   --color-text-muted: rgb(var(--text-muted));
   --color-border-subtle: rgb(var(--border-subtle));
-  
+  --color-accent: rgb(var(--accent));
+  --color-accent-strong: rgb(var(--accent-strong));
+  --color-accent-text: rgb(var(--accent-text));
+  --color-danger-text: rgb(var(--danger-text));
+
   --font-sans: "DM Sans", sans-serif;
   --font-heading: "Outfit", sans-serif;
   
   --shadow-glass: 0 4px 30px rgba(0, 0, 0, 0.05);
   --shadow-glass-dark: 0 4px 30px rgba(0, 0, 0, 0.2);
-  --shadow-subtle: 0 1px 2px 0 rgba(0, 0, 0, 0.03), 0 1px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px 0 rgba(0, 0, 0, 0.02);
+  --shadow-subtle: 0 1px 2px 0 rgba(15, 23, 42, 0.05), 0 1px 3px 0 rgba(15, 23, 42, 0.04);
+  --shadow-card: 0 1px 2px rgba(15, 23, 42, 0.04), 0 8px 24px -8px rgba(15, 23, 42, 0.10);
   
   --animate-fade-in-up: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   --animate-fade-in: fadeIn 0.5s ease-out forwards;
@@ -42,9 +47,21 @@
     --primary-hover: 30 41 59;
     
     --text-main: 15 23 42;
-    --text-muted: 100 116 139;
+    --text-muted: 90 104 125;
     
     --border-subtle: 226 232 240;
+
+    /* Acento de marca (enlaces, foco, botón primario) */
+    --accent: 59 130 246;
+    --accent-strong: 37 99 235;
+    /* Variante del acento apta para TEXTO pequeño sobre fondos claros (≥ 4.5:1) */
+    --accent-text: 29 78 216;
+    --danger-text: 185 28 28;
+    /* Botón primario: blanco sobre este fondo cumple AA en ambos temas */
+    --btn-primary: 37 99 235;
+    --btn-primary-hover: 29 78 216;
+
+    color-scheme: light;
   }
 
   /* El .dark está por si se usa JavaScript para cambiar de tema */
@@ -60,14 +77,82 @@
     --text-muted: 148 163 184;
     
     --border-subtle: 30 41 59;
+
+    --accent: 96 165 250;
+    --accent-strong: 59 130 246;
+    --accent-text: 147 197 253;
+    --danger-text: 252 165 165;
+
+    color-scheme: dark;
   }
 
   html {
     @apply bg-background text-text-main antialiased scroll-smooth transition-colors duration-300;
+    /* La cabecera es fija: evita que tape el destino de anclas y el foco por teclado */
+    scroll-padding-top: 5.5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  /* Respuesta táctil inmediata (sin retardo de doble toque) y sin destello gris en móvil */
+  a, button, summary, [role="button"], label, input, select, textarea {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  p, li, figcaption {
+    text-wrap: pretty;
   }
 
   body {
     overflow-y: scroll;
+    background-image:
+      radial-gradient(60rem 28rem at 50% -8rem, rgb(var(--accent) / 0.08), transparent 70%),
+      radial-gradient(40rem 24rem at 100% 0, rgb(139 92 246 / 0.05), transparent 70%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  .dark body {
+    background-image:
+      radial-gradient(60rem 28rem at 50% -8rem, rgb(var(--accent) / 0.16), transparent 70%),
+      radial-gradient(40rem 24rem at 100% 0, rgb(139 92 246 / 0.09), transparent 70%);
+  }
+
+  ::selection {
+    background: rgb(var(--accent) / 0.25);
+  }
+
+  :focus-visible {
+    outline: 2px solid rgb(var(--accent) / 0.75);
+    outline-offset: 2px;
+  }
+
+  /* Campos de formulario: anillo de foco consistente en toda la web */
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible {
+    outline: none;
+    border-color: rgb(var(--accent));
+    box-shadow: 0 0 0 3px rgb(var(--accent) / 0.18);
+  }
+
+  /* Scrollbars discretas */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(var(--text-muted) / 0.35) transparent;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    letter-spacing: -0.015em;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
   }
 }
 
@@ -77,39 +162,7 @@
   }
 }
 
-/* Custom Utilities for micro-interactions */
-@layer components {
-  .layout-container {
-    @apply w-full max-w-4xl mx-auto px-6 py-12 md:py-20;
-  }
-  
-  .ui-button {
-    @apply relative overflow-hidden flex items-center justify-center 
-           bg-surface hover:bg-surface-hover text-text-main 
-           border border-border-subtle rounded-xl 
-           py-4 px-6 font-medium text-sm sm:text-base
-           shadow-subtle hover:shadow-glass hover:-translate-y-0.5
-           transition-all duration-300 ease-out focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background;
-  }
-
-  .ui-button-primary {
-    @apply relative overflow-hidden flex items-center justify-center 
-           bg-primary text-background hover:bg-primary-hover
-           rounded-xl py-4 px-6 font-medium text-sm sm:text-base
-           shadow-md hover:shadow-lg hover:-translate-y-0.5
-           transition-all duration-300 ease-out focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background;
-  }
-
-  .section-title {
-    @apply font-heading text-2xl md:text-3xl font-semibold mb-6 tracking-tight text-text-main;
-  }
-
-  .ui-separator {
-    @apply w-full h-px bg-border-subtle my-8;
-  }
-}
-
-/* --- Modal box animation (shared by NovedadModal, etc.) --- */
+/* --- Modal box animation (shared modals) --- */
 .modal-box {
   opacity: 0;
   transform: translateY(24px) scale(0.98);
@@ -135,12 +188,12 @@
   user-select: none;
 }
 .ai-provider-card:hover {
-  border-color: #3b82f6;
+  border-color: rgb(var(--accent));
   background-color: rgb(var(--bg-surface-hover));
 }
 .ai-provider-card:has(input:checked) {
-  border-color: #3b82f6;
-  background-color: rgba(59, 130, 246, 0.08);
+  border-color: rgb(var(--accent));
+  background-color: rgb(var(--accent) / 0.08);
 }
 
 /* Form fields */
@@ -160,9 +213,10 @@
   color: rgb(var(--text-muted));
   opacity: 0.7;
 }
-.ai-input:focus,
-.ai-select:focus {
-  border-color: #3b82f6;
+.ai-input:focus-visible,
+.ai-select:focus-visible {
+  border-color: rgb(var(--accent));
+  box-shadow: 0 0 0 3px rgb(var(--accent) / 0.18);
 }
 
 /* Inline code in AI output */
@@ -240,7 +294,7 @@
   color: rgb(var(--text-muted));
   border-radius: 6px;
   padding: 4px 8px;
-  font-size: 0.72rem;
+  font-size: 0.78rem;
   outline: none;
   cursor: pointer;
   max-width: 140px;
@@ -248,7 +302,7 @@
 }
 .ai-drawer-select:focus,
 .ai-drawer-select:hover {
-  border-color: #3b82f6;
+  border-color: rgb(var(--accent));
   color: rgb(var(--text-main));
 }
 
@@ -257,7 +311,7 @@
   width: 28px;
   height: 28px;
   border: 3px solid rgb(var(--border-subtle));
-  border-top-color: #3b82f6;
+  border-top-color: rgb(var(--accent));
   border-radius: 50%;
   animation: ai-spin 0.75s linear infinite;
 }
@@ -366,7 +420,7 @@ body.ai-drawer-body-lock {
 }
 .tools-sheet-section-label {
   margin: 0 0 10px;
-  font-size: 0.68rem;
+  font-size: 0.74rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -391,7 +445,7 @@ body.ai-drawer-body-lock {
   transition: border-color 150ms ease, background-color 150ms ease, box-shadow 150ms ease, transform 150ms ease;
 }
 .tools-sheet-item:hover:not(:disabled) {
-  border-color: rgb(59 130 246 / 0.45);
+  border-color: rgb(var(--accent) / 0.45);
   background: rgb(var(--bg-surface-hover));
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
   transform: translateY(-1px);
@@ -412,7 +466,7 @@ body.ai-drawer-body-lock {
 .tools-sheet-icon .material-icons {
   font-size: 1.15rem;
 }
-.tools-sheet-icon--blue { background: rgba(59, 130, 246, 0.12); color: #2563eb; }
+.tools-sheet-icon--blue { background: rgb(var(--accent) / 0.12); color: rgb(var(--accent-strong)); }
 .tools-sheet-icon--amber { background: rgba(245, 158, 11, 0.14); color: #d97706; }
 .tools-sheet-icon--violet { background: rgba(124, 58, 237, 0.12); color: #7c3aed; }
 .tools-sheet-icon--orange { background: rgba(249, 115, 22, 0.14); color: #ea580c; }
@@ -436,7 +490,7 @@ body.ai-drawer-body-lock {
   line-height: 1.25;
 }
 .tools-sheet-item-desc {
-  font-size: 0.72rem;
+  font-size: 0.78rem;
   color: rgb(var(--text-muted));
   line-height: 1.35;
 }
@@ -553,7 +607,7 @@ body.tools-sheet-body-lock {
   align-items: center;
   padding: 2px 8px;
   border-radius: 999px;
-  font-size: 0.68rem;
+  font-size: 0.74rem;
   font-weight: 700;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -597,7 +651,7 @@ body.tools-sheet-body-lock {
   gap: 4px;
   padding: 6px 12px;
   border-radius: 8px;
-  font-size: 0.76rem;
+  font-size: 0.8rem;
   font-weight: 600;
   line-height: 1.2;
   cursor: pointer;
@@ -713,18 +767,134 @@ body.tools-sheet-body-lock {
 }
 
 /* Button utilities (shared across pages) */
+.btn,
+.btn-primary,
+.btn-secondary,
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4em;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  line-height: 1.25;
+  border-radius: 12px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: transform 0.15s ease, box-shadow 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+.btn:active, .btn-primary:active, .btn-secondary:active, .btn-ghost:active {
+  transform: translateY(0) scale(0.98);
+}
+.btn:disabled, .btn-primary:disabled, .btn-secondary:disabled, .btn-ghost:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
 .btn {
-  @apply px-[1.2em] py-[0.6em] text-[1em] border border-border-subtle text-text-main rounded-[5px] cursor-pointer whitespace-nowrap bg-surface hover:bg-surface-hover transition-colors shadow-subtle hover:shadow-sm font-medium;
+  border: 1px solid rgb(var(--border-subtle));
+  color: rgb(var(--text-main));
+  background: rgb(var(--bg-surface));
+  box-shadow: var(--shadow-subtle);
+}
+.btn:hover:not(:disabled) {
+  background: rgb(var(--bg-surface-hover));
+  border-color: rgb(var(--accent) / 0.35);
 }
 
 .btn-primary {
-  @apply px-[1.2em] py-[0.6em] text-[1em] border-none text-white rounded-[5px] cursor-pointer whitespace-nowrap bg-blue-600 hover:bg-blue-700 transition-colors shadow-sm hover:shadow font-medium;
+  border: none;
+  color: #fff;
+  background: rgb(var(--btn-primary));
+  box-shadow: 0 1px 2px rgba(37, 99, 235, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.16);
+}
+.btn-primary:hover:not(:disabled) {
+  background: rgb(var(--btn-primary-hover));
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.16);
 }
 
 .btn-secondary {
-  @apply px-[1.2em] py-[0.6em] text-[1em] border border-border-subtle text-text-main rounded-[5px] cursor-pointer whitespace-nowrap bg-surface hover:bg-surface-hover transition-colors;
+  border: 1px solid rgb(var(--border-subtle));
+  color: rgb(var(--text-main));
+  background: rgb(var(--bg-surface));
+}
+.btn-secondary:hover:not(:disabled) {
+  background: rgb(var(--bg-surface-hover));
 }
 
 .btn-ghost {
-  @apply px-[1.2em] py-[0.6em] text-[1em] border-none text-text-main rounded-[5px] cursor-pointer whitespace-nowrap bg-transparent hover:bg-surface-hover transition-colors;
+  border: none;
+  color: rgb(var(--text-main));
+  background: transparent;
+}
+.btn-ghost:hover:not(:disabled) {
+  background: rgb(var(--bg-surface-hover));
+}
+
+/* ─── Accesibilidad y ergonomía táctil (transversal) ─────────── */
+
+/* Enlace "Saltar al contenido": visible solo al recibir foco por teclado */
+.skip-link {
+  position: fixed;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 1000;
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #fff;
+  background: rgb(var(--btn-primary));
+  text-decoration: none;
+  transform: translateY(-200%);
+  transition: transform 0.18s ease;
+}
+.skip-link:focus-visible {
+  transform: translateY(0);
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgb(var(--btn-primary));
+}
+
+/* El destino del salto no debe mostrar un contorno gigante al recibir foco programático */
+main:focus {
+  outline: none;
+}
+
+/* Objetivos táctiles ≥ 44px en dispositivos con puntero grueso (WCAG 2.5.5 / HIG) */
+@media (pointer: coarse) {
+  .btn,
+  .btn-primary,
+  .btn-secondary,
+  .btn-ghost {
+    min-height: 44px;
+  }
+}
+
+/* Números alineados (contadores, cronómetro, puntuaciones) */
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Modo alto contraste forzado del SO: mantener fronteras y foco visibles */
+@media (forced-colors: active) {
+  .btn,
+  .btn-primary,
+  .btn-secondary,
+  .ai-provider-card,
+  .tools-sheet-item {
+    border: 1px solid ButtonText;
+  }
+  :focus-visible {
+    outline: 2px solid Highlight;
+  }
+}
+
+/* Los efectos de elevación en hover solo tienen sentido con puntero real */
+@media (hover: none) {
+  .tools-sheet-item:hover:not(:disabled) {
+    transform: none;
+    box-shadow: none;
+  }
 }

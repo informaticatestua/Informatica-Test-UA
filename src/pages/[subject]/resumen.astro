@@ -7,12 +7,13 @@ const pageTitle = `Resumen ${formattedSubject}`;
 ---
 
 <ResumenLayout title={pageTitle}>
-	<div id="app" class="w-max max-w-[95vw] mx-auto my-[20px] px-[40px] py-[30px] bg-surface border border-border-subtle rounded-[5px] shadow-subtle box-border">
+	<div id="app" class="w-full max-w-[860px] mx-auto my-5 px-5 sm:px-10 py-8 bg-surface border border-border-subtle rounded-2xl shadow-card box-border">
+		<h1 class="sr-only">Resumen de {formattedSubject}</h1>
 		<div id="resumen" class="text-left text-[0.95em] leading-relaxed"></div>
-		
-		<div class="flex gap-[10px] mt-[30px] flex-wrap justify-center">
-			<button onclick="window.history.back()" class="btn">← Volver al Quiz</button>
-			<button onclick="window.location.href = '/'" class="btn">Menú Principal</button>
+
+		<div class="flex gap-3 mt-8 flex-wrap justify-center">
+			<a href={`/${subject}`} class="btn no-underline">← Volver al test</a>
+			<a href="/" class="btn no-underline">Menú principal</a>
 		</div>
 	</div>
 </ResumenLayout>
@@ -20,10 +21,6 @@ const pageTitle = `Resumen ${formattedSubject}`;
 <style>
 	@reference "../../styles/global.css";
 	
-	.btn {
-		@apply px-[1.2em] py-[0.6em] text-[1em] border border-border-subtle text-text-main rounded-[5px] cursor-pointer whitespace-nowrap bg-surface hover:bg-surface-hover transition-colors shadow-subtle font-medium;
-	}
-
 	:global(#resumen p) {
 		@apply mb-[4px] text-text-main;
 	}

@@ -1,20 +1,47 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import NovedadModal from '../components/NovedadModal.astro';
 ---
 
 <BaseLayout>
 
-<NovedadModal />
-
 <div id="main-container" class="flex flex-col items-center justify-center m-auto w-full">
-	<div id="app" class="relative w-max max-w-[95vw] text-center bg-surface shadow-lg shadow-black/5 rounded-2xl px-[40px] py-[30px] mx-auto my-[20px] box-border border border-border-subtle">
+	<div id="app" class="relative w-full max-w-[860px] text-center bg-surface/90 backdrop-blur shadow-card rounded-3xl px-[40px] py-[32px] mx-auto my-[20px] box-border border border-border-subtle animate-fade-in-up">
 
-		<!-- Estado de carga -->
-		<div id="subjects-loading" class="flex flex-col items-center gap-3 py-10 text-text-muted">
-			<div class="index-spinner"></div>
-			<span class="text-sm">Cargando asignaturas…</span>
+		<div class="mb-5">
+			<h1 class="m-0 text-2xl sm:text-3xl font-bold tracking-tight">Elige una asignatura</h1>
+			<p class="mt-1.5 mb-0 text-sm text-text-muted">Practica con tests reales y simulacros de la UA</p>
 		</div>
+
+		<!-- Buscador rápido (atajo: /) -->
+		<div class="subject-search">
+			<span class="material-icons subject-search-icon" aria-hidden="true">search</span>
+			<input id="subject-search" type="search" autocomplete="off" spellcheck="false"
+				placeholder="Buscar asignatura o examen…" aria-label="Buscar asignatura o examen"
+				aria-controls="search-results" />
+			<kbd class="subject-search-kbd" aria-hidden="true">/</kbd>
+		</div>
+
+		<!-- Retomar último test (solo con sesión y progreso guardado) -->
+		<a id="continue-card" href="#" class="continue-card hidden">
+			<span class="continue-card-icon material-icons" aria-hidden="true">play_arrow</span>
+			<span class="continue-card-body">
+				<span class="continue-card-eyebrow">Continuar donde lo dejaste</span>
+				<span id="continue-card-title" class="continue-card-title"></span>
+				<span id="continue-card-meta" class="continue-card-meta"></span>
+			</span>
+			<span class="continue-card-arrow material-icons" aria-hidden="true">arrow_forward</span>
+		</a>
+
+		<!-- Estado de carga (esqueleto) -->
+		<div id="subjects-loading" class="subjects-skeleton" aria-busy="true" aria-live="polite">
+			<span class="sr-only">Cargando asignaturas…</span>
+			<div class="skeleton-row"><i></i><i></i><i></i><i></i></div>
+			<div class="skeleton-row"><i></i><i></i><i></i></div>
+			<div class="skeleton-row"><i></i><i></i><i></i><i></i><i></i></div>
+		</div>
+
+		<!-- Resultados de búsqueda (relleno por JS) -->
+		<div id="search-results" class="search-results hidden" role="listbox" aria-label="Resultados de búsqueda"></div>
 
 		<!-- Contenedor dinámico (relleno por JS) -->
 		<div id="asignaturas-container" class="hidden"></div>
@@ -22,7 +49,7 @@ import NovedadModal from '../components/NovedadModal.astro';
 	</div>
 
 	<!-- Card de contacto -->
-	<div class="w-max max-w-[95vw] bg-surface shadow-lg shadow-black/5 rounded-2xl px-[30px] py-[20px] mx-auto mb-[20px] box-border border border-border-subtle">
+	<div class="w-fit max-w-[95vw] bg-surface/70 rounded-2xl px-[24px] py-[14px] mx-auto mb-[20px] box-border border border-border-subtle">
 		<div class="flex items-center justify-center gap-3 text-center flex-wrap">
 			<span class="material-icons mi-md text-[rgb(var(--color-primary-rgb))]" aria-hidden="true">mail_outline</span>
 			<p class="text-sm text-text-muted m-0">
@@ -98,7 +125,7 @@ import NovedadModal from '../components/NovedadModal.astro';
 		div.className = "hidden sublist-panel flex flex-col items-center";
 
 		const h4 = document.createElement("h4");
-		h4.className = "mt-0 mb-4 text-[0.68rem] font-bold tracking-[0.1em] uppercase text-text-muted";
+		h4.className = "mt-0 mb-4 text-[0.78rem] font-bold tracking-[0.1em] uppercase text-text-muted";
 		h4.textContent = `Exámenes ${subject.display_name}`;
 		div.appendChild(h4);
 
@@ -336,7 +363,7 @@ import NovedadModal from '../components/NovedadModal.astro';
 
 			} else {
 				const h3 = document.createElement("h3");
-				h3.className = "text-[0.68rem] font-heading font-bold mt-8 mb-4 tracking-[0.12em] uppercase text-text-muted";
+				h3.className = "text-[0.78rem] font-heading font-bold mt-8 mb-4 tracking-[0.12em] uppercase text-text-muted";
 				h3.textContent = CATEGORY_LABELS[cat] || cat;
 				container.appendChild(h3);
 				renderCategoryGrid(tops, children, container);
@@ -437,6 +464,159 @@ import NovedadModal from '../components/NovedadModal.astro';
 		return btn;
 	}
 
+	// ─── Buscador ────────────────────────────────────────────────────────────
+
+	const norm = (s) => String(s).normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+
+	/** Índice plano de todo lo "abrible": exámenes/módulos con su asignatura. */
+	function buildSearchIndex(subjects) {
+		const byId = new Map(subjects.map((s) => [s.id, s]));
+		const kids = {};
+		for (const s of subjects) {
+			if (s.parent_id) (kids[s.parent_id] = kids[s.parent_id] || []).push(s);
+		}
+		const out = [];
+		const add = (label, group, href) =>
+			out.push({ label, group, href, hay: norm(`${label} ${group}`) });
+
+		for (const s of subjects) {
+			if (HIDDEN_SUBJECTS.has(s.id)) continue;
+			if (s.parent_id) {
+				const parent = byId.get(s.parent_id);
+				add(s.display_name, parent ? parent.display_name : "", `/${s.id}`);
+				continue;
+			}
+			const children = (kids[s.id] || []).filter((c) => !HIDDEN_SUBJECTS.has(c.id));
+			const synth = SYNTHETIC_FULL[s.id];
+			const sections = SECTION_BUTTONS[s.id];
+			if (!children.length && !synth && !sections) {
+				add(s.display_name, CATEGORY_LABELS[s.category] || "", `/${s.id}`);
+				continue;
+			}
+			if (synth) add(synth.display_name, s.display_name, `/${synth.id}`);
+			for (const sec of sections || []) {
+				add(sec.label, s.display_name, `/${s.id}?src=${encodeURIComponent(sec.src)}`);
+			}
+		}
+		return out;
+	}
+
+	function initSearch(index) {
+		const input     = document.getElementById("subject-search");
+		const results   = document.getElementById("search-results");
+		const container = document.getElementById("asignaturas-container");
+		if (!input || !results || !container) return;
+
+		const esc = window.Utils.esc;
+		let matches = [];
+		let active  = 0;
+
+		function paintActive() {
+			results.querySelectorAll(".search-item").forEach((el, i) => {
+				const on = i === active;
+				el.classList.toggle("is-active", on);
+				el.setAttribute("aria-selected", on ? "true" : "false");
+				if (on) el.scrollIntoView({ block: "nearest" });
+			});
+		}
+
+		function render() {
+			const raw = input.value.trim();
+			if (!raw) {
+				results.classList.add("hidden");
+				results.innerHTML = "";
+				container.classList.remove("hidden");
+				return;
+			}
+			const terms = norm(raw).split(/\s+/);
+			matches = index.filter((e) => terms.every((t) => e.hay.includes(t))).slice(0, 30);
+			active = 0;
+			container.classList.add("hidden");
+			results.classList.remove("hidden");
+			if (matches.length === 0) {
+				results.innerHTML = `<p class="search-empty">Sin resultados para «${esc(raw)}»</p>`;
+				return;
+			}
+			results.innerHTML = matches.map((m, i) =>
+				`<a role="option" href="${esc(m.href)}" class="search-item" aria-selected="${i === 0}">` +
+					`<span class="search-item-label">${esc(m.label)}</span>` +
+					(m.group ? `<span class="search-item-group">${esc(m.group)}</span>` : "") +
+					`<span class="material-icons search-item-arrow" aria-hidden="true">arrow_forward</span>` +
+				`</a>`
+			).join("");
+			paintActive();
+		}
+
+		input.addEventListener("input", render);
+		input.addEventListener("keydown", (e) => {
+			if (e.key === "ArrowDown" && matches.length) {
+				e.preventDefault();
+				active = (active + 1) % matches.length;
+				paintActive();
+			} else if (e.key === "ArrowUp" && matches.length) {
+				e.preventDefault();
+				active = (active - 1 + matches.length) % matches.length;
+				paintActive();
+			} else if (e.key === "Enter" && matches[active]) {
+				e.preventDefault();
+				window.location.href = matches[active].href;
+			} else if (e.key === "Escape") {
+				input.value = "";
+				render();
+				input.blur();
+			}
+		});
+
+		// Atajo global "/" para enfocar el buscador
+		document.addEventListener("keydown", (e) => {
+			if (e.key !== "/" || e.ctrlKey || e.metaKey || e.altKey) return;
+			const t = e.target;
+			if (t && (t.tagName === "INPUT" || t.tagName === "TEXTAREA" || t.isContentEditable)) return;
+			e.preventDefault();
+			input.focus();
+			input.select();
+		});
+	}
+
+	// ─── Continuar donde lo dejaste ──────────────────────────────────────────
+
+	function initContinue(subjects) {
+		const card = document.getElementById("continue-card");
+		if (!card) return;
+
+		async function run() {
+			const db  = window.SupabaseClient;
+			const uid = window.Utils?.userId();
+			if (!db || !uid) return;
+
+			const { data, error } = await db
+				.from("test_progress")
+				.select("quiz_key, current_index, answered_count, question_ids")
+				.eq("user_id", uid)
+				.order("updated_at", { ascending: false })
+				.limit(1)
+				.maybeSingle();
+			if (error || !data) return;
+
+			const total = Array.isArray(data.question_ids) ? data.question_ids.length : 0;
+			if (!total || data.answered_count >= total) return;
+
+			const subj  = subjects.find((s) => s.id === data.quiz_key);
+			const synth = Object.values(SYNTHETIC_FULL).find((s) => s.id === data.quiz_key);
+			const name  = subj ? subj.display_name : synth ? synth.display_name : data.quiz_key.toUpperCase();
+			const pct   = Math.round((data.answered_count / total) * 100);
+
+			card.href = `/${data.quiz_key}`;
+			document.getElementById("continue-card-title").textContent = name;
+			document.getElementById("continue-card-meta").textContent =
+				`Pregunta ${Math.min(data.current_index + 1, total)} de ${total} · ${pct}% completado`;
+			card.classList.remove("hidden");
+		}
+
+		if (window.Auth && typeof window.Auth.onReady === "function") window.Auth.onReady(run);
+		else run();
+	}
+
 	// ─── Carga de datos ──────────────────────────────────────────────────────
 
 	async function loadSubjects() {
@@ -461,6 +641,8 @@ import NovedadModal from '../components/NovedadModal.astro';
 			if (container) container.classList.remove("hidden");
 
 			renderSubjects(data || []);
+			initSearch(buildSearchIndex(data || []));
+			initContinue(data || []);
 		} catch (err) {
 			console.error("[Index] Error cargando asignaturas:", err);
 			if (loading) loading.innerHTML = '<p class="text-text-muted text-sm">Error al cargar las asignaturas. Recarga la página.</p>';
@@ -478,6 +660,202 @@ import NovedadModal from '../components/NovedadModal.astro';
 
 <style is:global>
 	@reference "../styles/global.css";
+
+	/* ── Buscador ───────────────────────────────────────────── */
+	.subject-search {
+		position: relative;
+		max-width: 460px;
+		margin: 0 auto 22px;
+	}
+	.subject-search input {
+		width: 100%;
+		box-sizing: border-box;
+		padding: 12px 44px 12px 44px;
+		border-radius: 14px;
+		border: 1px solid rgb(var(--border-subtle));
+		background: rgb(var(--bg-surface-hover) / 0.6);
+		color: rgb(var(--text-main));
+		font: inherit;
+		font-size: 0.95rem;
+		outline: none;
+		transition: border-color 150ms ease, box-shadow 150ms ease, background-color 150ms ease;
+		-webkit-appearance: none;
+		appearance: none;
+	}
+	.subject-search input::-webkit-search-cancel-button { display: none; }
+	.subject-search input::placeholder { color: rgb(var(--text-muted)); }
+	.subject-search input:focus {
+		border-color: rgba(59, 130, 246, 0.55);
+		background: rgb(var(--bg-surface));
+		box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.14);
+	}
+	.subject-search-icon {
+		position: absolute;
+		left: 14px;
+		top: 50%;
+		transform: translateY(-50%);
+		font-size: 1.2rem !important;
+		color: rgb(var(--text-muted));
+		pointer-events: none;
+	}
+	.subject-search-kbd {
+		position: absolute;
+		right: 12px;
+		top: 50%;
+		transform: translateY(-50%);
+		min-width: 22px;
+		height: 22px;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 6px;
+		border: 1px solid rgb(var(--border-subtle));
+		background: rgb(var(--bg-surface));
+		color: rgb(var(--text-muted));
+		font-size: 0.75rem;
+		font-weight: 600;
+		pointer-events: none;
+	}
+	.subject-search input:focus ~ .subject-search-kbd,
+	.subject-search input:not(:placeholder-shown) ~ .subject-search-kbd { display: none; }
+	@media (hover: none) { .subject-search-kbd { display: none; } }
+
+	.search-results {
+		display: flex;
+		flex-direction: column;
+		gap: 6px;
+		max-width: 560px;
+		margin: 0 auto;
+		text-align: left;
+	}
+	.search-results.hidden { display: none; }
+	.search-item {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		padding: 12px 14px;
+		border-radius: 12px;
+		border: 1px solid rgb(var(--border-subtle));
+		background: rgb(var(--bg-surface));
+		color: rgb(var(--text-main));
+		text-decoration: none;
+		transition: border-color 120ms ease, background-color 120ms ease, transform 120ms ease;
+	}
+	.search-item:hover,
+	.search-item.is-active {
+		border-color: rgba(59, 130, 246, 0.5);
+		background: rgba(59, 130, 246, 0.08);
+	}
+	.search-item-label { font-weight: 600; font-size: 0.95rem; }
+	.search-item-group {
+		margin-left: auto;
+		font-size: 0.78rem;
+		color: rgb(var(--text-muted));
+	}
+	.search-item-arrow {
+		font-size: 1.05rem !important;
+		color: rgb(var(--text-muted));
+		opacity: 0;
+		transition: opacity 120ms ease;
+	}
+	.search-item.is-active .search-item-arrow,
+	.search-item:hover .search-item-arrow { opacity: 1; }
+	.search-empty {
+		margin: 18px 0;
+		text-align: center;
+		font-size: 0.9rem;
+		color: rgb(var(--text-muted));
+	}
+
+	/* ── Continuar donde lo dejaste ─────────────────────────── */
+	.continue-card {
+		display: flex;
+		align-items: center;
+		gap: 14px;
+		max-width: 460px;
+		margin: 0 auto 22px;
+		padding: 14px 16px;
+		text-align: left;
+		text-decoration: none;
+		color: inherit;
+		border-radius: 16px;
+		border: 1px solid rgba(59, 130, 246, 0.35);
+		background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(124, 58, 237, 0.08));
+		transition: transform 180ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 180ms ease, border-color 180ms ease;
+	}
+	.continue-card.hidden { display: none; }
+	.continue-card:hover {
+		transform: translateY(-2px);
+		border-color: rgba(59, 130, 246, 0.6);
+		box-shadow: 0 10px 24px rgba(59, 130, 246, 0.18);
+	}
+	.continue-card-icon {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 42px;
+		height: 42px;
+		border-radius: 12px;
+		background: linear-gradient(135deg, #3b82f6, #7c3aed);
+		color: #fff;
+		flex-shrink: 0;
+		font-size: 1.4rem !important;
+	}
+	.continue-card-body { display: flex; flex-direction: column; gap: 1px; flex: 1; min-width: 0; }
+	.continue-card-eyebrow {
+		font-size: 0.68rem;
+		font-weight: 700;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		color: rgb(var(--text-muted));
+	}
+	.continue-card-title { font-weight: 700; font-size: 1.02rem; font-family: var(--font-heading, "Outfit", sans-serif); }
+	.continue-card-meta { font-size: 0.8rem; color: rgb(var(--text-muted)); }
+	.continue-card-arrow {
+		color: rgb(var(--text-muted));
+		transition: transform 180ms ease;
+	}
+	.continue-card:hover .continue-card-arrow { transform: translateX(3px); }
+
+	/* ── Esqueleto de carga ─────────────────────────────────── */
+	.subjects-skeleton {
+		display: grid;
+		gap: 22px;
+		padding: 8px 0 4px;
+	}
+	.subjects-skeleton.hidden { display: none; }
+	.skeleton-row {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 12px;
+	}
+	.skeleton-row i {
+		display: block;
+		width: 92px;
+		height: 42px;
+		border-radius: 12px;
+		background: linear-gradient(90deg,
+			rgb(var(--bg-surface-hover)) 25%,
+			rgb(var(--border-subtle) / 0.6) 50%,
+			rgb(var(--bg-surface-hover)) 75%);
+		background-size: 200% 100%;
+		animation: skeleton-shimmer 1.3s ease-in-out infinite;
+	}
+	.skeleton-row i:nth-child(2n) { width: 74px; }
+	.skeleton-row i:nth-child(3n) { width: 112px; }
+	@keyframes skeleton-shimmer {
+		from { background-position: 200% 0; }
+		to   { background-position: -200% 0; }
+	}
+
+	/* Chips de asignatura: objetivo táctil cómodo y texto algo mayor */
+	#asignaturas-container .btn,
+	#asignaturas-container .btn-primary {
+		min-height: 44px;
+		font-size: 1rem;
+		font-weight: 600;
+	}
 
 	/* ── Chevron en botones con submódulos ─────────────────── */
 	.subject-chevron {
@@ -870,9 +1248,6 @@ import NovedadModal from '../components/NovedadModal.astro';
 	}
 
 	@media (max-width: 480px) {
-		#asignaturas-container h3 {
-			@apply text-[1.2em]!;
-		}
 		#asignaturas-container .btn,
 		#asignaturas-container .btn-primary {
 			@apply text-[0.8em]! min-w-[70px]!;
