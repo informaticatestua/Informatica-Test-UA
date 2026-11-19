@@ -3,61 +3,92 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout>
+<div id="main-container" class="w-full max-w-5xl mx-auto px-4 sm:px-6 pt-8 sm:pt-10 pb-10">
 
-<div id="main-container" class="flex flex-col items-center justify-center m-auto w-full">
-	<div id="app" class="relative w-full max-w-[860px] text-center bg-surface/90 backdrop-blur shadow-card rounded-3xl px-[40px] py-[32px] mx-auto my-[20px] box-border border border-border-subtle animate-fade-in-up">
-
-		<div class="mb-5">
-			<h1 class="m-0 text-2xl sm:text-3xl font-bold tracking-tight">Elige una asignatura</h1>
-			<p class="mt-1.5 mb-0 text-sm text-text-muted">Practica con tests reales y simulacros de la UA</p>
+	<!-- ── Command Header ──────────────────────────────────────────────────── -->
+	<section class="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-6">
+		<div class="min-w-0">
+			<h1 class="m-0 font-heading text-2xl sm:text-[1.75rem] font-semibold tracking-tight text-text-main">
+				Asignaturas
+			</h1>
+			<p class="mt-1 mb-0 text-sm text-text-muted leading-relaxed">
+				Exámenes reales, simulacros y resúmenes de Ingeniería Informática UA.
+			</p>
 		</div>
 
-		<!-- Buscador rápido (atajo: /) -->
-		<div class="subject-search">
-			<span class="material-icons subject-search-icon" aria-hidden="true">search</span>
+		<!-- Buscador rápido (atajos: / o ⌘K) -->
+		<div class="subject-search w-full md:w-80 lg:w-96 flex-shrink-0">
+			<span class="subject-search-icon" aria-hidden="true">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+					<circle cx="11" cy="11" r="8"></circle>
+					<path d="m21 21-4.3-4.3"></path>
+				</svg>
+			</span>
 			<input id="subject-search" type="search" autocomplete="off" spellcheck="false"
 				placeholder="Buscar asignatura o examen…" aria-label="Buscar asignatura o examen"
 				aria-controls="search-results" />
+			<button id="search-clear" type="button" class="subject-search-clear hidden" aria-label="Limpiar búsqueda">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+					<path d="M18 6 6 18"></path>
+					<path d="m6 6 12 12"></path>
+				</svg>
+			</button>
 			<kbd class="subject-search-kbd" aria-hidden="true">/</kbd>
 		</div>
+	</section>
 
-		<!-- Retomar último test (solo con sesión y progreso guardado) -->
-		<a id="continue-card" href="#" class="continue-card hidden">
-			<span class="continue-card-icon material-icons" aria-hidden="true">play_arrow</span>
-			<span class="continue-card-body">
-				<span class="continue-card-eyebrow">Continuar donde lo dejaste</span>
-				<span id="continue-card-title" class="continue-card-title"></span>
-				<span id="continue-card-meta" class="continue-card-meta"></span>
+	<!-- ── Retomar último test (solo con sesión y progreso guardado) ───────── -->
+	<a id="continue-card" href="#" class="continue-card hidden mb-6">
+		<div class="continue-card-left">
+			<span class="continue-card-icon" aria-hidden="true">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+					<polygon points="6 4 20 12 6 20 6 4"></polygon>
+				</svg>
 			</span>
-			<span class="continue-card-arrow material-icons" aria-hidden="true">arrow_forward</span>
-		</a>
-
-		<!-- Estado de carga (esqueleto) -->
-		<div id="subjects-loading" class="subjects-skeleton" aria-busy="true" aria-live="polite">
-			<span class="sr-only">Cargando asignaturas…</span>
-			<div class="skeleton-row"><i></i><i></i><i></i><i></i></div>
-			<div class="skeleton-row"><i></i><i></i><i></i></div>
-			<div class="skeleton-row"><i></i><i></i><i></i><i></i><i></i></div>
+			<div class="continue-card-body">
+				<div class="continue-card-headline">
+					<span class="continue-card-eyebrow">Continuar</span>
+					<span class="continue-card-sep" aria-hidden="true">·</span>
+					<span id="continue-card-title" class="continue-card-title"></span>
+					<span class="continue-card-sep hidden sm:inline" aria-hidden="true">·</span>
+					<span id="continue-card-meta" class="continue-card-meta"></span>
+				</div>
+				<div class="continue-progress-track" aria-hidden="true">
+					<div id="continue-card-progress-fill" class="continue-progress-fill"></div>
+				</div>
+			</div>
 		</div>
+		<span class="continue-card-cta">
+			<span>Continuar</span>
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+				<path d="M5 12h14"></path>
+				<path d="m12 5 7 7-7 7"></path>
+			</svg>
+		</span>
+	</a>
 
-		<!-- Resultados de búsqueda (relleno por JS) -->
-		<div id="search-results" class="search-results hidden" role="listbox" aria-label="Resultados de búsqueda"></div>
+	<!-- ── Pestañas de filtro por curso ────────────────────────────────────── -->
+	<div id="category-filter-bar" class="hidden cat-tabs -mx-4 px-4 sm:mx-0 sm:px-0 mb-8" role="group" aria-label="Filtrar por curso"></div>
 
-		<!-- Contenedor dinámico (relleno por JS) -->
-		<div id="asignaturas-container" class="hidden"></div>
-
+	<!-- ── Estado de carga (esqueleto abierto) ─────────────────────────────── -->
+	<div id="subjects-loading" class="subjects-skeleton" aria-busy="true" aria-live="polite">
+		<span class="sr-only">Cargando asignaturas…</span>
+		<div class="skeleton-block">
+			<div class="skeleton-heading"></div>
+			<div class="skeleton-grid"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+		</div>
+		<div class="skeleton-block">
+			<div class="skeleton-heading"></div>
+			<div class="skeleton-grid"><i></i><i></i><i></i></div>
+		</div>
 	</div>
 
-	<!-- Card de contacto -->
-	<div class="w-fit max-w-[95vw] bg-surface/70 rounded-2xl px-[24px] py-[14px] mx-auto mb-[20px] box-border border border-border-subtle">
-		<div class="flex items-center justify-center gap-3 text-center flex-wrap">
-			<span class="material-icons mi-md text-[rgb(var(--color-primary-rgb))]" aria-hidden="true">mail_outline</span>
-			<p class="text-sm text-text-muted m-0">
-				¿Alguna consulta? Escríbenos a
-				<a href="mailto:informaticatestua@gmail.com" class="font-semibold text-[rgb(var(--color-primary-rgb))] hover:underline">informaticatestua@gmail.com</a>
-			</p>
-		</div>
-	</div>
+	<!-- ── Resultados de búsqueda (relleno por JS) ────────────────────────── -->
+	<div id="search-results" class="search-results hidden" role="listbox" aria-label="Resultados de búsqueda"></div>
+
+	<!-- ── Catálogo abierto de asignaturas ─────────────────────────────────── -->
+	<div id="asignaturas-container" class="hidden space-y-10"></div>
+
 </div>
 
 <script is:inline>
@@ -67,30 +98,29 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 	// ─── Configuración ───────────────────────────────────────────────────────
 
 	const CATEGORY_LABELS = {
-		software:    "Rama Software",
+		software:    "Especialidad / Rama",
 		third_year:  "Tercer Curso",
 		second_year: "Segundo Curso",
 		first_year:  "Primer Curso",
 		other:       "Otros",
 	};
 
+	const FILTER_SHORT_LABELS = {
+		all:         "Todas",
+		software:    "Especialidad",
+		third_year:  "3.º Curso",
+		second_year: "2.º Curso",
+		first_year:  "1.º Curso",
+		other:       "Otros",
+	};
+
 	const CATEGORY_ORDER = ["software", "third_year", "second_year", "first_year", "other"];
 
-	/**
-	 * Botón sintético "FULL" que agrupa todos los hijos de un padre.
-	 * Se inserta como primer hijo en la sublista de su parent_id.
-	 */
 	const SYNTHETIC_FULL = {
 		sds:          { id: "sdsfull",    display_name: "SDS Full" },
 		redes_parent: { id: "redes_full", display_name: "Redes Full" },
 	};
 
-	/**
-	 * Secciones dentro de un mismo subject_id (columna `source_file`).
-	 * Cada botón navega a `/{id}?src=<source_file>`, y el motor del quiz
-	 * (main.js → QuizData) carga solo las preguntas de esa sección.
-	 * El nº de preguntas se obtiene por consulta (no hardcodeado).
-	 */
 	const SECTION_BUTTONS = {
 		hada: [
 			{ label: "HADA Julio 2026", src: "HADA Julio 2026" },
@@ -103,42 +133,99 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 		],
 	};
 
-	/** IDs de asignaturas marcadas como deprecadas (muestran badge). */
 	const DEPRECATED_SUBJECTS = new Set([]);
-
-	/** IDs de asignaturas con badge "Nuevo" superpuesto. */
 	const NEW_SUBJECTS = new Set(["p2", "si", "ir", "dbd"]);
-
-	/**
-	 * IDs de asignaturas que NO se muestran como botón propio, pero siguen
-	 * existiendo en BD y agregándose en su "FULL" sintético. P. ej.
-	 * "redesGeneral" es el banco completo de redes: se accede vía "Redes Full",
-	 * sin botón individual.
-	 */
 	const HIDDEN_SUBJECTS = new Set(["redesGeneral"]);
+
+	// ─── Iconos SVG inline ───────────────────────────────────────────────────
+
+	const ICON_ARROW =
+		'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>';
+	const ICON_CHEVRON =
+		'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>';
+	const ICON_CLOSE =
+		'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>';
+	const ICON_LAYERS =
+		'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 2 7l10 5 10-5-10-5Z"/><path d="m2 17 10 5 10-5"/><path d="m2 12 10 5 10-5"/></svg>';
+	const ICON_SPARKLES =
+		'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg>';
+
+	// ─── Helpers ─────────────────────────────────────────────────────────────
+
+	function getChildCount(subject, children) {
+		const kids = (children[subject.id] || []).filter((c) => !HIDDEN_SUBJECTS.has(c.id));
+		const synth = SYNTHETIC_FULL[subject.id] ? 1 : 0;
+		const secs = SECTION_BUTTONS[subject.id] ? SECTION_BUTTONS[subject.id].length : 0;
+		return kids.length + synth + secs;
+	}
+
+	function closeAllSublists(container, returnFocus) {
+		if (!container) return;
+		const openBtn = container.querySelector("button.subject-open");
+		container.querySelectorAll('[id$="-sublist"]').forEach((sl) => {
+			sl.classList.remove("sublist-open");
+			sl.classList.add("hidden");
+		});
+		container.querySelectorAll("button.subject-open").forEach((b) => {
+			b.classList.remove("subject-open");
+			b.setAttribute("aria-expanded", "false");
+		});
+		if (returnFocus && openBtn) openBtn.focus();
+	}
 
 	// ─── Renderizado ─────────────────────────────────────────────────────────
 
 	function buildSublist(subject, children) {
+		const totalCount = getChildCount(subject, { [subject.id]: children });
 		const div = document.createElement("div");
 		div.id = `${subject.id}-sublist`;
-		div.className = "hidden sublist-panel flex flex-col items-center";
+		div.className = "hidden sublist-panel";
 
+		const header = document.createElement("div");
+		header.className = "sublist-header";
+
+		const titleWrap = document.createElement("div");
+		titleWrap.className = "sublist-title-wrap";
 		const h4 = document.createElement("h4");
-		h4.className = "mt-0 mb-4 text-[0.78rem] font-bold tracking-[0.1em] uppercase text-text-muted";
-		h4.textContent = `Exámenes ${subject.display_name}`;
-		div.appendChild(h4);
+		h4.className = "sublist-title";
+		h4.textContent = subject.display_name;
+		const countMeta = document.createElement("span");
+		countMeta.className = "sublist-count tabular";
+		countMeta.textContent = `${totalCount} ${totalCount === 1 ? "módulo" : "módulos"}`;
+		titleWrap.appendChild(h4);
+		titleWrap.appendChild(countMeta);
+
+		const closeBtn = document.createElement("button");
+		closeBtn.type = "button";
+		closeBtn.className = "sublist-close";
+		closeBtn.setAttribute("aria-label", `Cerrar módulos de ${subject.display_name}`);
+		closeBtn.innerHTML = ICON_CLOSE;
+		closeBtn.addEventListener("click", (e) => {
+			e.stopPropagation();
+			div.classList.remove("sublist-open");
+			div.classList.add("hidden");
+			const triggerBtn = document.getElementById(subject.id);
+			if (triggerBtn) {
+				triggerBtn.classList.remove("subject-open");
+				triggerBtn.setAttribute("aria-expanded", "false");
+				triggerBtn.focus();
+			}
+		});
+
+		header.appendChild(titleWrap);
+		header.appendChild(closeBtn);
+		div.appendChild(header);
 
 		const row = document.createElement("div");
-		row.className = "asignaturas listaoculta flex justify-center items-center flex-wrap gap-3 w-full max-w-[800px]";
+		row.className = "asignaturas listaoculta sublist-grid";
 
 		// Botón FULL sintético (primero)
 		const synth = SYNTHETIC_FULL[subject.id];
 		if (synth) {
 			const btn = document.createElement("button");
 			btn.id = synth.id;
-			btn.className = "btn-primary";
-			btn.textContent = synth.display_name;
+			btn.className = "sublist-btn sublist-btn--primary";
+			btn.innerHTML = `<span class="sublist-btn-icon">${ICON_LAYERS}</span><span class="sublist-btn-text">${window.Utils.esc(synth.display_name)}</span><span class="sublist-btn-arrow">${ICON_ARROW}</span>`;
 			btn.addEventListener("click", () => { window.location.href = `/${synth.id}`; });
 			row.appendChild(btn);
 		}
@@ -146,29 +233,34 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 		for (const child of children) {
 			if (HIDDEN_SUBJECTS.has(child.id)) continue;
 			const btn = document.createElement("button");
-			// Solo mostrar badge en el hijo si el padre NO ya es IA (evita redundancia)
 			const showBadge = child.is_ai_generated && !subject.is_ai_generated;
 			btn.id = child.id;
-			btn.className = "btn-primary" + (showBadge ? " btn-primary--ai" : "");
-			if (showBadge) {
-				const nameSpan = document.createElement("span");
-				nameSpan.textContent = child.display_name;
-				btn.appendChild(nameSpan);
-				btn.appendChild(makeAiBadge());
-			} else {
-				btn.textContent = child.display_name;
-			}
+			btn.className = "sublist-btn" + (showBadge ? " btn-primary--ai" : "");
+
+			const labelSpan = document.createElement("span");
+			labelSpan.className = "sublist-btn-text";
+			labelSpan.textContent = child.display_name;
+			btn.appendChild(labelSpan);
+
+			if (showBadge) btn.appendChild(makeAiBadge());
+
+			const arrow = document.createElement("span");
+			arrow.className = "sublist-btn-arrow";
+			arrow.innerHTML = ICON_ARROW;
+			btn.appendChild(arrow);
+
 			btn.addEventListener("click", () => { window.location.href = `/${child.id}`; });
 			row.appendChild(btn);
 		}
 
-		// Botones de sección (source_file dentro del mismo subject_id).
+		// Botones de sección (source_file dentro del mismo subject_id)
 		const sections = SECTION_BUTTONS[subject.id];
 		if (sections) {
 			for (const sec of sections) {
 				const btn = document.createElement("button");
-				btn.className = "btn-primary";
-				btn.textContent = sec.label;
+				const isFull = /full/i.test(sec.label);
+				btn.className = isFull ? "sublist-btn sublist-btn--primary" : "sublist-btn";
+				btn.innerHTML = `${isFull ? `<span class="sublist-btn-icon">${ICON_LAYERS}</span>` : ""}<span class="sublist-btn-text">${window.Utils.esc(sec.label)}</span><span class="sublist-btn-arrow">${ICON_ARROW}</span>`;
 				btn.addEventListener("click", () => {
 					window.location.href = `/${subject.id}?src=${encodeURIComponent(sec.src)}`;
 				});
@@ -180,54 +272,101 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 		return div;
 	}
 
+	function renderCardsGrid(items, children, target, subtitleText) {
+		if (!items || items.length === 0) return;
+
+		if (subtitleText) {
+			const label = document.createElement("p");
+			label.className = "semester-label";
+			label.textContent = subtitleText;
+			target.appendChild(label);
+		}
+
+		const grid = document.createElement("div");
+		grid.className = "subject-grid";
+		for (const s of items) {
+			grid.appendChild(makeTopBtn(s, children));
+		}
+		target.appendChild(grid);
+
+		for (const s of items) {
+			const count = getChildCount(s, children);
+			if (count > 0) {
+				target.appendChild(buildSublist(s, children[s.id] || []));
+			}
+		}
+	}
+
 	function renderCategoryGrid(tops, children, target) {
-		const hasManyButtons = tops.length > 1;
+		const hasExplicit = tops.some((s) => s.semester === 1 || s.semester === 2);
 
-		if (!hasManyButtons) {
-			const centered = document.createElement("div");
-			centered.className = "flex justify-center w-full mb-[20px]";
-			centered.appendChild(makeTopBtn(tops[0], children));
-			target.appendChild(centered);
-		} else {
-			const hasExplicit = tops.some((s) => s.semester !== null && s.semester !== undefined);
-			let leftGroup, rightGroup;
-			if (hasExplicit) {
-				leftGroup  = tops.filter((s) => s.semester !== 2);
-				rightGroup = tops.filter((s) => s.semester === 2);
-			} else {
-				const mid = Math.ceil(tops.length / 2);
-				leftGroup  = tops.slice(0, mid);
-				rightGroup = tops.slice(mid);
-			}
-
-			const grid = document.createElement("div");
-			grid.className = "asignaturas grid grid-cols-[auto_2px_auto] gap-[20px] mx-auto mb-[20px] items-center";
-
-			const leftDiv = document.createElement("div");
-			leftDiv.className = "group-left flex justify-end gap-[10px] flex-wrap";
-			for (const s of leftGroup) leftDiv.appendChild(makeTopBtn(s, children));
-
-			const sep = document.createElement("div");
-			sep.className = "separator w-[2px] h-[35px] bg-border-subtle mx-auto";
-
-			const rightDiv = document.createElement("div");
-			rightDiv.className = "group-right flex justify-start gap-[10px] flex-wrap";
-			for (const s of rightGroup) rightDiv.appendChild(makeTopBtn(s, children));
-
-			grid.appendChild(leftDiv);
-			grid.appendChild(sep);
-			grid.appendChild(rightDiv);
-			target.appendChild(grid);
-		}
-
-		for (const s of tops) {
-			const kids = children[s.id] || [];
-			const hasSynth = !!SYNTHETIC_FULL[s.id];
-			const hasSections = !!SECTION_BUTTONS[s.id];
-			if (kids.length > 0 || hasSynth || hasSections) {
-				target.appendChild(buildSublist(s, kids));
+		if (hasExplicit) {
+			const firstSem  = tops.filter((s) => s.semester !== 2);
+			const secondSem = tops.filter((s) => s.semester === 2);
+			if (firstSem.length > 0 && secondSem.length > 0) {
+				renderCardsGrid(firstSem, children, target, "1.er cuatrimestre");
+				renderCardsGrid(secondSem, children, target, "2.º cuatrimestre");
+				return;
 			}
 		}
+
+		renderCardsGrid(tops, children, target, null);
+	}
+
+	function getCategoryCount(cat, topLevel) {
+		if (cat === "software") {
+			return (topLevel["software"]?.length || 0) + (topLevel["ti"]?.length || 0);
+		}
+		return topLevel[cat]?.length || 0;
+	}
+
+	function renderFilterBar(categoriesToShow, topLevel, container) {
+		const bar = document.getElementById("category-filter-bar");
+		if (!bar) return;
+		bar.innerHTML = "";
+
+		const totalAll = categoriesToShow.reduce((acc, cat) => acc + getCategoryCount(cat, topLevel), 0);
+		const options = ["all", ...categoriesToShow];
+		let activeCat = "all";
+
+		const applyFilter = () => {
+			bar.querySelectorAll(".cat-tab").forEach((tab) => {
+				const isOn = tab.dataset.cat === activeCat;
+				tab.classList.toggle("is-active", isOn);
+				tab.setAttribute("aria-pressed", String(isOn));
+			});
+			container.querySelectorAll(".subject-section").forEach((sec) => {
+				const show = activeCat === "all" || sec.dataset.category === activeCat;
+				sec.classList.toggle("hidden", !show);
+			});
+			closeAllSublists(container, false);
+		};
+
+		for (const cat of options) {
+			const btn = document.createElement("button");
+			btn.type = "button";
+			btn.dataset.cat = cat;
+			btn.className = "cat-tab" + (cat === "all" ? " is-active" : "");
+			btn.setAttribute("aria-pressed", cat === "all" ? "true" : "false");
+
+			const label = document.createElement("span");
+			label.textContent = FILTER_SHORT_LABELS[cat] || CATEGORY_LABELS[cat] || cat;
+			btn.appendChild(label);
+
+			const count = cat === "all" ? totalAll : getCategoryCount(cat, topLevel);
+			const badge = document.createElement("span");
+			badge.className = "cat-tab-count tabular";
+			badge.textContent = String(count);
+			btn.appendChild(badge);
+
+			btn.addEventListener("click", () => {
+				activeCat = cat;
+				applyFilter();
+			});
+			bar.appendChild(btn);
+		}
+
+		bar.classList.remove("hidden");
 	}
 
 	function renderSubjects(subjects) {
@@ -235,9 +374,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 		if (!container) return;
 		container.innerHTML = "";
 
-		// Separar top-level y children
-		const topLevel = {};   // category → [subject]
-		const children = {};   // parent_id → [subject]
+		const topLevel = {};
+		const children = {};
 
 		for (const s of subjects) {
 			if (s.parent_id === null) {
@@ -253,126 +391,122 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 			(cat) => topLevel[cat] && topLevel[cat].length > 0,
 		);
 
+		renderFilterBar(categoriesToShow, topLevel, container);
+
 		for (const cat of categoriesToShow) {
 			const tops = topLevel[cat];
+			const section = document.createElement("section");
+			section.className = "subject-section";
+			section.dataset.category = cat;
 
-			// ── Título de sección ──────────────────────────────────────────
 			if (cat === "software") {
-				// Header especial con dropdown de ramas
+				const tiTops = topLevel["ti"] || [];
 				const headerRow = document.createElement("div");
-				headerRow.className = "flex justify-center mt-6 mb-2";
+				headerRow.className = "section-header";
 
-				// Dropdown de ramas
+				const titleGroup = document.createElement("div");
+				titleGroup.className = "section-title-group";
+				const h2 = document.createElement("h2");
+				h2.className = "section-title";
+				h2.textContent = CATEGORY_LABELS[cat];
+				const countBadge = document.createElement("span");
+				countBadge.className = "section-count tabular";
+				countBadge.textContent = `${tops.length} ${tops.length === 1 ? "asignatura" : "asignaturas"}`;
+				titleGroup.appendChild(h2);
+				titleGroup.appendChild(countBadge);
+
+				// Segmented switcher Software / TI
+				const switcher = document.createElement("div");
+				switcher.className = "rama-switcher";
+				switcher.setAttribute("role", "group");
+				switcher.setAttribute("aria-label", "Seleccionar especialidad");
+
 				const RAMAS = [
-					{ label: "Software",                 icon: "code" },
-					{ label: "Tecnologías de Información", icon: "wifi" },
+					{ id: "software", label: "Software", count: tops.length },
+					{ id: "ti",       label: "TI",       title: "Tecnologías de la Información", count: tiTops.length },
 				];
-				const dropWrap = document.createElement("div");
-				dropWrap.className = "rama-drop-wrap";
 
-				const trigger = document.createElement("button");
-				trigger.type = "button";
-				trigger.className = "rama-drop-trigger";
-				trigger.innerHTML = `<span class="material-icons rama-drop-icon" aria-hidden="true">code</span><span class="rama-drop-label">Software</span><span class="material-icons rama-drop-chev" aria-hidden="true">expand_more</span>`;
-				dropWrap.appendChild(trigger);
-
-				const menu = document.createElement("div");
-				menu.className = "rama-drop-menu hidden";
-				for (const rama of RAMAS) {
-					const item = document.createElement("button");
-					item.type = "button";
-					item.dataset.icon  = rama.icon;
-					item.dataset.label = rama.label;
-					item.className = "rama-drop-item" + (rama.label === "Software" ? " is-active" : "");
-					item.innerHTML = `<span class="material-icons rama-item-icon" aria-hidden="true">${rama.icon}</span><span>${rama.label}</span>`;
-					menu.appendChild(item);
-				}
-				dropWrap.appendChild(menu);
-				headerRow.appendChild(dropWrap);
-				container.appendChild(headerRow);
-
-				// Wrapper para los subjects de Software (visible por defecto)
 				const subjectsWrap = document.createElement("div");
 				subjectsWrap.id = "software-subjects-wrap";
 
-				// Wrapper para los subjects de Tecnologías de la Información (oculto por defecto)
 				const tiWrap = document.createElement("div");
 				tiWrap.id = "ti-subjects-wrap";
 				tiWrap.className = "hidden";
 
-				// Placeholder "Próximamente" para ramas sin contenido (oculto por defecto)
 				const placeholder = document.createElement("div");
 				placeholder.id = "software-placeholder";
 				placeholder.className = "hidden rama-placeholder";
 
-				// ── Lógica del dropdown ────────────────────────────
-				trigger.addEventListener("click", function (e) {
-					e.stopPropagation();
-					menu.classList.toggle("hidden");
-					trigger.classList.toggle("is-open", !menu.classList.contains("hidden"));
-				});
-				document.addEventListener("click", function () {
-					menu.classList.add("hidden");
-					trigger.classList.remove("is-open");
-				});
-				menu.addEventListener("click", function (e) {
-					const item = e.target.closest(".rama-drop-item");
-					if (!item) return;
-					const labelText = item.dataset.label;
-					const iconText  = item.dataset.icon;
-					trigger.querySelector(".rama-drop-label").textContent = labelText;
-					trigger.querySelector(".rama-drop-icon").textContent = iconText;
-					const selected = labelText;
-					menu.querySelectorAll(".rama-drop-item").forEach((i) => i.classList.remove("is-active"));
-					item.classList.add("is-active");
-					menu.classList.add("hidden");
-					trigger.classList.remove("is-open");
+				RAMAS.forEach((rama, idx) => {
+					const b = document.createElement("button");
+					b.type = "button";
+					b.className = "rama-switch-btn" + (idx === 0 ? " is-active" : "");
+					b.setAttribute("aria-pressed", idx === 0 ? "true" : "false");
+					if (rama.title) b.title = rama.title;
+					b.textContent = rama.label;
+					b.addEventListener("click", () => {
+						switcher.querySelectorAll(".rama-switch-btn").forEach((el) => {
+							el.classList.remove("is-active");
+							el.setAttribute("aria-pressed", "false");
+						});
+						b.classList.add("is-active");
+						b.setAttribute("aria-pressed", "true");
+						countBadge.textContent = `${rama.count} ${rama.count === 1 ? "asignatura" : "asignaturas"}`;
+						closeAllSublists(section, false);
 
-					if (selected === "Software") {
-						subjectsWrap.classList.remove("hidden");
-						tiWrap.classList.add("hidden");
-						placeholder.classList.add("hidden");
-					} else if (selected === "Tecnologías de Información") {
-						subjectsWrap.classList.add("hidden");
-						tiWrap.classList.remove("hidden");
-						placeholder.classList.add("hidden");
-					} else {
-						subjectsWrap.classList.add("hidden");
-						tiWrap.classList.add("hidden");
-						placeholder.classList.remove("hidden");
-						placeholder.innerHTML = `
-							<div class="rama-placeholder-inner">
-								<span class="material-icons">construction</span>
-								<p class="rama-placeholder-title">${selected}</p>
-								<p class="rama-placeholder-sub">Próximamente</p>
-							</div>`;
-					}
+						if (rama.id === "software") {
+							subjectsWrap.classList.remove("hidden");
+							tiWrap.classList.add("hidden");
+							placeholder.classList.add("hidden");
+						} else {
+							subjectsWrap.classList.add("hidden");
+							tiWrap.classList.remove("hidden");
+							placeholder.classList.add("hidden");
+						}
+					});
+					switcher.appendChild(b);
 				});
 
-				// Render subjects de Software dentro de su wrapper
+				headerRow.appendChild(titleGroup);
+				headerRow.appendChild(switcher);
+				section.appendChild(headerRow);
+
 				renderCategoryGrid(tops, children, subjectsWrap);
-				container.appendChild(subjectsWrap);
+				section.appendChild(subjectsWrap);
 
-				// Render subjects de Tecnologías de la Información dentro de su wrapper
-				const tiTops = topLevel["ti"] || [];
 				if (tiTops.length > 0) {
 					renderCategoryGrid(tiTops, children, tiWrap);
 				}
-				container.appendChild(tiWrap);
-				container.appendChild(placeholder);
-
+				section.appendChild(tiWrap);
+				section.appendChild(placeholder);
 			} else {
-				const h3 = document.createElement("h3");
-				h3.className = "text-[0.78rem] font-heading font-bold mt-8 mb-4 tracking-[0.12em] uppercase text-text-muted";
-				h3.textContent = CATEGORY_LABELS[cat] || cat;
-				container.appendChild(h3);
-				renderCategoryGrid(tops, children, container);
+				const headerRow = document.createElement("div");
+				headerRow.className = "section-header";
+
+				const titleGroup = document.createElement("div");
+				titleGroup.className = "section-title-group";
+				const h2 = document.createElement("h2");
+				h2.className = "section-title";
+				h2.textContent = CATEGORY_LABELS[cat] || cat;
+
+				const countBadge = document.createElement("span");
+				countBadge.className = "section-count tabular";
+				countBadge.textContent = `${tops.length} ${tops.length === 1 ? "asignatura" : "asignaturas"}`;
+
+				titleGroup.appendChild(h2);
+				titleGroup.appendChild(countBadge);
+				headerRow.appendChild(titleGroup);
+				section.appendChild(headerRow);
+
+				renderCategoryGrid(tops, children, section);
 			}
+
+			container.appendChild(section);
 		}
 
-		// Delegar clics en el contenedor
+		// Delegación de clics para abrir/cerrar sublists
 		container.addEventListener("click", function (e) {
-			const btn = e.target.closest("button");
+			const btn = e.target.closest("button.subject-card");
 			if (!btn) return;
 			const sublistId = btn.id + "-sublist";
 			const sublist = document.getElementById(sublistId);
@@ -385,79 +519,99 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 					}
 				});
 				container.querySelectorAll("button.subject-open").forEach((b) => {
-					if (b !== btn) b.classList.remove("subject-open");
+					if (b !== btn) {
+						b.classList.remove("subject-open");
+						b.setAttribute("aria-expanded", "false");
+					}
 				});
 				if (isOpen) {
 					sublist.classList.remove("sublist-open");
 					sublist.classList.add("hidden");
 					btn.classList.remove("subject-open");
+					btn.setAttribute("aria-expanded", "false");
 				} else {
 					sublist.classList.remove("hidden");
 					btn.classList.add("subject-open");
-					requestAnimationFrame(() => requestAnimationFrame(() => sublist.classList.add("sublist-open")));
+					btn.setAttribute("aria-expanded", "true");
+					requestAnimationFrame(() => requestAnimationFrame(() => {
+						sublist.classList.add("sublist-open");
+						sublist.scrollIntoView({ behavior: "smooth", block: "nearest" });
+					}));
 				}
 			}
-			// Si no tiene sublist, la navegación ya está en el listener del btn
 		});
 	}
 
-	/** Badge "No oficial · IA" reutilizable con tooltip. */
 	function makeAiBadge() {
 		const badge = document.createElement("span");
 		badge.className = "ai-badge";
 		badge.setAttribute("aria-label", "Preguntas generadas con IA, no provienen de exámenes reales");
-		badge.innerHTML = `<span class="material-icons ai-badge-icon" aria-hidden="true">auto_awesome</span>IA`;
+		badge.innerHTML = `${ICON_SPARKLES}<span>IA</span>`;
 		return badge;
 	}
 
-	/** Crea el botón raíz: si tiene hijos, abre sublist; si no, navega. */
 	function makeTopBtn(subject, children) {
-		const kids = children[subject.id] || [];
-		const hasSynth = !!SYNTHETIC_FULL[subject.id];
-		const hasSections = !!SECTION_BUTTONS[subject.id];
-		const hasChildren = kids.length > 0 || hasSynth || hasSections;
+		const childCount = getChildCount(subject, children);
+		const hasChildren = childCount > 0;
 
 		const btn = document.createElement("button");
+		btn.type = "button";
 		btn.id = subject.id;
-		btn.className = "btn" + (NEW_SUBJECTS.has(subject.id) ? " btn--new" : "");
+		btn.className = "subject-card";
+
+		if (hasChildren) {
+			btn.setAttribute("aria-expanded", "false");
+			btn.setAttribute("aria-controls", `${subject.id}-sublist`);
+		}
+
+		const titleRow = document.createElement("div");
+		titleRow.className = "subject-card-title-row";
+
+		const nameSpan = document.createElement("span");
+		nameSpan.className = "subject-card-name";
+		nameSpan.textContent = subject.display_name;
+		titleRow.appendChild(nameSpan);
 
 		if (NEW_SUBJECTS.has(subject.id)) {
-			if (subject.is_ai_generated) btn.className += " btn--ai";
-			const nameSpan = document.createElement("span");
-			nameSpan.textContent = subject.display_name;
-			btn.appendChild(nameSpan);
 			const newBadge = document.createElement("span");
 			newBadge.className = "new-badge";
 			newBadge.textContent = "Nuevo";
-			btn.appendChild(newBadge);
-			if (subject.is_ai_generated) btn.appendChild(makeAiBadge());
-		} else if (DEPRECATED_SUBJECTS.has(subject.id)) {
-			btn.className += " btn--deprecated";
-			const nameSpan = document.createElement("span");
-			nameSpan.textContent = subject.display_name;
+			titleRow.appendChild(newBadge);
+		}
+
+		if (DEPRECATED_SUBJECTS.has(subject.id)) {
+			btn.classList.add("is-deprecated");
 			const badge = document.createElement("span");
 			badge.className = "deprecated-badge";
 			badge.title = "Esta asignatura ya no se imparte o ha sido reemplazada";
 			badge.textContent = "Antiguo";
-			btn.appendChild(nameSpan);
-			btn.appendChild(badge);
-		} else if (subject.is_ai_generated) {
-			btn.className += " btn--ai";
-			const nameSpan = document.createElement("span");
-			nameSpan.textContent = subject.display_name;
-			btn.appendChild(nameSpan);
-			btn.appendChild(makeAiBadge());
-		} else {
-			btn.textContent = subject.display_name;
+			titleRow.appendChild(badge);
 		}
 
+		if (subject.is_ai_generated) {
+			titleRow.appendChild(makeAiBadge());
+		}
+
+		btn.appendChild(titleRow);
+
+		const rightGroup = document.createElement("div");
+		rightGroup.className = "subject-card-right";
+
 		if (hasChildren) {
-			const chev = document.createElement("span");
-			chev.className = "material-icons subject-chevron";
-			chev.setAttribute("aria-hidden", "true");
-			chev.textContent = "expand_more";
-			btn.appendChild(chev);
-		} else {
+			const countPill = document.createElement("span");
+			countPill.className = "subject-card-count tabular";
+			countPill.textContent = `${childCount} ${childCount === 1 ? "módulo" : "módulos"}`;
+			rightGroup.appendChild(countPill);
+		}
+
+		const rightIcon = document.createElement("span");
+		rightIcon.className = hasChildren ? "subject-chevron" : "subject-arrow";
+		rightIcon.innerHTML = hasChildren ? ICON_CHEVRON : ICON_ARROW;
+		rightGroup.appendChild(rightIcon);
+
+		btn.appendChild(rightGroup);
+
+		if (!hasChildren) {
 			btn.addEventListener("click", () => { window.location.href = `/${subject.id}`; });
 		}
 
@@ -466,9 +620,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 	// ─── Buscador ────────────────────────────────────────────────────────────
 
-	const norm = (s) => String(s).normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+	const norm = (s) => String(s).normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9\s-]/g, " ");
 
-	/** Índice plano de todo lo "abrible": exámenes/módulos con su asignatura. */
 	function buildSearchIndex(subjects) {
 		const byId = new Map(subjects.map((s) => [s.id, s]));
 		const kids = {};
@@ -503,8 +656,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 	function initSearch(index) {
 		const input     = document.getElementById("subject-search");
+		const clearBtn  = document.getElementById("search-clear");
 		const results   = document.getElementById("search-results");
 		const container = document.getElementById("asignaturas-container");
+		const filterBar = document.getElementById("category-filter-bar");
 		if (!input || !results || !container) return;
 
 		const esc = window.Utils.esc;
@@ -522,16 +677,20 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 		function render() {
 			const raw = input.value.trim();
-			if (!raw) {
+			clearBtn?.classList.toggle("hidden", !raw);
+			const terms = norm(raw).split(/\s+/).filter(Boolean);
+
+			if (!raw || terms.length === 0) {
 				results.classList.add("hidden");
 				results.innerHTML = "";
 				container.classList.remove("hidden");
+				filterBar?.classList.remove("hidden");
 				return;
 			}
-			const terms = norm(raw).split(/\s+/);
 			matches = index.filter((e) => terms.every((t) => e.hay.includes(t))).slice(0, 30);
 			active = 0;
 			container.classList.add("hidden");
+			filterBar?.classList.add("hidden");
 			results.classList.remove("hidden");
 			if (matches.length === 0) {
 				results.innerHTML = `<p class="search-empty">Sin resultados para «${esc(raw)}»</p>`;
@@ -541,13 +700,19 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 				`<a role="option" href="${esc(m.href)}" class="search-item" aria-selected="${i === 0}">` +
 					`<span class="search-item-label">${esc(m.label)}</span>` +
 					(m.group ? `<span class="search-item-group">${esc(m.group)}</span>` : "") +
-					`<span class="material-icons search-item-arrow" aria-hidden="true">arrow_forward</span>` +
+					`<span class="search-item-arrow">${ICON_ARROW}</span>` +
 				`</a>`
 			).join("");
 			paintActive();
 		}
 
 		input.addEventListener("input", render);
+		clearBtn?.addEventListener("click", () => {
+			input.value = "";
+			render();
+			input.focus();
+		});
+
 		input.addEventListener("keydown", (e) => {
 			if (e.key === "ArrowDown" && matches.length) {
 				e.preventDefault();
@@ -567,8 +732,21 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 			}
 		});
 
-		// Atajo global "/" para enfocar el buscador
 		document.addEventListener("keydown", (e) => {
+			if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k") {
+				e.preventDefault();
+				input.focus();
+				input.select();
+				return;
+			}
+			if (e.key === "Escape" && document.activeElement !== input) {
+				const openPanel = container.querySelector(".sublist-panel:not(.hidden)");
+				if (openPanel) {
+					const focusInside = openPanel.contains(document.activeElement);
+					closeAllSublists(container, focusInside);
+				}
+				return;
+			}
 			if (e.key !== "/" || e.ctrlKey || e.metaKey || e.altKey) return;
 			const t = e.target;
 			if (t && (t.tagName === "INPUT" || t.tagName === "TEXTAREA" || t.isContentEditable)) return;
@@ -610,6 +788,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 			document.getElementById("continue-card-title").textContent = name;
 			document.getElementById("continue-card-meta").textContent =
 				`Pregunta ${Math.min(data.current_index + 1, total)} de ${total} · ${pct}% completado`;
+			const fill = document.getElementById("continue-card-progress-fill");
+			if (fill) fill.style.width = `${pct}%`;
 			card.classList.remove("hidden");
 		}
 
@@ -625,7 +805,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 		const db = window.SupabaseClient;
 		if (!db) {
-			if (loading) loading.innerHTML = '<p class="text-text-muted text-sm">No se pudo conectar con la base de datos.</p>';
+			if (loading) loading.innerHTML = '<p class="text-text-muted text-sm text-center py-8">No se pudo conectar con la base de datos.</p>';
 			return;
 		}
 
@@ -645,7 +825,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 			initContinue(data || []);
 		} catch (err) {
 			console.error("[Index] Error cargando asignaturas:", err);
-			if (loading) loading.innerHTML = '<p class="text-text-muted text-sm">Error al cargar las asignaturas. Recarga la página.</p>';
+			if (loading) loading.innerHTML = '<p class="text-text-muted text-sm text-center py-8">Error al cargar las asignaturas. Recarga la página.</p>';
 		}
 	}
 
@@ -661,109 +841,137 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 <style is:global>
 	@reference "../styles/global.css";
 
-	/* ── Buscador ───────────────────────────────────────────── */
+	/* ── Buscador command bar ───────────────────────────────── */
 	.subject-search {
 		position: relative;
-		max-width: 460px;
-		margin: 0 auto 22px;
 	}
 	.subject-search input {
 		width: 100%;
 		box-sizing: border-box;
-		padding: 12px 44px 12px 44px;
-		border-radius: 14px;
+		padding: 9px 38px 9px 36px;
+		border-radius: 10px;
 		border: 1px solid rgb(var(--border-subtle));
-		background: rgb(var(--bg-surface-hover) / 0.6);
+		background: rgb(var(--bg-surface));
 		color: rgb(var(--text-main));
 		font: inherit;
-		font-size: 0.95rem;
+		font-size: 0.875rem;
+		line-height: 1.4;
 		outline: none;
-		transition: border-color 150ms ease, box-shadow 150ms ease, background-color 150ms ease;
+		transition: border-color 140ms ease, background-color 140ms ease;
 		-webkit-appearance: none;
 		appearance: none;
 	}
 	.subject-search input::-webkit-search-cancel-button { display: none; }
 	.subject-search input::placeholder { color: rgb(var(--text-muted)); }
+	.subject-search input:hover {
+		border-color: rgb(var(--border-strong));
+	}
 	.subject-search input:focus {
-		border-color: rgba(59, 130, 246, 0.55);
-		background: rgb(var(--bg-surface));
-		box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.14);
+		border-color: rgb(var(--border-strong));
+		background: rgb(var(--bg-surface-hover));
+		box-shadow: none;
 	}
 	.subject-search-icon {
 		position: absolute;
-		left: 14px;
+		left: 12px;
 		top: 50%;
 		transform: translateY(-50%);
-		font-size: 1.2rem !important;
+		display: inline-flex;
 		color: rgb(var(--text-muted));
 		pointer-events: none;
 	}
-	.subject-search-kbd {
+	.subject-search-clear {
 		position: absolute;
-		right: 12px;
+		right: 9px;
 		top: 50%;
 		transform: translateY(-50%);
-		min-width: 22px;
-		height: 22px;
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
+		width: 24px;
+		height: 24px;
 		border-radius: 6px;
-		border: 1px solid rgb(var(--border-subtle));
-		background: rgb(var(--bg-surface));
+		border: none;
+		background: transparent;
 		color: rgb(var(--text-muted));
-		font-size: 0.75rem;
-		font-weight: 600;
+		cursor: pointer;
+		transition: color 140ms ease, background-color 140ms ease;
+	}
+	.subject-search-clear.hidden { display: none; }
+	.subject-search-clear:hover {
+		color: rgb(var(--text-main));
+		background: rgb(var(--bg-surface-hover));
+	}
+	.subject-search-kbd {
+		position: absolute;
+		right: 10px;
+		top: 50%;
+		transform: translateY(-50%);
+		min-width: 20px;
+		height: 20px;
+		padding: 0 5px;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 5px;
+		border: 1px solid rgb(var(--border-subtle));
+		background: rgb(var(--bg-base));
+		color: rgb(var(--text-muted));
+		font-size: 0.7rem;
+		font-weight: 500;
 		pointer-events: none;
 	}
 	.subject-search input:focus ~ .subject-search-kbd,
 	.subject-search input:not(:placeholder-shown) ~ .subject-search-kbd { display: none; }
 	@media (hover: none) { .subject-search-kbd { display: none; } }
 
+	/* ── Resultados unificados de búsqueda (estilo Vercel list) ── */
 	.search-results {
-		display: flex;
-		flex-direction: column;
-		gap: 6px;
-		max-width: 560px;
-		margin: 0 auto;
-		text-align: left;
+		width: 100%;
+		border-radius: 12px;
+		border: 1px solid rgb(var(--border-subtle));
+		background: rgb(var(--bg-surface));
+		overflow: hidden;
 	}
 	.search-results.hidden { display: none; }
 	.search-item {
 		display: flex;
 		align-items: center;
-		gap: 10px;
-		padding: 12px 14px;
-		border-radius: 12px;
-		border: 1px solid rgb(var(--border-subtle));
-		background: rgb(var(--bg-surface));
+		gap: 12px;
+		padding: 12px 16px;
+		border-bottom: 1px solid rgb(var(--border-subtle));
 		color: rgb(var(--text-main));
 		text-decoration: none;
-		transition: border-color 120ms ease, background-color 120ms ease, transform 120ms ease;
+		transition: background-color 120ms ease;
 	}
+	.search-item:last-child { border-bottom: none; }
 	.search-item:hover,
 	.search-item.is-active {
-		border-color: rgba(59, 130, 246, 0.5);
-		background: rgba(59, 130, 246, 0.08);
+		background: rgb(var(--bg-surface-hover));
 	}
-	.search-item-label { font-weight: 600; font-size: 0.95rem; }
+	.search-item-label { font-weight: 500; font-size: 0.9rem; }
 	.search-item-group {
 		margin-left: auto;
 		font-size: 0.78rem;
 		color: rgb(var(--text-muted));
 	}
 	.search-item-arrow {
-		font-size: 1.05rem !important;
+		display: inline-flex;
 		color: rgb(var(--text-muted));
 		opacity: 0;
-		transition: opacity 120ms ease;
+		transition: opacity 120ms ease, color 120ms ease, transform 120ms ease;
 	}
 	.search-item.is-active .search-item-arrow,
-	.search-item:hover .search-item-arrow { opacity: 1; }
+	.search-item:hover .search-item-arrow {
+		opacity: 1;
+		color: rgb(var(--text-main));
+		transform: translateX(2px);
+	}
 	.search-empty {
-		margin: 18px 0;
+		margin: 0;
+		padding: 28px 16px;
 		text-align: center;
-		font-size: 0.9rem;
+		font-size: 0.875rem;
 		color: rgb(var(--text-muted));
 	}
 
@@ -771,231 +979,481 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 	.continue-card {
 		display: flex;
 		align-items: center;
-		gap: 14px;
-		max-width: 460px;
-		margin: 0 auto 22px;
-		padding: 14px 16px;
-		text-align: left;
+		justify-content: space-between;
+		gap: 16px;
+		padding: 12px 16px;
 		text-decoration: none;
 		color: inherit;
-		border-radius: 16px;
-		border: 1px solid rgba(59, 130, 246, 0.35);
-		background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(124, 58, 237, 0.08));
-		transition: transform 180ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 180ms ease, border-color 180ms ease;
+		border-radius: 12px;
+		border: 1px solid rgb(var(--border-subtle));
+		background: rgb(var(--bg-surface));
+		transition: border-color 150ms ease, background-color 150ms ease;
 	}
 	.continue-card.hidden { display: none; }
 	.continue-card:hover {
-		transform: translateY(-2px);
-		border-color: rgba(59, 130, 246, 0.6);
-		box-shadow: 0 10px 24px rgba(59, 130, 246, 0.18);
+		border-color: rgb(var(--border-strong));
+		background: rgb(var(--bg-surface-hover));
+	}
+	.continue-card-left {
+		display: flex;
+		align-items: center;
+		gap: 12px;
+		min-width: 0;
+		flex: 1;
 	}
 	.continue-card-icon {
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
-		width: 42px;
-		height: 42px;
-		border-radius: 12px;
-		background: linear-gradient(135deg, #3b82f6, #7c3aed);
-		color: #fff;
+		width: 34px;
+		height: 34px;
+		border-radius: 8px;
+		background: rgb(var(--bg-surface-hover));
+		border: 1px solid rgb(var(--border-strong));
+		color: rgb(var(--text-main));
 		flex-shrink: 0;
-		font-size: 1.4rem !important;
 	}
-	.continue-card-body { display: flex; flex-direction: column; gap: 1px; flex: 1; min-width: 0; }
-	.continue-card-eyebrow {
-		font-size: 0.68rem;
-		font-weight: 700;
-		letter-spacing: 0.1em;
-		text-transform: uppercase;
-		color: rgb(var(--text-muted));
-	}
-	.continue-card-title { font-weight: 700; font-size: 1.02rem; font-family: var(--font-heading, "Outfit", sans-serif); }
-	.continue-card-meta { font-size: 0.8rem; color: rgb(var(--text-muted)); }
-	.continue-card-arrow {
-		color: rgb(var(--text-muted));
-		transition: transform 180ms ease;
-	}
-	.continue-card:hover .continue-card-arrow { transform: translateX(3px); }
-
-	/* ── Esqueleto de carga ─────────────────────────────────── */
-	.subjects-skeleton {
-		display: grid;
-		gap: 22px;
-		padding: 8px 0 4px;
-	}
-	.subjects-skeleton.hidden { display: none; }
-	.skeleton-row {
+	.continue-card-body {
 		display: flex;
-		justify-content: center;
+		flex-direction: column;
+		gap: 6px;
+		min-width: 0;
+		flex: 1;
+	}
+	.continue-card-headline {
+		display: flex;
+		align-items: baseline;
 		flex-wrap: wrap;
-		gap: 12px;
+		gap: 6px;
+		min-width: 0;
 	}
-	.skeleton-row i {
-		display: block;
-		width: 92px;
-		height: 42px;
-		border-radius: 12px;
-		background: linear-gradient(90deg,
-			rgb(var(--bg-surface-hover)) 25%,
-			rgb(var(--border-subtle) / 0.6) 50%,
-			rgb(var(--bg-surface-hover)) 75%);
-		background-size: 200% 100%;
-		animation: skeleton-shimmer 1.3s ease-in-out infinite;
-	}
-	.skeleton-row i:nth-child(2n) { width: 74px; }
-	.skeleton-row i:nth-child(3n) { width: 112px; }
-	@keyframes skeleton-shimmer {
-		from { background-position: 200% 0; }
-		to   { background-position: -200% 0; }
-	}
-
-	/* Chips de asignatura: objetivo táctil cómodo y texto algo mayor */
-	#asignaturas-container .btn,
-	#asignaturas-container .btn-primary {
-		min-height: 44px;
-		font-size: 1rem;
-		font-weight: 600;
-	}
-
-	/* ── Chevron en botones con submódulos ─────────────────── */
-	.subject-chevron {
-		margin-left: 6px;
-		font-size: 1.05rem !important;
+	.continue-card-eyebrow {
+		font-size: 0.78rem;
+		font-weight: 500;
 		color: rgb(var(--text-muted));
-		vertical-align: middle;
-		transition: transform 220ms cubic-bezier(0.16, 1, 0.3, 1), color 180ms ease;
 	}
-	button.subject-open .subject-chevron {
-		transform: rotate(180deg);
-		color: #2563eb;
+	.continue-card-sep {
+		color: rgb(var(--border-strong));
+		font-size: 0.78rem;
 	}
-	:global(.dark) button.subject-open .subject-chevron {
-		color: #93c5fd;
+	.continue-card-title {
+		font-family: var(--font-heading);
+		font-weight: 600;
+		font-size: 0.92rem;
+		color: rgb(var(--text-main));
 	}
-
-	/* ── Botón de asignatura seleccionada (sublist abierto) ── */
-	#asignaturas-container .btn.subject-open {
-		background: rgba(59, 130, 246, 0.1);
-		border-color: rgba(59, 130, 246, 0.5);
-		color: #1d4ed8;
-		box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.12), 0 2px 8px rgba(59, 130, 246, 0.18);
-		transform: translateY(-1px);
+	.continue-card-meta {
+		font-size: 0.8rem;
+		color: rgb(var(--text-muted));
+		font-variant-numeric: tabular-nums;
 	}
-	:global(.dark) #asignaturas-container .btn.subject-open {
-		background: rgba(96, 165, 250, 0.14);
-		border-color: rgba(96, 165, 250, 0.5);
-		color: #93c5fd;
-		box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.15), 0 2px 8px rgba(96, 165, 250, 0.2);
-	}
-
-	/* ── Sublist panel ──────────────────────────────────────── */
-	.sublist-panel {
-		position: relative;
-		margin-bottom: 20px;
-		padding: 20px 24px 24px;
-		background: rgb(var(--bg-surface));
-		border: 1px solid rgb(var(--border-subtle));
-		border-radius: 20px;
-		box-shadow: 0 8px 28px rgba(0,0,0,0.07), 0 2px 6px rgba(0,0,0,0.04);
-	}
-	:global(.dark) .sublist-panel {
-		box-shadow: 0 8px 28px rgba(0,0,0,0.4), 0 2px 6px rgba(0,0,0,0.2);
-	}
-	.sublist-panel::before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 50%;
-		transform: translateX(-50%);
-		width: 52px;
-		height: 3px;
-		background: linear-gradient(90deg, #3b82f6, #60a5fa);
-		border-radius: 0 0 4px 4px;
-	}
-	.sublist-panel h4 {
+	.continue-progress-track {
 		width: 100%;
-		text-align: center;
-		padding-bottom: 14px;
-		margin-bottom: 18px !important;
-		border-bottom: 1px solid rgb(var(--border-subtle));
-	}
-	.sublist-panel.sublist-open {
-		animation: sublist-in 0.28s cubic-bezier(0.16, 1, 0.3, 1) both;
-	}
-	@keyframes sublist-in {
-		from { opacity: 0; transform: translateY(-10px) scale(0.985); }
-		to   { opacity: 1; transform: translateY(0)     scale(1); }
-	}
-
-	/* Botones dentro del sublist */
-	.listaoculta .btn-primary {
-		min-width: 115px;
-		padding: 0.65em 1.5em;
-		border-radius: 12px;
-		box-shadow: 0 2px 8px rgba(37, 99, 235, 0.18);
-		transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
-	}
-	.listaoculta .btn-primary:hover {
-		transform: translateY(-2px);
-		box-shadow: 0 5px 16px rgba(37, 99, 235, 0.32);
-	}
-	.listaoculta .btn {
-		min-width: 115px;
-		border-radius: 12px;
-		transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
-	}
-	.listaoculta .btn:hover {
-		transform: translateY(-2px);
-		box-shadow: 0 4px 12px rgba(0,0,0,0.09);
-	}
-
-	/* ── Modernized index buttons ───────────────────────────── */
-	#asignaturas-container .btn,
-	#asignaturas-container .btn-primary {
-		border-radius: 12px;
-		transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
-	}
-	#asignaturas-container .btn:hover {
-		transform: translateY(-1px);
-		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.09);
-	}
-	#asignaturas-container .btn-primary:hover {
-		transform: translateY(-1px);
-		box-shadow: 0 4px 14px rgba(37, 99, 235, 0.28);
-	}
-
-	/* ── Badge "Nuevo" superpuesto ──────────────────────────── */
-	.btn--new {
-		position: relative;
-	}
-	.new-badge {
-		position: absolute;
-		top: -8px;
-		right: -18px;
-		padding: 2px 7px;
+		max-width: 240px;
+		height: 2px;
 		border-radius: 999px;
-		background: linear-gradient(135deg, #3b82f6, #2563eb);
-		color: #fff;
-		font-size: 0.58rem;
-		font-weight: 800;
-		letter-spacing: 0.07em;
-		text-transform: uppercase;
-		line-height: 1.5;
-		box-shadow: 0 2px 6px rgba(59, 130, 246, 0.45);
-		pointer-events: none;
+		background: rgb(var(--border-subtle));
+		overflow: hidden;
 	}
-
-	/* ── Badge "No oficial · IA" ────────────────────────────── */
-	.btn--ai,
-	.btn-primary--ai {
+	.continue-progress-fill {
+		height: 100%;
+		width: 0%;
+		background: rgb(var(--cta-bg));
+		border-radius: 999px;
+		transition: width 300ms ease;
+	}
+	.continue-card-cta {
 		display: inline-flex;
 		align-items: center;
 		gap: 6px;
+		padding: 7px 12px;
+		border-radius: 8px;
+		background: rgb(var(--cta-bg));
+		color: rgb(var(--cta-fg));
+		font-size: 0.8rem;
+		font-weight: 600;
+		flex-shrink: 0;
+		transition: background-color 140ms ease;
 	}
-	.btn-primary--ai .ai-badge {
-		background: rgba(255, 255, 255, 0.18);
-		color: #fff;
-		border-color: rgba(255, 255, 255, 0.35);
+	.continue-card:hover .continue-card-cta {
+		background: rgb(var(--cta-hover));
+	}
+	.continue-card-cta svg {
+		transition: transform 140ms ease;
+	}
+	.continue-card:hover .continue-card-cta svg {
+		transform: translateX(2px);
+	}
+	@media (max-width: 520px) {
+		.continue-card {
+			flex-direction: column;
+			align-items: stretch;
+			gap: 12px;
+		}
+		.continue-card-cta {
+			justify-content: center;
+		}
+	}
+
+	/* ── Pestañas underline por curso (estilo Campsite) ─────── */
+	.cat-tabs {
+		display: flex;
+		align-items: center;
+		gap: 4px;
+		overflow-x: auto;
+		border-bottom: 1px solid rgb(var(--border-subtle));
+		scrollbar-width: none;
+	}
+	.cat-tabs::-webkit-scrollbar { display: none; }
+	.cat-tabs.hidden { display: none; }
+
+	.cat-tab {
+		position: relative;
+		display: inline-flex;
+		align-items: center;
+		gap: 7px;
+		padding: 10px 12px 11px;
+		border: none;
+		border-bottom: 2px solid transparent;
+		margin-bottom: -1px;
+		background: transparent;
+		color: rgb(var(--text-muted));
+		font-size: 0.84rem;
+		font-weight: 500;
+		white-space: nowrap;
+		cursor: pointer;
+		transition: color 140ms ease, border-color 140ms ease;
+	}
+	.cat-tab:hover {
+		color: rgb(var(--text-main));
+	}
+	.cat-tab.is-active {
+		color: rgb(var(--text-main));
+		border-bottom-color: rgb(var(--cta-bg));
+		font-weight: 600;
+	}
+	.cat-tab-count {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		min-width: 20px;
+		padding: 1px 6px;
+		border-radius: 5px;
+		background: rgb(var(--bg-surface));
+		border: 1px solid rgb(var(--border-subtle));
+		color: rgb(var(--text-muted));
+		font-family: var(--font-mono);
+		font-size: 0.68rem;
+		font-weight: 500;
+		line-height: 1.4;
+	}
+	.cat-tab.is-active .cat-tab-count {
+		background: rgb(var(--bg-surface-hover));
+		border-color: rgb(var(--border-strong));
+		color: rgb(var(--text-main));
+	}
+
+	/* ── Secciones abiertas sin caja exterior ───────────────── */
+	.subject-section.hidden { display: none; }
+
+	.section-header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 12px;
+		flex-wrap: wrap;
+		margin-bottom: 14px;
+	}
+	.section-title-group {
+		display: inline-flex;
+		align-items: center;
+		gap: 8px;
+	}
+	.section-title {
+		margin: 0;
+		font-family: var(--font-heading);
+		font-size: 0.92rem;
+		font-weight: 600;
+		letter-spacing: -0.01em;
+		color: rgb(var(--text-main));
+	}
+	.section-count {
+		font-family: var(--font-mono);
+		font-size: 0.74rem;
+		color: rgb(var(--text-muted));
+	}
+
+	.semester-label {
+		margin: 18px 0 10px;
+		font-size: 0.78rem;
+		font-weight: 500;
+		color: rgb(var(--text-muted));
+	}
+	.semester-label:first-of-type {
+		margin-top: 0;
+	}
+
+	.subject-grid {
+		display: grid;
+		grid-template-columns: repeat(1, minmax(0, 1fr));
+		gap: 10px;
+	}
+	@media (min-width: 560px) {
+		.subject-grid {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+	}
+	@media (min-width: 900px) {
+		.subject-grid {
+			grid-template-columns: repeat(3, minmax(0, 1fr));
+		}
+	}
+
+	/* ── Tarjeta de asignatura (hairline obsidian) ──────────── */
+	.subject-card {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 12px;
+		width: 100%;
+		min-height: 58px;
+		padding: 12px 15px;
+		border-radius: 10px;
+		border: 1px solid rgb(var(--border-subtle));
+		background: rgb(var(--bg-surface));
+		color: rgb(var(--text-main));
+		text-align: left;
+		cursor: pointer;
+		transition: border-color 140ms ease, background-color 140ms ease, box-shadow 140ms ease;
+	}
+	.subject-card:hover {
+		border-color: rgb(var(--border-strong));
+		background: rgb(var(--bg-surface-hover));
+	}
+	.subject-card.subject-open {
+		border-color: rgb(var(--border-strong));
+		background: rgb(var(--bg-surface-hover));
+		box-shadow: inset 0 2px 0 0 rgb(var(--cta-bg));
+	}
+	.subject-card-title-row {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 7px;
+		min-width: 0;
+		flex: 1;
+	}
+	.subject-card-name {
+		font-family: var(--font-heading);
+		font-weight: 500;
+		font-size: 0.92rem;
+		line-height: 1.3;
+		color: rgb(var(--text-main));
+	}
+	.subject-card-right {
+		display: inline-flex;
+		align-items: center;
+		gap: 8px;
+		flex-shrink: 0;
+	}
+	.subject-card-count {
+		font-size: 0.74rem;
+		color: rgb(var(--text-muted));
+		white-space: nowrap;
+	}
+	.subject-chevron,
+	.subject-arrow {
+		display: inline-flex;
+		color: rgb(var(--text-muted));
+		flex-shrink: 0;
+		transition: transform 180ms cubic-bezier(0.16, 1, 0.3, 1), color 140ms ease;
+	}
+	.subject-card:hover .subject-arrow,
+	.subject-card:hover .subject-chevron {
+		color: rgb(var(--text-main));
+	}
+	.subject-card:hover .subject-arrow {
+		transform: translateX(2px);
+	}
+	button.subject-open .subject-chevron {
+		transform: rotate(180deg);
+		color: rgb(var(--text-main));
+	}
+
+	/* ── Sublist panel (módulos de asignatura) ──────────────── */
+	.sublist-panel {
+		margin-top: 12px;
+		margin-bottom: 6px;
+		padding: 16px 18px;
+		background: rgb(var(--bg-surface-subtle));
+		border: 1px solid rgb(var(--border-strong));
+		border-radius: 12px;
+	}
+	.sublist-panel.hidden { display: none; }
+	.sublist-panel.sublist-open {
+		animation: sublist-in 0.2s cubic-bezier(0.16, 1, 0.3, 1) both;
+	}
+	@keyframes sublist-in {
+		from { opacity: 0; transform: translateY(-4px); }
+		to   { opacity: 1; transform: translateY(0); }
+	}
+	.sublist-header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 12px;
+		margin-bottom: 12px;
+	}
+	.sublist-title-wrap {
+		display: flex;
+		align-items: baseline;
+		gap: 8px;
+		min-width: 0;
+	}
+	.sublist-title {
+		margin: 0;
+		font-family: var(--font-heading);
+		font-size: 0.94rem;
+		font-weight: 600;
+		color: rgb(var(--text-main));
+	}
+	.sublist-count {
+		font-family: var(--font-mono);
+		font-size: 0.72rem;
+		color: rgb(var(--text-muted));
+	}
+	.sublist-close {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 30px;
+		height: 30px;
+		border-radius: 8px;
+		border: 1px solid rgb(var(--border-subtle));
+		background: rgb(var(--bg-surface));
+		color: rgb(var(--text-muted));
+		cursor: pointer;
+		transition: color 140ms ease, background-color 140ms ease, border-color 140ms ease;
+	}
+	.sublist-close:hover {
+		color: rgb(var(--text-main));
+		border-color: rgb(var(--border-strong));
+		background: rgb(var(--bg-surface-hover));
+	}
+
+	.sublist-grid {
+		display: grid;
+		grid-template-columns: repeat(1, minmax(0, 1fr));
+		gap: 8px;
+	}
+	@media (min-width: 560px) {
+		.sublist-grid {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+	}
+	@media (min-width: 900px) {
+		.sublist-grid {
+			grid-template-columns: repeat(3, minmax(0, 1fr));
+		}
+	}
+
+	.sublist-btn {
+		display: inline-flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 8px;
+		min-height: 44px;
+		padding: 9px 13px;
+		border-radius: 9px;
+		border: 1px solid rgb(var(--border-subtle));
+		background: rgb(var(--bg-surface));
+		color: rgb(var(--text-main));
+		font-size: 0.85rem;
+		font-weight: 500;
+		text-align: left;
+		cursor: pointer;
+		transition: border-color 130ms ease, background-color 130ms ease;
+	}
+	.sublist-btn:hover {
+		border-color: rgb(var(--border-strong));
+		background: rgb(var(--bg-surface-hover));
+	}
+	.sublist-btn--primary {
+		border-color: transparent;
+		background: rgb(var(--cta-bg));
+		color: rgb(var(--cta-fg));
+		font-weight: 600;
+	}
+	.sublist-btn--primary:hover {
+		border-color: transparent;
+		background: rgb(var(--cta-hover));
+		color: rgb(var(--cta-fg));
+	}
+	.sublist-btn-text {
+		flex: 1;
+		min-width: 0;
+	}
+	.sublist-btn-icon {
+		display: inline-flex;
+		flex-shrink: 0;
+	}
+	.sublist-btn-arrow {
+		display: inline-flex;
+		opacity: 0.55;
+		flex-shrink: 0;
+		transition: transform 130ms ease, opacity 130ms ease;
+	}
+	.sublist-btn:hover .sublist-btn-arrow {
+		opacity: 1;
+		transform: translateX(2px);
+	}
+
+	/* ── Switcher Rama (Software / TI — estilo Midday) ──────── */
+	.rama-switcher {
+		display: inline-flex;
+		align-items: center;
+		gap: 2px;
+		padding: 3px;
+		border-radius: 9px;
+		background: rgb(var(--bg-surface-subtle));
+		border: 1px solid rgb(var(--border-subtle));
+	}
+	.rama-switch-btn {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		padding: 5px 11px;
+		border-radius: 6px;
+		border: 1px solid transparent;
+		background: transparent;
+		color: rgb(var(--text-muted));
+		font-size: 0.78rem;
+		font-weight: 500;
+		cursor: pointer;
+		transition: background-color 130ms ease, color 130ms ease, border-color 130ms ease;
+	}
+	.rama-switch-btn:hover {
+		color: rgb(var(--text-main));
+	}
+	.rama-switch-btn.is-active {
+		background: rgb(var(--bg-surface-hover));
+		border-color: rgb(var(--border-strong));
+		color: rgb(var(--text-main));
+		font-weight: 600;
+	}
+
+	/* ── Badges oscuros discretos ───────────────────────────── */
+	.new-badge {
+		display: inline-flex;
+		align-items: center;
+		padding: 1px 7px;
+		border-radius: 999px;
+		background: rgba(16, 185, 129, 0.12);
+		color: #6ee7b7;
+		border: 1px solid rgba(16, 185, 129, 0.25);
+		font-size: 0.66rem;
+		font-weight: 600;
+		line-height: 1.5;
 	}
 
 	.ai-badge {
@@ -1003,29 +1461,17 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 		display: inline-flex;
 		align-items: center;
 		gap: 3px;
-		padding: 2px 7px 2px 5px;
+		padding: 1px 7px 1px 6px;
 		border-radius: 999px;
-		background: rgba(59, 130, 246, 0.13);
-		color: #2563eb;
-		border: 1px solid rgba(59, 130, 246, 0.3);
-		font-size: 0.6rem;
-		font-weight: 700;
-		letter-spacing: 0.05em;
-		text-transform: uppercase;
+		background: rgb(var(--accent) / 0.12);
+		color: rgb(var(--accent-text));
+		border: 1px solid rgb(var(--accent) / 0.25);
+		font-size: 0.66rem;
+		font-weight: 600;
 		line-height: 1.5;
 		white-space: nowrap;
 		cursor: help;
 	}
-	:global(.dark) .ai-badge {
-		background: rgba(96, 165, 250, 0.15);
-		color: #93c5fd;
-		border-color: rgba(96, 165, 250, 0.3);
-	}
-	.ai-badge-icon {
-		font-size: 0.65rem !important;
-	}
-
-	/* Tooltip */
 	.ai-badge::after {
 		content: "Preguntas generadas con IA — no provienen de exámenes reales";
 		position: absolute;
@@ -1037,220 +1483,80 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 		border-radius: 8px;
 		background: rgb(var(--bg-surface));
 		color: rgb(var(--text-main));
-		border: 1px solid rgb(var(--border-subtle));
-		box-shadow: 0 4px 16px rgba(0,0,0,0.12);
-		font-size: 0.75rem;
+		border: 1px solid rgb(var(--border-strong));
+		box-shadow: var(--shadow-elevated);
+		font-size: 0.74rem;
 		font-weight: 500;
-		letter-spacing: 0;
-		text-transform: none;
 		line-height: 1.4;
 		text-align: center;
 		pointer-events: none;
 		opacity: 0;
-		transition: opacity 150ms ease;
+		transition: opacity 140ms ease;
 		z-index: 50;
 	}
-	.ai-badge:hover::after {
-		opacity: 1;
-	}
+	.ai-badge:hover::after { opacity: 1; }
 
-	/* ── Rama dropdown ───────────────────────────────────────── */
-	.rama-drop-wrap {
-		position: relative;
-	}
-	.rama-drop-trigger {
+	.is-deprecated { opacity: 0.75; }
+	.deprecated-badge {
 		display: inline-flex;
 		align-items: center;
-		gap: 6px;
-		padding: 6px 12px 6px 14px;
-		border: 1px solid rgb(var(--border-subtle));
+		font-size: 0.66rem;
+		font-weight: 600;
+		padding: 1px 7px;
 		border-radius: 999px;
-		background: rgb(var(--bg-surface));
-		color: rgb(var(--text-main));
-		font-family: var(--font-heading, "Outfit", sans-serif);
-		font-size: 0.95rem;
-		font-weight: 600;
-		cursor: pointer;
-		box-shadow: 0 1px 3px rgba(0,0,0,0.06);
-		transition: border-color 150ms ease, box-shadow 150ms ease, background-color 150ms ease;
-	}
-	.rama-drop-trigger:hover,
-	.rama-drop-trigger.is-open {
-		border-color: rgba(59, 130, 246, 0.5);
-		box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.12);
-	}
-	.rama-drop-icon {
-		font-size: 1rem !important;
-		color: rgb(var(--text-muted));
-	}
-	.rama-drop-chev {
-		font-size: 1rem !important;
-		color: rgb(var(--text-muted));
-		transition: transform 200ms ease;
-	}
-	.rama-drop-trigger.is-open .rama-drop-chev {
-		transform: rotate(180deg);
-	}
-	.rama-drop-menu {
-		position: absolute;
-		top: calc(100% + 6px);
-		left: 50%;
-		transform: translateX(-50%);
-		min-width: 220px;
-		background: rgb(var(--bg-surface));
-		border: 1px solid rgb(var(--border-subtle));
-		border-radius: 14px;
-		box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-		padding: 6px;
-		z-index: 100;
-		display: flex;
-		flex-direction: column;
-		gap: 2px;
-	}
-	.rama-drop-menu.hidden { display: none; }
-	.dark .rama-drop-menu {
-		box-shadow: 0 8px 24px rgba(0,0,0,0.4);
-	}
-	.rama-drop-item {
-		display: flex;
-		align-items: center;
-		gap: 10px;
-		width: 100%;
-		padding: 8px 12px;
-		border: none;
-		border-radius: 9px;
-		background: transparent;
-		color: rgb(var(--text-main));
-		font-size: 0.875rem;
-		font-weight: 500;
-		text-align: left;
-		cursor: pointer;
-		transition: background-color 120ms ease;
-	}
-	.rama-drop-item:hover {
-		background: rgb(var(--bg-surface-hover));
-	}
-	.rama-drop-item.is-active {
-		background: rgba(59, 130, 246, 0.1);
-		color: #2563eb;
-		font-weight: 600;
-	}
-	:global(.dark) .rama-drop-item.is-active {
-		background: rgba(96, 165, 250, 0.15);
-		color: #60a5fa;
-	}
-	.rama-item-icon {
-		font-size: 1rem !important;
-		color: rgb(var(--text-muted));
-		flex-shrink: 0;
-	}
-	.rama-drop-item.is-active .rama-item-icon {
-		color: #2563eb;
-	}
-	:global(.dark) .rama-drop-item.is-active .rama-item-icon {
-		color: #60a5fa;
-	}
-	/* ── Placeholder "Próximamente" ──────────────────────────── */
-	.rama-placeholder {
-		margin-bottom: 20px;
-	}
-	.rama-placeholder.hidden { display: none; }
-	.rama-placeholder-inner {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: 6px;
-		padding: 32px 20px;
-		border: 1px dashed rgb(var(--border-subtle));
-		border-radius: 12px;
-		color: rgb(var(--text-muted));
-	}
-	.rama-placeholder-inner .material-icons {
-		font-size: 2rem;
-		opacity: 0.5;
-	}
-	.rama-placeholder-title {
-		margin: 0;
-		font-weight: 600;
-		font-size: 0.95rem;
-		color: rgb(var(--text-main));
-	}
-	.rama-placeholder-sub {
-		margin: 0;
-		font-size: 0.82rem;
-	}
-
-	.btn--deprecated {
-		@apply relative flex items-center gap-2;
-		opacity: 0.82;
-	}
-	.btn--deprecated:hover {
-		opacity: 1;
-	}
-.deprecated-badge {
-		display: inline-flex;
-		align-items: center;
-		gap: 3px;
-		font-size: 0.58rem;
-		font-weight: 800;
-		letter-spacing: 0.07em;
-		text-transform: uppercase;
-		padding: 2px 7px 2px 5px;
-		border-radius: 999px;
-		background: linear-gradient(135deg, rgba(245,158,11,0.15), rgba(239,68,68,0.1));
-		color: rgb(180, 83, 9);
-		border: 1px solid rgba(245, 158, 11, 0.4);
+		background: rgba(245, 158, 11, 0.12);
+		color: #fcd34d;
+		border: 1px solid rgba(245, 158, 11, 0.25);
 		line-height: 1.5;
-		flex-shrink: 0;
-		box-shadow: 0 1px 3px rgba(245,158,11,0.15);
-	}
-:global(.dark) .deprecated-badge {
-		background: linear-gradient(135deg, rgba(245,158,11,0.18), rgba(239,68,68,0.12));
-		color: rgb(251, 191, 36);
-		border-color: rgba(245, 158, 11, 0.35);
-		box-shadow: 0 1px 3px rgba(0,0,0,0.2);
 	}
 
-	.index-spinner {
-		width: 28px;
-		height: 28px;
-		border: 3px solid rgb(var(--border-subtle));
-		border-top-color: rgb(var(--color-primary-rgb));
-		border-radius: 50%;
-		animation: spin 0.7s linear infinite;
+	/* ── Esqueleto de carga abierto ─────────────────────────── */
+	.subjects-skeleton {
+		display: flex;
+		flex-direction: column;
+		gap: 32px;
+	}
+	.subjects-skeleton.hidden { display: none; }
+	.skeleton-block {
+		display: flex;
+		flex-direction: column;
+		gap: 14px;
+	}
+	.skeleton-heading {
+		width: 140px;
+		height: 16px;
+		border-radius: 6px;
+		background: rgb(var(--bg-surface));
+		border: 1px solid rgb(var(--border-subtle));
+	}
+	.skeleton-grid {
+		display: grid;
+		grid-template-columns: repeat(1, minmax(0, 1fr));
+		gap: 10px;
+	}
+	@media (min-width: 560px) {
+		.skeleton-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+	}
+	@media (min-width: 900px) {
+		.skeleton-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+	}
+	.skeleton-grid i {
+		display: block;
+		height: 58px;
+		border-radius: 10px;
+		border: 1px solid rgb(var(--border-subtle));
+		background: linear-gradient(90deg,
+			rgb(var(--bg-surface)) 25%,
+			rgb(var(--bg-surface-hover)) 50%,
+			rgb(var(--bg-surface)) 75%);
+		background-size: 200% 100%;
+		animation: skeleton-shimmer 1.3s ease-in-out infinite;
+	}
+	@keyframes skeleton-shimmer {
+		from { background-position: 200% 0; }
+		to   { background-position: -200% 0; }
 	}
 
-	@media (max-width: 767px) {
-		#asignaturas-container .asignaturas {
-			display: flex !important;
-			flex-direction: column !important;
-			align-items: center !important;
-		}
-		#asignaturas-container .group-left,
-		#asignaturas-container .group-right {
-			width: 100% !important;
-			display: flex !important;
-			flex-wrap: wrap !important;
-			justify-content: center !important;
-		}
-		#asignaturas-container .separator {
-			width: 100% !important;
-			height: 1px !important;
-			margin: 10px 0 !important;
-		}
-		#asignaturas-container .btn,
-		#asignaturas-container .btn-primary {
-			@apply m-[5px]! px-[12px]! py-[8px]! text-[0.9em]! min-w-[80px]!;
-		}
-		#app {
-			@apply w-[95%]! p-[15px]! mt-[70px]! rounded-2xl!;
-		}
-	}
-
-	@media (max-width: 480px) {
-		#asignaturas-container .btn,
-		#asignaturas-container .btn-primary {
-			@apply text-[0.8em]! min-w-[70px]!;
-		}
-	}
+	.rama-placeholder { margin-top: 8px; }
+	.rama-placeholder.hidden { display: none; }
 </style>

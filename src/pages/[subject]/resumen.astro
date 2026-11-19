@@ -2,39 +2,79 @@
 import ResumenLayout from '../../layouts/ResumenLayout.astro';
 
 const { subject } = Astro.params;
+const search = Astro.url.search || '';
 const formattedSubject = subject ? subject.replace(/[-_]/g, ' ').toUpperCase() : 'Test';
-const pageTitle = `Resumen ${formattedSubject}`;
+const pageTitle = `Resumen ${formattedSubject} • Tests UA`;
 ---
 
 <ResumenLayout title={pageTitle}>
-	<div id="app" class="w-full max-w-[860px] mx-auto my-5 px-5 sm:px-10 py-8 bg-surface border border-border-subtle rounded-2xl shadow-card box-border">
-		<h1 class="sr-only">Resumen de {formattedSubject}</h1>
-		<div id="resumen" class="text-left text-[0.95em] leading-relaxed"></div>
+	<div class="w-full max-w-4xl mx-auto px-3 sm:px-6 pt-6 sm:pt-8 pb-6">
+		<!-- Breadcrumb -->
+		<div class="flex items-center justify-between gap-3 mb-4 px-1">
+			<a href={`/${subject}${search}`} class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-medium text-text-muted hover:text-text-main no-underline transition-colors">
+				<span class="material-icons mi-sm" aria-hidden="true">arrow_back</span>
+				<span>Volver al test</span>
+			</a>
+			<a href="/" class="inline-flex items-center gap-1 text-xs sm:text-sm font-medium text-text-muted hover:text-text-main no-underline transition-colors">
+				<span class="material-icons mi-sm" aria-hidden="true">grid_view</span>
+				<span>Asignaturas</span>
+			</a>
+		</div>
 
-		<div class="flex gap-3 mt-8 flex-wrap justify-center">
-			<a href={`/${subject}`} class="btn no-underline">← Volver al test</a>
-			<a href="/" class="btn no-underline">Menú principal</a>
+		<div id="app" class="w-full px-5 sm:px-10 py-7 sm:py-9 bg-surface border border-border-subtle rounded-2xl shadow-card box-border">
+			<header class="pb-5 mb-6 border-b border-border-subtle">
+				<p class="m-0 text-xs font-bold uppercase tracking-widest text-accent-text">Resumen completo</p>
+				<h1 class="m-0 mt-1 font-heading text-2xl sm:text-3xl font-extrabold text-text-main">{formattedSubject}</h1>
+				<p class="m-0 mt-1 text-sm text-text-muted">Todas las preguntas con sus respuestas correctas marcadas.</p>
+			</header>
+
+			<div id="resumen" class="text-left text-[0.95rem] leading-relaxed"></div>
+
+			<div class="flex gap-3 mt-8 pt-6 border-t border-border-subtle flex-wrap justify-between items-center">
+				<a href={`/${subject}${search}`} class="btn-primary no-underline">
+					<span class="material-icons mi-sm" aria-hidden="true">play_arrow</span>
+					Practicar test
+				</a>
+				<a href="/" class="btn-secondary no-underline">Menú principal</a>
+			</div>
 		</div>
 	</div>
 </ResumenLayout>
 
 <style>
 	@reference "../../styles/global.css";
-	
+
 	:global(#resumen p) {
-		@apply mb-[4px] text-text-main;
+		@apply mb-2 text-text-main leading-relaxed;
+	}
+	:global(#resumen ul) {
+		@apply space-y-1.5 mb-7 pb-6 border-b border-border-subtle/70;
+	}
+	:global(#resumen ul:last-child) {
+		@apply border-b-0 mb-0 pb-0;
+	}
+	:global(#resumen li) {
+		@apply flex items-start gap-2.5 px-3 py-2 rounded-xl text-text-muted text-sm sm:text-[0.92rem];
+		border-color: rgb(var(--border-subtle)) !important;
 	}
 	:global(#resumen li div > p:last-child) {
 		@apply mb-0;
 	}
 	:global(#resumen li.correct) {
-		@apply bg-green-500/15 text-green-700 dark:text-green-300 font-semibold;
-	}
-	:global(#resumen li) {
-		@apply text-text-muted;
+		@apply bg-emerald-500/12 border border-emerald-500/25 text-emerald-800 dark:text-emerald-300 font-medium;
+		border-color: rgba(16, 185, 129, 0.35) !important;
 	}
 	:global(#resumen strong) {
 		@apply text-text-main font-semibold;
+	}
+	:global(#resumen pre) {
+		@apply bg-[#161b26] text-[#e5e7eb] border border-border-subtle rounded-xl p-3.5 overflow-auto whitespace-pre-wrap font-mono text-[0.85rem] my-2.5 break-words;
+	}
+	:global(#resumen code) {
+		@apply font-mono text-[rgb(var(--accent-text))] bg-surface-hover border border-border-subtle px-1.5 py-0.5 rounded-md text-[0.86em];
+	}
+	:global(#resumen pre code) {
+		@apply text-[#e5e7eb] bg-transparent border-none p-0;
 	}
 </style>
 

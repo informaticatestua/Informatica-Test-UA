@@ -1,4 +1,4 @@
-﻿---
+---
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
@@ -7,18 +7,20 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 	<!-- Auth guard -->
 	<div id="admin-loading" class="flex flex-col items-center justify-center py-20 gap-4">
-		<div class="w-8 h-8 border-2 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+		<div class="w-8 h-8 border-2 border-[rgb(var(--accent))] border-t-transparent rounded-full animate-spin"></div>
 		<p class="text-text-muted text-sm">Verificando acceso…</p>
 	</div>
 
 	<div id="admin-content" class="hidden space-y-8">
 
 		<!-- ── Header ───────────────────────────────────────────────── -->
-		<div class="flex items-center gap-3">
-			<span class="material-icons text-purple-500" style="font-size:2rem;">admin_panel_settings</span>
+		<div class="flex items-center gap-3.5">
+			<span class="inline-flex items-center justify-center w-11 h-11 rounded-2xl bg-accent/10 text-accent-text">
+				<span class="material-icons" style="font-size:1.5rem;">admin_panel_settings</span>
+			</span>
 			<div>
-				<h1 class="font-heading font-bold text-text-main text-2xl m-0">Panel de Administración</h1>
-				<p class="text-text-muted text-sm mt-0.5 m-0">Gestiona reportes y usuarios</p>
+				<h1 class="font-heading font-extrabold text-text-main text-2xl m-0">Panel de Administración</h1>
+				<p class="text-text-muted text-sm mt-0.5 m-0">Gestiona reportes, usuarios y anuncios</p>
 			</div>
 		</div>
 
@@ -42,10 +44,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 		<!-- ── Tab: Reportes pendientes ─────────────────────────────── -->
 		<div id="tab-reportes" class="admin-panel space-y-4">
 			<div id="rep-loading" class="text-text-muted text-sm flex items-center gap-2 py-4">
-				<div class="w-4 h-4 border-2 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+				<div class="w-4 h-4 border-2 border-[rgb(var(--accent))] border-t-transparent rounded-full animate-spin"></div>
 				Cargando reportes…
 			</div>
-			<div id="rep-empty" class="hidden text-center py-12">
+			<div id="rep-empty" class="hidden text-center py-12 bg-surface border border-border-subtle rounded-2xl">
 				<span class="material-icons text-text-muted" style="font-size:2.5rem;">check_circle</span>
 				<p class="text-text-muted text-sm mt-2">No hay reportes pendientes.</p>
 			</div>
@@ -55,11 +57,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 		<!-- ── Tab: Usuarios ────────────────────────────────────────── -->
 		<div id="tab-usuarios" class="admin-panel hidden space-y-4">
 			<div class="flex gap-3 items-center">
-				<input id="user-search" type="search" aria-label="Filtrar usuarios por nombre" autocomplete="off" placeholder="Filtrar por nombre de usuario…" class="flex-1 px-3 py-2 rounded-lg border border-border-subtle bg-background text-text-main text-sm focus:outline-none focus:border-blue-500 transition-colors" />
-				<button id="user-search-btn" class="px-4 py-2 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors border-none cursor-pointer">Buscar</button>
+				<input id="user-search" type="search" aria-label="Filtrar usuarios por nombre" autocomplete="off" placeholder="Filtrar por nombre de usuario…" class="flex-1 px-3.5 py-2.5 rounded-xl border border-border-subtle bg-surface text-text-main text-sm transition-colors" />
+				<button id="user-search-btn" class="btn-primary">Buscar</button>
 			</div>
 			<div id="user-loading" class="hidden text-text-muted text-sm flex items-center gap-2">
-				<div class="w-4 h-4 border-2 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+				<div class="w-4 h-4 border-2 border-[rgb(var(--accent))] border-t-transparent rounded-full animate-spin"></div>
 				<span id="user-loading-text">Cargando usuarios…</span>
 			</div>
 			<div id="user-count-row" class="hidden flex items-center justify-between text-xs text-text-muted pb-1 border-b border-border-subtle">
@@ -82,13 +84,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 			<div class="space-y-3">
 				<div>
 					<label class="block text-sm font-semibold text-text-main mb-1.5" for="announce-msg">Mensaje del anuncio</label>
-					<textarea id="announce-msg" rows="4" maxlength="500" placeholder="Ej: Se han añadido nuevas preguntas de Redes y STI. ¡A practicar!" class="w-full px-3 py-2 rounded-lg border border-border-subtle bg-background text-text-main text-sm focus:outline-none focus:border-blue-500 transition-colors resize-none"></textarea>
+					<textarea id="announce-msg" rows="4" maxlength="500" placeholder="Ej: Se han añadido nuevas preguntas de Redes y STI. ¡A practicar!" class="w-full px-3.5 py-2.5 rounded-xl border border-border-subtle bg-surface text-text-main text-sm transition-colors resize-none"></textarea>
 					<div class="flex justify-end mt-1">
 						<span id="announce-char-count" class="text-xs text-text-muted">0 / 500</span>
 					</div>
 				</div>
 				<div class="flex justify-end">
-					<button id="announce-send-btn" class="flex items-center gap-2 px-4 py-2 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors border-none cursor-pointer">
+					<button id="announce-send-btn" class="btn-primary">
 						<span class="material-icons text-[16px]">campaign</span>
 						Enviar a todos
 					</button>
@@ -102,17 +104,17 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 </div>
 
 <!-- ── Confirm modal ─────────────────────────────────────────────────────── -->
-<div id="confirm-overlay" class="hidden fixed inset-0 z-[300] bg-black/60 backdrop-blur-sm"></div>
+<div id="confirm-overlay" class="hidden fixed inset-0 z-[300] bg-[#0b0f19]/60 backdrop-blur-sm"></div>
 <div id="confirm-modal" class="hidden fixed inset-0 z-[301] flex items-center justify-center p-4">
-	<div class="w-full max-w-sm bg-surface rounded-2xl shadow-2xl border border-border-subtle p-6 space-y-4">
+	<div class="w-full max-w-sm bg-surface rounded-2xl shadow-elevated border border-border-subtle p-6 space-y-4">
 		<p id="confirm-text" class="text-text-main text-sm leading-relaxed m-0"></p>
 		<div>
 			<label class="block text-sm font-medium text-text-main mb-1.5" for="confirm-note">Nota para el usuario (opcional)</label>
-			<textarea id="confirm-note" rows="3" class="w-full px-3 py-2 rounded-lg border border-border-subtle bg-background text-text-main text-sm focus:outline-none focus:border-blue-500 transition-colors resize-none"></textarea>
+			<textarea id="confirm-note" rows="3" class="w-full px-3 py-2 rounded-xl border border-border-subtle bg-background text-text-main text-sm transition-colors resize-none"></textarea>
 		</div>
 		<div class="flex justify-end gap-3">
-			<button id="confirm-cancel" class="px-4 py-2 text-sm font-medium text-text-muted hover:text-text-main bg-transparent border border-border-subtle hover:bg-surface-hover rounded-lg transition-colors cursor-pointer">Cancelar</button>
-			<button id="confirm-ok" class="px-4 py-2 text-sm font-semibold text-white rounded-lg transition-colors cursor-pointer border-none"></button>
+			<button id="confirm-cancel" class="btn-secondary">Cancelar</button>
+			<button id="confirm-ok" class="px-4 py-2 text-sm font-semibold text-white rounded-xl transition-colors cursor-pointer border-none"></button>
 		</div>
 	</div>
 </div>
@@ -255,7 +257,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                     </div>
 
                     <!-- Edición del texto (enunciado y opciones) -->
-                    <div class="rep-edit-panel hidden space-y-3 p-4 rounded-xl border border-blue-500/40 bg-blue-50/60 dark:bg-blue-900/10">
+                    <div class="rep-edit-panel hidden space-y-3 p-4 rounded-xl border border-[rgb(var(--accent)/0.4)] bg-[rgb(var(--accent)/0.06)]">
                         <p class="text-xs font-semibold text-text-muted uppercase tracking-wider m-0">Editar texto de la pregunta</p>
                         <div>
                             <label class="block text-xs font-medium text-text-main mb-1" for="edit-q-${question.id}">Enunciado</label>
@@ -271,19 +273,19 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                         <p class="rep-edit-error hidden text-xs text-danger-text m-0" role="alert"></p>
                         <div class="flex justify-end gap-2">
                             <button type="button" class="rep-edit-cancel px-3 py-1.5 text-xs font-medium text-text-muted hover:text-text-main bg-transparent border border-border-subtle hover:bg-surface-hover rounded-lg transition-colors cursor-pointer">Cancelar</button>
-                            <button type="button" class="rep-edit-save px-3 py-1.5 text-xs font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors border-none cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed">Guardar texto</button>
+                            <button type="button" class="rep-edit-save px-3 py-1.5 text-xs font-semibold text-white bg-[rgb(var(--btn-primary))] hover:bg-[rgb(var(--btn-primary-hover))] rounded-lg transition-colors border-none cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed">Guardar texto</button>
                         </div>
                     </div>
 
                     <!-- Acciones -->
                     <div class="flex flex-wrap gap-2 pt-2 border-t border-border-subtle">
-                        <button class="rep-accept-btn flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-white bg-green-600 hover:bg-green-700 rounded-lg transition-colors border-none cursor-pointer">
+                        <button class="rep-accept-btn flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-white bg-emerald-600 hover:bg-emerald-700 rounded-lg transition-colors border-none cursor-pointer">
                             <span class="material-icons text-[14px]">check</span> Aceptar
                         </button>
                         <button class="rep-reject-btn flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-white bg-red-600 hover:bg-red-700 rounded-lg transition-colors border-none cursor-pointer">
                             <span class="material-icons text-[14px]">close</span> Rechazar
                         </button>
-                        <button class="rep-edit-btn flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-blue-700 dark:text-blue-300 bg-blue-50 dark:bg-blue-900/20 hover:bg-blue-100 dark:hover:bg-blue-900/30 border border-blue-200 dark:border-blue-800 rounded-lg transition-colors cursor-pointer">
+                        <button class="rep-edit-btn flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-accent-text bg-[rgb(var(--accent)/0.08)] hover:bg-[rgb(var(--accent)/0.14)] border border-[rgb(var(--accent)/0.3)] rounded-lg transition-colors cursor-pointer">
                             <span class="material-icons text-[14px]">edit</span> Editar texto
                         </button>
                         <button class="rep-delete-btn flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-text-muted hover:text-danger-text hover:bg-red-50 dark:hover:bg-red-900/20 border border-border-subtle hover:border-red-400 rounded-lg transition-colors bg-transparent cursor-pointer">
@@ -624,10 +626,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     @reference "../styles/global.css";
 
     .admin-tab {
-        @apply flex items-center gap-1.5 px-4 py-2.5 text-sm font-medium text-text-muted border-b-2 border-transparent hover:text-text-main hover:border-border-subtle cursor-pointer bg-transparent transition-colors -mb-px whitespace-nowrap;
+        @apply flex items-center gap-1.5 px-4 py-2.5 text-sm font-semibold text-text-muted border-b-2 border-transparent hover:text-text-main hover:border-border-subtle cursor-pointer bg-transparent transition-colors -mb-px whitespace-nowrap;
     }
     .admin-tab.active {
-        @apply text-blue-600 border-blue-600;
+        @apply text-accent-text border-[rgb(var(--accent))];
     }
 </style>
 </BaseLayout>

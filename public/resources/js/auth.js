@@ -41,9 +41,6 @@
 
     function syncPrefsToLocalStorage(profile) {
         if (!profile) return;
-        // Theme: null means "system" (remove entry so the inline script falls back to prefers-color-scheme)
-        if (profile.theme) localStorage.setItem("theme", profile.theme);
-        else               localStorage.removeItem("theme");
         // AI preferences
         if (profile.ai_provider)     localStorage.setItem("ai_provider",     profile.ai_provider);
         if (profile.ai_gemini_model) localStorage.setItem("ai_gemini_model", profile.ai_gemini_model);

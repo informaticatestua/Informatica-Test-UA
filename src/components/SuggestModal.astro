@@ -26,13 +26,13 @@
 
     <!-- Header -->
     <div class="flex items-center justify-between px-6 py-4 border-b border-border-subtle">
-      <h3 id="suggest-modal-title" class="text-[1em] font-bold text-text-main flex items-center gap-2 m-0">
-        <span class="material-icons text-yellow-500" style="font-size:18px">lightbulb</span>
+      <h3 id="suggest-modal-title" class="font-heading text-base font-bold text-text-main flex items-center gap-2 m-0">
+        <span class="material-icons text-accent-text" style="font-size:18px">lightbulb</span>
         Enviar sugerencia
       </h3>
       <button
         id="suggest-close"
-        class="text-text-muted hover:text-text-main bg-transparent border-none cursor-pointer p-1 rounded-md hover:bg-surface-hover transition-colors"
+        class="text-text-muted hover:text-text-main bg-transparent border-none cursor-pointer p-1.5 rounded-lg hover:bg-surface-hover transition-colors"
         aria-label="Cerrar"
       >
         <span class="material-icons" style="font-size:20px">close</span>
@@ -44,37 +44,37 @@
 
       <!-- Descripción -->
       <div class="flex flex-col gap-1.5">
-        <label class="text-[0.8em] font-semibold text-text-muted uppercase tracking-wide" for="suggest-descripcion">
+        <label class="text-xs font-semibold text-text-muted uppercase tracking-wide" for="suggest-descripcion">
           Tu sugerencia <span class="text-danger-text">*</span>
         </label>
         <textarea
           id="suggest-descripcion"
           rows="4"
           placeholder="Cuéntanos qué mejorarías: funcionalidad nueva, diseño, asignaturas que añadir…"
-          class="px-3 py-2 rounded-md bg-background border border-border-subtle text-text-main text-[0.95em] focus:outline-none focus:border-blue-500 transition-colors resize-y min-h-[90px]"
+          class="px-3.5 py-2.5 rounded-xl bg-background border border-border-subtle text-text-main text-sm transition-colors resize-y min-h-[90px]"
         ></textarea>
-        <p id="suggest-error-descripcion" role="alert" class="hidden text-danger-text text-[0.82em]"></p>
+        <p id="suggest-error-descripcion" role="alert" class="hidden text-danger-text text-xs"></p>
       </div>
 
       <!-- Estado -->
-      <p id="suggest-success" class="hidden text-green-600 dark:text-green-400 text-[0.9em] font-medium">
-        ✅ ¡Gracias! Tu sugerencia ha sido enviada.
+      <p id="suggest-success" class="hidden text-emerald-600 dark:text-emerald-400 text-sm font-medium">
+        ¡Gracias! Tu sugerencia ha sido enviada.
       </p>
-      <p id="suggest-error-msg" role="alert" class="hidden text-danger-text text-[0.9em] font-medium"></p>
+      <p id="suggest-error-msg" role="alert" class="hidden text-danger-text text-sm font-medium"></p>
 
       <!-- Botones -->
-      <div class="flex gap-3 justify-end pt-1">
+      <div class="flex gap-2.5 justify-end pt-1">
         <button
           type="button"
           id="suggest-cancel"
-          class="px-4 py-2 rounded-md border border-border-subtle text-text-muted hover:bg-surface-hover bg-transparent text-[0.9em] cursor-pointer transition-colors"
+          class="btn-secondary"
         >
           Cancelar
         </button>
         <button
           type="submit"
           id="suggest-submit"
-          class="flex items-center gap-2 px-4 py-2 rounded-md bg-yellow-500 hover:bg-yellow-600 text-white text-[0.9em] font-semibold border-none cursor-pointer transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+          class="btn-primary"
         >
           <span class="material-icons" style="font-size:15px">send</span>
           Enviar sugerencia

@@ -5,73 +5,85 @@ const { subject } = Astro.params;
 const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test';
 ---
 
-
 <BaseLayout title={`${subjectTitle} • Tests UA`}>
-	<div id="main-container" class="flex flex-col items-center justify-center m-auto w-full">
-	<h1 class="sr-only">{subjectTitle} · Test de práctica</h1>
-		<div id="app" class="relative w-full max-w-[780px] text-center bg-surface shadow-lg shadow-black/5 rounded-2xl px-[40px] pt-[26px] pb-[30px] mx-auto my-[20px] box-border border border-border-subtle overflow-hidden">
+	<div id="main-container" class="w-full max-w-3xl mx-auto px-3 sm:px-6 pt-5 sm:pt-8 pb-6">
+		<h1 class="sr-only">{subjectTitle} · Test de práctica</h1>
 
-			<!-- Barra de progreso (se actualiza desde main.js → actualizarTotalPreguntasLabel) -->
+		<!-- Navegación contextual discreta -->
+		<div class="flex items-center justify-between gap-3 mb-3 px-1">
+			<a href="/" class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-medium text-text-muted hover:text-text-main no-underline transition-colors">
+				<span class="material-icons mi-sm" aria-hidden="true">arrow_back</span>
+				<span>Asignaturas</span>
+			</a>
+			<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[0.72rem] font-semibold tracking-wide bg-surface border border-border-subtle text-text-muted">
+				{subjectTitle}
+			</span>
+		</div>
+
+		<div id="app" class="relative w-full text-center bg-surface shadow-card rounded-2xl px-4 sm:px-9 pt-6 pb-7 box-border border border-border-subtle overflow-hidden">
+
+			<!-- Barra de progreso -->
 			<div id="quiz-progress" class="quiz-progress" role="progressbar" aria-label="Progreso del test" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
 				<div id="quiz-progress-bar" class="quiz-progress-bar"></div>
 			</div>
 
-			<!-- Barra superior: posición actual + acciones sobre la pregunta -->
+			<!-- Barra superior: posición actual + acciones -->
 			<div id="quiz-toolbar" class="quiz-toolbar">
 				<span id="quiz-progress-label" class="quiz-progress-label" aria-live="polite"></span>
 				<div class="quiz-toolbar-actions">
 					<button id="explicar-ia-btn" class="quiz-tool-btn quiz-tool-btn--ai" title="Explicar con IA" aria-label="Explicar con IA" disabled>
-						<span class="material-icons mi-sm">auto_awesome</span>
+						<span class="material-icons mi-sm" aria-hidden="true">auto_awesome</span>
+						<span class="hidden sm:inline text-xs font-semibold">Explicar</span>
 					</button>
 					<button id="report-btn" class="quiz-tool-btn quiz-tool-btn--danger" title="Reportar un error en esta pregunta" aria-label="Reportar un error en esta pregunta">
-						<span class="material-icons mi-sm">flag</span>
+						<span class="material-icons mi-sm" aria-hidden="true">flag</span>
 					</button>
 					<button id="copyButton" class="quiz-tool-btn" title="Copiar pregunta" aria-label="Copiar pregunta">
-						<span class="material-icons mi-sm">content_copy</span>
+						<span class="material-icons mi-sm" aria-hidden="true">content_copy</span>
 						<span id="copyText" class="sr-only">Copiar</span>
 					</button>
 				</div>
 			</div>
 
-			<!-- ── Selector de modo (al entrar en una asignatura) ──────── -->
-			<section id="mode-selector" class="hidden text-left mt-6 mb-2">
+			<!-- ── Selector de modo ─────────────────────────────────────────── -->
+			<section id="mode-selector" class="hidden text-left py-2">
 				<header class="mode-selector-header">
 					<p class="mode-selector-eyebrow">Asignatura</p>
 					<h2 id="mode-selector-title" class="mode-selector-title"></h2>
-					<p id="mode-selector-subtitle" class="mode-selector-subtitle">Elige cómo quieres estudiar</p>
+					<p id="mode-selector-subtitle" class="mode-selector-subtitle">Elige cómo quieres preparar esta sesión</p>
 				</header>
 				<div class="mode-cards">
 					<button type="button" id="mode-card-practice" class="mode-card mode-card--primary">
-						<span class="mode-card-icon"><span class="material-icons">school</span></span>
+						<span class="mode-card-icon"><span class="material-icons" aria-hidden="true">school</span></span>
 						<span class="mode-card-body">
 							<span class="mode-card-title">Practicar</span>
-							<span class="mode-card-desc">Estudio libre con feedback tras cada respuesta</span>
+							<span class="mode-card-desc">Estudio libre con corrección inmediata tras cada pregunta</span>
 						</span>
-						<span class="mode-card-arrow material-icons">arrow_forward</span>
+						<span class="mode-card-arrow material-icons" aria-hidden="true">arrow_forward</span>
 					</button>
 					<button type="button" id="mode-card-exam" class="mode-card mode-card--exam">
-						<span class="mode-card-icon"><span class="material-icons">timer</span></span>
+						<span class="mode-card-icon"><span class="material-icons" aria-hidden="true">timer</span></span>
 						<span class="mode-card-body">
 							<span class="mode-card-title">Modo examen</span>
-							<span class="mode-card-desc">Simulacro cronometrado con nota final</span>
+							<span class="mode-card-desc">Simulacro cronometrado con penalización y nota final</span>
 						</span>
-						<span class="mode-card-arrow material-icons">arrow_forward</span>
+						<span class="mode-card-arrow material-icons" aria-hidden="true">arrow_forward</span>
 					</button>
 					<button type="button" id="mode-card-review" class="mode-card mode-card--review">
-						<span class="mode-card-icon"><span class="material-icons">refresh</span></span>
+						<span class="mode-card-icon"><span class="material-icons" aria-hidden="true">refresh</span></span>
 						<span class="mode-card-body">
 							<span class="mode-card-title">Repasar fallos <span id="mode-card-review-count" class="mode-card-count hidden"></span></span>
 							<span id="mode-card-review-desc" class="mode-card-desc">Vuelve solo sobre lo que fallaste</span>
 						</span>
-						<span class="mode-card-arrow material-icons">arrow_forward</span>
+						<span class="mode-card-arrow material-icons" aria-hidden="true">arrow_forward</span>
 					</button>
 					<button type="button" id="mode-card-aigen" class="mode-card mode-card--aigen">
-						<span class="mode-card-icon"><span class="material-icons">auto_awesome</span></span>
+						<span class="mode-card-icon"><span class="material-icons" aria-hidden="true">auto_awesome</span></span>
 						<span class="mode-card-body">
 							<span class="mode-card-title">Quiz con IA</span>
-							<span class="mode-card-desc">Preguntas nuevas generadas al momento</span>
+							<span class="mode-card-desc">Genera preguntas nuevas al instante sobre el temario</span>
 						</span>
-						<span class="mode-card-arrow material-icons">arrow_forward</span>
+						<span class="mode-card-arrow material-icons" aria-hidden="true">arrow_forward</span>
 					</button>
 				</div>
 			</section>
@@ -80,14 +92,15 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 
 			<div id="report-warning" class="report-warning hidden" role="status" aria-live="polite" aria-atomic="true"></div>
 
-			<form id="opciones" class="text-left flex flex-col mt-[1em] w-full gap-[10px] sm:gap-[12px] min-w-[300px]"></form>
+			<form id="opciones" class="text-left flex flex-col mt-3 w-full gap-2.5 sm:gap-3"></form>
 
-			<div id="resultado" class="mt-3 font-semibold text-center min-h-[24px]"></div>
+			<div id="resultado" class="mt-3 font-semibold text-center min-h-[16px]"></div>
 
+			<!-- ── Resultados de sesión de práctica ─────────────────────────── -->
 			<section id="session-results" class="hidden text-left">
 				<div class="results-hero">
 					<div class="results-badge">
-						<span class="material-icons">emoji_events</span>
+						<span class="material-icons" aria-hidden="true">emoji_events</span>
 						<span>Sesión completada</span>
 					</div>
 					<h3 id="results-title" class="results-title">Buen trabajo</h3>
@@ -97,32 +110,32 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 				<div class="results-grid">
 					<article class="results-stat-card">
 						<span class="results-stat-label">Aciertos</span>
-						<strong id="results-correct" class="results-stat-value">0</strong>
+						<strong id="results-correct" class="results-stat-value text-emerald-600 dark:text-emerald-400 tabular">0</strong>
 					</article>
 					<article class="results-stat-card">
 						<span class="results-stat-label">Fallos</span>
-						<strong id="results-incorrect" class="results-stat-value">0</strong>
+						<strong id="results-incorrect" class="results-stat-value text-red-600 dark:text-red-400 tabular">0</strong>
 					</article>
 					<article class="results-stat-card">
 						<span class="results-stat-label">Precisión</span>
-						<strong id="results-accuracy" class="results-stat-value">0%</strong>
+						<strong id="results-accuracy" class="results-stat-value tabular">0%</strong>
 					</article>
 				</div>
 
 				<div id="results-summary" class="results-summary"></div>
 
 				<div class="results-actions">
-					<button id="results-restart-btn" class="btn-primary mt-0! w-full sm:w-auto">Repetir módulo</button>
-					<button id="results-review-btn" class="btn-secondary mt-0! w-full sm:w-auto">Repasar fallos</button>
-					<button id="results-resumen-btn" class="btn mt-0! w-full sm:w-auto">Ver resumen</button>
+					<button id="results-restart-btn" class="btn-primary w-full sm:w-auto">Repetir módulo</button>
+					<button id="results-review-btn" class="btn-secondary w-full sm:w-auto">Repasar fallos</button>
+					<button id="results-resumen-btn" class="btn w-full sm:w-auto">Ver resumen</button>
 				</div>
 			</section>
 
-			<!-- ── Resultados del modo examen ─────────────────────────────────── -->
+			<!-- ── Resultados del modo examen ───────────────────────────────── -->
 			<section id="exam-results" class="hidden text-left">
 				<div class="results-hero">
 					<div class="results-badge results-badge--exam">
-						<span class="material-icons">timer</span>
+						<span class="material-icons" aria-hidden="true">timer</span>
 						<span>Examen finalizado</span>
 					</div>
 					<h3 id="exam-results-title" class="results-title">Resultados del examen</h3>
@@ -132,23 +145,23 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 				<div class="results-grid results-grid--exam">
 					<article class="results-stat-card">
 						<span class="results-stat-label">Nota</span>
-						<strong id="exam-score" class="results-stat-value">0</strong>
+						<strong id="exam-score" class="results-stat-value tabular">0</strong>
 					</article>
 					<article class="results-stat-card">
 						<span class="results-stat-label">Tiempo</span>
-						<strong id="exam-time" class="results-stat-value">0:00</strong>
+						<strong id="exam-time" class="results-stat-value tabular">0:00</strong>
 					</article>
 					<article class="results-stat-card">
 						<span class="results-stat-label">Aciertos</span>
-						<strong id="exam-correct" class="results-stat-value text-green-600 dark:text-green-400">0</strong>
+						<strong id="exam-correct" class="results-stat-value text-emerald-600 dark:text-emerald-400 tabular">0</strong>
 					</article>
 					<article class="results-stat-card">
 						<span class="results-stat-label">Fallos</span>
-						<strong id="exam-wrong" class="results-stat-value text-red-600 dark:text-red-400">0</strong>
+						<strong id="exam-wrong" class="results-stat-value text-red-600 dark:text-red-400 tabular">0</strong>
 					</article>
 					<article class="results-stat-card">
 						<span class="results-stat-label">En blanco</span>
-						<strong id="exam-blank" class="results-stat-value">0</strong>
+						<strong id="exam-blank" class="results-stat-value tabular">0</strong>
 					</article>
 				</div>
 
@@ -157,17 +170,17 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 					<span class="text-[0.7rem] text-text-muted font-semibold uppercase tracking-wider">Desglose pregunta a pregunta</span>
 					<div class="flex-1 h-px bg-border-subtle"></div>
 				</div>
-				<div id="exam-breakdown" class="space-y-3 mb-5"></div>
+				<div id="exam-breakdown" class="space-y-3 mb-6"></div>
 
 				<div class="results-actions">
-					<button id="exam-exit-btn" class="btn-primary mt-0! w-full sm:w-auto">Volver al modo test</button>
-					<button id="exam-retry-btn" class="btn-secondary mt-0! w-full sm:w-auto">Repetir examen</button>
+					<button id="exam-exit-btn" class="btn-primary w-full sm:w-auto">Volver al modo test</button>
+					<button id="exam-retry-btn" class="btn-secondary w-full sm:w-auto">Repetir examen</button>
 				</div>
 			</section>
-			
+
+			<!-- ── Barra inferior de acciones del quiz ──────────────────────── -->
 			<div id="action-buttons-container" class="quiz-actions">
-				<!-- Fila de stats en la barra de acciones (sincronizada desde JS) -->
-				<div id="quiz-mobile-stats" class="hidden flex items-center justify-center flex-wrap gap-1.5 pb-2.5 border-b border-border-subtle mb-1">
+				<div id="quiz-mobile-stats" class="hidden flex items-center justify-center flex-wrap gap-1.5 pb-3 border-b border-border-subtle mb-1">
 					<span id="mobile-total-preguntas" class="inline-flex items-center gap-1.5 flex-wrap justify-center"></span>
 					<span id="mobile-contador" class="inline-flex items-center gap-1.5 flex-wrap justify-center"></span>
 				</div>
@@ -186,96 +199,84 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 		</div>
 	</div>
 
-	<!-- Triggers ocultos: ai-generate.js y bindExamButtons esperan estos
-	     IDs para inicializar sus modales. Los botones visibles del modo
-	     están en el selector de modo (mode-card-aigen, mode-card-exam). -->
+	<!-- Triggers ocultos requeridos por ai-generate.js y bindExamButtons -->
 	<div class="hidden" aria-hidden="true">
 		<button id="aigen-open-btn" type="button"></button>
 		<button id="exam-open-btn" type="button"></button>
 	</div>
 
-	<div id="stats-panel" class="hidden fixed bottom-[80px] sm:bottom-[10px] right-[10px] z-50 flex items-center gap-2.5 bg-surface/90 text-text-main text-[13px] px-[14px] py-[8px] rounded-full border border-border-subtle shadow-md shadow-black/10 backdrop-blur-sm">
-		<span class="material-icons mi-sm text-text-muted">bar_chart</span>
-		<span id="total-preguntas" class="font-medium whitespace-nowrap"></span>
-		<span class="w-px h-4 bg-border-subtle" aria-hidden="true"></span>
-		<span id="contador" class="font-medium whitespace-nowrap"></span>
+	<!-- Fuente de stats oculta visualmente y sincronizada en #quiz-mobile-stats -->
+	<div id="stats-panel" class="hidden" aria-hidden="true">
+		<span id="total-preguntas"></span>
+		<span id="contador"></span>
 	</div>
 
 	<!-- Cronómetro del modo examen -->
-	<div id="exam-timer-chip" class="hidden fixed top-[80px] right-[10px] z-50 flex items-center gap-2 bg-amber-500/95 text-white text-[14px] px-[14px] py-[8px] rounded-full shadow-md shadow-black/15 backdrop-blur-sm font-semibold tabular-nums">
-		<span class="material-icons text-[17px]">timer</span>
+	<div id="exam-timer-chip" class="hidden fixed top-[76px] right-3 sm:right-5 z-40 flex items-center gap-2 bg-amber-600 text-white text-xs sm:text-sm px-3.5 py-2 rounded-full shadow-elevated font-semibold tabular-nums">
+		<span class="material-icons text-[16px]" aria-hidden="true">timer</span>
 		<span id="exam-timer-label">0:00</span>
 	</div>
 
-	<!-- Botón Finalizar examen (solo móvil, en PC aparece en el panel de navegación) -->
-	<button id="exam-finish-mobile" class="hidden fixed z-40 flex items-center gap-1.5 bg-surface border border-amber-500/50 text-amber-700 dark:text-amber-400 text-[13px] px-3 py-[7px] rounded-full shadow-sm shadow-black/10 font-semibold backdrop-blur-sm" style="top: 126px; right: 10px;" aria-label="Finalizar examen">
-		<span class="material-icons" style="font-size:1rem;">send</span>
+	<!-- Botón Finalizar examen (móvil) -->
+	<button id="exam-finish-mobile" class="hidden fixed z-40 flex items-center gap-1.5 bg-surface border border-amber-500/50 text-amber-700 dark:text-amber-300 text-xs px-3 py-2 rounded-full shadow-elevated font-semibold" style="top: 120px; right: 12px;" aria-label="Finalizar examen">
+		<span class="material-icons" style="font-size:1rem;" aria-hidden="true">send</span>
 		<span>Finalizar</span>
 	</button>
 
-	<!-- Panel de navegación del examen (solo PC) -->
-	<div id="exam-nav-panel" class="hidden fixed right-[10px] z-40 w-[196px] max-h-[calc(100vh-146px)] overflow-y-auto bg-surface border border-border-subtle rounded-2xl shadow-lg" style="top: 126px;">
-		<div class="px-3 py-2 border-b border-border-subtle flex items-center gap-1.5">
-			<span class="material-icons text-amber-500" style="font-size:0.9rem;">grid_view</span>
+	<!-- Panel de navegación del examen (desktop) -->
+	<div id="exam-nav-panel" class="hidden fixed right-4 z-40 w-[204px] max-h-[calc(100vh-140px)] overflow-y-auto bg-surface border border-border-subtle rounded-2xl shadow-elevated" style="top: 122px;">
+		<div class="px-3.5 py-2.5 border-b border-border-subtle flex items-center gap-1.5">
+			<span class="material-icons text-amber-500" style="font-size:0.95rem;" aria-hidden="true">grid_view</span>
 			<h4 class="text-[0.68rem] font-bold uppercase tracking-wider text-text-muted m-0">Navegación</h4>
 		</div>
 		<div class="p-3">
-			<div id="exam-nav-grid" class="grid grid-cols-5 gap-1 mb-3"></div>
-			<div class="text-[0.72rem] text-text-muted text-center mb-2 flex items-center justify-center gap-1.5">
+			<div id="exam-nav-grid" class="grid grid-cols-5 gap-1.5 mb-3"></div>
+			<div class="text-[0.72rem] text-text-muted text-center mb-2.5 flex items-center justify-center gap-1.5 tabular">
 				<span class="inline-block w-2.5 h-2.5 rounded-sm bg-amber-500/60 flex-shrink-0"></span>
 				<span><span id="exam-nav-answered">0</span> / <span id="exam-nav-total">0</span> respondidas</span>
 			</div>
-			<button id="exam-finish-btn" class="w-full py-2 rounded-lg text-[0.82rem] font-semibold text-white bg-amber-600 hover:bg-amber-700 active:bg-amber-800 transition-colors cursor-pointer border-none flex items-center justify-center gap-1.5 mt-1">
-				<span class="material-icons" style="font-size:0.95rem;">send</span>
+			<button id="exam-finish-btn" class="w-full py-2 rounded-lg text-xs font-semibold text-white bg-amber-600 hover:bg-amber-700 transition-colors cursor-pointer border-none flex items-center justify-center gap-1.5">
+				<span class="material-icons" style="font-size:0.95rem;" aria-hidden="true">send</span>
 				Finalizar examen
 			</button>
 		</div>
 	</div>
 
-	<!-- ─── AI Generate overlay ─────────────────────────────────────────── -->
-	<div id="aigen-overlay" class="hidden fixed inset-0 z-[300] bg-black/60 backdrop-blur-sm"></div>
-
-	<!-- ─── AI Generate modal ────────────────────────────────────────────── -->
+	<!-- ─── AI Generate Modal ─────────────────────────────────────────────── -->
+	<div id="aigen-overlay" class="hidden fixed inset-0 z-[300] bg-[#0b0f19]/60 backdrop-blur-sm"></div>
 	<div id="aigen-modal" class="hidden fixed inset-0 z-[301] flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="aigen-title">
-		<div class="aigen-modal-box w-full max-w-md bg-surface rounded-2xl shadow-2xl border border-border-subtle overflow-hidden">
-			<div class="h-1 w-full bg-gradient-to-r from-violet-500 via-purple-500 to-blue-500"></div>
-			<div class="p-5 sm:p-6">
-
-				<!-- Cabecera -->
+		<div class="aigen-modal-box w-full max-w-md bg-surface rounded-2xl shadow-elevated border border-border-subtle overflow-hidden">
+			<div class="p-6">
 				<div class="flex items-start justify-between mb-5">
 					<div class="flex items-center gap-3">
-						<div class="flex items-center justify-center w-10 h-10 rounded-xl bg-violet-100 dark:bg-violet-900/40 flex-shrink-0">
-							<span class="material-icons text-violet-600 dark:text-violet-400">psychology</span>
+						<div class="flex items-center justify-center w-10 h-10 rounded-xl bg-accent/10 text-accent-text flex-shrink-0">
+							<span class="material-icons" aria-hidden="true">psychology</span>
 						</div>
 						<div>
 							<h3 id="aigen-title" class="font-heading font-bold text-text-main text-base m-0 leading-tight">Generar quiz con IA</h3>
 							<p class="text-text-muted text-xs mt-0.5 m-0">Preguntas nuevas sobre esta asignatura</p>
 						</div>
 					</div>
-					<button id="aigen-close" class="p-1 text-text-muted hover:text-text-main rounded-full hover:bg-surface-hover transition-colors cursor-pointer border-none bg-transparent flex-shrink-0" aria-label="Cerrar">
-						<span class="material-icons">close</span>
+					<button id="aigen-close" class="p-1.5 text-text-muted hover:text-text-main rounded-lg hover:bg-surface-hover transition-colors cursor-pointer border-none bg-transparent flex-shrink-0" aria-label="Cerrar">
+						<span class="material-icons mi-md">close</span>
 					</button>
 				</div>
 
-				<!-- ── Estado: Configuración ────────────────────────────────── -->
 				<div id="aigen-config">
-
-					<!-- Proveedor activo -->
 					<div class="flex items-center gap-2 p-3 mb-5 bg-surface-hover rounded-xl border border-border-subtle text-sm">
-						<span class="material-icons text-violet-500" style="font-size:1rem;">auto_awesome</span>
+						<span class="material-icons text-accent-text" style="font-size:1rem;">auto_awesome</span>
 						<span class="text-text-muted text-xs">Proveedor:</span>
 						<span id="aigen-provider-label" class="text-text-main text-xs font-semibold flex-1"></span>
-						<a id="aigen-config-link" href="#" class="text-xs text-blue-500 hover:text-blue-600 underline decoration-dotted">Cambiar</a>
+						<a id="aigen-config-link" href="#" class="text-xs text-accent-text hover:underline font-medium">Cambiar</a>
 					</div>
 
-					<!-- Slider -->
 					<div class="mb-6">
 						<div class="flex items-end justify-between mb-3 gap-2">
 							<span class="text-sm font-semibold text-text-main">Número de preguntas</span>
 							<div class="flex items-baseline gap-2">
 								<span id="aigen-range-label" class="aigen-range-badge aigen-range-badge--fast">Rápido</span>
 								<span class="flex items-baseline gap-1">
-									<span id="aigen-count" class="text-[2rem] font-heading font-bold text-violet-600 dark:text-violet-400 tabular-nums leading-none">20</span>
+									<span id="aigen-count" class="text-[1.9rem] font-heading font-bold text-accent-text tabular-nums leading-none">20</span>
 									<span class="text-text-muted text-xs">preg.</span>
 								</span>
 							</div>
@@ -291,7 +292,7 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 							/>
 						</div>
 
-						<div class="flex justify-between mt-1">
+						<div class="flex justify-between mt-1 tabular">
 							<span class="text-text-muted text-[0.68rem]">5</span>
 							<span class="text-text-muted text-[0.68rem]">50</span>
 							<span class="text-text-muted text-[0.68rem]">100</span>
@@ -300,7 +301,6 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 						</div>
 					</div>
 
-					<!-- Aviso para números grandes -->
 					<div id="aigen-token-warning" class="hidden mb-4 p-3 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-700/60 rounded-xl">
 						<div class="flex items-start gap-2">
 							<span class="material-icons text-amber-500 flex-shrink-0 mt-0.5" style="font-size:1rem;">warning_amber</span>
@@ -310,7 +310,6 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 						</div>
 					</div>
 
-					<!-- Error -->
 					<div id="aigen-error-box" role="alert" class="hidden mb-4 p-3 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-700/60 rounded-xl">
 						<div class="flex items-start gap-2">
 							<span class="material-icons text-danger-text flex-shrink-0 mt-0.5" style="font-size:1rem;">error_outline</span>
@@ -318,14 +317,12 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 						</div>
 					</div>
 
-					<!-- Botón generar -->
 					<button id="aigen-generate-btn" class="aigen-generate-btn w-full py-3 rounded-xl text-sm font-semibold cursor-pointer border-none flex items-center justify-center gap-2 transition-all">
 						<span class="material-icons" style="font-size:1.1rem;">auto_fix_high</span>
 						Generar preguntas
 					</button>
 				</div>
 
-				<!-- ── Estado: Generando ─────────────────────────────────────── -->
 				<div id="aigen-generating" class="hidden">
 					<div class="flex flex-col items-center py-8 gap-4">
 						<div class="aigen-spinner"></div>
@@ -339,11 +336,10 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 					</div>
 				</div>
 
-				<!-- ── Estado: Éxito ────────────────────────────────────────── -->
 				<div id="aigen-success" class="hidden">
 					<div class="flex flex-col items-center py-6 gap-4 text-center">
-						<div class="w-14 h-14 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center">
-							<span class="material-icons text-green-600 dark:text-green-400" style="font-size:1.8rem;">check_circle</span>
+						<div class="w-12 h-12 rounded-full bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center">
+							<span class="material-icons text-emerald-600 dark:text-emerald-400" style="font-size:1.6rem;">check_circle</span>
 						</div>
 						<div>
 							<p class="text-text-main font-heading font-bold text-lg m-0">¡Quiz listo!</p>
@@ -352,18 +348,17 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 							</p>
 						</div>
 						<div class="w-full flex flex-col gap-2 pt-2">
-							<button id="aigen-start-btn" class="w-full py-3 bg-green-600 hover:bg-green-700 text-white rounded-xl text-sm font-semibold transition-colors cursor-pointer border-none flex items-center justify-center gap-2">
+							<button id="aigen-start-btn" class="btn-primary w-full py-3">
 								<span class="material-icons" style="font-size:1.1rem;">play_arrow</span>
 								Iniciar quiz con estas preguntas
 							</button>
-							<button id="aigen-regenerate-btn" class="w-full py-2.5 bg-transparent hover:bg-surface-hover text-text-muted hover:text-text-main border border-border-subtle rounded-xl text-sm font-medium transition-colors cursor-pointer flex items-center justify-center gap-1.5">
+							<button id="aigen-regenerate-btn" class="btn-secondary w-full py-2.5">
 								<span class="material-icons" style="font-size:1rem;">refresh</span>
 								Generar de nuevo
 							</button>
 						</div>
 					</div>
 				</div>
-
 			</div>
 		</div>
 	</div>
@@ -372,16 +367,13 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 	<div id="ai-drawer" class="ai-drawer" aria-hidden="true">
 		<div id="ai-drawer-backdrop" class="ai-drawer-backdrop"></div>
 		<div id="ai-drawer-panel" class="ai-drawer-panel">
-
-			<!-- Drag handle (solo móvil) -->
 			<div class="flex justify-center pt-3 pb-1 sm:hidden flex-shrink-0">
 				<div class="w-10 h-1 rounded-full bg-border-subtle"></div>
 			</div>
 
-			<!-- Cabecera del panel -->
-			<div class="flex items-center justify-between px-5 py-3 border-b border-border-subtle flex-shrink-0">
+			<div class="flex items-center justify-between px-5 py-3.5 border-b border-border-subtle flex-shrink-0">
 				<div class="flex items-center gap-2">
-					<span class="material-icons text-blue-500" style="font-size:1.2rem;">auto_awesome</span>
+					<span class="material-icons text-accent-text" style="font-size:1.15rem;">auto_awesome</span>
 					<span class="font-heading font-bold text-text-main text-[0.95rem]">Explicación IA</span>
 				</div>
 				<div class="flex items-center gap-1.5">
@@ -390,32 +382,26 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 						<option value="groq">Groq</option>
 					</select>
 					<select id="ai-drawer-model" class="ai-drawer-select" aria-label="Modelo de IA"></select>
-					<button id="ai-drawer-close" class="ml-1 p-1 text-text-muted hover:text-text-main hover:bg-surface-hover rounded-full transition-colors cursor-pointer border-none bg-transparent" aria-label="Cerrar panel">
-						<span class="material-icons" style="font-size:1.3rem;">close</span>
+					<button id="ai-drawer-close" class="ml-1 p-1.5 text-text-muted hover:text-text-main hover:bg-surface-hover rounded-lg transition-colors cursor-pointer border-none bg-transparent" aria-label="Cerrar panel">
+						<span class="material-icons" style="font-size:1.2rem;">close</span>
 					</button>
 				</div>
 			</div>
 
-			<!-- Contenido con scroll -->
 			<div class="overflow-y-auto flex-1 px-5 py-4">
-
-				<!-- Resumen de la pregunta -->
 				<div id="ai-question-summary" class="mb-4 p-4 bg-surface-hover rounded-xl border border-border-subtle text-sm leading-relaxed"></div>
 
-				<!-- Separador -->
 				<div class="flex items-center gap-3 mb-4">
 					<div class="flex-1 h-px bg-border-subtle"></div>
 					<span class="text-[0.7rem] text-text-muted font-semibold uppercase tracking-wider">Explicación</span>
 					<div class="flex-1 h-px bg-border-subtle"></div>
 				</div>
 
-				<!-- Loading -->
 				<div id="ai-loading" class="hidden flex flex-col items-center justify-center py-10 gap-3">
 					<div class="ai-spinner"></div>
-					<span class="text-text-muted text-sm">Generando explicación...</span>
+					<span class="text-text-muted text-sm">Generando explicación…</span>
 				</div>
 
-				<!-- Error -->
 				<div id="ai-error" role="alert" class="hidden p-4 bg-red-50 dark:bg-red-900/20 border border-red-300 dark:border-red-700 rounded-xl mb-3">
 					<div class="flex items-center gap-2 mb-1">
 						<span class="material-icons text-danger-text" style="font-size:1rem;">error_outline</span>
@@ -424,16 +410,13 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 					<p id="ai-error-msg" class="text-red-600 dark:text-red-400 text-xs m-0 leading-relaxed"></p>
 				</div>
 
-				<!-- Texto de la IA (streaming) -->
 				<div id="ai-text" class="text-text-main text-sm leading-relaxed" data-raw=""></div>
 
-				<!-- Botón reintentar -->
 				<button id="ai-retry-btn" class="hidden mt-4 w-full py-2 px-4 border border-border-subtle rounded-lg text-text-muted hover:text-text-main hover:bg-surface-hover text-sm font-medium transition-colors cursor-pointer bg-transparent flex items-center justify-center gap-1.5">
 					<span class="material-icons" style="font-size:1rem;">refresh</span>
 					Reintentar
 				</button>
 
-				<!-- ── Chat de seguimiento ──────────────────────────────────── -->
 				<div id="ai-chat-section" class="hidden mt-5">
 					<div class="flex items-center gap-3 mb-4">
 						<div class="flex-1 h-px bg-border-subtle"></div>
@@ -447,181 +430,136 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 							rows="2"
 							aria-label="Pregunta de seguimiento sobre la explicación"
 							placeholder="¿Tienes alguna duda sobre la explicación?"
-							class="flex-1 px-3 py-2 rounded-lg bg-background border border-border-subtle text-text-main text-sm focus:outline-none focus:border-blue-500 transition-colors resize-none"
+							class="flex-1 px-3 py-2 rounded-xl bg-background border border-border-subtle text-text-main text-sm transition-colors resize-none"
 						></textarea>
 						<button
 							id="ai-chat-send"
-							class="flex-shrink-0 p-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors cursor-pointer border-none disabled:opacity-50 disabled:cursor-not-allowed"
+							class="flex-shrink-0 p-2.5 bg-[rgb(var(--btn-primary))] hover:bg-[rgb(var(--btn-primary-hover))] text-white rounded-xl transition-colors cursor-pointer border-none disabled:opacity-50 disabled:cursor-not-allowed"
 							aria-label="Enviar pregunta"
 						>
 							<span class="material-icons" style="font-size:1.1rem;" aria-hidden="true">send</span>
 						</button>
 					</div>
 				</div>
-
 			</div>
 		</div>
 	</div>
-<style is:global>
-  /* Cuando el selector de modo está visible, ocultar toda la UI del test
-     con !important para sobreescribir cualquier estilo scoped de Astro. */
-  body.mode-selector-active #action-buttons-container,
-  body.mode-selector-active #stats-panel,
-  body.mode-selector-active #quiz-mobile-stats,
-  body.mode-selector-active #quiz-toolbar,
-  body.mode-selector-active #quiz-progress,
-  body.mode-selector-active #explicar-ia-btn,
-  body.mode-selector-active #report-btn,
-  body.mode-selector-active #copyButton,
-  body.mode-selector-active #volver-pregunta,
-  body.mode-selector-active #verificar,
-  body.mode-selector-active #resumenBtn,
-  body.mode-selector-active #pregunta,
-  body.mode-selector-active #opciones,
-  body.mode-selector-active #resultado,
-  body.mode-selector-active #report-warning {
-    display: none !important;
-  }
 
-  .ai-chat-bubble-user {
-    max-width: 85%;
-    padding: 0.5rem 0.75rem;
-    border-radius: 1rem 1rem 0.25rem 1rem;
-    background: rgb(37 99 235);
-    color: white;
-    font-size: 0.875rem;
-    line-height: 1.5;
-    word-break: break-word;
-  }
-  .ai-chat-bubble-ai {
-    max-width: 85%;
-    padding: 0.5rem 0.75rem;
-    border-radius: 1rem 1rem 1rem 0.25rem;
-    background: rgb(var(--bg-surface-hover));
-    border: 1px solid rgb(var(--border-subtle));
-    color: rgb(var(--text-main));
-    font-size: 0.875rem;
-    line-height: 1.5;
-    word-break: break-word;
-  }
-</style>
-
-<!-- ─── Exam Config Modal ─────────────────────────────────────────────────── -->
-<div id="exam-overlay" class="hidden fixed inset-0 z-[300] bg-black/60 backdrop-blur-sm"></div>
-<div id="exam-modal" class="hidden fixed inset-0 z-[301] flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="exam-modal-title">
-	<div class="exam-modal-box w-full max-w-md bg-surface rounded-2xl shadow-2xl border border-border-subtle overflow-hidden">
-		<div class="h-1 w-full bg-gradient-to-r from-amber-400 via-orange-500 to-red-500"></div>
-		<div class="p-5 sm:p-6">
-			<div class="flex items-center justify-between mb-5">
-				<div class="flex items-center gap-2">
-					<span class="material-icons text-amber-500">timer</span>
-					<h3 id="exam-modal-title" class="font-heading font-bold text-text-main text-lg m-0">Modo examen real</h3>
-				</div>
-				<button id="exam-close" class="p-1 text-text-muted hover:text-text-main rounded-full hover:bg-surface-hover transition-colors cursor-pointer border-none bg-transparent" aria-label="Cerrar">
-					<span class="material-icons">close</span>
-				</button>
-			</div>
-
-			<p class="text-text-muted text-sm mb-5 leading-relaxed">Sin retroalimentación hasta el final. Configura la puntuación y el número de preguntas:</p>
-
-			<div class="space-y-4">
-				<div class="grid grid-cols-2 gap-3">
-					<div>
-						<label class="block text-sm font-medium text-text-main mb-1.5" for="exam-points-ok">Puntos por acierto</label>
-						<input id="exam-points-ok" type="number" step="0.05" min="0" value="1" class="w-full px-3 py-2.5 rounded-lg bg-background border border-border-subtle text-text-main text-sm focus:outline-none focus:border-amber-500 transition-colors" />
+	<!-- ─── Exam Config Modal ──────────────────────────────────────────────── -->
+	<div id="exam-overlay" class="hidden fixed inset-0 z-[300] bg-[#0b0f19]/60 backdrop-blur-sm"></div>
+	<div id="exam-modal" class="hidden fixed inset-0 z-[301] flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="exam-modal-title">
+		<div class="exam-modal-box w-full max-w-md bg-surface rounded-2xl shadow-elevated border border-border-subtle overflow-hidden">
+			<div class="p-6">
+				<div class="flex items-center justify-between mb-4">
+					<div class="flex items-center gap-2.5">
+						<span class="inline-flex items-center justify-center w-9 h-9 rounded-xl bg-amber-500/12 text-amber-600 dark:text-amber-400">
+							<span class="material-icons mi-md">timer</span>
+						</span>
+						<h3 id="exam-modal-title" class="font-heading font-bold text-text-main text-lg m-0">Modo examen real</h3>
 					</div>
-					<div>
-						<label class="block text-sm font-medium text-text-main mb-1.5" for="exam-points-bad">Penalización por fallo</label>
-						<input id="exam-points-bad" type="number" step="0.05" min="0" value="0.25" class="w-full px-3 py-2.5 rounded-lg bg-background border border-border-subtle text-text-main text-sm focus:outline-none focus:border-amber-500 transition-colors" />
-					</div>
-				</div>
-				<div>
-					<label class="block text-sm font-medium text-text-main mb-1.5" for="exam-question-count">
-						Número de preguntas <span class="text-text-muted font-normal">(máx. <span id="exam-max-questions">0</span>)</span>
-					</label>
-					<input id="exam-question-count" type="number" min="1" step="1" value="20" class="w-full px-3 py-2.5 rounded-lg bg-background border border-border-subtle text-text-main text-sm focus:outline-none focus:border-amber-500 transition-colors" />
-				</div>
-				<div id="exam-config-error" role="alert" class="hidden p-3 bg-red-50 dark:bg-red-900/20 border border-red-300 dark:border-red-700 rounded-lg text-red-700 dark:text-red-400 text-sm"></div>
-			</div>
-
-			<button id="exam-start-btn" class="mt-6 w-full py-3 rounded-xl text-sm font-semibold cursor-pointer border-none flex items-center justify-center gap-2 transition-all text-white bg-amber-600 hover:bg-amber-700 shadow-sm">
-				<span class="material-icons" style="font-size:1.1rem;">play_arrow</span>
-				Comenzar examen
-			</button>
-		</div>
-	</div>
-</div>
-
-<!-- ─── Resume Test Modal ─────────────────────────────────────────────────── -->
-<div id="resume-overlay" class="hidden fixed inset-0 z-[300] bg-black/60 backdrop-blur-sm"></div>
-<div id="resume-modal" class="hidden fixed inset-0 z-[301] flex items-center justify-center p-4" role="dialog" aria-modal="true">
-	<div class="exam-modal-box w-full max-w-sm bg-surface rounded-2xl shadow-2xl border border-border-subtle overflow-hidden">
-		<div class="h-1 w-full bg-gradient-to-r from-blue-400 via-blue-500 to-indigo-500"></div>
-		<div class="p-6 text-center">
-			<div class="w-12 h-12 mx-auto rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center mb-3">
-				<span class="material-icons text-blue-600 dark:text-blue-400" style="font-size:1.5rem;">restore</span>
-			</div>
-			<h3 class="font-heading font-bold text-text-main text-lg m-0 mb-1">Tienes un test a medias</h3>
-			<p id="resume-modal-info" class="text-text-muted text-sm m-0 mb-5"></p>
-			<div class="flex flex-col gap-2">
-				<button id="resume-continue-btn" class="w-full py-2.5 rounded-xl text-sm font-semibold cursor-pointer border-none text-white bg-blue-600 hover:bg-blue-700 transition-colors flex items-center justify-center gap-2">
-					<span class="material-icons" style="font-size:1rem;">play_arrow</span>
-					Retomar test
-				</button>
-				<button id="resume-discard-btn" class="w-full py-2.5 rounded-xl text-sm font-medium cursor-pointer bg-transparent hover:bg-surface-hover text-text-muted hover:text-text-main border border-border-subtle transition-colors">
-					Empezar de nuevo
-				</button>
-			</div>
-		</div>
-	</div>
-</div>
-
-<!-- ─── Report Modal ──────────────────────────────────────────────────────── -->
-<div id="report-overlay" class="hidden fixed inset-0 z-[300] bg-black/60 backdrop-blur-sm"></div>
-<div id="report-modal" class="hidden fixed inset-0 z-[301] flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="report-modal-title">
-	<div class="report-modal-box w-full max-w-md bg-surface rounded-2xl shadow-2xl border border-border-subtle overflow-hidden">
-		<div class="h-1 w-full bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400"></div>
-		<div class="p-5 sm:p-6">
-			<div class="flex items-center justify-between mb-5">
-				<div class="flex items-center gap-2">
-					<span class="material-icons text-danger-text">flag</span>
-					<h3 id="report-modal-title" class="font-heading font-bold text-text-main text-lg m-0">Reportar pregunta</h3>
-				</div>
-				<button id="report-close" class="p-1 text-text-muted hover:text-text-main rounded-full hover:bg-surface-hover transition-colors cursor-pointer border-none bg-transparent" aria-label="Cerrar">
-					<span class="material-icons">close</span>
-				</button>
-			</div>
-
-			<!-- Formulario -->
-			<div id="report-form-body" class="space-y-4">
-				<div id="report-error" role="alert" class="hidden p-3 bg-red-50 dark:bg-red-900/20 border border-red-300 dark:border-red-700 rounded-lg text-red-700 dark:text-red-400 text-sm"></div>
-
-				<div>
-					<label class="block text-sm font-medium text-text-main mb-1.5" for="report-details">Describe el problema <span class="text-danger-text">*</span></label>
-					<textarea id="report-details" rows="4" placeholder="Explica el problema con detalle…" class="w-full px-3 py-2.5 rounded-lg bg-background border border-border-subtle text-text-main text-sm focus:outline-none focus:border-blue-500 transition-colors resize-none"></textarea>
-				</div>
-
-				<div class="flex justify-end gap-3 pt-1">
-					<button type="button" onclick="window.Reports?.close()" class="px-4 py-2 text-sm font-medium text-text-muted hover:text-text-main bg-transparent hover:bg-surface-hover border border-border-subtle rounded-lg transition-colors cursor-pointer">
-						Cancelar
+					<button id="exam-close" class="p-1.5 text-text-muted hover:text-text-main rounded-lg hover:bg-surface-hover transition-colors cursor-pointer border-none bg-transparent" aria-label="Cerrar">
+						<span class="material-icons mi-md">close</span>
 					</button>
-					<button id="report-submit-btn" type="button" class="px-5 py-2 text-sm font-semibold text-white bg-red-600 hover:bg-red-700 rounded-lg transition-colors cursor-pointer border-none disabled:opacity-50 disabled:cursor-not-allowed">
-						Enviar reporte
+				</div>
+
+				<p class="text-text-muted text-sm mb-5 leading-relaxed">Sin retroalimentación hasta el final. Configura la puntuación y el número de preguntas:</p>
+
+				<div class="space-y-4">
+					<div class="grid grid-cols-2 gap-3">
+						<div>
+							<label class="block text-xs font-semibold text-text-main mb-1.5" for="exam-points-ok">Puntos por acierto</label>
+							<input id="exam-points-ok" type="number" step="0.05" min="0" value="1" class="w-full px-3 py-2.5 rounded-xl bg-background border border-border-subtle text-text-main text-sm transition-colors" />
+						</div>
+						<div>
+							<label class="block text-xs font-semibold text-text-main mb-1.5" for="exam-points-bad">Penalización por fallo</label>
+							<input id="exam-points-bad" type="number" step="0.05" min="0" value="0.25" class="w-full px-3 py-2.5 rounded-xl bg-background border border-border-subtle text-text-main text-sm transition-colors" />
+						</div>
+					</div>
+					<div>
+						<label class="block text-xs font-semibold text-text-main mb-1.5" for="exam-question-count">
+							Número de preguntas <span class="text-text-muted font-normal">(máx. <span id="exam-max-questions">0</span>)</span>
+						</label>
+						<input id="exam-question-count" type="number" min="1" step="1" value="20" class="w-full px-3 py-2.5 rounded-xl bg-background border border-border-subtle text-text-main text-sm transition-colors" />
+					</div>
+					<div id="exam-config-error" role="alert" class="hidden p-3 bg-red-50 dark:bg-red-900/20 border border-red-300 dark:border-red-700 rounded-xl text-red-700 dark:text-red-400 text-sm"></div>
+				</div>
+
+				<button id="exam-start-btn" class="mt-6 w-full py-3 rounded-xl text-sm font-semibold cursor-pointer border-none flex items-center justify-center gap-2 transition-colors text-white bg-amber-600 hover:bg-amber-700 shadow-subtle">
+					<span class="material-icons" style="font-size:1.1rem;">play_arrow</span>
+					Comenzar examen
+				</button>
+			</div>
+		</div>
+	</div>
+
+	<!-- ─── Resume Test Modal ──────────────────────────────────────────────── -->
+	<div id="resume-overlay" class="hidden fixed inset-0 z-[300] bg-[#0b0f19]/60 backdrop-blur-sm"></div>
+	<div id="resume-modal" class="hidden fixed inset-0 z-[301] flex items-center justify-center p-4" role="dialog" aria-modal="true">
+		<div class="exam-modal-box w-full max-w-sm bg-surface rounded-2xl shadow-elevated border border-border-subtle overflow-hidden">
+			<div class="p-6 text-center">
+				<div class="w-12 h-12 mx-auto rounded-xl bg-accent/10 flex items-center justify-center mb-3.5">
+					<span class="material-icons text-accent-text" style="font-size:1.5rem;">restore</span>
+				</div>
+				<h3 class="font-heading font-bold text-text-main text-lg m-0 mb-1">Tienes un test a medias</h3>
+				<p id="resume-modal-info" class="text-text-muted text-sm m-0 mb-5"></p>
+				<div class="flex flex-col gap-2">
+					<button id="resume-continue-btn" class="btn-primary w-full py-2.5">
+						<span class="material-icons" style="font-size:1rem;">play_arrow</span>
+						Retomar test
+					</button>
+					<button id="resume-discard-btn" class="btn-secondary w-full py-2.5">
+						Empezar de nuevo
 					</button>
 				</div>
 			</div>
+		</div>
+	</div>
 
-			<!-- Éxito -->
-			<div id="report-success" class="hidden flex flex-col items-center py-6 gap-3 text-center">
-				<div class="w-12 h-12 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center">
-					<span class="material-icons text-green-600 dark:text-green-400" style="font-size:1.6rem;">check_circle</span>
+	<!-- ─── Report Modal ───────────────────────────────────────────────────── -->
+	<div id="report-overlay" class="hidden fixed inset-0 z-[300] bg-[#0b0f19]/60 backdrop-blur-sm"></div>
+	<div id="report-modal" class="hidden fixed inset-0 z-[301] flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="report-modal-title">
+		<div class="report-modal-box w-full max-w-md bg-surface rounded-2xl shadow-elevated border border-border-subtle overflow-hidden">
+			<div class="p-6">
+				<div class="flex items-center justify-between mb-4">
+					<div class="flex items-center gap-2.5">
+						<span class="inline-flex items-center justify-center w-9 h-9 rounded-xl bg-red-500/10 text-danger-text">
+							<span class="material-icons mi-md">flag</span>
+						</span>
+						<h3 id="report-modal-title" class="font-heading font-bold text-text-main text-lg m-0">Reportar pregunta</h3>
+					</div>
+					<button id="report-close" class="p-1.5 text-text-muted hover:text-text-main rounded-lg hover:bg-surface-hover transition-colors cursor-pointer border-none bg-transparent" aria-label="Cerrar">
+						<span class="material-icons mi-md">close</span>
+					</button>
 				</div>
-				<p class="font-heading font-bold text-text-main text-base m-0">Reporte enviado</p>
-				<p class="text-text-muted text-sm m-0">Gracias por contribuir a mejorar el contenido.</p>
+
+				<div id="report-form-body" class="space-y-4">
+					<div id="report-error" role="alert" class="hidden p-3 bg-red-50 dark:bg-red-900/20 border border-red-300 dark:border-red-700 rounded-xl text-red-700 dark:text-red-400 text-sm"></div>
+
+					<div>
+						<label class="block text-xs font-semibold text-text-main mb-1.5" for="report-details">Describe el problema <span class="text-danger-text">*</span></label>
+						<textarea id="report-details" rows="4" placeholder="Explica el problema con detalle…" class="w-full px-3 py-2.5 rounded-xl bg-background border border-border-subtle text-text-main text-sm transition-colors resize-none"></textarea>
+					</div>
+
+					<div class="flex justify-end gap-2.5 pt-1">
+						<button type="button" onclick="window.Reports?.close()" class="btn-secondary">
+							Cancelar
+						</button>
+						<button id="report-submit-btn" type="button" class="px-5 py-2.5 text-sm font-semibold text-white bg-red-600 hover:bg-red-700 rounded-xl transition-colors cursor-pointer border-none disabled:opacity-50 disabled:cursor-not-allowed">
+							Enviar reporte
+						</button>
+					</div>
+				</div>
+
+				<div id="report-success" class="hidden flex flex-col items-center py-6 gap-3 text-center">
+					<div class="w-12 h-12 rounded-full bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center">
+						<span class="material-icons text-emerald-600 dark:text-emerald-400" style="font-size:1.6rem;">check_circle</span>
+					</div>
+					<p class="font-heading font-bold text-text-main text-base m-0">Reporte enviado</p>
+					<p class="text-text-muted text-sm m-0">Gracias por contribuir a mejorar el contenido.</p>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
 
 <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.0/katex.min.js" crossorigin="anonymous"></script>
 <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.0/contrib/auto-render.min.js" crossorigin="anonymous"></script>
@@ -668,227 +606,228 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 </script>
 </BaseLayout>
 
+<style is:global>
+  body.mode-selector-active #action-buttons-container,
+  body.mode-selector-active #stats-panel,
+  body.mode-selector-active #quiz-mobile-stats,
+  body.mode-selector-active #quiz-toolbar,
+  body.mode-selector-active #quiz-progress,
+  body.mode-selector-active #explicar-ia-btn,
+  body.mode-selector-active #report-btn,
+  body.mode-selector-active #copyButton,
+  body.mode-selector-active #volver-pregunta,
+  body.mode-selector-active #verificar,
+  body.mode-selector-active #resumenBtn,
+  body.mode-selector-active #pregunta,
+  body.mode-selector-active #opciones,
+  body.mode-selector-active #resultado,
+  body.mode-selector-active #report-warning {
+    display: none !important;
+  }
+
+  .ai-chat-bubble-user {
+    max-width: 85%;
+    padding: 0.55rem 0.85rem;
+    border-radius: 1rem 1rem 0.25rem 1rem;
+    background: rgb(var(--btn-primary));
+    color: white;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    word-break: break-word;
+  }
+  .ai-chat-bubble-ai {
+    max-width: 85%;
+    padding: 0.55rem 0.85rem;
+    border-radius: 1rem 1rem 1rem 0.25rem;
+    background: rgb(var(--bg-surface-hover));
+    border: 1px solid rgb(var(--border-subtle));
+    color: rgb(var(--text-main));
+    font-size: 0.875rem;
+    line-height: 1.5;
+    word-break: break-word;
+  }
+</style>
+
 <style>
 	@reference "../styles/global.css";
-	
-	.btn {
-		@apply mt-[1em] px-[1.2em] py-[0.6em] text-[1em] border border-border-subtle text-text-main rounded-xl cursor-pointer whitespace-nowrap bg-surface hover:bg-surface-hover transition-all shadow-subtle hover:shadow-md hover:-translate-y-px font-medium;
-	}
-	.btn-primary {
-		@apply mt-[1em] px-[1.2em] py-[0.6em] text-[1em] border-none text-white rounded-xl cursor-pointer whitespace-nowrap bg-blue-600 hover:bg-blue-700 transition-all shadow-sm hover:shadow-md hover:-translate-y-px font-medium disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-blue-600 disabled:hover:shadow-none;
-	}
-	.btn-secondary {
-		@apply px-[1.2em] py-[0.6em] text-[1em] border border-border-subtle text-text-main rounded-xl cursor-pointer whitespace-nowrap bg-transparent hover:bg-surface-hover transition-all hover:-translate-y-px font-medium;
-	}
-	.btn-tertiary {
-		@apply px-[1.2em] py-[0.6em] text-[1em] border-none text-text-muted hover:text-text-main rounded-xl cursor-pointer whitespace-nowrap bg-transparent hover:bg-surface-hover transition-colors font-medium;
-	}
-	.btn-ghost {
-		@apply px-[1em] py-[0.5em] text-[0.9em] border-none text-text-muted hover:text-text-main rounded-xl cursor-pointer whitespace-nowrap bg-transparent hover:bg-surface-hover transition-colors font-medium;
-	}
 
 	/* ── Progreso + barra superior del quiz ─────────────────────────── */
 	.quiz-progress {
-		@apply absolute top-0 left-0 right-0 h-[3px] bg-border-subtle/70;
+		@apply absolute top-0 left-0 right-0 h-[3px] bg-border-subtle/60;
 	}
 	.quiz-progress-bar {
 		@apply h-full rounded-r-full;
 		width: 0;
-		background: linear-gradient(90deg, rgb(var(--accent)), rgb(124 58 237));
-		transition: width 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+		background: rgb(var(--accent));
+		transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 	}
 	.quiz-toolbar {
-		@apply flex items-center justify-between gap-3 mb-4 min-h-[36px];
+		@apply flex items-center justify-between gap-3 mb-5 min-h-[38px] pb-3 border-b border-border-subtle;
 	}
 	.quiz-progress-label {
-		@apply text-[0.78rem] font-semibold tracking-wide text-text-muted tabular-nums;
+		@apply text-xs sm:text-[0.82rem] font-medium tracking-wide text-text-muted tabular-nums;
 	}
-	.quiz-progress-label b {
+	.quiz-progress-label :global(b) {
 		@apply text-text-main font-bold;
 	}
 	.quiz-toolbar-actions {
 		@apply flex items-center gap-1.5 ml-auto;
 	}
 	.quiz-tool-btn {
-		@apply inline-flex items-center justify-center w-9 h-9 rounded-xl cursor-pointer
+		@apply inline-flex items-center justify-center gap-1.5 h-9 px-2.5 rounded-lg cursor-pointer
 			   border border-border-subtle bg-surface text-text-muted
-			   transition-all duration-200 hover:text-text-main hover:bg-surface-hover hover:-translate-y-px;
+			   transition-colors duration-150 hover:text-text-main hover:bg-surface-hover;
 	}
-	.quiz-tool-btn.hidden {
-		display: none;
-	}
+	.quiz-tool-btn.hidden { display: none; }
 	.quiz-tool-btn--danger:hover {
-		@apply text-danger-text border-red-500/60 bg-red-500/10;
+		@apply text-danger-text border-red-500/50 bg-red-500/10;
 	}
 	.quiz-tool-btn--ai {
-		@apply border-transparent text-white shadow-sm;
-		background: linear-gradient(135deg, rgb(var(--accent)), rgb(124 58 237));
-	}
-	.quiz-tool-btn--ai:hover {
-		@apply text-white shadow-md;
-		background: linear-gradient(135deg, rgb(var(--accent)), rgb(124 58 237));
+		@apply border-transparent text-white bg-[rgb(var(--btn-primary))] hover:bg-[rgb(var(--btn-primary-hover))] px-3;
 	}
 	.quiz-tool-btn--ai:disabled {
-		@apply opacity-40 cursor-not-allowed shadow-none hover:translate-y-0;
+		@apply opacity-40 cursor-not-allowed bg-surface-hover text-text-muted border-border-subtle;
 	}
 
+	@media (pointer: coarse) {
+		.quiz-tool-btn { @apply min-h-[42px] min-w-[42px]; }
+	}
 
-	/* ── Transición entre preguntas y feedback de respuesta ─────────── */
+	/* ── Transición entre preguntas ────────────────────────────────── */
 	:global(.quiz-enter) {
-		animation: quiz-enter 0.32s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+		animation: quiz-enter 0.25s cubic-bezier(0.16, 1, 0.3, 1) backwards;
 	}
 	@keyframes quiz-enter {
-		from { opacity: 0; transform: translateY(8px); }
+		from { opacity: 0; transform: translateY(6px); }
 		to   { opacity: 1; transform: translateY(0); }
 	}
-	/* Las opciones entran en cascada corta */
-	:global(form#opciones.quiz-enter label) {
-		animation: quiz-enter 0.34s cubic-bezier(0.16, 1, 0.3, 1) backwards;
-	}
-	:global(form#opciones.quiz-enter label:nth-child(2)) { animation-delay: 40ms; }
-	:global(form#opciones.quiz-enter label:nth-child(3)) { animation-delay: 80ms; }
-	:global(form#opciones.quiz-enter label:nth-child(4)) { animation-delay: 120ms; }
-	:global(form#opciones.quiz-enter label:nth-child(n+5)) { animation-delay: 160ms; }
-
 	:global(form#opciones label.correct .status-icon) {
-		animation: opt-pop 0.38s cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
+		animation: opt-pop 0.32s cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
 	}
 	:global(form#opciones label.incorrect) {
-		animation: opt-shake 0.36s ease-in-out backwards;
+		animation: opt-shake 0.32s ease-in-out backwards;
 	}
 	@keyframes opt-pop {
-		from { transform: scale(0.3); opacity: 0; }
+		from { transform: scale(0.4); opacity: 0; }
 		to   { transform: scale(1);   opacity: 1; }
 	}
 	@keyframes opt-shake {
 		0%, 100% { transform: translateX(0); }
-		25%      { transform: translateX(-4px); }
-		75%      { transform: translateX(4px); }
+		25%      { transform: translateX(-3px); }
+		75%      { transform: translateX(3px); }
 	}
 
-	/* Objetivos táctiles de 44px en pantallas táctiles */
-	@media (pointer: coarse) {
-		.quiz-tool-btn {
-			@apply w-11 h-11;
-		}
-	}
-
-	/* Enunciado: más protagonismo que las opciones */
+	/* Enunciado */
 	.quiz-question {
-		@apply mb-5 text-[1.05rem] sm:text-[1.15rem] font-medium leading-relaxed text-text-main;
+		@apply mb-5 text-[1.06rem] sm:text-[1.15rem] font-medium leading-[1.65] text-text-main;
 		letter-spacing: -0.005em;
 	}
+	.quiz-question :global(img) {
+		@apply max-w-full h-auto rounded-xl border border-border-subtle my-3;
+	}
 
-	/* ── Barra de acciones del quiz ─────────────────────────────────── */
+	/* ── Barra de acciones del quiz ────────────────────────────────── */
 	.quiz-actions {
-		@apply flex flex-col gap-3 mt-5 w-full pt-4 border-t border-border-subtle;
+		@apply flex flex-col gap-3 mt-6 w-full pt-4 border-t border-border-subtle;
 	}
-	/* El progreso vive ahora en la barra superior: se oculta el chip duplicado */
-	#mobile-total-preguntas {
-		display: none !important;
+	.quiz-toolbar.hidden,
+	.quiz-actions.hidden,
+	.quiz-nav-btn.hidden,
+	.quiz-verify-btn.hidden {
+		display: none;
 	}
+	#mobile-total-preguntas { display: none !important; }
+	#stats-panel { display: none !important; }
 	.quiz-actions-primary {
 		@apply grid gap-2 w-full;
 		grid-template-columns: minmax(0, 1fr) minmax(0, 3fr) minmax(0, 1fr);
 		align-items: stretch;
 	}
+	#volver-pregunta { grid-column: 1; }
+	#verificar { grid-column: 2; }
+	#resumenBtn { grid-column: 3; }
 	.quiz-nav-btn {
-		@apply inline-flex items-center justify-center gap-0.5 px-2 py-2.5 text-sm font-medium
-			   text-text-muted hover:text-text-main rounded-lg border border-border-subtle
-			   bg-surface hover:bg-surface-hover transition-colors cursor-pointer min-h-[48px];
+		@apply inline-flex items-center justify-center gap-1 px-2.5 py-2.5 text-sm font-medium
+			   text-text-muted hover:text-text-main rounded-xl border border-border-subtle
+			   bg-surface hover:bg-surface-hover transition-colors cursor-pointer min-h-[46px];
 	}
-	.quiz-nav-btn .material-icons {
-		font-size: 1.25rem;
-	}
-	.quiz-nav-btn-label {
-		@apply hidden sm:inline;
-	}
+	.quiz-nav-btn .material-icons { font-size: 1.2rem; }
+	.quiz-nav-btn-label { @apply hidden sm:inline; }
 	.quiz-verify-btn {
-		@apply px-4 py-2.5 text-[1em] border border-transparent text-white rounded-lg cursor-pointer
-			   bg-blue-600 hover:bg-blue-700 hover:-translate-y-px transition-all font-semibold
-			   min-h-[48px];
-		box-shadow: 0 6px 18px -6px rgb(37 99 235 / 0.55);
+		@apply px-5 py-2.5 text-sm sm:text-base border border-transparent text-white rounded-xl cursor-pointer
+			   bg-[rgb(var(--btn-primary))] hover:bg-[rgb(var(--btn-primary-hover))] transition-colors font-semibold
+			   min-h-[46px] shadow-subtle;
 	}
-	/* Deshabilitado: claramente inactivo (gris), no un azul "apagado" */
 	.quiz-verify-btn:disabled {
-		@apply bg-surface-hover text-text-muted border-border-subtle cursor-not-allowed shadow-none translate-y-0;
+		@apply bg-surface-hover text-text-muted border-border-subtle cursor-not-allowed shadow-none;
 	}
 
 	@media (min-width: 640px) {
 		.quiz-actions-primary {
-			@apply flex justify-center items-center;
+			grid-template-columns: 1fr auto 1fr;
+			align-items: center;
+			gap: 0.75rem;
 		}
-		.quiz-verify-btn {
-			@apply min-w-[260px];
-		}
+		#volver-pregunta { justify-self: start; }
+		#verificar { justify-self: center; min-width: 240px; }
+		#resumenBtn { justify-self: end; }
 	}
 
 	@media (max-width: 767px) {
 		.quiz-actions {
-			@apply sticky bottom-0 z-30 w-auto -mx-[15px] -mb-[15px] px-[15px] py-3 mt-5 rounded-b-2xl
-				   bg-surface/95 backdrop-blur-md border-t border-border-subtle shadow-[0_-4px_24px_rgba(0,0,0,0.06)];
+			@apply sticky bottom-0 z-30 w-auto -mx-4 -mb-7 px-4 py-3 mt-5 rounded-b-2xl
+				   bg-surface/95 backdrop-blur-md border-t border-border-subtle;
 		}
-		:global(.dark) .quiz-actions {
-			box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.25);
-		}
-		.quiz-nav-btn-label {
-			@apply hidden;
-		}
+		.quiz-nav-btn-label { @apply hidden; }
 	}
 
-	/* El panel flotante de stats queda reemplazado por la fila integrada en la barra de acciones */
-	#stats-panel {
-		display: none !important;
-	}
-
-	/* Panel de navegación del examen: solo visible en pantallas medianas y grandes */
+	/* Panel de navegación del examen */
 	@media (max-width: 767px) {
 		#exam-nav-panel { display: none !important; }
 	}
-	/* Botón Finalizar móvil: solo visible en móvil (en PC lo muestra el panel) */
 	@media (min-width: 768px) {
 		#exam-finish-mobile { display: none !important; }
 	}
 
-	/* Botones de número de pregunta en el panel de examen */
 	:global(.exam-nav-q-btn) {
-		@apply w-full aspect-square text-[0.72rem] font-semibold rounded-md border border-border-subtle
-			   bg-surface text-text-muted hover:bg-surface-hover hover:text-text-main
-			   cursor-pointer transition-colors p-0 flex items-center justify-center;
+		@apply w-full aspect-square text-[0.72rem] font-semibold rounded-lg border border-border-subtle
+			   bg-background text-text-muted hover:bg-surface-hover hover:text-text-main
+			   cursor-pointer transition-colors p-0 flex items-center justify-center tabular;
 	}
 	:global(.exam-nav-q-btn--answered) {
-		@apply bg-amber-500/15 border-amber-500/50 text-amber-700 dark:text-amber-400;
+		@apply bg-amber-500/15 border-amber-500/50 text-amber-700 dark:text-amber-300;
 	}
 	:global(.exam-nav-q-btn--current) {
-		background: rgb(37 99 235) !important;
-		border-color: rgb(37 99 235) !important;
+		background: rgb(var(--btn-primary)) !important;
+		border-color: rgb(var(--btn-primary)) !important;
 		color: white !important;
 	}
 
-	/* ── Modal Examen / Retomar: entrada animada ─────────────────────── */
-	.exam-modal-box {
+	/* ── Modals entrada ─────────────────────────────────────────────── */
+	.exam-modal-box,
+	.report-modal-box,
+	.aigen-modal-box {
 		opacity: 0;
-		transform: translateY(16px) scale(0.97);
-		transition: opacity 0.22s ease, transform 0.22s ease;
+		transform: translateY(12px) scale(0.98);
+		transition: opacity 0.2s ease, transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 	}
 	#exam-modal:not(.hidden) .exam-modal-box,
-	#resume-modal:not(.hidden) .exam-modal-box {
+	#resume-modal:not(.hidden) .exam-modal-box,
+	#report-modal:not(.hidden) .report-modal-box,
+	#aigen-modal:not(.hidden) .aigen-modal-box {
 		opacity: 1;
 		transform: translateY(0) scale(1);
 	}
 
-	.results-badge--exam {
-		@apply border-amber-500/30 bg-amber-500/10 text-amber-700 dark:text-amber-300;
-	}
-	.results-grid--exam {
-		@apply grid-cols-2 sm:grid-cols-5;
-	}
-
+	/* ── Resultados ────────────────────────────────────────────────── */
 	.results-hero {
-		@apply flex flex-col gap-3 rounded-2xl border border-border-subtle bg-surface-hover/80 p-5 sm:p-6 mb-5;
+		@apply flex flex-col gap-2.5 rounded-xl border border-border-subtle bg-surface-hover/50 p-5 sm:p-6 mb-5;
 	}
 	.results-badge {
-		@apply inline-flex items-center gap-2 self-start rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1 text-[0.78rem] font-semibold text-emerald-700 dark:text-emerald-300;
+		@apply inline-flex items-center gap-1.5 self-start rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1 text-xs font-semibold text-emerald-700 dark:text-emerald-300;
+	}
+	.results-badge--exam {
+		@apply border-amber-500/30 bg-amber-500/10 text-amber-700 dark:text-amber-300;
 	}
 	.results-title {
 		@apply m-0 font-heading text-2xl sm:text-3xl font-bold tracking-tight text-text-main;
@@ -899,152 +838,81 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 	.results-grid {
 		@apply grid grid-cols-1 sm:grid-cols-3 gap-3 mb-5;
 	}
+	.results-grid--exam {
+		@apply grid-cols-2 sm:grid-cols-5;
+	}
 	.results-stat-card {
-		@apply rounded-xl border border-border-subtle bg-surface p-4 shadow-subtle;
+		@apply rounded-xl border border-border-subtle bg-background p-4;
 	}
 	.results-stat-label {
-		@apply block text-[0.78rem] font-semibold uppercase tracking-wide text-text-muted mb-2;
+		@apply block text-[0.72rem] font-semibold uppercase tracking-wider text-text-muted mb-1.5;
 	}
 	.results-stat-value {
-		@apply block font-heading text-3xl font-bold text-text-main;
+		@apply block font-heading text-2xl sm:text-3xl font-bold text-text-main;
 	}
 	.results-summary {
 		@apply rounded-xl border border-border-subtle bg-surface p-4 sm:p-5 text-sm leading-relaxed text-text-main mb-5;
 	}
 	.results-actions {
-		@apply flex flex-col sm:flex-row gap-3 justify-center sm:justify-start;
+		@apply flex flex-col sm:flex-row gap-2.5 justify-start;
 	}
 
-	@media (max-width: 767px) {
-		#app {
-			@apply w-[95%]! p-[15px]! pb-[8px]! mt-[70px]! rounded-2xl!;
-		}
-		.btn, .btn-secondary, .btn-tertiary, .btn-ghost {
-			@apply m-[5px]! px-[12px]! py-[8px]! text-[0.9em]!;
-		}
-		.btn-primary {
-			@apply w-full! m-0! mb-[8px]! min-h-[52px]! text-[1.05em]! rounded-xl!;
-		}
-	}
-	
-	@media (max-width: 480px) {
-		.btn, .btn-primary, .btn-secondary, .btn-tertiary, .btn-ghost {
-			@apply text-[0.9em]!;
-		}
-		.btn-primary {
-			@apply min-h-[56px]! text-[1.05em]!;
-		}
-	}
-
-	/* ── Botón Generar quiz con IA ─────────────────────────────────── */
-	.btn-aigen {
-		@apply flex items-center gap-1.5 text-violet-600 dark:text-violet-400
-			   border-violet-400/60 dark:border-violet-500/50
-			   hover:bg-violet-50 dark:hover:bg-violet-900/20 hover:border-violet-500;
-	}
-
-	/* ── Modal Report: entrada animada ───────────────────────────────── */
-	.report-modal-box {
-		opacity: 0;
-		transform: translateY(16px) scale(0.97);
-		transition: opacity 0.22s ease, transform 0.22s ease;
-	}
-	#report-modal:not(.hidden) .report-modal-box {
-		opacity: 1;
-		transform: translateY(0) scale(1);
-	}
-
-	/* ── Modal AI Generate: entrada animada ──────────────────────────── */
-	.aigen-modal-box {
-		opacity: 0;
-		transform: translateY(16px) scale(0.97);
-		transition: opacity 0.24s ease, transform 0.24s ease;
-	}
-	#aigen-modal:not(.hidden) .aigen-modal-box {
-		opacity: 1;
-		transform: translateY(0) scale(1);
-	}
-
-	/* ── Botón "Generar preguntas" ────────────────────────────────────── */
+	/* ── AI Generate ───────────────────────────────────────────────── */
 	.aigen-generate-btn {
-		background: linear-gradient(135deg, #7c3aed, #6d28d9);
+		background: rgb(var(--btn-primary));
 		color: white;
-		box-shadow: 0 4px 14px rgba(124, 58, 237, 0.35);
+		box-shadow: var(--shadow-subtle);
 	}
 	.aigen-generate-btn:hover {
-		background: linear-gradient(135deg, #6d28d9, #5b21b6);
-		box-shadow: 0 6px 20px rgba(124, 58, 237, 0.45);
-		transform: translateY(-1px);
-	}
-	.aigen-generate-btn:active {
-		transform: translateY(0);
-		box-shadow: 0 2px 8px rgba(124, 58, 237, 0.3);
+		background: rgb(var(--btn-primary-hover));
 	}
 
-	/* ── Slider personalizado ─────────────────────────────────────────── */
 	.aigen-slider {
 		-webkit-appearance: none;
 		appearance: none;
 		width: 100%;
-		height: 8px;
-		border-radius: 4px;
+		height: 6px;
+		border-radius: 999px;
 		cursor: pointer;
 		outline: none;
 		background: linear-gradient(
 			to right,
-			#7c3aed var(--aigen-fill, 8%),
+			rgb(var(--accent)) var(--aigen-fill, 8%),
 			rgb(var(--border-subtle)) var(--aigen-fill, 8%)
 		);
-		transition: background 0.1s ease;
 	}
 	.aigen-slider::-webkit-slider-thumb {
 		-webkit-appearance: none;
-		width: 28px;
-		height: 28px;
+		width: 22px;
+		height: 22px;
 		border-radius: 50%;
-		background: #7c3aed;
+		background: rgb(var(--btn-primary));
 		border: 3px solid rgb(var(--bg-surface));
-		box-shadow: 0 0 0 2px #7c3aed, 0 2px 8px rgba(124, 58, 237, 0.45);
+		box-shadow: 0 0 0 2px rgb(var(--accent));
 		cursor: pointer;
-		transition: transform 0.12s ease, box-shadow 0.12s ease;
+		transition: transform 0.12s ease;
 	}
-	.aigen-slider:hover::-webkit-slider-thumb,
-	.aigen-slider:focus::-webkit-slider-thumb {
-		transform: scale(1.12);
-		box-shadow: 0 0 0 2px #7c3aed, 0 4px 14px rgba(124, 58, 237, 0.55);
-	}
-	.aigen-slider:active::-webkit-slider-thumb {
-		transform: scale(1.05);
-	}
+	.aigen-slider:hover::-webkit-slider-thumb { transform: scale(1.1); }
 	.aigen-slider::-moz-range-thumb {
-		width: 24px;
-		height: 24px;
+		width: 20px;
+		height: 20px;
 		border-radius: 50%;
-		background: #7c3aed;
+		background: rgb(var(--btn-primary));
 		border: 3px solid rgb(var(--bg-surface));
-		box-shadow: 0 0 0 2px #7c3aed, 0 2px 8px rgba(124, 58, 237, 0.45);
+		box-shadow: 0 0 0 2px rgb(var(--accent));
 		cursor: pointer;
-	}
-	.aigen-slider::-moz-range-track {
-		height: 8px;
-		border-radius: 4px;
-		background: rgb(var(--border-subtle));
 	}
 
-	/* ── Spinner violeta ──────────────────────────────────────────────── */
 	.aigen-spinner {
-		width: 36px;
-		height: 36px;
-		border: 3px solid rgba(124, 58, 237, 0.2);
-		border-top-color: #7c3aed;
+		width: 32px;
+		height: 32px;
+		border: 3px solid rgb(var(--border-subtle));
+		border-top-color: rgb(var(--accent));
 		border-radius: 50%;
 		animation: aigen-spin 0.75s linear infinite;
 	}
-	@keyframes aigen-spin {
-		to { transform: rotate(360deg); }
-	}
+	@keyframes aigen-spin { to { transform: rotate(360deg); } }
 
-	/* ── Badge de rango ───────────────────────────────────────────────── */
 	.aigen-range-badge {
 		display: inline-flex;
 		align-items: center;
@@ -1054,46 +922,43 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 		text-transform: uppercase;
 		padding: 2px 8px;
 		border-radius: 999px;
-		transition: background-color 0.2s ease, color 0.2s ease;
 	}
-	.aigen-range-badge--fast  { background: rgba(124, 58, 237, 0.1); color: #7c3aed; }
-	.aigen-range-badge--std   { background: rgb(var(--accent) / 0.1); color: #3b82f6; }
-	.aigen-range-badge--large { background: rgba(245, 158, 11, 0.1); color: #d97706; }
-	:global(.dark) .aigen-range-badge--fast  { background: rgba(167, 139, 250, 0.15); color: #a78bfa; }
-	:global(.dark) .aigen-range-badge--std   { background: rgba(96, 165, 250, 0.15);  color: #60a5fa; }
-	:global(.dark) .aigen-range-badge--large { background: rgba(251, 191, 36, 0.15);  color: #fbbf24; }
+	.aigen-range-badge--fast  { background: rgb(var(--accent) / 0.12); color: rgb(var(--accent-text)); }
+	.aigen-range-badge--std   { background: rgba(16, 185, 129, 0.12); color: #047857; }
+	.aigen-range-badge--large { background: rgba(245, 158, 11, 0.12); color: #b45309; }
+	:global(.dark) .aigen-range-badge--std   { color: #34d399; }
+	:global(.dark) .aigen-range-badge--large { color: #fbbf24; }
 
-	/* ── Selector de modo (pantalla de bienvenida al test) ───────── */
+	/* ── Selector de modo ──────────────────────────────────────────── */
 	#mode-selector {
-		animation: mode-selector-in 0.32s cubic-bezier(0.16, 1, 0.3, 1) both;
+		animation: mode-selector-in 0.28s cubic-bezier(0.16, 1, 0.3, 1) both;
 	}
 	@keyframes mode-selector-in {
-		from { opacity: 0; transform: translateY(8px); }
+		from { opacity: 0; transform: translateY(6px); }
 		to   { opacity: 1; transform: translateY(0); }
 	}
 	.mode-selector-header {
 		text-align: center;
-		margin-bottom: 22px;
+		margin-bottom: 24px;
 	}
 	.mode-selector-eyebrow {
 		margin: 0 0 4px;
-		font-size: 0.74rem;
+		font-size: 0.72rem;
 		font-weight: 700;
-		letter-spacing: 0.14em;
+		letter-spacing: 0.12em;
 		text-transform: uppercase;
-		color: rgb(var(--text-muted));
+		color: rgb(var(--accent-text));
 	}
 	.mode-selector-title {
 		margin: 0 0 6px;
-		font-family: var(--font-heading, "Outfit", sans-serif);
-		font-size: 1.6rem;
-		font-weight: 700;
-		letter-spacing: -0.01em;
+		font-family: var(--font-heading);
+		font-size: 1.55rem;
+		font-weight: 800;
 		color: rgb(var(--text-main));
 		line-height: 1.15;
 	}
 	@media (min-width: 640px) {
-		.mode-selector-title { font-size: 1.9rem; }
+		.mode-selector-title { font-size: 1.85rem; }
 	}
 	.mode-selector-subtitle {
 		margin: 0;
@@ -1105,8 +970,6 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 		display: grid;
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 		gap: 12px;
-		max-width: 620px;
-		margin: 0 auto;
 	}
 	@media (max-width: 640px) {
 		.mode-cards { grid-template-columns: 1fr; }
@@ -1117,44 +980,35 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 		align-items: center;
 		gap: 14px;
 		padding: 16px 18px;
-		background: rgb(var(--bg-surface));
+		background: rgb(var(--bg-base));
 		border: 1px solid rgb(var(--border-subtle));
-		border-radius: 16px;
+		border-radius: 14px;
 		text-align: left;
 		cursor: pointer;
 		width: 100%;
 		font-family: inherit;
 		color: inherit;
-		box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
-		transition: transform 200ms cubic-bezier(0.16, 1, 0.3, 1),
-					box-shadow 200ms ease,
-					border-color 200ms ease,
-					background-color 200ms ease;
+		transition: transform 160ms ease, border-color 160ms ease, background-color 160ms ease, box-shadow 160ms ease;
 	}
 	.mode-card:hover:not(:disabled) {
-		transform: translateY(-2px);
-		box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+		transform: translateY(-1px);
+		background: rgb(var(--bg-surface));
+		box-shadow: var(--shadow-subtle);
 	}
 	.mode-card:disabled {
-		opacity: 0.55;
+		opacity: 0.5;
 		cursor: not-allowed;
 	}
-	.mode-card:focus-visible {
-		outline: none;
-		box-shadow: 0 0 0 3px rgb(var(--accent) / 0.35);
-	}
-
 	.mode-card-icon {
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
-		width: 44px;
-		height: 44px;
-		border-radius: 12px;
+		width: 42px;
+		height: 42px;
+		border-radius: 11px;
 		flex-shrink: 0;
 	}
-	.mode-card-icon .material-icons { font-size: 1.4rem; }
-
+	.mode-card-icon .material-icons { font-size: 1.3rem; }
 	.mode-card-body {
 		display: flex;
 		flex-direction: column;
@@ -1166,13 +1020,14 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 		display: inline-flex;
 		align-items: center;
 		gap: 6px;
-		font-size: 0.98rem;
+		font-family: var(--font-heading);
+		font-size: 0.96rem;
 		font-weight: 700;
 		color: rgb(var(--text-main));
 		line-height: 1.25;
 	}
 	.mode-card-desc {
-		font-size: 0.82rem;
+		font-size: 0.8rem;
 		color: rgb(var(--text-muted));
 		line-height: 1.4;
 	}
@@ -1181,299 +1036,189 @@ const subjectTitle = subject ? subject.toUpperCase().replace(/-/g, ' ') : 'Test'
 		align-items: center;
 		padding: 1px 8px;
 		border-radius: 999px;
-		background: rgb(var(--bg-surface-hover));
-		color: rgb(var(--text-muted));
 		font-size: 0.7rem;
 		font-weight: 700;
 		line-height: 1.4;
 	}
 	.mode-card-count.hidden { display: none; }
 	.mode-card-arrow {
-		font-size: 1.15rem !important;
+		font-size: 1.1rem !important;
 		color: rgb(var(--text-muted));
-		opacity: 0;
-		transform: translateX(-4px);
-		transition: opacity 200ms ease, transform 200ms ease, color 200ms ease;
+		opacity: 0.45;
+		transition: opacity 160ms ease, transform 160ms ease, color 160ms ease;
 		flex-shrink: 0;
 	}
 	.mode-card:hover:not(:disabled) .mode-card-arrow {
 		opacity: 1;
-		transform: translateX(0);
+		transform: translateX(2px);
 	}
 
-	/* Card variants */
-	.mode-card--primary .mode-card-icon {
-		background: rgb(var(--accent) / 0.14);
-		color: #2563eb;
-	}
-	.mode-card--primary:hover:not(:disabled) {
-		border-color: rgb(var(--accent) / 0.45);
-		box-shadow: 0 10px 22px rgb(var(--accent) / 0.16);
-	}
-	.mode-card--primary .mode-card-arrow { color: #2563eb; }
-	:global(.dark) .mode-card--primary .mode-card-icon {
-		background: rgba(96, 165, 250, 0.2);
-		color: #60a5fa;
-	}
-	:global(.dark) .mode-card--primary .mode-card-arrow { color: #60a5fa; }
+	.mode-card--primary .mode-card-icon { background: rgb(var(--accent) / 0.12); color: rgb(var(--accent-text)); }
+	.mode-card--primary:hover:not(:disabled) { border-color: rgb(var(--accent) / 0.5); }
+	.mode-card--primary:hover:not(:disabled) .mode-card-arrow { color: rgb(var(--accent-text)); }
 
-	.mode-card--exam .mode-card-icon {
-		background: rgba(245, 158, 11, 0.14);
-		color: #d97706;
-	}
-	.mode-card--exam:hover:not(:disabled) {
-		border-color: rgba(245, 158, 11, 0.5);
-		box-shadow: 0 10px 22px rgba(245, 158, 11, 0.16);
-	}
-	.mode-card--exam .mode-card-arrow { color: #d97706; }
-	:global(.dark) .mode-card--exam .mode-card-icon {
-		background: rgba(251, 191, 36, 0.18);
-		color: #fbbf24;
-	}
-	:global(.dark) .mode-card--exam .mode-card-arrow { color: #fbbf24; }
+	.mode-card--exam .mode-card-icon { background: rgba(245, 158, 11, 0.14); color: #b45309; }
+	.mode-card--exam:hover:not(:disabled) { border-color: rgba(245, 158, 11, 0.5); }
+	.mode-card--exam:hover:not(:disabled) .mode-card-arrow { color: #b45309; }
+	:global(.dark) .mode-card--exam .mode-card-icon { color: #fbbf24; }
+	:global(.dark) .mode-card--exam:hover:not(:disabled) .mode-card-arrow { color: #fbbf24; }
 
-	.mode-card--review .mode-card-icon {
-		background: rgba(34, 197, 94, 0.14);
-		color: #16a34a;
-	}
-	.mode-card--review:hover:not(:disabled) {
-		border-color: rgba(34, 197, 94, 0.45);
-		box-shadow: 0 10px 22px rgba(34, 197, 94, 0.15);
-	}
-	.mode-card--review .mode-card-arrow { color: #16a34a; }
-	.mode-card--review .mode-card-count {
-		background: rgba(34, 197, 94, 0.16);
-		color: #15803d;
-	}
-	:global(.dark) .mode-card--review .mode-card-icon {
-		background: rgba(74, 222, 128, 0.2);
-		color: #4ade80;
-	}
-	:global(.dark) .mode-card--review .mode-card-arrow { color: #4ade80; }
-	:global(.dark) .mode-card--review .mode-card-count {
-		background: rgba(74, 222, 128, 0.22);
-		color: #86efac;
-	}
+	.mode-card--review .mode-card-icon { background: rgba(16, 185, 129, 0.14); color: #047857; }
+	.mode-card--review:hover:not(:disabled) { border-color: rgba(16, 185, 129, 0.5); }
+	.mode-card--review:hover:not(:disabled) .mode-card-arrow { color: #047857; }
+	.mode-card--review .mode-card-count { background: rgba(16, 185, 129, 0.16); color: #047857; }
+	:global(.dark) .mode-card--review .mode-card-icon { color: #34d399; }
+	:global(.dark) .mode-card--review:hover:not(:disabled) .mode-card-arrow { color: #34d399; }
+	:global(.dark) .mode-card--review .mode-card-count { color: #6ee7b7; }
 
-	.mode-card--aigen .mode-card-icon {
-		background: rgba(124, 58, 237, 0.14);
-		color: #7c3aed;
-	}
-	.mode-card--aigen:hover:not(:disabled) {
-		border-color: rgba(124, 58, 237, 0.45);
-		box-shadow: 0 10px 22px rgba(124, 58, 237, 0.15);
-	}
-	.mode-card--aigen .mode-card-arrow { color: #7c3aed; }
-	:global(.dark) .mode-card--aigen .mode-card-icon {
-		background: rgba(167, 139, 250, 0.22);
-		color: #a78bfa;
-	}
-	:global(.dark) .mode-card--aigen .mode-card-arrow { color: #a78bfa; }
+	.mode-card--aigen .mode-card-icon { background: rgba(139, 92, 246, 0.14); color: #6d28d9; }
+	.mode-card--aigen:hover:not(:disabled) { border-color: rgba(139, 92, 246, 0.5); }
+	.mode-card--aigen:hover:not(:disabled) .mode-card-arrow { color: #6d28d9; }
+	:global(.dark) .mode-card--aigen .mode-card-icon { color: #a78bfa; }
+	:global(.dark) .mode-card--aigen:hover:not(:disabled) .mode-card-arrow { color: #a78bfa; }
 
-	/* ── Stat chips (barra superior del test) ─────────────────────── */
+	/* ── Stat chips ─────────────────────────────────────────────────── */
 	:global(.stat-chip) {
 		display: inline-flex;
 		align-items: center;
 		gap: 5px;
-		padding: 4px 12px;
+		padding: 3px 10px;
 		border-radius: 999px;
-		font-size: 0.8rem;
+		font-size: 0.78rem;
 		font-weight: 600;
 		line-height: 1.35;
 		border: 1px solid transparent;
 		font-variant-numeric: tabular-nums;
 		white-space: nowrap;
-		transition: background-color 150ms ease, border-color 150ms ease;
 	}
-	:global(.stat-chip b) {
-		font-weight: 700;
-		font-size: 0.9rem;
-	}
-	:global(.stat-chip .material-icons) {
-		font-size: 1rem;
-	}
-	:global(.stat-chip-sep) {
-		opacity: 0.5;
-		margin: 0 1px;
-	}
+	:global(.stat-chip b) { font-weight: 700; }
+	:global(.stat-chip .material-icons) { font-size: 0.95rem; }
+	:global(.stat-chip-sep) { opacity: 0.5; margin: 0 1px; }
 
 	:global(.stat-chip--progress) {
 		background: rgb(var(--bg-surface-hover));
 		border-color: rgb(var(--border-subtle));
 		color: rgb(var(--text-main));
 	}
-	:global(.stat-chip--progress .material-icons) {
-		color: rgb(var(--text-muted));
-	}
-
 	:global(.stat-chip--correct) {
-		background: rgba(34, 197, 94, 0.11);
-		border-color: rgba(34, 197, 94, 0.28);
-		color: rgb(21, 128, 61);
+		background: rgba(16, 185, 129, 0.1);
+		border-color: rgba(16, 185, 129, 0.28);
+		color: #047857;
 	}
-	:global(.dark .stat-chip--correct) {
-		background: rgba(34, 197, 94, 0.15);
-		border-color: rgba(34, 197, 94, 0.35);
-		color: rgb(134, 239, 172);
-	}
-
+	:global(.dark .stat-chip--correct) { color: #6ee7b7; }
 	:global(.stat-chip--wrong) {
 		background: rgba(239, 68, 68, 0.1);
 		border-color: rgba(239, 68, 68, 0.28);
-		color: rgb(185, 28, 28);
+		color: #b91c1c;
 	}
-	:global(.dark .stat-chip--wrong) {
-		background: rgba(239, 68, 68, 0.15);
-		border-color: rgba(239, 68, 68, 0.35);
-		color: rgb(252, 165, 165);
-	}
-
+	:global(.dark .stat-chip--wrong) { color: #fca5a5; }
 	:global(.stat-chip--pct-good) {
-		background: rgba(34, 197, 94, 0.11);
-		border-color: rgba(34, 197, 94, 0.28);
-		color: rgb(21, 128, 61);
+		background: rgba(16, 185, 129, 0.1);
+		border-color: rgba(16, 185, 129, 0.28);
+		color: #047857;
 	}
-	:global(.dark .stat-chip--pct-good) {
-		background: rgba(34, 197, 94, 0.15);
-		border-color: rgba(34, 197, 94, 0.35);
-		color: rgb(134, 239, 172);
-	}
+	:global(.dark .stat-chip--pct-good) { color: #6ee7b7; }
 	:global(.stat-chip--pct-mid) {
 		background: rgb(var(--accent) / 0.1);
 		border-color: rgb(var(--accent) / 0.28);
-		color: rgb(29, 78, 216);
+		color: rgb(var(--accent-text));
 	}
-	:global(.dark .stat-chip--pct-mid) {
-		background: rgba(96, 165, 250, 0.15);
-		border-color: rgba(96, 165, 250, 0.35);
-		color: rgb(147, 197, 253);
-	}
-	:global(.stat-chip--pct-low) {
-		background: rgba(245, 158, 11, 0.12);
-		border-color: rgba(245, 158, 11, 0.32);
-		color: rgb(180, 83, 9);
-	}
-	:global(.dark .stat-chip--pct-low) {
-		background: rgba(245, 158, 11, 0.15);
-		border-color: rgba(245, 158, 11, 0.35);
-		color: rgb(252, 211, 77);
-	}
-
+	:global(.stat-chip--pct-low),
 	:global(.stat-chip--repaso),
 	:global(.stat-chip--exam) {
-		background: rgba(245, 158, 11, 0.11);
+		background: rgba(245, 158, 11, 0.1);
 		border-color: rgba(245, 158, 11, 0.3);
-		color: rgb(180, 83, 9);
+		color: #b45309;
 	}
+	:global(.dark .stat-chip--pct-low),
 	:global(.dark .stat-chip--repaso),
-	:global(.dark .stat-chip--exam) {
-		background: rgba(245, 158, 11, 0.15);
-		border-color: rgba(245, 158, 11, 0.32);
-		color: rgb(252, 211, 77);
+	:global(.dark .stat-chip--exam) { color: #fcd34d; }
+
+	/* ── Tarjetas de opción múltiple ───────────────────────────────── */
+	:global(form#opciones label) {
+		@apply flex items-center mb-0! cursor-pointer text-[0.95rem] sm:text-base
+			   px-4 py-3.5 rounded-xl border border-border-subtle
+			   bg-background gap-3 min-h-[54px] select-none;
+		transition: border-color 150ms ease, background-color 150ms ease, box-shadow 150ms ease;
+	}
+	:global(form#opciones label:focus-within) {
+		@apply outline-none ring-2 ring-[rgb(var(--accent))] ring-offset-2 ring-offset-surface;
+	}
+	:global(form#opciones label:not(.selected):not(.correct):not(.incorrect):hover) {
+		@apply border-[rgb(var(--accent)/0.45)] bg-surface-hover;
+	}
+	:global(form#opciones label.selected) {
+		border-color: rgb(var(--accent));
+		background: rgb(var(--accent) / 0.08);
+		box-shadow: 0 0 0 2px rgb(var(--accent) / 0.14);
+	}
+	:global(form#opciones label.correct) {
+		@apply border-emerald-500 bg-emerald-50 dark:bg-emerald-950/35 cursor-default;
+		box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.16);
+	}
+	:global(form#opciones label.incorrect) {
+		@apply border-red-500 bg-red-50 dark:bg-red-950/35 cursor-default;
+		box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.16);
 	}
 
-	/* ── Tarjetas de opción múltiple ──────────────────────────────── */
-	:global(form#opciones label) {
-		@apply flex items-center mb-0! cursor-pointer text-[0.95em] md:text-[1em]
-			   p-[14px] sm:px-[18px] rounded-xl border border-border-subtle
-			   bg-surface gap-[12px] min-h-[54px] select-none shadow-subtle;
-		transition: border-color 180ms ease, background-color 180ms ease, box-shadow 180ms ease, transform 180ms cubic-bezier(0.16, 1, 0.3, 1);
-	}
-	/* Focus-visible: outline claro para navegación con teclado */
-	:global(form#opciones label:focus-within) {
-		@apply outline-none ring-2 ring-blue-500 ring-offset-2 ring-offset-background;
-	}
-	/* Hover: solo si la tarjeta no tiene estado definitivo */
-	:global(form#opciones label:not(.selected):not(.correct):not(.incorrect):hover) {
-		@apply border-blue-400 bg-surface-hover;
-		transform: translateY(-1px);
-		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-	}
-	/* Seleccionada */
-	:global(form#opciones label.selected) {
-		@apply border-blue-500 bg-blue-50 dark:bg-blue-900/30;
-		box-shadow: 0 0 0 3px rgb(var(--accent) / 0.15), 0 4px 14px rgb(var(--accent) / 0.14);
-	}
-	/* Correcta (tras verificar) */
-	:global(form#opciones label.correct) {
-		@apply border-green-500 bg-green-50 dark:bg-green-900/30 cursor-default;
-		box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.15), 0 4px 14px rgba(34, 197, 94, 0.14);
-	}
-	/* Incorrecta (tras verificar) */
-	:global(form#opciones label.incorrect) {
-		@apply border-red-500 bg-red-50 dark:bg-red-900/30 cursor-default;
-		box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.15), 0 4px 14px rgba(239, 68, 68, 0.14);
-	}
-	/* Radio / Checkbox nativo */
 	:global(form#opciones input[type="radio"]),
 	:global(form#opciones input[type="checkbox"]) {
-		@apply flex-shrink-0 w-[20px] h-[20px] focus:outline-none cursor-pointer;
+		@apply flex-shrink-0 w-[18px] h-[18px] focus:outline-none cursor-pointer;
 		appearance: none;
 		-webkit-appearance: none;
 		margin: 0;
-		border: 2px solid rgb(var(--text-muted) / 0.55);
-		background: transparent center / 12px 12px no-repeat;
-		transition: background-color 150ms ease, border-color 150ms ease, box-shadow 150ms ease;
+		border: 2px solid rgb(var(--border-strong));
+		background: rgb(var(--bg-surface)) center / 11px 11px no-repeat;
+		transition: background-color 140ms ease, border-color 140ms ease, box-shadow 140ms ease;
 	}
-	:global(form#opciones input[type="radio"]) {
-		border-radius: 999px;
-	}
-	:global(form#opciones input[type="checkbox"]) {
-		border-radius: 6px;
-	}
+	:global(form#opciones input[type="radio"]) { border-radius: 999px; }
+	:global(form#opciones input[type="checkbox"]) { border-radius: 5px; }
 	:global(form#opciones input[type="radio"]:checked) {
-		border-color: rgb(37 99 235);
-		background-color: rgb(37 99 235);
+		border-color: rgb(var(--btn-primary));
+		background-color: rgb(var(--btn-primary));
 		box-shadow: inset 0 0 0 3px rgb(var(--bg-surface));
 	}
 	:global(form#opciones input[type="checkbox"]:checked) {
-		border-color: rgb(37 99 235);
-		background-color: rgb(37 99 235);
+		border-color: rgb(var(--btn-primary));
+		background-color: rgb(var(--btn-primary));
 		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E");
 	}
-	/* Atajo de teclado visible (1-5) solo en dispositivos con ratón */
-	:global(form#opciones) {
-		counter-reset: opt;
-	}
+
+	:global(form#opciones) { counter-reset: opt; }
 	@media (hover: hover) and (min-width: 768px) {
-		:global(form#opciones label) {
-			counter-increment: opt;
-		}
+		:global(form#opciones label) { counter-increment: opt; }
 		:global(form#opciones label:not(.correct):not(.incorrect)::after) {
 			content: counter(opt);
 			@apply flex-shrink-0 inline-flex items-center justify-center w-[22px] h-[22px] rounded-md
-				   border border-border-subtle bg-surface-hover text-text-muted text-[0.7rem] font-semibold;
-			opacity: 0.7;
+				   border border-border-subtle bg-surface text-text-muted text-[0.7rem] font-semibold font-mono;
+			opacity: 0.75;
 		}
 	}
 	:global(form#opciones label.correct input),
 	:global(form#opciones label.incorrect input) {
 		@apply cursor-default pointer-events-none;
 	}
-	/* Texto de la opción */
 	:global(form#opciones .opcion-label) {
-		@apply flex-grow m-0 p-0 break-words font-medium text-text-main;
+		@apply flex-grow m-0 p-0 break-words font-normal leading-snug text-text-main;
 	}
-	/* Icono de estado (✓ o ✗) */
 	:global(form#opciones .status-icon) {
 		@apply flex-shrink-0 flex items-center justify-center;
 	}
-	:global(form#opciones .status-icon .material-icons) {
-		font-size: 22px;
-	}
+	:global(form#opciones .status-icon .material-icons) { font-size: 20px; }
 	:global(form#opciones label.correct .status-icon .material-icons) {
-		@apply text-green-600 dark:text-green-400;
+		@apply text-emerald-600 dark:text-emerald-400;
 	}
 	:global(form#opciones label.incorrect .status-icon .material-icons) {
 		@apply text-red-600 dark:text-red-400;
 	}
+
 	:global(pre) {
-		@apply bg-[#f3f3f3] dark:bg-[#1e1e1e] border border-border-subtle rounded-[5px] p-[10px] overflow-auto whitespace-pre-wrap font-mono text-[0.9em] mb-[10px] break-words;
+		@apply bg-[#161b26] text-[#e5e7eb] border border-border-subtle rounded-xl p-3.5 overflow-auto whitespace-pre-wrap font-mono text-[0.86rem] my-2.5 break-words;
 	}
 	:global(code) {
-		@apply font-mono overflow-auto max-w-full text-[#e83e8c] dark:text-[#ff79c6] bg-[#f8f9fa] dark:bg-[#282a36] px-[4px] py-[2px] rounded-[3px];
+		@apply font-mono overflow-auto max-w-full text-[rgb(var(--accent-text))] bg-surface-hover border border-border-subtle px-1.5 py-0.5 rounded-md text-[0.86em];
 	}
 	:global(pre code) {
-		@apply text-text-main dark:text-[#d4d4d4] bg-transparent p-0;
+		@apply text-[#e5e7eb] bg-transparent border-none p-0;
 	}
 </style>

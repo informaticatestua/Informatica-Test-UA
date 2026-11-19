@@ -13,232 +13,238 @@ const supabaseAnonKey = import.meta.env.PUBLIC_SUPABASE_ANON_KEY ?? '';
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang="es" class="dark">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
-		<meta name="theme-color" content="#f8fafc" media="(prefers-color-scheme: light)" />
-		<meta name="theme-color" content="#020617" media="(prefers-color-scheme: dark)" />
+		<meta name="theme-color" content="#09090b" />
 		<title>{title}</title>
 		<link rel="icon" type="image/png" href="/resources/images/logo.png" />
-		
+
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;500;600&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
 
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<link rel="stylesheet" href="/resources/css/prism.css" />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.0/katex.min.css" crossorigin="anonymous" />
 		<script is:inline src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-		
-		<script is:inline>
-			const theme = (() => {
-				if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
-					return localStorage.getItem('theme');
-				}
-				if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-					return 'dark';
-				}
-				return 'light';
-			})();
-
-			if (theme === 'dark') {
-				document.documentElement.classList.add('dark');
-			} else {
-				document.documentElement.classList.remove('dark');
-			}
-		</script>
 	</head>
-	<body class="min-h-screen bg-background text-text-main flex justify-center pt-[90px] pb-[40px] m-0 box-border">
+	<body class="min-h-screen bg-background text-text-main flex flex-col pt-14 m-0 box-border">
 		<a href="#main" class="skip-link">Saltar al contenido</a>
-		<div id="app-shell" class="w-full">
-		<header class="fixed top-0 left-0 right-0 z-50 flex justify-between items-center bg-surface/75 backdrop-blur-xl backdrop-saturate-150 px-5 py-2.5 border-b border-border-subtle/70 transition-colors">
-			
-			<a href="https://github.com/informaticatestua/Informatica-Test-UA" aria-label="Repositorio en GitHub" class="inline-flex p-2.5 mr-1 text-text-muted hover:text-text-main hover:bg-surface-hover rounded-full transition-colors" target="_blank" rel="noopener noreferrer">
-				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
-					<path d="M12 1.27a11 11 0 00-3.48 21.46c.55.09.73-.28.73-.55v-1.84c-3.03.64-3.67-1.46-3.67-1.46-.55-1.29-1.28-1.65-1.28-1.65-.92-.65.1-.65.1-.65 1.1 0 1.73 1.1 1.73 1.1.92 1.65 2.57 1.2 3.21.92a2 2 0 01.64-1.47c-2.47-.27-5.04-1.19-5.04-5.5 0-1.1.46-2.1 1.2-2.84a3.76 3.76 0 010-2.93s.91-.28 3.11 1.1c1.8-.49 3.7-.49 5.5 0 2.1-1.38 3.02-1.1 3.02-1.1a3.76 3.76 0 010 2.93c.83.74 1.2 1.74 1.2 2.94 0 4.21-2.57 5.13-5.04 5.4.45.37.82.92.82 2.02v3.03c0 .27.1.64.73.55A11 11 0 0012 1.27"></path>
-				</svg>
-			</a>
 
-			<a href="https://discord.gg/8JUteVuTu" class="inline-flex p-2.5 mr-1 text-text-muted hover:text-text-main hover:bg-surface-hover rounded-full transition-colors" target="_blank" rel="noopener noreferrer" aria-label="Discord">
-				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
-					<path d="M20.32 4.37a19.8 19.8 0 00-4.89-1.52.07.07 0 00-.08.04c-.21.38-.45.86-.61 1.25a18.27 18.27 0 00-5.48 0 12.6 12.6 0 00-.62-1.25.08.08 0 00-.08-.04c-1.7.3-3.35.81-4.89 1.52a.07.07 0 00-.03.03C.53 9.05-.32 13.58.1 18.06a.08.08 0 00.03.06 19.9 19.9 0 006 3.03.08.08 0 00.09-.03c.46-.63.87-1.3 1.23-2a.08.08 0 00-.04-.11 13.1 13.1 0 01-1.87-.9.08.08 0 01-.01-.13c.13-.09.25-.19.37-.28a.08.08 0 01.08-.01c3.93 1.8 8.18 1.8 12.06 0a.08.08 0 01.08.01c.12.1.24.19.37.28a.08.08 0 010 .13c-.6.35-1.22.65-1.87.9a.08.08 0 00-.04.12c.36.7.78 1.36 1.23 2a.08.08 0 00.09.03 19.85 19.85 0 006.01-3.03.08.08 0 00.03-.06c.5-5.18-.84-9.67-3.55-13.66a.06.06 0 00-.03-.03zM8.02 15.33c-1.18 0-2.16-1.08-2.16-2.42 0-1.33.96-2.42 2.16-2.42 1.21 0 2.18 1.1 2.16 2.42 0 1.34-.96 2.42-2.16 2.42zm7.97 0c-1.18 0-2.16-1.08-2.16-2.42 0-1.33.96-2.42 2.16-2.42 1.21 0 2.18 1.1 2.16 2.42 0 1.34-.95 2.42-2.16 2.42z"></path>
-				</svg>
-			</a>
-
-			<a href="/" class="absolute left-1/2 -translate-x-1/2 flex items-center justify-center no-underline hover:opacity-80 transition-opacity pointer-events-auto">
-				<span class="title-main font-heading font-extrabold tracking-tight text-text-main">
-					<span class="sm:hidden">Tests UA</span>
-					<span class="hidden sm:inline whitespace-nowrap">Ing. Informática Tests UA</span>
-				</span>
-			</a>
-
-
-
-			<nav aria-label="Navegación principal" class="ml-auto flex items-center gap-1">
-				<!-- ─── Usuarios online (tiempo real) ────────────────────── -->
-				<div id="online-counter" class="hidden flex items-center gap-1.5 px-2.5 py-1 mr-1 rounded-full text-xs font-medium text-text-muted border border-border-subtle mt-1 select-none transition-all duration-300" aria-live="polite" aria-label="Usuarios conectados ahora">
-					<span class="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse flex-shrink-0"></span>
-					<span id="online-count"><span id="online-count-num"></span><span id="online-count-suffix" class="hidden sm:inline"></span></span>
-				</div>
-				<!-- ─── Notificaciones (solo visible con sesión) ──────────── -->
-				<div id="notif-wrapper" class="hidden relative mt-1">
-					<button id="notif-btn" type="button" class="relative p-2.5 text-text-muted hover:text-accent-text bg-transparent border-none rounded-full transition-colors cursor-pointer flex items-center justify-center" aria-label="Notificaciones" aria-haspopup="true" aria-expanded="false" aria-controls="notif-dropdown">
-						<span class="material-icons mi-md" aria-hidden="true">notifications</span>
-						<span id="notif-badge" class="hidden absolute top-1 right-1 min-w-[16px] h-4 px-1 bg-red-500 rounded-full border-2 border-surface flex items-center justify-center">
-							<span id="notif-count" class="text-white font-bold leading-none" style="font-size:0.55rem;">0</span>
+		<div id="app-shell" class="flex-1 flex flex-col w-full">
+			<header class="fixed top-0 left-0 right-0 z-50 h-14 bg-background/85 backdrop-blur-md border-b border-border-subtle">
+				<div class="max-w-5xl mx-auto h-full px-4 sm:px-6 flex items-center justify-between gap-3">
+					<!-- Marca -->
+					<a href="/" class="inline-flex items-center gap-2.5 no-underline group min-w-0">
+						<span class="inline-flex items-center justify-center w-7 h-7 rounded-md bg-surface-hover border border-border-strong text-text-main flex-shrink-0 transition-colors group-hover:border-text-muted/60">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+								<polyline points="16 18 22 12 16 6"></polyline>
+								<polyline points="8 6 2 12 8 18"></polyline>
+							</svg>
 						</span>
-					</button>
-					<!-- Dropdown -->
-					<div id="notif-dropdown" class="hidden absolute right-0 top-full mt-2 w-80 bg-surface border border-border-subtle rounded-xl shadow-lg z-[200] overflow-hidden">
-						<div class="px-4 py-3 border-b border-border-subtle flex items-center justify-between">
-							<span class="font-heading font-semibold text-text-main text-sm">Notificaciones</span>
-							<button id="notif-mark-all-btn" class="text-xs text-accent-text hover:underline bg-transparent border-none cursor-pointer p-0 font-medium transition-colors">Marcar todos como leídos</button>
-						</div>
-						<div id="notif-list" class="max-h-72 overflow-y-auto divide-y divide-border-subtle"></div>
-					</div>
-				</div>
-				<!-- ─── Auth: botón login (visible si no hay sesión) ───────── -->
-				<a id="auth-login-btn" href="/login" aria-label="Entrar" class="hidden mt-1 ml-1 px-3 py-1.5 min-h-[40px] text-sm font-semibold text-white bg-[rgb(var(--btn-primary))] hover:bg-[rgb(var(--btn-primary-hover))] rounded-lg transition-colors no-underline flex items-center gap-1.5">
-					<span class="material-icons mi-sm" aria-hidden="true">login</span>
-					<span class="hidden sm:inline" aria-hidden="true">Entrar</span>
-				</a>
-
-				<!-- ─── Auth: avatar (visible si hay sesión) ──────────────── -->
-				<div id="auth-user-btn" class="hidden relative mt-1 ml-1">
-					<button id="auth-avatar-trigger" type="button" class="flex items-center justify-center w-10 h-10 rounded-full overflow-hidden border-2 border-border-subtle hover:border-accent transition-colors cursor-pointer bg-surface-hover p-0" aria-label="Mi cuenta" aria-haspopup="menu" aria-expanded="false" aria-controls="auth-dropdown">
-						<img id="auth-user-avatar" src="" alt="" class="hidden w-full h-full object-cover" />
-						<span id="auth-user-initial" class="text-text-main font-bold text-sm leading-none hidden"></span>
-					</button>
-					<!-- Dropdown -->
-					<div id="auth-dropdown" role="menu" aria-label="Cuenta" class="hidden absolute right-0 top-full mt-2 w-52 bg-surface border border-border-subtle rounded-xl shadow-lg z-[200] overflow-hidden py-1">
-						<a href="/perfil" role="menuitem" class="flex items-center gap-2 px-4 py-3 text-sm text-text-main hover:bg-surface-hover focus-visible:bg-surface-hover transition-colors no-underline">
-							<span class="material-icons mi-sm text-text-muted" aria-hidden="true">person</span>
-							Mi perfil
-						</a>
-						<a id="auth-admin-link" href="/admin" role="menuitem" class="hidden items-center gap-2 px-4 py-3 text-sm text-purple-700 dark:text-purple-300 hover:bg-surface-hover focus-visible:bg-surface-hover transition-colors no-underline">
-							<span class="material-icons mi-sm" aria-hidden="true">admin_panel_settings</span>
-							Panel admin
-						</a>
-						<hr class="border-border-subtle my-1 mx-2" role="separator" />
-						<button id="auth-logout-btn" type="button" role="menuitem" class="w-full flex items-center gap-2 px-4 py-3 text-sm text-danger-text hover:bg-surface-hover focus-visible:bg-surface-hover transition-colors bg-transparent border-none cursor-pointer text-left">
-							<span class="material-icons mi-sm" aria-hidden="true">logout</span>
-							Cerrar sesión
-						</button>
-					</div>
-				</div>
-			</nav>
-		</header>
-
-		<!-- ─── AI Settings overlay ──────────────────────────────────────────── -->
-		<div id="ai-settings-overlay" class="hidden fixed inset-0 z-[300] bg-black/60 backdrop-blur-sm"></div>
-
-		<!-- ─── AI Settings modal ────────────────────────────────────────────── -->
-		<div id="ai-settings-modal" class="hidden fixed inset-0 z-[301] flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="ai-settings-title">
-			<div class="ai-settings-box w-full max-w-md bg-surface rounded-2xl shadow-2xl border border-border-subtle overflow-hidden">
-				<div class="h-1 w-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"></div>
-				<div class="p-6">
-					<div class="flex items-center justify-between mb-5">
-						<div class="flex items-center gap-2">
-							<span class="material-icons text-blue-500">auto_awesome</span>
-							<h3 id="ai-settings-title" class="font-heading font-bold text-text-main text-lg m-0">Configuración de IA</h3>
-						</div>
-						<button id="ai-settings-close" type="button" class="p-2 text-text-muted hover:text-text-main rounded-full hover:bg-surface-hover transition-colors cursor-pointer border-none bg-transparent" aria-label="Cerrar">
-							<span class="material-icons">close</span>
-						</button>
-					</div>
-
-					<!-- Aviso sin clave configurada -->
-					<div id="ai-settings-no-key-msg" class="hidden mb-4 p-3 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-300 dark:border-yellow-700 rounded-lg text-yellow-800 dark:text-yellow-300 text-sm">
-						Configura tu API Key en <a href="/perfil/ajustes" class="font-semibold underline">Ajustes de perfil</a> para usar las explicaciones de IA.
-					</div>
-
-					<!-- Nota claves -->
-					<a href="/perfil/ajustes" class="flex items-center gap-2 mb-5 p-3 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg text-sm text-blue-800 dark:text-blue-300 no-underline hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-colors">
-						<span class="material-icons shrink-0" style="font-size:1rem;">lock</span>
-						<span>Las claves de API se gestionan en <strong>Ajustes de perfil → Claves de IA</strong></span>
-						<span class="material-icons ml-auto shrink-0 text-blue-400" style="font-size:1rem;">open_in_new</span>
+						<span class="title-main font-heading font-semibold tracking-tight text-text-main text-[0.95rem] truncate flex items-center gap-1.5">
+							<span class="sm:hidden">Tests UA</span>
+							<span class="hidden sm:inline">Ing. Informática</span>
+							<span class="hidden sm:inline text-border-strong font-normal" aria-hidden="true">/</span>
+							<span class="hidden sm:inline text-text-muted font-medium">Tests UA</span>
+						</span>
 					</a>
 
-					<!-- Selección de proveedor -->
-					<p class="text-text-muted text-xs font-semibold uppercase tracking-wider mb-3">Proveedor activo</p>
-					<div class="grid grid-cols-2 gap-2 mb-5">
-						<label class="ai-provider-card">
-							<input type="radio" name="ai-provider" value="gemini" class="sr-only">
-							<span class="material-icons text-blue-500" style="font-size:1.5rem;">auto_awesome</span>
-							<span class="text-xs font-semibold text-text-main">Gemini</span>
-						</label>
-						<label class="ai-provider-card">
-							<input type="radio" name="ai-provider" value="groq" class="sr-only">
-							<span class="text-orange-500 font-bold leading-none" style="font-size:1.5rem;">⚡</span>
-							<span class="text-xs font-semibold text-text-main">Groq</span>
-						</label>
-					</div>
-
-					<!-- Gemini config -->
-					<div id="ai-gemini-config" class="space-y-3">
-						<div>
-							<label class="block text-sm font-medium text-text-main mb-1" for="ai-gemini-model">Modelo Gemini</label>
-							<select id="ai-gemini-model" class="ai-select">
-								<option value="gemini-2.0-flash">gemini-2.0-flash</option>
-								<option value="gemini-2.5-flash">gemini-2.5-flash</option>
-								<option value="gemini-1.5-pro">gemini-1.5-pro</option>
-							</select>
+					<!-- Acciones de navegación -->
+					<nav aria-label="Navegación principal" class="flex items-center gap-2 flex-shrink-0">
+						<!-- Usuarios online (tiempo real) -->
+						<div id="online-counter" class="hidden flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-medium text-text-muted select-none transition-opacity duration-200 tabular" aria-live="polite" aria-label="Usuarios conectados ahora">
+							<span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse flex-shrink-0"></span>
+							<span id="online-count"><span id="online-count-num"></span><span id="online-count-suffix" class="hidden md:inline"></span></span>
 						</div>
-					</div>
 
-					<!-- Groq config -->
-					<div id="ai-groq-config" class="hidden space-y-3">
-						<div>
-							<label class="block text-sm font-medium text-text-main mb-1" for="ai-groq-model">Modelo Groq</label>
-							<select id="ai-groq-model" class="ai-select">
-								<option value="llama-3.3-70b-versatile">llama-3.3-70b-versatile</option>
-								<option value="deepseek-r1-distill-llama-70b">deepseek-r1-distill-llama-70b</option>
-								<option value="llama-3.1-8b-instant">llama-3.1-8b-instant (rápido)</option>
-							</select>
+						<!-- Notificaciones (solo visible con sesión) -->
+						<div id="notif-wrapper" class="hidden relative">
+							<button id="notif-btn" type="button" class="relative inline-flex items-center justify-center w-8 h-8 text-text-muted hover:text-text-main hover:bg-surface-hover bg-transparent border border-transparent hover:border-border-subtle rounded-lg transition-colors cursor-pointer" aria-label="Notificaciones" aria-haspopup="true" aria-expanded="false" aria-controls="notif-dropdown">
+								<span class="material-icons mi-md" aria-hidden="true">notifications</span>
+								<span id="notif-badge" class="hidden absolute top-0.5 right-0.5 min-w-[16px] h-4 px-1 bg-red-500 rounded-full border-2 border-background flex items-center justify-center">
+									<span id="notif-count" class="text-white font-bold leading-none" style="font-size:0.55rem;">0</span>
+								</span>
+							</button>
+							<div id="notif-dropdown" class="hidden absolute right-0 top-full mt-2 w-80 bg-surface border border-border-subtle rounded-xl shadow-elevated z-[200] overflow-hidden">
+								<div class="px-4 py-3 border-b border-border-subtle flex items-center justify-between">
+									<span class="font-heading font-semibold text-text-main text-sm">Notificaciones</span>
+									<button id="notif-mark-all-btn" class="text-xs text-accent-text hover:underline bg-transparent border-none cursor-pointer p-0 font-medium transition-colors">Marcar todos como leídos</button>
+								</div>
+								<div id="notif-list" class="max-h-72 overflow-y-auto divide-y divide-border-subtle"></div>
+							</div>
 						</div>
-					</div>
 
-					<div class="mt-6 flex justify-end">
-						<button id="ai-settings-save" class="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm font-semibold transition-colors cursor-pointer border-none">
-							Guardar y aplicar
-						</button>
+						<!-- Auth: botón login -->
+						<a id="auth-login-btn" href="/login" aria-label="Entrar" class="hidden ml-1 px-3.5 py-1.5 min-h-[34px] text-xs sm:text-sm font-semibold text-[rgb(var(--cta-fg))] bg-[rgb(var(--cta-bg))] hover:bg-[rgb(var(--cta-hover))] rounded-lg transition-colors no-underline flex items-center gap-1.5">
+							<span>Entrar</span>
+						</a>
+
+						<!-- Auth: avatar -->
+						<div id="auth-user-btn" class="hidden relative ml-0.5">
+							<button id="auth-avatar-trigger" type="button" class="flex items-center justify-center w-8 h-8 rounded-full overflow-hidden border border-border-strong hover:border-text-muted transition-colors cursor-pointer bg-surface-hover p-0" aria-label="Mi cuenta" aria-haspopup="menu" aria-expanded="false" aria-controls="auth-dropdown">
+								<img id="auth-user-avatar" src="" alt="" class="hidden w-full h-full object-cover" />
+								<span id="auth-user-initial" class="text-text-main font-bold text-xs leading-none hidden"></span>
+							</button>
+							<div id="auth-dropdown" role="menu" aria-label="Cuenta" class="hidden absolute right-0 top-full mt-2 w-52 bg-surface border border-border-subtle rounded-xl shadow-elevated z-[200] overflow-hidden py-1.5">
+								<a href="/perfil" role="menuitem" class="flex items-center gap-2.5 px-4 py-2.5 text-sm text-text-main hover:bg-surface-hover focus-visible:bg-surface-hover transition-colors no-underline">
+									<span class="material-icons mi-sm text-text-muted" aria-hidden="true">person</span>
+									Mi perfil
+								</a>
+								<a href="/perfil/ajustes" role="menuitem" class="flex items-center gap-2.5 px-4 py-2.5 text-sm text-text-main hover:bg-surface-hover focus-visible:bg-surface-hover transition-colors no-underline">
+									<span class="material-icons mi-sm text-text-muted" aria-hidden="true">tune</span>
+									Ajustes
+								</a>
+								<a id="auth-admin-link" href="/admin" role="menuitem" class="hidden items-center gap-2.5 px-4 py-2.5 text-sm text-accent-text hover:bg-surface-hover focus-visible:bg-surface-hover transition-colors no-underline">
+									<span class="material-icons mi-sm" aria-hidden="true">admin_panel_settings</span>
+									Panel admin
+								</a>
+								<hr class="border-border-subtle my-1.5 mx-2" role="separator" />
+								<button id="auth-logout-btn" type="button" role="menuitem" class="w-full flex items-center gap-2.5 px-4 py-2.5 text-sm text-danger-text hover:bg-surface-hover focus-visible:bg-surface-hover transition-colors bg-transparent border-none cursor-pointer text-left">
+									<span class="material-icons mi-sm" aria-hidden="true">logout</span>
+									Cerrar sesión
+								</button>
+							</div>
+						</div>
+					</nav>
+				</div>
+			</header>
+
+			<!-- ─── AI Settings overlay ──────────────────────────────────────────── -->
+			<div id="ai-settings-overlay" class="hidden fixed inset-0 z-[300] bg-[#0b0f19]/60 backdrop-blur-sm"></div>
+
+			<!-- ─── AI Settings modal ────────────────────────────────────────────── -->
+			<div id="ai-settings-modal" class="hidden fixed inset-0 z-[301] flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="ai-settings-title">
+				<div class="ai-settings-box w-full max-w-md bg-surface rounded-2xl shadow-elevated border border-border-subtle overflow-hidden">
+					<div class="p-6">
+						<div class="flex items-center justify-between mb-5">
+							<div class="flex items-center gap-2.5">
+								<span class="inline-flex items-center justify-center w-9 h-9 rounded-xl bg-accent/10 text-accent-text">
+									<span class="material-icons mi-md">auto_awesome</span>
+								</span>
+								<h3 id="ai-settings-title" class="font-heading font-bold text-text-main text-lg m-0">Configuración de IA</h3>
+							</div>
+							<button id="ai-settings-close" type="button" class="p-2 text-text-muted hover:text-text-main rounded-lg hover:bg-surface-hover transition-colors cursor-pointer border-none bg-transparent" aria-label="Cerrar">
+								<span class="material-icons mi-md">close</span>
+							</button>
+						</div>
+
+						<!-- Aviso sin clave configurada -->
+						<div id="ai-settings-no-key-msg" class="hidden mb-4 p-3 bg-amber-50 dark:bg-amber-900/20 border border-amber-300 dark:border-amber-700 rounded-xl text-amber-800 dark:text-amber-300 text-sm">
+							Configura tu API Key en <a href="/perfil/ajustes" class="font-semibold underline">Ajustes de perfil</a> para usar las explicaciones de IA.
+						</div>
+
+						<!-- Nota claves -->
+						<a href="/perfil/ajustes" class="flex items-center gap-2.5 mb-5 p-3 bg-surface-hover border border-border-subtle rounded-xl text-sm text-text-main no-underline hover:border-accent/40 transition-colors">
+							<span class="material-icons shrink-0 text-accent-text" style="font-size:1rem;">lock</span>
+							<span>Las claves de API se gestionan en <strong>Ajustes → Claves de IA</strong></span>
+							<span class="material-icons ml-auto shrink-0 text-text-muted" style="font-size:1rem;">open_in_new</span>
+						</a>
+
+						<!-- Selección de proveedor -->
+						<p class="text-text-muted text-xs font-semibold uppercase tracking-wider mb-2.5">Proveedor activo</p>
+						<div class="grid grid-cols-2 gap-2.5 mb-5">
+							<label class="ai-provider-card">
+								<input type="radio" name="ai-provider" value="gemini" class="sr-only">
+								<span class="material-icons text-accent-text" style="font-size:1.4rem;">auto_awesome</span>
+								<span class="text-xs font-semibold text-text-main">Gemini</span>
+							</label>
+							<label class="ai-provider-card">
+								<input type="radio" name="ai-provider" value="groq" class="sr-only">
+								<span class="material-icons text-amber-500" style="font-size:1.4rem;">bolt</span>
+								<span class="text-xs font-semibold text-text-main">Groq</span>
+							</label>
+						</div>
+
+						<!-- Gemini config -->
+						<div id="ai-gemini-config" class="space-y-3">
+							<div>
+								<label class="block text-sm font-medium text-text-main mb-1.5" for="ai-gemini-model">Modelo Gemini</label>
+								<select id="ai-gemini-model" class="ai-select">
+									<option value="gemini-2.0-flash">gemini-2.0-flash</option>
+									<option value="gemini-2.5-flash">gemini-2.5-flash</option>
+									<option value="gemini-1.5-pro">gemini-1.5-pro</option>
+								</select>
+							</div>
+						</div>
+
+						<!-- Groq config -->
+						<div id="ai-groq-config" class="hidden space-y-3">
+							<div>
+								<label class="block text-sm font-medium text-text-main mb-1.5" for="ai-groq-model">Modelo Groq</label>
+								<select id="ai-groq-model" class="ai-select">
+									<option value="llama-3.3-70b-versatile">llama-3.3-70b-versatile</option>
+									<option value="deepseek-r1-distill-llama-70b">deepseek-r1-distill-llama-70b</option>
+									<option value="llama-3.1-8b-instant">llama-3.1-8b-instant (rápido)</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="mt-6 flex justify-end">
+							<button id="ai-settings-save" class="btn-primary">
+								Guardar y aplicar
+							</button>
+						</div>
 					</div>
 				</div>
 			</div>
+
+			<!-- ─── Credenciales Supabase ───────────────────────────────────────── -->
+			<script is:inline define:vars={{ supabaseUrl, supabaseAnonKey }}>
+				window.SUPABASE_URL      = supabaseUrl;
+				window.SUPABASE_ANON_KEY = supabaseAnonKey;
+			</script>
+			<script is:inline src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+			<script is:inline src="/resources/js/supabase-client.js"></script>
+			<script is:inline src="/resources/js/online-users.js"></script>
+			<script is:inline src="/resources/js/utils.js"></script>
+			<script is:inline src="/resources/js/auth.js"></script>
+			<script is:inline src="/resources/js/quiz-data.js"></script>
+
+			<main id="main" tabindex="-1" class="flex-1 w-full">
+				<slot />
+			</main>
+
+			<footer class="w-full border-t border-border-subtle/80 mt-16">
+				<div class="max-w-5xl mx-auto px-4 sm:px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-text-muted">
+					<div class="flex items-center gap-2">
+						<span class="font-heading font-medium text-text-main">Ing. Informática Tests UA</span>
+						<span class="text-border-strong" aria-hidden="true">·</span>
+						<a href="mailto:informaticatestua@gmail.com" class="hover:text-text-main transition-colors no-underline text-text-muted">informaticatestua@gmail.com</a>
+					</div>
+					<div class="flex items-center gap-4">
+						<a href="https://github.com/informaticatestua/Informatica-Test-UA" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-text-muted hover:text-text-main transition-colors no-underline">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true">
+								<path d="M12 1.27a11 11 0 00-3.48 21.46c.55.09.73-.28.73-.55v-1.84c-3.03.64-3.67-1.46-3.67-1.46-.55-1.29-1.28-1.65-1.28-1.65-.92-.65.1-.65.1-.65 1.1 0 1.73 1.1 1.73 1.1.92 1.65 2.57 1.2 3.21.92a2 2 0 01.64-1.47c-2.47-.27-5.04-1.19-5.04-5.5 0-1.1.46-2.1 1.2-2.84a3.76 3.76 0 010-2.93s.91-.28 3.11 1.1c1.8-.49 3.7-.49 5.5 0 2.1-1.38 3.02-1.1 3.02-1.1a3.76 3.76 0 010 2.93c.83.74 1.2 1.74 1.2 2.94 0 4.21-2.57 5.13-5.04 5.4.45.37.82.92.82 2.02v3.03c0 .27.1.64.73.55A11 11 0 0012 1.27"></path>
+							</svg>
+							<span>GitHub</span>
+						</a>
+						<a href="https://discord.gg/8JUteVuTu" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-text-muted hover:text-text-main transition-colors no-underline">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true">
+								<path d="M20.32 4.37a19.8 19.8 0 00-4.89-1.52.07.07 0 00-.08.04c-.21.38-.45.86-.61 1.25a18.27 18.27 0 00-5.48 0 12.6 12.6 0 00-.62-1.25.08.08 0 00-.08-.04c-1.7.3-3.35.81-4.89 1.52a.07.07 0 00-.03.03C.53 9.05-.32 13.58.1 18.06a.08.08 0 00.03.06 19.9 19.9 0 006 3.03.08.08 0 00.09-.03c.46-.63.87-1.3 1.23-2a.08.08 0 00-.04-.11 13.1 13.1 0 01-1.87-.9.08.08 0 01-.01-.13c.13-.09.25-.19.37-.28a.08.08 0 01.08-.01c3.93 1.8 8.18 1.8 12.06 0a.08.08 0 01.08.01c.12.1.24.19.37.28a.08.08 0 010 .13c-.6.35-1.22.65-1.87.9a.08.08 0 00-.04.12c.36.7.78 1.36 1.23 2a.08.08 0 00.09.03 19.85 19.85 0 006.01-3.03.08.08 0 00.03-.06c.5-5.18-.84-9.67-3.55-13.66a.06.06 0 00-.03-.03zM8.02 15.33c-1.18 0-2.16-1.08-2.16-2.42 0-1.33.96-2.42 2.16-2.42 1.21 0 2.18 1.1 2.16 2.42 0 1.34-.96 2.42-2.16 2.42zm7.97 0c-1.18 0-2.16-1.08-2.16-2.42 0-1.33.96-2.42 2.16-2.42 1.21 0 2.18 1.1 2.16 2.42 0 1.34-.95 2.42-2.16 2.42z"></path>
+							</svg>
+							<span>Discord</span>
+						</a>
+						<a href="/privacidad" class="text-text-muted hover:text-text-main transition-colors no-underline">Privacidad</a>
+					</div>
+				</div>
+			</footer>
 		</div>
 
-		<!-- ─── Credenciales Supabase (anon key pública, seguro exponer) ── -->
-		<script is:inline define:vars={{ supabaseUrl, supabaseAnonKey }}>
-			window.SUPABASE_URL      = supabaseUrl;
-			window.SUPABASE_ANON_KEY = supabaseAnonKey;
-		</script>
-		<!-- ─── Supabase JS SDK (UMD, expone window.supabase) ─────────── -->
-		<script is:inline src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
-		<script is:inline src="/resources/js/supabase-client.js"></script>
-		<script is:inline src="/resources/js/online-users.js"></script>
-		<script is:inline src="/resources/js/utils.js"></script>
-		<script is:inline src="/resources/js/auth.js"></script>
-		<script is:inline src="/resources/js/quiz-data.js"></script>
-
-		<main id="main" tabindex="-1" class="w-full">
-			<slot />
-		</main>
-		</div>
-
-		
-		<!-- ─── Menús de cabecera (cuenta + notificaciones): ARIA, Escape y teclado ───── -->
+		<!-- ─── Menús de cabecera ────────────────────────────────────────────── -->
 		<script is:inline>
 		(function () {
 			"use strict";
-			function initHeaderMenus() {
+			function initHeader() {
+				// Account & notification menus
 				const trigger   = document.getElementById("auth-avatar-trigger");
 				const dropdown  = document.getElementById("auth-dropdown");
 				const logoutBtn = document.getElementById("auth-logout-btn");
 				const bell      = document.getElementById("notif-btn");
 				const notifDrop = document.getElementById("notif-dropdown");
 
-				// aria-expanded siempre refleja el estado real del panel, lo abra quien lo abra
 				function mirrorExpanded(btn, panel) {
 					if (!btn || !panel) return;
 					const sync = () => btn.setAttribute("aria-expanded", String(!panel.classList.contains("hidden")));
@@ -278,7 +284,6 @@ const supabaseAnonKey = import.meta.env.PUBLIC_SUPABASE_ANON_KEY ?? '';
 					logoutBtn?.addEventListener("click", function () { window.Auth?.logout(); });
 				}
 
-				// Escape cierra cualquiera de los dos menús y devuelve el foco a su botón
 				document.addEventListener("keydown", function (e) {
 					if (e.key !== "Escape") return;
 					if (dropdown && !dropdown.classList.contains("hidden")) {
@@ -292,9 +297,9 @@ const supabaseAnonKey = import.meta.env.PUBLIC_SUPABASE_ANON_KEY ?? '';
 			}
 
 			if (document.readyState === "loading") {
-				document.addEventListener("DOMContentLoaded", initHeaderMenus);
+				document.addEventListener("DOMContentLoaded", initHeader);
 			} else {
-				initHeaderMenus();
+				initHeader();
 			}
 		})();
 		</script>
@@ -302,5 +307,5 @@ const supabaseAnonKey = import.meta.env.PUBLIC_SUPABASE_ANON_KEY ?? '';
 		<script is:inline src="/resources/js/notifications.js"></script>
 		<script is:inline src="/resources/js/ai-features.js"></script>
 		<Analytics />
-		</body>
+	</body>
 </html>
